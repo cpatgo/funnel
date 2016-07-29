@@ -1,0 +1,8 @@
+{"Campaign Name:"|plang}
+{$campaign.name}
+
+{"User:"|plang}
+{$user.username} - {$user.first_name} {$user.last_name}
+
+{"Click here to manage this user's abuse settings:"|plang}
+{$viewlink}

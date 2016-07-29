@@ -1,0 +1,83 @@
+<div id="settings_local" style="margin-top: 10px">
+<h5>{"Localization"|alang}</h5><div class="line"></div>
+<div  class="adesk_blockquote">
+  <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="5" width="100%">
+	<tr>	
+		<td colspan="2"> <div class="adesk_help_inline">{"This is the global default language setting.  In order to change your language setting go to the"|alang} <a href="desk.php?action=account" class="button">{"your account page."|alang}</a></div></td>
+	
+	</tr>
+	<tr>
+	  <td width="110" valign="top">{"Default Language"|alang}</td>
+	  <td valign="top">
+			<select name="lang" id="lang" style="width:170px;" {if adesk_admin_ismaingroup()}onchange="settings_local_lang_change('{$site.lang}', this.value);"{/if}>
+			  {html_options options=$languages selected=$site.lang}
+			</select>
+			<div id="local_lang_old_div" style="display: none; margin: 10px 0;">
+				<input type="checkbox" name="local_lang_old_check" id="local_lang_old_check" value="{$site.lang}" checked="checked" />
+				<label for="local_lang_old_check">{"Update all users to use this new Language that currently have"|alang}</label>
+				<span id="local_lang_old" style="font-weight: bold;">{$site.lang|capitalize}</span>
+			</div>
+		</td>
+	</tr>
+    	 
+	<tr>
+	  <td valign="top">{"Default Time Zone"|alang}</td>
+	  <td>
+			<select name="local_zoneid" {if adesk_admin_ismaingroup()}onchange="settings_local_timezone_change('{$site.local_zoneid}', this.value);"{/if}>
+			  {foreach from=$zones item=z}
+			  	<option value="{$z.zoneid}" {$z.zoneid|adesk_isselected:$site.local_zoneid}>{$z.zoneid} (GMT {$z.offset_format})</option>
+			  {/foreach}
+			</select>
+			<div id="local_zoneid_old_div" style="display: none; margin: 10px 0;">
+				<input type="checkbox" name="local_zoneid_old_check" id="local_zoneid_old_check" value="{$site.local_zoneid}" checked="checked" />
+				<label for="local_zoneid_old_check">{"Update all users to use this new Timezone that currently have"|alang}</label>
+				<span id="local_zoneid_old" style="font-weight: bold;">{$site.local_zoneid}</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+	  <td valign="top">{"Date Format"|alang}</td>
+	  <td>
+		<input type="text" name="dateformat" value="{$site.dateformat|escape}" />
+		(<a href="#" onclick="adesk_dom_display_block('kbsettings_help_datetime'); return false">{"How do these formats work?"|alang}</a>)
+		<div class="kbsettings_help_datetime" style="display:none; position:relative; border:1px solid #FEE996; background:#FFFFFF; width:275px; padding:10px;" id='kbsettings_help_datetime'>
+		  {"Below are some examples of common date formats:"|alang}<br />
+		<br />
+
+		<div style="float:right;">%m/%d/%Y</div>
+		<div>{"Month/Date/Year"|alang}</div>
+
+		<div style="float:right;">%Y-%m-%d</div>
+		<div>{"Year-Month-Date"|alang}</div>
+
+		<div style="float:right;">%A, %m %d, %Y</div>
+		<div>{"Full Day, Month Date, Year"|alang}</div>
+		<br />
+
+
+		{"And below here are some common time formats:"|alang}<br />
+		<br />
+
+
+
+		<div style="float:right;">%H:%M:%S</div>
+		<div>{"24Hours:Minutes:Seconds (military time)"|alang}</div>
+		<div style="float:right;">%I:%M %p</div>
+		<div>{"12Hours:Minutes AM/PM"|alang}</div>
+
+		<br />
+
+		  <a href="#" onclick="adesk_dom_display_none('kbsettings_help_datetime'); return false">{"Close"|alang}</a>		</div>	  </td>
+	</tr>
+	<tr>
+	  <td>{"Time Format"|alang}</td>
+	  <td>
+		<input type="text" name="timeformat" value="{$site.timeformat|escape}" />	  </td>
+	</tr>
+	<tr>
+	  <td>{"Date + Time Format"|alang}</td>
+	  <td><input type="text" name="datetimeformat" value="{$site.datetimeformat|escape}" /></td>
+	</tr>
+  </table></div>
+ </div>
+</div>

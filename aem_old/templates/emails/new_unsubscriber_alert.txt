@@ -1,0 +1,11 @@
+{"A subscriber has been removed from your list."|plang}
+
+{"Unsubscribed from lists:"|plang}
+{foreach from=$lists item=list}
+{$list.name}
+{/foreach}
+
+{"Email"|plang}: {$subscriber.email}
+{"Name"|plang}: {$subscriber.first_name} {$subscriber.last_name}
+{"IP"|plang}: {$subscriber.ip}
+{"Date/Time"|plang}: {if $subscriber.udate}{$subscriber.udate|acpdate:"%m/%d/%Y %H:%M"}{else}{$udate_now}{/if}

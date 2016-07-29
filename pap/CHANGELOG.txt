@@ -1,0 +1,5 @@
+This is Post Affiliate Pro (http://www.postaffiliatepro.com)
+Affiliate software from Quality Unit (http://www.qualityunit.com)
+
+CHANGE LOG is updated online in our bugtracker:
+http://dev.postaffiliatepro.com/posts/

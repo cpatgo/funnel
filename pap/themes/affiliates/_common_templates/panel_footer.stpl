@@ -1,0 +1,5 @@
+<!-- panel_footer -->
+{foreach from=$footerExtensions item=extension}
+    {$extension}
+{/foreach}
+{include file='footer.stpl'}

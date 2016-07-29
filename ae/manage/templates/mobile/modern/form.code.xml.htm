@@ -1,0 +1,56 @@
+<flashform postForm="{$site.p_link}/surround.php" stagecolor="0x{$form.background_color}">
+    <subfield type="text" name="email" value="test@example.com" display="Email:" xpos="100" ypos="20" width="130" height="20" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+{if $form.ask4fname}
+    <subfield type="text" name="name" value="Your Name Here" display="Name:" {if !$form.require_name}required="no"{/if} xpos="100" ypos="50" width="130" height="20" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+{/if}
+{if $form.ask4lname}
+    <subfield type="text" name="name" value="Your Name Here" display="Name:" {if !$form.require_name}required="no"{/if} xpos="100" ypos="70" width="130" height="20" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+{/if}
+{foreach from=$form.fields item=field}
+    {if $field.type == 6}
+    <subfield type="hidden" name="field[{$field.id},{$field.dataid}]" value="{$field.val|escape:"html"}"></subfield>
+    {else}
+    {if $field.type == 1}
+    <subfield type="text" name="field[{$field.id},{$field.dataid}]" value="{$field.val|escape:"html"}" {if !$field.req}required="no"{/if} display="{$field.title}" title="" xpos="100" ypos="{$field.ypos}" width="130" height="20" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    {elseif $field.type == 2}
+    <subfield type="textarea" name="field[{$field.id},{$field.dataid}]" value="{$field.val|escape:"html"}" columns="{$field.cols}" rows="{$field.rows}" {if !$field.req}required="no"{/if} display="{$field.title}" xpos="40" ypos="{$field.ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    {elseif $field.type == 3}
+    <subfield type="checkbox" name="field[{$field.id},{$field.dataid}]" value="{$field.expl}" checked="{if $field.val}true{else}false{/if}" {if !$field.req}required="no"{/if} display="{$field.title}" title="" xpos="40" ypos="{$field.ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    {elseif $field.type == 4}
+    {foreach from=$field.options item=radio}
+    <subfield type="radio" name="field[{$field.id},{$field.dataid}]" value="{$radio.value}" checked="{if $radio.checked}true{else}false{/if}" display="{$radio.name}" title="{$radio.title}" xpos="40" ypos="{$radio.ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    {/foreach}
+    {elseif $field.type == 5}
+    <subfield type="select" name="field[{$field.id},{$field.dataid}]" {if !$field.req}required="no"{/if} display="{$field.title}" title="{$field.title}" xpos="40" ypos="{$field.ypos}" width="130" height="20" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}">
+      {foreach from=$field.options item=option_name key=option_value}
+      <subfieldoption value="{$option_value}" selected="{if $field.selected == $option_value}true{else}false{/if}" display="{$option_name}"></subfieldoption>
+      {/foreach}
+    </subfield>
+    {elseif $field.type == 7}
+    <subfield type="multiselect" name="field[{$field.id},{$field.dataid}]" {if !$field.req}required="no"{/if} display="{$field.title}" title="{$field.title}" xpos="40" ypos="{$field.ypos}" width="130" size="4" height="80" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}">
+      {foreach from=$field.options item=option_name key=option_value}
+      <subfieldoption value="{$option_value}" selected="{$field._selected}" display="{$option_name}"></subfieldoption>
+      {/foreach}
+    </subfield>
+    {elseif $field.type == 8}
+    <subfield type="multicheckbox" name="field[{$field.id},{$field.dataid}]" {if !$field.req}required="no"{/if} display="{$field.title}" title="{$field.title}" xpos="40" ypos="{$field.ypos}" width="130" size="{$field._size}" height="{$field._height}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}">
+      {foreach from=$field.options item=option_name key=option_value name=multicheckbox_foreach}
+      <subfieldoption value="{$option_value}" checked="{$field._selected}" display="{$option_name}" title="" xpos="40" ypos="{math equation="x + (y * 20)" x=$field.ypos y=$smarty.foreach.multicheckbox_foreach.iteration}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfieldoption>
+      {/foreach}
+    </subfield>
+    {/if}
+    {/if}
+{/foreach}
+
+{foreach from=$form.lists item=list name=listcounter}
+{if $form.allowselection}
+    <subfield type="checkbox" name="nlbox[{$smarty.foreach.listcounter.iteration}]" value="{$list.id}" checked="true" display="{$list.name}" title="{*$list.descript*}" xpos="40" ypos="{$list.ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+{else}
+     <subfield type="hidden" name="nlbox[{$smarty.foreach.listcounter.iteration}]" value="{$list.id}"></subfield>
+{/if}
+{/foreach}
+    <subfield type="radio" name="funcml" value="add" checked="true" display="{"Subscribe"|alang}" title="" xpos="40" ypos="{$form.subscribe_ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    <subfield type="radio" name="funcml" value="unsub2" checked="" display="{"Unsubscribe"|alang}" title="" xpos="40" ypos="{$form.unsubscribe_ypos}" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" color="0x{$form.input_color}"></subfield>
+    <subfield type="hidden" name="p" value="{$form.id}"></subfield>
+    <subfield type="submit" name="submit" value="submit" display="{"Submit"|alang}" xpos="40" ypos="{$form.submit_ypos}" height="10" fontsize="{$form.font_size}" fontfamily="{$form.font_family}" fontcolor="0x{$form.font_color}" buttonheight="20.8" buttonwidth="100" color="0x{$form.input_color}"></subfield>
+</flashform>

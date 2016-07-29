@@ -1,0 +1,109 @@
+{if $hosted_down4 != 'nobody'}
+{"Due to your account status, you are unable to send any campaigns."|alang}
+<a href="desk.php">{"Return to the Dashboard."|alang}</a>
+{elseif $pastlimit}
+{"Sending to this list would put you past your limit of allowed emails."|alang}
+<a href="desk.php?action=campaign_new_list&id={$campaignid}">{"Please choose another list."|alang}</a>
+{else}
+
+<script type="text/javascript">
+	{include file="campaign_new.shared.js" step="template"}
+	{include file="campaign_new_template.js"}
+</script>
+
+<form id="campaignform" method="POST" action="desk.php" onsubmit="return false">
+	{include file="campaign_new.header.htm" step="template" highlight=2}
+	<input type="hidden" name="action" value="campaign_new_template">
+	<input type="hidden" name="basetemplateid" id="campaign_basetemplateid" value="{$campaign.basetemplateid}">
+	<input type="hidden" name="basemessageid" id="campaign_basemessageid" value="{$campaign.basemessageid}">
+	<input type="text" name="dummy" style="display:none">
+
+	<div class="h2_wrap_static">
+		<h2>{"Select a template to base your email off of..."|alang}</h2>
+		<div>
+        
+        
+        	<div class="tpl_selector_head">
+        
+			<div style="float: right">
+				<input id="searchkey" type="text" value="{"Search..."|alang}" onkeyup="campaign_typesearch(this.value);" onclick="this.value=''; this.style.color='#000'; campaign_typesearch(this.value);" style="color:#ccc;" />
+			</div>
+
+			<div style=" height:17px; padding-top:5px;">
+				<div style=" padding-right: 20px; float: right; font-size: 12px"><a href="#" onclick="campaign_template_view('list'); return false"><span id="span_list" class="campaign_template_textnotselected">{"List"|alang}</span></a></div>
+				<div style="padding-right: 20px; float: right; font-size: 12px"><a href="#" onclick="campaign_template_view('images'); return false"><span id="span_images" class="campaign_template_textselected">{"Images"|alang}</span></a></div>
+			</div>
+            </div>
+
+			<div class="tpl_selector" style="height:600px; overflow:hidden;">
+				<div class="tpl_selector_nav">
+					
+						<a href="#" onclick="campaign_template_switch('tdisplay'); return false"><span id="span_tdisplay" class="campaign_template_textselected">{"All templates"|alang}</span></a>
+						<div style="padding-top:8px;"><a href="#" onclick="campaign_template_switch('cdisplay'); return false"><span id="span_cdisplay" class="campaign_template_textnotselected">{"Past campaigns"|alang}</span></a>
+                        </div>
+					
+
+					<div style="margin-top: 16px; padding-top:10px; border-top:1px dotted #ccc; color:#999; {if count($tags) == 0}display:none{/if}">
+						{"Template categories:"|alang}<br>
+						<ul id="taglist" style=" padding-left:15px; font-size:12px; list-style:none;">
+							{foreach from=$tags item=e}
+								{if $e.count > 0}
+									<li style="margin-bottom:8px;"><a href="#" onclick="campaign_template_usetag({$e.id})" style="color:#999;"><span id="tag_{$e.id}">{$e.tag|capitalize}</span></a> <span style="color:#999">({$e.count})</span></li>
+								{/if}
+							{/foreach}
+						</ul>
+					</div>
+				</div>
+				<div style="background:#fff; height: 600px; overflow-y: scroll;">
+					<div style="   padding:15px; ">
+						<div id="choices">
+						</div>
+
+						<div id="emptysearch" style="display:none;">
+							{"There are no results for your search terms."|alang}
+						</div>
+
+						<div id="loadmore" onclick="campaign_template_loadmore()" style="background:#f2f1ed; padding:10px; font-size:15px; color:#aba89b; text-align: center; clear: both; cursor: pointer">
+							{"Load more..."|alang}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br clear="all">
+
+	<div>
+		<div style="float:right;">
+			<input value='{"Save & Exit"|alang}' type="button" onclick="campaign_template_save('exit')" style="font-size:14px;" />
+			<input value='{"Save"|alang}' type="button" onclick="campaign_template_save('nothing')" style="font-size:14px;" />
+		</div>
+		<input value="{'Back'|alang}" type="button" onclick="campaign_template_save('back')" style="font-size:14px;" />
+		<input value="{'Next'|alang}" type="button" onclick="campaign_template_save('next')" style="font-weight:bold; font-size:14px;" />
+	</div>
+
+	<script type="text/javascript">
+		campaign_save_auto_runagain();
+		campaign_template_display();
+	</script>
+</form>
+
+<div id="alreadyselected" class="adesk_modal" align="center" style="display:none;">
+	<div class="adesk_modal_inner" align="left">
+		<h1>{"Selecting a new template"|alang}</h1>
+
+		{"You already have a template/message that you were working on."|alang}
+		{"By selecting a new template, you will overwrite your existing template/message."|alang}
+		{"Are you sure you to start with this new template?  You will lose your current message!"|alang}
+
+		<br>
+		<br>
+
+		<div>
+			<input type="button" value='{"Yes - Select This New Template"|alang}' onclick="campaign_save(campaign_template_afterstep)" style="font-weight: bold;">
+			<input type="button" value='{"No - Use Existing"|alang}' onclick="campaign_template_useexisting()">
+		</div>
+	</div>
+</div>
+{/if}

@@ -1,0 +1,92 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="batch.js"}
+</script>
+
+{if $formSubmitted}
+<script>
+adesk_result_show('{"Subscribers removal process started. It should be removed shortly."|alang|js}');
+</script>
+{/if}
+
+{* load javascript calendar *}
+{adesk_calendar base=".."}
+
+<h3 class="m-b">{"Batch Actions"|alang}</h3>
+
+<form id="form" method="POST">
+
+	<input type="hidden" name="batch_action" id="batch_action" />
+
+  <div class="h2_wrap_static">
+		<h2 style="margin-top: 20px;">{"Perform action in these lists:"|alang}</h5><div class="line"></div>
+
+		<div id="parentsList" class="adesk_checkboxlist" style="margin-left: 15px;">
+			{foreach from=$listsList item=p}
+				<div>
+					<label>
+						<input type="checkbox" id="p_{$p.id}" name="p[{$p.id}]" value="{$p.id}" {if count($listsList) == 1}checked="checked"{/if} />
+						{$p.name|truncate:50}
+					</label>
+				</div>
+			{/foreach}
+		</div>
+
+	</div>
+
+	<br />
+
+  <div class="h2_wrap">
+    <h2 style="margin-top: 20px;" onclick="adesk_dom_toggle_class('batchremovepanel', 'h2_content_invis', 'h2_content');">{"Remove a select list of addresses (enter emails in box - one per line)"|alang}</h5><div class="line"></div>
+    <div id="batchremovepanel" class="h2_content">
+      <textarea name="emailBox" id="emailBox" rows="10" cols="60" style="margin-left: 15px; width: 80%;"></textarea>
+  		<br />
+  		<br />
+      <input style="margin-left: 15px;" type="submit" id="batchremovepanel_start" class="adesk_button_start" name="removelist" value="{"Delete addresses listed in above text box"|alang}" onclick="batch_exec('batchremovepanel'); return false;" />
+    </div>
+  </div>
+
+	<div class="h2_wrap">
+		<h2 style="margin-top: 30px;" onclick="adesk_dom_toggle_class('batchoptimizepanel', 'h2_content_invis', 'h2_content');">{"Remove all non-confirmed subscribers from these lists"|alang}</h5><div class="line"></div>
+		<div id="batchoptimizepanel" class="h2_content">
+
+			<div class="adesk_warning" style="margin-left: 15px;">{"Warning: This will delete all subscribers who have not confirmed their subscription for these lists."|alang}</div>
+			<br />
+			<div style="margin-left: 15px;">{"All subscribers who subscribed (but did not confirm their subscription) before:"|alang}</div>
+			<div style="margin: 10px 0 20px 15px;">
+				<input name="batchoptimizepanel_field" type="text" size="20" id="batchoptimizepanel_field" tabindex="5" value="{$start_date}" onchange="somethingChanged = true;" />
+				<a href="#" onclick='return false;' id="batchoptimizepanel_calendar"><img src="../images/calendar.png" border="0" /></a>
+			</div>
+
+			<input style="margin-left: 15px;" type="submit" id="batchoptimizepanel_start" class="adesk_button_start" name="removeall" value="{"Delete all non-confirmed subscribers"|alang}" onclick="batch_exec('batchoptimizepanel'); return false;" />
+		</div>
+	</div>
+
+  <div class="h2_wrap">
+    <h2 style="margin-top: 30px;" onclick="adesk_dom_toggle_class('batchoptimizepanel2', 'h2_content_invis', 'h2_content');">{"Remove all subscribers from these lists"|alang}</h5><div class="line"></div>
+    <div id="batchoptimizepanel2" class="h2_content">
+
+      <div class="adesk_warning" style="margin-left: 15px;">{"Warning: This will delete all addresses in these lists and your subscriber count will be zero for those lists once complete."|alang}</div>
+     <br />
+	  <input style="margin-left: 15px;" type="submit" id="batchoptimizepanel2_start" class="adesk_button_start" name="removeall" value="{"Delete all subscribers from these lists"|alang}" onclick="batch_exec('batchoptimizepanel2'); return false;" />
+    </div>
+  </div>
+
+  <div class="h2_wrap">
+    <h2 style="margin-top: 30px;" onclick="adesk_dom_toggle_class('batchoptimizepanel3', 'h2_content_invis', 'h2_content');">{"Remove all subscribers with invalid emails from these lists"|alang}</h5><div class="line"></div>
+    <div id="batchoptimizepanel3" class="h2_content">
+
+      <div class="adesk_warning" style="margin-left: 15px;">{"This will delete all invalid addresses in these lists  which is ofcourse recommended and will save your huge server resources."|alang}</div>
+     <br />
+	  <input style="margin-left: 15px;" type="submit" id="batchoptimizepanel3_start" class="adesk_button_start" name="removeinvalid" value="{"Delete all subscribers with invalid emails from these lists"|alang}" onclick="batch_exec('batchoptimizepanel3'); return false;" />
+    </div>
+  </div>
+
+</form>
+
+<script type="text/javascript">
+{literal}
+	Calendar.setup({inputField: "batchoptimizepanel_field", ifFormat: '%Y/%m/%d', button: "batchoptimizepanel_calendar", showsTime: true, timeFormat: "24"});
+{/literal}
+  //adesk_ui_rsh_init(batch_process, true);
+</script>

@@ -1,0 +1,317 @@
+##### TRANSLATION STRINGS #####
+##### Example:"original string" = "your-translation-here"#####
+
+"%d email(s) sent." = "%d e-posta gönderildi."
+"%s thought you may be interested in this mailing." = "%s bu postanın ilginizi çekebileceğini düşündü."
+"(Optional) Why did you decide to unsubscribe?" = "Neden çıkmaya karar verdiniz?"
+"(Subscribed %s)" = "Üye %s"
+"A new subscriber has been added to your list." = "Yeni üye listenize eklendi."
+"A request to reset your password has been received." = "Şifrenizi sıfırlamak için bir istek alındı."
+"A subscriber has been removed from your list." = "Bir üye listenizden kaldırıldı."
+"Account Lookup" = "Hesap Arama"
+"Additional Information" = "Ek Bilgi"
+"All rights reserved." = "Tüm hakları saklıdır."
+"Archive" = "Arşiv"
+"Cancel" = "İptal"
+"Changes Saved." = "Değişiklikler Kaydedildi."
+"Clear" = "Kaldır"
+"Comment from" = "Yorum yapan"
+"Completed" = "Tamamlandı"
+"Content" = "İçerik"
+"Create Date" = "Tarih Oluşturma"
+"Date/Time" = "Tarih/Saat"
+"Date/Time:" = "Tarih/Saat:"
+"Draft" = "Taslak"
+"E-mail address is invalid." = "E-posta adresi geçersiz"
+"Email" = "E-posta"
+"Email Sent." = "E-posta gönderildi."
+"Error Occurred!" = "Hata Oluştu!"
+"First Name" = "Adınız"
+"Forward To A Friend" = "Arkadaşına ilet"
+"Forward again" = "Tekrar ilet"
+"Forward to a Friend" = "Arkadaşına İlet"
+"Forward to more" = "Başkalarına ilet"
+"Friend Email" = "Arkadaşınızın E-posta Adresi"
+"Friend Name" = "Arkadaşınızın İsmi"
+"Friend information" = "Arkadaş bilgileri"
+"From email is not valid." = "Gelen e-posta geçerli değil."
+"From:" = "Kimden:"
+"From:" = "Kimden:"
+"HTML Editor" = "HTML Editörü"
+"Here are the links to modify your accounts:" = "Hesaplarınızı değiştirmek için kullanacağınız linkler:"
+"Here is the link to modify your account:" = "Hesabınızı değiştirmek için kullanacağınız link:"
+"IP" = "IP"
+"Invalid email address" = "E-posta adresi geçersiz"
+"Invalid link. Please retry or contact the list admin." = "Geçersiz bağlantı. Tekrar deneyiniz veya sistem yöneticisi ile temasa geçiniz"
+"Last Name" = "Soyadı"
+"List Name" = "Liste Adı"
+"Loading..." = "Yüklüyor"
+"Login" = "Giriş Yap"
+"Message" = "İleti"
+"Message (HTML Version)" = "İleti (HTML Sürümü)"
+"Message (Text Version)" = "İleti (Metin Versiyonu)"
+"Message Details" = "İleti Detayları"
+"Message Preview" = "İleti Önizleme"
+"Message could not be previewed." = "İletinin önizlemesi yapılamıyor."
+"Message type not found." = "İleti türü bulunamadı."
+"Messages" = "İletiler"
+"Modify Account" = "Hesap Değiştir"
+"Name" = "Adı"
+"Next" = "Sonraki"
+"OK" = "OK"
+"Paused" = "Duraklatıldı"
+"Personalized Message" = "Kişiselleştirilmiş Mesaj"
+"Please also verify yourself by typing the text in the following image into the box below it." = "Lütfen kendinizi metni aşağıdaki resmin altındaki kutuya yazarak doğrulayın."
+"Please also verify yourself by typing the text in the following image into the box next to it." = "Lütfen kendinizi metni aşağıdaki resmin yanındaki kutuya yazarak doğrulayın."
+"Please ensure all email addresses are valid." = "Lütfen tüm e-posta adreslerinin geçerli olduğundan emin olun."
+"Please fill out at least one Friend email address and name." = "Lütfen en az bir arkadaşınız e-posta adresini ve adını doldurun."
+"Please include a text from the image." = "Lütfen bir görüntü metni ekleyin."
+"Please include a valid email address." = "Lütfen geçerli bir eposta adresi ekleyin."
+"Please include an email address." = "Lütfen bir e-posta adresi ekleyin."
+"Please include your name." = "Lütfen adınızı ekleyin."
+"Please type the correct text that appears in the image." = "Lütfen resimde görünen doğru metni yazın."
+"Powered by" = "Destekçi"
+"Previous" = "Önceki"
+"Public messages from List" = "Listedeki genel iletiler"
+"Public messages from all Lists" = "Tüm listelerdeki genel iletiler"
+"Scheduled" = "Programlı"
+"Search" = "Arama"
+"Select Lists To Unsubscribe From" = "Üyeliğinizi iptal etmek istediğiniz listelerin seçin"
+"Select a Campaign from List" = "Listeden bir kampanyayı seçin"
+"Select a List" = "Bir Liste Seçin"
+"Send" = "Gönder"
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "Bu e-postayı bir arkadaşınıza gönderin. Sadece aşağıdaki bilgileri doldurun ve Gönder düğmesine tıklayın."
+"Sending" = "Gönderiliyor"
+"Set as Default" = "Varsayılan olarak ayarla."
+"Stopped" = "Durduruldu"
+"Subject" = "Konu"
+"Subject:" = "Konu:"
+"Subscribe" = "Üye Ol"
+"Subscribe To Lists" = "Listelere Üye Ol"
+"Subscriber ID is invalid." = "Üyelik kimliği geçersiz."
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "Liste seçmediğiniz için üyeliğiniz işlenemedi. Lütfen bir liste seçin ve yeniden deneyin."
+"Text Editor" = "Metin Düzenleyicisi"
+"Thank you for confirming your subscription." = "Üyeliğinizi teyit ettiğiniz için teşekkür ederiz."
+"Thank you for confirming your unsubscription." = "Üyelikten çıkma işlemini teyit ettiğiniz için teşekkür ederiz."
+"The following errors occurred:" = "Aşağıdaki hatalar oluştu:"
+"The link to modify your account has been sent. Please check your email." = "Hesabınızda değişiklik yapmak için kullanacağınız bağlantı gönderildi. Lütfen e-postanızı kontrol edin."
+"The sender of this message thought the mailing entitled" = "Bu iletiyi gönderen kişi e-posta başlığını düşündü"
+"The sender of this message thought the mailing entitled '%s' would be of interest to you." = "Bu iletiyi gönderen kişi '%s' e-posta başlıklı e-postanın ilginizi çekeceğini düşündü."
+"The sender thought the mailing entitled '%s' would be of interest to you." = "Bu iletiyi gönderen kişi '%s' başlıklı iletinin ilginizi çekeceğini düşünüyor."
+"This e-mail address cannot be added to list." = "Bu e-posta adresi listenize eklenemez."
+"This e-mail address could not be unsubscribed." = "Bu e-posta adresinin üyeliği kaldırılamıyor."
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "Bu e-posta adresi önceden üyelik için işleme alındı ancak üyeliğiniz doğrulanmadı."
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "Bu e-posta adresi işlenmiştir. Üyeliğinizi onaylamak için e-posta kutunuzu kontrol ediniz."
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "Bu e-posta adresi işlenmiştir. Üyelikten çıkma işleminizi onaylamak için e-posta kutunuzu kontrol ediniz."
+"This e-mail address has been unsubscribed from the list." = "Bu e-posta adresi listedeki üyeliğinden çıkmıştır."
+"This e-mail address has subscribed to the list." = "Bu e-posta adresi listeye üye olmuştur."
+"This e-mail address is already subscribed to this mailing list." = "Bu e-posta adresi zaten bu posta listesine üye."
+"This e-mail address is on the global exclusion list." = "Bu e-posta adresi genel dışlama listesindedir."
+"This e-mail address was not subscribed to the list." = "Bu e-posta adresi üyelik listesinde bulunamadı."
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "Bu liste şu anda üye kabul etmiyor. Bu liste izin verilen maksimum üye sayısına ulaştı."
+"This message is being sent by:" = "Bu iletiyi gönderen:"
+"This subscriber does not exist." = "Bu üye sistemde bulunmamaktadır."
+"To confirm this request please click on the link below:" = "Bu isteği onaylamak için lütfen tıklayın aşağıdaki bağlantıya tıklayın:"
+"To email is not valid." = "Gönderilen e-posta geçerli değil."
+"To log into the system visit:" = "Sisteme giriş yapmak için lütfen ziyaret ediniz:"
+"To view the mailing, please visit:" = "E-posta görüntülemek için lütfen ziyaret ediniz:"
+"To:" = "Kime:"
+"Unable to redirect you to this link. Please try again or contact your list admin." = "Bu bağlantıya yönlendirme yapılamıyor. Lütfen yeniden deneyin veya sistem yöneticiniz ile temasa geçiniz."
+"Unknown response code. Please resubmit the subscription form." = "Bilinmeyen yanıt kodu. Lütfen üyelik formunu yeniden gönderiniz."
+"Unsubscribe" = "Üyelikten Çık"
+"Update Account" = "Hesap Güncelleme"
+"Update Your Account" = "Hesabınızı Güncelleyin"
+"You are not allowed to access this page." = "Bu sayfaya erişim izniniz yok."
+"You are unable to be added to this list at this time." = "Sizi şuan bu listeye ekleyemiyoruz."
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "Yinelemelere izin vermeyen bir liste seçtiniz. Bu e-posta adresi sistemde zaten mevcut, lütfen üyelik üzerinde düzenltme yapınız."
+"Your Email" = "E-posta Adresiniz"
+"Your Name" = "Adınız"
+"Your changes have been saved." = "Değişiklikleriniz kaydedildi."
+"Your e-mail address" = "E-posta Adresi"
+"Your e-mail address (Required)" = "E-posta Adresi (Zorunlu)"
+"Your password has been reset to:" = "Şifreniz sıfırlandı. Yeni şifreniz:"
+"Your subscription request for this list could not be processed as you are missing required fields." = "Gerekli alanlar eksiksiz doldurulmadığından bu liste için üyelik isteğiniz gerçekleştirilemedi."
+"Your subscription request for this list could not be processed as you must type your name." = "İsim bilginiz eksik olduğundan bu liste için üyelik isteğiniz gerçekleştirilemedi."
+"[Unknown]" = "[Bilinmeyen]"
+"optional" = "isteğe bağlı"
+
+
+
+##### 2009-07-10 #####
+
+"Account" = "Hesap"
+"Disabled" = "Engellendi"
+
+
+
+##### 2009-07-29 #####
+
+"Subscribed to lists:" = "Üye olunan listeler:"
+"The image text you typed did not register. Please go back, reload the page, and try again." = "Yazdığınız görüntü metni kaydolamadı. Lütfen geri dönün, sayfayı yeniden yükleyin ve yeniden deneyin"
+"Unsubscribed from lists:" = "Artık üye olunmayan listeler:"
+
+
+
+##### 2009-08-13 #####
+
+"Attachment not found." = "Ek bulunamadı."
+"Attachments:" = "Ekler"
+"Content not found." = "İçerik bulunamadı."
+"Nothing was selected for viewing." = "Görüntüleme için seçim yapılmadı."
+"Preview" = "Önizleme"
+"Template not found." = "Şablon bulunamadı."
+"To:" = "Kime"
+"Version not found." = "Versiyon bulunamadı."
+"Your Account" = "Hesabınız"
+
+
+
+##### 2009-10-06 #####
+
+"Back" = "Geri"
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "Bu özellik test e-posta ile çalışmamaktadır. Bu sayfa bir kampanya gönderildiğinde çalışacaktır"
+
+
+
+##### 2009-10-14 #####
+
+"Language changed" = "Dil Değiştirildi"
+"Rewrite Test" = "Metni Yeniden Yaz"
+
+
+
+##### 2009-12-21 #####
+
+"Update Subscription Account" = "Üyelik Hesabını Güncelle"
+
+
+
+##### 2010-01-13 #####
+
+"Abuse Complaint" = "Kötüye Kullanım Şikayeti"
+"Abuse Complaints Reported:" = "Kötüye Kullanım Bildirildi:"
+"Abuse Complaints have been removed." = "Kötüye Kullanım Şikayetleri kaldırıldı."
+"Abuse Ratio has been updated." = "Kötüye Kullanım Oranları güncellendi."
+"Abuse Report Received." = "Kötüye Kullanım tespiti alındı."
+"Approve" = "Onayla"
+"Approve Campaign Sending" = "Kampanya Göndermeyi Onayla"
+"Campaign Approved." = "Kampanya Onaylandı."
+"Campaign Declined." = "Kampanya Reddedildi."
+"Campaign Name" = "Kampanya Adı"
+"Campaign for Approval" = "Kampanya Onayda"
+"Campaign:" = "Kampanya:"
+"Change Abuse Ratio" = "Kötüye Kullanım Oranını Değiştir"
+"Click here to view and approve the campaign sending:" = "Kampanyayı görüntülemek ve gönderilmesini onaylamak için buraya tıklayın:"
+"Close" = "Kapat"
+"Current Abuse Ratio:" = "Geçerli Kötüye Kullanım Oranı:"
+"Decline" = "Reddet"
+"Decline & Send Email" = "Reddet ve E-posta Gönder"
+"E-mail:" = "E-posta"
+"E-mails Sent:" = "Gönderilen e-postalar:"
+"FROM E-mail:" = "E-posta:"
+"FROM Name:" = "Adından:"
+"Group(s):" = "Gruplar:"
+"Group:" = "Grup:"
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "Bu gönderici tarafından ve/veya bu bilgilerle ilgili sizinle bağlantı kurulmasını istemiyorsanız Kötüye Kullanım Bildir düğmesine tıklayın."
+"List(s):" = "Listeler"
+"Message:" = "İleti:"
+"Modify Campaign:" = "Kampanya Değiştir:"
+"Modify Message:" = "İleti Değiştir:"
+"Name:" = "İsim:"
+"New Abuse Ratio:" = "Yeni kötüye kullanım oranı:"
+"Notify Senders" = "Gönderenlere Haber Ver"
+"Notify user(s) in this group:" = "Bu gruptaki kullanıcılara haber ver:"
+"Once you have updated your message you can try to send it again." = "İletinizi güncelledikten sonra yeniden göndermeyi deneyebilirsiniz."
+"Please check your message you were sending to ensure it meets our sending policy." = "Lütfen iletinizin gönderme politikamızla uyumlu olduğuna emin olmak için göndermen önce kontrol edin."
+"Please verify the information below." = "Lütfen aşağıdaki bilgileri doğrulayın."
+"Preset Abuse Ratio:" = "Önceki Kötüye Kullanım Oranı"
+"Private campaign." = "Özel Kampanya"
+"Private message." = "Özel İleti"
+"Report Abuse" = "Kötüye Kullanım Bildir"
+"Reset Abuse Complaints" = "Kötüye Kullanım Şikayetlerini Sıfırla"
+"Segment:" = "Bölüm"
+"Send From:" = "Kimden"
+"Send Notification to" = "Bildirimi Gönder"
+"TO E-mail:" = "E-posta:"
+"TO Name:" = "Kime:"
+"The senders information is:" = "Gönderen bilgileri:"
+"The subscriber information that this sender sent to is:" = "Gönderilen kişinin üyelik bilgileri:"
+"This campaign has already been accepted." = "Bu kampanya zaten kabul edilmişti."
+"This campaign has already been declined." = "Bu kampanya zaten reddedilmişti."
+"This feature is not available in test campaigns." = "Bu özellik test kampanyalarında kullanılamıyor."
+"This feature is not supported when testing campaigns." = "Kampanyalar test edilirken ken bu özellik desteklenmiyor"
+"Type:" = "Türü"
+"Update" = "Güncelleme"
+"User" = "Kullanıcı"
+"User:" = "Kullanıcı:"
+"View Abuses" = "İhlalleri Görüntüle"
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender." = "İstismar raporlarını çok ciddiye alıyoruz ve e-posta pazarlama yasalarına uyumlu çalışıyoruz. Görüşleriniz ile bu kişi tarafından gönderilen diğer e-postaları engelleyebilirsiniz. Bu e-postayı kötüye kullanım olarak bildirerek, bu kişiden herhangi bir e-posta almazsınız."
+"You have abused the mailing system %s" = "E-posta sistemini istismar ettiniz %s"
+"Your Abuse Report Has Been Received" = "Kötüye Kullanım Raporu Alındı"
+"Your campaign &quot;%s&quot; could not be approved at this time." = "Kampanyanız &quot;%s&quot; şuan onaylanamamaktadır."
+"Your campaign needs to be updated" = "Kampanyanızın güncellenmesi gerekiyor"
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "E-posta adresiniz bu listeden çıkarıldı. Sizden neden olabileceğimiz herhangi bir rahatsızlık için özür dileriz."
+
+
+
+##### 2010-02-02 #####
+
+"Abuse Reported." = "Kötüye Kullanım Bildirildi."
+"Campaign Name:" = "Kampanya Adı:"
+"Click here to manage this user's abuse settings" = "Bu kullanıcının kötüye kullanım ayarlarını yönetmek için tıklayınız"
+"Click here to manage this user's abuse settings:" = "Bu kullanıcının kötüye kullanım ayarlarını yönetmek için tıklayınız:"
+"User %s has been suspended due to abuse reports" = "Kullanıcı %s 'nin üyeliği kötüye kullanım raporı nedeniyle askıya alındı"
+"With a current limit of" = "Geçerli sınırı ile"
+"before being suspended." = "askıya alınmadan önce."
+
+
+
+##### 2010-03-01 #####
+
+"Page %d of %d" = "Toplam %d sayfanın %d. sayfası"
+
+
+##### 2010-03-28 #####
+
+"%s per page" = "sayfa başına %s"
+
+
+
+##### 2010-07-02 #####
+
+"%s Private Messages" = "%s Özel Mesajlar"
+"From" = "Kimden"
+"Private Messages published at %s." = "Özel Mesaj %s de yayınlandı."
+"Recipients:" = "Alıcılar"
+"Sent" = "Gönderilen"
+
+
+
+##### 2010-09-07 #####
+
+"You have a new subscriber to your list." = "Listeye eklenecek yeni bir üye var."
+
+
+
+##### 2010-12-01 #####
+
+"This feature is not supported when testing messages." = "Bu özellik test iletilerini kapsamıyor."
+
+
+
+##### 2011-01-11 #####
+
+"Share on Digg" = "Digg'de paylaş"
+"Share on Facebook" = "Facebook'ta paylaş"
+"Share on Reddit" = "Reddit'de paylaş"
+"Share on StumbleUpon" = "StumbleUpon'da paylaş"
+"Share on buzz" = "buzz'da paylaş"
+"Share on del.icio.us" = "del.icio.us'da paylaş"
+"Share via Twitter" = "Twitter'da Paylaş"
+
+
+
+##### 2011-02-23 #####
+
+"Currently reading" = "Şu anda okunuyor"
+"Social Share" = "Sosyal Ağlarda Paylaşın"

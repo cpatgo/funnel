@@ -1,0 +1,18 @@
+User Requirements
+
+    Operating System: Windows, Mac or Linux
+    Web Browser: Internet Explorer 7/7+,FireFox3+,Google Chrome, Safari 
+ 
+
+Web Server Requirements
+
+    Operating System: Linux, Unix, or Windows
+    Web Server: Apache Web Server, LigHTTPD, or IIS (with ISAPI_Rewrite installed)
+    Scripting Language: PHP 5.2.X or above
+    Database: MySQL 4.1 or above
+    PHP's cURL extension or allow_url_fopen support (enabled in PHP 5.2 or above)
+    Ioncube Loaders for PHP 5.2.X 
+    Please Note: Ioncube Loaders must be installed on your server, else you wont be able to install our software.     Normally all modern hosts have ioncube activated , if it is not. Contact your host and they will do it for you.
+
+Need Installation Help ? Contact us at support@awebdesk.com
+

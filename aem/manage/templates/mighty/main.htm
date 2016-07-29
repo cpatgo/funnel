@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{if $ieCompatFix}
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+{/if}
+	<meta http-equiv="Content-Type" content="text/html; charset={"utf-8"|i18n}" />
+	<meta http-equiv="Content-Language" content="{"en-us"|i18n}" />
+ <meta name="robots" content="noindex,nofollow">
+	{* Don't escape site_name here, since the title element is CDATA *}
+	<title>{$site.site_name} - {$pageTitle}</title>
+	<script type="text/javascript" src="../awebdesk/js/jquery-1.2.6.min.js"></script>
+	{adesk_js lib="scriptaculous/prototype.js"}
+	{adesk_js lib="scriptaculous/scriptaculous.js"}
+	<script language="JavaScript" type="text/javascript" src="js/jsmodules.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jsv6.js"></script>
+	{foreach from=$header_lines item=line}
+	{$line}
+	{/foreach}
+		<link href="templates/mighty/css/default.css" rel="stylesheet" type="text/css" />
+ 
+	<link rel="stylesheet" href="templates/mighty/css/v7/css/bootstrap.css">
+  <link rel="stylesheet" href="templates/mighty/css/v7/css/font-awesome.min.css">
+  <link rel="stylesheet" href="templates/mighty/css/v7/css/font.css">
+	<link rel="stylesheet" href="templates/mighty/css/v7/css/style.css">
+ 
+  <!--[if lt IE 9]>
+    <script src="templates/mighty/js/v7/ie/respond.min.js"></script>
+    <script src="templates/mighty/js/v7/ie/html5.js"></script>
+    <script src="templates/mighty/js/v7/ie/excanvas.js"></script>
+  <![endif]-->
+
+{if isset($site.template_css) and $site.template_css}
+<style>
+{$site.template_css}
+</style>
+{/if}
+	{adesk_js base="" src="awebdeskjs.php"}
+    
+    
+    
+	<script>
+	  {include file="strings.js"}
+	  <!--
+
+	  {* global js vars *}
+	  {jsvar name=datetimeformat var=$site.datetimeformat}
+	  {jsvar name=dateformat var=$site.dateformat}
+	  {jsvar name=timeformat var=$site.timeformat}
+
+	  {jsvar name=adesk_action var=$action}
+	  {jsvar name=plink var=$plink}
+
+	  {jsvar name=nl var=$nl}
+
+	  var apipath = "{$plink}/manage/awebdeskapi.php";
+	  var acgpath = "{$plink}/awebdesk";
+
+	  var paginator_b64 = false;
+
+{if !$__ishosted and !$smarty.session._adesk_disablespawning}
+	  // stalled processes restarter
+	  adesk_ajax_call_url('process.php', null, null);
+	  {literal}
+	  // cron restarter - run every 5 minutes
+	  var cronTimer = window.setInterval(
+	    function() {
+	    	adesk_ajax_call_url('cron.php', null, null);
+	    },
+	    10 * 60 * 1000 // every 10 minutes
+	  );
+	  {/literal}
+{/if}
+	  -->
+	</script>
+  </head>
+  {php} flush(); {/php}
+<body>
+ 	<script language="JavaScript" type="text/javascript" src="../awebdesk/editor_tiny/tiny_mce.js?_v=3.4.3.2"></script>
+<div id="adesk_loading_bar" class="adesk_hidden"><span id="adesk_loading_text">{"Loading..."|alang}</span></div>
+	<div id="adesk_result_bar" class="adesk_hidden"><span id="adesk_result_text">{"Changes Saved."|alang}</span></div>
+	<div id="adesk_error_bar" class="adesk_hidden"><span id="adesk_error_text">{"Error Occurred!"|alang}</span></div>
+
+
+
+
+	{if isset($site.templates)}
+	{$site.templates.precontent}
+	{/if}
+	
+	 <section id="content" class="content-sidebar bg-white">
+
+     
+     
+     
+    
+    
+    <section class="main padder"> 
+
+			
+	
+
+
+<div class="row"><div class="col-lg-12">
+ 
+		{ include file=$content_template }
+ </div>
+	</div>
+	
+	
+	
+	          </section>
+                 {if isset($side_content_template) && $side_content_template != ''}
+ 
+ <aside class="sidebar bg-lighter padder clearfix">
+      
+      { include file=$side_content_template }
+    </aside>
+ 		
+ 
+{/if}  
+     
+         </section>
+     
+	   
+	
+	
+
+ 	      
+        
+ 
+
+
+ 
+
+ 
+ 
+ </div>
+	
+	
+	
+	
+	
+	
+
+ 
+	 
+
+
+		{if isset($site.templates)}
+		{$site.templates.postcontent}
+		{/if}
+
+ 
+
+<script type="text/javascript">
+adesk_tooltip_init();
+// set error bar for dropped api calls
+var printAPIerrors = adesk_error_show;
+</script>
+
+{if $demoMode == 1}<h3 style="color:#FF0000"><strong>{"This is a demo"|alang}</strong> - {"Certain features such as sending email are disabled."|alang}</h3>{/if}
+
+	 <script src="templates/mighty/js/v7/jquery.min.js"></script>
+      
+  <!-- Bootstrap -->
+  <script src="templates/mighty/js/v7/bootstrap.js"></script>
+  <script src="templates/mighty/js/v7/app.js"></script>
+ <script type="text/javascript">
+  $.noConflict(true); 
+ </script>
+</body>
+</html>

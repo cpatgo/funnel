@@ -1,0 +1,7 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear## {$firstname|escape} {$lastname|escape},</span><br/><br/>
+<span style="font-family: Arial;">##you were inactive in our affiliate program for## {$daysOfInactivity} ##days, therefore you are ## {$action} ##from our affiliate program##.</span><br/><br/>
+<span style="font-family: Arial;">##Sincerely##,</span><br/><br/>
+<span style="font-family: Arial;">##Your Affiliate manager##</span>
+<br /><br />
+</font>

@@ -1,0 +1,10 @@
+<!-- topmenu_logged  -->
+<div class="Navigation">
+	<ul class="nav">
+		<li><a href="{$baseUrl}/affiliates/">##Overview##</a></li>
+		<li><a href="{$baseUrl}/affiliates/faq.php">##FAQ##</a></li>
+		<li><a href="{$baseUrl}/affiliates/tour.php">##Tour##</a></li>
+		<li><a href="{$baseUrl}/affiliates/signup.php">##Join##</a></li>
+		<li><a href="{$baseUrl}/affiliates/signup.php#ContactUs">##Contact us##</a></li>
+	</ul>
+</div>

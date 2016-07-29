@@ -1,0 +1,8 @@
+{"This message is being sent by:"|plang}
+{$email}
+
+{"The sender thought the mailing entitled '%s' would be of interest to you."|plang:$subject}
+
+{"To view the mailing, please visit:"|plang}
+
+{$link}

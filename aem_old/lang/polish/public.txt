@@ -1,0 +1,317 @@
+﻿##### TRANSLATION STRINGS #####
+##### Example: original string = your-translation-here #####
+
+"%d email(s) sent." = "E %d (s), wysłana."
+"%s thought you may be interested in this mailing." = "%s pomyślałem może być zainteresowany w tym mailingu."
+"(Optional) Why did you decide to unsubscribe?" = "(Opcjonalnie) Dlaczego zdecydowaliście się wypisać?"
+"(Subscribed %s)" = "(Subskrybowany %s)"
+"A new subscriber has been added to your list." = "Nowy abonent został dodany do listy."
+"A request to reset your password has been received." = "Żądanie resetowania hasła został odebrany."
+"A subscriber has been removed from your list." = "Abonent został usunięty z listy."
+"Account Lookup" = "Lookup konto"
+"Additional Information" = "Dodatkowe informacje"
+"All rights reserved." = "Wszelkie prawa zastrzeżone."
+"Archive" = "Archiwum"
+"Cancel" = "Anulować"
+"Changes Saved." = "Zmiany zostały zapisane."
+"Clear" = "Jasny"
+"Comment from" = "Komentarz z"
+"Completed" = "Zakończony"
+"Content" = "Zawartość"
+"Create Date" = "Data utworzenia"
+"Date/Time" = "Data / czas"
+"Date/Time:" = "Data / czas:"
+"Draft" = "Projekt"
+"E-mail address is invalid." = "Adres e-mail jest nieprawidłowy."
+"Email" = "E-mail"
+"Email Sent." = "E-mail wysłana."
+"Error Occurred!" = "Wystąpił błąd!"
+"First Name" = "Imię"
+"Forward To A Friend" = "Prześlij do znajomego"
+"Forward again" = "Do przodu"
+"Forward to a Friend" = "Przekazania do znajomego"
+"Forward to more" = "Przekazuje więcej"
+"Friend Email" = "E-mail przyjaciela"
+"Friend Name" = "Nazwa przyjaciel"
+"Friend information" = "Informacje przyjaciela"
+"From email is not valid." = "Z wiadomości e-mail nie jest prawidłowy."
+"From:" = "Z:"
+"From: " = "Z:"
+"HTML Editor" = "HTML Editor"
+"Here are the links to modify your accounts:" = "Oto linki do modyfikacji kont:"
+"Here is the link to modify your account:" = "Tu jest link do zmiany konta:"
+"IP" = "IP"
+"Invalid email address" = "Nieprawidłowy adres e-mail"
+"Invalid link. Please retry or contact the list admin." = "Nieprawidłowy Link. Spróbuj ponownie lub skontaktuj się z administratorem listy."
+"Last Name" = "Nazwisko"
+"List Name" = "Nazwa listy"
+"Loading..." = "Ładowanie ..."
+"Login" = "Login"
+"Message" = "Wiadomość"
+"Message (HTML Version)" = "Wiadomość (HTML Version)"
+"Message (Text Version)" = "Wiadomość (wersja tekstowa)"
+"Message Details" = "Szczegóły wiadomości"
+"Message Preview" = "Podgląd wiadomości"
+"Message could not be previewed." = "Wiadomość nie stronę."
+"Message type not found." = "Nie znaleziono typu wiadomość."
+"Messages" = "Wiadomości"
+"Modify Account" = "Zmodyfikować konto"
+"Name" = "Nazwa"
+"Next" = "Następny"
+"OK" = "Dobrze"
+"Paused" = "Przerwał"
+"Personalized Message" = "Spersonalizowaną wiadomość"
+"Please also verify yourself by typing the text in the following image into the box below it." = "Proszę również sprawdzić samodzielnie, wpisując tekst w poniższym obrazie w polu poniżej."
+"Please also verify yourself by typing the text in the following image into the box next to it." = "Proszę również sprawdzić samodzielnie, wpisując tekst w poniższym obrazie w polu obok."
+"Please ensure all email addresses are valid." = "Prosimy o to, aby wszystkie adresy e-mail są poprawne."
+"Please fill out at least one Friend email address and name." = "Proszę wypełnić przynajmniej jeden adres e-mail znajomego i nazwę."
+"Please include a text from the image." = "Proszę to tekst z obrazka."
+"Please include a valid email address." = "Proszę podać prawdziwy adres e-mail."
+"Please include an email address." = "Proszę to adres e-mail."
+"Please include your name." = "Proszę podać swoje nazwisko."
+"Please type the correct text that appears in the image." = "Proszę wpisać poprawny tekst, który pojawia się na obrazie."
+"Powered by" = "Napędzany"
+"Previous" = "Poprzedni"
+"Public messages from List" = "Publiczne wiadomości z listy"
+"Public messages from all Lists" = "Publiczne wiadomości ze wszystkich list"
+"Scheduled" = "Zaplanowane"
+"Search" = "Poszukiwanie"
+"Select Lists To Unsubscribe From" = "Wybierz zrezygnować z listy"
+"Select a Campaign from List " = "Wybierz z listy kampanii"
+"Select a List" = "Wybierz listę"
+"Send" = "Wysłać"
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "Wyślij tę wiadomość do znajomego. Wystarczy wypełnić informacje poniżej i kliknij przycisk Wyślij."
+"Sending" = "Wysyłanie"
+"Set as Default" = "Ustaw jako domyślny"
+"Stopped" = "Zatrzymany"
+"Subject" = "Przedmiot"
+"Subject:" = "Temat:"
+"Subscribe" = "Subskrybować"
+"Subscribe To Lists" = "Zapisać się na listę"
+"Subscriber ID is invalid." = "Abonent ID jest nieprawidłowe."
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "Abonament nie może być przetwarzane, ponieważ nie wybrano listę. Wybierz listę i spróbuj ponownie."
+"Text Editor" = "Edytor tekstu"
+"Thank you for confirming your subscription." = "Dziękujemy za potwierdzenie subskrypcji."
+"Thank you for confirming your unsubscription." = "Dziękujemy za potwierdzający anulowanie subskrypcji."
+"The following errors occurred:" = "Pojawiły się następujące błędy:"
+"The link to modify your account has been sent. Please check your email." = "Link do zmiany konta została wysłana. Prosimy sprawdzić e-mail."
+"The sender of this message thought the mailing entitled" = "Nadawca tej wiadomości myślałem prawo pocztowy"
+"The sender of this message thought the mailing entitled '%s' would be of interest to you." = "Nadawca tej wiadomości myślałem pocztowy prawo '%s 'będzie dla Ciebie interesująca."
+"The sender thought the mailing entitled '%s' would be of interest to you." = "Nadawca myśli pocztowy prawo '%s 'będzie dla Ciebie interesująca."
+"This e-mail address cannot be added to list." = "Ten adres e-mail nie może zostać dodany do listy."
+"This e-mail address could not be unsubscribed." = "Ten adres e-mail nie może być wypisany."
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "Ten adres e-mail został przetworzony w przeszłości zostać zarejestrowana, jednak abonament nie został potwierdzony."
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "Ten adres e-mail został przetworzony. Prosimy sprawdzić e-mail w celu potwierdzenia subskrypcji."
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "Ten adres e-mail został przetworzony. Prosimy sprawdzić e-mail, aby potwierdzić anulowanie subskrypcji."
+"This e-mail address has been unsubscribed from the list." = "Ten adres e-mail został wypisany z listy."
+"This e-mail address has subscribed to the list." = "Ten adres e-mail został zapisany na listę."
+"This e-mail address is already subscribed to this mailing list." = "Ten adres e-mail jest już zapisany do tej listy."
+"This e-mail address is on the global exclusion list." = "Ten adres e-mail jest na światowej liście wykluczeń."
+"This e-mail address was not subscribed to the list." = "Ten adres e-mail nie został zapisany na listę."
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "Lista ta nie jest obecnie przyjmowanie abonentów. Wykaz ten spełnił swoją najwyższą liczbę dozwolonych abonentów."
+"This message is being sent by:" = "Ta wiadomość jest wysyłana przez:"
+"This subscriber does not exist." = "Ten abonent nie istnieje."
+"To confirm this request please click on the link below:" = "Aby potwierdzić tę prośbę, kliknij na link poniżej:"
+"To email is not valid." = "E-mail nie jest prawidłowy."
+"To log into the system visit:" = "Aby zalogować się do wizyty systemowym:"
+"To view the mailing, please visit:" = "Aby zobaczyć mailing, prosimy odwiedzić:"
+"To: " = "Do:"
+"Unable to redirect you to this link. Please try again or contact your list admin." = "Nie można przekierować cię do tego linka. Spróbuj ponownie lub skontaktuj się z administratorem listy."
+"Unknown response code. Please resubmit the subscription form." = "Nieznany kod odpowiedzi. Proszę ponownie wysłać formularz subskrypcji."
+"Unsubscribe" = "Wypisz"
+"Update Account" = "Konto zaktualizować"
+"Update Your Account" = "Zaktualizuj swoje konto"
+"You are not allowed to access this page." = "Nie masz uprawnień dostępu do tej strony."
+"You are unable to be added to this list at this time." = "Użytkownik nie może być dodana do tej listy w tym czasie."
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "Wybrałeś listę, która nie pozwala na duplikaty. Ten e-mail jest już w systemie, należy edytować ten abonenta zamiast."
+"Your Email" = "Twój e-mail"
+"Your Name" = "Twoje imię i nazwisko"
+"Your changes have been saved." = "Zmiany zostały zapisane."
+"Your e-mail address" = "Twój adres e-mail"
+"Your e-mail address (Required)" = "Twój adres e-mail (wymagany)"
+"Your password has been reset to:" = "Twoje hasło zostało zresetowane, aby:"
+"Your subscription request for this list could not be processed as you are missing required fields." = "Twoja prośba subskrypcji dla tej liście nie mogą być przetwarzane tak brakuje wymaganych pól."
+"Your subscription request for this list could not be processed as you must type your name." = "Twoja prośba subskrypcji dla tej liście nie mogą być przetwarzane tak należy wpisać swoje imię i nazwisko."
+"[Unknown]" = "[Nieznany]"
+"optional" = "fakultatywny"
+
+
+
+##### 2009-07-10 #####
+
+"Account" = "Konto"
+"Disabled" = "Niepełnosprawny"
+
+
+
+##### 2009-07-29 #####
+
+"Subscribed to lists:" = "Abonament na listach:"
+"The image text you typed did not register. Please go back, reload the page, and try again." = "Obraz wpisany tekst nie zarejestrować. Wróć, odśwież stronę i spróbuj ponownie."
+"Unsubscribed from lists:" = "Wypisany z listy:"
+
+
+
+##### 2009-08-13 #####
+
+"Attachment not found." = "Nie znaleziono załączników."
+"Attachments:" = "Załączniki:"
+"Content not found." = "Nie znaleziono treści."
+"Nothing was selected for viewing." = "Nic nie zostało wybrane do oglądania."
+"Preview" = "Podgląd"
+"Template not found." = "Nie znaleziono szablonu."
+"To:" = "Do:"
+"Version not found." = "Nie znaleziono wersji."
+"Your Account" = "Twoje konto"
+
+
+
+##### 2009-10-06 #####
+
+"Back" = "Z powrotem"
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "Ta funkcja nie działa w przypadku wiadomości e-mail z badań. Ta strona będzie działać, kiedy rzeczywiście wysłać kampanię."
+
+
+
+##### 2009-10-14 #####
+
+"Language changed" = "Język zmienił"
+"Rewrite Test" = "Przepisz Zbadać"
+
+
+
+##### 2009-12-21 #####
+
+"Update Subscription Account" = "Aktualizacja Subskrypcja konto"
+
+
+
+##### 2010-01-13 #####
+
+"Abuse Complaint" = "Nadużycie Reklamacja"
+"Abuse Complaints Reported:" = "Skargi nadużycie Zgłoszone:"
+"Abuse Complaints have been removed." = "Skargi nadużycie zostały usunięte."
+"Abuse Ratio has been updated." = "Stosunek nadużycie został zaktualizowany."
+"Abuse Report Received." = "Nadużycie odebrane."
+"Approve" = "Zatwierdzać"
+"Approve Campaign Sending" = "Zatwierdza kampanii Wysyłanie"
+"Campaign Approved." = "Zatwierdzony kampanii."
+"Campaign Declined." = "Kampania Odrzucona."
+"Campaign Name" = "Nazwa kampanii"
+"Campaign for Approval" = "Kampania na potwierdzenie"
+"Campaign:" = "Kampania:"
+"Change Abuse Ratio" = "Stosunek zmiany nadużycie"
+"Click here to view and approve the campaign sending:" = "Kliknij tutaj, aby zobaczyć i zatwierdzić kampanię wysyłania:"
+"Close" = "Blisko"
+"Current Abuse Ratio:" = "Aktualny Stosunek nadużycia:"
+"Decline" = "Upadek"
+"Decline & Send Email" = "Odrzuć i wyślij e-mail"
+"E-mail:" = "E-mail:"
+"E-mails Sent:" = "E-maile wysłane:"
+"FROM E-mail:" = "Od e-mail:"
+"FROM Name:" = "Od Nazwa:"
+"Group(s):" = "Grupa (a):"
+"Group:" = "Grupa:"
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "Jeśli nie zawsze zwrócić się skontaktować tego nadawcy i / lub o tym informacji kliknij przycisk Zgłoś naruszenie złożyć raport nadużycie."
+"List(s):" = "List (y):"
+"Message:" = "Wiadomość:"
+"Modify Campaign:" = "Modyfikowanie kampanii:"
+"Modify Message:" = "Zmodyfikować wiadomość:"
+"Name:" = "Nazwa:"
+"New Abuse Ratio:" = "Nowy Stosunek nadużycia:"
+"Notify Senders" = "Informuj nadawców"
+"Notify user(s) in this group:" = "Zawiadomić użytkownika (i), w tym grupy:"
+"Once you have updated your message you can try to send it again." = "Po aktualizacji wiadomość można spróbować wysłać go ponownie."
+"Please check your message you were sending to ensure it meets our sending policy." = "Sprawdź swoją wiadomość, wysyłali do upewnienia się, że spełnia nasze zasady wysyłania."
+"Please verify the information below. " = "Proszę sprawdzić poniższe informacje."
+"Preset Abuse Ratio:" = "Preset Stosunek nadużycia:"
+"Private campaign." = "Prywatna kampania."
+"Private message." = "Prywatna wiadomość."
+"Report Abuse" = "Zgłoś nadużycie"
+"Reset Abuse Complaints" = "Zresetować Reklamacje naruszenie zasad"
+"Segment:" = "Segment:"
+"Send From:" = "Wyślij Od:"
+"Send Notification to " = "Wyślij powiadomienie do"
+"TO E-mail:" = "E-mail:"
+"TO Name:" = "Z nazwa:"
+"The senders information is:" = "Informacje o nadawcy jest:"
+"The subscriber information that this sender sent to is:" = "Informacje o abonentach, że nadawca wysłał na to:"
+"This campaign has already been accepted." = "Kampania ta została już przyjęta."
+"This campaign has already been declined." = "Ta kampania została już odrzucona."
+"This feature is not available in test campaigns." = "Ta funkcja nie jest dostępna w kampanii testowych."
+"This feature is not supported when testing campaigns." = "Ta funkcja nie jest obsługiwana, gdy testowanie kampanii."
+"Type:" = "Typ:"
+"Update" = "Aktualizacja"
+"User" = "Użytkownik"
+"User:" = "Użytkownik:"
+"View Abuses" = "Zobacz Nadużycia"
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender." = "Bierzemy raporty abuse bardzo poważnie i są zgodne z prawem e-mail marketingu. Dzięki swojej razie możemy zapobiec dalszym maili wysyłanych przez od tego nadawcy. Poprzez zgłoszenie tego maila jako nadużycie nie będzie otrzymywać dalszych e-maili od tego nadawcy."
+"You have abused the mailing system %s" = "Masz nadużywany system mailingowej %s"
+"Your Abuse Report Has Been Received" = "Twój Nadużycie została odebrana"
+"Your campaign &quot;%s&quot; could not be approved at this time." = "Kampania "%s" nie może być zatwierdzony w tym czasie."
+"Your campaign needs to be updated" = "Kampania musi być aktualizowany"
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "Twój adres e-mail został również usunięty z listy. Przepraszamy za wszelkie niedogodności, jakie może to spowodować cię."
+
+
+
+##### 2010-02-02 #####
+
+"Abuse Reported." = "Nadużycie Zgłoszone."
+"Campaign Name:" = "Nazwa kampanii:"
+"Click here to manage this user's abuse settings" = "Kliknij tutaj, aby zarządzać ustawieniami nadużycie Ta użytkownika"
+"Click here to manage this user's abuse settings:" = "Kliknij tutaj, aby zarządzać ustawieniami nadużycie Ta użytkownika:"
+"User %s has been suspended due to abuse reports" = "Użytkownik %s zostało zawieszone ze względu na raporty nadużyć"
+"With a current limit of" = "Z obecnego limitu"
+"before being suspended." = "zanim zostanie zawieszone."
+
+
+
+##### 2010-03-01 #####
+
+"Page %d of %d" = "Strona %d z %d"
+
+
+##### 2010-03-28 #####
+
+"%s per page" = "%s strona na"
+
+
+
+##### 2010-07-02 #####
+
+"%s Private Messages" = "%s Prywatne wiadomości"
+"From" = "Z"
+"Private Messages published at %s." = "Prywatne wiadomości opublikowanych w %s."
+"Recipients:" = "Odbiorcy:"
+"Sent" = "Wysłany"
+
+
+
+##### 2010-09-07 #####
+
+"You have a new subscriber to your list." = "Masz nowego abonenta do listy."
+
+
+
+##### 2010-12-01 #####
+
+"This feature is not supported when testing messages." = "Ta funkcja nie jest obsługiwana, gdy testowanie wiadomości."
+
+
+
+##### 2011-01-11 #####
+
+"Share on Digg" = "Udostępnij na Digg"
+"Share on Facebook" = "Udostępnij na Facebooku"
+"Share on Reddit" = "Udostępnij na Reddit"
+"Share on StumbleUpon" = "Udostępnij na StumbleUpon"
+"Share on buzz" = "Podziel się gwar"
+"Share on del.icio.us" = "Udostępnij na del.icio.us"
+"Share via Twitter" = "Podziel się przez Twitter"
+
+
+
+##### 2011-02-23 #####
+
+"Currently reading" = "Obecnie czytanie"
+"Social Share" = "Podziel społecznej"

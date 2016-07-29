@@ -1,0 +1,15 @@
+{adesk_js lib="really/simplehistory.js" base=$site.p_link}
+<script type="text/javascript">
+  {include file="privatemessage.js"}
+</script>
+
+<h3 class="m-b">{"Private Messages"|alang}</h3>
+
+{include file="privatemessage.list.htm"}
+{include file="privatemessage.form.htm"}
+{include file="privatemessage.delete.htm"}
+{include file="privatemessage.search.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(privatemessage_process, true);
+</script>

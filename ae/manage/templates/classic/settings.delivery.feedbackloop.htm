@@ -1,0 +1,19 @@
+        <div style="background:#F3F3F0; padding:5px; padding-left:10px;">{"Feedback Loop Processing"|alang}</div>
+      </td>
+      <td valign="top">
+        <div id="mail_feedbackloop_help" style="padding:10px; border: 1px solid #E0DFDC; margin-bottom:20px;">
+
+            {"A feedback loop is a service provided by ISPs where they will forward complaints made by email recipients to the original sender."|alang}
+            {"Joining feedback loops provides a way for you to clean your list and identify a problem that exists in your marketing strategy, e.g. subscribers do not know they subscribed to your list due to deceptive marketing material."|alang}
+
+{if $site.brand_links}
+<br /><br />
+            {"To setup Feedback Loop Processing, please consult the instructions located at"|alang}
+            <a href="http://www.awebdesk.com/feedback-loops/">http://www.awebdesk.com/feedback-loops/</a>
+
+{/if}
+{if $fblcnt}
+    <br /><br />
+            <a href="#" onclick="$('settings_delivery_viewfbl').show();return false;">{"View Recent Feedback Loop Reports"|alang}</a>
+{/if}
+        </div>

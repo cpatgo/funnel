@@ -1,0 +1,86 @@
+{* THIS INCLUDE NEEDS A OBJECT CALLED $paginator IN ORDER TO WORK *}
+
+<div id="paginatorBox{$paginator->id}" class="adesk_paginator">
+	<span id="paginatorThisPage{$paginator->id}" class="adesk_paginator_thispage"></span>
+	<span id="paginatorPrevious{$paginator->id}" class="adesk_paginator_previous"></span>
+	<span id="paginatorNext{$paginator->id}" class="adesk_paginator_next"></span>
+	<span id="paginatorFirst{$paginator->id}" class="adesk_paginator_first"></span>
+	<span id="paginatorPages{$paginator->id}" class="adesk_paginator_pages">
+		<strong>1</strong>
+	</span>
+	<span id="paginatorLast{$paginator->id}" class="adesk_paginator_last"></span>
+{if $paginator->allowLimitChange}
+	<span id="paginatorLimitBox{$paginator->id}" class="adesk_paginator_limit_box">
+
+		<select id="paginatorLimit{$paginator->id}" class="adesk_paginator_limit" onchange="paginators[{$paginator->id}].limitize(this.value);">
+			<option value="5">
+{if $smarty.const.adesk_PUBLIC}
+				{"%s per page"|plang:5}
+{else}
+				{"%s per page"|alang:5}
+{/if}
+			</option>
+			<option value="10">
+{if $smarty.const.adesk_PUBLIC}
+				{"%s per page"|plang:10}
+{else}
+				{"%s per page"|alang:10}
+{/if}
+			</option>
+			<option value="20">
+{if $smarty.const.adesk_PUBLIC}
+				{"%s per page"|plang:20}
+{else}
+				{"%s per page"|alang:20}
+{/if}
+			</option>
+			<option value="50">
+{if $smarty.const.adesk_PUBLIC}
+				{"%s per page"|plang:50}
+{else}
+				{"%s per page"|alang:50}
+{/if}
+			</option>
+			<option value="100">
+{if $smarty.const.adesk_PUBLIC}
+				{"%s per page"|plang:100}
+{else}
+				{"%s per page"|alang:100}
+{/if}
+			</option>
+		</select>
+
+	</span>
+{/if}
+</div>
+
+<script>
+
+jsPaginatorPrevious = '{if $smarty.const.adesk_PUBLIC}{"Previous"|plang|js}{else}{"Previous"|alang|js}{/if}';
+{if $smarty.const.adesk_PUBLIC}
+jsPaginatorNext = '{"Next"|plang|js}';
+{else}
+jsPaginatorNext = '{"Next"|alang|js}';
+{/if}
+{if $smarty.const.adesk_PUBLIC}
+jsPaginatorThis = '{"Page %d of %d"|plang|js}';
+{else}
+jsPaginatorThis = '{"Page %d of %d"|alang|js}';
+{/if}
+
+// initialize new index in paginators array
+paginators[{$paginator->id}] = new ACPaginator({$paginator->id}, {$paginator->total}, {$paginator->fetched}, {$paginator->limit}, {$paginator->offset});
+paginators[{$paginator->id}].ajaxURL = '{$paginator->ajaxURL|js}';
+paginators[{$paginator->id}].ajaxAction = '{$paginator->ajaxAction|js}';
+{if isset($tabelize)}
+paginators[{$paginator->id}].tabelize = {$tabelize};
+{/if}
+{if isset($paginate)}
+paginators[{$paginator->id}].paginate = {$paginate};
+{/if}
+{if $paginator->allowLimitChange and isset($limitize)}
+paginators[{$paginator->id}].limitize = {$limitize};
+{/if}
+paginators[{$paginator->id}].init();
+
+</script>

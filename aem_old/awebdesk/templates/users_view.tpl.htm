@@ -1,0 +1,72 @@
+<script type="text/javascript">
+  var really_delete = '{"Are you sure you want to delete this user?  This action cannot be undone!"|alang|js}';
+</script>
+
+<h3 class="m-b">{"Admin Users"|alang}</h3>
+  {include file="message.tpl.htm"}<div class=" table-responsive">
+  <table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable" >
+    <tr class="adesk_table_header">
+      <td width="70">{"Options"|alang}</td>
+      <td width="125">{"Username"|alang}</td>
+      <td>{"Name"|alang}</td>
+      <td>{"Email"|alang}</td>
+      {if isset($include_header)}
+      {include file=$include_header}
+      {/if}
+    </tr>
+
+    {foreach from=$users item=u}
+    <tr class="adesk_table_row">
+      <td>
+        {if $show_edit}
+        <a href="desk.php?action={$get.action|html}&mode=edit&id={$u.id}">{"Edit"|alang}</a>
+        {/if}
+        {if $show_delete and $u.parentid != 0}
+        <a href="desk.php?action={$get.action|html}&mode=delete&id={$u.id}" onclick="return confirm(really_delete)">{"Delete"|alang}</a>
+        {/if}
+      </td>
+      <td>{$u.username|adesk_clear_prefix:'num'|html}</td>
+      <td>{$u.first_name|html} {$u.last_name|html}</td>
+      <td>{$u.email|html}</td>
+      {if isset($include_body)}
+      {include file=$include_body}
+      {/if}
+    </tr>
+    {/foreach}
+  </table>
+</div>
+  {if $show_add}
+  <br>
+  <form action="desk.php" method="GET">
+    <input type="submit" value='{"Add User"|alang}'>
+    <input type="hidden" name="action" value="{$get.action|html}">
+    <input type="hidden" name="mode" value="add">
+  </form>
+  {/if}
+</div>
+
+{if isset($global) and count($global) > 0}
+<h3 class="m-b">{"Global Users"|alang}</h3>
+<div class="inner_content">
+ <div class=" table-responsive"> <table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable">
+    <tr class="row_header">
+      <td style="width:10%">{"Username"|alang}</td>
+      <td style="width:15%">{"Name"|alang}</td>
+      <td style="width:15%">{"Email"|alang}</td>
+      <td>{"Options"|alang}</td>
+    </tr>
+
+    {foreach from=$global item=g}
+    <tr class="row_normal">
+      <td>{$g.username|html}</td>
+      <td>{$g.first_name|html} {$g.last_name|html}</td>
+      <td>{$g.email|html}</td>
+      <td>
+        {if $show_add}
+        <a href="desk.php?action={$get.action|html}&mode=import&id={$g.id}">{"Import"|alang}</a>
+        {/if}
+      </td>
+    </tr>
+    {/foreach}
+  </table></div>
+{/if}

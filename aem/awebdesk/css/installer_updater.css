@@ -1,0 +1,120 @@
+
+body{ background:#FFFFFF; }
+
+.adesk_install_container, .adesk_updater_container{
+	padding:20px;
+}
+
+.adesk_install_header, .adesk_updater_header{
+
+	font-size:20px;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom:10px;
+}
+.appname{
+	font-weight:bold;
+}
+.upgradeinfo{
+	font-size:12px;
+	color:#999999;
+}
+.adesk_install_footer, .adesk_updater_footer{
+	border-top:1px solid #cccccc;
+	padding-top:5px;
+}
+.adesk_install_menu, .adesk_updater_menu{
+	float:right;
+	margin-left:15px;
+}
+.adesk_install_box, .adesk_updater_box{
+	padding-top:10px;
+	overflow:auto;
+}
+.currentstep {
+	font-weight: bold;
+	color: #800000;
+}
+.nextstep {
+	font-style: italic;
+	color: #808080;
+}
+.previousstep {
+	font-style: italic;
+	color: #008000;
+}
+
+.errortitle{
+	color:#FF0000;
+	margin-bottom:10px;
+}
+.errordescript{
+	margin-bottom:10px;
+}
+.errorsrc{
+	margin-left:20px;
+}
+
+.completed, .done  { color: #008000; }
+.aborted, .error { color: #FF0000; }
+
+.completed, .aborted {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 120%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+h3{
+	margin:0px;
+	padding:0px;
+	margin-bottom:4px;
+	font-size:12px;
+}
+
+#adesk_installing_box {
+/*	z-index:*/
+}
+
+#adesk_installing_box,
+#adesk_installed_box,
+#adesk_updating_box,
+#adesk_updated_box {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background:#ffffff;
+	color:#000000;
+	overflow:auto;
+
+	text-align: center;
+	vertical-align: middle;
+}
+#adesk_installing, #adesk_installed,
+#adesk_updating, #adesk_updated {
+	padding:10px;
+
+	text-align:left;
+
+	background-color:#FFFFFF;
+	overflow: auto;
+}
+
+#adesk_installing_advanced{
+}
+
+
+.backupwarning {
+	background-color: #FFE8E8;
+	margin:0px;
+	padding:10px;
+
+}
+.non-critical-warning{
+	font-size:12px; 
+	padding:20px;
+	background-color: #FFE8E8;
+	margin-bottom:5px;
+}

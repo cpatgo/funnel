@@ -1,0 +1,61 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="header_form_save(header_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <table border="0" cellspacing="0" cellpadding="5">
+      <tr valign="top">
+        <td colspan="2">
+          {"Warning: This feature is for advanced users only."|alang}<br />
+          {"Custom headers are headers that will go in the message source, invisible to the subscriber."|alang}<br />
+          <b>{"Some custom headers might prevent your mailings from being sent."|alang}</b>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>{"Name: (Not part of header)"|alang}</td>
+        <td>
+          <input name="title" id="titleField" type="text" size="50" value="" />
+          {"This is just a label for your own internal use"|help}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>{"Header Information:"|alang}</td>
+        <td>
+          <input name="name" id="nameField" type="text" value="" size="25" maxlength="75" value="" />:
+          <input name="value" id="valueField" type="text" value="" size="50" maxlength="75" />
+          <select id="headerPersTags" onChange="form_editor_insert($('valueField'), this.value);this.value='';">
+            <option value="" selected>{"Insert Personalization Tag"|alang}</option>
+            {*html_options options=$fields*}
+          </select>
+          {"Header needs to be in format 'HEADER-NAME: HEADER VALUE'"|help}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>{"Used in Lists:"|alang}</td>
+        <td>
+          <select name="p" id="parentsList" tabindex="1" size="10" multiple="multiple" style="width:415px; height:65px;" onchange="customFieldsObj.fetch(0);">
+{foreach from=$listsList item=p}
+            <option value="{$p.id}">{$p.name|truncate:50}</option>
+{/foreach}
+          </select>
+          {"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists."|help}
+          <div>
+            {"Select:"|alang}
+            <a href="#" onclick="return parents_list_select(true);">{"All"|alang}</a>
+              &middot;
+            <a href="#" onclick="return parents_list_select(false);">{"None"|alang}</a>
+          </div>
+        </td>
+      </tr>
+      <tr valign="top" id="tstampRow" class="adesk_hidden">
+        <td>{"Date Created:"|alang}</td>
+        <td><span id="tstampSpan"></span></td>
+      </tr>
+    </table>
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="header_form_save(header_form_id)" />
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

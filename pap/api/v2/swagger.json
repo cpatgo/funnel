@@ -1,0 +1,1303 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "2.0.0",
+        "title": "PostAffiliatePro API",
+        "contact": {
+            "name": "Rastislav Kostrab",
+            "email": "rkostrab@qualityunit.com"
+        },
+        "description": "**Error codes (default case):**\n - **400**: missing mandatory param\n - **401**: Unauthorized\n - **403**: Forbidden\n - **404**: Not Found: incorrect url or query param\n - **420**: Maintenance mode\n - **500**: Internal server error\n  \n"
+    },
+    "host": "127.0.0.1",
+    "basePath": "/PostAffiliatePro/PostAffiliatePro/server/api/v2",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "parameters": {
+        "_page": {
+            "name": "_page",
+            "in": "query",
+            "description": "Page to display.",
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+        },
+        "_perPage": {
+            "name": "_perPage",
+            "in": "query",
+            "description": "Results per page.",
+            "type": "integer",
+            "format": "int32",
+            "default": 30
+        },
+        "_sortDir": {
+            "name": "_sortDir",
+            "in": "query",
+            "description": "Sorting direction ASC or DESC.",
+            "type": "string",
+            "default": "ASC",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        },
+        "_sortField": {
+            "name": "_sortField",
+            "in": "query",
+            "description": "Sorting field.",
+            "type": "string"
+        },
+        "_filters": {
+            "name": "_filters",
+            "in": "query",
+            "description": "Filters (json object {column:value, ...}), for fulltext search use column name: q",
+            "type": "string"
+        },
+        "_fields": {
+            "name": "_fields",
+            "in": "query",
+            "description": "Array of desired fields in response. If fields are not defined, return all fields in response",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "username": {
+            "name": "username",
+            "in": "query",
+            "description": "Username or email.",
+            "required": true,
+            "type": "string"
+        },
+        "userId": {
+            "name": "userId",
+            "in": "path",
+            "description": "Can be 'me' or user id. In case of 'me' user is loaded from authtoken.",
+            "required": true,
+            "type": "string"
+        },
+        "id": {
+            "name": "id",
+            "in": "path",
+            "description": "Id of given entity",
+            "required": true,
+            "type": "string"
+        },
+        "note": {
+            "name": "note",
+            "in": "query",
+            "description": "Note for affiliate. Recommended for decline action.",
+            "type": "string"
+        },
+        "status": {
+            "name": "status",
+            "in": "query",
+            "description": "A - Approved\nD - Declined\nP - Pending\n",
+            "required": true,
+            "type": "string",
+            "enum": [
+                "A",
+                "D",
+                "P"
+            ]
+        },
+        "pushToken": {
+            "name": "pushToken",
+            "in": "path",
+            "required": true,
+            "type": "string"
+        }
+    },
+    "paths": {
+        "/token": {
+            "get": {
+                "x-handler": "RestApi_Token::get",
+                "description": "Return access token.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/username"
+                    },
+                    {
+                        "in": "query",
+                        "name": "password",
+                        "description": "Password.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid access token",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/ping": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Ping::get",
+                "description": "Get `Message` object when request hits server API.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/pushnotifications": {
+            "post": {
+                "description": "Subscribe to push notifications.",
+                "x-handler": "Pap_Api_V2_PushNotification::add",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/PushNotificationRegistration"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/pushnotifications/{pushToken}": {
+            "delete": {
+                "description": "Unsubscribe from push notifications.",
+                "x-handler": "Pap_Api_V2_PushNotification::delete",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/pushToken"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "description": "Get push notification details per user and device.",
+                "operationId": "Pap_Api_V2_PushNotification::get",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/pushToken"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/PushNotificationRegistration"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/resetpassword": {
+            "post": {
+                "description": "Request password reset.",
+                "x-handler": "RestApi_Token::resetpassword",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/username"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/traffic": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Traffic::get",
+                "description": "Get traffic summary data of specified period.",
+                "parameters": [
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/TrafficResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/transactions": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Transactions::getList",
+                "description": "Get list of transactions.",
+                "security": [
+                    {
+                        "privileges": [
+                            "transaction.read",
+                            "transaction.read_own"
+                        ]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_page"
+                    },
+                    {
+                        "$ref": "#/parameters/_perPage"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortDir"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortField"
+                    },
+                    {
+                        "$ref": "#/parameters/_filters"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Transaction"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/transactions/{id}": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Transactions::get",
+                "security": [
+                    {
+                        "privileges": [
+                            "transaction.read",
+                            "transaction.read_own"
+                        ]
+                    }
+                ],
+                "description": "Get informations about trasnaction.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/id"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/transactions/{id}/_changeStatus": {
+            "put": {
+                "x-handler": "Pap_Api_V2_Transactions::changeStatus",
+                "security": [
+                    {
+                        "privileges": [
+                            "transaction.write"
+                        ]
+                    }
+                ],
+                "description": "Update transaction status.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/id"
+                    },
+                    {
+                        "$ref": "#/parameters/status"
+                    },
+                    {
+                        "$ref": "#/parameters/note"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/campaigns": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Campaigns::getList",
+                "security": [
+                    {
+                        "privileges": [
+                            "campaign.read"
+                        ]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_page"
+                    },
+                    {
+                        "$ref": "#/parameters/_perPage"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortDir"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortField"
+                    },
+                    {
+                        "$ref": "#/parameters/_filters"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Campaign"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/campaigns/{id}": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Campaigns::get",
+                "security": [
+                    {
+                        "privileges": [
+                            "campaign.read"
+                        ]
+                    }
+                ],
+                "description": "Get informations about campaign.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_fields"
+                    },
+                    {
+                        "$ref": "#/parameters/id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Campaign"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Users::getList",
+                "security": [
+                    {
+                        "privileges": [
+                            "myprofile.read",
+                            "merchant.read",
+                            "affiliate.read"
+                        ]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_page"
+                    },
+                    {
+                        "$ref": "#/parameters/_perPage"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortDir"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortField"
+                    },
+                    {
+                        "$ref": "#/parameters/_filters"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    },
+                    {
+                        "name": "users_type",
+                        "description": "Filter users_type can be used for load merchants 'M' or affiliates 'A'",
+                        "in": "query",
+                        "required": false,
+                        "default": "A",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{userId}": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Users::get",
+                "security": [
+                    {
+                        "privileges": [
+                            "myprofile.read",
+                            "merchant.read",
+                            "affiliate.read"
+                        ]
+                    }
+                ],
+                "description": "Get informations about specified user.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/userId"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/affiliates": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Affiliates::getList",
+                "security": [
+                    {
+                        "privileges": [
+                            "affiliate.read"
+                        ]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_page"
+                    },
+                    {
+                        "$ref": "#/parameters/_perPage"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortDir"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortField"
+                    },
+                    {
+                        "$ref": "#/parameters/_filters"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Affiliate"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/affiliates/{id}": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Affiliates::get",
+                "security": [
+                    {
+                        "privileges": [
+                            "affiliate.read"
+                        ]
+                    }
+                ],
+                "description": "Get informations about specified affiliate user.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/id"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Affiliate"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/affiliates/{id}/_changeStatus": {
+            "put": {
+                "x-handler": "Pap_Api_V2_Affiliates::changeStatus",
+                "security": [
+                    {
+                        "privileges": [
+                            "affiliate.write"
+                        ]
+                    }
+                ],
+                "description": "Update affiliate status",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/id"
+                    },
+                    {
+                        "$ref": "#/parameters/status"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/settings": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Settings::get",
+                "description": "Get server settings.",
+                "security": [
+                    {
+                        "privileges": [
+                            "currency.read"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Settings"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/synctime": {
+            "get": {
+                "x-handler": "Pap_Api_V2_Settings::syncTime",
+                "description": "Get server timezone difference in seconds.",
+                "parameters": [
+                    {
+                        "name": "clientTime",
+                        "in": "query",
+                        "description": "Actual client time",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid access token",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/directlinks": {
+            "get": {
+                "x-handler": "Pap_Api_V2_DirectLinks::getList",
+                "security": [
+                    {
+                        "privileges": [
+                            "direct_link.read_own"
+                        ]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/_page"
+                    },
+                    {
+                        "$ref": "#/parameters/_perPage"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortDir"
+                    },
+                    {
+                        "$ref": "#/parameters/_sortField"
+                    },
+                    {
+                        "$ref": "#/parameters/_filters"
+                    },
+                    {
+                        "$ref": "#/parameters/_fields"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/DirectLink"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/directlinks/{id}/_changeStatus": {
+            "put": {
+                "x-handler": "Pap_Api_V2_DirectLinks::changeStatus",
+                "security": [
+                    {
+                        "privileges": [
+                            "direct_link.write"
+                        ]
+                    }
+                ],
+                "description": "Update transaction status.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/id"
+                    },
+                    {
+                        "$ref": "#/parameters/status"
+                    },
+                    {
+                        "$ref": "#/parameters/note"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "privileges": {
+            "type": "oauth2",
+            "scopes": {
+                "campaign.read": "Campaign read",
+                "myprofile.read": "My profile read",
+                "merchant.read": "Merchant profile read",
+                "affiliate.read": "Affiliate profile read",
+                "affiliate.write": "Affiliate profile write",
+                "currency.read": "Application settings read",
+                "transaction.read": "Transaction read",
+                "transaction.read_own": "Transaction read for affiliates",
+                "transaction.write": "Transactions write",
+                "direct_link.read_own": "Direct link read",
+                "direct_link.write": "Direct link write"
+            },
+            "flow": "accessCode",
+            "authorizationUrl": "",
+            "tokenUrl": ""
+        }
+    },
+    "definitions": {
+        "Message": {
+            "type": "object",
+            "description": "Object which includes message.",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "PushNotificationRegistration": {
+            "type": "object",
+            "description": "Push notification registration.",
+            "properties": {
+                "platform": {
+                    "type": "string",
+                    "enum": [
+                        "android",
+                        "ios"
+                    ],
+                    "description": "Define platform of push notifications"
+                },
+                "deviceId": {
+                    "type": "string",
+                    "description": "unique random string for device"
+                },
+                "pushToken": {
+                    "type": "string"
+                },
+                "options": {
+                    "$ref": "#/definitions/PushNotificationOptions"
+                }
+            }
+        },
+        "PushNotificationOptions": {
+            "type": "object",
+            "description": "Push notification types",
+            "properties": {
+                "affiliate": {
+                    "type": "boolean"
+                },
+                "directlink": {
+                    "type": "boolean"
+                },
+                "transaction": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "User": {
+            "type": "object",
+            "description": "Information about user.",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "fullName": {
+                    "type": "string"
+                },
+                "userName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "dateinserted": {
+                    "type": "string"
+                },
+                "isMerchant": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Affiliate": {
+            "type": "object",
+            "description": "Full details about affiliate.",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "fullName": {
+                    "type": "string"
+                },
+                "userName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "referralId": {
+                    "type": "string"
+                },
+                "dateinserted": {
+                    "type": "string"
+                },
+                "dateapproved": {
+                    "type": "string"
+                },
+                "lastlogin": {
+                    "type": "string"
+                },
+                "loginscount": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "A",
+                        "D",
+                        "P"
+                    ],
+                    "description": "A - Approved\nD - Declined\nP - Pending\n"
+                },
+                "parentid": {
+                    "type": "string"
+                },
+                "minimumpayout": {
+                    "type": "number"
+                },
+                "photo": {
+                    "type": "string"
+                },
+                "data1": {
+                    "type": "string"
+                },
+                "data2": {
+                    "type": "string"
+                },
+                "data3": {
+                    "type": "string"
+                },
+                "data4": {
+                    "type": "string"
+                },
+                "data5": {
+                    "type": "string"
+                },
+                "data6": {
+                    "type": "string"
+                },
+                "data7": {
+                    "type": "string"
+                },
+                "data8": {
+                    "type": "string"
+                },
+                "data9": {
+                    "type": "string"
+                },
+                "data10": {
+                    "type": "string"
+                },
+                "data11": {
+                    "type": "string"
+                },
+                "data12": {
+                    "type": "string"
+                },
+                "data13": {
+                    "type": "string"
+                },
+                "data14": {
+                    "type": "string"
+                },
+                "data15": {
+                    "type": "string"
+                },
+                "data16": {
+                    "type": "string"
+                },
+                "data17": {
+                    "type": "string"
+                },
+                "data18": {
+                    "type": "string"
+                },
+                "data19": {
+                    "type": "string"
+                },
+                "data20": {
+                    "type": "string"
+                },
+                "data21": {
+                    "type": "string"
+                },
+                "data22": {
+                    "type": "string"
+                },
+                "data23": {
+                    "type": "string"
+                },
+                "data24": {
+                    "type": "string"
+                },
+                "data25": {
+                    "type": "string"
+                }
+            }
+        },
+        "Settings": {
+            "type": "object",
+            "description": "Settings about current user from server",
+            "properties": {
+                "currencySymbol": {
+                    "type": "string"
+                },
+                "currencyBefore": {
+                    "type": "boolean"
+                },
+                "currencyDecimals": {
+                    "type": "integer"
+                },
+                "dateFormat": {
+                    "type": "string"
+                },
+                "timeFormat": {
+                    "type": "string"
+                },
+                "thousandsSeparator": {
+                    "type": "string"
+                },
+                "decimalSeparator": {
+                    "type": "string"
+                }
+            }
+        },
+        "TrafficResponse": {
+            "type": "object",
+            "description": "Summary data about traffic.",
+            "properties": {
+                "impressions": {
+                    "$ref": "#/definitions/RepeatedUnique"
+                },
+                "clicks": {
+                    "$ref": "#/definitions/RepeatedUnique"
+                },
+                "allCommissions": {
+                    "$ref": "#/definitions/CommissionComputer"
+                },
+                "sales": {
+                    "$ref": "#/definitions/CommissionComputer"
+                },
+                "refunds": {
+                    "$ref": "#/definitions/CommissionComputer"
+                },
+                "chargeBacks": {
+                    "$ref": "#/definitions/CommissionComputer"
+                },
+                "actions": {
+                    "$ref": "#/definitions/CommissionComputer"
+                }
+            }
+        },
+        "RepeatedUnique": {
+            "type": "object",
+            "description": "Sub-object of `TrafficResponse`.",
+            "properties": {
+                "repeated": {
+                    "type": "integer"
+                },
+                "unique": {
+                    "type": "integer"
+                }
+            }
+        },
+        "CommissionComputer": {
+            "type": "object",
+            "description": "Sub-object of `TrafficResponse`.",
+            "properties": {
+                "totalCost": {
+                    "$ref": "#/definitions/ApprovedPending"
+                },
+                "count": {
+                    "$ref": "#/definitions/ApprovedPending"
+                },
+                "commission": {
+                    "$ref": "#/definitions/ApprovedPending"
+                }
+            }
+        },
+        "ApprovedPending": {
+            "type": "object",
+            "description": "Sub-object of `TrafficResponse`.",
+            "properties": {
+                "approved": {
+                    "type": "integer"
+                },
+                "pending": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Campaign": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "rtype": {
+                    "type": "string"
+                },
+                "rstatus": {
+                    "type": "string"
+                }
+            }
+        },
+        "Transaction": {
+            "type": "object",
+            "description": "Item of list of transactions.",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "affiliateId": {
+                    "type": "string"
+                },
+                "affiliateName": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "type": "string"
+                },
+                "campaignId": {
+                    "type": "string"
+                },
+                "campaignName": {
+                    "type": "string"
+                },
+                "commission": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "A",
+                        "D",
+                        "P"
+                    ],
+                    "description": "A - Approved\nD - Declined\nP - Pending\n"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "C",
+                        "S",
+                        "A",
+                        "I",
+                        "B",
+                        "E",
+                        "F",
+                        "R",
+                        "H",
+                        "U"
+                    ],
+                    "description": "C - Click\nS - Sale\nA - Action\nI - Commisison per mile\nB - Signun Bonus\nE - Extra bonus\nF - Referral\nR - Refund\nH - Chargeback\nU - Recurring\n"
+                },
+                "commissionTypeId": {
+                    "type": "string"
+                },
+                "commissionTypeName": {
+                    "type": "string"
+                },
+                "totalCost": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "tier": {
+                    "type": "number"
+                },
+                "orderId": {
+                    "type": "string"
+                }
+            }
+        },
+        "DirectLink": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "A",
+                        "D",
+                        "P"
+                    ],
+                    "description": "A - Approved\nD - Declined\nP - Pending\n"
+                },
+                "affiliateId": {
+                    "type": "string"
+                },
+                "affiliateName": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

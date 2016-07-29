@@ -1,0 +1,15 @@
+<table>
+	<tr>
+{foreach from=$fields item=field name=fields}
+		<th>{$field|alang|escape:'html'}</th>
+{/foreach}
+	</tr>
+
+{foreach from=$rows item=row name=rows}
+	<tr>
+{foreach from=$row item=val name=field}
+		<td>{$val|escape:'html'}</td>
+{/foreach}
+	</tr>
+{/foreach}
+</table>

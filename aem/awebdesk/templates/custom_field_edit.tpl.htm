@@ -1,0 +1,351 @@
+{adesk_modes default="add"}
+{adesk_js lib="scriptaculous/prototype.js"}
+{adesk_js lib="scriptaculous/scriptaculous.js"}
+
+{if $ftype == 5 or $ftype == 7 or $ftype == 8}
+	{assign var = "default_on" value = "circle_green"}
+	{assign var = "default_off" value = "circle_grey"}
+{else}
+	{assign var = "default_on" value = "radio_checked"}
+	{assign var = "default_off" value = "radio_unchecked"}
+{/if}
+<script type="text/javascript">
+  var text_default = '{"Default"|alang|js}';
+  var text_remove  = '{"Remove"|alang|js}';
+  var text_label   = '{"Label"|alang|js}';
+  var text_value   = '{"Value"|alang|js}';
+
+  var prefix       = '{$__|default:'..'}';
+
+  var custom_field_str_blank = '{"The custom field title cannot be blank and cannot contain only spaces."|alang}';
+
+  var ftype        = '{$ftype}';
+
+  {if $ftype == 5 or $ftype == 7 or $ftype == 8}
+	  var default_on   = 'circle_green';
+	  var default_off  = 'circle_grey';
+  {else}
+	  var default_on   = 'radio_checked';
+	  var default_off  = 'radio_unchecked';
+  {/if}
+  var values_count = 0;
+
+  var default_label = '';
+  var default_value = '';
+
+	{if isset($custom_field_form)}
+		{if $custom_field_form != ''}
+			{ include file=$custom_field_form }
+		{/if}
+	{/if}
+
+  {literal}
+  function custom_field_validate() {
+		if ($("title").value == "" || $("title").value.match(/^[ ]+$/)) {
+		  alert(custom_field_str_blank);
+		  return false;
+		}
+
+		if (typeof custom_field_validate_ihook == "function") {
+			var validate_ihook = custom_field_validate_ihook();
+			if (!validate_ihook) return false;
+		}
+
+		return true;
+  }
+
+  function make_default_label(node, index) {
+    node = $("img_" + index.toString());
+    if (ftype == 4 || ftype == 5)
+      reset_bullets();
+
+    if (ftype == 7 || ftype == 8) {
+      if (node.src.match(default_on))
+        node.src = prefix + "/awebdesk/media/" + default_off + ".gif";
+      else
+        node.src = prefix + "/awebdesk/media/" + default_on + ".gif";
+    } else {
+      node.src = prefix + "/awebdesk/media/" + default_on + ".gif";
+    }
+
+    if (ftype == 5)
+      set_default(index);
+    else
+      set_default_all();
+  }
+
+  function add_value_fast(lab, val, imgsrc, isdefault) {
+    values_count++;
+
+    var img = Builder.node("img", {id: "img_" + values_count.toString(), onclick: "make_default_label(this, '" + values_count.toString() + "')"});
+
+    if (imgsrc != "")
+      img.src = imgsrc;
+    else {
+      if (values_count == 1)
+        img.src = prefix + "/awebdesk/media/" + default_on + ".gif";
+      else
+        img.src = prefix + "/awebdesk/media/" + default_off + ".gif";
+    }
+
+    var div = Builder.node("div", {style: "position: relative", id: "values_" + values_count.toString()}, [
+        img,
+        " ",
+        Builder.node("input", {onclick: "make_default_label(this, '" + values_count.toString() + "')", id: "label_" + values_count.toString(), name: "labels[]", type: "text", value: lab}),
+        " ",
+        Builder.node("input", {onblur: "if (this.id == default_label) set_default('" + values_count.toString() + "')", title: text_value, id: "value_" + values_count.toString(), name: "values[]", type: "text", value: val}),
+        " ",
+        Builder.node("input", {onclick: "$('value_container').removeChild($('values_" + values_count.toString() + "'))", value: text_remove, type: "button", className: 'adesk_button_remove'})
+      ]
+    );
+
+    if (isdefault) {
+      default_label = "label_" + values_count.toString();
+      default_value = "value_" + values_count.toString();
+    }
+
+    $('value_container').appendChild(div);
+  }
+
+  function add_value_slow(lab, val, imgsrc, isdefault) {
+    add_value_fast(lab, val, imgsrc, isdefault);
+    window.setTimeout('clear_inputs("' + values_count.toString() + '")', 1200);
+    reset_sorting();
+  }
+
+  function set_default(n) {
+    document.getElementById("title_default").value = document.getElementById("label_" + n).value;
+    document.getElementById("onfocus").value       = document.getElementById("value_" + n).value;
+  }
+
+  function set_default_all() {
+    $("title_default").value = "";
+    $("onfocus").value = "";
+    for (var i = 1; i <= values_count; i++) {
+      var ll = "label_" + i.toString();
+      var vv = "value_" + i.toString();
+      var ii = "img_" + i.toString();
+
+      if ($(ii).src.match(default_on)) {
+        if ($("title_default").value == "")
+          $("title_default").value = $(ll).value;
+        else
+          $("title_default").value += "," + $(ll).value;
+
+        if ($("onfocus").value == "")
+          $("onfocus").value = $(vv).value;
+        else
+          $("onfocus").value += "||" + $(vv).value;
+      }
+    }
+  }
+
+  function clear_inputs(n) {
+    document.getElementById("label_" + n).value = document.getElementById("label_" + n).value.replace(/^Label$/, '');
+    document.getElementById("value_" + n).value = document.getElementById("value_" + n).value.replace(/^Value$/, '');
+  }
+
+  function reset_sorting() {
+    Sortable.create("value_container", {ghosting: true, tag: 'div', handle: 'drag', dropOnEmpty: true, constraint: false});
+  }
+
+  function reset_bullets() {
+    var elem;
+    for (var i = 0; i <= values_count; i++) {
+      elem = document.getElementById("img_" + i.toString());
+
+      if (elem !== null) {
+        elem.src = prefix + "/awebdesk/media/" + default_off +".gif";
+      }
+    }
+  }
+</script>
+
+{/literal}
+
+{if isset($customfield_usersettings_header)}
+	{include file="user-settings.header.inc.htm" userpage='user_field'}
+{else}
+	{if $mode == 'add'}
+	<h3 class="m-b">{$pageTitle} > {"Add"|alang} {$ftype|adesk_field_type}</h3>
+	{else}
+	<h3 class="m-b">{$pageTitle} > {"Edit"|alang} {$ftype|adesk_field_type} {$field.title|default:''}</h3>
+	{/if}
+{/if}
+
+<div class="inner_content">
+  {include file="message.tpl.htm"}
+  <form action="desk.php" method="POST" onsubmit="return custom_field_validate()">
+    <table border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td width="120">{"Field Name"|alang}</td>
+        <td width="400"><input type="text" name="title" id="title" value="{$field.title|default:''|html}"></td>
+      </tr>
+      {if $ftype == 2}
+      <tr>
+        <td>{"Columns"|alang}</td>
+        <td><input type="text" name="cols" value="{$cols|default:''|html}"></td>
+      </tr>
+      <tr>
+        <td>{"Rows"|alang}</td>
+        <td><input type="text" name="rows" value="{$rows|default:''|html}"></td>
+      </tr>
+      {/if}
+      {if in_array($ftype, array(1,2,3,6,9))}
+      <tr>
+        <td>{"Default Value"|alang}</td>
+        <td>
+	      {if in_array($ftype, array(1,6))}
+          <input type="text" name="onfocus" id="onfocus" value="{$field.onfocus|default:''|html}">
+          {elseif $ftype == 9}
+          <select name="onfocus" id="onfocus" size="1">
+            <option value="now" {$field.onfocus|default:''|adesk_isselected:"now"}>{"Current Date"|alang}</option>
+            <option value="null" {$field.onfocus|default:''|adesk_isselected:"null"}>{"Blank"|alang}</option>
+          </select>
+          {elseif $ftype == 2}
+          <textarea name="expl" id="expl">{$field.expl|default:''|html}</textarea>
+          {elseif $ftype == 3}
+          <input type="checkbox" name="onfocus" id="onfocus" value="checked" {$field.onfocus|default:''|adesk_ischecked_radio:"checked"}>
+          {/if}
+        </td>
+      </tr>
+      {elseif $ftype >= 4 and ($ftype <= 5 or $ftype == 7 or $ftype == 8)}
+      <tr valign="top">
+        <td>{"Field Values "|alang}</td>
+        <td>
+          {if $ftype == 5 or $ftype == 7 or $ftype == 8}
+          <div class="field_dropdown_head">
+            <input type="text" name="title_default" id="title_default" value="{$field.onfocus_label|default:''|html}" style="width:85%; border:0px;" readonly>
+          </div>
+          {else}
+          <input type="hidden" name="title_default" id="title_default" value="{$field.onfocus_label|default:''|html}" >
+          {/if}
+          <input type="hidden" name="onfocus" id="onfocus" value="{$field.onfocus|default:''|html}"/>
+          <div id="value_container" class="{if $ftype == 5}field_dropdown_value{else}field_radio_value{/if}">
+            {if isset($field.values)}
+            {foreach from=$field.values item=v name="fields"}
+            <div style="position: relative" id="values_{$smarty.foreach.fields.iteration}">
+              {if (($ftype == 7 or $ftype == 8) and in_array($v.value, $field.onfocus_array)) or $v.value == $field.onfocus|default:""}
+              {assign var="field_img" value=$default_on}
+              {assign var="field_def" value=true}
+              {else}
+              {assign var="field_img" value=$default_off}
+              {assign var="field_def" value=false}
+              {/if}
+			  <img src="{$__|default:'..'}/awebdesk/media/{$field_img|html}.gif" id="img_{$smarty.foreach.fields.iteration}" onclick="make_default_label(this, '{$smarty.foreach.fields.iteration}')">
+              <input onclick="make_default_label(this, '{$smarty.foreach.fields.iteration}')" id="label_{$smarty.foreach.fields.iteration}" title='{"Label"|alang}' value='{$v.label|escape}' name="labels[]" type="text">
+              <input onblur="if (this.id == default_label) set_default('{$smarty.foreach.fields.iteration}')" title='{"Value"|alang}' id="value_{$smarty.foreach.fields.iteration}" name="values[]" type="text" value="{$v.value|escape:'javascript'}">
+              <input onclick="$('value_container').removeChild($('values_{$smarty.foreach.fields.iteration}'))" value='{"Remove"|alang}' type="button" class="adesk_button_remove">
+              {if $field_def == true}
+              <script type="text/javascript">
+                default_label = "label_{$smarty.foreach.fields.iteration}";
+                default_value = "value_{$smarty.foreach.fields.iteration}";
+              </script>
+              {/if}
+              <script type="text/javascript">values_count = '{$smarty.foreach.fields.total}'</script>
+            </div>
+            {foreachelse}
+            <script type="text/javascript">add_value_slow(text_label, text_value, '', false)</script>
+            {/foreach}
+            {else}
+            <script type="text/javascript">add_value_slow(text_label, text_value, '', false)</script>
+            {/if}
+          </div>
+          <div align="right" style="padding-top:4px;"><input type="button" class="adesk_button_add" onclick="add_value_slow(text_label, text_value, '')" value='{"Add Value"|alang}'></div>
+        </td>
+      </tr>
+      {/if}
+      {if isset($field.bubble_content) or isset($isstrio)}
+      {if $ftype == 6}
+      <input type="hidden" name="bubble_content" value="" />
+      {else}
+      <tr>
+        <td valign="top">{"Bubble content"|alang}</td>
+        <td>
+          <textarea rows="4" name="bubble_content">{$field.bubble_content|default:''|html}</textarea>
+          {"The contents of this field will show up as a tooltip when visitor hovers over the field."|help}
+        </td>
+      </tr>
+      {/if}
+      {/if}
+      {if $ftype != 6}
+      <tr>
+        <td>{"Required?"|alang}</td>
+        <td>
+          <input type="checkbox" name="req" value="1" {$field.req|default:0|adesk_ischecked} />
+          {"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered."|help}
+        </td>
+      </tr>
+      {/if}
+      <tr>
+        <td>{"Label  Justification"|alang}</td>
+        <td>
+          <select name="label">
+            <option value="1" {$field.label|default:0|adesk_isselected:1}>{"Top"|alang}</option>
+            <option value="0" {$field.label|default:0|adesk_isselected:0}>{"Left"|alang}</option>
+          </select>
+          {"The label of this field (a title) can be shown both above the field, or on its left side."|help}
+        </td>
+      </tr>
+      {if isset($mirror_list) and count($mirror_list) > 0}
+      <tr>
+{if $mirroring}
+        <td valign="top">{"Mirror this in"|alang}</td>
+{else}
+        <td valign="top">{"For use in"|alang}</td>
+{/if}
+        <td>
+          <select id="mirrorsList" name="mirror[]" multiple>
+            {foreach from=$mirror_list item=m}
+            <option value="{$m.id}" {$m.selected|adesk_isselected:true} {if isset($m.disabled)}{$m.disabled|adesk_isdisabled:true}{/if}>{$m.name|html|truncate:50}</option>
+            {/foreach}
+          </select>
+          <div>
+            {"Select:"|alang}
+            <a href="#" onclick="return adesk_form_select_multiple_all($('mirrorsList'), $('mirrorsList').getElementsByTagName('option')[0].value == '0');">{"All"|alang}</a>
+            &middot;
+            <a href="#" onclick="return adesk_form_select_multiple_none($('mirrorsList'));">{"None"|alang}</a>
+          </div>
+        </td>
+      </tr>
+      {/if}
+      {if $inlist}
+      <tr>
+        <td>{"Show on subscriber listing page?"|alang}</td>
+        <td>
+          <input name="show_in_list" type="checkbox" value="1" {if isset($field.show_in_list) and $field.show_in_list}checked{/if} />
+        </td>
+      </tr>
+      {/if}
+      {if $perstag}
+      <tr>
+        <td>{"Personalization Tag"|alang}</td>
+        <td>
+          %<input name="perstag" id="perstag" type="text" size="16" value="{if isset($field.perstag) and $field.perstag}{$field.perstag}{/if}" />%
+          {"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed."|help}
+        </td>
+      </tr>
+      {/if}
+      {if isset($custom_field_include)}
+      {include file=$custom_field_include}
+      {/if}
+    </table>
+
+    <br />
+    <div>
+      <input type="submit" value="{$mode_submit}">
+      {adesk_back href=$back_href}
+      <input type="hidden" name="action" value="{$get.action|html}">
+      <input type="hidden" name="mode" value="{$mode_future}">
+      <input type="hidden" name="id" value="{$get.id|default:''|html}">
+      <input type="hidden" name="relid" value="{$get.relid|default:''|html}">
+      <input type="hidden" name="type" value="{$ftype|default:''|html}">
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+  {if $ftype == 4 or $ftype == 5}
+  reset_sorting();
+  {/if}
+</script>

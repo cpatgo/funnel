@@ -1,0 +1,202 @@
+{
+  "id": "4310",
+  "name": "Jeff Walker Video Fakeout Page",
+  "mobile": true,
+  "notes": "QA fixes",
+  "syntax": 4,
+  "version": 1.08,
+  "style": {
+    "replacements": [
+      {
+        "type": "color",
+        "name": "Primary Action Color",
+        "find": "#f69f1b"
+      },
+      {
+        "type": "color",
+        "name": "Secondary Action Color",
+        "find": "#1099c6"
+      },
+      {
+        "type": "color",
+        "name": "Text Color",
+        "find": "#0c304a"
+      },
+      {
+        "type": "color",
+        "name": "Body Background Color",
+        "find": "#fffffe"
+      },
+      {
+        "type": "color",
+        "name": "Dashed Border Color",
+        "find": "#e4e4e4"
+      },
+      {
+        "type": "color",
+        "name": "CTA Button Text Color",
+        "find": "#fffffd"
+      },
+      {
+        "type": "color",
+        "name": "Hover CTA Button Text Color",
+        "find": "#fffffc"
+      },
+      {
+        "type": "color",
+        "name": "Footer Background Color",
+        "find": "#1099c7"
+      },
+      {
+        "type": "color",
+        "name": "Footer Text Color",
+        "find": "#fffffb"
+      }
+    ]
+	},
+	"variables": {},
+	"elements": [
+		{
+			"id": "header",
+			"name": "Page Header",
+			"type": "container"
+		},
+		{
+			"id": "site-header-title",
+			"name": "Headline Text",
+			"type": "text"
+		},
+		{
+			"id": "video-btn",
+			"name": "Video Fakeout Image Link",
+			"type": "image-link",
+			"data": {
+				"max-width": 792,
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "countdown-container",
+			"name": "Countdown Container",
+			"type": "container"
+		},
+		{
+			"id": "countdown-title",
+			"name": "Countdown Headline Text",
+			"type": "text"
+		},
+		{
+			"id": "countdown",
+			"name": "Countdown Timer",
+			"type": "countdown"
+		},
+		{
+			"id": "days-text",
+			"name": "Days Text",
+			"type": "text"
+		},
+		{
+			"id": "hours-text",
+			"name": "Hours Text",
+			"type": "text"
+		},
+		{
+			"id": "minutes-text",
+			"name": "Minutes Text",
+			"type": "text"
+		},
+		{
+			"id": "seconds-text",
+			"name": "Seconds Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box",
+			"name": "Call To Action Container",
+			"type": "container"
+		},
+		{
+			"id": "cta-box-btn",
+			"name": "Call to Action Button",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "cta-box-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "cta-box-disclaimer",
+			"name": "Disclaimer Text",
+			"type": "text"
+		},
+		{
+			"id": "branding",
+			"name": "Branding Container",
+			"type": "container"
+		},
+		{
+			"id": "branding-logo",
+			"name": "Logo Image",
+			"type": "image",
+			"comment": "Maximum width 179 pixels"
+		},
+		{
+			"id": "branding-tagline",
+			"name": "Tagline Text",
+			"type": "text"
+		},
+		{
+			"id": "footer",
+			"name": "Footer",
+			"type": "container"
+		},
+		{
+			"id": "site-footer-links",
+			"name": "Links Text",
+			"type": "text"
+		},
+		{
+			"id": "site-footer-fineprint",
+			"name": "Copyright Text",
+			"type": "text"
+		}
+  ],
+	"form": {
+		"title": {
+			"css": {
+				"font-size": "21pt;",
+				"font-weight": "600;",
+				"color": "#1099c6;",
+				"font-family": "'Open Sans', sans-serif;"
+			},
+			"html": "Get Your Free Product Launch Blueprint Now"
+		},
+		"submit": {
+			"css": {
+				"background-color": "#f69f1b;",
+				"border-width": "0pt;",
+				"border-radius": "3px;",
+				"text-transform": "none;",
+				"font-size": "18pt;",
+				"padding": "10px;",
+				"text-shadow": "0 0 0 #f69f1b;",
+				"text-align": "center;",
+				"font-family": "'Open Sans', sans-serif;"
+			},
+			"html": "Download Now!"
+		},
+		"privacy": {
+			"css": {
+				"font-size": "9.75pt;"
+			},
+			"html": "Privacy Policy: We hate SPAM and promise to keep your email address safe."
+		}
+	}
+}

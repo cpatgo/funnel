@@ -1,0 +1,13 @@
+{if !isset($userpage)}{assign var=userpage value='user'}{/if}
+<div id="userheader" style="margin-bottom:10px;">
+	<h3 class="m-b">{"Users"|alang}</h3>
+	<ul class="navlist">
+		<li class="{if $userpage == 'user'}currenttab{else}othertab{/if}"><a href="desk.php?action=user">{"Users"|alang}</a></li>
+		<li class="{if $userpage == 'group'}currenttab{else}othertab{/if}"><a href="desk.php?action=group">{"Admin Groups"|alang}</a></li>
+		{if adesk_admin_ismaingroup()}
+			{if !$__ishosted}
+				<li class="{if $userpage == 'loginsource'}currenttab{else}othertab{/if}"><a href="desk.php?action=loginsource">{"Login Sources"|alang}</a></li>
+			{/if}
+		{/if}
+	</ul>
+</div>

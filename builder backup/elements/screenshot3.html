@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:500,400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="stylesheet" href="css/owl.carousel.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css" />
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div id="page" class="page">
+
+            <!--/-->
+
+
+            <!-- Screenshot Section-->
+
+            <section id="screenshot" class="sections">
+                <div class="container">
+                    <div class="row">
+
+                        <!--  Heading-->
+                        <div class="heading wow fadeIn " data-wow-offset="120" data-wow-duration="1.5s">
+                            <div class="title text-center"><h1>App Screenshot</h1></div>
+                            <div class="subtitle text-center "><h5>This is subtile. lorem ipsum dolar shit amet</h5></div>
+                            <div class="separator text-center"></div>
+                        </div>
+
+
+                        <!-- screenshot images-->
+                        <div class="screenshots wow fadeInUp " data-wow-offset="120" data-wow-duration="1.5s">
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/1.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/1.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/2.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/2.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/3.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/3.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/4.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/4.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/2.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/2.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+                            <div class="screenshot-list">
+                                <a href="images/screenshots/3.png"  data-lightbox-gallery="screenshots">
+                                    <img src="images/screenshots/3.png" alt="Mobile App Screenshot">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+        <!--        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+
+                screenshot();
+
+            })
+
+            function screenshot() {
+                $('.screenshots').owlCarousel({
+                    responsiveClass: true,
+                    autoplay: false,
+                    items: 4,
+                    loop: true,
+                    margin: 20,
+                    dots: true,
+                    responsive: {
+                        // breakpoint from 0 up
+                        // breakpoint from 480 up
+                        0: {
+                            items: 1
+                        },
+                        480: {
+                            items: 2
+                        },
+                        // breakpoint from 768 up
+                        768: {
+                            items: 2
+                        },
+                        980: {
+                            items: 4
+                        }
+                    }
+                });
+            }
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--        <script>
+                    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                    e.src='//www.google-analytics.com/analytics.js';
+                    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                    ga('create','UA-XXXXX-X');ga('send','pageview');
+                </script>-->
+    </body>
+</html>

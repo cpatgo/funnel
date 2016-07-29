@@ -1,0 +1,14 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="approval_form_save(approval_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <table border="0" cellspacing="0" cellpadding="5">
+    </table>
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="approval_form_save(approval_form_id)" />
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<div id="list" class="adesk_hidden">
+  <form action="desk.php?action=service" method="GET" onsubmit="service_list_search(); return false">
+    <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="1">
+      <thead id="list_head">
+        <tr class="adesk_table_header">
+          <td width="50">{"Options"|alang}</td>
+          <td width="250">{"Name"|alang}</td>
+          <td>{"Description"|alang}</td>
+        </tr>
+      </thead>
+      <tbody id="list_table">
+      </tbody>
+    </table></div>
+    <div id="list_noresults" class="adesk_hidden">
+      <div align="center">{"Nothing found."|alang}</div>
+    </div>
+    <div style="display: none; float:right">
+      {include file="pagination.js.tpl.htm" tabelize="service_list_tabelize" paginate="service_list_paginate"}
+    </div>
+    <div id="loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+      {"Loading. Please wait..."|alang}
+    </div>
+    <span id="selectXPageAllBox" class="adesk_hidden">
+      <span class="adesk_hidden">{"All items are now selected."|alang}</span>
+      <span class="adesk_hidden">{"All items on this page are now selected."|alang}</span>
+      <a class="adesk_hidden" href="#" onclick="return adesk_form_check_selection_xpage(this.parentNode);">{"Click here to select all %s items."|alang:'<span></span>'}</a>
+    </span>
+  </form>
+</div>

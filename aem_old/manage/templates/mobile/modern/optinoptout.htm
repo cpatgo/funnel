@@ -1,0 +1,18 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="optinoptout.js"}
+</script>
+
+<h3 class="m-b">{"Opt-In/Opt-Out Email Confirmation Sets"|alang}<span id="optinoptout_list_count" class="adesk_hidden"></span></h3>
+
+{include file="optinoptout.list.htm"}
+{include file="optinoptout.form.htm"}
+{include file="optinoptout.delete.htm"}
+{include file="optinoptout.search.htm"}
+{include file="editor.personalize.inc.htm"}
+{include file="editor.conditional.inc.htm"}
+{include file="editor.template.inc.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(optinoptout_process, true);
+</script>

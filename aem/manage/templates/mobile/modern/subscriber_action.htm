@@ -1,0 +1,15 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="subscriber_action.js"}
+</script>
+
+<h3 class="m-b">{"Subscriber Actions"|alang}<span id="subscriber_action_list_count" class="adesk_hidden"></span></h3>
+
+{include file="subscriber_action.list.htm"}
+{include file="subscriber_action.form.htm"}
+{include file="subscriber_action.delete.htm"}
+{include file="subscriber_action.search.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(subscriber_action_process, true);
+</script>

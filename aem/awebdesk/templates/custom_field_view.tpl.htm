@@ -1,0 +1,166 @@
+{adesk_js base=".." acglobal="ajax,dom,b64,str"}
+{adesk_js lib="scriptaculous/prototype.js"}
+{adesk_js lib="scriptaculous/scriptaculous.js"}
+
+<script type="text/javascript">
+  var really_delete = '{"Are you sure you want to delete this field?  This action cannot be undone!"|alang|js}';
+{if $sorting}
+  var _custom_are_you_sure = '{"You have not saved your order changes."|alang|js}';
+  {literal}
+  window.onbeforeunload = null;
+  window.onbeforeunload = function () {
+    if ($('save_order') && $('save_order').disabled == false) {
+      return _custom_are_you_sure;
+    }
+  }
+  {/literal}
+  adesk_ajax_init();
+{/if}
+</script>
+
+{if isset($customfield_usersettings_header)}
+	{include file="user-settings.header.inc.htm" userpage='user_field'}
+{else}
+	<h3 class="m-b">{$pageTitle}</h3>
+{/if}
+
+<div class="inner_content">
+  {include file="message.tpl.htm"}
+  {if isset($custom_fields_desc)}
+  <div>
+    {$custom_fields_desc|html}
+  </div>
+  <br />
+  {/if}
+
+{if isset($custom_content_include)}
+	{if $custom_content_include != ''}
+		{ include file=$custom_content_include }
+	{/if}
+{/if}
+<div class=" table-responsive">
+  <table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable">
+    <thead>
+      <tr class="adesk_table_header">
+        <td style="width:100px;">{"Options"|alang}</td>
+{if $sorting}
+        <td style="width:25px;">&nbsp;</td>
+{/if}
+        <td>{"Label"|alang}</td>
+        <td style="width:100px;">{"Type"|alang}</td>
+{if $perstag}
+        <td>{"Personalization Tag"|alang}</td>
+{/if}
+{if $infoTitle}
+        <td>{$infoTitle}</td>
+{/if}
+{if $inlist}
+        <td>{"Shown in Lists"|alang}</td>
+{/if}
+      </tr>
+    </thead>
+    <tbody id="fieldrows">
+	  {if isset($fields) and is_array($fields)}
+      {foreach from=$fields item=f}
+      <tr class="adesk_table_row">
+        <td>
+          <a href="desk.php?action={$get.action|html}&mode=edit&id={$f.id}&relid={$relid|default:''|html}">{"Edit"|alang}</a>
+          &nbsp;
+          <a href="desk.php?action={$get.action|html}&mode=delete&id={$f.id}&relid={$relid|default:''|html}" onclick="return confirm(really_delete)">{"Delete"|alang}</a>
+          <input type="hidden" value="{$f.id}">
+        </td>
+{if $sorting}
+<td style="text-align: center; cursor:move;"><img src="{$__|default:'..'}/awebdesk/media/drag_icon.gif" width="11" height="23" /></td>
+{/if}
+        <td>{$f.title|html} {if $f.req == 1}<span style="color:#999999;">({"Required"|alang})</span>{/if}</td>
+        <td>{$f.type|adesk_field_type}</td>
+{if $perstag}
+        <td>%{if !isset($f.perstag) or $f.perstag == ''}PERS_{$f.id}{else}{$f.perstag}{/if}%</td>
+{/if}
+{if isset($custom_row_info)}
+	{if $custom_row_info != ''}
+        <td>
+		{ include file=$custom_row_info }
+        </td>
+	{/if}
+{/if}
+{if $inlist}
+        <td>{if $f.show_in_list}{"Yes"|alang}{else}{"No"|alang}{/if}</td>
+{/if}
+      </tr>
+      {/foreach}
+    </tbody>
+    {if isset($mirrors)}
+    <tbody id="mirroredrows">
+      {foreach from=$mirrors item=m}
+      <tr class="row_normal">
+        <td style="width:150px">
+          <i>{"Mirrored from"|alang} {$m.mirror_src|html}</i>
+          <input type="hidden" value="{$m.id}">
+        </td>
+{if $sorting}
+<td style="width:25px; cursor:move"><img src="{$__|default:'..'}/awebdesk/media/drag_icon.gif" width="11" height="23"></td>
+{/if}
+        <td style="width:250px">{$m.title|html}</td>
+        <td style="width:100px">{$m.type|adesk_field_type}</td>
+      </tr>
+      {/foreach}
+	  {/if}
+    </tbody>
+    {/if}
+  </table>
+</div>
+{if $sorting}
+  <br />
+  <input type="button" id="save_order" onclick="save_order()" value='{"Save Order"|alang}' class="adesk_button_order" disabled>
+{/if}
+
+  <br />
+  <br />
+  <form action="desk.php" method="GET">
+    <select name="type">
+{foreach from=$types item=v key=k}
+      <option value="{$k}">{$v}</option>
+{/foreach}
+    </select>
+    <input type="submit" value='{"Add Field"|alang}'>
+    <input type="hidden" name="action" value="{$get.action|html}">
+    <input type="hidden" name="mode" value="add">
+    <input type="hidden" name="relid" value="{$relid|default:''|html}">
+  </form>
+</div>
+
+<script type="text/javascript">
+{if isset($custom_update_order)}
+	{if $custom_update_order != ''}
+		{ include file=$custom_update_order }
+	{/if}
+{/if}
+
+{if $sorting}
+{literal}
+function save_order() {
+  var rows = document.getElementById('fieldrows').getElementsByTagName('tr');
+  var ary  = new Array(rows.length);
+
+  for (var i = 0; i < rows.length; i++) {
+    ary[i] = rows[i].getElementsByTagName('input')[0].value;
+  }
+
+  if (update_order)
+    update_order(ary);
+}
+
+function handle_onUpdate() {
+  document.getElementById('save_order').disabled = false;
+  // make sure each <tr> is position: relative (scriptaculous was putting 'absolute', making the row appear in upper corner)
+  var fieldrows_trs = $('fieldrows').getElementsByTagName('tr');
+  for (var i = 0; i < fieldrows_trs.length; i++) {
+	  fieldrows_trs[i].style.position = 'relative';
+  }
+}
+
+Sortable.create("fieldrows", {ghosting: true, tag: 'tr', onUpdate: handle_onUpdate});
+{/literal}
+{/if}
+</script>

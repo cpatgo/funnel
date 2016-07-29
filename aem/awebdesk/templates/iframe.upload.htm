@@ -1,0 +1,50 @@
+{* if $public}{assign var=basepath value=''}{else}{assign var=basepath value='../'}{/if *}
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset={"utf-8"|i18n}" />
+	<meta http-equiv="Content-Language" content="{"en-us"|i18n}" />
+	<link href="{if isset($site.p_link2)}{$site.p_link2}{else}{$site.p_link}{/if}/awebdesk/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/default.css" rel="stylesheet" type="text/css" />
+{if isset($site.p_link2)}
+	{adesk_js base=$site.p_link2 lib="scriptaculous/prototype.js"}
+	{adesk_js base=$site.p_link2 lib="scriptaculous/scriptaculous.js"}
+	{adesk_js base=$site.p_link2 acglobal="ajax,dom,b64,str,array,utf,ui,paginator,loader,tooltip,date,custom_fields,editor,form,progressbar,md5"}
+{else}
+	{adesk_js base=$site.p_link lib="scriptaculous/prototype.js"}
+	{adesk_js base=$site.p_link lib="scriptaculous/scriptaculous.js"}
+	{adesk_js base=$site.p_link acglobal="ajax,dom,b64,str,array,utf,ui,paginator,loader,tooltip,date,custom_fields,editor,form,progressbar,md5"}
+{/if}
+	<title>{"Upload a File"|alang}</title>
+<script>
+<!--
+{jsvar name=upload_id var=$id}
+{jsvar name=upload_name var=$name}
+{jsvar name=upload_action var=$action}
+{jsvar name=upload_relid var=$relid}
+{jsvar name=upload_limit var=$limit}
+{jsvar name=upload_submitted var=$submitted}
+{jsvar name=upload_result var=$result}
+
+//if ( self == top ) top.location = 'index.php';
+var daddy = window.parent.document;
+-->
+</script>
+</head>
+<body style="margin: 0; padding: 0;">
+<form action="upload.php?action={$action}&id={$id}&relid={$relid}&limit={$limit}&name={$name}" enctype="multipart/form-data" method="post" style="margin: 0; padding: 0;">
+<input id="{$id}_file" name="adesk_uploader" type="file" value="" onchange="window.parent.adesk_form_upload_start(this);" />
+
+
+<script>
+<!--
+
+{if $submitted}
+window.parent.adesk_form_upload_stop(upload_id, upload_name, upload_result, upload_limit);
+{if isset($additional)}{$additional}{/if}
+{/if}
+
+-->
+</script>
+</form>
+</body>
+</html>

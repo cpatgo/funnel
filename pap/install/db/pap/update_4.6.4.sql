@@ -1,0 +1,3 @@
+ALTER TABLE `qu_pap_campaignrules` CHANGE `stats_date` `stats_date` VARCHAR(4) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'AM - Actual month, AY - Actual year, AUC - All unpaid commissions, LW - Last week, LTW - Last two weeks, LM - Last month, AT - All time, SD - Since day of last month, L7D - Last 7 days, L30D - Last 30 days';
+
+ALTER TABLE `qu_pap_rules` CHANGE `date` `date` VARCHAR(4) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'AM - Actual month, AY - Actual year, AUC - All unpaid commissions, LW - Last week, LTW - Last two weeks, LM - Last month, AT - All time, SD - Since day of last month, L7D - Last 7 days, L30D - Last 30 days';

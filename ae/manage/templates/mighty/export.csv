@@ -1,0 +1,8 @@
+{foreach from=$fields item=field name=fields}{$wrapper}{$field|alang|csv_escape:$wrapper}{$wrapper}{if !$smarty.foreach.fields.last}{$delimiter}{/if}
+{/foreach}
+
+{foreach from=$rows item=row name=rows}
+{foreach from=$row item=val name=field}{$wrapper}{$val|csv_escape:$wrapper}{$wrapper}{if !$smarty.foreach.field.last}{$delimiter}{/if}
+{/foreach}
+
+{/foreach}

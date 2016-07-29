@@ -1,0 +1,31 @@
+<ul>
+{if $admin.pg_list_add}
+<li class="special"><a href="desk.php?action=list#form-0" class="button"><img class="va" src="css/images/addnewlist.png" /> {"Add New List"|alang}</a></li>
+{/if}
+{if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete}
+<li class="special"><a href="desk.php?action=list" class="button"><img class="va" src="css/images/managelists.png" /> {"Manage Lists"|alang}</a></li>{/if}
+</ul>
+
+<ul>
+{if $admin.pg_subscriber_fields || $admin.pg_subscriber_filters || $admin.pg_subscriber_actions || $admin.pg_list_emailaccount}
+ <h2>{"List Settings"|alang}</h2>
+		{if $admin.pg_subscriber_fields}<li> <a href="desk.php?action=list_field#list-01-0-0"><img class="va" src="css/images/subscriberfields.png" /> {"Subscriber Fields"|alang}</a></li>{/if}
+		{if $admin.pg_subscriber_filters} <li><a href="desk.php?action=filter#list-01-0-0"><img class="va" src="css/images/listsegments.png" /> {"List Segments"|alang}</a></li>{/if}  
+		{if $admin.pg_subscriber_actions} <li><a href="desk.php?action=subscriber_action#list-01-0-0"><img class="va" src="css/images/subscriberactions.png" /> {"Subscriber Actions"|alang}</a></li>{/if}
+		{if $admin.pg_list_emailaccount}
+		{if !$__ishosted or adesk_admin_ismaingroup()} <li><a href="desk.php?action=emailaccount#list-01-0-0"><img class="va" src="css/images/subscribersbyemail.png" /> {"Subscriptions by Email"|alang}</a></li>{/if}
+		{/if}
+ 
+{/if}
+</ul>
+<ul>
+{if $admin.pg_list_opt || $admin.pg_list_headers || $admin.pg_list_bounce }
+<h2>{"Other List Settings"|alang}</h2>
+ 
+		{if $admin.pg_list_opt} <li><a href="desk.php?action=optinoptout#list-01-0-0"><img class="va" src="css/images/emailconfirmationsets.png" /> {"Email Confirmation Sets"|alang}</a></li>{/if}
+		{if $admin.pg_list_headers} <li><a href="desk.php?action=header#list-01-0-0"><img class="va" src="css/images/customemailheaders.png" /> {"Custom Email Headers"|alang}</a></li>{/if}
+		{if $admin.pg_list_bounce and !$__ishosted} <li><a href="desk.php?action=bounce_management#list-01-0-0"><img class="va" src="css/images/bouncesettings.png" /> {"Bounce Settings"|alang}</a></li>{/if}
+ 
+{/if}
+ 
+</ul>

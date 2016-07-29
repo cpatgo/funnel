@@ -1,0 +1,12 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="abuse.js"}
+</script>
+
+<h3 class="m-b">{"Abuse Complaints"|alang}</h3>
+
+{include file="abuse.list.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(abuse_process, true);
+</script>

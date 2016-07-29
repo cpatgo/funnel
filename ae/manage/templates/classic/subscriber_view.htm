@@ -1,0 +1,194 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="subscriber_view.js"}
+</script>
+{* load javascript calendar *}
+{adesk_calendar base=".."}
+
+{assign var="name" value=$subscriber.first_name}
+{if $name == ""}
+{assign var="name" value=$subscriber.default_name}
+{/if}
+
+<h1>
+	<span id="subscriber_email_label">
+		<span id="subscriber_email_title">{$subscriber.email|escape}</span><br />
+		<span id="subscriber_email_editlink"><a href="#" onclick="$('subscriber_email_label').hide();$('subscriber_email_form').show();$('subscriber_email_field').value=subscriber_view_email;return false;">{"Edit"|alang}</a></span>
+	</span>
+	<span id="subscriber_email_form" style="display:none;">
+		<input type="text" name="email" id="subscriber_email_field" value="{$subscriber.email|escape}" onkeypress="adesk_dom_keypress_doif(event, 13, subscriber_email_update);" />
+		<input type="button" value="{'Save'|alang}" onclick="subscriber_email_update();" />
+		<input type="button" value="{'Cancel'|alang}" onclick="$('subscriber_email_form').hide();$('subscriber_email_label').show();" />
+	</span>
+</h1>
+
+{if $formSubmitted}
+<script>
+{jsvar var=$submitResult.message name=r}
+{if $submitResult.succeeded}
+adesk_result_show(r);
+{else}
+adesk_error_show(r);
+{/if}
+</script>
+{/if}
+
+<div style="float: left; width: 186px; padding-right: 5px; display:block;">
+  <div>
+	<img src="http://www.gravatar.com/avatar/{$subscriber.md5email}?d={$subscriber.default_gravatar}&s=128" width="128" style="border:3px solid #EDECE7;">  </div>
+
+  {if count($actions) > 0}
+  <div style="margin-top: 0px; padding: 10px; padding-bottom:5px; border: 1px solid #E0DFDC; float:left;">
+	<div style="margin-bottom:10px;">{"Recent Actions"|alang}</div>
+
+	  {foreach from=$actions item=e key=k}
+	  <div style="margin-bottom:4px;">({$k|acpdate}) {$e}</div>
+	  {/foreach}
+
+  </div>
+  {/if}
+   <div style="margin-top: 15px; padding: 10px; border: 1px solid #E0DFDC; color:#999999;">
+	 {"Subscribed on "|alang} <span id="subscribedate"></span><br>
+	 {"from IP"|alang} <span id="subscriberip"></span><br>
+  </div>
+  <div id="unsubscribebox" style="display: none; margin-top: 15px; padding: 10px; border: 1px solid #E0DFDC; color:#999999;">
+	 {"Unsubscribed on "|alang} <span id="unsubscribedate"></span><br>
+  </div>
+
+</div>
+
+<div id="listmodal" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+	<h1>{"Add Subscription"|alang}</h1>
+
+	<p>
+	  {"Subscribe to one of the lists below by choosing it from the dropdown and clicking the \"Add\" button."|alang}
+	</p>
+
+	<div id="listmodaldiv">
+	</div>
+
+	<br>
+
+	<div>
+	  <input type="button" class="adesk_button_ok" value='{"Add"|alang}' onclick="subscriber_view_subscribe()">
+	  <input type="button" class="adesk_button_cancel" value='{"Cancel"|alang}' onclick="$('listmodal').hide()">
+	</div>
+  </div>
+</div>
+
+<div style="display:block; margin-left:40px; float:left;">
+  <h2>{"Lists"|alang}</h2>
+
+  <p>
+  {$name|escape} {"is subscribed to"|alang} <strong><span id="listcount">{$listcount|default:0}</span></strong> {"mailing lists."|alang}
+	{"Select a list to view list specific data:"|alang}
+  </p>
+
+  <p>
+	<span id="listdiv">
+	  <select id="listid" onchange="subscriber_view_load_fields(0)">
+	  </select>
+	</span>
+	<span id="subscribelink" style="display:none">
+	  {if $admin.pg_subscriber_edit}
+	  <em>-{"or"|alang}-</em>
+	  <a href="#" onclick="subscriber_view_unlists(); return false">{"add %s to another list"|alang:$name|escape}</a>
+	  {/if}
+	</span>
+  </p>
+
+  <div id="details">
+	<div style="float: right">
+	  <span id="details_fields_editlink">
+		{if $admin.pg_subscriber_edit}
+		<a href="#" onclick="subscriber_view_load_fields(1); return false">{"Edit"|alang}</a>
+		{/if}
+	  </span>
+	  <span id="details_fields_unsubscribelink">
+		{if $admin.pg_subscriber_edit and $admin.pg_subscriber_delete}
+		<a style="margin-left: 10px" href="#" onclick="subscriber_view_unsubscribe(); return false">{"Unsubscribe"|alang}</a>
+		{/if}
+	  </span>
+	</div>
+	<div>
+	  <h2>{"Subscriber Details (List:"|alang} <span id="details_listname"></span>)</h2>
+	</div>
+
+	<div id="details_fields" style="clear: right; margin-top: 10px">
+	</div>
+
+	<div id="details_fields_updatebutton" style="display:none">
+	  <input type="button" value='{"Update"|alang}' onclick="subscriber_view_save_fields()"/>
+	  <input type="button" value='{"Cancel"|alang}' onclick="subscriber_view_load_fields(0)"/>
+	</div>
+  </div>
+
+  <div style="margin-top: 15px" id="campaignhistory">
+	<h2>{"Recent Campaign History"|alang}<span style="color:#ccc;"> {"(Last 90 days)"|alang}</span></h2>
+
+	  <table cellspacing="0" cellpadding="0" width="100%">
+		<tr class="adesk_table_header_options">
+		  <td>
+			<select name="listid" id="logListManager" size="1" onchange="subscriber_view_filter(this.value);">
+			  <option value="0">{"List Filter..."|alang}</option>
+			  {foreach from=$listsList item=p}
+			  <option value="{$p.id}">{$p.name|truncate:50}</option>
+			  {/foreach}
+			</select>
+		  </td>
+		</tr>
+	  </table>
+
+	  <table border="0" cellspacing="0" cellpadding="1" width="100%s">
+		<thead id="log_head">
+		  <tr class="adesk_table_header">
+			<td width="150">{adesk_headercol action="subscriber_view" id="01" idprefix="log_sorter" label="List"|alang}</td>
+			<td>{adesk_headercol action="subscriber_view" id="02" idprefix="log_sorter" label="Campaign"|alang}</td>
+			<td width="120">{adesk_headercol action="subscriber_view" id="03" idprefix="log_sorter" label="Date Sent"|alang}</td>
+		  </tr>
+		</thead>
+		<tbody id="log_table">
+		</tbody>
+	  </table>
+	  <div id="log_noresults" class="adesk_hidden">
+		<div align="center">{"Nothing found."|alang}</div>
+	  </div>
+	  <div style="float:right">
+		{include file="pagination.js.tpl.htm" tabelize="subscriber_view_tabelize" paginate="subscriber_view_paginate" limitize="subscriber_view_limitize" paginator=$paginators.log}
+	  </div>
+	  <div id="logLoadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+		{"Loading. Please wait..."|alang}
+	  </div>
+  </div>
+
+  <div style="margin-top: 15px" id="future">
+	<h2>{"Future"|alang}</h2>
+	<ul>
+	  {foreach from=$future item=e}
+	  <li>{$e}</li>
+	  {foreachelse}
+	  {"There are no campaigns that are scheduled to send to %s in the near future."|alang:$name|escape}
+	  {/foreach}
+	</ul>
+  </div>
+
+  <div style="margin-top: 15px" id="bounce">
+	<h2>{"Bounces"|alang}</h2>
+	<ul>
+	  {foreach from=$bounces item=e}
+	  <li>{$e}</li>
+	  {foreachelse}
+	  {"No mailing to %s has ever bounced."|alang:$name|escape}
+	  {/foreach}
+	</ul>
+  </div>
+</div>
+<br clear="all" />
+
+<script type="text/javascript">
+  subscriber_view_lists(0);
+  //subscriber_view_process_mailing(["log", subscriber_view_sort, "0"]);
+  subscriber_view_process_log(["log", subscriber_view_sort, "0"]);
+  adesk_ui_rsh_init(subscriber_view_process, true);
+</script>

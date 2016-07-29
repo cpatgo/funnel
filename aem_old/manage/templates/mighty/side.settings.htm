@@ -1,0 +1,67 @@
+<p><div class="text-center clearfix"><a    href="desk.php?action=account" class="btn btn-info"><i class="fa fa-gear"></i> {"Your Settings"|alang}</a></div></p>
+ 
+{if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+
+<header class="panel-heading bg bg-inverse">
+       {"Users & Groups"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+	 
+{if adesk_admin_ismaingroup()}
+		<a  class="list-group-item first" href="desk.php?action=settings"> <i class="fa fa-cogs fa-sm"></i> {"General Settings"|alang}</a>
+{/if}
+
+{if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+		<a  class="list-group-item first" href="desk.php?action=user#list-01-0-0"> <i class="fa fa-user fa-sm"></i> {"Users"|alang}</a>
+{/if}
+{if adesk_admin_ismaingroup()}
+		<a  class="list-group-item first" href="desk.php?action=group#list-01-0-0"> <i class="fa fa-users fa-sm"></i> {"User Groups"|alang}</a>
+		{if !adesk_site_hosted_rsid()}
+		<a  class="list-group-item first" href="desk.php?action=design#list-01-0-0"> <i class="fa fa-edit fa-sm"></i> {"Branding"|alang}</a>
+		<a  class="list-group-item first" href="desk.php?action=service#list-0-0-0"> <i class="fa fa-external-link-square fa-sm"></i> {"External Services"|alang}</a>
+		{/if}
+
+{if !$__ishosted}
+		<a  class="list-group-item first" href="desk.php?action=loginsource#list-01-0-0"> <i class="fa fa-spinner fa-sm"></i> {"Login Sources"|alang}</a>
+{/if}
+{/if}
+ </div>
+ 
+{/if}
+
+
+{if adesk_admin_ismaingroup() and !$__ishosted}
+<header class="panel-heading bg bg-inverse">
+      {"Other Settings"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+
+ 	<a  class="list-group-item first" href="desk.php?action=settings#settings_mailsending"> <i class="fa fa-random fa-sm"></i> {"SMTP Connections"|alang}</a>
+		<a  class="list-group-item first" href="desk.php?action=database"> <i class="fa fa-expand fa-sm"></i> {"Database Utilities"|alang}</a>
+		<a  class="list-group-item first" href="desk.php?action=cron#list-01-0-0"> <i class="fa fa-tachometer fa-sm"></i> {"Scheduled Tasks"|alang}</a>
+		<a  class="list-group-item first" href="desk.php?action=about"> <i class="fa fa-info fa-lg"></i> {"About"|alang}</a>
+</div>
+{/if}
+
+{if $processesCnt or $pausedProcessesCnt}
+<header class="panel-heading bg bg-inverse">
+   {"Ongoing Processes"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+ {if $processesCnt}
+		<a  class="list-group-item first" href="desk.php?action=processes#list-01-0-0"> <i class="fa fa-forward fa-sm"></i> {"Current Processes (%s)"|alang:$processesCnt}</a>{/if}
+		{if $pausedProcessesCnt}
+		<a  class="list-group-item first" href="desk.php?action=processes&status=paused#list-01-0-0">  <i class="fa fa-pause fa-sm"></i> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a>
+		{/if}
+ </div>
+{else if}
+<header class="panel-heading bg bg-inverse">
+  {"Ongoing Processes"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+  No Active process Now 
+  </div>
+  
+{/if}

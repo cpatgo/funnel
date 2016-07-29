@@ -1,0 +1,13 @@
+<font size="2">
+<span style="font-family: Arial;">##You have been contacted##</span>
+<span style="font-family: Arial;"> ##at## {$date}.<br></span></font><font size="2">
+<span style="font-family: Arial;"></span><strong style="font-family: Arial;">{$name|escape}</strong></font>
+<font size="2"><span style="font-family: Arial;">({$useremail|escape})</span></font>
+<font size="2"><span style="font-family: Arial;">##filled "Contact us" form.##</span><br/><br/>
+<strong style="font-family: Arial;"></strong></font><hr style="font-family: Arial; height: 2px;"><font size="2">
+<br/><span style="font-family: Arial; color: rgb(42, 42, 42);">{$emailtext|escape}</span><br/></font>
+<hr style="font-family: Arial; height: 2px;">
+<font size="2"><br/><span style="font-family: Arial;">
+--</span><br/><span style="font-family: Arial;">
+##Regards,##</span><br/><br/><span style="font-family: Arial;">
+##Your## {$postAffiliatePro|escape}</span><br/></font>

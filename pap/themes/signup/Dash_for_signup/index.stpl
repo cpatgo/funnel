@@ -1,0 +1,54 @@
+<!-- index -->
+<div class="c1_MainBox c1_AffiliatesMainbox">
+	<div class="c1_MainboxWrapper">
+		<div class="c1_MainBoxContainerLeft">
+			<h2>Start making money now!</h2>
+			<p>There is no charge to join our Affiliate Program.</br>
+                           We pay commissions for all sales you referred.</br>
+                          Earn up to 30% commissions</p>
+			<a class="c1_sButton" href="{$baseUrl}/affiliates/signup.php#SignupForm">Affiliates Signup</a>
+		</div>
+		<div class="c1_MainBoxContainerRight">
+			<h2>Already our affiliate?</h2>
+			<p>We have always something new for our affiliates.<br/>Login to check earned commissions and new campaigns.
+			</p>
+			<a class="c1_sButton c1_lButton" href="{$baseUrl}/affiliates/login.php#login">Login</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="c1_Wrapper">
+	<div class="c1_WrapperContainer">
+		<h3>Earn up to 50% commission for all products!</h3>
+		<p>Not only can you join our team and help spread the word about your favorite products, you can get rewarded for your efforts. 
+		Our system tracks referrals and pays top commissions for every client you send our way. </p>
+		<h3>High Conversion Rate = More Money.</h3>
+		<p>
+		Our website and plans generate one of the highest conversion rates in the industry.  
+		Our high conversion rates mean that the people who you send here are more likely to buy our products.  
+		Of course we can't prove that either, but if you don't trust us, why would you want to refer people here?
+		</p>
+
+		<h3>Long cookie duration.</h3>
+		<p>
+		If a customer comes from your site to ours, and then comes back to purchase six months later, you get credit.
+		</p>
+
+		<h3>How does it work?</h3>
+		<p>It couldn't be simpler! We've streamlined our entire affiliate process to ensure ease of use, 
+		while still maintaining extremely accurate <a href="http://www.postaffiliatepro.com">affiliate tracking</a>. The process is as follows:</p>
+		<ol>
+			<li>Visitor clicks on an affiliate link on your site or in an email.</li>
+			<li>The visitors IP is logged and a cookie is placed in their browser for tracking purposes.</li>
+			<li>The visitor browses our site, and may decide to order.</li>
+			<li>If the visitor orders (the order need not be placed during the same browser session--cookies and IPs are stored indefinitely), the order will be registered as a sale for you.</li>
+			<li>We will review and approve the sale.</li>
+			<li>You will receive commission payouts.</li>
+		</ol>
+		<p><strong>That's it! You send us business, we send you money!</strong></p>
+		<h3>Ready to join?</h3>
+		<p>Signing up and getting your account configured couldn't be easier. You can be referring business our way in as little as five minutes.</p>
+		<a class="c1_sButton" href="./signup.php">Join now!</a>
+		<div class="clear"></div>
+	</div>
+</div>

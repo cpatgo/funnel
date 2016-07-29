@@ -1,0 +1,53 @@
+=======================================================
+
+Internationalization Guide For Email Marketing Software
+ 
+=======================================================
+
+
+1) Introduction
+	
+	Language files are stored in the "/lang" directory with the naming
+	convention "LANGUAGENAME/*.txt".  These files are plain text files with one
+	string definition per line with the format: 
+	
+	"Original string" = "Translated String"
+	
+	The supplied English language is a complete listing of all of the strings used
+	throughout the software with empty translated strings.
+	
+	Software's translation functions will ignore empty and missing
+	translations.  For example, if a template uses the string "Hello World", and 
+	in your language file you have:
+	
+	"Hello World" = ""
+	
+	The software will display "Hello World" (and not an empty string).  Likewise,
+	if your language file has no entry for the string "Hello World", the software
+	will still display "Hello World".
+
+2) Creating New Translations
+
+	Creating a new translation is as simple as copying the default 
+	English language folder to a new folder named, for example, "mylang".
+	After you have copied the English folder, open language.txt (and otherfiles)
+	in your favorite plain text editor and simply supply the translations on
+	the right hand side for every string.
+	
+	Remember, you aren't required to provide translations for every string; 
+	The software will still display the original English for strings that you
+	don't translate.
+	
+	
+3) Modifying Existing (English) Translations
+
+	To modify a translation, you simply have to put your strings on the right
+	side of a equal sign (=). Original strings (on the left) have to match strings
+	found in templates. So, for example, if you wish to call a Department "Category",
+	locate that word in language file and trnaslate it with a different word.
+	
+	Change:
+	"Subscriber" = ""
+	
+	To:
+	"Subscriber" = "Client"

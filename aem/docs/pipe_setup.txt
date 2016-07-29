@@ -1,0 +1,55 @@
+ 
+
+  AwebDesk Softwares.  -  Email Marketing Software
+
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+PLEASE NOTE THAT IT IS RECOMMENDED TO CONTACT YOUR WEB HOST OR SYSTEM 
+ADMIN TO COMPLETE THIS IF YOU ARE UNSURE ABOUT SETTING PIPES
+********************************************************************************
+
+
+You are able to set up pipes for the following files/tasks:
+
+
+	pipe_bounce.php - For instantly processing messages that have bounced
+
+	pipe_emailaccount.php - For instantly processing subscriptions by email
+
+
+
+--------------------------------------------------------------------------------
+Setup:
+--------------------------------------------------------------------------------
+
+1) 	Set permissions of the pipe file to be executed.
+		Chmod pipe file to 755
+
+2) 	Ensure that the first line of the pipe php file is the location of php on the server.  
+		Default first line entry on this file is:
+    		 #!/usr/local/bin/php -q
+     		The /usr/local/bin/php should be the location of php
+
+3) 	Setup any *_pipe.php files.  In CPanel, this can be accomplished by setting up a forwarder.
+	When you set up a forwarder, it should look something like this:
+	"|/var/www/example.com/path_to_AEM/manage/pipe_bounce.php"
+
+
+
+If you are unsure how to set up email pipes, it is suggested to contact your
+web host or system administrator.
+
+
+
+--------------------------------------------------------------------------------
+Need additional help with setting up a pipes?
+--------------------------------------------------------------------------------
+
+  We suggest to contact your web host/system admin or visit:
+http://support.awebdesk.com/submit
+
+
+--------------------------------------------------------------------------------
+  (c) 2010 AwebDesk Softwares. All rights reserved.  

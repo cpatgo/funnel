@@ -1,0 +1,4 @@
+[ISAPI_Rewrite]
+UriMatchPrefix /AEM/
+UriFormatPrefix /AEM/
+RewriteRule . /AEM/index.php [L]

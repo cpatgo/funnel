@@ -1,0 +1,36 @@
+<div id="list" class="adesk_hidden">
+  <form action="desk.php?action=loginsource" method="GET" onsubmit="loginsource_list_search(); return false">
+  <div class=" table-responsive">  <table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable">
+      <thead id="list_head">
+        <tr class="adesk_table_header">
+          <td width="50">{"Options"|alang}</td>
+		  <td width="75">{adesk_headercol action="loginsource" id="02" label="Order"|alang}</td>
+		  <td>{adesk_headercol action="loginsource" id="01" label="Name"|alang}</td>
+          <td>{adesk_headercol   id="01" label="Id"|alang}</td>
+        </tr>
+      </thead>
+      <tbody id="list_table">
+      </tbody>
+      <tbody id="list_noresults" class="adesk_hidden">
+        <tr>
+          <td colspan="2" align="center">
+            <div>{"Nothing found."|alang}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table></div>
+    <div style="float:right">
+      {include file="pagination.js.tpl.htm" tabelize="loginsource_list_tabelize" paginate="loginsource_list_paginate"}
+    </div>
+    <div id="loadingBar" class="adesk_block" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+      {"Loading. Please wait..."|alang}
+    </div>
+    <span id="selectXPageAllBox" class="adesk_hidden">
+      <span class="adesk_hidden">{"All login sources are now selected."|alang}</span>
+      <span class="adesk_hidden">{"All login sources on this page are now selected."|alang}</span>
+      <a class="adesk_hidden" href="#" onclick="return adesk_form_check_selection_xpage(this.parentNode);">{"Click here to select all %s items."|alang:'<span></span>'}</a>
+    </span>
+  </form>
+
+  <br />
+</div>

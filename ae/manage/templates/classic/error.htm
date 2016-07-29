@@ -1,0 +1,26 @@
+<html>
+<head>
+{if $ieCompatFix}
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+{/if}
+<meta http-equiv="Content-Type" content="text/html; charset={"utf-8"|i18n}" />
+<meta http-equiv="Content-Language" content="{"en-us"|i18n}" />
+{* Don't escape site_name here, since the title element is CDATA *}
+<title>{$site.site_name}</title>
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="{'direction: ltr'|i18n}">
+	<br />
+	<table width="90%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#CCCCCC">
+	  <tr>
+		<td><table width="100%" border="0" cellpadding="20" cellspacing="0" bgcolor="#F5F5F5">
+			<tr>
+			  <td><p><strong><font size="2" face="Arial, Helvetica, sans-serif">{"Error"|alang} {$error_code}</font></strong></p>
+				<p><font size="2" face="Arial, Helvetica, sans-serif">{$error_mesg|alang}</font></p></td>
+			</tr>
+		  </table></td>
+	  </tr>
+	</table><br />
+
+</body>
+</html>

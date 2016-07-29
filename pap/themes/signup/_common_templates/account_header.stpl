@@ -1,0 +1,15 @@
+<!-- account_header -->
+
+<div class="Header">
+
+<div class="HeaderInfo">
+	<strong><a class="Logo" title="{$programName|escape}" href="{$baseUrl}/">
+	           <img src="{$programLogo|escape}" class="LogoImage"></a></strong>
+	<strong class="Title">{$programName|escape}</strong>
+	<p class="Text"></p>
+</div>
+
+
+{include file='account_topmenu.stpl'}
+ 
+</div>

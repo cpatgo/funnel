@@ -1,0 +1,129 @@
+{if $hosted_down4 != 'nobody'}
+{"Due to your account status, you are unable to send any campaigns."|alang}
+<a href="desk.php">{"Return to the Dashboard."|alang}</a>
+{elseif $pastlimit}
+{"Sending to this list would put you past your limit of allowed emails."|alang}
+<a href="desk.php?action=campaign_new_list&id={$campaignid}">{"Please choose another list."|alang}</a>
+{else}
+
+<script type="text/javascript">
+	{include file="campaign_new.shared.js" step="text"}
+{include file="campaign_new_text.js"}
+</script>
+
+<form id="campaignform" method="POST" action="desk.php" onsubmit="return false">
+	{include file="campaign_new.header.htm" step="text" highlight=2}
+	<input type="hidden" name="action" value="campaign_new_text">
+
+	{if $campaign.type == "text"}
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="48%" valign="top">
+				<h5>{"From Name"|alang}</h5><div class="line"></div>
+				<div class="campaign_help">
+					{"Receivers will get email from this name.<br>It is suggested to use your company or personal name here."|alang}
+				</div>
+				<div  class="campaign_input">
+					<input tabindex="1" type="text" name="fromname" id="campaign_fromname" onkeyup="campaign_different()" value="{$message.fromname}" style="width: 99%">
+				</div>
+			</td>
+			<td width="4%" valign="top">&nbsp;</td>
+			<td width="48%" valign="top">
+				<h5>{"From Email"|alang}</h5><div class="line"></div>
+				<div class="campaign_help">
+					{"Receivers will get email from this email id.<br> You can also set a different"|alang} <a href="#" onclick="adesk_dom_toggle_display('replyto', 'block');return false;">reply-to</a>.
+				</div>
+				<div  class="campaign_input">
+					<input tabindex="2" type="text" name="fromemail" id="campaign_fromemail" onkeyup="campaign_different()" value="{$message.fromemail}" style="width: 99%">
+				</div>
+
+				<div id="replyto" style="{if !$message.reply2 or $message.fromemail == $message.reply2}display:none;{/if}">
+					<h2 style="margin-top:15px;">{"Reply-To Email"|alang}</h5><div class="line"></div>
+					<div  class="campaign_input border_top_5">
+						<input type="text" name="reply2" id="campaign_reply2" onkeyup="campaign_different();" value="{$message.reply2}" style="width: 100%">
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table></div>
+
+
+
+	<h2 style="margin-top:20px;">{"Subject & Message"|alang}</h5><div class="line"></div>
+	<div class="campaign_help">
+		{"This is the subject your subscribers will see.  We suggest a brief yet informative sentence.  This is what will engage your subscriber to open your email."|alang}
+	</div>
+	<div  class="campaign_input">
+		{if $admin.limit_attachment != 0}
+		<div style="float:right; padding-top:4px;" onclick="$('message_attach').show()"><img id="attachimg" src="images/mesg-attach.gif" style="cursor:pointer;" /></div>
+		<div style="margin-right: 15px;">
+			{/if}
+			<input tabindex="3" type="text" name="subject" id="campaign_subject" onkeyup="campaign_different()" value="{$message.subject|default:''}" style="width: 99%">
+			{if $admin.limit_attachment != 0}
+		</div>
+		{/if}
+	</div>
+
+	{include file="campaign_new_message.attach.htm"}
+	{else}
+	<h5>{"Text version of your message"|alang}</h5><div class="line"></div>
+	<input type="hidden" name="fromname" id="campaign_fromname" value="{$message.fromname}">
+	<input type="hidden" name="fromemail" id="campaign_fromemail" value="{$message.fromemail}">
+	<input type="hidden" name="reply2" id="campaign_reply2" value="{$message.reply2}">
+	<input type="hidden" name="subject" id="campaign_subject" value="{$message.subject}">
+	{/if}
+
+	<div  class="campaign_input border_top_5">
+		<div class="adesk_help_inline" id="editorfetch" {if $fetch == "now"}style="display:none"{/if}>
+			<div style="font-size: 12px">
+				{"When your campaign is sent, its HTML content will be fetched from"|alang}
+				<a id="fetchhelplink" target="_blank" href="{$fetchurl}">{$fetchurl}</a>.
+			</div>
+
+			<div style="margin-top: 15px;">
+				<input type="button" value='{"Edit"|alang}' onclick="campaign_fetch_open()">
+				<input type="button" value='{"Do not fetch"|alang}' onclick="campaign_fetch_stop()">
+			</div>
+		</div>
+
+		<div id="editordiv" {if $fetch != "now"}style="display:none"{/if}>
+			<div align="right" style="margin-bottom:8px;">
+				<div align="right" style="vertical-align: middle;">
+					{if $campaign.type != "deskrss"}
+					<a href="#" onclick="campaign_fetch_open(); return false" style="padding:2px; background:url(images/editor_fetch.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Fetch From URL'|alang}</a>
+					<a href="#" onclick="campaign_deskrss_open(); return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+					{/if}
+					<a href="#" onclick="campaign_conditional_open(); return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+					<a href="#" onclick="campaign_personalization_open(); return false;" style=" padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+				</div>
+			</div>
+
+			<textarea name="text" id="messageEditor" style="background: url(images/text_ruler.gif); width: {$admin.editorsize_w}; height: {$admin.editorsize_h}; padding:0px; border:1px solid #CCCCCC; margin:0px;" onblur="messageChanged=true;"></textarea>
+		</div>
+	</div>
+	<div style="margin-top:20px;">
+		<div style="float:right;">
+			<input value='{"Save & Exit"|alang}' type="button" onclick="campaign_save('exit')" style="font-size:14px;" />
+			<input value='{"Save"|alang}' type="button" onclick="campaign_save('nothing')" style="font-size:14px;" />
+		</div>
+		<input value="{'Back'|alang}" type="button" onclick="campaign_save('back')" style="font-size:14px;" />
+		<input value="{'Next'|alang}" type="button" onclick="campaign_save('next')" style="font-weight:bold; font-size:14px;" />
+	</div>
+
+	<script type="text/javascript">
+		campaign_save_auto_runagain();
+
+		{literal}
+		if (message_obj.text != "") {
+			$("messageEditor").value = message_obj.text;
+			default_editor_value = $("messageEditor").value;
+		}
+		{/literal}
+		</script>
+		{include file="campaign_new_message.fetch.htm"}
+	</form>
+
+	{include file="campaign_new_message.personalize.htm"}
+	{include file="campaign_new_message.conditional.htm"}
+	{include file="campaign_new_message.deskrss.htm"}
+	{/if}

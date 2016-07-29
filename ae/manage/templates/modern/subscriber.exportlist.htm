@@ -1,0 +1,27 @@
+<div id="exportlist" class="adesk_hidden">
+  <div class="adesk_modal" align="center">
+	<div class="adesk_modal_inner">
+	  <form method="GET" onsubmit="return false">
+		<h3 class="m-b">{"Export Subscribers Into a New List"|alang}</h3>
+		<div>
+		  {"Name:"|alang}<br />
+		  <input type="text" name="name" id="exportlist_name" />
+		</div>
+		<div>
+		  <br />
+		  {"How Many:"|alang}<br />
+		  <select name="howmany" id="exportlist_howmany" size="1">
+			<option value="page" selected>{"This Page Only"|alang}</option>
+			<option value="list">{"All Pages"|alang}</option>
+		  </select>
+		</div>
+		<br />
+
+		<div>
+		  <input type="button" value="{"Export"|alang}" onclick="subscriber_exportlist_export()" class="adesk_button_ok" />
+		  <input type="button" value="{"Close"|alang}" onclick="subscriber_exportlist_close(); adesk_ui_anchor_set(subscriber_list_anchor())" />
+		</div>
+	  </form>
+	</div>
+  </div>
+</div>

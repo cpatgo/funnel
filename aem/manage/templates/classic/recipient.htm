@@ -1,0 +1,13 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="recipient.js"}
+</script>
+
+<h1>{"Campaign Recipients"|alang}</h1>
+
+{include file="recipient.list.htm"}
+{include file="recipient.search.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(recipient_process, true);
+</script>

@@ -1,0 +1,16 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<b>Invoice Number:</b> {$invoicenumber|escape}<br/>
+<b>Invoice date:</b> {$date}<br/>
+<br/>
+<b>Affiliate Details:</b><br/>
+{$firstname|escape} {$lastname|escape} ({$username|escape})<br/>
+{$data2|escape}{*##Company name##*}<br/>
+{$data3|escape}{*##Street##*}<br/>
+{$data7|escape}{*##Zipcode##*} {$data4|escape}{*##City##*}<br/>
+{$data5|escape}{*##State##*} {$data6|escape}{*##Country##*}<br/>
+<br/>
+<b>Payment Details:</b> Affiliate commissions<br/>
+Amount: {$payment|currency_span}<br/>
+<br/>
+<b>Note:</b><br/>
+{$affiliate_note|escape}<br/>

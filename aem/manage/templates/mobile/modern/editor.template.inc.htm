@@ -1,0 +1,38 @@
+<div id="message_template" class="adesk_modal" align="center" style="display:none;">
+  <div class="adesk_modal_inner" align="left">
+	<h3 class="m-b">{"Insert Template"|alang}</h3>
+
+	<div class="adesk_help_inline">{"Include a template in your message."|alang}</div>
+
+	<br />
+
+	<div class="adesk_blockquote">
+      <strong>{"Select a Template:"|alang}</strong><br />
+      <select id="templateinsert" size="1" onchange="$('editortemplatebutton').disabled=this.value==0;form_editor_template_preview(this.value);" style="width:99%;">
+        <option value="0">{"Pick a template to insert..."|alang}</option>
+        <optgroup label="{'HTML Templates'|alang}" id="templateinserthtml">
+{foreach from=$templates item=t}
+          <option value="{$t.id}">{$t.name}</option>
+{/foreach}
+        </optgroup>
+      </select>
+      <input type="hidden" id="templateinserttext" name="templateinserttext" />
+    </div>
+
+    <br />
+
+    <div id="templatequickpreview" style="text-align:center;display:none;">
+      {"Preview"|alang}<br />
+      <img id="templatequickpreviewimg" src="about:blank" border="1" />
+    </div>
+
+    <br />
+
+    <div style="margin-top:10px;">
+      <input type="button" value='{"Insert"|alang}' onclick="form_editor_template_insert($('editortemplate4').value);" id="editortemplatebutton" class="adesk_button_ok" />
+      <input type="button" value='{"Cancel"|alang}' onclick="adesk_dom_toggle_display('message_template', 'block');" />
+      <input type="hidden" value="" id="editortemplate2" />
+      <input type="hidden" value="" id="editortemplate4" />
+    </div>
+  </div>
+</div>

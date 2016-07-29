@@ -1,0 +1,32 @@
+<p>&nbsp;</p>
+{if $admin.pg_reports_campaign || $admin.pg_reports_list || $admin.pg_reports_user}
+<header class="panel-heading bg bg-inverse">
+         {"Reports"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+{if $admin.pg_reports_campaign}
+		 <a href="desk.php?action=campaign&reports=1#list-01-0-0"  class="list-group-item"> <i class="fa fa-bar-chart-o fa-sm"></i> {"Campaign Reports"|alang}</a> 
+{/if}
+{if $admin.pg_reports_list}
+		 <a href="desk.php?action=report_list#general-01-0-0" class="list-group-item"> <i class="fa fa-indent fa-sm"></i> {"List Reports"|alang}</a> 
+{/if}
+{if $admin.pg_reports_user}
+		 <a href="desk.php?action=report_user#general-01-0-0" class="list-group-item"> <i class="fa fa-user-md fa-sm"></i> {"User Reports"|alang}</a> 
+{/if}
+
+ </div>
+{/if}
+
+ 
+{if $admin.pg_reports_trend}
+<header class="panel-heading bg bg-inverse">
+       {"Trend Reporting"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+ 
+	 <a href="desk.php?action=report_trend_read#general-01-0-0" class="list-group-item"> <i class="fa fa-signal fa-sm"></i> {"Read Trends"|alang}</a> 
+		 <a href="desk.php?action=report_trend_client#general-01-0-0" class="list-group-item"> <i class="fa fa-globe fa-sm"></i> {"Email Client Trends"|alang}</a> 
+ </div>
+{/if}
+ 

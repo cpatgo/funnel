@@ -1,0 +1,75 @@
+<script>
+// <!--
+
+{jsvar name=links var=$links}
+
+{literal}
+
+function buildLink(section) {
+	var val = $(section + 'Select').value;
+	//alert("Section: " + section + "\nValue: " + val + "\nLink: " + links[section] + val);
+	$(section + 'URL').href = links[section] + val;
+	$(section + 'URL').innerHTML = links[section] + val;
+	//window.location.href = links[section] + val;
+}
+
+{/literal}
+
+// -->
+</script>
+<h1 id="h1_public_section">{"Public Section"|alang}</h3>
+<div class="h2_wrap_static">
+	<h2 id="h2_general_public_section">{"General Public Section"|alang}</h5><div class="line"></div>
+	<div class="h2_content" style="font-size:12px;">
+		<p>
+			{"This is a general public section that will show all publicly available mailing lists in the software."|alang}
+		</p>
+		<p>
+			<a class="publiclink" href="{$links.public}" target="_blank">{$links.public}</a>
+		</p>
+	</div>
+</div>
+<br />
+
+<div class="h2_wrap_static" {if $__ishosted}style="display:none;"{/if}>
+	<h2 id="h2_your_public_section">{"Your Public Section"|alang}</h5><div class="line"></div>
+	<div class="h2_content" style="font-size:12px;">
+		<p>
+			{"Allow visitors to subscribe/unsubscribe to your lists, view the archive, and more."|alang}
+		</p>
+{if $maingroup}
+		<p>
+			{"Select A User Group:"|alang}<br />
+			<select id="groupSelect" size="1" onchange="buildLink('group');">
+{foreach from=$groups item=p}
+				{if $p.id != 1 && $p.id != 2}<option value="{$p.id}" {if $p.id == $groupid}selected="selected"{/if}>{$p.title}</option>{/if}
+{/foreach}
+			</select>
+		</p>
+{/if}
+		<p>
+			<a id="groupURL" class="publiclink" href="{$links.group}{$groupid}" target="_blank">{$links.group}{$groupid}</a>
+		</p>
+	</div>
+</div>
+<br />
+
+<div class="h2_wrap_static">
+	<h2 id="h2_list_specific_public">{"List Specific Public Section"|alang}</h5><div class="line"></div>
+	<div class="h2_content" style="font-size:12px;">
+		<p>
+			{"Allow visitors to subscribe/unsubscribe to your lists, view the archive, and more."|alang}
+		</p>
+		<p>
+			{"Select A List:"|alang}<br />
+			<select id="listSelect" size="1" onchange="buildLink('list');">
+{foreach from=$lists item=p name=lloop}
+				<option value="{if $seo}{$p.stringid}{else}{$p.id}{/if}" {if $smarty.foreach.lloop.last}selected="selected"{/if}>{$p.name|truncate:50}</option>
+{/foreach}
+			</select>
+		</p>
+		<p>
+			<a id="listURL" class="publiclink" href="{$links.list}{if $seo}{$p.stringid}{else}{$p.id}{/if}" target="_blank">{$links.list}{if $seo}{$p.stringid}{else}{$p.id}{/if}</a>
+		</p>
+	</div>
+</div>

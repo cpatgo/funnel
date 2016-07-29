@@ -1,0 +1,39 @@
+#########################################################################
+
+# WHEN ADDING A STRING TO THIS FILE, ADD IT TO OTHER LANGUAGES AS WELL! #
+
+#########################################################################
+
+
+
+"Don't wait until users mark your email as spam - place the unsubscribe option at the beginning of your emails too. Be sure to make the unsubscribing process as obvious and easy as possible." = "不要等到用户标记您的电子邮件为垃圾邮件 - 放置在电子邮件的开头退订的选择了。请务必在退订过程明显和容易尽可能。"
+
+"Make it easy for people to share some information from your newsletter with their friends and colleagues by inserting the link to share and a call to action in your newsletter." = "很容易让人们通过插入你的通讯调用链接分享和行动与他们的朋友和同事分享你的通讯的一些信息。"
+
+"You should make every message clear to the recipient. Make your reader confident that he received a letter from a responsible sender." = "你应该尽一切消息明朗给收件人。让你的读者相信，他收到了一封来自一个负责任的发送者。"
+
+"To improve the number of response to your newsletters, you can start split testing your email sales with measurable scientific methodology. You can evaluate the effectiveness of the mailings with number of opens and clicks." = "为了提高响应你们的简讯数量，就可以开始分割测试你的电子邮件销售额衡量的科学方法论。您可以评估与打开和点击次数的邮件的有效性。"
+
+"If the user confirms their subscription, you should send them a welcome email. It helps to establish a relationship and also confirms that you have received their subscription. It also helps show that you appreciate their interest in your products and/or services." = "如果用户确认他们的订阅，您应该将它们发送欢迎邮件。它有助于建立关系，并确认您已收到他们的订阅。它还有助于表明你珍惜在你的产品和/或服务的兴趣。"
+
+"Always send a confirmation email to validate address accuracy. This is the essential rule of permission email marketing. Send a message that repeats the subscriber's opt-in data to be sure you get the right e-mail address in your database." = "总是发送一个确认邮件，以验证地址的准确性。这是许可邮件营销的基本规则。发送一条消息，重复用户的选择，在数据，以确保您在数据库中得到正确的电子邮件地址。"
+
+"If you have a list of email addresses you haven't send messages for a while you need to send them a Re-Introduction email first. Remind them how you've got their address or how they've bought something from you. Attract their attention so not to be marked as 'spam'." = "如果您有电子邮件地址的列表，你有没有为你需要将它们先发送一个重新引入电子邮件一会儿发送消息。提醒他们你是如何得到他们的地址或如何，他们已经买了你的东西。吸引他们的注意力，这样不会被标记为"垃圾邮件"。"
+
+"Tradeshows and special networking events give you a great chance to enlarge your emails database. Tell people about special offers you have and benefits they can get after signing up. They can subscribe immediately using a computer or mobile device you setup." = "展会和特殊的网络事件给你一个很好的机会来扩大你的电子邮件数据库。告诉人们你有特殊的优惠和好处签约后，他们可以得到的。他们可以使用电脑或移动设备在安装立即订阅。"
+
+"People usually scan their e-mails in seconds. You should write your message with clear content, clickable links and the message should be attractive enough to make people click the links." = "人们通常扫描他们的电子邮件在几秒钟内。你应该写你的信息有明确的内容，可点击的链接和消息应该是足够的吸引力，让人们点击的链接。"
+
+"Write naturally, be clear when explaining the subject. To persuade people to do something (to click the link or to accept your offer), you should know what problems your readers want to solve and describe what your offer is, why they should use it, how it they will be able to use it and who exactly will benefit from the offer." = "写自然，解释这个问题时一定要清楚。说服人们做一些事情（点击链接或接受你的提议） ，你应该知道什么问题你的读者想要解决并描述您的提议是什么，他们为什么要使用它，它怎么他们将能够使用它而到底谁将会受益于该要约。"
+
+"As your customers have different email clients, your message will be displayed differently. Users also have different computer preferences. It's important to optimize email rendering so that clients could see your message correctly.  Use the Inbox Preview Tool to help with this." = "当你的客户有不同的电子邮件客户端，将会显示你的信息是不同的。用户也有不同的电脑喜好。重要的是要优化电子邮件的渲染，使客户能够正确地看到你的消息。使用收件箱预览工具，以帮助这一点。"
+
+"You should design an email so that it will fit in the viewing area of most email clients. A width of 650 pixels will fit in most email client windows." = "你应该设计一个电子邮件，使其适合大多数电子邮件客户端的可视面积。 650像素的宽度将适合大多数电子邮件客户端窗口。"
+
+"JavaScript, ActiveX, Flash, and videos usually don't work in HTML emails. Even if you send them your reader most likely won't be able to see them. Most email programs block it for safety." = "JavaScript中，的ActiveX ，Flash和视频通常不会在HTML邮件的工作。即使你给他们你的读者很可能将无法看到它们。大多数电子邮件程序阻止它的安全性。"
+
+"The best way to include a video in your email is an animated GIF. But if you need sound or video of better quality you should place a link from your email to the video." = "包括在您的电子邮件中的视频，最好的方法是GIF动画。但是如果你需要更好的声音质量或视频，你应该放置一个链接从电子邮件到视频。"
+
+"You can use web analytics to track the page views of the subscribers. It gives you valuable information about your visitors' habits. You can use these facts to develop more relevant email campaigns and landing pages in the future." = "您可以使用网络分析来跟踪用户的页面浏览量。它为您提供有关访问者的习惯有价值的信息。您可以使用这些事实来开发更多的相关电子邮件广告系列和目标网页的未来。"
+
+"By dividing your subscribers into groups with distinct needs you will get higher response rates to your letters. You will also lose fewer subscribers, if your mailings are relevant." = "通过将您的用户分成组具有鲜明的需求，您将获得更高的响应率来你的信。你也将失去较少的用户，如果你的邮件是相关的。"

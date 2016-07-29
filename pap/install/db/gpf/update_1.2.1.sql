@@ -1,0 +1,1 @@
+ALTER TABLE `qu_g_authusers` ADD  `openid_user_id` TEXT NULL;

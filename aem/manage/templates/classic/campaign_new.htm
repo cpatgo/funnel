@@ -1,0 +1,144 @@
+{if $hosted_down4 != 'nobody'}
+{"Due to your account status, you are unable to send any campaigns."|alang}
+<a href="desk.php">{"Return to the Dashboard."|alang}</a>
+{else}
+
+<script type="text/javascript">
+	{include file="campaign_new.shared.js" step="type"}
+{include file="campaign_new.js"}
+</script>
+
+<form id="campaignform" method="POST" action="desk.php" onsubmit="campaign_save('next'); return false">
+	{include file="campaign_new.header.htm" step="type" highlight=0}
+	<input type="hidden" name="action" value="campaign_new">
+	<input type="hidden" name="debug" value="{$smarty.get.debug|default:0}">
+
+	<div class="h2_wrap_static">
+		<div class="h2_content">
+
+			<h2>
+				{"Name Your Campaign"|alang}
+			</h2>
+			<div class="campaign_help">
+				{"Enter a name to help you remember what this campaign is all about.  Only you will see the campaign name.  Your subscribers will not see this."|alang}
+			</div>
+			<div class="campaign_input">
+				<input type="text" value="{$campaign.name|escape:'html'}" id="campaign_name" name="name" onkeyup="campaign_different()" style="font-weight:bold; font-size:14px; padding: 2px; width:250px;" />
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="h2_wrap_static">
+		<h2>{"Choose Your Campaign Type"|alang}</h2>
+		<div class="campaign_input border_top_5" style=" margin-bottom:20px;">
+			<input type="hidden" id="campaign_type" name="type" value="{$campaign.type}" />
+
+			<div class="border_5"  style="  padding:10px;  ">
+				<div id="campaign_type_single" onclick="return campaign_type_set('single'); campaign_different();" style="cursor: pointer" {if $campaign.type == 'single'}class="selected"{/if}>
+					<table cellpadding="0" cellspacing="2" border="0">
+						<tr>
+							<td><input type="radio" id="campaign_type_single_radio" {if $campaign.type == 'single' or $campaign.type == "recurring"}checked{/if}></td>
+							<td class="campaign_types_head" style="font-weight:bold;">{"Regular Campaign"|alang}</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="campaign_types_desc">{"Send a regular, one-time  email. Your email can contain links, images, special formatting, and more. This is the most common campaign type."|alang}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="border_5"  style=" padding:0 10px 10px 10px;">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td width="400" valign="top">
+
+
+
+							<div id="campaign_type_responder" onclick="return campaign_type_set('responder'); campaign_different();" style="cursor: pointer" {if $campaign.type == 'responder'}class="selected"{/if}>
+								<table cellpadding="0" cellspacing="2" border="0">
+									<tr>
+										<td><input type="radio" id="campaign_type_responder_radio" {if $campaign.type == 'responder'}checked{/if}></td>
+										<td class="campaign_types_head">{"Auto Responder Campaign"|alang}</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="campaign_types_desc">{"Create an automated campaign that will be sent a certain number of hours or days after someone subscribes."|alang}</td>
+									</tr>
+								</table>
+							</div>
+							<div id="campaign_type_deskrss" onclick="return campaign_type_set('deskrss'); campaign_different();" style="cursor: pointer; margin-top:10px;" {if $campaign.type == 'deskrss'}class="selected"{/if}>
+								<table cellpadding="0" cellspacing="2" border="0">
+									<tr>
+										<td><input type="radio" id="campaign_type_deskrss_radio" {if $campaign.type == 'deskrss'}checked{/if}></td>
+										<td class="campaign_types_head">{"RSS Campaign"|alang}</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="campaign_types_desc">{"Create a campaign that will send whenever an RSS feed is updated. Such as having an update send whenever you update your blog."|alang}</td>
+									</tr>
+								</table>
+							</div>
+							<div id="campaign_type_reminder" onclick="return campaign_type_set('reminder'); campaign_different();" style="cursor: pointer; margin-top:10px;" {if $campaign.type == 'reminder'}class="selected"{/if}>
+								<table cellpadding="0" cellspacing="2" border="0">
+									<tr>
+										<td class="campaign_types_head"><input type="radio" id="campaign_type_reminder_radio" {if $campaign.type == 'reminder'}checked{/if}></td>
+										<td class="campaign_types_head">{"Subscriber Date Based Campaign"|alang}</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="campaign_types_desc">{"Create a campaign based around a certain subscriber date. Can be used for birthday emails, anniversary emails, contract reminders, and more."|alang}</td>
+									</tr>
+								</table>
+							</div>
+
+						</td>
+						<td width="25" valign="top">&nbsp;</td>
+						<td width="400" valign="top">
+
+
+							<div id="campaign_type_split" onclick="return campaign_type_set('split'); campaign_different();" style="cursor: pointer" {if $campaign.type == 'split'}class="selected"{/if}>
+								<table cellpadding="0" cellspacing="2" border="0">
+									<tr>
+										<td class="campaign_types_head"><input type="radio" id="campaign_type_split_radio" {if $campaign.type == 'split'}checked{/if}></td>
+										<td class="campaign_types_head">{"Split Testing Campaign"|alang}</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="campaign_types_desc">{"Test variations of your email campaign to see which is best. You will be able to setup multple emails that will send out."|alang}</td>
+									</tr>
+								</table>
+							</div>
+
+							<div id="campaign_type_text" onclick="return campaign_type_set('text'); campaign_different();" style="cursor: pointer; margin-top:10px;" {if $campaign.type == 'text'}class="selected"{/if}>
+								<table cellpadding="0" cellspacing="2" border="0">
+									<tr>
+										<td><input type="radio" id="campaign_type_text_radio" {if $campaign.type == 'text'}checked{/if}></td>
+										<td class="campaign_types_head">{"Text-Only Campaign"|alang}</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="campaign_types_desc">{"Send a one-time text-only email. For most cases we suggest sending a regular campaign as that would include both HTML and text versions."|alang}</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+    </div>
+			<div style="float:right;">
+				<input value='{"Save & Exit"|alang}' type="button" onclick="campaign_save('exit')" style="font-size:14px;" />
+				<input value='{"Save"|alang}' type="button" onclick="campaign_save('nothing')" style="font-size:14px">
+			</div>
+			<input type="button" value="{'Next'|alang}" onclick="campaign_save('next')" style="font-weight:bold; font-size:14px;" />
+
+		
+	</div>
+
+	<script type="text/javascript">
+		campaign_save_auto_runagain();
+		</script>
+	</form>
+	{/if}

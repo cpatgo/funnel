@@ -1,0 +1,30 @@
+<div id="search" class="adesk_modal_search" align="center" style="display:none">
+  <div class="adesk_modal_inner">
+    <h3 class="m-b">{"Search Campaign Recipients"|alang}</h3>
+    <form method="GET" onsubmit="recipient_search(); return false">
+      <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td>{"Search for"|alang}</td>
+          <td><input type="text" name="content" id="search_content"/></td>
+        </tr>
+        <tr valign="top">
+          <td>{"Search in"|alang}</td>
+          <td>
+            {foreach from=$search_sections item=s}
+            <input type="checkbox" name="section[]" value="{$s.col}"> {$s.label}<br/>
+            {/foreach}
+          </td>
+        </tr>
+      </table></div>
+    </form>
+    <br/>
+    <br/>
+    <div>
+      <input type="button" value='{"Search"|alang}' onclick="recipient_search()" class="adesk_button_ok" />
+      <input type="button" value='{"Cancel"|alang}' onclick="adesk_dom_toggle_display('search', 'block'); adesk_ui_anchor_set(recipient_list_anchor())" class="adesk_button_cancel" />
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  recipient_search_defaults();
+</script>

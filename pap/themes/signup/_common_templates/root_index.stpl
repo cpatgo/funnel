@@ -1,0 +1,36 @@
+<!-- root_index -->
+<div class="MainPanel">
+<div class="ContentLeft">
+<div class="ContentRight">
+<div class="MainInfoContent">
+
+<h2 class="first">Note!</h2>
+<p>This page (index.php in template root_index.stpl) is the initial page only to give you the most used links, and to 
+walk you through various possibilities of the affiliate system.
+<br/><br/>
+When you are ready to go online with your affiliate program, you can freely delete or change this page (template root_index.stpl).</p>
+
+
+<h2>Panels</h2>
+<p><a href="./merchants/">Merchant (admin) panel</a></p>
+<p><a href="./affiliates/panel.php">Affiliate panel</a></p>
+<p><a href="./affiliates/">Affiliate mini site (with signup form)</a></p>
+
+
+<h2>Samples & tests page - recommended</h2>
+<p><a href="./samples_tests/">Samples & tests pages</a><br/>
+here are examples of use and demonstrations of banners, clicks and sales tracking, custom signup form, etc..
+</p>
+
+
+<h2>Documentation</h2>
+<p><a href="http://www.postaffiliatepro.com/introduction-videos/" target="_blank">Introduction Videos</a></p>
+<p><a href="http://support.qualityunit.com/knowledgebase/post-affiliate-pro.html" target="_blank">Documentation & support</a></p>
+<p><a href="http://addons.qualityunit.com/" target="_blank">New plugins, themes and other extras library</a></p>
+
+
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>

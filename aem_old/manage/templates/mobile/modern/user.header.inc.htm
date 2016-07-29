@@ -1,0 +1,6 @@
+{if !$__ishosted and $admin.id == 1 and isset($site.adminsMax) and isset($site.adminsCnt) and isset($site.adminsLeft)}
+<div class="adesk_help_inline">
+ 
+  {"You have a total of %d admin user spots. %d admin user spots are left"|alang:$site.adminsMax:$site.adminsLeft}
+</div>
+{/if}

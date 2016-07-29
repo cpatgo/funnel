@@ -1,0 +1,39 @@
+body {
+	font-family: Arial, Helvetica, sans-serifTahoma, Geneva, sans-serif;
+	padding-bottom: 50px;
+	background-color: #fff;
+}
+
+.headline {
+	font-family: Arial, Helvetica, sans-serifTahoma, Geneva, sans-serif;
+	font-size:30px;
+	color: #b74b2e;
+	letter-spacing: -1px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.headline2 {
+	font-family: Arial, Helvetica, sans-serifTahoma, Geneva, sans-serif;
+	font-size:28px;
+	letter-spacing: -1px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: -5px;
+}
+
+.privacy {
+	font-size: 12px;
+	color: #666;
+}
+
+.dashed {
+	border-style:dashed;
+	border-width:3px;
+	color:#E74C3C;
+}
+
+p {
+	color: #000;
+}

@@ -1,0 +1,34 @@
+<div id="mailing" class="adesk_hidden">
+  <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  cellspacing="0" cellpadding="0" width="100%">
+    <tr class="adesk_table_header_options">
+      <td>
+        <select name="listid" id="mailingListManager" size="1" onchange="subscriber_view_filter(this.value);">
+          <option value="0">{"List Filter..."|alang}</option>
+{foreach from=$listsList item=p}
+          <option value="{$p.id}">{$p.name|truncate:50}</option>
+{/foreach}
+        </select>
+      </td>
+    </tr>
+  </table></div>
+  <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="1">
+    <thead id="mailing_head">
+      <tr class="adesk_table_header">
+        <td width="150">{adesk_headercol action="subscriber_view" id="01" idprefix="mailing_sorter" label="List"|alang}</td>
+        <td>{adesk_headercol action="subscriber_view" id="02" idprefix="mailing_sorter" label="Campaign"|alang}</td>
+        <td width="120">{adesk_headercol action="subscriber_view" id="03" idprefix="mailing_sorter" label="Date Sent"|alang}</td>
+      </tr>
+    </thead>
+    <tbody id="mailing_table">
+    </tbody>
+  </table></div>
+  <div id="mailing_noresults" class="adesk_hidden">
+    <div align="center">{"Nothing found."|alang}</div>
+  </div>
+  <div style="float:right">
+    {include file="pagination.js.tpl.htm" tabelize="subscriber_view_tabelize" paginate="subscriber_view_paginate" limitize="subscriber_view_limitize" paginator=$paginators.mailing}
+  </div>
+  <div id="mailingLoadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+    {"Loading. Please wait..."|alang}
+  </div>
+</div>

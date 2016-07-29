@@ -1,0 +1,52 @@
+ 
+{if $canImportSubscriber}
+<p><div class="text-center clearfix"><a    href="desk.php?action=subscriber_import" class="btn btn-info"><i class="fa fa-upload fa-sm"></i>  {"Import Subscribers"|alang}</a></div></p>
+{/if}
+
+{if $canAddSubscriber}
+<p><div class="text-center clearfix"><a   href="desk.php?action=subscriber#form-0" class="btn btn-info"><i class="fa fa-plus-circle fa-sm"></i>  {"Add Subscriber"|alang}</a></div></p>
+{/if}
+ 
+
+
+
+<header class="panel-heading bg bg-inverse">
+       {"Other options"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+
+		<a  class="list-group-item first" href="desk.php?action=subscriber#list-01-0-0"><i class="fa fa-eye fa-sm"></i>
+ {"View Subscribers"|alang} </a></li>
+		 <a  class="list-group-item " href="desk.php?action=subscriber#search"><i class="fa fa-search fa-sm"></i> {"Search Subscribers"|alang}</a> 
+{if $admin.pg_subscriber_export}
+	 <a  class="list-group-item  " href="desk.php?action=subscriber#export"><i class="fa fa-arrow-circle-o-down fa-sm"></i> {"Export Subscribers"|alang}</a> 
+{/if}
+
+ </ul>
+
+
+{if $admin.pg_list_edit or $admin.pg_subscriber_delete or $admin.pg_subscriber_sync}
+
+
+<header class="panel-heading bg bg-inverse">
+       {"Advanced options"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+
+{if $admin.pg_list_edit}
+		 <a  class="list-group-item first" href="desk.php?action=exclusion#list-01-0-0"><i class="fa fa-times-circle fa-sm"></i> {"Excluded Subscribers"|alang}</a> 
+{/if}
+
+{if $admin.pg_subscriber_delete}
+		 <a  class="list-group-item first" href="desk.php?action=batch"><i class="fa fa-arrows-alt fa-sm"></i> {"Batch Actions"|alang}</a>
+ {/if}
+{if $admin.pg_subscriber_sync}
+		 <a  class="list-group-item first" href="desk.php?action=sync#list-01"><i class="fa fa-bitbucket-square fa-sm"></i> {"Database Sync"|alang}</a>
+ {/if}
+
+ </div>
+{/if}
+ 
+ 

@@ -1,0 +1,169 @@
+var _Elements = {"elements": {
+        "GLC Themes": [
+        {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"thumbs/glc-critical-strategy.png"}, // Email Template 05
+        {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"thumbs/glc-promote-to-earn.png"}, // Email Template 05
+        {"url":"elements/glc-ebook_steps.html", "height":163, "thumbnail":"thumbs/glc-ebook-steps.jpg"},
+        {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"thumbs/glc-restaurant.jpg"},
+        {"url":"elements/glc-houseworth.html", "height":163, "thumbnail":"thumbs/glc-houseworth.jpg"},
+        {"url":"elements/glc-freebook.html", "height":163, "thumbnail":"thumbs/glc-freebook.jpg"}
+        ],
+        "Menus":[
+        {"url":"elements/menu1.html", "height":163, "thumbnail":"thumbs/menu1.jpg"},
+        {"url":"elements/menu2.html", "height":163, "thumbnail":"thumbs/menu2.jpg"},
+        {"url":"elements/menu3.html", "height":163, "thumbnail":"thumbs/menu3.jpg"},
+        {"url":"elements/menu4.html", "height":163, "thumbnail":"thumbs/menu4.jpg"},
+        {"url":"elements/menu5.html", "height":163, "thumbnail":"thumbs/menu5.jpg"},
+        {"url":"elements/menu6.html", "height":163, "thumbnail":"thumbs/menu6.jpg"}
+        ],
+        "Home":[
+        {"url":"elements/home1.html", "height":163, "thumbnail":"thumbs/home1.jpg"},
+        {"url":"elements/home2.html", "height":163, "thumbnail":"thumbs/home2.jpg"},
+        {"url":"elements/home3.html", "height":163, "thumbnail":"thumbs/home3.jpg"},
+        {"url":"elements/home4.html", "height":163, "thumbnail":"thumbs/home4.jpg"},
+        {"url":"elements/home5.html", "height":163, "thumbnail":"thumbs/home5.jpg"},
+        {"url":"elements/home6.html", "height":163, "thumbnail":"thumbs/home6.jpg"},
+        {"url":"elements/home7.html", "height":163, "thumbnail":"thumbs/home7.jpg"},
+        {"url":"elements/home8.html", "height":163, "thumbnail":"thumbs/home8.jpg"},
+        {"url":"elements/home9.html", "height":163, "thumbnail":"thumbs/home9.jpg"},
+        {"url":"elements/home10.html", "height":163, "thumbnail":"thumbs/home10.jpg"},
+        {"url":"elements/home12.html", "height":163, "thumbnail":"thumbs/home11.jpg", "sandbox":true, "loaderFunction":"countdown"},
+        {"url":"elements/comming-soon.html", "height":163, "thumbnail":"thumbs/comming-soon.jpg", "sandbox":true, "loaderFunction":"countdownz"}
+        ],
+        "Features":[
+        {"url":"elements/features1.html", "height":163, "thumbnail":"thumbs/features1.jpg"},
+        {"url":"elements/features2.html", "height":163, "thumbnail":"thumbs/features2.jpg"},
+        {"url":"elements/features3.html", "height":163, "thumbnail":"thumbs/features3.jpg"},
+        {"url":"elements/features4.html", "height":163, "thumbnail":"thumbs/features4.jpg"},
+        {"url":"elements/features5.html", "height":163, "thumbnail":"thumbs/features5.jpg"}
+        ],
+        "Describe":[
+        {"url":"elements/describe1.html", "height":163, "thumbnail":"thumbs/describe1.jpg"},
+        {"url":"elements/describe2.html", "height":163, "thumbnail":"thumbs/describe2.jpg"},
+        {"url":"elements/describe3.html", "height":163, "thumbnail":"thumbs/describe3.jpg"},
+        {"url":"elements/describe4.html", "height":163, "thumbnail":"thumbs/describe4.jpg"},
+        {"url":"elements/describe5.html", "height":163, "thumbnail":"thumbs/describe5.jpg"},
+        {"url":"elements/describe6.html", "height":163, "thumbnail":"thumbs/describe6.jpg"},
+        {"url":"elements/realestate.html", "height":163, "thumbnail":"thumbs/realestate.jpg"},
+        {"url":"elements/describe7.html", "height":163, "thumbnail":"thumbs/describe7.jpg"},
+        {"url":"elements/describe8.html", "height":163, "thumbnail":"thumbs/describe8.jpg"},
+        {"url":"elements/describe9.html", "height":163, "thumbnail":"thumbs/describe9.jpg"},
+        {"url":"elements/describe10.html", "height":163, "thumbnail":"thumbs/describe10.jpg"}
+
+        ],
+        "Download":[
+        {"url":"elements/download1.html", "height":163, "thumbnail":"thumbs/download1.jpg"},
+        {"url":"elements/download8.html", "height":163, "thumbnail":"thumbs/download8.jpg"},
+        {"url":"elements/download3.html", "height":163, "thumbnail":"thumbs/download3.jpg"},
+        {"url":"elements/download4.html", "height":163, "thumbnail":"thumbs/download4.jpg"},
+        {"url":"elements/download5.html", "height":163, "thumbnail":"thumbs/download5.jpg"},
+        {"url":"elements/download6.html", "height":163, "thumbnail":"thumbs/download6.jpg"},
+        {"url":"elements/download7.html", "height":163, "thumbnail":"thumbs/download7.jpg"}
+        ],
+        "Subscription":[
+        {"url":"elements/subscription1.html", "height":163, "thumbnail":"thumbs/subscription1.jpg"},
+        {"url":"elements/subscription2.html", "height":163, "thumbnail":"thumbs/subscription2.jpg"},
+        {"url":"elements/subscription3.html", "height":163, "thumbnail":"thumbs/subscription3.jpg"}
+        ],
+        "Call To Action N&nbsp;faq":[
+        {"url":"elements/call-to-action1.html", "height":163, "thumbnail":"thumbs/call-to1.jpg"},
+        {"url":"elements/call-to-action2.html", "height":163, "thumbnail":"thumbs/call-to2.jpg"},
+        {"url":"elements/call-to-action3.html", "height":163, "thumbnail":"thumbs/call-to3.jpg"},
+        {"url":"elements/faq1.html", "height":163, "thumbnail":"thumbs/faq1.jpg"},
+        {"url":"elements/faq2.html", "height":163, "thumbnail":"thumbs/faq2.jpg"}
+        ],
+        "Screenshot&nbsp;N&nbsp;Portfolio":[
+        {"url":"elements/screenshot1.html", "height":163, "thumbnail":"thumbs/screenshot1.jpg"},
+        {"url":"elements/screenshot2.html", "height":163, "thumbnail":"thumbs/screenshot2.jpg"},
+        {"url":"elements/portfolio1.html", "height":163, "thumbnail":"thumbs/portfolio1.jpg"},
+        {"url":"elements/portfolio2.html", "height":163, "thumbnail":"thumbs/portfolio2.jpg"},
+        {"url":"elements/screenshot3.html", "height":163, "thumbnail":"thumbs/screenshot3.jpg", "sandbox":true, "loaderFunction":"screenshot"}
+        ],
+        "Service":[
+        {"url":"elements/service1.html", "height":163, "thumbnail":"thumbs/service1.jpg"},
+        {"url":"elements/service2.html", "height":163, "thumbnail":"thumbs/service2.jpg"},
+        {"url":"elements/service3.html", "height":163, "thumbnail":"thumbs/service3.jpg"},
+        {"url":"elements/service4.html", "height":163, "thumbnail":"thumbs/service4.jpg"},
+        {"url":"elements/service5.html", "height":163, "thumbnail":"thumbs/service5.jpg"},
+        {"url":"elements/service6.html", "height":163, "thumbnail":"thumbs/service6.jpg"},
+        {"url":"elements/service7.html", "height":163, "thumbnail":"thumbs/service7.jpg"},
+        {"url":"elements/service8.html", "height":163, "thumbnail":"thumbs/service8.jpg"},
+        {"url":"elements/service9.html", "height":163, "thumbnail":"thumbs/service9.jpg"},
+        {"url":"elements/service10.html", "height":163, "thumbnail":"thumbs/service10.jpg"},
+        {"url":"elements/service11.html", "height":163, "thumbnail":"thumbs/service11.jpg"},
+        {"url":"elements/service12.html", "height":163, "thumbnail":"thumbs/service12.jpg"},
+        {"url":"elements/service13.html", "height":163, "thumbnail":"thumbs/service13.jpg"},
+        {"url":"elements/service14.html", "height":163, "thumbnail":"thumbs/service14.jpg"},
+        {"url":"elements/service15.html", "height":163, "thumbnail":"thumbs/service15.jpg"},
+        {"url":"elements/service16.html", "height":163, "thumbnail":"thumbs/service16.jpg"}
+        ],
+        "Team":[
+        {"url":"elements/team1.html", "height":163, "thumbnail":"thumbs/team1.jpg"},
+        {"url":"elements/team2.html", "height":163, "thumbnail":"thumbs/team2.jpg"},
+        {"url":"elements/team3.html", "height":163, "thumbnail":"thumbs/team3.jpg"},
+        {"url":"elements/team4.html", "height":163, "thumbnail":"thumbs/team4.jpg"},
+        {"url":"elements/team5.html", "height":163, "thumbnail":"thumbs/team5.jpg"},
+        {"url":"elements/team6.html", "height":163, "thumbnail":"thumbs/team6.jpg"},
+        {"url":"elements/team7.html", "height":163, "thumbnail":"thumbs/team7.jpg"}
+        ],
+        "Testimonial":[
+        {"url":"elements/testimonial1.html", "height":163, "thumbnail":"thumbs/testimonial1.jpg"},
+        {"url":"elements/testimonial2.html", "height":163, "thumbnail":"thumbs/testimonial2.jpg"},
+        {"url":"elements/testimonial3.html", "height":163, "thumbnail":"thumbs/testimonial3.jpg"},
+        {"url":"elements/testimonial4.html", "height":163, "thumbnail":"thumbs/testimonial4.jpg", "sandbox":true, "loaderFunction":"testimonial"},
+        {"url":"elements/testimonial5.html", "height":163, "thumbnail":"thumbs/testimonial5.jpg", "sandbox":true, "loaderFunction":"testimonialThree"}
+        ],
+        "Pricing Tables":[
+        {"url":"elements/price1.html", "height":163, "thumbnail":"thumbs/price1.jpg"},
+        {"url":"elements/price2.html", "height":163, "thumbnail":"thumbs/price2.jpg"},
+        {"url":"elements/price3.html", "height":163, "thumbnail":"thumbs/price3.jpg"},
+        {"url":"elements/price4.html", "height":163, "thumbnail":"thumbs/price4.jpg"}
+        ],
+        "Clients":[
+        {"url":"elements/clients1.html", "height":163, "thumbnail":"thumbs/cleints1.jpg"},
+        {"url":"elements/clients2.html", "height":163, "thumbnail":"thumbs/clients2.jpg"},
+        {"url":"elements/clients3.html", "height":163, "thumbnail":"thumbs/clients3.jpg"}
+        ],
+        "Funfact":[
+        {"url":"elements/funfact1.html", "height":163, "thumbnail":"thumbs/funfact1.jpg"},
+        {"url":"elements/funfact2.html", "height":163, "thumbnail":"thumbs/funfact2.jpg"},
+        {"url":"elements/skills.html", "height":163, "thumbnail":"thumbs/skills.jpg", "sandbox":true, "loaderFunction":"pieChart"}
+        ],
+        "Twitter":[
+        {"url":"elements/tweet.html", "height":163, "thumbnail":"thumbs/twitter.jpg", "sandbox":true, "loaderFunction":"twitter"}        
+        ],
+        "Events":[
+        {"url":"elements/events1.html", "height":163, "thumbnail":"thumbs/events1.jpg"},
+        {"url":"elements/events2.html", "height":163, "thumbnail":"thumbs/events2.jpg"},
+        {"url":"elements/events3.html", "height":163, "thumbnail":"thumbs/events3.jpg"},
+        {"url":"elements/events4.html", "height":163, "thumbnail":"thumbs/events4.jpg"},
+        {"url":"elements/events5.html", "height":163, "thumbnail":"thumbs/events5.jpg"}
+        ],
+        "Contact":[
+        {"url":"elements/contact1.html", "height":163, "thumbnail":"thumbs/contact1.jpg"},
+        {"url":"elements/contact2.html", "height":163, "thumbnail":"thumbs/contact2.jpg"},
+        {"url":"elements/contact3.html", "height":163, "thumbnail":"thumbs/contact3.jpg"},
+        {"url":"elements/contact4.html", "height":163, "thumbnail":"thumbs/contact4.jpg"}
+        
+        ],
+        "Footers":[
+        {"url":"elements/footer1.html", "height":163, "thumbnail":"thumbs/footer1.jpg"},
+        {"url":"elements/footer2.html", "height":163, "thumbnail":"thumbs/footer2.jpg"},
+        {"url":"elements/footer3.html", "height":163, "thumbnail":"thumbs/footer3.jpg"},
+        {"url":"elements/footer4.html", "height":163, "thumbnail":"thumbs/footer4.jpg"},
+        {"url":"elements/footer5.html", "height":163, "thumbnail":"thumbs/footer5.jpg"},
+        {"url":"elements/footer6.html", "height":163, "thumbnail":"thumbs/footer6.jpg"},
+        {"url":"elements/footer7.html", "height":163, "thumbnail":"thumbs/footer7.jpg"}
+        ],
+        "Blog":[
+        {"url":"elements/blog.html", "height":163, "thumbnail":"thumbs/blog.jpg"},
+        {"url":"elements/blog-single.html", "height":163, "thumbnail":"thumbs/blog-single.jpg"}
+        ],
+        "White Space":[
+        {"url":"elements/padding-twenty.html", "height":163, "thumbnail":"thumbs/padding-twenty.jpg"},
+        {"url":"elements/padding-fourty.html", "height":163, "thumbnail":"thumbs/padding-fourty.jpg"},
+        {"url":"elements/padding-sixty.html", "height":163, "thumbnail":"thumbs/padding-sixty.jpg"},
+        {"url":"elements/padding-eighty.html", "height":163, "thumbnail":"thumbs/padding-eighty.jpg"}
+
+        ]
+}
+}

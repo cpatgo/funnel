@@ -1,0 +1,7 @@
+Post Affiliate Pro 4 update
+
+For details about update to the latest version read:
+https://support.qualityunit.com/941978-Updating-Post-Affiliate-Pro
+
+For details about upgrade from PAP3 read:
+https://support.qualityunit.com/400569-Migration-script-from-PAP3-to-PAP4

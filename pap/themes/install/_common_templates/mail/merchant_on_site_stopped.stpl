@@ -1,0 +1,7 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear merchant##,</span><br/><br/>
+<span style="font-family: Arial;">##Replicated site banner## {$bannerName|escape} (id {$bannerId} ) ##was stopped, because of the multiple problems accessing url for this site##</span><br/>
+<span style="font-family: Arial;">##Not working url:## <a href="{$siteUrl|escape}">{$siteUrl|escape}</a></span><br/><br/>
+<span style="font-family: Arial;">##Regards##,</span><br/><br/>
+<span style="font-family: Arial;">##Your## {$postAffiliatePro|escape}.</span>
+</font> 

@@ -1,0 +1,12 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear## {$firstname|escape} {$lastname|escape},</span><br/><br/>
+<span style="font-family: Arial;">##Your commission group in campaign## {$campaignName|escape} ## was changed to:## {$newCommissionGroupName|escape}{*New commission group name*}<br />
+## from## {$oldCommissionGroupName|escape}{*Old commission group name*}.</span><br/><br/>
+
+##Commissions settings in this group is:##
+{$commissionsOverview}
+
+
+<br/><span style="font-family: Arial;">##Sincerely,##</span><br/><br/>
+<span style="font-family: Arial;">##Your Affiliate manager##</span><br/>
+</font>

@@ -1,0 +1,34 @@
+ 
+{if $canSendCampaign}
+<p><div class="text-center clearfix"><a href="desk.php?action=campaign_new" class="btn btn-info"> <i class="fa fa-plus-circle fa-sm"></i> {"Create Campaign"|alang}</a></div></p>
+{/if}
+ 
+ 
+
+{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+ <header class="panel-heading bg bg-inverse">
+          {"Other options"|alang}
+            </header>
+  <div class="list-group list-normal m-b-none">
+ 
+{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete}
+		 <a href="desk.php?action=campaign#list-01D-0-0" class="list-group-item first"> <i class="fa fa-desktop fa-sm"></i> {"View Campaigns"|alang}</a> 
+{/if}
+{if $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+		 <a href="desk.php?action=template#list-01-0-0" class="list-group-item first">  <i class="fa fa-credit-card fa-sm"></i> {"Email Templates"|alang}</a> 
+{/if}
+ </div>
+{/if}
+ 
+
+{if $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+ <header class="panel-heading bg bg-inverse">
+          {"Advanced options"|alang}
+            </header>
+ 
+ <div class="list-group list-normal m-b-none">
+		 <a href="desk.php?action=personalization#list-01-0-0" class="list-group-item first"> <i class="fa fa-th-large fa-sm"></i> {"Message Variables"|alang}</a> 
+ 	 </div>
+{/if}
+ 
+ 

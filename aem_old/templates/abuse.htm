@@ -1,0 +1,50 @@
+ 
+ <div class="row" style="margin-top:20px;">
+     <div class="col-lg-12">  
+      
+          
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Report Abuse"|plang}</h4>
+            </header>
+            <section   class="panel-body   m-b">
+ 
+{if $confirmed}
+<!-- abuse confirmed -->
+<script>adesk_result_show('{"Abuse Report Received."|plang|js}');</script>
+<h2>{"Your Abuse Report Has Been Received"|plang}</h2>
+<div>{"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you."|plang}</div>
+{else}
+
+<div>{"Please verify the information below. "|plang}<br /><br />
+{"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender."|plang}
+</div>
+<br />
+
+<div style="border:1px solid #FF0000; background:#FFF2F2; padding:10px;">
+<div><span style="font-weight:bold;">{"The subscriber information that this sender sent to is:"|plang}</span><br /> &lt;{$subscriber.email}&gt;</div>
+<br />
+
+
+
+{if $campaign}
+<div><span style="font-weight:bold;">{"The senders information is:"|plang}</span><br />{$campaign.messages.0.fromemail}</div>
+{/if}
+</div>
+<br />
+
+{"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report."|plang}
+<br /><br />
+
+
+<div>
+	<input type="button" value="{'Report Abuse'|plang}" style="font-weight:bold; font-size:12px;" onclick="window.location.href='{$_}/index.php?action=abuse&nl={$listid}&c={$campaign.id}&m={$messageid}&s={$subscriber.hash}&abused=1';" />
+</div>
+{/if}
+
+</section></section></div></div>

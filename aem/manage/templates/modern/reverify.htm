@@ -1,0 +1,104 @@
+<script type="text/javascript">
+  {include file='reverify.js'}
+</script>
+
+{if $formSubmitted}
+<script>
+{jsvar var=$submitResult.message name=r}
+{if $submitResult.succeeded}
+adesk_result_show(r);
+{else}
+adesk_error_show(r);
+{/if}
+</script>
+{/if}
+
+<div id="step_ongoing" style="display:none">
+  <h3 class="m-b">{"Your Verification is in Progress..."|alang}</h3>
+
+  <div align="left" style="border:2px solid #009900; background:#E8F7C8;"><div style="background:red; height:25px; width:{$progresspx}px;">&nbsp;</div></div>
+</div>
+
+<div id="step_message" style="display:none">
+  <h3 class="m-b">{"Verify Your Subscribers"|alang}</h3>
+
+  <div>
+	{"In order to continue with your email marketing service we will need you to verify that your subscribers wish to receive email from you."|alang}
+	{"You can request that your subscribers verify their subscription status below."|alang}
+  </div>
+
+  <br><br>
+
+  <h5>{"Lists that will be verified"|alang}</h5><div class="line"></div>
+
+  <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="1">
+	<thead>
+	  <tr class="adesk_table_header">
+		<td>{"List name"|alang}</td>
+		<td>{"Subscribers"|alang}</td>
+	  </tr>
+	</thead>
+	<tbody>
+	  {foreach from=$lists item=e}
+	  <tr>
+		<td>{$e.name}</td>
+		<td>{$e.subcount}</td>
+	  </tr>
+	  {/foreach}
+	</tbody>
+  </table></div>
+
+  <br><br>
+
+  <h5>{"Message they will receive"|alang}</h5><div class="line"></div>
+
+  <div style="font-size: 12px; font-family: Arial, Helvetica;">
+	<strong>{"Thank you for subscribing to"|alang} %LISTNAME%!</strong>
+  </div>
+
+  <div style="padding: 15px; font-size: 12px; background: #F2FFD8; border: 3px solid #E4F4C3; margin-bottom: 0px; margin-top: 15px; font-family: Arial, Helvetica;">
+	{"To confirm that you wish to be subscribed, please click the link below:"|alang}<br /><br />
+	<textarea id="textmessage" style="width: 500px; height: 100px">{"Confirm My Subscription"|alang}</textarea><br>
+	({"You can leave this blank if you do not wish to include a custom message."|alang})
+  </div>
+
+  <input type="button" value='{"Next"|alang}' onclick="reverify_message_next()">
+</div>
+
+<div id="step_email" style="display:none">
+  <form method="POST" action="desk.php">
+	<input type="hidden" name="action" value="reverify">
+	<input type="hidden" name="message" value='{"Confirm My Subscription"|alang}' id="message">
+
+	<h3 class="m-b">{"Verify Your Verification Email"|alang}</h3>
+
+	<div>
+	  <strong>{"Subject:"|alang}</strong> %LISTNAME% {"List: Please Confirm Your Subscription"|alang}<br><br>
+
+	  <div style="font-size: 12px; font-family: Arial, Helvetica;">
+		<strong>{"Thank you for subscribing to"|alang} %LISTNAME%!</strong>
+	  </div>
+
+	  <div style="padding: 15px; font-size: 12px; background: #F2FFD8; border: 3px solid #E4F4C3; margin-bottom: 0px; margin-top: 15px; font-family: Arial, Helvetica;">
+		{"To confirm that you wish to be subscribed, please click the link below:"|alang}<br /><br />
+		<a href="#" onclick="return false"><span id="emailmessage">{"Confirm My Subscription"|alang}</span></a>
+	  </div>
+
+	  <br><br>
+
+	  <div>
+		{"This email will be sent to all subscribers on all lists asking them to verify their subscription."|alang}
+	  </div>
+
+	  <br>
+
+	  <input type="submit" value='{"Send Now"|alang}'>
+</div>
+
+<script>
+  {if $ongoing}
+  $("step_ongoing").show();
+  {else}
+  $("step_message").show();
+  {/if}
+</script>

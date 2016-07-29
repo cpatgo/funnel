@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>AEM Upgrade Guide</title>
+<style>
+body{
+	background: #fff;
+	font-family:Verdana;
+	font-size:14px;
+}
+.container{
+	background:#FFFFFF;
+	margin:30px;
+	padding:20px;
+	margin-bottom:0px;
+	border:4px solid #109309;
+
+}
+.header{
+	margin-bottom:30px;
+}
+.footer{
+	margin:30px;
+	margin-top:0px;
+	padding:20px;
+	padding-bottom:0px;
+	padding-top:10px;
+	font-size:10px;
+	color:#999999;
+}
+h1{
+	font-size:24px;
+	font-family:"Times New Roman", Times, serif;
+	border-bottom:1px solid #EBEBEB;
+	font-weight:normal;
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+	padding-bottom:5px;
+}
+h2{
+	font-size:12px;
+	border-bottom:1px solid #EBEBEB;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	margin-top:20px;
+	margin-bottom:10px;
+	padding-bottom:5px;
+}
+
+a, a:visited{
+	color:#109309;
+}
+a:hover{
+	color:#999;
+}
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="header">
+	<div style="float:right;"><a href="http://www.awebdesk.com" target="_blank">AwebDesk</a> | <a href="http://support.awebdesk.com/" target="_blank">KnowledgeBase</a> | <a href="http://support.awebdesk.com/" target="_blank">Contact Support</a></div>
+	<a href="http://www.awebdesk.com" target="_blank"><img src="http://awebdesk.com/logo.png" border="0" /></a>
+</div>
+
+<h1>AwebDesk Email Marketing  Software 7.1.0 Upgrade Guide</h1>
+<p>Thank you for choosing <a href="http://www.awebdesk.com">Email Marketing Software</a> from AwebDesk. <br />
+  <br />
+  This document will assist you with the upgrade process. If you have questions or need assistance at any time please visit our <a href="http://support.awebdesk.com">support center</a>.</p>
+
+<h2>Follow these steps to upgrade your AwebDesk Email Marketing Software.<span style="color:red; font-weight:bolder;">This guide is only for you if you have already an installed copy of AEM on your server. If you are installing it for the first time, please refer to the html file install.html found in the root of this downloaded package.</span></h2>
+<ol>
+  <li>Unzip the downloaded ZIP file</li>
+    <br />
+ 
+ 
+    <li><strong>(Please skip this step(#2) if you are using v6.3.0 as its already done by you when you upgraded to v6.3.0. If you are using AEM older than 6.3.0 pl follow this step(#2). To know which version you are using , click on admin-&gt;Settings-&gt;About)</strong>.<br />
+      Open serialkey.php under /upload/cache/ directory.<br />
+      Enter the license key which you received on purchasing in that file.<br /><br />
+   So if your license key is AEMO-1234567890123(To get your license key login <a href="https://customers.awebdesk.com/account/">here</a> and click on purchased product details.)<br />
+  <br />
+  <span style="color:#F00;">define('SERIAL_KEY', 'Enter your serial Key here');</span><br /><br />
+  should be edited as(no space should be there between ''):<br /><br />
+   <span style="color:#109309; font-weight:bolder;">define('SERIAL_KEY', 'AEMO-1234567890123');</span>
+  
+ 
+  <hr />
+  Also set the URL of installation there. So if you are installing AEM in http://example.com/AEM<br />
+  <br />
+  <span style="color:#F00;">define('AEM_BASE_URL', 'Enter your AEM URL without a trainling /');</span><br /><br />
+  shoule be edited as(no ending trailing / please note):<br /><br />
+   <span style="color:#109309; font-weight:bolder;">define('AEM_BASE_URL', 'http://example.com/AEM');</span>
+  
+  </li><br />
+    <li>V7.1.0 has new theming system. So , please delete all the files inside:<p>/templates/<br />/manage/templates/</li>
+    <li>Upload the contents of package /upload/ <strong>including /cache/</strong> to your web server AEM install directory replacing the old files. If you have made changes to templates files, make sure you compare the directory /templates/ inside  /upload/templates/ directory,<br /> and /manage/templates/ inside /upload/manage/templates/classic/ directory in order to retain the changes before uploading it to server.Basically all admin initial default templates files have now been moved to /manage/templates/classic/</li>
+    <br /><br />
+ 
+    <li>Run the web based updater by opening the following file (which is located on your web server) in your web browser
+      <ul>
+        <li>http://mydomain.com/aem/manage/updater.php</li>
+        <li>If it says to delete lock.txt file, then delete the file lock.txt from /cache/ on your server. You maye be told to delete lock.txt file two times during the process. That is perfectly normal.</li>
+        <li>Refresh the page twice on first upgrade screen. Follow the onscreen instructions.That completes your upgrade! You may now login to your software application.<br />
+          <br />
+        </li>
+      </ul>
+    </li>
+    <li>If something goes wrong or in case you get any license error, please verify that /cache/ directory and all contents inside it is writable(777 permissions).Also try deleting key.php file from /AEM/cache/ on serve and uploading a fresh key.php from downloaded package /cache/ on server   and refresh the page. <br />
+    </li>
+</ol>
+
+<h2>Have questions? Need assistance? </h2>
+<p>Please visit our <a href="http://support.awebdesk.com">support center</a> if you have any questions or need assistance with installing or using our product or send us an email at support@awebdesk.com <br />
+</p>
+</div>
+<div class="footer">
+&copy; 2010-2014 AwebDesk Softwares. All rights reserved.
+</div>
+</body>
+</html>

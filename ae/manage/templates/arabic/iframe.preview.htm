@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+{if $public}{assign var=basepath value=''}{else}{assign var=basepath value='../'}{/if}
+<html>
+<head>
+{if $ieCompatFix}
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+{/if}
+	<meta http-equiv="Content-Type" content="text/html; charset={"utf-8"|i18n}" />
+	<meta http-equiv="Content-Language" content="{"en-us"|i18n}" />
+	<link href="{$basepath}awebdesk/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/default.css" rel="stylesheet" type="text/css" />
+	{adesk_js lib="scriptaculous/prototype.js"}
+	{adesk_js lib="scriptaculous/scriptaculous.js"}
+	{adesk_js acglobal="ajax,dom,b64,str,array,utf,ui,paginator,loader,tooltip,date,custom_fields,editor,form,progressbar"}
+	<title>{"Preview this Campaign"|alang}</title>
+<script>
+<!--
+
+{include file="iframe.preview.js"}
+
+-->
+</script>
+</head>
+
+<body style="margin: 0; padding: 0;">
+
+	<div class="preview_menu">
+		<div style="float: right;">
+			{include file='autocomplete.inc.htm' fieldPrefix='subscriber' fieldID='preview_email' fieldName='preview_email' fieldSize='25' fieldValue=$admin.email|default:'test@test.com'}
+			<input type="button" id="preview_button" value="{'Preview'|alang}" onClick="preview_menu_changed();" />
+
+			<input type="button" value='{"Close"|alang}' onClick="top.close();" class="adesk_button_ok" />
+		</div>
+		<div>
+			<span id="preview_messageid_box" class="adesk_hidden">
+				{"Message:"|alang}
+				<select id="preview_messageid" name="preview_messageid" size="1" onChange="window.location.href='?c=' + preview_campaignid + '&m=' + this.value + '&s=0';">
+				{*<select id="preview_messageid" name="preview_messageid" size="1" onChange="preview_menu_set(this.value);">*}
+				</select>
+			</span>
+			<span id="preview_format_box" class="adesk_hidden">
+				{if $campaign.type != "text"}
+				{"Format:"|alang}
+				<select id="preview_format" name="preview_format" size="1" onChange="preview_menu_changed();">
+					{if $campaign_type != 'text'}<option value="html" selected="selected">{"HTML"|alang}</option>{/if}
+					<option value="text">{"Text"|alang}</option>
+				</select>
+				{/if}
+			</span>
+
+		</div>
+		<br clear="all" />
+	</div>
+
+	<div id="preview_message_loading" class="adesk_block" align="center" style="margin:10px;">
+		<img src="images/loader3.gif" />
+		<div style="font-size:10px; color:#999999;">{"Loading"|alang}</div>
+	</div>
+
+	<div id="preview_message_info" class="adesk_hidden">
+		<div class="preview_details">
+			<div id="preview_images_box" class="adesk_block" style="float:right;">
+				<a id="preview_images_link" href="#" onclick="images_toggle();return false;">{"Images Enabled"|alang}</a>
+			</div>
+			<div class="preview_message_from">
+				{"From:"|alang}
+				<span id="preview_message_from"></span>
+			</div>
+			<div class="preview_message_to">
+				{"To:"|alang}
+				<span id="preview_message_to"></span>
+			</div>
+			<div class="preview_message_subject">
+				{"Subject:"|alang}
+				<span id="preview_message_subject"></span>
+			</div>
+			<div id="preview_message_attachments_box" class="adesk_hidden">
+				{"Attachments:"|alang}
+				<span id="preview_message_attachments"></span>
+			</div>
+		</div>
+		<div class="preview_ruler">&nbsp;</div>
+	</div>
+
+
+	<div id="preview_message_text" style="margin-bottom:20px;" class="adesk_hidden"></div>
+
+	<div id="preview_message_html" style="margin-bottom:20px;" class="adesk_hidden"></div>
+
+	<div id="preview_message_source_box" class="adesk_hidden"><textarea id="preview_message_source"></textarea></div>
+
+
+	<div class="preview_menu_bottom">
+		<input type="button" value='{"Source"|alang}' onClick="adesk_dom_toggle_class('preview_message_source_box', 'adesk_block', 'adesk_hidden');" class="adesk_button_right" />
+		<input type="button" value='{"Close"|alang}' onClick="top.close();" class="adesk_button_ok" />
+	</div>
+
+</body>
+
+</html>

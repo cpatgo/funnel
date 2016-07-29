@@ -1,0 +1,248 @@
+<div id="syncFormPanel" class="adesk_hidden">
+
+<form action="desk.php?action=sync" method="post" name="addSyncForm" id="addSyncForm">
+<input type="hidden" name="id" id="syncFormIDfield" value="{$data.id}" />
+
+<div id="syncDBHolder" class="h2_wrap">
+<h4>{"Step 1: Database Info"|alang}</h4>
+  <div id="syncDBBox" class="h2_content">
+
+
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="3">
+            <b>{"Name your synchronization"|alang}</b><br />
+            <input type="text" style="width:99%;" id="titleField" name="sync_name" value="{$data.sync_name}" onchange="somethingChanged = true;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <br /><hr noshade size="1" width="100%" />
+                <div><b>{"External Database"|alang}</b> ({"Database you wish to synchronize with"|alang})</div>
+				{if isset($__ishosted) and $__ishosted}
+				<div style="margin-top: 10px; margin-bottom: 10px; padding: 10px; background: #FEFFBE">
+				  {"Your database user must be allowed to connect from host: "|alang}
+				  {$__hostedip}
+				</div>
+				{/if}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <br /><b>{"Database"|alang}</b><br />
+            <select name="db_type" id="dbtypeField" onchange="somethingChanged = true;" style="width:99%;">
+              {html_options options=$types}
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            {"Database Name"|alang}<br />
+            <input type="text" id="dbnameField" name="db_name" style="width:99%;" value="{$data.db_name}" onchange="somethingChanged = true;" />
+            </td>
+            <td width="4%"></td>
+            <td>
+            {"Database Host"|alang}<br />
+            <input type="text" id="dbhostField" name="db_host" style="width:99%;" value="{$data.db_host}" onchange="somethingChanged = true;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td width="46%">
+            {"Database Username"|alang}<br />
+            <input type="text" id="dbuserField" name="db_user" style="width:99%;" value="{$data.db_user}" onchange="somethingChanged = true;" />
+            </td>
+            <td width="4%"></td>
+            <td width="46%">
+            {"Database Password"|alang}<br />
+            <input type="password" id="dbpassField" name="db_pass" style="width:99%;" value="{$data.db_pass}" onchange="somethingChanged = true;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+		<tr>
+		  <td width="46%">
+			{"Source Character Set"|alang}<br/>
+			<input type="text" id="sourcecharsetField" name="sourcecharset" style="width: 99%" value="{$data.sourcecharset|default:'utf-8'}" onchange="somethingChanged = true" />
+		  </td>
+		</tr>
+        <tr>
+            <td colspan="3">
+                <br /><hr noshade size="1" width="100%" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <br /><b>{"Sync Into"|alang}</b><br />
+            <select name="relid" id="relidField" onchange="somethingChanged = true;sync_relid_change(adesk_form_select_extract(this));" style="width:99%;">
+              <option value="0">{"Select One"|alang}</option>
+              {html_options options=$rels}
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+	            {if isset($sync_destinations_template)}
+	            	{if $sync_destinations_template != ''}
+		            	{include file=$sync_destinations_template}
+	               	{/if}
+	            {/if}
+            </td>
+        </tr>
+
+    </table>
+    <br />
+
+  </div>
+</div>
+
+<div id="syncTablesHolder" class="adesk_hidden">
+  <h4 onclick="adesk_dom_toggle_class('syncTablesBox', 'h2_content', 'h2_content_invis');">{"Step 2: Select Table"|alang}</h4>
+  <div id="syncTablesBox" class="h2_content">
+
+    <div>
+      <div style="float: left; width: 45%;">
+        <div>{"Tables found in this database:"|alang}</div>
+        <div id="syncTables" class="adesk_radio_list">
+{*foreach from=$rows item=row}
+          <label><input type="radio" name="db_table" value="{$row.name}" onchange="$('syncQuery').className = 'adesk_hidden';" /> {$row.name}</label>
+{/foreach*}
+        </div>
+      </div>
+      <div style="float: right; width: 45%;">
+        <div>{"Or enter a query you would like to use:"|alang}</div>
+        <div id="syncCustom" class="adesk_radio_list">
+          <label><input id="syncCustomQueryRadio" type="radio" name="db_table" value="" onchange="$('syncQuery').className = ( this.checked ? 'adesk_block' : 'adesk_hidden' );" /> {"My Custom Query"|alang}</label><br />
+	      <div id="syncQuery" class="adesk_hidden">
+	        <textarea id="queryField" name="db_query" onchange="somethingChanged = true;" rows="30" style="width: 99%;">{if $data.db_table == ''}{$data.rules}{/if}</textarea>
+	      </div>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="syncFieldsHolder" class="adesk_hidden">
+  <h4>{"Select Fields to Map"|alang}</h4>
+  <div id="syncFieldsBox" class="h2_content">
+
+    {"Select which fields you wish to synchronize to their destinations."|alang}
+
+    <table cellpadding="10" width="100%">
+      <tr bgcolor="#666666" style="color:white; font-weight:bold;">
+        <td width="250">{"Your External Database"|alang}</td>
+        <td>{"The Field To Sync In"|alang}</td>
+      </tr>
+      <tbody id="mappingTable"></tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<div id="syncRulesHolder" class="adesk_hidden">
+  <h4>{"Select Query Rules"|alang}</h4>
+  <div id="syncRuleBox" class="h2_content">
+
+    <div id="queryResults" class="adesk_hidden">
+      <h3>{"Query Info"|alang}</h3>
+      <div>{"Here is the sample query you entered:"|alang}</div>
+      <div id="queryPreview"></div>
+    </div>
+
+    <div id="tableRules" class="adesk_hidden">
+
+      <h3>{"Current Rules"|alang}</h3>
+      <div id="rulesList"></div>
+      <div id="noRules" class="adesk_block">{"No rules setup."|alang}</div>
+      <div id="removeRules" class="adesk_hidden"><a href="#" onclick="return sync_rules_remove();">{"Remove All Rules"|alang}</a></div>
+
+      <h3>{"Add Rule"|alang}</h3>
+      <div id="rulesForm">
+       {"Where"|alang}
+       <select id="rule_field"></select>
+       <select id="rule_cond">
+         <option value="=">{"Equals (Is)"|alang}</option>
+         <option value="!=">{"Does Not Equal (Is Not)"|alang}</option>
+         <option value="&gt;=">{"Is Greater Than Or Equal To"|alang}</option>
+         <option value="&lt;=">{"Is Less Than Or Equal To"|alang}</option>
+         <option value="&gt;">{"Is Greater Than"|alang}</option>
+         <option value="&lt;">{"Is Less Than"|alang}</option>
+         <option value="CSIS">{"Case-Sensitive Equals (Is)"|alang}</option>
+         <option value="CONTAINS">{"Contains"|alang}</option>
+         <option value="DCONTAINS">{"Does NOT Contain"|alang}</option>
+         <option value="CSCONTAINS">{"Case-Sensitive Contains"|alang}</option>
+         <option value="CSDCONTAINS">{"Case-Sensitive Does NOT Contain"|alang}</option>
+         <option value="INLIST">{"Is in (comma separated) list"|alang}</option>
+         <option value="NOTINLIST">{"Is NOT in (comma separated) list"|alang}</option>
+       </select>
+       <input type="text" id="rule_value" />
+       <script>$('rule_value').onkeypress = adesk_ui_stopkey_enter;</script>
+       <input type="button" value="{"Add"|alang}" onclick="sync_rules_add();" />
+       {"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes."|help}
+      </div>
+
+    </div>
+
+    <div id="syncOptions">
+      <h3>{"Sync Options"|alang}</h3>
+      <div id="syncOption_delete_all" class="adesk_block">
+        <label>
+          <input type="checkbox" name="sync_option_delete_all" id="import_option_field_delete_all" />
+          {"Delete all items that are not affected by the sync each time the sync runs."|alang}
+          {"Extra users that were not part of the sync will be removed."|help}
+        </label>
+      </div>
+{foreach from=$opts item=o}
+      <div id="syncOption_{$o.id}" class="{if isset($o.hidden) and $o.hidden}adesk_hidden{else}adesk_block{/if}">
+        <label>
+          <input type="checkbox" name="sync_option_{$o.id}" id="import_option_field_{$o.id}" value="1" {if isset($o.checked) and $o.checked}checked="checked"{/if} {if isset($o.disabled) and $o.disabled}disabled="disabled"{/if} />
+          {$o.name}
+        </label>
+{if $o.descript != ''}
+        {$o.descript|help}
+{/if}
+      </div>
+{/foreach}
+    </div>
+  </div>
+</div>
+
+
+
+<div id="stepsList" style="float: right;">
+	{"Step:"|alang}
+	<span id="stepDB" class="currentstep">1</span>
+	<span id="stepTables" class="otherstep">2</span>
+	<span id="stepFields" class="otherstep">3</span>
+	<span id="stepRules" class="otherstep">4</span>
+</div>
+
+<div class="bottom_nav_options">
+	<input name="mode" type="hidden" id="modeField" value="{if $data.id == 0}add{else}edit{/if}" />
+{if !$demoMode}
+	<input id="syncWizardDone" class="adesk_hidden" type="button" value="{"Save"|alang}" onclick="sync_save();" />
+	<input id="syncWizardTest" class="adesk_hidden" type="button" value="{"Test"|alang}" onclick="sync_run(0, true);" />
+	<input id="syncWizardRun" class="adesk_hidden" type="button" value="{"Run"|alang}" onclick="sync_run(0, false);" />
+    <input id="syncWizardNext" class="adesk_button_next" type="button" value="{"&raquo; Next Step"|alang}" onclick="sync_next();" />
+{else}
+	<span class="demoDisabled2">{"Disabled in demo"|alang}</span>
+{/if}
+	<input type="button" value="{"Back"|alang}" onclick="window.history.go(-1);" />
+</div>
+
+</form>
+
+
+</div>

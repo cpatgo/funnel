@@ -1,0 +1,8 @@
+<font style="font-family: Arial;" size="2">
+##Dear## {$firstname|escape} {$lastname|escape},<br/><br/>
+##One of your sub-affiliates## </font><font style="font-family: Arial;" size="2">##made a action commission.##<br/><br/>
+<strong>.:##Preview##:.</strong><br/>##Action commission name##: <strong>{$actionName|escape}</strong><br/>
+##Total cost##: <strong>{$totalcost|currency}</strong><br/>
+##Product ID##: <strong>{$productid|escape}</strong><br/><br/>##Sincerely,##<br/><br/>
+##Your Affiliate manager##<br/>
+</font>

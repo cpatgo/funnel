@@ -1,0 +1,70 @@
+##### CHARSET/ENCODING SETTINGS #####
+
+##### Example:"utf-8" = "your-charset-here"#####
+
+
+
+"utf-8" = "utf-8"
+
+"8bit" = "8bit"
+
+
+
+
+
+##### TEXT DIRECTION SETTINGS: 'ltr' = left to right; 'rtl' = right to left #####
+
+##### Example:"direction: ltr" = "direction: rtl"#####
+
+
+
+"direction: ltr" = "direction: ltr"
+
+
+
+
+
+##### CONTENT LANGUAGE SETTINGS #####
+
+##### Example:"en-us" = "de"#####
+
+
+
+"en" = "it"
+
+"en-us" = "it"
+
+"en_US" = "it"
+
+
+
+
+
+##### LOCALIZATION SETTINGS #####
+
+##### Example:"." = ","#####
+
+##### Example:"," = ""#####
+
+
+
+"." = ","
+
+"," = "."
+
+
+
+
+
+##### DATE FORMATS #####
+
+##### Example:"%m/%d/%Y %H:%M" = "%d/%m/%Y %H:%M"#####
+
+
+
+"%m/%d/%Y %H:%M" = "%d/%m/%Y %H:%M"
+
+"%m/%d/%Y" = "%d/%M/%Y"
+
+"%H:%M" = "%H:%M"
+

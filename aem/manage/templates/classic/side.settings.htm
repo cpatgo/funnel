@@ -1,0 +1,52 @@
+<ul>
+<li><a href="desk.php?action=account"><img class="va" src="css/images/yoursettings.png" /> {"Your Settings"|alang}</a></li>
+</ul>
+ 
+{if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+<h2>{"Users & Groups"|alang}</h2>
+<ul>
+	 
+{if adesk_admin_ismaingroup()}
+	<li>	<a href="desk.php?action=settings"><img class="va" src="css/images/generalsettings.png" /> {"General Settings"|alang}</a></li>
+{/if}
+
+{if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+		<li><a href="desk.php?action=user#list-01-0-0"><img class="va" src="css/images/users.png" /> {"Users"|alang}</a></li>
+{/if}
+{if adesk_admin_ismaingroup()}
+		<li><a href="desk.php?action=group#list-01-0-0"><img class="va" src="css/images/usergroups.png" /> {"User Groups"|alang}</a></li>
+		{if !adesk_site_hosted_rsid()}
+		<li><a href="desk.php?action=design#list-01-0-0"><img class="va" src="css/images/designsettiings.png" /> {"Branding"|alang}</a></li>
+		<li><a href="desk.php?action=service#list-0-0-0"><img class="va" src="css/images/externalservices.png" /> {"External Services"|alang}</a></li>
+		{/if}
+
+{if !$__ishosted}
+		<li><a href="desk.php?action=loginsource#list-01-0-0"><img class="va" src="css/images/loginsources.png" /> {"Login Sources"|alang}</a></li>
+{/if}
+{/if}
+</ul>
+ 
+{/if}
+
+
+{if adesk_admin_ismaingroup() and !$__ishosted}
+<h2>{"Other Settings"|alang}</h2>
+<ul> <li>	<a href="desk.php?action=settings#settings_mailsending"><img class="va" src="css/images/smtp16.png" /> {"SMTP Connections"|alang}</a></li>
+	<li>	<a href="desk.php?action=database"><img class="va" src="css/images/databaseutilities.png" /> {"Database Utilities"|alang}</a></li>
+		<li><a href="desk.php?action=cron#list-01-0-0"><img class="va" src="css/images/scheduledtasks.png" /> {"Scheduled Tasks"|alang}</a></li>
+		<li><a href="desk.php?action=about"><img class="va" src="css/images/about.png" /> {"About"|alang}</a></li>
+</ul>
+{/if}
+
+{if $processesCnt or $pausedProcessesCnt}
+<h2>{"Ongoing Processes"|alang}</h2>
+<ul>{if $processesCnt}
+		<li><a href="desk.php?action=processes#list-01-0-0"><img class="va" src="css/images/currentprocesses.png" /> {"Current Processes (%s)"|alang:$processesCnt}</a></li>{/if}
+		{if $pausedProcessesCnt}
+		<li><a href="desk.php?action=processes&status=paused#list-01-0-0"><img class="va" src="css/images/pausedprocesses.png" /> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a></li>
+		{/if}
+</ul>
+{else if}
+<h2>{"Ongoing Processes"|alang}</h2>
+<ul><li style="color:red; font-weight:bolder;">No Active process Now</li></ul>
+{/if}

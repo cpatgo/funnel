@@ -1,0 +1,17 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="personalization.js"}
+</script>
+
+<h3 class="m-b">{"Message Variables"|alang}</h3>
+
+{include file="personalization.list.htm"}
+{include file="personalization.form.htm"}
+{include file="personalization.delete.htm"}
+{include file="personalization.search.htm"}
+{include file="editor.personalize.inc.htm"}
+{include file="editor.conditional.inc.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(personalization_process, true);
+</script>

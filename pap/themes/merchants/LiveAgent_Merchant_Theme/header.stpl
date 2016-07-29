@@ -1,0 +1,9 @@
+<!-- header -->
+<div class="LAHeader">
+	<a class="LALogo" title="{$programName|escape}" href="{$baseUrl}/"><img src="{$programLogo|escape}" class="LALogoImage"/></a>
+	<div style="position: absolute; right: 0px;">{$quChatButton}</div>
+	<div class="LACopyright">{$papCopyrightText}<br />{$papVersionText|escape}</div>
+</div>
+
+
+

@@ -1,0 +1,25 @@
+<div id="list" class="adesk_hidden">
+    <table width="100%" border="0" cellspacing="0" cellpadding="1">
+      <thead id="list_head">
+        <tr class="adesk_table_header">
+          <td width="50">{"Options"|alang}</td>
+          <td>{"Campaign"|alang}</td>
+          <td>{"User"|alang}</td>
+          <td>{"Group"|alang}</td>
+          <td width="100">{"Sending Date"|alang}</td>
+          <td width="100">{"Past Approved"|alang}</td>
+        </tr>
+      </thead>
+      <tbody id="list_table">
+      </tbody>
+    </table>
+    <div id="list_noresults" class="adesk_hidden">
+      <div align="center">{"Nothing found."|alang}</div>
+    </div>
+    <div style="float:right">
+      {include file="pagination.js.tpl.htm" tabelize="approval_list_tabelize" paginate="approval_list_paginate"}
+    </div>
+    <div id="loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+      {"Loading. Please wait..."|alang}
+    </div>
+</div>

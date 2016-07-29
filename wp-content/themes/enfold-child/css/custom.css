@@ -1,0 +1,565 @@
+/* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
+
+/* General Custom CSS */
+
+#top .scroll-down-link {
+    height: 60px;
+    width: 80px;
+    margin: 0px 0 0 -40px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    -webkit-animation: avia_fade_move_down 2s ease-in-out infinite;
+    animation: avia_fade_move_down 2s ease-in-out infinite;
+}
+
+
+#header_main_alternate, .av_header_transparency #header_main .social_bookmarks li a {
+    color: inherit;
+    border-color: transparent;
+    background: transparent;
+    font-size: 15px;
+}
+#header_meta {
+    background: #1f2329;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+.main_menu ul:first-child > li > a, .sub_menu > ul > li > a,  .logo img {
+    padding-top: 0px;
+}
+
+.main_color h3 { color: #1f2329; font-weight: 600; }
+
+.avia_button_box .avia-color-blue {
+    background-color: #2895f1 !important;
+    border-color: #2895f1 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+.sub_menu > ul > li > a, .sub_menu > div > ul > li > a { text-decoration: none; font-weight: bold; padding:0; }
+.sub_menu > ul > li.btn-glc-referral > a { color: #b2b2b2 !important; }
+.sub_menu > ul > li > a { color: #fff; }
+.sub_menu > ul > li.btn-plans-and-pricing > a, .sub_menu > ul > li.btn-logout > a, .sub_menu > ul > li.btn-login > a { color: #fff; }
+
+.single_toggle {color: #4c515d;}
+.main_color .toggler{color: #2895f1;}
+.main_color .toggler:hover {text-decoration: underline;}
+
+#footer .btn-plans-and-pricing {
+    background: #e97e00;
+}
+
+#footer .btn-secondary{
+	background: #2895f1;
+}
+
+#footer .btn-secondary, #footer .btn-plans-and-pricing{
+	width:48%;
+	color:white;
+	font-size:14px !important;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+a.wpas-btn.wpas-btn-default.wpas-link-logout {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+
+.sub_footer hr { border-color: #333 }
+
+.cc img {
+    width: 30%;
+}
+
+.cc {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+
+#header_meta .container { min-height:75px }
+
+.sub-menu{ top: 20px !important; }
+
+
+.btn-plans-and-pricing a{
+    background-color: #ff910f !important;
+    color: white !important;
+}
+
+.btn a { 
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    /* border: 1px solid transparent; */
+    white-space: nowrap;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    user-select: none;
+}
+
+#header_meta li {
+    border-color: none !important;
+}
+
+
+
+.btn-login a { 
+    background-color: #2895f1 !important;
+
+    /*background-color: #e97e00 !important;*/
+    color: white !important;
+}
+
+.btn-glc-upgrade a { 
+    background-color: #e97e00 !important;
+    /*background-color: #e97e00 !important;*/
+    color: white !important;
+}
+
+
+.btn-logout a { 
+    /*background-color: #2895f1 !important;*/
+    background-color: #2895f1 !important;
+    color: white !important;
+}
+
+.sub_menu li a { color: #fff; }
+.sub_menu li { padding: 0px; }
+.sub_menu > ul > li > a, .sub_menu > ul > li > a{ font-size: 14px; padding: 2px 14px; line-height: 2.4; color: #fff; }
+.sub_menu > ul > li:hover > a , .btn a:hover{ text-decoration: none !important; }
+
+.logo a > img {
+ 
+}
+
+.alternate_color .breadcrumb, .alternate_color .breadcrumb a, #top .alternate_color.title_container .main-title, #top .alternate_color.title_container .main-title a {
+    color: #258dcd;
+    font-weight: bolder;
+}
+
+.logo img {
+    padding: 10px 0 0 0;
+    padding-top: 12px;
+    width: 100%;
+    padding-left: 54px;
+    padding: 15px 0 0 0;
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    image-rendering: auto;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    height: auto;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.footer_color h3 {
+    /*border-bottom: 1px solid #aaa;*/
+    padding-bottom: 16px;
+}
+
+#footer .widget_nav_menu a {
+    font-size: 14px;
+}
+
+
+
+.join_nav_link a{
+	/*line-height: normal !important;*/
+    /*margin: 23px 0px !important;*/
+    padding: 8px 14px !important;
+    border: 2px solid #258dcd !important;
+    border-radius: 6px !important;
+}
+
+.join_nav_link { margin-top: -9px; }
+
+#header_main .container  {
+    height: 90px !important;
+    line-height: initial !important;
+}
+.main_menu ul > li > a{
+line-height: normal !important;
+}
+.av-main-nav > li {
+     line-height: initial; 
+     height
+}
+
+.av_minimal_header .main_menu ul:first-child > li a {
+	height: auto !important;
+}
+
+nav.main_menu { margin-top:32px; height:auto; }
+
+span.user_header {
+    font-size: 14px;
+    padding: 2px 14px;
+    line-height: 2.4;
+    color: #ddd;
+    font-weight: bolder;
+}
+
+span.darker{ color:#888; }
+
+.av_minimal_header #header_main, .av_minimal_header #header_meta {
+    /*border: none;*/
+    box-shadow: 0px 0px 25px #888888;
+}
+
+span.user_header strong { color: #fff; }
+
+#top .av_header_transparency #header_meta .logo img {
+    /*background: #1f2329;*/
+    box-shadow: none;
+    border-bottom: 1px solid rgba`(255,255,255,0.25);
+	min-height: 50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+#top .av_header_transparency #header_main, #top .av_header_transparency .avia-menu.av_menu_icon_beside {
+    border-color: transparent;
+    background: #ffffff;
+   }
+
+.course_cat-e-books .llms-syllabus-wrapper {
+    display: none;
+}
+
+.course_cat-e-books input.button.llms-button.llms-purchase-button {
+    display: none;
+}
+
+.course_cat-e-books span.post-meta-infos {
+    display: none;
+}
+
+span.breadcrumb-title {
+    color: #333;
+}
+
+.breadcrumb.breadcrumbs.avia-breadcrumbs {
+    font-size: 14px;
+}
+
+span.sep {
+    color: #333;
+}
+
+span.trail-end {
+    color: #333;
+}
+
+#top .avia-button.avia-color-dark {
+    border-color: #258dcd;
+    color: #258dcd;
+}
+
+#top #wrap_all .av-social-link-twitter a {
+    color: #fff;
+    background-color: #46d4fe;
+}
+
+.av-social-link-twitter a {
+    color: #fff;
+    background-color: #46d4fe !important;
+}
+
+.av-social-link-facebook a {
+    color: #fff;
+    background-color: #37589b !important;
+}
+
+.av-social-link-youtube a {
+    color: #fff;
+    background-color: #a72b1d !important;
+}
+
+.social_bookmarks li a:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+}
+
+.social_bookmarks li {
+    margin-right: 3px;
+}
+
+.current-menu-item a .avia-menu-text {
+    color: #333 !important;
+}
+
+@media only screen and (max-width: 989px) {
+    .av_header_transparency.av_alternate_logo_active .logo a > img {
+	    display: block;
+	    text-align: center;
+	}   
+
+    .logo_container a#advanced_menu_toggle { 
+        display: none !important; 
+    }
+
+    .logo_container .logo a img, .logo_container .logo a { 
+    	display:none;
+    }
+
+    .responsive #top .av_header_transparency.av_alternate_logo_active .logo a > img {
+        opacity: 1;
+    }
+
+    .responsive .logo {
+	    padding-top:14px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.responsive .logo a {
+	    display: table-cell;
+	    /* vertical-align: middle; */
+	}
+
+	.logo_container{ display: none; }
+
+	#header_main .logo a { vertical-align: initial;  }
+
+	nav.sub_menu ul {padding-top: 20px;}
+
+	.cc img {
+	    width: 50%;
+	}
+
+	#top #wrap_all .av_header_transparency, .av_header_transparency #advanced_menu_toggle {
+        background-color: #ffffff;
+        color: #4c515d;
+        border-color: transparent;
+    }
+}
+
+
+@media only screen and (max-width: 499px) {
+	.cc img {
+		width:80%;
+	}
+	#footer .btn-secondary, #footer .btn-plans-and-pricing {
+        width: 100%;
+    }
+}
+
+#top #wrap_all .av_header_transparency .main_menu ul:first-child > li > a, #top #wrap_all .av_header_transparency .sub_menu > ul > li > a, #top .av_header_transparency logo img {
+    padding-top: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    image-rendering: auto;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    height: auto;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#top .av-rotator-container-inner {
+    position: relative;
+    line-height: 1.1em;
+    margin: 0;
+    font-weight: 500;
+    text-transform: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+
+.avia-section-huge .content, .avia-section-huge .sidebar {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+#header_main_alternate, .av_header_transparency #header_main .social_bookmarks li a {
+    color: inherit;
+    border-color: transparent;
+    background: transparent;
+    font-size: 15px;
+}
+#top .av_header_transparency #header_meta {
+    background: #1f2329;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+#top #wrap_all .av_header_transparency .main_menu ul:first-child > li > a, #top #wrap_all .av_header_transparency .sub_menu > ul > li > a, #top .av_header_transparency logo img {
+    padding-top: 0px;
+}
+
+.entry-content-wrapper .post-title {
+    font-size: 21px;
+    line-height: 1.3em;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.avia-image-container.avia-align-center {
+    display: block;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    clear: both;
+    padding-bottom: 25px;
+}
+
+.big-preview.single-big {
+    padding: 0px 50px 35px 300px;
+}
+
+
+/* Events CSS */
+
+.main_color #tribe-events-bar, .main_color #tribe-events-bar:before, .main_color #tribe-events-bar:after, .main_color .tribe-grid-allday .hentry.vevent>div, .main_color .tribe-grid-body div[id*='tribe-events-event-'] .hentry.vevent, .main_color .tribe-mini-calendar-dayofweek, .main_color .tribe-mini-calendar-event .list-date {
+    background: #eee !important;
+    border-color: transparent;
+}
+
+#top #wrap_all .main_color td.tribe-events-othermonth {
+    background: #eee !important;
+    color: #fff !important; 
+}
+
+.main_color #tribe-events-pg-template .tribe-events-notices, .main_color #tribe-events-pg-template .tribe-events-notices strong {
+    background: #555 !important;
+    color: #ffffff;
+}
+
+.tribe-events-present{background: #d2d2d2 !important;}
+
+.main_color .tribe-bar-views-inner { background: #eee; color: #fff; }
+
+.datepicker table tr td span { background: #eee !important; }
+
+.main_color #tribe-events-content .tribe-events-calendar td { border: 1px solid #ddd !important; }
+
+.datepicker table tr td span { color: #333; }
+
+body .datepicker table tr td span:hover { color: #258dcd; }
+
+.main_color .tribe-mini-calendar .tribe-events-has-events div[id*='daynum-'] a:before, .main_color .tribe-venue-widget-venue-name, .main_color .tribe-mini-calendar-nav span, body .datepicker table tr td.active.active, body .datepicker table tr td span.active.active, body .datepicker table tr td.active.active:hover, body .datepicker table tr td span.active.active:hover, body .datepicker thead tr:first-child th:hover, body .datepicker tfoot tr th:hover, #top .main_color .tribe-events-tooltip h4, .main_color div.tribe-countdown-text, .main_color .tribe-mini-calendar-nav td, .main_color .tribe-events-calendar th, .main_color .tribe-events-grid .tribe-grid-header, .main_color .tribe-events-grid .tribe-grid-header .column, #top #wrap_all .main_color .tribe-events-button, .main_color .tribe-events-list .tribe-events-event-cost span, .main_color .tribe-events-calendar td.tribe-events-present div[id*='tribe-events-daynum-'], .main_color .tribe-events-calendar td.tribe-events-present div[id*='tribe-events-daynum-']>a.main_color .tribe-grid-allday .hentry.vevent>div, .main_color .tribe-grid-body div[id*='tribe-events-event-'] .hentry.vevent, .main_color .tribe-mini-calendar .tribe-events-has-events:hover a, .main_color .tribe-mini-calendar .tribe-events-has-events:hover a:hover{
+    background-color: #777;
+    color: #ffffff;
+    border-color: #888;
+}
+
+body .datepicker.dropdown-menu, #top .main_color #tribe-bar-form input[type='text'] { color: #333; }
+.main_color .tribe-events-calendar div[id*='tribe-events-daynum-'], .main_color .tribe-events-calendar td.tribe-events-past div[id*='tribe-events-daynum-'] { color: #fff; }
+
+.main_color .tribe-events-calendar div[id*='tribe-events-daynum-'] { background: #555 }
+.main_color .tribe-events-calendar td.tribe-events-past div[id*='tribe-events-daynum-'] { background: #999; }
+
+
+
+.main_color .tribe-bar-views-inner {
+    background: #eee !important;
+}
+
+.main_color #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a { 
+	background: #fff;
+    color: #333333;
+}
+
+.main_color #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a:hover { background: #ccc; }
+
+
+.tribe-bar-submit {
+    padding: 44px 0px 30px 23px !important;
+    float: right;
+    margin: 0;
+}
+
+
+.tribe-bar-views-inner label { color: #333; }
+
+#tribe-bar-views .tribe-bar-views-list {
+     padding: 10px !important;
+    /*border: 1px solid #333;*/
+    background: white;
+}
+
+
+.tribe-bar-search-filter input[type='text']{
+    background: #ffffff;
+    color: #e97c00;
+    border: 1px solid #aaa;
+}
+
+#top .av-flex-placeholder {
+    display: table-cell;
+    width: 2%;
+}
+
+.av-special-heading {
+    width: 100%;
+    clear: both;
+    display: block;
+    margin-top: 20px;
+    position: relative;
+}
+
+.avia-image-container.avia-align-center {
+    display: block;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    clear: both;
+    padding-bottom: 0px;
+}
+
+.avia-button.avia-size-x-large {
+    padding: 13px 38px;
+    font-size: 24px;
+    min-width: 200px;
+}
+
+/*
+Desktop Styles
+================================================== */
+/* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
+
+@media only screen and (min-width: 768px) {
+  /* Add your Desktop Styles here */
+
+}
+
+/*
+Mobile Styles
+================================================== */
+/* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
+
+@media only screen and (max-width: 767px) {
+  /* Add your Mobile Styles here */
+
+}
+
+@media only screen and (max-width: 989px) {
+
+}
+
+

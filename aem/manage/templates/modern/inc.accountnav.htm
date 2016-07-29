@@ -1,0 +1,23 @@
+					<div style="float:left;">
+					 
+						{if !$is_campaign_new}
+							<a href="desk.php?action=campaign_new" style=" margin-left:0px; margin-right:10px;">{"Create New Campaign"|alang}</a>
+						{/if}
+						{if $is_campaign_new}
+							<a href="desk.php" style=" margin-left:0px; margin-right:10px;">{"Exit Create Campaign"|alang}</a>
+						{/if}
+					</div>
+
+{if !$is_campaign_new}
+{if adesk_admin_ismain()}
+					<a href="desk.php?action=settings">{"Settings"|alang}</a>
+{else}
+					<a href="desk.php?action=account">{"Settings"|alang}</a>
+{/if}
+
+				 
+					{if (!isset($usehelplink) or $usehelplink == 1) && $admin.brand_help && !$__ishosted}
+					<a href="desk.php?action=help">{"Help"|alang}</a>
+					{/if}
+{/if}
+

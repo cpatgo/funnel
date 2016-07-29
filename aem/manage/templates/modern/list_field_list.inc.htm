@@ -1,0 +1,21 @@
+<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr class="adesk_table_header_options">
+    <td align="left">
+{if $listid > 0}
+<span style="float: right;">
+  <input class="adesk_button_view" type="button" value="{'View List'|alang}" onclick="window.location = 'desk.php?action=list&id={$relid}';" />
+</span>
+{/if}
+    <select name="somename" id="JSListManager" size="1" onchange="window.location = 'desk.php?action=list_field&listid=' + this.value + '&relid=' + this.value;">
+      <option value="0"{if $listid == 0} selected="selected"{/if}>{"List Filter..."|alang}</option>
+{foreach from=$listsList item=p}
+      <option value="{$p.id}"{if $listid == $p.id} selected="selected"{/if}>
+        {$p.name|truncate:50}
+      </option>
+{/foreach}
+    </select>
+{if $listid > 0}
+    <input class="adesk_button_clear" type="button" onclick="window.location = 'desk.php?action=list_field';" value="{'Clear'|alang}" style="cursor: hand; color: Red;" />
+{/if}
+  </tr>
+</table></div>

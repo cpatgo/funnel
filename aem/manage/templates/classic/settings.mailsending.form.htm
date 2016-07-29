@@ -1,0 +1,248 @@
+<input type="hidden" id="mailer_form_id" name="id" value="" />
+<table border="0" cellspacing="0" cellpadding="0" id="mailconnItemTable">
+  <tr>
+    <td colspan="2">
+      <h2>{"Mail Connection"|alang}</h2>
+    </td>
+  </tr>
+  <tr>
+    <td width="25" valign="top">&nbsp;</td>
+    <td>
+      <strong>{"Connection Name"|alang}</strong>
+      <input id="smname" name="smname" value="" type="text" size="20" />
+      <br />
+      {"Name this mail connection so you can recognize it better in your lists. This does not have any influence on server names the connection might use."|alang}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <h2>{"Sending Method"|alang}</h2>
+    </td>
+  </tr>
+  <tr>
+    <td width="25" valign="top"><input id="smmail" name="send" type="radio" value="0" onclick="if(this.checked)$('smtpInfo').className='adesk_hidden';" /></td>
+    <td>
+      <label for="smmail">
+        <strong>{"Default Sending Method"|alang}</strong><br />
+        ({"Will use the default MTA on your system. Such as sendmail, qmail, etc..."|alang})
+      </label>
+    </td>
+  </tr>
+
+  {*
+  <tr>
+  	<td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25" valign="top"><input id="smsendmail" name="send" type="radio" value="3" onclick="if(this.checked)$('smtpInfo').className='adesk_hidden';" /></td>
+    <td><label><strong>{"Sendmail"|alang}</strong></label></td>
+  </tr>
+  <tbody id="sendmailInfo" class="adesk_hidden">
+    <tr>
+      <td colspan="2" valign="top" bgcolor="#F3F3F3">
+        <label for="smsendmail">{"Sendmail Path"|alang}</label><br />
+        <input name="smhost" type="text" id="smhost" value="" size="20" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" valign="top" bgcolor="#F3F3F3">{"Leave this field blank if you wish to use system-defined path."|alang}</td>
+    </tr>
+  </tbody>
+  *}
+
+  <tr>
+  	<td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25"><input id="smsmtp" name="send" type="radio" value="1" onclick="if(this.checked)$('smtpInfo').className='adesk_table_rowgroup';" /></td>
+    <td><label for="smsmtp"><strong>{"SMTP"|alang}</strong></label></td>
+  </tr>
+  <tbody id="smtpInfo" class="adesk_hidden">
+{if 0 and $site.brand_links}
+    <tr>
+      <td colspan="2">
+		<div class="adesk_help_inline" style="font-size:11px;">
+			<p><strong><font color="#333333">{"If using your own SMTP server information:"|alang}</font></strong> <br />
+			{"You can send using any SMTP server that you have information for."|alang}</p>
+			<ol>
+			  <li>{"Enter your SMTP server, port # (typically 25), username, and password"|alang}</li>
+			  <li>{"Some servers require a specific encryption to be set and/or require POP3 authentication"|alang}</li>
+			  <li>{"Send a test email to verify your settings"|alang}</li>
+			</ol>
+			<p>{"If you do not have your SMTP information or have questions about your SMTP info you can contact your webmaster or server administrator."|alang}<br />
+			  <br />
+			    <strong><font color="#666666">{"If using the %s SMTP service:"|alang:'<a href="http://awebdesk.smtp.com/" target="_blank">awebdesk.SMTP.com</a>'}</font></strong><br />
+			    {"Use of %s is 100%% optional for using this product.  It is a service that assists with email delivery and sending of your emails."|alang:'awebdesk.smtp.com'}</p>
+			<ol>
+			  <li>{"Signup at %s"|alang:'<a href="http://awebdesk.smtp.com/" target="_blank">awebdesk.smtp.com</a>'}</li>
+			  <li>{"Enter %s as the SMTP server (or the server that they specify is your SMTP server)"|alang:'awebdesk.smtp.com'}</li>
+			  <li>{"Enter port 25 for the SMTP port"|alang}</li>
+			  <li>{"Enter your username & password that %s provides you"|alang:'awebdesk.smtp.com'}</li>
+			  <li>{"Send a test email to verify your settings"|alang}</li>
+			</ol>
+		</div>
+      </td>
+    </tr>
+{/if}
+  <tr>
+    <td width="25" valign="top">&nbsp;</td>
+    <td>
+      <table border="0">
+        <tr>
+          <td valign="top">
+            {"SMTP Server"|alang}<br />
+            <input name="smhost" type="text" id="smhost" value="" size="20" tabindex="1" />
+          </td>
+          <td valign="top">
+            {"Port"|alang}<br />
+            <input name="smport" type="text" id="smport" value="" size="8" tabindex="2" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">
+            {"Username"|alang}
+            {"If authentication is not required, do not enter a username."|help:"block"}
+            <br />
+            <div style="padding-right: 10px;"><input name="smuser" type="text" id="smuser" value="" size="20" tabindex="3" /></div>
+          </td>
+          <td valign="top">
+            {"Password"|alang}
+            {"If authentication is not required, do not enter a password."|help:"block"}
+            <br />
+            <input name="smpass" type="password" id="smpass" value="" size="20" tabindex="4" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">
+            {"Encryption"|alang} <br />
+            <select id="smenc" name="smenc" onchange="$('smport').value=(this.value==8?25:465);" tabindex="5">
+              <option value="8">{"Off"|alang}</option>
+              <option value="4">{"SSL"|alang}</option>
+              <option value="2">{"TLS"|alang}</option>
+            </select>
+          </td>
+          <td valign="top">
+            <label>
+              {"Use POP3 Authentication"|alang}<br />
+              <input name="smpop3b4" type="checkbox" id="smpop3b4"  value="1" tabindex="6" />
+            </label>
+          </td>
+         </tr>
+	  </table>
+
+    </td>
+  </tr>
+</tbody>
+<tbody id="rotatorEdit">
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+   	<td>&nbsp;</td>
+	<td>{"Emails Per Cycle:"|alang}
+      <input name="smthres" type="text" id="smthres" value="50" size="5" />
+      {"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter."|help}
+    </td>
+  </tr>
+</tbody>
+
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <h2>{"Sending Speed"|alang}</h2>
+    </td>
+  </tr>
+  <tr>
+   	<td valign="top">
+     <input name="ltype" id="dontstop" type="radio" value="dontstop" onclick="$('sdbox').className='adesk_hidden';$('limbox').className='adesk_hidden';" />
+   	</td>
+	<td>
+	  <label for="dontstop">
+	    {"Send without limitations"|alang}
+	  </label>
+    </td>
+  </tr>
+  <tr>
+  	<td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+   	<td valign="top">
+      <input name="ltype" id="sd" type="radio" value="sd" onclick="$('sdbox').className='adesk_block';$('limbox').className='adesk_hidden';" />
+   	</td>
+	<td>
+	  <label for="sd">
+	    {"Enable sending throttling and pausing"|alang}
+	  </label>
+      {"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load."|help}
+      <div id="sdbox" class="adesk_hidden" style="margin-left:40px;">
+        {"Your sending will pause for"|alang}
+        <input type="text" name="sdnum" id="sdnum" value="" size="3" onchange="if(!checkSendPause())return false;calculateSendingSpeed();" />
+        {"seconds after"|alang}
+        <input type="text" name="sdfreq" id="sdfreq" value="" size="3" onchange="calculateSendingSpeed();" />
+        {"emails are sent."|alang}
+      </div>
+    </td>
+  </tr>
+  <tr>
+  	<td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+   	<td valign="top">
+	    <input name="ltype" id="lim" type="radio" value="lim" onclick="$('sdbox').className='adesk_hidden';$('limbox').className='adesk_block';" />
+   	</td>
+	<td>
+	  <label for="lim">
+	    {"Limit number of emails to send for a specific time period"|alang}
+	  </label>
+      {"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)"|help}
+      <div id="limbox" class="adesk_hidden" style="margin-left:40px;">
+        <input name="sdlim" type="text" id="sdlim" value="" size="5" onchange="calculateSendingSpeed();" />
+        <select name="sdspan" id="sdspan" size="1" onchange="calculateSendingSpeed();">
+          <option value="hour">{"Per Hour"|alang}</option>
+          <option value="day">{"Per Day"|alang}</option>
+        </select>
+      </div>
+    </td>
+  </tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr valign="top">
+    <td>&nbsp;</td>
+    <td>
+      {"Used by User Groups:"|alang}<br />
+						<div class="adesk_checkboxlist">
+							{foreach from=$groupsList item=p}
+								<div>
+									<label>
+										<input type="checkbox" id="p_{$p.id}" name="p[]" value="{$p.id}" class="groupfield" {if count($listsList) == 1}checked="checked"{/if} />
+										{$p.title}
+									</label>
+								</div>
+							{/foreach}
+						</div>
+						<div align="right" style="width: 300px;">
+			{"Select:"|alang}
+			<a href="#" onclick="$$('.groupfield').each(function(e) {literal}{ e.checked = true; }{/literal}); return false">{"All"|alang}</a>
+			&middot;
+			<a href="#" onclick="adesk_dom_boxclear('groupfield'); return false">{"None"|alang}</a>
+						</div>
+    </td>
+  </tr>
+
+</table>
+<br />

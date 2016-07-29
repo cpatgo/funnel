@@ -1,0 +1,47 @@
+<div id="auth" class="{if $step == 1}adesk_block{else}adesk_hidden{/if}">
+	<form action="updater.php" method="post" name="reg" id="checksForm" onsubmit="auth_check(); return false;">
+		<h3>{"Please authenticate in order to continue"|alang}</h3>
+		<div>{"Username"|alang}</div>
+		<div><input type="text" name="username" id="authUsername" value="admin" tabindex="3" readonly /></div>
+		<div>{"Password"|alang}</div>
+		<div><input type="password" name="password" id="authPassword" value="" tabindex="1" /></div>
+
+		<div>
+			<input type="button" value="{'Next &gt;'|alang}" tabindex="2" class="adesk_button_next" id="authNext" onclick="auth_check();" />
+		</div>
+
+	    <input type="submit" style="display:none" />
+	</form>
+</div>
+
+<div id="backend" class="{if $step == 2}adesk_block{else}adesk_hidden{/if}">
+	<h3>License Agreement</h3>
+	 <fieldset>
+	 
+			<div id="remoteauthinfo" class="adesk_hidden">
+				 
+				 
+			</div>
+		</fieldset>
+		<br />
+		<fieldset>
+			 
+			<div>
+				<label>
+				<input type="hidden" name="authtype" id="authtyperemote" value="local" onchange="$('remoteauthinfo').className = ('adesk_block' );" />
+					<input type="radio" name="authtype" value="local"    />
+						You agree to our terms and conditions and license agreement(find in /docs) by installing this product
+				</label>
+			</div>
+
+	
+
+		</fieldset>
+<br />
+
+		<div>
+			<input type="button" value="{'Next &gt;'|alang}" class="adesk_button_next" id="authNext" onclick="install_next();" />
+		</div>
+
+	    <input type="submit" style="display:none" />
+</div>

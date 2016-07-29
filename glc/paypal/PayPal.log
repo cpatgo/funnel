@@ -1,0 +1,20 @@
+[15-10-2015 04:32:38] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-10-2015 04:32:38] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 200
+[15-10-2015 04:32:38] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/payments/payment
+[15-10-2015 04:32:39] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 201
+[15-10-2015 04:36:54] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-10-2015 04:36:55] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 200
+[15-10-2015 04:36:55] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/payments/payment
+[15-10-2015 04:36:55] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 201
+[15-10-2015 04:37:38] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-10-2015 04:37:38] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 200
+[15-10-2015 04:37:38] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/payments/payment
+[15-10-2015 04:37:39] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 201
+[15-10-2015 04:37:54] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-10-2015 04:37:55] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 200
+[15-10-2015 04:37:55] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/payments/payment
+[15-10-2015 04:37:55] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 201
+[15-10-2015 04:38:21] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[15-10-2015 04:38:21] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 200
+[15-10-2015 04:38:21] PayPal\Core\PayPalHttpConnection: INFO	: POST https://api.sandbox.paypal.com/v1/payments/payment
+[15-10-2015 04:38:21] PayPal\Core\PayPalHttpConnection: INFO	: Response Status 	: 201

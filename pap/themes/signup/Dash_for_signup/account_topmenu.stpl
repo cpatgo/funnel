@@ -1,0 +1,6 @@
+			<!-- account_topmenu  -->
+			<ul class="c1_nav">
+				<li><a href="{$baseUrl}/affiliates/">##Home##</a></li>
+				<li><a href="{$baseUrl}/affiliates/signup.php#SignupForm">##Sign up##</a></li>
+				<li><a href="{$baseUrl}/affiliates/signup.php#ContactUs">##Contact us##</a></li>
+			</ul>

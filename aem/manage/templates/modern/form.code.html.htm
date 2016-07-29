@@ -1,0 +1,104 @@
+<form method="post" action="{$site.p_link}/surround.php">
+
+<table>
+	<tr>
+		<td>{"Email:"|alang}</td>
+		<td><input name="email" value="" type="text" /></td>
+	</tr>
+
+
+{if $form.ask4fname || $form.require_name}
+	<tr>
+		<td>{"First Name:"|alang}</td>
+		<td><input name="first_name" value="" type="text" /></td>
+	</tr>
+{/if}
+
+{if $form.ask4lname || $form.require_name}
+	<tr>
+		<td>{"Last Name:"|alang}</td>
+		<td><input name="last_name" value="" type="text" /></td>
+	</tr>
+{/if}
+
+{if $form.type != "unsubscribe"}
+
+	{if $form.fieldsarray|@count > 0}
+
+		{foreach from=$form.fieldsarray item=field}
+
+			{if $field.type == 6}
+	{adesk_field_html field=$field}
+			{else}
+	<tr>
+		<td>{$field.title|adesk_field_title:$field.type}</td>
+		<td>{adesk_field_html field=$field nobubbles=1}</td>
+	</tr>
+			{/if}
+
+		{/foreach}
+
+	{else}
+
+		<input type="hidden" name="field[]" />
+
+	{/if}
+
+{/if}
+
+{if $site.gd and $form.captcha}
+	<tr>
+		<td valign="top">{"Verify"|alang}</td>
+		<td>
+			<img border="1" align="middle" src="{$site.p_link}/awebdesk/scripts/imgrand.php" /><br />
+			<input type="text" name="imgverify" id="imgverify" />
+			<div style="font-size:10px; color:#999999;">{"Enter the text as it appears on the image"|alang}</div>
+		</td>
+	</tr>
+{/if}
+
+{if $form.allowselection}
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			{"Select Lists:"|alang}<br />
+{/if}
+
+	{foreach from=$form.lists item=l}
+		{if $form.allowselection}
+			<label {*if $l.descript}title="{$l.descript}"{/if*}><input type="checkbox" name="nlbox[]" value="{$l.id}" checked="checked" />{$l.name}</label><br />
+		{else}
+			<input type="hidden" name="nlbox[]" value="{$l.id}" />
+		{/if}
+	{/foreach}
+
+	{if $form.allowselection}
+		</td>
+	</tr>
+{/if}
+
+{if $form.type == "both"}
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<label><input type="radio" name="funcml" value="add" checked="checked" />{"Subscribe"|alang}</label><br />
+			<label><input type="radio" name="funcml" value="unsub2" />{"Unsubscribe"|alang}</label>
+		</td>
+	</tr>
+{else}
+<input type="hidden" name="funcml" value="{if $form.type == "subscribe"}add{else}unsub2{/if}" />
+{/if}
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input type="hidden" name="p" value="{$form.id}" />
+		<input type="hidden" name="_charset" value="{'utf-8'|i18n}" />
+		<input type="submit" value="{'Submit'|alang}" />
+
+		{if $site.brand_links}<div style="font-size:10px; margin-top:10px; color:#999999;"><a href="http://www.awebdesk.com/" title="email marketing" style="color:#666666;">{$site.acpow}</a> by AwebDesk</div>{/if}
+
+		</td>
+	</tr>
+</table></div>
+
+</form>

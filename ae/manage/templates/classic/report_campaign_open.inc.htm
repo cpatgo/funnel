@@ -1,0 +1,64 @@
+<div id="open" class="adesk_hidden">
+  <div class="startup_box_container">
+	<div class="startup_box_container_inner">
+	  <table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td style="font-size:19px;"><span id="open_opens_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Total Opens"|alang} <span id="open_opens_p" style="color:#999999; display: none;">(0.00%)</span></td>
+		  <td width="35">&nbsp;</td>
+		  <td style="font-size:19px;"><span id="open_uniqueopens_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Unique Opens"|alang} <span id="open_uniqueopens_p" style="color:#999999;">(0.00%)</span> </td>
+		  <td width="35">&nbsp;</td>
+		  <td style="font-size:19px;"><span id="open_unopens_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Un-Opened"|alang} <span id="open_unopens_p" style="color:#999999;">(0.00%)</span></td>
+		</tr>
+	  </table>
+	</div>
+  </div>
+  <br />
+
+  <form action="desk.php?action=report_campaign" method="GET" onsubmit="open_list_search(); return false">
+	{if isset($smarty.get.print) and $smarty.get.print == 1} <div style="display:none"> {/if}
+	  <table cellspacing="0" cellpadding="0" width="100%">
+		<tr class="adesk_table_header_options">
+		  <td>
+			{literal} <select name="opened" id="open_opened" size="1" onchange="if (this.value == 'unopened') { report_campaign_list_mode = 'unopen'; adesk_ui_anchor_set(report_campaign_list_anchor()); }"> {/literal}
+			  <option value="opened" selected>{"Opened"|alang}</option>
+			  <option value="unopened">{"Unopened"|alang}</option>
+			</select>
+		  </td>
+		  <td align="right">
+			<div>
+			  <input type="text" name="qsearch" id="open_search" />
+			  <input type="button" value='{"Search"|alang}' onclick="open_list_search()" />
+			  <input type="button" value='{"Clear"|alang}' id="open_clear" style="display:none" onclick="open_list_clear()" />
+			</div>
+		  </td>
+		</tr>
+	  </table>
+	  {if isset($smarty.get.print) and $smarty.get.print == 1} </div> {/if}
+	<table width="100%" border="0" cellspacing="0" cellpadding="1">
+	  <thead id="open_head">
+		<tr class="adesk_table_header">
+		  <td>{adesk_headercol action="open" idprefix="open_list_sorter" id="01" label="Email"|alang}</td>
+		  <td>{adesk_headercol action="open" idprefix="open_list_sorter" id="02" label="Date"|alang}</td>
+		  <td>{adesk_headercol action="open" idprefix="open_list_sorter" id="03" label="# Times"|alang}</td>
+		</tr>
+	  </thead>
+	  <tbody id="open_table">
+	  </tbody>
+	</table>
+	<div id="open_noresults" class="adesk_hidden">
+	  <div align="center">{"Nothing found."|alang}</div>
+	</div>
+	<div style="float:right">
+	  {include file="pagination.js.tpl.htm" paginator=$paginator_open tabelize="open_tabelize" paginate="open_paginate"}
+	</div>
+	<div id="open_loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+	  {"Loading. Please wait..."|alang}
+	</div>
+  </form>
+</div>
