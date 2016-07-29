@@ -1,0 +1,1 @@
+ALTER TABLE `qu_g_logs` CHANGE `groupid` `groupid` VARCHAR( 32 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';

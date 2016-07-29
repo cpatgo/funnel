@@ -1,0 +1,106 @@
+<h3 class="m-b">{"Your Account"|alang} <span style="float:right; font-size:12px; color:#999">*{"Try refreshing this page, if some texts are scrambled"|alang}</span></h3>
+
+{if $formSubmitted}
+{if isset($submitResult.status) and !$submitResult.status and isset($submitResult.message)}
+<script>
+adesk_error_show('{$submitResult.message|js}');
+</script>
+{else}
+<script>
+adesk_result_show('{"Changes Saved"|alang|js}');
+</script>
+{/if}
+{/if}
+
+<form name="form1" method="post" action="{$thisURL}" enctype="multipart/form-data">
+
+<div class="h2_wrap">
+<div id="accountInfo" class="h2_content">
+  <table border="0" cellspacing="0" cellpadding="4">
+    <tr valign="top">
+      <td width="200">{"Username"|alang} </td>
+      <td><input name="user00000" type="text" id="user00000" value="{$admin.username}"  readonly  style="width:200px; background:#EEECE8" />
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>{"E-mail"|alang} </td>
+      <td><input name="email" type="text" id="email" value="{$admin.email}" style="width:200px;" /></td>
+    </tr>
+    <tr valign="top">
+      <td>{"First Name"|alang} </td>
+      <td><input name="first_name" type="text" id="first_name" value="{$admin.first_name}" style="width:200px;" />
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>{"Last Name"|alang} </td>
+      <td><input name="last_name" type="text" id="last_name" value="{$admin.last_name}" style="width:200px;" /></td>
+    </tr>
+    <tr valign="top">
+      <td>{"Password"|alang} <br />
+      </td>
+      <td><input name="pass" type="password" id="pass" autocomplete="off" style="width:200px;" />
+        <br />
+        <font size="1">({"Leave blank if you do not want to change"|alang}) </font></td>
+    </tr>
+    <tr valign="top">
+      <td>{"Repeat Password"|alang} <br />
+      </td>
+      <td><input name="pass_r" type="password" id="pass_r" autocomplete="off" style="width:200px;" /></td>
+    </tr>
+</table>
+</div>
+</div>
+
+<div class="h2_wrap">
+<h4 onclick="adesk_dom_toggle_class('accountSettings', 'h2_content', 'h2_content_invis');">{"Your Settings"|alang}</h4>
+<div id="accountSettings" class="h2_content_invis">
+  <table border="0" cellspacing="0" cellpadding="4">
+{if isset($admin.local_zoneid)}
+	<tr>
+	  <td width="200">{"Default Time Zone"|alang}</td>
+	  <td>
+		<select name="local_zoneid">
+		  {foreach from=$zones item=z}
+		  <option value="{$z.zoneid}" {$z.zoneid|adesk_isselected:$admin.local_zoneid}>{$z.zoneid} (GMT {$z.offset_format})</option>
+		  {/foreach}
+		</select>
+	  </td>
+	</tr>
+{else}
+    <tr valign="top">
+      <td>{"Time Offset (Hours)"|alang}</td>
+      <td>
+        <div style="float: right;"><font size="1">{$curDateTime}</font></div>
+        <select name="t_offset_o" id="t_offset_o" style="width:35px;">
+          <option value="+" {if $admin.t_offset_o == '+'}selected{/if}>+</option>
+          <option value="-" {if $admin.t_offset_o == '-'}selected{/if}>-</option>
+        </select> <input name="t_offset" type="text" id="t_offset" value="{$admin.t_offset}" size="2" style="width:20px;" />
+      </td>
+    </tr>
+{/if}
+    <tr valign="top">
+      <td>{"Default Language"|alang}</td>
+      <td>
+        <select name="lang_ch" id="lang" style="width:200px;">
+          {html_options options=$languages selected=$admin.lang}
+        </select>
+      </td>
+    </tr>
+{if $settings_template}{include file=$settings_template}{/if}
+  </table>
+</div>
+</div>
+
+
+{if $additional_template}{include file=$additional_template}{/if}
+
+
+<div class="bottom_nav_options">
+{if !$demoMode}
+	<input class="adesk_button_update" type="submit" name="Update" value="{"Update"|alang}" />
+{else}
+	<span class="demoDisabled">{"Disabled in demo"|alang}</span>
+{/if}
+	<input class="adesk_button_back" type="button" value="{"Back"|alang}" onclick="window.history.go(-1);" />
+</div>
+</form>

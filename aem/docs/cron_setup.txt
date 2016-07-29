@@ -1,0 +1,42 @@
+
+
+  AwebDesk Softwares.  -  Email Marketing Software
+
+--------------------------------------------------------------------------------
+
+
+Setting up a cronjob or scheduled task will ensure that your messages are 
+delivered, prevents stalling, and enables date/time based features (such as
+scheduled campaigns, etc..)
+
+
+--------------------------------------------------------------------------------
+Setup:
+--------------------------------------------------------------------------------
+
+1) 	Set permissions of the cron file to be usable via cron.
+		Chmod manage/cron.php file to 755
+
+
+2) 	Add a cron job (or scheduled task) to run the cron file every 5 minutes
+
+
+
+
+If you are unsure how to set the cronjob to run, it is suggested to contact your
+web host or system administrator.
+You should not set your cron job to run under 5 minutes
+
+
+
+
+
+--------------------------------------------------------------------------------
+Need additional help with setting up a cron job?
+--------------------------------------------------------------------------------
+
+  We suggest to contact your web host/system admin or visit:
+	http://support.awebdesk.com/
+
+--------------------------------------------------------------------------------
+  (c) 2010 AwebDesk Softwares. All rights reserved.  

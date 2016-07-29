@@ -1,0 +1,315 @@
+##### TRANSLATION STRINGS #####
+##### Example:"original string" = "your-translation-here"#####
+
+"%d email(s) sent." = "%d email(s) verzonden."
+"%s thought you may be interested in this mailing." = "%s dacht dat u wellicht geinteresseerd zou zijn in deze mailing."
+"(Optional) Why did you decide to unsubscribe?" = "(Optioneel) Waarom wilt u zich uitschrijven?"
+"(Subscribed %s)" = "(Ingeschreven %s)"
+"A new subscriber has been added to your list." = "Een nieuwe inschrijver is toegevoegd aan uw lijst."
+"A request to reset your password has been received." = "Er is een verzoek ontvangen om uw wachtwoord te resetten."
+"A subscriber has been removed from your list." = "Een inschrijver is verwijderd van uw lijst."
+"Account Lookup" = "Account opzoeken"
+"Additional Information" = "Additionele informatie"
+"All rights reserved." = "Alle rechten voorbehouden."
+"Archive" = "Archief"
+"Cancel" = "Annuleer"
+"Changes Saved." = "Wijzigingen opgeslagen."
+"Clear" = "Legen"
+"Comment from" = "Reactie van"
+"Completed" = "Voltooid"
+"Content" = "Inhoud"
+"Create Date" = "Aanmaak datum"
+"Date/Time" = "Datum/Tijd"
+"Date/Time:" = "Datum/Tijd:"
+"Draft" = "Concept"
+"E-mail address is invalid." = "E-mail adres is ongeldig."
+"Email" = "Email"
+"Email Sent." = "Email verzonden."
+"Error Occurred!" = "Fout opgetreden!"
+"First Name" = "Voornaam"
+"Forward To A Friend" = "Doorsturen naar een vriend"
+"Forward again" = "Opnieuw doorsturen"
+"Forward to a Friend" = "Doorsturen naar een vriend"
+"Forward to more" = "Doorsturen naar meer"
+"Friend Email" = "Vriend email"
+"Friend Name" = "Vriend naam"
+"Friend information" = "Vriend informatie"
+"From email is not valid." = "Van email is niet geldig."
+"From:" = "Van:"
+"From:" = "Van:"
+"HTML Editor" = "HTML editor"
+"Here are the links to modify your accounts:" = "Hier zijn de links om uw accounts aan te passen:"
+"Here is the link to modify your account:" = "Hier is de link om uw account aan te passen:"
+"IP" = "IP"
+"Invalid email address" = "Ongeldig email adres"
+"Invalid link. Please retry or contact the list admin." = "Ongedige link. Probeer het opnieuw of neem contact op met de lijst admin."
+"Last Name" = "Achternaam"
+"List Name" = "Lijstnaam"
+"Loading..." = "Laden..."
+"Login" = "Login"
+"Message" = "Bericht"
+"Message (HTML Version)" = "Bericht (HTML Versie)"
+"Message (Text Version)" = "Bericht (Tekst Versie)"
+"Message Details" = "Bericht details"
+"Message Preview" = "Bericht voorvertoning"
+"Message could not be previewed." = "Bericht kon niet worden voorvertoond."
+"Message type not found." = "Bericht type niet gevonden."
+"Messages" = "Berichten"
+"Modify Account" = "Wijzig account"
+"Name" = "Naam"
+"Next" = "Volgende"
+"OK" = "OK"
+"Paused" = "Gepauzeerd"
+"Personalized Message" = "Gepersonaliseerd bericht"
+"Please also verify yourself by typing the text in the following image into the box below it." = "Verifieer uzelf door de tekst uit de volgende afbeelding over te typen in onderstaande box."
+"Please also verify yourself by typing the text in the following image into the box next to it." = "Verifieer uzelf door de tekst uit de volgende afbeelding over te typen in de box daarnaast."
+"Please ensure all email addresses are valid." = "Zorg ervoor dat alle email adressen geldig zijn."
+"Please fill out at least one Friend email address and name." = "Vul aub minstens een vriend email adres en naam in."
+"Please include a text from the image." = "Vul aub een tekst uit de afbeelding in."
+"Please include a valid email address." = "Vul aub een geldig email adres in."
+"Please include an email address." = "Vul aub een email adres in."
+"Please include your name." = "Vul aub uw naam in."
+"Please type the correct text that appears in the image." = "Typ aub de correcte tekst uit de afbeelding in."
+"Powered by" = "Powered by"
+"Previous" = "Vorige"
+"Public messages from List" = "Publieke berichten van lijst"
+"Public messages from all Lists" = "Publieke berichten van alle lijsten"
+"Scheduled" = "Geagendeerd"
+"Search" = "Zoeken"
+"Select Lists To Unsubscribe From" = "Selecteer lijsten om van uit te schrijven"
+"Select a Campaign from List" = "Selecteer een campagne uit de lijst"
+"Select a List" = "Selecteer een lijst"
+"Send" = "Verzend"
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "Verzend deze email naar een vriend. Vul de onderstaande informatie in en klik op de Verzend knop."
+"Sending" = "Verzenden"
+"Set as Default" = "Instellen als standaard"
+"Stopped" = "Gestopt"
+"Subject" = "Onderwerp"
+"Subject:" = "Onderwerp:"
+"Subscribe" = "Inschrijven"
+"Subscribe To Lists" = "Inschrijven op lijsten"
+"Subscriber ID is invalid." = "Inschrijver ID is ongeldig"
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "Inschrijving kon niet worden verwerkt gezien u geen lijst heeft geselecteerd. Selecteer aub een lijst en probeer het opnieuw."
+"Text Editor" = "Tekst editor"
+"Thank you for confirming your subscription." = "Bedankt voor het bevestigen van uw inschrijving."
+"Thank you for confirming your unsubscription." = "Bedankt voor het bevestigen van uw uischrijving."
+"The following errors occurred:" = "De volgende fouten zijn opgetreden:"
+"The link to modify your account has been sent. Please check your email." = "De link om uw account aan te passen is verzonden. Controleer aub uw email."
+"The sender of this message thought the mailing entitled" = "De verzender van deze email dacht dat de mailing genaamd"
+"The sender of this message thought the mailing entitled '%s' would be of interest to you." = "De verzender van deze email dacht dat de mailing genaamd '%s' interessant voor u zou zijn."
+"The sender thought the mailing entitled '%s' would be of interest to you." = "De verzender dacht dat de mailing genaamd"
+"This e-mail address cannot be added to list." = "Het email adres kan niet worden toegevoegd aan lijst."
+"This e-mail address could not be unsubscribed." = "Het email adres kon niet worden uitgeschreven."
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "Het email adres is verwerkt in het verleden om in te schrijven, echter is deze nooit bevestigd."
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "Dit email adres is verwerkt. Controleer uw email om uw inschrijving te bevestigen."
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "Dit email adres is verwerkt. Controleer uw email om uw uitschrijving te bevestigen."
+"This e-mail address has been unsubscribed from the list." = "Dit email adres is uitgeschreven van de lijst."
+"This e-mail address has subscribed to the list." = "Dit email adres is ingeschreven op de lijst."
+"This e-mail address is already subscribed to this mailing list." = "Dit email adres is reeds ingeschreven op deze mailinglijst."
+"This e-mail address is on the global exclusion list." = "Dit email adres staat op de globale uitsluitingslijst."
+"This e-mail address was not subscribed to the list." = "Dit email adres is niet ingeschreven op de lijst."
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "Deze lijst is momenteel gesloten voor inschrijvers. Deze lijst heeft zijn maximale aantal inschrijvers bereikt."
+"This message is being sent by:" = "Dit bericht wordt verzonden door:"
+"This subscriber does not exist." = "Deze inschrijver bestaat niet."
+"To confirm this request please click on the link below:" = "Om dit verzoek te bevestigen klikt u op onderstaande link:"
+"To email is not valid." = "Aan email is niet geldig."
+"To log into the system visit:" = "Om te loggen in het systeem bezoekt u:"
+"To view the mailing, please visit:" = "Om deze mailing te bekijken bezoekt u:"
+"To:" = "Aan:"
+"Unable to redirect you to this link. Please try again or contact your list admin." = "Kan u niet doorsturen naar deze link. Probeer het opnieuw of neem contact op met uw lijst admin."
+"Unknown response code. Please resubmit the subscription form." = "Obekende responscode. Verstuur aub het inschrijfformulier opnieuw."
+"Unsubscribe" = "Uitschrijven"
+"Update Account" = "Account bijwerken"
+"Update Your Account" = "Werk u account bij"
+"You are not allowed to access this page." = "U heeft geen toegang tot deze pagina."
+"You are unable to be added to this list at this time." = "U kunt momenteel niet toegevoegd worden aan deze lijst."
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "U heeft een lijst geselecteerd welke geen duplicaten toestaat. Deze email staat reeds in het systeem. U kunt wel de bestaande inschrijver bewerken."
+"Your Email" = "Uw email"
+"Your Name" = "Uw naam"
+"Your changes have been saved." = "Uw wijzigingen zijn opgeslagen."
+"Your e-mail address" = "Uw email adres"
+"Your e-mail address (Required)" = "Uw email adres (vereist)"
+"Your password has been reset to:" = "Uw wachtwoord is gereset naar:"
+"Your subscription request for this list could not be processed as you are missing required fields." = "Uw inschrijvingsverzoek voor deze lijst kon niet worden verwerkt omdat u enkele vereiste velden niet heeft ingevuld."
+"Your subscription request for this list could not be processed as you must type your name." = "Uw inschrijvingsverzoek voor deze lijst kon niet worden verwerkt omdat u uw naam nog moet ingeven."
+"[Unknown]" = "[Onbekend]"
+"optional" = "optioneel"
+
+
+
+##### 2009-07-10 #####
+
+"Account" = "Account"
+"Disabled" = "Uitgeschakeld"
+
+
+
+##### 2009-07-29 #####
+
+"Subscribed to lists:" = "Ingeschreven op lijsten:"
+"The image text you typed did not register. Please go back, reload the page, and try again." = "De afbeeldingstekst die u heeft ingegeven is incorrect. Laad de pagina opnieuw en probeer het dan opnieuw."
+"Unsubscribed from lists:" = "Uitgeschreven van lijsten:"
+
+
+
+##### 2009-08-13 #####
+
+"Attachment not found." = "Bijlage niet gevonden."
+"Attachments:" = "Bijlagen:"
+"Content not found." = "Inhoud niet gevonden."
+"Nothing was selected for viewing." = "Er is niets geselecteerd om te tonen."
+"Preview" = "Voorvertoning"
+"Template not found." = "Sjabloon niet gevonden."
+"To:" = "Aan:"
+"Version not found." = "Versie niet gevonden."
+"Your Account" = "Uw Account"
+
+
+
+##### 2009-10-06 #####
+
+"Back" = "Terug"
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "Deze functie werkt niet met test emails. Deze pagina zal correct werken wanneer u de werkelijke campagne verzendt."
+
+
+
+##### 2009-10-14 #####
+
+"Language changed" = "Taal gewijzigd"
+"Rewrite Test" = "Herschrijf test"
+
+
+
+##### 2009-12-21 #####
+
+"Update Subscription Account" = "Bijwerken Lidmaatschap Account"
+
+
+
+##### 2010-01-13 #####
+
+"Abuse Complaint" = "Misbruik klacht"
+"Abuse Complaints Reported:" = "Misbruik klacht gerapporteerd"
+"Abuse Complaints have been removed." = "Misbruik klacht verwijderd."
+"Abuse Ratio has been updated." = "Misbruik ratio is bijgewerkt."
+"Abuse Report Received." = "Misbruik rapport ontvangen."
+"Approve" = "Goedkeuren"
+"Approve Campaign Sending" = "Goedkeuren campagne verzending"
+"Campaign Approved." = "Campagne goedgekeurd."
+"Campaign Declined." = "Campagne afgekeurd."
+"Campaign Name" = "Campagnenaam"
+"Campaign for Approval" = "Campagne ter goedkeuring"
+"Campaign:" = "Campagne:"
+"Change Abuse Ratio" = "Wijzig misbruik ratio"
+"Click here to view and approve the campaign sending:" = "Klik hier om de campagne te bekijken en goed te keuren voor verzending:"
+"Close" = "Sluiten"
+"Current Abuse Ratio:" = "Huidig misbruik ratio:"
+"Decline" = "Afkeuren"
+"Decline & Send Email" = "Afkeuren & e-mail verzenden"
+"E-mail:" = "E-mail:"
+"E-mails Sent:" = "E-mails verzonden:"
+"FROM E-mail:" = "VAN E-mail:"
+"FROM Name:" = "VAN Naam:"
+"Group(s):" = "Groep(en)"
+"Group:" = "Groep:"
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "Als u niet heeft gevraagd om te worden gemailed door deze verzender en/of omtrent deze informatie klik dan de Meldt misbruik knop om een misbruik klacht in te dienen."
+"List(s):" = "Lijst(en):"
+"Message:" = "Bericht:"
+"Modify Campaign:" = "Wijzig campagne:"
+"Modify Message:" = "Wijzig bericht:"
+"Name:" = "Naam:"
+"New Abuse Ratio:" = "Nieuwe misbruik ratio:"
+"Notify Senders" = "Informeer verzenders"
+"Notify user(s) in this group:" = "Informeer gebruiker(s) in deze groep:"
+"Once you have updated your message you can try to send it again." = "Wanneer u uw bericht heeft bijgewerkt kan u proberen deze opnieuw te verzenden."
+"Please check your message you were sending to ensure it meets our sending policy." = "Controleer aub uw bericht om er zeker van te zijn dat deze aan ons verzendbeleid voldoet."
+"Please verify the information below." = "Controleer aub onderstaande informatie."
+"Preset Abuse Ratio:" = "Instelling misbruik ratio:"
+"Private campaign." = "Prive campagne."
+"Private message." = "Prive bericht."
+"Report Abuse" = "Meldt misbruik"
+"Reset Abuse Complaints" = "Reset misbruik klachten"
+"Segment:" = "Segment:"
+"Send From:" = "Verzend Van:"
+"Send Notification to" = "Verzend notificatie aan:"
+"TO E-mail:" = "AAN E-mail:"
+"TO Name:" = "AAN Naam:"
+"The senders information is:" = "De verzender informatie is:"
+"The subscriber information that this sender sent to is:" = "De verzender informatie welke deze verzender heeft verzonden is:"
+"This campaign has already been accepted." = "Deze campagne is reeds goedgekeurd."
+"This campaign has already been declined." = "Deze campagne is reeds afgekeurd."
+"This feature is not available in test campaigns." = "Deze mogelijkheid is niet beschikbaar bij het testen van campagnes."
+"This feature is not supported when testing campaigns." = "Deze mogelijkheid is niet beschikbaar bij het testen van campagnes."
+"Type:" = "Type:"
+"Update" = "Bijwerken"
+"User" = "Gebruiker"
+"User:" = "Gebruiker:"
+"View Abuses" = "Bekijk misbruik"
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender." = "Wij nemen misbruik klachten erg serieus en volgen daarbij de wettelijke bepalingen omtrent email marketing. Met uw feedback kunnen we voorkomen dat er emails worden verzonden door deze afzender. Door het rapporteren van deze email als misbruik zult u verder geen emails meer ontvangen van deze afzender."
+"You have abused the mailing system %s" = "U heeft het mailing systeem %s misbruikt"
+"Your Abuse Report Has Been Received" = "Uw misbruikrapport is ontvangen"
+"Your campaign &quot;%s&quot; could not be approved at this time." = "Uw campagne &quot;%s&quot; kon momenteel niet worden goedgekeurd."
+"Your campaign needs to be updated" = "Uw campagne dient te worden bijgewerkt"
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "Uw e-mail adres is verwijderd van deze lijst. Wij verontschuldigen ons voor enig ongemak."
+
+##### 2010-02-02 #####
+
+"Abuse Reported." = "Klacht gerapporteerd."
+"Campaign Name:" = "Campagnenaam:"
+"Click here to manage this user's abuse settings" = "Klik hier om deze gebruiker's klachten instellingen te beheren"
+"Click here to manage this user's abuse settings:" = "lik hier om deze gebruiker's klachten instellingen te beheren:"
+"User %s has been suspended due to abuse reports" = "Gebruiker %s is tijdelijk geblokkeerd vanwege het aantal ingezonden klachten."
+"With a current limit of" = "Met een limiet van"
+"before being suspended." = "voordat deze tijdelijk wordt geblokkeerd."
+
+
+##### 2010-03-01 #####
+
+"Page %d of %d" = "Pagina %d van %d"
+
+
+
+##### 2010-03-28 #####
+
+"%s per page" = "%s per pagina"
+
+
+
+##### 2010-07-02 #####
+
+"%s Private Messages" = "%s Priv&eacute; berichten"
+"From" = "Van"
+"Private Messages published at %s." = "Priv&eacute; berichten gepubliceerd op %s."
+"Recipients:" = "Ontvangers:"
+"Sent" = "Verzend"
+
+
+
+##### 2010-09-07 #####
+
+"You have a new subscriber to your list." = "U heeft een nieuwe abonnee aan je lijst"
+
+
+
+##### 2010-12-01 #####
+
+"This feature is not supported when testing messages." = "Deze functie wordt niet ondersteund bij het testen van berichten"
+
+
+
+##### 2011-01-11 #####
+
+"Share on Digg" = "Delen op Digg"
+"Share on Facebook" = "Delen op Facebook"
+"Share on Reddit" = "Deel op Reddit"
+"Share on StumbleUpon" = "Delen op StumbleUpon"
+"Share on buzz" = "Share on buzz"
+"Share on del.icio.us" = "Delen op del.icio.us"
+"Share via Twitter" = "Delen via Twitter"
+
+
+
+##### 2011-02-23 #####
+
+"Currently reading" = "momenteel aan het lezen"
+"Social Share" = "sociale Share"

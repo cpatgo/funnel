@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WOW Landing Page Builder</title>
+        <meta name="description" content="Build your landing page on the fly with wow builder">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:500,400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/plugins.css" />
+        <link rel="stylesheet" href="css/owl.carousel.css" />
+        <!--        <link rel="stylesheet" href="http://extenua.com/css/owl.transitions.css" />-->
+        <link rel="stylesheet" href="css/nivo-lightbox.css">
+        <link rel="stylesheet" href="css/themes/default/default.css">
+
+        <!--if active wow.js. active animate.css-->
+        <!--<link rel="stylesheet" href="css/animate.min.css">-->
+
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Color CSS -->
+        <link rel="stylesheet" href="css/colors/blue.css">
+
+        <!-- DARK CSS-->
+        <!--        <link rel="stylesheet" href="css/dark.css">-->
+
+        <link rel="stylesheet" href="css/responsive.css" />
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--       <div class="loader">
+                    <div class="loaded">&nbsp;</div>
+                </div>-->
+
+
+        <div id="page" class="page">
+
+
+            <!--Tweet section-->
+            <section id="tweets" class="tweets">
+                <div class="overlay-img">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 text-center">
+                                <div class="twitter-icon"><i class="fa fa-twitter"></i></div>
+                                <div id="tweet"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+        </div>
+
+
+
+        <!--        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/twitterFetcher_min.js"></script>
+        <script type="text/javascript">
+
+            $(function () {
+
+                twitter();
+
+            })
+
+            function twitter() {
+                var xs_tweet = {
+                    "id": '569000074533814272',
+                    "domId": 'tweet',
+                    "maxTweets": 3,
+                    "enableLinks": true,
+                    "showUser": true,
+                    "showTime": true,
+                    "dateFunction": '',
+                    "showRetweet": false,
+                    "customCallback": handleTweets,
+                    "showInteraction": false
+                };
+
+                function handleTweets(tweets) {
+                    var x = tweets.length;
+                    var n = 0;
+                    var element = document.getElementById('tweet');
+                    var html = '<div class="slides">';
+                    while (n < x) {
+                        html += '<div>' + tweets[n] + '</div>';
+                        n++;
+                    }
+                    html += '</div>';
+                    element.innerHTML = html;
+                    /* Twits attached to owl-carousel */
+                    $("#tweet .slides").owlCarousel({
+                        responsiveClass: true,
+                        autoplay: true,
+                        items: 1,
+                        loop: true,
+                    });
+                }
+
+                twitterFetcher.fetch(xs_tweet);
+            }
+
+        </script>
+    </body>
+</html>

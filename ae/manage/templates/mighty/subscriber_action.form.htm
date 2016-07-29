@@ -1,0 +1,183 @@
+{if !$fromcampaign|default:0}
+<script type="text/javascript">
+  {include file="campaign_new.actions.js"}
+</script>
+{/if}
+
+<div id="form" class="{$displayclass|default:'adesk_hidden'}">
+	<input type="hidden" name="id" id="form_id" value="">
+
+	{if !$fromcampaign|default:0}
+	{"Name:"|alang}<br>
+	<input type="text" name="name" id="form_name"><br><br>
+	{/if}
+
+	{if $fromcampaign|default:0}
+	<input type="hidden" name="type" id="form_type_hidden">
+	<input type="hidden" name="linkid_hidden" id="form_linkid_hidden">
+	{else}
+	{"Select an action type:"|alang}
+	<br />
+	<br />
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td width="40" align="right"><input name="type" type="radio" value="read" onclick="subscriber_action_form_actionclick(this.value)"/></td>
+		<td width="10">&nbsp;</td>
+		<td>{"When subscriber reads/opens a campaign"|alang}</td>
+	  </tr>
+	  <tr>
+		<td align="right"><input name="type" type="radio" value="link" onclick="subscriber_action_form_actionclick(this.value)" /></td>
+		<td>&nbsp;</td>
+		<td>{"When subscriber clicks on a link"|alang}</td>
+	  </tr>
+	  <tr>
+		<td align="right"><input name="type" type="radio" value="social" onclick="subscriber_action_form_actionclick(this.value)" /></td>
+		<td>&nbsp;</td>
+		<td>{"When subscriber socially shares a campaign"|alang}</td>
+	  </tr>
+	  <tr>
+		<td align="right"><input name="type" type="radio" value="forward" onclick="subscriber_action_form_actionclick(this.value)" /></td>
+		<td>&nbsp;</td>
+		<td>{"When subscriber forwards a campaign"|alang}</td>
+	  </tr>	
+	  <tr>
+		<td align="right"><input name="type" type="radio" value="subscribe" onclick="subscriber_action_form_actionclick(this.value)" /></td>
+		<td>&nbsp;</td>
+		<td>{"When subscriber subscribes to a list"|alang}</td>
+	  </tr>
+	  <tr>
+		<td align="right"><input name="type" type="radio" value="unsubscribe" onclick="subscriber_action_form_actionclick(this.value)" /></td>
+		<td>&nbsp;</td>
+		<td>{"When subscriber unsubscribes from a list"|alang}</td>
+	  </tr>
+	</table></div>
+	<br/>
+	{/if}
+	<div id="div_dropdowns">
+	  <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td width="25">&nbsp;</td>
+		  <td><span id="span_listlabel">{"List"|alang}</span></td>
+		  <td width="20">&nbsp;</td>
+		  <td><span id="span_campaignlabel">{"Campaign"|alang}</span></td>
+		  <td width="20">&nbsp;</td>
+		  <td>
+			<span id="span_linklabel" style="display:none">{"Link"|alang}</span>
+			<span id="span_sociallabel" style="display:none">{"Social Media"|alang}</span>
+		  </td>
+		</tr>
+		<tr>
+		  <td>&nbsp;</td>
+		  <td>
+			<span id="span_listselect">
+			  <select name="listid" id="form_listid" onchange="subscriber_action_form_loadcampaigns(this.value)">
+				{foreach from=$listsList item=l}
+				<option value="{$l.id}">{$l.name|escape|truncate:50}</option>
+				{/foreach}
+			  </select>
+			</span>
+		  </td>
+		  <td>&nbsp;</td>
+		  <td>
+			<span id="span_campaignselect">
+			  <select name="campaignid" id="form_campaignid" onchange="subscriber_action_form_loadlinks(this.value)">
+				<option value="0">{"Any"|alang}</option>
+			  </select>
+			</span>
+		  </td>
+		  <td>&nbsp;</td>
+		  <td>
+			<span id="span_linkselect" style="display:none">
+			  <select name="linkid" id="form_linkid">
+				<option value="0">{"Any"|alang}</option>
+			  </select>
+			</span>
+			<span id="span_socialselect" style="display:none">
+			  <select name="social" id="form_social">
+				<option value="facebook">{"Facebook"|alang}</option>
+				<option value="twitter">{"Twitter"|alang}</option>
+				<option value="digg">{"Digg"|alang}</option>
+				<option value="delicious">{"del.icio.us"|alang}</option>
+				<option value="greader">{"Google Reader"|alang}</option>
+				<option value="reddit">{"Reddit"|alang}</option>
+				<option value="stumbleupon">{"StumbleUpon"|alang}</option>
+			  </select>
+			</span>
+		  </td>
+		</tr>
+	  </table></div>
+	</div>
+	<p>{"What should happen when this action takes place?"|alang} </p>
+	<div id="actionClonerDiv">
+	  <div class="action_box">
+		<select name="linkaction[]" onchange="campaign_action_changed(this.parentNode, true);" style="width:150px;">
+		  <option value="subscribe" selected="selected">{"Subscribe to list"|alang}</option>
+		  <option value="unsubscribe">{"Unsubscribe from list"|alang}</option>
+		  <option value="send">{"Send campaign"|alang}</option>
+		  <option value="update">{"Update subscriber info"|alang}</option>
+		  <!--<option value="_other">other options???</option>-->
+		</select>
+		<select name="linkvalue1[]" size="1" onchange="campaign_action_changed(this.parentNode);"  style="width:200px;">
+		  {foreach from=$listsList item=p}
+		  <option value="{$p.id}">{$p.name|truncate:50}</option>
+		  {/foreach}
+		</select>
+		<select name="linkvalue2[]" size="1" onchange="campaign_action_changed(this.parentNode);"  style="width:200px;">
+		  <optgroup label="{'Mailings'|alang}">
+			{foreach from=$campaigns item=c}
+			{if $c.type != 'responder' and $c.type != 'reminder'}
+			<option value="{$c.id}">{$c.name}</option>
+			{/if}
+			{/foreach}
+		  </optgroup>
+		  <optgroup label="{'AutoResponders'|alang}">
+			{foreach from=$campaigns item=c}
+			{if $c.type == 'responder'}
+			<option value="{$c.id}">{$c.name}</option>
+			{/if}
+			{/foreach}
+		  </optgroup>
+		  <optgroup label="{'Subscriber Date Based'|alang}">
+			{foreach from=$campaigns item=c}
+			{if $c.type == 'reminder'}
+			<option value="{$c.id}">{$c.name}</option>
+			{/if}
+			{/foreach}
+		  </optgroup>
+		</select>
+		<select name="linkvalue3[]" size="1" onchange="campaign_action_changed(this.parentNode);" style="width:200px;">
+		  <option value="first_name">{"First Name"|alang}</option>
+		  <option value="last_name">{"Last Name"|alang}</option>
+		  {foreach from=$fields item=f}
+		  <option value="{$f.id}">{$f.title}</option>
+		  {/foreach}
+		</select>
+		<input name="linkvalue4[]" type="text" value="" size="20" style="width:330px;" />
+		<a href="#" onclick="if ($A($('actionClonerDiv').getElementsByTagName('div')).length > 1) remove_element(this.parentNode); return false"><img src="images/selection_delete-16-16.png" width="16" height="16" border="0" align="absmiddle" /></a>
+	  </div>
+	</div>
+
+	<div style=" margin-top:10px; margin-bottom:10px;">
+	  <a href="#" onclick="campaign_link_action_new();return false;" style="display:block; background:url(images/add2-16-16.png); background-repeat:no-repeat; background-position:left; padding-left:20px; padding-top:2px; padding-bottom:2px;">{"Add additional action"|alang}</a>
+	</div>
+
+	<input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="subscriber_action_form_save(subscriber_action_form_id)" />
+	<input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="subscriber_action_form_back()" />
+
+	<div id="subscriber_action_deleteall" style="margin-top: 10px; margin-bottom: 10px; display:none">
+	  {if $fromcampaign|default:0}
+	  <a href="#" onclick="campaign_actions_deleteall(subscriber_action_form_id); return false" style="display:block; background:url(images/selection_delete-16-16.png); background-repeat:no-repeat; background-position:left; padding-left:20px; padding-top:2px; padding-bottom:2px;">
+		{"Delete all actions associated with this link click or read"|alang}
+	  </a>
+	  {/if}
+	</div>
+</div>
+
+<script type="text/javascript">
+  {literal}
+  campaign_action_init();
+  window.setTimeout(function() {
+	  subscriber_action_form_loadcampaigns($("form_listid").value);
+	  }, 100);
+{/literal}
+</script>

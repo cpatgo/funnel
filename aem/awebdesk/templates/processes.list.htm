@@ -1,0 +1,69 @@
+<div id="list" class="adesk_hidden">
+  <form action="desk.php?action=processes" method="GET" onsubmit="processes_list_search(); return false">
+   <div class=" table-responsive"> <table cellspacing="0" cellpadding="0" width="100%" class="table table-striped m-b-none dataTable">
+      <tr class="adesk_table_header_options">
+        <td>
+          <select name="action" id="JSActionManager" size="1" onchange="processes_list_search()">
+            <option value="">{"Process Filter..."|alang}</option>
+            {html_options options=$actions}
+          </select>
+          <select name="status" id="JSStatusManager" size="1" onchange="processes_list_search()">
+            <option value="active">{"Running"|alang}</option>
+            <option value="stall">{"Stalled"|alang}</option>
+            <option value="paused">{"Paused"|alang}</option>
+            <option value="done">{"Completed"|alang}</option>
+            <option value="">{"All Statuses"|alang}</option>
+          </select>
+        </td>
+        <td align="right">
+          <div>
+            <input type="text" name="qsearch" id="list_search" />
+            <input type="button" value='{"Search"|alang}' onclick="processes_list_search()" />
+            <input type="button" value='{"Clear"|alang}' id="list_clear" style="display:none" onclick="processes_list_clear()" />
+            &nbsp;<a href="#search" style="display:inline;font-size:10px">{"Advanced Search"|alang}</a>
+          </div>
+        </td>
+      </tr>
+    </table></div>
+   <div class=" table-responsive"> <table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable">
+      <thead id="list_head">
+        <tr class="adesk_table_header">
+          <td align="center" width="20">
+            <input id="acSelectAllCheckbox" type="checkbox" value="multi[]" onclick="adesk_form_check_selection_all(this, $('selectXPageAllBox'))" />
+          </td>
+          <td width="50">{"Options"|alang}</td>
+          <td>{adesk_headercol action="processes" id="01" label="Process Name"|alang}</td>
+          <td width="150">{adesk_headercol action="processes" id="02" label="Last Update"|alang}</td>
+          <td width="100">{"Progress"|alang}</td>
+        </tr>
+      </thead>
+      <tbody id="list_table">
+      </tbody>
+    </table></div>
+    <div id="list_noresults" class="adesk_hidden">
+      <div align="center">{"Nothing found."|alang}</div>
+    </div>
+    <div style="float:right">
+      {include file="pagination.js.tpl.htm" tabelize="processes_list_tabelize" paginate="processes_list_paginate"}
+    </div>
+    <div id="loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+      {"Loading. Please wait..."|alang}
+    </div>
+    <span id="selectXPageAllBox" class="adesk_hidden">
+      <span class="adesk_hidden">{"All Processes are now selected."|alang}</span>
+      <span class="adesk_hidden">{"All Processes on this page are now selected."|alang}</span>
+      <a class="adesk_hidden" href="#" onclick="return adesk_form_check_selection_xpage(this.parentNode);">{"Click here to select all %s items."|alang:'<span></span>'}</a>
+    </span>
+  </form>
+
+  <br />
+  {*if adesk_admin_ismain()}
+  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
+  {/if*}
+  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
+  <br />
+  <div style="margin: 10px 0; padding: 10px 0; border-top: 1px solid #ccc;">
+    <input  id="list_spawn" type="checkbox" value="1" onclick="processes_list_spawn_toggle(this.checked);" {if $spawn}checked="checked"{/if} />
+    <label for="list_spawn">{"Re-queue stalled processes automatically"|alang}</label>
+  </div>
+</div>

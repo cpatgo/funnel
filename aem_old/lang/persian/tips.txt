@@ -1,0 +1,39 @@
+﻿#########################################################################
+
+# WHEN ADDING A STRING TO THIS FILE, ADD IT TO OTHER LANGUAGES AS WELL! #
+
+#########################################################################
+
+
+
+"Don't wait until users mark your email as spam - place the unsubscribe option at the beginning of your emails too. Be sure to make the unsubscribing process as obvious and easy as possible." = "آیا صبر کنید تا کاربران علامت ایمیل شما به عنوان اسپم - محل گزینه لغو اشتراک در آغاز از ایمیل های خود را بیش از حد. مطمئن باشید که به روند فسخ اشتراک عنوان واضح و آسان که ممکن است."
+
+"Make it easy for people to share some information from your newsletter with their friends and colleagues by inserting the link to share and a call to action in your newsletter." = "آن را آسان برای مردم برای به اشتراک گذاشتن برخی از اطلاعات از خبرنامه خود را با دوستان و همکاران خود را با قرار دادن لینک به اشتراک گذاری و فراخوانی برای اقدام در خبرنامه شما."
+
+"You should make every message clear to the recipient. Make your reader confident that he received a letter from a responsible sender." = "شما باید هر پیام روشن به دریافت کننده را . را خواننده خود را با اعتماد به نفس است که او نامه ای از یک فرستنده مسئول دریافت کرد."
+
+"To improve the number of response to your newsletters, you can start split testing your email sales with measurable scientific methodology. You can evaluate the effectiveness of the mailings with number of opens and clicks." = "به منظور بهبود تعداد پاسخ به خبرنامه شما ، شما می توانید تقسیم شروع به تست فروش ایمیل خود را با روش علمی قابل اندازه گیری است . شما می توانید اثر از نامههای پستی با تعداد باز می شود و کلیک ها توجه کنید."
+
+"If the user confirms their subscription, you should send them a welcome email. It helps to establish a relationship and also confirms that you have received their subscription. It also helps show that you appreciate their interest in your products and/or services." = "اگر کاربر اشتراک خود را تایید ، شما باید آنها را به یک ایمیل خوش آمد ارسال کنید. این کمک می کند برای ایجاد یک رابطه و همچنین موید آن است که شما اشتراک خود را دریافت کرده اند . این نشان می دهد که شما علاقه خود را در محصولات و / یا خدمات شما قدردانی می کند."
+
+"Always send a confirmation email to validate address accuracy. This is the essential rule of permission email marketing. Send a message that repeats the subscriber's opt-in data to be sure you get the right e-mail address in your database." = "همیشه یک ایمیل تایید به اعتبار دقت آدرس ارسال کنید. این قانون اساسی اجازه بازاریابی ایمیل است . ارسال یک پیام که انتخاب کردن در داده های مشترک را تکرار کنید تا مطمئن شوید که آدرس ایمیل درست در بانک اطلاعاتی شما."
+
+"If you have a list of email addresses you haven't send messages for a while you need to send them a Re-Introduction email first. Remind them how you've got their address or how they've bought something from you. Attract their attention so not to be marked as 'spam'." = "اگر شما یک لیست از آدرس های ایمیل شما پیام برای در حالی که شما باید آنها را به یک ایمیل پاسخ ، مقدمه ارسال اولین ارسال کنید. به آنها یادآوری کنید که چگونه آدرس خود را به شما داریم و یا چگونه آنها چیزی را از شما خریداری کرده اید . جلب توجه خود را به طوری است که باید به عنوان"اسپم"مشخص شده اند."
+
+"Tradeshows and special networking events give you a great chance to enlarge your emails database. Tell people about special offers you have and benefits they can get after signing up. They can subscribe immediately using a computer or mobile device you setup." = "نمایشگاه ها و رویدادهای شبکه های خاص شما یک شانس عالی برای بزرگ پایگاه داده ایمیل های خود را به من بدهید. مردم در مورد پیشنهادات ویژه شما و مزایای آنها می توانند پس از ثبت نام می کنید بگویید . آنها می توانند با استفاده از یک کامپیوتر و یا دستگاه تلفن همراه شما نصب فورا مشترک ."
+
+"People usually scan their e-mails in seconds. You should write your message with clear content, clickable links and the message should be attractive enough to make people click the links." = "مردم معمولا در ثانیه اسکن خود را به ایمیل. شما باید پیام خود را با محتوای روشن، لینک قابل کلیک و پیام باید به اندازه کافی جذاب به مردم را به کلیک بر روی لینک می شود ارسال ."
+
+"Write naturally, be clear when explaining the subject. To persuade people to do something (to click the link or to accept your offer), you should know what problems your readers want to solve and describe what your offer is, why they should use it, how it they will be able to use it and who exactly will benefit from the offer." = "ارسال به طور طبیعی ، روشن شود هنگام توضیح این موضوع است. برای ترغیب افراد به انجام کاری ( به کلیک بر روی لینک و یا به قبول پیشنهاد خود ) ، شما باید بدانید که چه مشکلات خوانندگان شما می خواهند به حل و توصیف آنچه پیشنهاد خود است ، به همین دلیل آنها باید از آن استفاده کنید ، چگونه آن را به آنها قادر خواهند بود به استفاده از آن و که دقیقا از این پیشنهاد بهره مند شوند."
+
+"As your customers have different email clients, your message will be displayed differently. Users also have different computer preferences. It's important to optimize email rendering so that clients could see your message correctly.  Use the Inbox Preview Tool to help with this." = "همانطور که مشتریان شما مشتریان ایمیل های مختلف ، پیام شما متفاوت نمایش داده می شود . کاربران همچنین تنظیمات کامپیوتر های مختلف داشته باشد. این مهم است برای بهینه سازی رندر ایمیل به طوری که مشتریان می توانند پیام خود را به درستی ببینید . استفاده از صندوق ورودی پیش نمایش ابزار برای کمک به این ."
+
+"You should design an email so that it will fit in the viewing area of most email clients. A width of 650 pixels will fit in most email client windows." = "شما باید یک ایمیل به طراحی به طوری که آن را در منطقه مشاهده بسیاری از برنامه های ایمیل جا داد. عرض 650 پیکسل در بسیاری از پنجره ها نرم افزار ایمیل جا داد."
+
+"JavaScript, ActiveX, Flash, and videos usually don't work in HTML emails. Even if you send them your reader most likely won't be able to see them. Most email programs block it for safety." = "جاوا اسکریپت، اکتیو ایکس، فلش ، ها و فیلم ها معمولا در ایمیل های HTML کار نمی کند. حتی اگر شما آنها را به خواننده خود را ارسال نمایید به احتمال زیاد قادر نخواهد بود به آنها مراجعه کنید . اکثر برنامه های ایمیل آن را برای ایمنی را مسدود کند."
+
+"The best way to include a video in your email is an animated GIF. But if you need sound or video of better quality you should place a link from your email to the video." = "بهترین راه برای شامل یک ویدیو را در ایمیل خودGIF متحرک است . اما اگر شما نیاز به صدا یا ویدئو با کیفیت بهتر به شما باید یک لینک از ایمیل خود را به این ویدئو قرار دهید."
+
+"You can use web analytics to track the page views of the subscribers. It gives you valuable information about your visitors' habits. You can use these facts to develop more relevant email campaigns and landing pages in the future." = "شما می توانید تجزیه و تحلیل وب برای ردیابی بازدید از مشترکان استفاده کنید. این به شما می دهد اطلاعات ارزشمندی در مورد عادات شما بازدید کننده ' . شما می توانید این حقایق به توسعه کمپین های ایمیل و ارتباط بیشتری صفحات فرود در آینده استفاده کنید."
+
+"By dividing your subscribers into groups with distinct needs you will get higher response rates to your letters. You will also lose fewer subscribers, if your mailings are relevant." = "با تقسیم مشترکان خود را به دو گروه با نیازهای متمایز می خواهد نرخ پاسخ بالاتر به نامه های خود را دریافت کنید . همچنین شما می خواهد از دست دادن مشترکان کمتر ، اگر نامههای پستی شما مربوط می شود."

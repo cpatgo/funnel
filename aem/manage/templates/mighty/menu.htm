@@ -1,0 +1,52 @@
+ {if !$is_campaign_new}
+
+ 
+    
+
+ <li><a href="desk.php"><i class="fa fa-dashboard fa-lg"></i><span>{"Dashboard"|alang}</a></span></span></li>
+
+
+	{if $admin.pg_subscriber_add || $admin.pg_subscriber_edit || $admin.pg_subscriber_delete}
+ <li><a href="desk.php?action=subscriber#list-01-0-0"><i class="fa fa-users fa-lg"></i><span> {"Subscribers"|alang}</span></a></li>	{/if}
+
+	{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
+	 <li><a href="desk.php?action=campaign#list-01D-0-0"><i class="fa fa-envelope fa-lg"></i><span>{"Campaigns"|alang}</span></a></li>
+	{/if}
+
+	 {if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete || $admin.pg_subscriber_filters || $admin.pg_subscriber_fields || $admin.pg_subscriber_actions || $admin.pg_list_headers || $admin.pg_list_emailaccount || $admin.pg_list_opt || $admin.pg_list_bounce}
+ <li><a href="desk.php?action=list#list-01-0-0"><i class="fa fa-bars fa-lg"></i><span>{"Lists"|alang}</span></a></li>
+	{/if}
+    
+{if $admin.pg_reports_campaign or  $admin.pg_reports_list or $admin.pg_reports_user or $admin.pg_reports_trend}   
+<li class="dropdown-submenu">
+        <a href="#"><i class="fa   fa-bar-chart-o fa-lg"></i><span>{"Reports"|alang}</span></a>
+        <ul class="dropdown-menu">
+	{if $admin.pg_reports_campaign}
+ <li><a href="desk.php?action=campaign&reports=1#list-01D-0-0"><i class="fa   fa-bar-chart-o fa-sm"></i>&nbsp;<span>{"Campaign Reports"|alang}</span></a></li>
+ {/if}
+	{if $admin.pg_reports_list}
+ <li><a href="desk.php?action=report_list#general-01-0-0"><i class="fa  fa-indent fa-sm"></i>&nbsp;<span>{"List Reports"|alang}</span></a></li>
+	{/if}
+    {if $admin.pg_reports_user}
+	 <li><a href="desk.php?action=report_user#general-01-0-0"><i class="fa   fa-user-md fa-sm"></i>&nbsp;<span>{"User Reports"|alang}</span></a></li>
+	{/if}
+    {if $admin.pg_reports_trend}
+ <li><a href="desk.php?action=report_trend_read#general-01-0-0"><i class="fa   fa-signal fa-sm"></i>&nbsp;<span>{"Trend Reports"|alang}</a></span></li> 
+	{/if}
+ </ul>
+ </li>
+{/if} 
+
+ 
+{else}
+ <a href="desk.php" style="z-index:999;"><i class="fa fa-dashboard fa-lg"></i><span>{"Exit To Dashboard"|alang}</a> 
+	 
+{/if}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 

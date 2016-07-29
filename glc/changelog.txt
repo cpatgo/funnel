@@ -1,0 +1,13 @@
+/*** Major ug Fixs ***/
+
+function/find_board.php - line 24 
+//bug fix - change orger by board_b_id with time
+$q = mysqli_query($GLOBALS["___mysqli_ston"], "select * from board where mode = 1 and board_id = 
+			(select board_b_id from board_break
+			inner join board on board_break.board_b_id = board.board_id and mode = 1
+			where user_id = '$real_par')
+			");
+
+function/functions.php - line 55 
+//free user to paid user
+$cnt=4 to $cnt>=4

@@ -1,0 +1,40 @@
+﻿#########################################################################
+
+# WHEN ADDING A STRING TO THIS FILE, ADD IT TO OTHER LANGUAGES AS WELL! #
+
+#########################################################################
+
+
+
+"Don't wait until users mark your email as spam - place the unsubscribe option at the beginning of your emails too. Be sure to make the unsubscribing process as obvious and easy as possible." = "Nečekejte, až uživatelé označit Váš e-mail jako spam - umístěte odhlášení možnost na začátku e-mailu příliš. Ujistěte se, aby se odhlásit proces jako jasné a jednoduché, jak je to možné."
+
+"Make it easy for people to share some information from your newsletter with their friends and colleagues by inserting the link to share and a call to action in your newsletter." = "Ať je to snadné pro lidi, aby některé informace z vašeho newsletter sdílet se svými přáteli a kolegy vložením odkazu sdílet a výzvu k akci ve svém bulletinu."
+
+"You should make every message clear to the recipient. Make your reader confident that he received a letter from a responsible sender." = "Měli byste se každá zpráva jasně příjemci. Vytvořte si čtenář věří, že obdržel dopis od odpovědného odesílatele."
+
+"To improve the number of response to your newsletters, you can start split testing your email sales with measurable scientific methodology. You can evaluate the effectiveness of the mailings with number of opens and clicks." = "Chcete-li zvýšit počet odpovědí na vaše bulletiny, můžete začít rozdělit testování e-mailové prodeje s měřitelné vědecké metodologie. Můžete vyhodnotit účinnost zásilek s počtem otevře a kliknutí."
+
+"If the user confirms their subscription, you should send them a welcome email. It helps to establish a relationship and also confirms that you have received their subscription. It also helps show that you appreciate their interest in your products and/or services." = "Pokud uživatel potvrdí své předplatné, měli byste jim poslat uvítací e-mail. Pomáhá navázat vztah, a také potvrzuje, že jste obdrželi své předplatné. Pomáhá také ukázat, že si vážíme jejich zájem o vaše výrobky a / nebo služby."
+
+"Always send a confirmation email to validate address accuracy. This is the essential rule of permission email marketing. Send a message that repeats the subscriber's opt-in data to be sure you get the right e-mail address in your database." = "Vždy odeslat potvrzovací e-mail pro ověření přesnosti adresu. To je základní pravidlo svolení e-mailový marketing. Odeslat zprávu opakuje opt-in údajů Účastníka, aby se ujistěte, že máte správné e-mailové adresy v databázi."
+
+"If you have a list of email addresses you haven't send messages for a while you need to send them a Re-Introduction email first. Remind them how you've got their address or how they've bought something from you. Attract their attention so not to be marked as 'spam'." = "Pokud máte seznam e-mailových adres, které jste ani odesílat zprávy na chvíli musíte jim nejprve odeslat Re-Úvod-mail. Připomeňte jim, jak jste se dostal svou adresu, nebo jak si koupil něco od vás. Upoutat jejich pozornost, takže není označen jako 'spam'."
+
+"Tradeshows and special networking events give you a great chance to enlarge your emails database. Tell people about special offers you have and benefits they can get after signing up. They can subscribe immediately using a computer or mobile device you setup." = "Veletrhy a speciální síťové události vám velkou šanci rozšířit své e-maily databázi. Řekněte lidem, o speciálních nabídkách, které máte a výhody, které můžete získat po přihlášení. Mohou se okamžitě přihlásit pomocí počítače nebo mobilního zařízení můžete nastavení."
+
+"People usually scan their e-mails in seconds. You should write your message with clear content, clickable links and the message should be attractive enough to make people click the links." = "Lidé obvykle skenovat své e-maily během několika sekund. Měli byste napsat zprávu s jasným obsahem, klikací odkazy a zpráva by měla být dostatečně atraktivní, aby si lidé klikněte na odkazy."
+
+"Write naturally, be clear when explaining the subject. To persuade people to do something (to click the link or to accept your offer), you should know what problems your readers want to solve and describe what your offer is, why they should use it, how it they will be able to use it and who exactly will benefit from the offer." = "Napište přirozeně, bude jasné, když vysvětluje předmět. Přesvědčit lidi, aby něco (kliknout na odkaz, nebo přijmout vaši nabídku), měli byste vědět, jaké problémy si čtenáři chtějí řešit a popsat, co vaše nabídka je, proč by měli používat, jak to, že budou moci používat a kdo přesně bude těžit z nabídky."
+
+"As your customers have different email clients, your message will be displayed differently. Users also have different computer preferences. It's important to optimize email rendering so that clients could see your message correctly.  Use the Inbox Preview Tool to help with this." = "Jak vaši zákazníci mají různé e-mailové klienty, budou vaše zpráva se zobrazí odlišně. Uživatelé také mají různé počítačové preference. Je to důležité pro optimalizaci e-mailovou vykreslování tak, aby klienti mohli vidět svou zprávu správně. Použijte doručené Náhled nástroj, který vám s tím."
+
+"You should design an email so that it will fit in the viewing area of most email clients. A width of 650 pixels will fit in most email client windows." = "Ty by měly navrhnout e-mail tak, že se vejde do pozorovacího prostoru většině e-mailových klientů. Šířka 650 pixelů se vejde do většiny e-mail klienta se systémem Windows."
+
+"JavaScript, ActiveX, Flash, and videos usually don't work in HTML emails. Even if you send them your reader most likely won't be able to see them. Most email programs block it for safety." = "JavaScript, ActiveX, Flash a videa obvykle nepracují v HTML e-mailů. Dokonce i když jim pošlete své čtenáře s největší pravděpodobností nebude moci vidět. Většina e-mailových programů zablokovat pro bezpečnost."
+
+"The best way to include a video in your email is an animated GIF. But if you need sound or video of better quality you should place a link from your email to the video." = "Nejlepší způsob, jak zahrnout video ve vašem e-mailu je animovaný GIF. Ale pokud budete potřebovat zvuk nebo video lepší kvality byste měli umístit odkaz z vašeho e-mailem na videu."
+
+"You can use web analytics to track the page views of the subscribers. It gives you valuable information about your visitors' habits. You can use these facts to develop more relevant email campaigns and landing pages in the future." = "Můžete použít Web Analytics sledovat zobrazení stránek na předplatitele. To vám dává cenné informace o zvycích svých hostí. Můžete použít tyto skutečnosti se rozvíjet příslušné e-mailové kampaně a vstupní stránky v budoucnosti."
+
+"By dividing your subscribers into groups with distinct needs you will get higher response rates to your letters. You will also lose fewer subscribers, if your mailings are relevant." = "Tím, že rozdělí své účastníky do skupin s odlišnými potřebami získáte vyšší míry odpovědí na vaše dopisy. Budete také ztratit méně účastníků, pokud se vaše zásilky jsou relevantní."
+

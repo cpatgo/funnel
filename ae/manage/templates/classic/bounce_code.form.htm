@@ -1,0 +1,53 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="bounce_code_form_save(bounce_code_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <table border="0" cellspacing="0" cellpadding="5">
+      <tr valign="top">
+        <td>
+          <label id="codeLabel" for="codeField">{"Bounce Code"|alang}</label>
+        </td>
+        <td>
+          <input type="text" name="code" id="codeField" value="" size="50" />
+          {"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code."|help}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <label id="matchLabel" for="matchField">{"Matching String"|alang}</label>
+        </td>
+        <td>
+          <input type="text" name="match" id="matchField" value="" size="50" />
+          {"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')"|help}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <label id="typeLabel" for="typeField">{"Bounce Type"|alang}</label>
+        </td>
+        <td>
+          <select name="type" id="typeField" size="1">
+            <option value="soft" selected="selected">{"Soft"|alang}</option>
+            <option value="hard">{"Hard"|alang}</option>
+          </select>
+          {"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)"|help}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <label id="descriptLabel" for="descriptField">{"Description"|alang}</label>
+        </td>
+        <td>
+          <textarea name="descript" id="descriptField" style="width:415px; height:65px;"></textarea>
+          {"Enter a brief description for this bounce code here."|help}
+        </td>
+      </tr>
+    </table>
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="bounce_code_form_save(bounce_code_form_id)" />
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

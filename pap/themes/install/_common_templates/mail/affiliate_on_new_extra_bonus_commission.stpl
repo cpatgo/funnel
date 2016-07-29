@@ -1,0 +1,7 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear## {$firstname|escape} {$lastname|escape},</span><br/><br/>
+<span style="font-family: Arial;">##you got Extra Bonus commission##</span><br/><br/><font size="4"><strong style="font-family: Arial;">##Commission details##:</strong></font><br/>
+<span style="font-family: Arial;">##Commission for this bonus##: </span><strong style="font-family: Arial;">{$commission|currency}</strong><br/>
+<span style="font-family: Arial;">##Sincerely##,</span><br/><br/>
+<span style="font-family: Arial;">##Your Affiliate manager##</span>
+</font>

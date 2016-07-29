@@ -1,0 +1,15 @@
+# URL Rewrite Support
+
+Options All -Indexes
+
+ErrorDocument 404 /AEM/index.php
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /AEM/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js)$
+RewriteRule . /AEM/index.php [L]
+</IfModule>

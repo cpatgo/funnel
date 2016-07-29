@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  {include file="database.js"}
+</script>
+
+<h1>{"Database Utilities"|alang}</h1>
+
+<div>
+  {include file="message.tpl.htm"}
+  <h3>{"Backup Database"|alang}</h3>
+
+  {"Clicking the button below will prepare a backup of your data and let you save it as a file on your machine. The format of the backup is a series of MySQL statements, suitable to be restored (imported) by a utility such as phpMyAdmin."|alang}
+  <br>
+  <form action="desk.php" method="GET">
+	<input type="hidden" name="action" value="database">
+	<input type="hidden" name="backup" value="1">
+	<input type="submit" value='{"Backup database"|alang}'>
+	<label>
+	  <input type="checkbox" name="gz" value="1" />
+	  {"GZIP"|alang}
+	</label>
+  </form>
+</div>
+{*}
+<div>
+  <h3>{"Restore Database"|alang}</h3>
+
+  {"Browse to a backup file and restore your database using that backup.  WARNING: If you have a large database, restoring through our software may not be sufficient.  You may want to consult with your MySQL administrator about importing the backup through the command line."|alang}
+  <br>
+  <form action="desk.php" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="action" value="database">
+	<input type="file" name="restore">
+	<input type="submit" value='{"Restore database"|alang}'>
+  </form>
+</div>
+{/*}
+<div>
+  <h3>{"Repair Database"|alang}</h3>
+
+  {"If your application is behaving strangely, or you are seeing errors on certain pages, your database may be in need of repair. Click the button below to begin that process."|alang}
+  <br>
+  <input type="button" value='{"Repair database"|alang}' onclick="database_repair()">
+</div>
+
+<div>
+  <h3>{"Optimize Database"|alang}</h3>
+
+  {"If your application is behaving slowly after a long period of usage, your data may need to be optimized. Click the button below to do just that."|alang}
+  <br>
+  <input type="button" value='{"Optimize database"|alang}' onclick="database_optimize()">
+</div>

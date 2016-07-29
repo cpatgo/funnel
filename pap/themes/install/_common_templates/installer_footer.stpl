@@ -1,0 +1,5 @@
+<!-- installer_footer -->
+<div class="cleaner"></div>
+<div class="Footer">
+	<div class="Copyright">&copy; 2004-{$smarty.now|date_format:"%Y"} QualityUnit.com - Post Affiliate Pro version {widget id="VersionFooter" class="Inliner"}<div>
+</div>

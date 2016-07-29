@@ -1,0 +1,16 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear merchant##,</span><br/><br/>
+<span style="font-family: Arial;">##A new extra bonus was recorded at ##{$date}{*Date*} {$time}{*Time*}</span><br/>
+<span style="font-family: Arial;">##The commission was assigned to affiliate with user name## </span>
+<span style="font-weight: bold; color: rgb(51, 0, 255); font-family: Arial;">{$username|escape}</span>
+<span style="font-family: Arial;">.</span><br/><br/><font size="4"><strong style="font-family: Arial;">##Details##:</strong></font><br/>
+<span style="font-family: Arial;">##Commission for affiliate##: </span><strong style="font-family: Arial;">{$commission|currency}</strong><br/>
+
+
+<span style="font-family: Arial;">##Regards,##</span><br/><br/>
+<span style="font-family: Arial;">##Your## {$postAffiliatePro|escape}.</span><br/>
+<br /><br />
+##To disable these notifications, please follow the link below:##
+<br />
+<a href="{$unsubscribeLink}">{$unsubscribeLink}</a>
+</font>

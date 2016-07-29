@@ -1,0 +1,32 @@
+<div id="form" class="adesk_hidden">
+  <div id="form_admin_limitations" style="display:none" class="adesk_help_inline">
+	{'Any limitations or permissions below will apply to all users in the admin group besides user "admin".  User "admin" will not be limited.'|alang}
+  </div>
+  <form method="POST" onsubmit="group_form_save(group_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <table border="0" cellspacing="0" cellpadding="5">
+	  <tr>
+		<td>{"Title"|alang}</td>
+		<td><input type="text" name="title" id="form_title" style="width:99%;"/></td>
+	  </tr>
+	  <tr>
+		<td valign="top">{"Description"|alang}</td>
+		<td><textarea name="descript" id="form_descript" style="width:99%;"></textarea></td>
+	  </tr>
+	  {if isset($group_file)}
+	  {include file=$group_file}
+	  {/if}
+    </table>
+
+    <br />
+    <div>
+	  {if !$demoMode}
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="group_form_save(group_form_id)" />
+	  {else}
+	  <span class="demoDisabled2">{"Disabled in demo"|alang}</span>
+	  {/if}
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

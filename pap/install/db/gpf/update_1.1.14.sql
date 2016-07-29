@@ -1,0 +1,1 @@
+ALTER TABLE `qu_g_filter_conditions` CHANGE `operator` `operator` VARCHAR(6) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;

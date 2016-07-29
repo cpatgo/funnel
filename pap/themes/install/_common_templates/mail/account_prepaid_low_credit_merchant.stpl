@@ -1,0 +1,7 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear## {$accountname|escape},</span><br><br>
+<span style="font-family: Arial;">##Your account prepaid credit is too low, please contact us for increasing. If limit is exhausted your account will be suspended.##</span>
+<br><br>
+<span style="font-family: Arial;">##Sincerely##,</span><br><br>
+<span style="font-family: Arial;">##Your Affiliate Network Manager##</span>
+</font>

@@ -1,0 +1,64 @@
+<script type="text/javascript">
+
+	{literal}
+
+	task_list();
+
+	function task_list() {
+		adesk_ajax_call_cb("awebdeskapi.php", "task.task_select_array_paginator", task_list_cb, 1, "02D", "0", 10, "0");
+	}
+
+	function task_list_cb(xml) {
+		var ary = adesk_dom_read_node(xml);
+		adesk_ui_api_callback();
+
+		// From "12/17/2008 12:11:08"
+		var datetime_today_array = adesk_date_today().format(adesk_js_site["datetimeformat"]).split(" ");
+
+		for (var i = 0; i < ary.rows.length; i++) {
+
+			// Quasi-filter.
+			if (ary.rows[i].title != "" && ary.rows[i].ddate != "" && ary.rows[i].progress != 10) {
+
+				var new_tr = Builder.node("tr", {}, Builder.node( "td", {}, Builder.node("a", {href: "desk.php?action=task#form-" + ary.rows[i].id}, ary.rows[i].title)) );
+
+				// From "12/17/2008 12:11:08"
+				var ddate_array = sql2date(ary.rows[i].ddate).format(adesk_js_site["datetimeformat"]).split(" ");
+
+				date_class = "";
+
+				// If Due Date is today.
+				if (ddate_array[0] == datetime_today_array[0]) {
+					date_class = "task_highlight1";
+				}
+
+				// Older than today.
+				if (ddate_array[0] < datetime_today_array[0]) {
+					date_class = "task_highlight2";
+				}
+
+				if (ary.rows[i].ddate != "") {
+					var date_formatted = sql2date(ary.rows[i].ddate).format("%m/%d/%Y");
+				}
+				else {
+					var date_formatted = "";
+				}
+
+				var date_td = Builder.node("td", {align: "right", className: date_class}, date_formatted);
+
+				new_tr.appendChild(date_td);
+				$("task_list").appendChild(new_tr);
+			}
+		}
+	}
+
+	{/literal}
+
+</script>
+
+<table id="task_list">
+	<tr>
+		<th colspan="2">{"Tasks"|alang}</th>
+	</tr>
+
+</table>

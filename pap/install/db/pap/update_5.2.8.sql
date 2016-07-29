@@ -1,0 +1,1 @@
+DELETE FROM `qu_pap_affiliatescreens` WHERE `title` = '##null##';

@@ -1,0 +1,17 @@
+{adesk_js lib="really/simplehistory.js" base=$site.p_link}
+<script type="text/javascript">
+  {include file="loginsource.js"}
+</script>
+
+{if isset($loginsource_usersettings_header)}
+	{include file="user-settings.header.inc.htm" userpage='loginsource'}
+{else}
+	<h3 class="m-b">{"Login Sources"|alang}</h3>
+{/if}
+
+{include file="loginsource.list.htm"}
+{include file="loginsource.form.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(loginsource_process, true);
+</script>

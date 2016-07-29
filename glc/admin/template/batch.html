@@ -1,0 +1,34 @@
+<div class="ibox float-e-margins" style="z-index:100">
+    <div class="ibox-title">
+        <h5>Batch Payment Transactions</h5><br>
+    </div>
+    <div class="ibox-content">  
+        <table class="table table-striped table-bordered table-hover dataTablesMovement">
+            <caption><h4>Batch Number: <%= data[0].ap_batchnumber%></h4></caption>
+            <thead>
+                <tr>
+                    <th class="text-center">Reference #</th>
+                    <th class="text-center">Username</th>
+                    <th class="text-center">Receiver Email</th>
+                    <th class="text-center">Amount Paid</th>
+                    <th class="text-center">Transaction Status</th>
+                    <th class="text-center">Transaction Code</th>
+                    <th class="text-center">Transaction Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% _.each(data, function(val){ %>
+                <tr class="text-center">
+                    <td><%= val.ap_referencenumber %></td>
+                    <td><%= val.username %></td>
+                    <td><%= val.ap_receiveremail %></td>
+                    <td><%= val.ap_amount %></td>
+                    <td><%= val.ap_returncodedescription %></td>
+                    <td><%= val.ap_returncode %></td>
+                    <td><%= val.ap_transactiondate %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>

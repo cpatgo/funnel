@@ -1,0 +1,329 @@
+##### TRANSLATION STRINGS #####
+
+##### Example: original string = your-translation-here #####
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "( 선택 사항) 다음 연결을 보기 전에 이 메일 연결 과 함께 보내려는 얼마나 많은 이메일을 지정합니다. 당신은 하나의 메일 에 연결되어있는 경우 이 설정은 중요하지 않습니다."
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "(선택 사항) 이 옵션은 자동으로 메시지 의 특정 숫자 후 메일 링 을 일시 중지됩니다 . 이것은 당신의 메일 서버 의 부하를 줄일 수 있습니다. )"
+
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "( 선택 사항) 특정 기간 에 보낼 수있는 이메일의 수의 제한을 지정할 수 있습니다. ( 예 = 만 시간 당 1,000 이메일을 수 있습니다 )"
+
+"Attachments will be disabled." = "첨부 파일은 사용할 수 없게됩니다."
+
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "두 값 은 CSS 값으로 부여해야합니다 ; 100 % 는 600 픽셀 의 편집기 , 또는 600PX 에 허용되는 영역의 100 % 가 될 것입니다."
+
+"Brief Description for you to recognize. Does NOT affect your actual form." = "당신이 인식 을위한 간단한 설명 . 실제 형태 에 영향을주지 않습니다."
+
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "당신이 인식 을위한 간단한 설명 . 실제 개인 태그 에 영향을주지 않습니다."
+
+"Brief Description for you to recognize. Does NOT affect your actual template." = "당신이 인식 을위한 간단한 설명 . 실제 서식 에 영향을주지 않습니다."
+
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl 키 + 클릭 (또는 클릭하고 드래그 ) / 드 선택 항목을 선택합니다 ."
+
+"Enter a brief description for this bounce code here." = "여기 바운스 코드에 대한 간단한 설명을 입력합니다 ."
+
+"Enter the character set that will be used on pages where you wish to put this form." = "이 양식 을 넣어 하고자하는 페이지에 사용되는 문자 집합을 입력합니다."
+
+"Extra users that were not part of the sync will be removed." = "동기화 의 일부가 아닌 별도의 사용자 가 제거됩니다."
+
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "GD 라이브러리는애플리케이션으로부터 이미지를 생성하기 위해 필요하다. 가장 일반적인 ( 유용한 ) 사용은 보안 문자 이미지입니다."
+
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "헤더 형식이어야 합니다 ' HEADER -NAME : 헤더 값 '"
+
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "사용자가 관리자 이외의 모든 사용자에게 버전을 숨기기 ? 이 옵션을 선택하면 버전은 제어판 에 표시되지 않습니다 ."
+
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "읽기 / 오픈 추적 이 켜져있는 경우 , 추적자 의 이미지가 임베디드 되지 않습니다 - 가입자는 정지 영상을 다운로드 하라는 메시지가 표시됩니다."
+
+"If authentication is not required, do not enter a password." = "인증이 필요하지 않은 경우 , 암호를 입력하지 않습니다."
+
+"If authentication is not required, do not enter a username." = "인증이 필요하지 않은 경우 , 사용자 이름을 입력하지 마십시오."
+
+"If selected, the software will disable most functions such as deleting, sending and more." = "선택한 경우 ,소프트웨어는 삭제, 전송 등과 같은 대부분의 기능 을 사용할 수 없게됩니다 ."
+
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "가입자가 텍스트 버전 을 볼 경우 그 메시지 의 모든 추적 링크 를 ​​클릭하면 , 열린 자신의 읽기 / 기록됩니다. \n 계속 HTML 버전 이 열려 , 이미지가 아니라 다운로드 하는 경우 읽기/열 기록됩니다."
+
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "URL 이 사용되는 경우에도 http:// 또는 https://로 시작 한다. 그렇지 않으면, 파일 경로 로 간주 됩니다. 경로 로 시작하는 경우 ' . /' 응용 프로그램 폴더 로 간주 됩니다."
+
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "이 옵션을 선택하면 양식을 채우는 사람이 필드에 입력 한 어떤 값을 가지고 있지 않는 양식 제출 을 진행 할 수 없습니다."
+
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "이 옵션을 선택하면 , 1 시간 시간대 사용 은 일반 오프셋을 GMT로 추가됩니다."
+
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = ". 메일 전송 에이전트 는 양식 5.XX 의 코드를 포함하지 않는 경우 , 그래서이 반송 코드 를 할당 할 수 있습니다 일치해야 문자열을 입력 \ N ( 예 : ' 반환 : 알 수없는 사용자 ' )"
+
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "라이센스 계약은 당신이 당신의 자신의 저작권 을 설정 하는 것을 허용하지 않습니다 , ​​하지만 당신은 공개 / 비 코드 보기로 저작권 invisibe 을 가지고 선택할 수 있습니다 . 저작권 은 실제 코드 에서 제거 되지 않을 수 있습니다."
+
+"List will not be listed on default subscription page." = "목록 은 기본 가입 페이지 에 표시되지 않습니다 ."
+
+"Logs will be kept for 30 days." = "로그는 30 일 동안 보관됩니다 ."
+
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "대부분의 메일 이동제 폼 5.XX 있는코드를 포함 서버가 사람들을 반환 하지 않을 경우 ,이 반송 코드 에 대한 몇 가지 식별자를 입력 할 수 있습니다."
+
+"Note: this overrides the 'day of the month' option" = "참고 :이 옵션을' 달의 날 ' 을 무시"
+
+"Notice: Hold CTRL to select multiple Autoresponders." = "주의 : 복수 의 Autoresponders 를 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+"Notice: Hold CTRL to select multiple destinations." = "주의 : 여러 대상을 선택 하려면 Ctrl 키를 누른 채 선택하십시오 ."
+
+"Notice: Hold CTRL to select multiple items." = "주의 : 여러 항목을 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+"Notice: Hold CTRL to select multiple lists." = "주의 : 여러 개의 목록 을 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+"Notice: Hold CTRL to select multiple statuses." = "주의 : 여러 상태를 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 가입 양식 은 각 선택 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "주의 사항 : 이 작업은 각 선택 목록 에서 수행 할 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 바운스 설정이 각 선택 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 사용자 지정 헤더 가 선택한 각 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 전자 메일 계정을 선택한 각 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 제외 패턴이 선택한 각 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "주의 사항 :이 메시지는 선택한 각 그룹의 구성원 이 될 것이다! 여러 그룹을 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 메시지는 선택한 각 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 개인 은 각각 선택한 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 : 이 송신 필터가 선택한 각 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "주의 사항 :이 템플릿은 각 선택 목록 의 구성원이 될 것입니다! 여러 목록 을 선택하려면 Ctrl 키를 누르고 있습니다."
+
+"Place one email matching pattern per line." = "한 줄에 하나의 이메일 과 일치하는 패턴을 놓습니다."
+
+"Please check if any vital function is listed here." = "모든 중요한 기능이 여기에 나열 되어 있는지 확인하여주십시오 ."
+
+"Separate multiple emails by comma, semicolon or space" = "쉼표 , 세미콜론 또는 공백으로 분리 된 여러 개의 이메일"
+
+"Sessions need to be enabled in order for this application to work." = "세션 이 응용 프로그램 이 작동 하기 위해서는 활성화 될 필요가있다."
+
+"Set * for 'every hour'." = "' 매 시간 '에 대한 * 설정합니다."
+
+"Set * for 'every minute'." = "' 매 순간 '에 대한 * 설정합니다."
+
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "소프트 반송 은 일반적으로 전달 ( 아직) 되지 않은 이메일 ,하지만 문제는 시간 이 나타납니다. 하드 반송 은 대부분 (예 : ' 잘못된 이메일 주소 ' 등) 영구것들"
+
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "일부 스크립트 는 기본 PHP 값 (30 초 ) 보다 낮은 값 으로 설정되어수 시간 내에실행을 완료 하지 않을 수 있습니다."
+
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "구독자 리스트 가입 (들)을 확인 할 수있는 링크가 포함 된 수신 거부 메일 을 받게됩니다."
+
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "Analytics 계정 번호는 UA-xxxxxxx-y와 같은 형식 으로 나타납니다. 끝으로' - y'는 프로필 번호를 의미한다."
+
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "방문자가 필드 위에 놓을 때 이 필드의 내용 은 툴팁 으로 표시됩니다."
+
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "이 필드 (제목) 의 레이블은 필드 위에 , 또는 그것이 측 남아 에 모두 표시 할 수 있습니다."
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "이 기능은 예를 들어, URL 에있는 문서 또는 카테고리 의 제목을 언급 , 더 자세한 설명 표시 공용 URL을 다시 포맷 아파치의 mod_rewrite를 플러그인을 사용합니다."
+
+"This is just a label for your own internal use" = "이것은 당신의 자신의 내부 사용하기 위해 단지 레이블"
+
+"This is the character that separates the fields within the file. Usually this is a comma." = "이것은파일 내의필드를 구분문자 이다. 일반적으로이 쉼표 입니다 ."
+
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "이것은 귀하가 사용하는 내부의 이름입니다. 모든 cron 작업 은 고유 한 식별자를 가질 필요가있다."
+
+"This value is too low, and this server imposed limit cannot be changed." = "이 값 이 너무 낮고, 이 서버 부과 된 제한은 변경 될 수 없다."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "이 값은이 개인 필드 에 대한 자리 표시 자로 사용됩니다. 당신이 ' MYTAG '를 입력하면 , 다음 내용이 필드 의 값으로 대체 할 위치 % MYTAG % 이 있어야합니다."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "현장 방문 의 소스로 계정 이 웹 로그 분석 에 나타납니다. 이것은 일반적 회보 의이름"
+
+"This will turn this Cron Job on or off" = "이것은 또는 해제 이 CRON 작업 을 설정 합니다"
+
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "절약 되면, 시스템은 이미 이없는 경우 . htaccess 파일 에이 내용을 추가 하려고합니다. 파일 에 기록 할 수없는 경우에는 파일 4444 이 점을 넣어 해야합니다"
+
+"User will not have options for lists and will not see lists they are subscribing to." = "사용자 는 목록 에 대한 옵션이 되지 않습니다 그들이 에 가입 하는 목록을 볼 수 없습니다."
+
+"User will receive a single email confirmation that will be for all the lists selected." = "사용자가 선택한 모든목록 에 대한 것 하나 확인 이메일 을 받게됩니다."
+
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "사용자는 opt-in/out 확인 이메일 이 설정 한 각 목록 에 대한 확인 메일을 받게됩니다."
+
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "안전 모드 에서 와 스크립트는 최적의 성능을 위해 서버 구성을 조정할 수 없습니다."
+
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "에 관계없이 사용되는 것을 사용자 또는 목록 의 모든 우편물 의 맨 아래에 포함 할 텍스트 의 선택을 지정할 수 있습니다. 이 기능 을 사용하지 않으려면 비워 둡니다."
+
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "에 관계없이 사용되는 것을 사용자 또는 목록 의 모든 우편물 의 상단에 포함 할 텍스트 의 선택을 지정할 수 있습니다. 이 기능 을 사용하지 않으려면 비워 둡니다."
+
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "당신은 탈출 에 대한 책임이 있습니다 ! 목록을 구성하는 경우에도 , 다음 문자열은 따옴표 로 캡슐화 해야한다."
+
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "서버 는 다음과 같은 제한을 부과 : 최대 파일 업로드 크기는 4444 이고 최대 게시물 크기는 4444 입니다 ."
+
+"Your server is set to allow less memory than this script requires." = "서버 는 이 스크립트가 필요한 것보다 적은 메모리를 허용하도록 설정되어 있습니다."
+
+##### 2009-05-28 #####
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "% REPORTLINK % 당신 은 아는 공유 보고서 링크 의 약어 입니다 ."
+
+##### 2009-07-10 #####
+
+"Notice: Hold CTRL to select multiple formats." = "주의 : 여러 형식 을 선택하려면 Ctrl 키를 누른 채 선택 ."
+
+##### 2009-07-14 #####
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "(선택 사항) 이 옵션은 자동으로 메시지 의 특정 숫자 후 메일 링 을 일시 중지됩니다 . 이것은 당신의 메일 서버 의 부하를 줄일 수 있습니다."
+
+"The label of this field (a title) can be shown both above the field, or on its left side." = "이 필드 (타이틀 ) 의라벨필드 위에 또는 그 좌측에 모두 표시 될 수있다 ."
+
+##### 2009-08-27 #####
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "이 기능은 예를 들어, URL 의 목록 또는 폼의 제목 을 언급 , 더 자세한 설명 표시 공용 URL을 다시 포맷 아파치의 mod_rewrite를 플러그인을 사용합니다."
+
+##### 2009-11-25 #####
+
+"Separate multiple emails by comma" = "쉼표 로 구분 여러 개의 이메일"
+
+##### 2009-12-21 #####
+
+"Begin typing their name and live results will be displayed." = "자신의 이름과 실제 결과 가 표시됩니다 입력하기 시작합니다 ."
+
+##### 2010-03-28 #####
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "이 목록에 보낸 모든 캠페인은 제공된 이메일 주소로 전송됩니다 . 쉼표 로 구분 여러 개의 이메일"
+
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "남용을 보고하는 모든 가입자는 목록에서 제거 되고, 남용 보고서에 기록됩니다."
+
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "당신은 하나의 캠페인 은 하나의 이메일 주소로 여러 번 전송 될 수 있도록 하려면이 옵션을 선택합니다. 이메일이 같은 목록에 여러 번 가입 하면 여러 개의 이메일 만 전송됩니다 ."
+
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "당신은 가입자 가 동일한 이메일 주소로 이 목록에 여러 번 등록 할 수 있도록 하려면이 옵션을 선택합니다."
+
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "검색 친화적 인 URL 을 사용하는 경우 , 이 목록 의 링크 의 일부가 될사람이 읽을 수있는 ID 를 가질 수 있습니다."
+
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "이 옵션을 선택하면 모든 신규 가입자 는 가입 즉시 보낸 마지막 캠페인 의 복사본을 보내드립니다."
+
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "이 옵션을 선택하면 이이 리스트에서 탈퇴 한 후 가 수신 거부 이유를 가입자 묻는 메시지가 표시됩니다 . 가입자는 necesarily 가 취소 할 때 이유를 제시 할 필요가 없습니다 -하지만 이 옵션 들은 정보를 공유하고 싶은 경우 자신의 이유를 제출 하도록 요청합니다."
+
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "이 옵션을 선택하면 가입자 는 이미지 를보고 그들이 가입 하기 위해 표시되는 문자를 입력해야합니다 . 이 작업은 리스트에 가입하는 자동화 된 로봇 이나 자동화 된 소프트웨어 를 방지하는 데 사용됩니다 ."
+
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "당신은 가입자 의 이름으로 캠페인을 개인 경우 - 와 가입자이름을 입력하지 않았다 - 그 캠페인을 보낼 때 자신의 이름으로 이 기본 이름을 사용합니다 ."
+
+"Select the field that has the date which you want to send an email based off of." = "당신 의 기반으로 이메일을 보낼 날짜가 필드를 선택합니다."
+
+"Select the format that you are saving the date as in your subscriber field you have selected." = "당신이 선택한 구독자 분야 로 날짜를 저장하는형식을 선택합니다."
+
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "가입자 가 자신의 구독을 관리하고 과거 캠페인을 볼 수있는 공용 부분 이 있습니다. 이 확인란을 선택하면 이 목록이 공개 부분에 표시되지 않습니다 ."
+
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "이는 공공 아카이브 도 관리 부분 에서 사용된다. 목록은 가입자 의 세트를 그룹화 하는 데 사용됩니다"
+
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "사용자가 구독 할 때 그들은 이름을 입력 하라는 메시지가 표시됩니다. 이 확인란을 선택하면 그들이 이름을 입력하지 않으면 그들이 가입 시키지 않을 것이다"
+
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "가입자가 이 목록 에 등록 할 때마다 시스템 이 받는 사람에게 메일을 보내드립니다 . 쉼표 로 구분 여러 개의 이메일"
+
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "가입자가 이 목록에서 등록 취소 할 때마다 시스템 이 받는 사람에게 메일을 보내드립니다 . 쉼표 로 구분 여러 개의 이메일"
+
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "당신은 날짜와 일치 하는 방법을 선택할 수 있습니다. 당신이 그 와 같은 ' 달 과 날 '을 선택할 것 생일 메일 을 보내려고 하는 경우 연도 를 제외한 모든 일치합니다 ."
+
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "당신은 이메일 전이나 날짜가 일치 할 때 후 보내 도록 선택할 수 있습니다 . 당신이 3 일 자신의 생일 전에 이메일을 보내려면 , 당신이 선택 하고 검색 유형 으로 ' 월, 일 '을 선택 합니다 ​​' - 6 일 '오프셋 (offset) 등 을 . 당신 의 이메일 이 일치하는 정확한 날짜에 보내 원하는 경우에 당신은 떠날 것이다으로 설정 오프셋 '0 일 '"
+
+##### 2010-04-07 #####
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "가입자 를 가져 오기 하는 동안 , 그들은 당신이 설정을 가지고 수있는 인스턴트 의 autoresponders 을 전송됩니다."
+
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "당신이 이 옵션을 선택한 경우에는이 캠페인은 소프트웨어 의 공개 아카이브 에 나열됩니다. 공공 아카이브는 가입자 (및 기타 방문자가 ) 과거 캠페인 을보고 자신의 구독을 관리 할 수있는 소프트웨어 의 공용 부분 의 일부입니다."
+
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "가입자는 공개 측 또는가입 양식 에서 가입 한 사람 과 동일하게 취급됩니다 ; 모든 인스턴트 및 / 또는 지연 의 Autoresponders 인해 시간 에 그들에게 전송됩니다."
+
+"These subscribers will never receive any further AutoResponders setup in the system." = "이 가입자 는 시스템에서 더 Autoresponders를 설치 를 수신 하지 않습니다."
+
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "당신 은 이미 이러한 가입자에게 전송 된 플래그 특정 의 Autoresponders 는 경우 수입 가입자 에 그 중 일부를 받지 해야 할 수 있습니다."
+
+##### 2010-07-02 #####
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "어떤 경우에는 , 특히 Active Directory의 사용자 이름 이 일반적 으로 로그인 하면 서버 가 정상 LDAP 인터페이스를 통해 기대하는 사실 이 아닙니다. 이 필드를 사용 하여 로그인 하는 데 사용할 속성 의 이름입니다. 이러한 경우 의 대부분에서 , 여기에 이동해야합니다값은 ' SAMAccountName을 ' 일 것입니다."
+
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "우리가 진정으로 사용자 로 로그인 할 수 있습니다 전에 어떤 경우에, 특히 Active Directory와 , 우리는 관리자 계정으로 로그인해야합니다. 이 경우에는 여기에 LDAP 서버의 관리 사용자 (예 : CN = ​​관리자 , OU = 사용자 , DC = 도메인, DC = com ) 의 전체 고유 이름을 배치 합니다."
+
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "LDAP 서버 는 우리가 사용하여 로그인 할 것으로 예상속성 . 대부분의 경우, 이 필드는 ( ' 공통 이름 ' 의 줄임말 ) ' cn을 ' 해야한다."
+
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "사용자 로 로그인 할 고유 이름 의 기본 ; 예를 들어, OU = 사용자 , DC = 도메인, DC = com"
+
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "액티브 디렉토리 의 로그인 프로세스 에 필요한 관리자 계정 의 전체 고유 이름입니다. 예 : CN = ​​관리자 , OU = 사용자 , DC = 도메인, DC = com"
+
+"The password for the administrator account, mentioned above." = "관리자 계정 에 대한 암호는 , 위에서 언급 한 ."
+
+"The password of the administrative user mentioned above." = "위에서 언급 한 관리 사용자 의 암호입니다."
+
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "이 선택 으로, 우리는 완전히 형성된 고유 이름 ( CN = ​​사용자 , OU = 사용자, DC = 도메인, DC = com)을 사용하여 로그인 합니다 ; 그것없이 , 우리는 ' 사용자 ' 로 로그인하여 서버 종류 의 물건을 드리겠습니다 ."
+
+##### 2010-09-07 #####
+
+"The location of this software on the web. To change this, run Updater from a new location." = "웹에서이 소프트웨어 의 위치입니다. 이 설정을 변경 하려면 , 새로운 위치에서 실행 업데이터 ."
+
+##### 2010-09-30 #####
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "트위터 에 로그인 한 후 PIN 번호를 복사 한 후 , AwebDesk 가 트위터 계정 을 업데이트 할 수 있음을 확인하는 메시지가 표시됩니다 ."
+
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "다른 트위터 계정 을 업데이트하려면 , 위의 트위터 를 체크 해제하고 저장 한 다음 다시 와서 당신의 정보를 다시 입력합니다."
+
+##### 2010-12-01 #####
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "슈가 CRM 의 관리 섹션 에 로그인 할 수 있는 사용자는 여기에 인증 할 수 있습니다"
+
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "이 상자를 선택하여 , 이전에 과거에 의한 다수의 반송 에 수신 거부 된 모든 전자 메일 주소를 가져올 수 없습니다 ."
+
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "이 상자를 선택하여 , 이미 시스템 에 존재하는 이 가져 오기 프로세스 의 모든 가입자는 수입 과정에서 발견 된 모든 새 가입자 정보 로 업데이트됩니다 . 이 상자를 선택하지 않으면 , 그 가입자는 ( 자신의 가입자 정보 가 업데이트되지 않습니다 ) 가져 오는 동안 건너 뜁니다."
+
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "이 목록 에 보낸 캠페인 은 트위터의 알림 서비스로 전송됩니다 및 캠페인의 웹 복사본을 연결하는 트윗 을 작성합니다."
+
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "링크에 있는TITLE 속성 이있는 경우,소프트웨어는특정 링크에 대한 발견제 TITLE 특성 값을 제공 할 것이다. 당신은 아래 를 변경할 수 있습니다."
+
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "이 옵션을 해제하면 , 당신은 지금 가져가입자 는 자동 응답기 를 수신 하지 않습니다 ; 지금 이나미래 ."
+
+"Recommended for large scale imports" = "대규모 수입 에 추천"
+
+"Recommended for small scale imports" = "작은 규모의 수입 추천"
+
+"Recommended for synchronization with external services/applications" = "외부 서비스 / 응용 프로그램과 동기화를위한 추천"
+
+"The default subject any message begins with when you select this template." = "기본 주제는 모든 메시지가 이 템플릿을 선택하면 시작됩니다."
+
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "이미 이러한 자동 응답기 를 받은수입 가입자 가 표시됩니다 , 그래서 이 그들에게 전송되지 않습니다."
+
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "이것은 당신의 FreshBooks 가 URL 에있는 계정 이름 입니다 . IE : https://ACCOUNT.freshbooks.com . 그냥 계정 이름 이 아닌 URL 을 입력 해주십시오."
+
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "이것은 당신 이 FreshBooks 의 API 페이지에서 제공하는 고유 한 인증 토큰 입니다. FreshBooks API를 | Freshbooks 에서 내 계정 으로 이동합니다."
+
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "이것은 모든 우편물 이 트위터 계정 에 업데이트됩니다 의미 , 모든 목록 을 이 목록에서 트위터 인증을 미러합니다"
+
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "API 키 를 생성하려면 , 설정 으로 이동 한 다음 , 조호 CRM 에 로그인 | CRM을 API 키 | 지금 생성"
+
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "이 옵션을 선택 하는 경우 는 가져 당신이 보낸 마지막 캠페인은 각 가입자에게 전송됩니다."
+
+"You can find your API token from the More | My Settings page in Capsule" = "캡슐 내 설정 페이지 | 당신은 더 에서 API 토큰을 찾을 수 있습니다"
+
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "당신은 세일즈 포스 에 로그인 하고, 당신의 이름 에 여러분의 보안 토큰을 얻을 수 있습니다 | 설정 | ( 내 개인 정보 에서 ) 보안 토큰을 재설정합니다. 그런 다음 보안 토큰을 이메일로 전송됩니다 ."
+
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "귀하의 캡슐 응용 프로그램 이름 , 당신 은 브라우저에서 액세스 할 것이라고URL 에 표시 ; IE : https://APP.capsulecrm.com . 그냥 APP 부분을 포함한다."
+
+"Your Zoho username or email address" = "귀하의 조호 사용자 이름 또는 이메일 주소"
+
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "인증 세부 사항은 이 서버에 저장되지 않습니다. 당신은 그 때마다 다시 입력해야합니다."
+
+"Your unique URL to your SugarCRM installation" = "당신의 슈가 CRM 설치 에 고유 한 URL"
+
+##### 2011-02-23 #####
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "페이스 북 에 로그인 한 후 AwebDesk 가 페이스 북 계정을 업데이트 할 수 있음을 확인하는 메시지가 표시됩니다 ."
+
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "이 목록에 보낸 캠페인 은 자동 게시 캠페인 웹 사본 에 대한 링크와 함께 페이스 북 에 있을 것입니다."
+
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "이 목록에 보낸 캠페인 은 자동 게시 캠페인 웹 사본 에 대한 링크와 함께 트위터에 있을 것입니다."
+
+##### 2011-07-13 #####
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "이 버튼은 모든 주식 템플릿을 다시 가져올 것입니다. 참고 : 이것은 당신이 누락 된 글로벌 주식 템플릿을 가져옵니다 . 이미 일부 주식 템플릿 을 가지고 있지만, 이를 수정 한 경우 는 한 사용자 지정을 덮어 쓰지 않습니다."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "이 값은이 개인 필드 에 대한 자리 표시 자로 사용됩니다. 당신이 %MYTAG% 를 입력하면 , 다음 내용이 필드 의 값으로 대체 할 위치 %MYTAG% 이 있어야합니다. 참고 : 공백을 대시 로 대체 될 것이며, % 문자가 허용되지 않습니다."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "현장 방문 의 소스로 계정 이 웹 로그 분석 에 나타납니다. 이것은 보통 리스트이름"
+
+"You can generate your API token from the User Preferences page in batchbook CRM" = "당신은 batchbook 의 CRM 의 사용자 환경 설정 페이지 에서 API 토큰을 생성 할 수 있습니다"
+
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "귀하의 Batchbook 계정 이름 , 당신 은 브라우저에서 액세스 할 것이라고URL 에 표시 ; IE : https://ACCOUNT.batchbook.com . 그냥 계정 부분을 포함한다."
+
+##### 2011-08-01 #####
+
+"Include your Freshbooks account name" = "당신의 Freshbooks 계정 이름을 포함"
+
+"Recommended for synchronization with external database" = "외부 데이터베이스와의 동기화를위한 추천"

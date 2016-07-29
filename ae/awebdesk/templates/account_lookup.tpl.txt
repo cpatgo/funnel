@@ -1,0 +1,5 @@
+{"A request to reset your password has been received."|alang}
+
+{"To confirm this request please click on the link below:"|alang}
+
+{$site_link}

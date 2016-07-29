@@ -1,0 +1,92 @@
+<h3 class="m-b">{"Server Info"|alang}</h3>
+
+<h3>{"PHP"|alang}</h3>
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('phpinfo_general', 'h2_content_invis', 'h2_content');">{"General Info"|alang}</h4>
+	<div id="phpinfo_general" class="h2_content_invis">
+	{$phpInfo.general}
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('phpinfo_config', 'h2_content_invis', 'h2_content');">{"Configuration"|alang}</h4>
+	<div id="phpinfo_config" class="h2_content_invis">
+	{$phpInfo.configuration}
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('phpinfo_mods', 'h2_content_invis', 'h2_content');">{"Modules"|alang}</h4>
+	<div id="phpinfo_mods" class="h2_content_invis">
+	{$phpInfo.modules}
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('phpinfo_env', 'h2_content_invis', 'h2_content');">{"Environment Vars"|alang}</h4>
+	<div id="phpinfo_env" class="h2_content_invis">
+	{$phpInfo.environment}
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('phpinfo_vars', 'h2_content_invis', 'h2_content');">{"Other Vars"|alang}</h4>
+	<div id="phpinfo_vars" class="h2_content_invis">
+	{$phpInfo.variables}
+	</div>
+</div>
+
+<hr />
+
+<h3>{"MySQL"|alang}</h3>
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('sqlinfo_status', 'h2_content_invis', 'h2_content');">{"Status"|alang}</h4>
+	<div id="sqlinfo_status" class="h2_content_invis">
+		<table border="1">
+			<tr>
+				<th>Variable</th>
+				<th>Value</th>
+			</tr>
+	{foreach from=$sqlInfo.status item=v key=k}
+			<tr>
+				<td>{$k}</td>
+				<td>{$v|escape:htmlall}</td>
+			</tr>
+	{/foreach}
+		</table>
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('sqlinfo_vars', 'h2_content_invis', 'h2_content');">{"Variables"|alang}</h4>
+	<div id="sqlinfo_vars" class="h2_content_invis">
+		<table border="1">
+			<tr>
+				<th>Variable</th>
+				<th>Value</th>
+			</tr>
+	{foreach from=$sqlInfo.variables item=v key=k}
+			<tr>
+				<td>{$k}</td>
+				<td>{$v|escape:htmlall}</td>
+			</tr>
+	{/foreach}
+		</table>
+	</div>
+</div>
+
+
+<div class="h2_wrap">
+	<h4 onclick="adesk_dom_toggle_class('sqlinfo_tables', 'h2_content_invis', 'h2_content');">{"Tables"|alang}</h4>
+	<div id="sqlinfo_tables" class="h2_content_invis">
+	{$sqlInfo.tables}
+	</div>
+</div>
+

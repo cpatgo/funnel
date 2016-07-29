@@ -1,0 +1,100 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="emailaccount_form_save(emailaccount_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <table border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td>{"Email Address"|alang}</td>
+        <td>
+{if $__ishosted}
+          <select name="email" id="emailField" size="1">
+            <option value="subscribe@{$hosted_domain}">subscribe@{$hosted_domain}</option>
+            <option value="unsubscribe@{$hosted_domain}">unsubscribe@{$hosted_domain}</option>
+          </select>
+{else}
+          <input type="text" name="email" id="emailField" value="" size="50" />
+{/if}
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>{"Used in Lists:"|alang}</td>
+        <td>
+          <select name="p" id="parentsList" tabindex="1" size="10" multiple="multiple" style="width:415px; height:65px;">
+{foreach from=$listsList item=p}
+            <option value="{$p.id}">{$p.name|truncate:50}</option>
+{/foreach}
+          </select>
+          {"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists."|help}
+          <div>
+            {"Select:"|alang}
+            <a href="#" onclick="return adesk_form_select_multiple_all($('parentsList'));">{"All"|alang}</a>
+            &middot;
+            <a href="#" onclick="return adesk_form_select_multiple_none($('parentsList'));">{"None"|alang}</a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>{"Action"|alang}</td>
+        <td>
+          <select name="action" id="actionField" size="1">
+            <option value="sub">{"Subscribe"|alang}</option>
+            <option value="unsub">{"Unsubscribe"|alang}</option>
+          </select>
+          <label><input type="checkbox" name="filteruse" id="filteruseField" value="1" onclick="$('accountFilterBox').className = this.checked ? 'adesk_inline' : 'adesk_hidden';" />{"Use Filter"|alang}</label>
+          <div id="accountFilterBox" class="adesk_hidden">
+            <select name="filterfield" id="filterfieldField" size="1">
+              <option value="subject">{"Subject"|alang}</option>
+              <option value="body">{"Body"|alang}</option>
+            </select>
+            <select name="filtercond" id="filtercondField" size="1">
+              <option value="contains">{"Contains"|alang}</option>
+              <option value="notcontains">{"Does Not Contain"|alang}</option>
+              <option value="equals">{"Equals"|alang}</option>
+              <option value="notequals">{"Does Not Equal"|alang}</option>
+            </select>
+            <input type="text" name="filterval" id="filtervalField" value="" size="30" />
+          </div>
+        </td>
+      </tr>
+      <tbody {if $__ishosted}style="display:none;"{/if}>
+      <tr>
+        <td>{"Type"|alang}</td>
+        <td>
+          <select name="type" id="typeField" size="1" onchange="emailaccount_form_toggle_type(this.value);">
+            <option value="pop3">{"POP3 Account"|alang}</option>
+            <option value="pipe">{"Pipe"|alang}</option>
+          </select>
+        </td>
+      </tr>
+      </tbody>
+      <tbody id="typeOptions">
+        <tr>
+          <td>{"Host"|alang}</td>
+          <td><input type="text" name="host" id="hostField" value="" size="50" /></td>
+        </tr>
+        <tr>
+          <td>{"Port"|alang}</td>
+          <td><input type="text" name="port" id="portField" value="" size="8" /></td>
+        </tr>
+        <tr>
+          <td>{"Username"|alang}</td>
+          <td><input type="text" name="user" id="userField" value="" size="50" /></td>
+        </tr>
+        <tr>
+          <td>{"Password"|alang}</td>
+          <td><input type="password" name="pass" id="passField" value="" size="50" /></td>
+        </tr>
+        <tr>
+          <td>{"Number of emails to process at one time"|alang}</td>
+          <td><input name="emails_per_batch" type="text" id="batchField" value="" size="8" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="emailaccount_form_save(emailaccount_form_id)" />
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

@@ -1,0 +1,186 @@
+<script type="text/javascript">
+<!--
+{include file="unsubscribe.js"}
+-->
+</script>
+{* load javascript calendar *}
+{adesk_calendar base=""}
+
+
+{if $unsubscription_message}
+ <div class="row" style="margin-top:20px;">
+      
+      
+        <div class="col-lg-12">  
+	<div class="confirmation_box">
+	 
+<ul><li class="label bg-info" style="font-size:14px;">{$unsubscription_message}</li></ul></div>
+
+ 
+	 </div>
+	</div>
+
+{else}
+
+
+      <div class="row" style="margin-top:20px;">
+      
+      
+        <div class="col-lg-6">  
+      
+          
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Unsubscribe"|plang}</h4>
+            </header>
+            <section style="height:180px" class="panel-body scrollbar scroll-y m-b">
+
+ 
+	{*if $site.general_public*}
+ 
+
+			<form method="post" action="{$_}/surround.php" id="unsubscribe_form" onsubmit="return unsubscribe_validate();">
+
+				<input type="hidden" name="funcml" value="unsubscribe" />
+
+				
+							<p>
+								<label for="email">{"Your e-mail address (Required)"|plang}</label>
+								<input type="text" name="email" id="email" size="30" />
+							</p>
+
+						  <div id="unsubscribe_use_captcha" class="{if $show_captcha}adesk_block{else}adesk_hidden{/if}">
+								<p>{"Please also verify yourself by typing the text in the following image into the box below it."|plang}</p>
+								<br/>
+								{if $site.gd}
+								<img src="{$_}/awebdesk/scripts/imgrand.php?rand={$rand}" /><br/>
+								{/if}
+								<input type="text" name="imgverify" />
+							</div>
+                            
+                            <table width="100%">
+					<tr>
+						<td width="400" valign="top">
+			      <tbody id="custom_fields_table" class="adesk_hidden">
+
+							{foreach from=$custom_fields item=field}
+
+								{if $field.type == 6}
+									{adesk_field_html field=$field}
+								{else}
+						      <tr>
+						        <td width="75">{$field.title|adesk_field_title:$field.type}</td>
+						        <td>{adesk_field_html field=$field}</td>
+						      </tr>
+								{/if}
+
+							{/foreach}
+
+			      </tbody>
+
+				</table>
+                            
+                    </section></section></div>
+                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+{if !$listfilter}
+<div class="col-lg-6"> 
+          <!-- scrollable inbox widget -->
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Select Lists To Unsubscribe From"|plang}</h4>
+            </header>
+            <section style="height:180px" class="panel-body scrollbar scroll-y m-b">
+          
+                            
+						 
+							<div id="parentsListBox">
+	{foreach from=$listsList item=l}
+		{if (!$l.private)}
+										<p>
+											<label>
+												<input type="checkbox" name="nlbox[]" id="unsubscribe_list_{$l.id}" value="{$l.id}" onclick="unsubscribe_list_loadfields()" />
+												{$l.name}
+											</label>
+										</p>
+		{/if}
+	{/foreach}
+							</div>
+                            
+                            </section></section></div>
+                            
+{else}
+	{if is_array($listfilter)}
+		{foreach from=$listfilter item=l}
+							<input type="hidden" name="nlbox[]" value="{$l}" />
+		{/foreach}
+	{else}
+							<input type="hidden" name="nlbox[]" value="{$listfilter}" />
+	{/if}
+{/if}
+				
+
+
+
+
+
+			 <div class="row"><div class="col-lg-12"><div class="col-lg-6">			
+
+
+ 
+					<p><input type="submit" value="{'Unsubscribe'|plang}" class="btn btn-info"/></p>
+				 
+</div></div></div><div>
+			</form>
+
+	 
+
+	{*/if*}
+
+{/if}
+
+{* prompt for a unsubscribe reason *}
+{if $ask4reason}
+<div class="row"><div class="col-lg-12"><div class="col-lg-6">		
+	<hr size="1" width="100%" noshade />
+
+	<form action="{$_}/surround.php" method="post">
+		{"(Optional) Why did you decide to unsubscribe?"|plang}
+		<br />
+		<input type="hidden" name="funcml" value="unsubreason" />
+		{*
+		<input type="hidden" name="action" value="unsubscribe" />
+		<input type="hidden" name="mode" value="{$mode}" />
+		*}
+		<input type="hidden" name="nl" value="{$lists}" />
+		<input type="hidden" name="codes" value="{$codes}" />
+		<input type="hidden" name="p" value="{$p}" />
+		{if isset($smarty.get.c)}
+		<input type="hidden" name="c" value="{$smarty.get.c}"/>
+		{/if}
+		{if isset($smarty.get.m)}
+		<input type="hidden" name="m" value="{$smarty.get.m}"/>
+		{/if}
+		<input type="hidden" name="s" value="{$hash}" />
+		<textarea name="reason"></textarea>
+		<br /><div class="row"><div class="col-lg-12"><div class="col-lg-6" style="margin-top:10px;">
+		<input type="submit" value="{'Send'|plang}"  class="btn btn-info"/></div></div></div>
+	</form>
+</div></div></div>
+{/if}

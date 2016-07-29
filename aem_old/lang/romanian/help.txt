@@ -1,0 +1,360 @@
+﻿##### TRANSLATION STRINGS #####
+
+##### Example: original string = your-translation-here #####
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "( Opțional ) Specificați cât de multe e-mailuri pe care doriți să le trimiteți cu această conexiune e-mail înainte de a privi pentru următoarea conectare . Dacă aveți doar o conexiune e-mail această setare nu contează ."
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "( Opțional ) Această opțiune se va întrerupe automat poștală după un anumit număr de mesaje . Acest lucru ajută la reducerea de încărcare servere de mail . )"
+
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "( Opțional ) Puteți specifica o limită a numărului de e-mailuri pentru a trimite într-o anumită perioadă de timp . ( Exemplu = permite doar 1000 de e-mailuri pe oră )"
+
+"Attachments will be disabled." = "Atașamente vor fi dezactivate ."
+
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "Ambele valori ar trebui să aibă ca valori CSS ; 100% ar fi de 100% din suprafața permis pentru editorul , sau 600px pentru 600 pixeli ."
+
+"Brief Description for you to recognize. Does NOT affect your actual form." = "Scurtă descriere pentru tine să recunoască . Nu afectează formularul de real ."
+
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "Scurtă descriere pentru tine să recunoască . Nu afectează tag-ul dvs. de personalizare real ."
+
+"Brief Description for you to recognize. Does NOT affect your actual template." = "Scurtă descriere pentru tine să recunoască . Nu afectează șablonul actual ."
+
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl + clic ( sau faceți clic și glisați ) pentru a selecta / - DE a selecta elemente ."
+
+"Enter a brief description for this bounce code here." = "Introduceți o scurtă descriere pentru acest cod saritura aici ."
+
+"Enter the character set that will be used on pages where you wish to put this form." = "Introduceți setul de caractere care vor fi utilizate pe paginile unde vă doriți pentru a pune acest formular ."
+
+"Extra users that were not part of the sync will be removed." = "Utilizatorii suplimentare care nu făceau parte din sincronizare vor fi eliminate ."
+
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "GD Library este necesar pentru a genera imagini dinaplicația . Cele mai frecvente ( și util ) utilizare sunt imagini CAPTCHA ."
+
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "Antet trebuie să fie în format' HEADER -NAME : HEADER VALUE'"
+
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "Ascunde versiune pentru toți utilizatorii în afară de admin user ? Dacă va fi selectat , versiunea nu vor fi vizibile în panoul de control ."
+
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "Dacă Citire / Open Tracking este pe , imaginea tracker nu va fi embeded - abonații vor fi în continuare solicita să descărcați imagini ."
+
+"If authentication is not required, do not enter a password." = "În cazul în care nu este necesară autentificarea , nu introduceți o parolă ."
+
+
+"If authentication is not required, do not enter a username." = "În cazul în care nu este necesară autentificarea , nu introduceți un nume de utilizator ."
+
+"If selected, the software will disable most functions such as deleting, sending and more." = "Dacă va fi selectat , software-ul va dezactiva cele mai multe funcții , cum ar fi ștergerea , transmiterea și mai mult ."
+
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "Dacă abonat vede versiunea text , citire sau / deschis va fi inregistrata dacă el fixează orice link-uri pe senile din mesaj . \ NDacă versiune HTML este deschis , citit / deschis va fi inregistrata dacă imaginile sunt descărcate de asemenea ."
+
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "Dacă se utilizează URL-ul , trebuie să înceapă cu http:// sau https:// . În caz contrar , o cale de fișier va fi asumat . În cazul în care o cale începe cu './', Dosarul de aplicare va fi asumat ."
+
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "În cazul în care această opțiune este bifată , persoana care a completat formularul nu va putea continua cu formularul de depunere excepția cazului în care câmpul are o valoare introdusă ."
+
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "Dacă bifați această opțiune , o oră va fi adăugat la GMT normală de compensare fusul orar utilizează ."
+
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = "În cazul în care agenții de transfer de e-mail nu include codul în formă 5.xx , introduceți un șir care ar trebui să fie adaptate astfel încât acest cod Bounce poate fi atribuit \ n ( exemplu :'întors : Unknown utilizator') ."
+
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "Acord de licență nu vă permite să setați propriul drepturi de autor , dar puteți opta pentru a avea invisibe drepturile de autor pentru vizualizare publică non- cod / . Drepturi de autor nu poate fi eliminat din codul actual ."
+
+"List will not be listed on default subscription page." = "Lista nu vor fi listate pe pagina abonament implicit ."
+
+"Logs will be kept for 30 days." = "Bustean vor fi păstrate timp de 30 de zile."
+
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "Cei mai mulți agenți de transfer e-mail includ codul în formă 5.xx În cazul în care server-ul dvs. nu se întoarce pe cei , puteți introduce aici unele identificator pentru acest cod Bounce ."
+
+"Note: this overrides the 'day of the month' option" = "Notă : acest suprascrie' zi a lunii' opțiune"
+
+"Notice: Hold CTRL to select multiple Autoresponders." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe Autoresponders ."
+
+"Notice: Hold CTRL to select multiple destinations." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe destinații ."
+
+"Notice: Hold CTRL to select multiple items." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe elemente ."
+
+"Notice: Hold CTRL to select multiple lists." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: Hold CTRL to select multiple statuses." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe stări ."
+
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest formular de subscriere va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "Observație: Această acțiune va fi efectuată pe fiecare listă selectată ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Această setare saritura va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest antet personalizat va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest cont de e-mail va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest model de excludere va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "Observați : Acest mesaj va fi un membru al fiecărui grup selectat ! Țineți apăsată tasta CTRL pentru a selecta mai multe grup ."
+
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest mesaj va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest personalizare va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest filtru trimiterea va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "Observați : Acest model va fi un membru al fiecărei liste selectate ! Țineți apăsată tasta CTRL pentru a selecta mai multe liste ."
+
+"Place one email matching pattern per line." = "Puneți un e-mail de potrivire model pe linie ."
+
+"Please check if any vital function is listed here." = "Vă rugăm să verificați dacă orice funcție vitală este listat aici ."
+
+"Separate multiple emails by comma, semicolon or space" = "Separati mai multe e-mailuri prin virgula , punct și virgulă sau spațiu"
+
+"Sessions need to be enabled in order for this application to work." = "Sesiuni trebuie să fie activat pentru această aplicație să funcționeze ."
+
+"Set * for 'every hour'." = "* Set pentru' în fiecare oră' ."
+
+"Set * for 'every minute'." = "* Set pentru' fiecare minut' ."
+
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "Bounces moi , de obicei, sunt e-mailuri care nu au fost livrate ( încă ) , dar problema pare să fie temporal . Bounces greu sunt cele care cel mai probabil permanent ( cum ar fi' adresa de e-mail invalid' , etc )"
+
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "Unele script-uri s-ar putea să nu termine executarea în termenul permis , care este setat la o valoare mai mică decât o valoare PHP implicită ( 30 secunde ) ."
+
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "Abonat va primi un e-mail opt-in , cu un link pentru a confirma lista de subscriere ( e ) ."
+
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "De cont Google Analytics număr ar trebui să apară în formatul UA - xxxxxxx - y . ' - Y ' spre sfârșitul se referă la numărul profilului ."
+
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "Conținutul acestui câmp va apărea ca un tooltip când vizitator trece peste teren ."
+
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "Eticheta de acest domeniu ( un titlu ) poate fi demonstrat atât deasupra câmpului , sau pe e partea stângă ."
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "Această caracteristică va folosi plugin mod_rewrite Apache a reformat URL-uri publice pentru a apărea mai descriptiv , menționând , de exemplu, titlul unui articol sau categorie în URL-ul ."
+
+"This is just a label for your own internal use" = "Aceasta este doar o eticheta pentru uz intern propriu"
+
+"This is the character that separates the fields within the file. Usually this is a comma." = "Acesta este caracterul care separă domeniile din cadrul fișierului . De obicei, aceasta este o virgulă ."
+
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "Acesta este numele intern pentru tine de a utiliza . Fiecare loc de muncă cron trebuie să aibă un identificator unic ."
+
+"This value is too low, and this server imposed limit cannot be changed." = "Această valoare este prea mică , iar această limită impusă de server nu poate fi modificată ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "Această valoare va fi folosit ca un substituent pentru acest domeniu personalizare . Dacă introduceți'MYTAG' , atunci conținutul dvs. ar trebui să aibă un substituent % MYTAG % , care va fi înlocuită cu o valoare de câmp ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "Aceasta va apărea în contul dvs. Google Analytics ca o sursă de vizite la fața locului . Aceasta este , de obicei, un nume de Newsletter"
+
+"This will turn this Cron Job on or off" = "Acest lucru va transforma acest Cron Job pornit sau oprit"
+
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "După salvare, sistemul va încerca să adăuga acest conținut în fișierul htaccess . Dacă nu o au deja . Dacă fișierul nu poate fi scris , va trebui să pună acest lucru în fișier %s"
+
+"User will not have options for lists and will not see lists they are subscribing to." = "Utilizatorul nu va avea opțiuni pentru liste și nu vor vedea listele care sunt abonați la ."
+
+"User will receive a single email confirmation that will be for all the lists selected." = "Utilizatorul va primi un singur email de confirmare care va fi pentru toate listele selectate ."
+
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "Utilizatorul va primi un email de confirmare pentru fiecare listă care a confirmarea de e-mail opt-in/out pornit ."
+
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "Cu modul de siguranță pe , script-ul nu va fi capabil să se adapteze configurația serverului pentru o performanță optimă ."
+
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Aveți posibilitatea de a specifica o selecție de text care vor fi incluse în partea de jos a tuturor mesaje , indiferent de ceea ce utilizatorul sau lista este utilizat . Lăsați necompletat dacă nu doriți să folosiți această funcție ."
+
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Aveți posibilitatea de a specifica o selecție de text care va fi inclus în partea de sus a tuturor mesaje , indiferent de ceea ce utilizatorul sau lista este utilizat . Lăsați necompletat dacă nu doriți să folosiți această funcție ."
+
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "Sunteți responsabil pentru a scăpa ! De asemenea , în cazul în care construirea unei LIST , apoi siruri de caractere ar trebui să fie încapsulate cu citate ."
+
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "Server-ul dvs. impune următoarele limite : maximum dimensiunea fișierului de încărcare este de %s și dimensiunea maximă a posta este de %s ."
+
+"Your server is set to allow less memory than this script requires." = "Server-ul dvs. este setat pentru a permite mai puțină memorie decât acest scenariu necesită ."
+
+
+
+##### 2009-05-28 #####
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "% REPORTLINK % este prescurtarea pentru link-ul de raport comun pe care le vezi mai sus ."
+
+
+
+##### 2009-07-10 #####
+
+"Notice: Hold CTRL to select multiple formats." = "Observați : Țineți apăsată tasta CTRL pentru a selecta mai multe formate ."
+
+
+
+##### 2009-07-14 #####
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "( Opțional ) Această opțiune se va întrerupe automat poștală după un anumit număr de mesaje . Acest lucru ajută la reducerea de încărcare servere de mail ."
+
+"The label of this field (a title) can be shown both above the field, or on its left side." = "Eticheta de acest domeniu ( un titlu ) poate fi demonstrat atât deasupra câmpului , sau pe partea stângă ."
+
+
+
+##### 2009-08-27 #####
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "Această caracteristică va folosi plugin mod_rewrite Apache a reformat URL-uri publice pentru a apărea mai descriptiv , menționând , de exemplu, titlul unei liste sau formă în URL-ul ."
+
+
+
+##### 2009-11-25 #####
+
+"Separate multiple emails by comma" = "Separati mai multe e-mailuri prin virgula"
+
+
+
+##### 2009-12-21 #####
+
+"Begin typing their name and live results will be displayed." = "Începeți să tastați numele lor și rezultate live vor fi afișate ."
+
+
+
+##### 2010-03-28 #####
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "Toate campaniile trimise la această listă va fi trimis la adresa de email furnizată ( ES ) . Separati mai multe e-mailuri prin virgula"
+
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "Toți abonații care raportează abuzuri vor fi eliminate de pe listă , și rapoarte de abuz va fi inregistrata."
+
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "Verifica această opțiune dacă doriți , pentru a permite o singură campanie pentru a fi trimis la o adresă de e-mail singur de mai multe ori . E-mailuri mai multe vor fi trimise numai în cazul în care un e-mail este abonat de mai multe ori pe aceeași listă ."
+
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "Verifica această opțiune dacă doriți , pentru a permite abonaților să se aboneze de mai multe ori la această listă cu aceeași adresă de e-mail ."
+
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "Dacă se utilizează URL-uri de căutare - friendly , această listă poate avea un ID om ușor de citit , care va fi o parte din link-urile ."
+
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "Dacă vă verificați această opțiune toți abonații noi va fi trimis o copie a ultimei campaniei pe care a trimis imediat după abonare ."
+
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "Daca bifati aceasta optiune abonatii vor fi întrebați de ce au dezabonat după ce au dezabona de la această listă . Abonații nu trebuie neaparat sa dea un motiv , atunci când dezabona - dar această opțiune le cere să-și prezinte motivul lor, în cazul în care ar dori să împărtășească aceste informații ."
+
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "Daca bifati aceasta optiune abonații vor trebui să se uite la o imagine și introduceți caracterele pe care le vedeți în scopul de a subscrie . Acest lucru este folosit pentru a preveni impotriva automate sau software-ul automat de la abonați la lista ta ."
+
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "Dacă vă personaliza o campanie cu numele de abonați - și un abonat nu introduceți un nume - se va utiliza acest nume implicit ca numele lor atunci când trimit acea campanie ."
+
+"Select the field that has the date which you want to send an email based off of." = "Selectați câmpul care are data pe care doriți să trimiteți un e-mail bazat pe de ."
+
+"Select the format that you are saving the date as in your subscriber field you have selected." = "Selectați formatul pe care îl salvați data ca in domeniul tau de abonat ați selectat ."
+
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "Există o secțiune publică în cazul în care abonații pot gestiona abonamentul lor și a vedea campaniile trecute . Dacă bifați această casetă această listă nu vor fi afișate în secțiunea publică ."
+
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "Acesta este folosit în arhivă publică și , de asemenea, în secțiunea administrativă . Liste sunt utilizate pentru a grupa seturi de abonați"
+
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "Atunci când un utilizator se abonează li se cere să introduceți un nume . Dacă bifați această casetă nu se va lasa sa se ​​aboneze , cu excepția cazului în care introduceți un nume"
+
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Ori de câte ori un abonat subscrie la această listă , sistemul va trimite un e-mail la aceste destinatari . Separati mai multe e-mailuri prin virgula"
+
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Ori de câte ori un abonat anulează din această listă , sistemul va trimite un e-mail la aceste destinatari . Separati mai multe e-mailuri prin virgula"
+
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "Puteți alege cum să se potrivească data . Dacă încercați să trimiteți un e-mail de ziua ar trebui să alegeți' Luna și ziua', ca s-ar potrivi cu totul, dar anului ."
+
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "Puteți alege pentru a avea e-mail trimite înainte sau după atunci când data potrivește . Dacă doriți să trimiteți un e-mail 3 zile înainte de ziua lor, ar trebui să selectați' Ziua Luna și' ca tip de meci și apoi alegeți"- 3 zile ca offset . Dacă doriți să aveți e-mail trimite în ziua exactă pe care se potrivește le-ar lăsa de zile '0 ' de offset este setat la"
+
+
+
+##### 2010-04-07 #####
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "În timpul importul abonații , vor fi trimise toate Autoresponders instant ați putea avea de configurare ."
+
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "Dacă aveți această opțiune selectată această campanie va fi listat în arhiva publică a software-ului . Arhiva publică face parte din secțiunea publică a software-ului în cazul în care abonații ( și alți vizitatori ) pot vizualiza campanii din trecut și de a gestiona abonamentele lor ."
+
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "Abonații vor fi tratate la fel ca orice persoană care a subscris la o parte publică sau un formular de subscriere ; toate Autoresponders instant și / sau întârziate va fi trimis la ei în timp util ."
+
+"These subscribers will never receive any further AutoResponders setup in the system." = "Aceste abonații nu vor primi mai departe de configurare Autoresponders In sistemul ."
+
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "Puteți pavilion anumite Autoresponders ca a fost deja trimise la aceste abonați , în caz de import de abonați nu ar trebui să primească o parte din ele ."
+
+
+
+##### 2010-07-02 #####
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "În unele cazuri , în special Active Directory , numele de utilizator vă conectați în mod normal în cu nu este de fapt ceea ce așteaptă de la server prin interfața sa normală LDAP . Acest câmp este numele atributului pe care doriți să o utilizați pentru a vă conecta cu . În cele mai multe dintre aceste cazuri , valoarea care trebuie să treacă de aici ar fi' sAMAccountName' ."
+
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "În unele cazuri , în special cu Active Directory , trebuie să vă conectați cu un cont de administrator înainte de a putea conecta cu adevarat cu un utilizator . În acest caz , ar trebui să plasați aici numele distins complet de utilizator administrativ serverul LDAP (de exemplu, CN = Administrator , ou = utilizatori , dc = domeniu , dc = com ) ."
+
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "Atributul că serverul LDAP se așteaptă ca noi să vă autentificați cu . În marea majoritate a cazurilor , acest domeniu ar trebui să fie'NC' ( prescurtarea de la' nume comun' ) ."
+
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "Baza de numele distins care utilizatorii s-ar conecta cu ; de exemplu , ou = utilizatori , dc = domeniu , dc = com"
+
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "Numele complet distins de un cont de administrator , necesare pentru procesul de autentificare Active Directory lui . Exemplu : cn = Administrator , ou = utilizatori , dc = domeniu , dc = com"
+
+"The password for the administrator account, mentioned above." = "Parola pentru contul de administrator , menționat mai sus ."
+
+"The password of the administrative user mentioned above." = "Parola utilizatorului administrativ menționat mai sus ."
+
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "Cu acest verificat , vom conectați cu un nume distins format complet ( NC = utilizatori , ou = utilizatori , dc = domeniu , dc = com ) ; fără ea , ne vom conecta cu'utilizator' si lasa lucrurile server de sortare afară ."
+
+
+
+##### 2010-09-07 #####
+
+"The location of this software on the web. To change this, run Updater from a new location." = "Locul de amplasare a acestui software de pe web . Pentru a schimba acest lucru , Updater a alerga de la o locație nouă ."
+
+
+
+##### 2010-09-30 #####
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "După logare în Twitter , vi se va cere să confirme că AwebDesk este permis pentru a actualiza contul dvs. Twitter , apoi copiați codul PIN ."
+
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "Pentru a actualiza un alt cont Twitter , debifați Twitter de mai sus , cu excepția , apoi vin înapoi și re - introduceți informațiile dvs. ."
+
+
+
+##### 2010-12-01 #####
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "Orice utilizator care se pot conecta în secțiunea admin de SugarCRM puteti autentifica aici"
+
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "Bifând această casetă , toate adresele de e-mail care au fost anterior nesubscrise ca urmare a numeroaselor salturi în trecut, nu vor fi importate ."
+
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "Bifând această casetă , orice abonați în acest proces de import , care sunt deja prezente în sistemul va fi actualizat cu orice noi informații abonat care se găsește în timpul procesului de import . Dacă această casetă nu este bifată , aceste abonații vor fi sărite în timpul importării ( detalii de abonat nu vor fi actualizate ) ."
+
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "Campanii trimise în această listă va fi trimis la serviciul de notificare Twitter și va crea un tweet care se leagă la copie de web campaniei ."
+
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "Dacă există un TITLUL atribut în link-urile dvs. , software-ul va furniza prima TITLUL valoarea atributului se constată pentru link-ul specific . Puteți schimba acest lucru de mai jos ."
+
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "Dacă dezactivați această opțiune , abonații le importați acum nu va primi nici o auto-răspuns ; acum , nici în viitor ."
+
+"Recommended for large scale imports" = "Recomandat pentru importurile de mari dimensiuni"
+
+"Recommended for small scale imports" = "Recomandat pentru importurile de mici dimensiuni"
+
+"Recommended for synchronization with external services/applications" = "Recomandat pentru sincronizarea cu servicii / aplicații externe"
+
+"The default subject any message begins with when you select this template." = "Implicit subiectul orice mesaj începe cu , atunci când selectați acest șablon ."
+
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "Abonații importate vor fi marcate ca a primit deja aceste auto-răspuns , astfel încât acestea nu vor fi trimise pentru a le ."
+
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "Acest lucru este FreshBooks contul tău nume , găsite în URL-ul . IE : https://ACCOUNT.freshbooks.com . Vă rugăm să furnizați doar numele de cont , și nu URL-ul ."
+
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "Acesta este semn de autentificare unic , care vă sunt furnizate pe pagina de API FreshBooks . În FreshBooks , du-te la Contul meu | FreshBooks API ."
+
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "Acest lucru se va reflecta autentificare Twitter de pe această listă la toate listele , ceea ce înseamnă toate e-mailuri vor actualiza la acest cont Twitter"
+
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "Pentru a genera cheia API , intrați în Zoho CRM , apoi du-te la Setup | CRM API Key | genera acum"
+
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "Când această opțiune este bifată ultima campanie trimis va fi trimis la fiecare abonat în care acestea sunt importate ."
+
+"You can find your API token from the More | My Settings page in Capsule" = "Puteți găsi indiciul API demult | Pagina mea Setări în Capsule"
+
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "Puteți obține token-ul de securitate de logare în Salesforce , și o să NUMELE TĂU | instalare | Reset token-ul de securitate ( sub My informații personale) . Veți fi apoi prin e-mail token-ul de securitate ."
+
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "Numele de cerere capsulei , așa cum apare în URL-ul care le-ar avea acces la un browser ; IE : https://APP.capsulecrm.com . Doar includ porțiunea APP ."
+
+"Your Zoho username or email address" = "Numele de utilizator Zoho sau adresa de email"
+
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "Detaliile dvs. de autentificare nu sunt salvate pe acest server . Trebuie să vă re - introduceți-le de fiecare dată ."
+
+"Your unique URL to your SugarCRM installation" = "URL -ul unic pentru instalarea SugarCRM"
+
+
+
+##### 2011-02-23 #####
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "După logare în Facebook , vi se va cere să confirme că AwebDesk este permis pentru a actualiza contul dvs. Facebook ."
+
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "Campanii trimise la această listă va fi auto- a postat pe Facebook cu un link pentru a copia dvs. de web de campanie ."
+
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "Campanii trimise la această listă va fi auto- a postat pe Twitter , cu un link pentru a copia dvs. de web de campanie ."
+
+
+
+##### 2011-07-13 #####
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "Acest buton va re - import toate șabloanele stoc . NOTA : Acest lucru va importa numai șabloane bursiere la nivel mondial vă lipsesc . Dacă aveți deja unele șabloane stoc , dar le- au modificat , acesta nu va suprascrie personalizările făcute ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "Această valoare va fi folosit ca un substituent pentru acest domeniu personalizare . Dacă introduceți'MYTAG' , atunci conținutul dvs. ar trebui să aibă un substituent %MYTAG% , care va fi înlocuită cu o valoare de câmp . NOTĂ : spații vor fi înlocuite cu o liniuță , iar % caractere nu sunt permise ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "Aceasta va apărea în contul dvs. Google Analytics ca o sursă de vizite la fața locului . Aceasta este , de obicei, un nume de listă"
+
+"You can generate your API token from the User Preferences page in batchbook CRM" = "Puteți genera token-ul API de pe pagina Preferințe de utilizator în batchbook CRM"
+
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "Numele tău de cont Batchbook , așa cum apare în URL-ul care le-ar avea acces la un browser ; IE : https://ACCOUNT.batchbook.com . Doar includ porțiunea ACCOUNT ."
+
+
+
+##### 2011-08-01 #####
+
+"Include your Freshbooks account name" = "Include numele de cont FreshBooks"
+
+"Recommended for synchronization with external database" = "Recomandat pentru sincronizarea cu baza de date externă"

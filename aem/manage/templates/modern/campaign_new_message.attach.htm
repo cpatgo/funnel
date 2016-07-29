@@ -1,0 +1,99 @@
+<div id="message_attach" class="adesk_modal" align="center" style="display:none;">
+	<input type="hidden" id="campaign_embed_images" name="embed_images" value="{$campaign.embed_images}">
+	<div class="adesk_modal_inner" align="left">
+		<div id="message_attach_regular" {if $campaign.embed_images}style="display:none"{/if}>
+			<h3 class="m-b">{"Attach a file"|alang}</h3>
+
+			{if $__ishosted}
+			<div>
+				{"There are a few limits to attaching files."|alang}
+
+				<ul>
+					<li>{"You may only attach one file."|alang}</li>
+					<li>{"Attachments cannot be greater than 1 megabyte."|alang}</li>
+					<li>{"The file you attach must either be .DOC, .DOCX, .JPG or .PDF.  No other file types are allowed."|alang}</li>
+				</ul>
+			</div>
+			{else}
+			<div>
+				{if $admin.limit_attachment == -1}
+				{"There is no limit to the number of attachments you may have for your message."|alang}
+				{elseif $admin.limit_attachment == 0}
+				{"You may not upload any attachments."|alang}
+				{else}
+				{"You may only upload %s attachment(s) in all."|alang:$admin.limit_attachment}
+				{/if}
+			</div>
+			{/if}
+
+			<br>
+
+			<div>
+				<div id="attachmentsBox">
+					{adesk_upload id='message_attach' name='attach' action='message_attach' files=$files limit=$admin.limit_attachment}
+				</div>
+			</div>
+
+			{if $campaign.type != "text"}
+			<div>
+				<a href="#" onclick="campaign_attach_embed(true); return false">{"I want to embed images in my message"|alang}</a>
+			</div>
+			{/if}
+
+			<div style="margin-top: 10px">
+				<input type="button" onclick="$('message_attach').hide(); campaign_attach_update()" value='{"Close"|alang}'>
+			</div>
+		</div>
+
+		<div id="message_attach_embed" {if !$campaign.embed_images}style="display:none"{/if}>
+			<h3 class="m-b">{"Embed images"|alang}</h3>
+
+			<div>
+				{"You have chosen to embed images in your message."|alang}
+				{"You are not allowed to add any attachments to your message if you embed images."|alang}
+			</div>
+
+			<div style="margin-top: 10px">
+				<a href="#" onclick="campaign_attach_embed(false); return false">{"Don't embed images in my message"|alang}</a>
+			</div>
+
+			<div style="margin-top: 10px">
+				<input type="button" onclick="$('message_attach').hide(); campaign_attach_update()" value='{"Close"|alang}'>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	{literal}
+	function campaign_attach_update() {
+		var post = $("campaignform").serialize(true);
+
+		if (typeof post["attach[]"] != "undefined") {
+			post.attach = post["attach[]"];
+		}
+
+		if ($("campaign_embed_images").value == 1 || ( typeof post.attach != "undefined" && (typeof post.attach == "string" || post.attach.length > 0))) {
+			if ($("attachimg"))
+				$("attachimg").src = "images/mesg-attach-on.gif";
+		} else {
+			if ($("attachimg"))
+				$("attachimg").src = "images/mesg-attach.gif";
+		}
+	}
+
+	function campaign_attach_embed(val) {
+		if (val) {
+			$("message_attach_regular").hide();
+			$("message_attach_embed").show();
+			$("campaign_embed_images").value = 1;
+		} else {
+			$("message_attach_regular").show();
+			$("message_attach_embed").hide();
+			$("campaign_embed_images").value = 0;
+		}
+	}
+
+	campaign_attach_update();
+	{/literal}
+</script>

@@ -1,0 +1,479 @@
+"##### TRANSLATION STRINGS #####" = "# # # # # # Strings DỊCH # # # #"
+
+"##### Example: original string = your-translation-here #####" = "# # # # # Ví dụ : chuỗi ban đầu của bạn = - dịch - đây # # # # #"
+
+
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "(Tùy chọn) Chỉ định bao nhiêu email bạn muốn gửi email với kết nối này trước khi tìm kiếm các kết nối tiếp theo . Nếu bạn chỉ có một kết nối email thiết lập này không quan trọng."
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "(Tùy chọn) Tùy chọn này sẽ tự động tạm dừng gửi thư của bạn sau khi một số lượng nhất định của tin nhắn. Điều này giúp giảm tải máy chủ mail của bạn. )"
+
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "(Tùy chọn) Bạn có thể chỉ định một giới hạn số lượng email gửi trong một khoảng thời gian nhất định. (Ví dụ = Chỉ cho phép 1.000 email mỗi giờ)"
+
+"Attachments will be disabled." = "File đính kèm sẽ bị vô hiệu ."
+
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "Cả hai giá trị này nên được đưa ra như là các giá trị CSS ; 100% sẽ là 100 % diện tích cho phép các biên tập viên, hoặc 600px cho 600 điểm ảnh."
+
+"Brief Description for you to recognize. Does NOT affect your actual form." = "Mô tả tóm tắt để bạn có thể nhận ra. KHÔNG ảnh hưởng đến hình thức thực tế của bạn ."
+
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "Mô tả tóm tắt để bạn có thể nhận ra. KHÔNG ảnh hưởng đến thẻ cá nhân thực tế của bạn ."
+
+"Brief Description for you to recognize. Does NOT affect your actual template." = "Mô tả tóm tắt để bạn có thể nhận ra. KHÔNG ảnh hưởng đến mẫu thực tế của bạn ."
+
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl + click (hoặc nhấn và kéo) để lựa chọn / mục de- chọn ."
+
+"Enter a brief description for this bounce code here." = "Nhập một mô tả ngắn gọn cho mã trả này ở đây."
+
+"Enter the character set that will be used on pages where you wish to put this form." = "Nhập các ký tự sẽ được sử dụng trên các trang mà bạn muốn đặt hình thức này ."
+
+"Extra users that were not part of the sync will be removed." = "Người sử dụng bổ sung mà không là một phần của đồng bộ sẽ được gỡ bỏ ."
+
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "GD Thư viện là cần thiết để tạo ra hình ảnh từ ứng dụng. Phổ biến nhất ( và hữu ích ) sử dụng những hình ảnh CAPTCHA."
+
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "Tiêu đề cần phải được ở định dạng ' HEADER - Tên: HEADER VALUE'"
+
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "Ẩn phiên bản cho tất cả người dùng ngoài việc sử dụng quản trị ? Nếu được lựa chọn , phiên bản sẽ không được hiển thị trong bảng điều khiển ."
+
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "Nếu đọc / mở theo dõi là trên , hình ảnh theo dõi sẽ không được embeded - thuê bao vẫn sẽ được nhắc nhở để tải về hình ảnh."
+
+"If authentication is not required, do not enter a password." = "Nếu xác thực là không cần thiết , không nhập mật khẩu."
+
+"If authentication is not required, do not enter a username." = "Nếu xác thực là không cần thiết , không nhập tên người dùng ."
+
+"If selected, the software will disable most functions such as deleting, sending and more." = "Nếu được lựa chọn , phần mềm sẽ vô hiệu hóa hầu hết các chức năng như xóa , gửi và nhiều hơn nữa ."
+
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "Nếu thuê bao xem việc phiên bản văn bản, đọc của ông / mở sẽ được lưu lại nếu anh ta nhấp chuột bất kỳ liên kết theo dõi trong tin nhắn. \ NNếu phiên bản HTML được mở ra, đọc / mở sẽ được lưu lại nếu hình ảnh được tải về là tốt ."
+
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "Nếu URL được sử dụng , nó phải bắt đầu bằng http:// hoặc https:// . Nếu không, một đường dẫn tập tin sẽ được giả định. Nếu một con đường bắt đầu với ' . / ' , Thư mục ứng dụng sẽ được giả định."
+
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "Nếu tùy chọn này được chọn, người điền vào các mẫu sẽ không thể tiến hành hình thức trình trừ khi trường có một số giá trị nhập vào ."
+
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "Nếu bạn kiểm tra tùy chọn này, một giờ sẽ được thêm vào các giờ GMT bình thường bù đắp múi giờ của bạn sử dụng ."
+
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = "Nếu các đại lý chuyển thư của bạn không bao gồm các mã trong hình thức 5.xx , nhập một chuỗi ký tự phải được xuất hiện vì vậy đây Mã Thoát có thể được gán \ n (ví dụ: ' trở lại : Chưa nhập của người sử dụng ) ."
+
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "Thỏa thuận cấp phép không cho phép bạn thiết lập bản quyền của riêng bạn, nhưng bạn có thể chọn để có invisibe bản quyền cho công chúng / phi mã . Quyền tác giả có thể không bao giờ được gỡ bỏ từ các mã thực tế ."
+
+"List will not be listed on default subscription page." = "Danh sách sẽ không được liệt kê trên trang đăng ký mặc định."
+
+"Logs will be kept for 30 days." = "Bản ghi sẽ được giữ trong 30 ngày."
+
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "Hầu hết các đại lý chuyển thư bao gồm các mã trong hình thức 5.xx Nếu máy chủ của bạn không trả lại những người, bạn có thể nhập vào đây một số định danh cho luật này Bounce."
+
+"Note: this overrides the 'day of the month' option" = "Lưu ý : điều này sẽ ghi đè ' ngày của tháng ' tùy chọn"
+
+"Notice: Hold CTRL to select multiple Autoresponders." = "Chú ý : Giữ Ctrl để chọn nhiều Autoresponders ."
+
+"Notice: Hold CTRL to select multiple destinations." = "Chú ý : Giữ Ctrl để chọn nhiều điểm đến."
+
+"Notice: Hold CTRL to select multiple items." = "Chú ý : Giữ Ctrl để chọn nhiều mục ."
+
+"Notice: Hold CTRL to select multiple lists." = "Chú ý : Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: Hold CTRL to select multiple statuses." = "Chú ý : Giữ Ctrl để chọn nhiều trạng thái ."
+
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : Mẫu đăng ký này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "Chú ý: Hành động này sẽ được thực hiện trên mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : Thiết lập thư bị trả lại này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : tiêu đề tùy chỉnh này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : tài khoản email này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : mô hình loại trừ này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "Chú ý : Thông báo này sẽ là một thành viên của mỗi nhóm được lựa chọn ! Giữ Ctrl để chọn nhiều nhóm ."
+
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : Thông báo này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : cá nhân này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : bộ lọc gửi Đây sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "Chú ý : Mẫu này sẽ là một thành viên của mỗi danh sách được lựa chọn ! Giữ Ctrl để chọn nhiều danh sách ."
+
+"Place one email matching pattern per line." = "Đặt một mô hình kết hợp email trên mỗi dòng."
+
+"Please check if any vital function is listed here." = "Vui lòng kiểm tra nếu có chức năng quan trọng được liệt kê ở đây ."
+
+"Separate multiple emails by comma, semicolon or space" = "Nhiều email riêng biệt bằng dấu phẩy , dấu chấm phẩy hoặc không gian"
+
+"Sessions need to be enabled in order for this application to work." = "Phiên cần được kích hoạt để cho ứng dụng này để làm việc."
+
+"Set * for 'every hour'." = "* Thiết lập cho ' mỗi giờ ."
+
+"Set * for 'every minute'." = "* Thiết lập cho ' mỗi phút ."
+
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "Bị trả lại mềm thường là email mà không được cung cấp (chưa), nhưng vấn đề dường như là thời gian. Bị trả lại cứng là những người rất có thể vĩnh viễn ( chẳng hạn như ' địa chỉ email không hợp lệ ', vv )"
+
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "Một số kịch bản có thể không kết thúc việc thực hiện trong khoảng thời gian cho phép , được thiết lập một giá trị thấp hơn giá trị mặc ​​định PHP ( 30 giây)."
+
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "Thuê bao sẽ nhận được một lựa chọn trong email với một liên kết để xác nhận danh sách đăng ký (s) ."
+
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "Số tài khoản Analytics sẽ xuất hiện theo định dạng UA -xxxxxxx-y . '-Y ' ở cuối là số hồ sơ ."
+
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "Các nội dung của lĩnh vực này sẽ hiển thị như là một tooltip khi khách dao động trên các lĩnh vực ."
+
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "Nhãn của lĩnh vực này ( tiêu đề ) có thể được hiển thị trên cả hai lĩnh vực này, hoặc nó còn lại bên ."
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "Tính năng này sẽ sử dụng plugin mod_rewrite của Apache định dạng URL công cộng của nó xuất hiện mô tả nhiều hơn , nhắc đến ví dụ như các tiêu đề của một bài viết hoặc thể loại trong URL."
+
+"This is just a label for your own internal use" = "Đây chỉ là một nhãn hiệu để sử dụng nội bộ của riêng bạn"
+
+"This is the character that separates the fields within the file. Usually this is a comma." = "Đây là nhân vật mà phân biệt các lĩnh vực trong tập tin. Thông thường đây là một dấu phẩy."
+
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "Đây là tên nội bộ để bạn có thể sử dụng . Mỗi công việc định kỳ cần phải có một định danh duy nhất ."
+
+"This value is too low, and this server imposed limit cannot be changed." = "Giá trị này là quá thấp, và máy chủ áp đặt giới hạn này không thể thay đổi ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "Giá trị này sẽ được sử dụng như một giữ chỗ cho lĩnh vực cá nhân này . Nếu bạn nhập ' MYTAG ', sau đó nội dung của bạn nên có một trình giữ chỗ %MYTAG% sẽ được thay thế bằng một giá trị trường."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "Này sẽ xuất hiện trong tài khoản Analytics như một nguồn thăm trang web. Điều này thường là một tên của Bản tin"
+
+"This will turn this Cron Job on or off" = "Điều này sẽ biến Cron Job này hoặc tắt"
+
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "Sau khi tiết kiệm , hệ thống sẽ cố gắng thêm nội dung này vào tập tin htaccess của bạn. Nếu không có nó đã có . Nếu các tập tin không thể được ghi vào , bạn sẽ phải đưa điều này vào tập tin %s"
+
+"User will not have options for lists and will not see lists they are subscribing to." = "Người sử dụng sẽ không có các tùy chọn cho các danh sách và sẽ không nhìn thấy danh sách họ đang đăng ký ."
+
+"User will receive a single email confirmation that will be for all the lists selected." = "Người sử dụng sẽ nhận được một email xác nhận duy nhất mà sẽ cho tất cả các danh sách lựa chọn."
+
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "Người sử dụng sẽ nhận được một email xác nhận cho mỗi danh sách đã xác nhận email opt-in/out bật."
+
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "Với chế độ an toàn , kịch bản sẽ không có khả năng điều chỉnh cấu hình máy chủ cho hiệu suất tối ưu ."
+
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Bạn có thể chỉ định một lựa chọn của văn bản sẽ được bao gồm ở dưới cùng của tất cả các thư bất kể những gì người sử dụng hoặc danh sách đang được sử dụng . Để trống nếu bạn không muốn sử dụng tính năng này."
+
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Bạn có thể chỉ định một lựa chọn của văn bản sẽ được bao gồm ở trên cùng của tất cả các thư bất kể những gì người sử dụng hoặc danh sách đang được sử dụng . Để trống nếu bạn không muốn sử dụng tính năng này."
+
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "Bạn có trách nhiệm thoát ! Ngoài ra, nếu xây dựng một DANH SÁCH , sau đó dây phải được đóng gói với dấu ngoặc kép."
+
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "Máy chủ của bạn áp đặt các giới hạn sau : tối đa kích thước tập tin tải lên là %s và sau kích thước tối đa là %s."
+
+"Your server is set to allow less memory than this script requires." = "Máy chủ của bạn được thiết lập để cho phép ít bộ nhớ hơn so với kịch bản này đòi hỏi ."
+
+
+
+
+
+
+
+"##### 2009-05-28 #####" = "# # # # # # 2009-05-28 # # # #"
+
+
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "%REPORTLINK% là viết tắt cho các liên kết báo cáo chia sẻ mà bạn nhìn thấy ở trên."
+
+
+
+
+
+
+
+"##### 2009-07-10 #####" = "# # # # # # 2009/07/10 # # # #"
+
+
+
+"Notice: Hold CTRL to select multiple formats." = "Chú ý : Giữ Ctrl để chọn nhiều định dạng."
+
+
+
+
+
+
+
+"##### 2009-07-14 #####" = "# # # # # # 2009-07-14 # # # #"
+
+
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "(Tùy chọn) Tùy chọn này sẽ tự động tạm dừng gửi thư của bạn sau khi một số lượng nhất định của tin nhắn. Điều này giúp giảm tải máy chủ mail của bạn."
+
+"The label of this field (a title) can be shown both above the field, or on its left side." = "Nhãn của lĩnh vực này ( tiêu đề ) có thể được hiển thị trên cả hai lĩnh vực này, hoặc về bên trái ."
+
+
+
+
+
+
+
+"##### 2009-08-27 #####" = "# # # # # # 2009-08-27 # # # #"
+
+
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "Tính năng này sẽ sử dụng plugin mod_rewrite của Apache định dạng URL công cộng của nó xuất hiện mô tả nhiều hơn , nhắc đến ví dụ như tiêu đề của một danh sách hoặc hình thức trong URL."
+
+
+
+
+
+
+
+"##### 2009-11-25 #####" = "# # # # # # 2009-11-25 # # # #"
+
+
+
+"Separate multiple emails by comma" = "Nhiều email riêng biệt bằng dấu phẩy"
+
+
+
+
+
+
+
+"##### 2009-12-21 #####" = "# # # # # # 2009-12-21 # # # #"
+
+
+
+"Begin typing their name and live results will be displayed." = "Bắt đầu gõ tên của họ và kết quả trực tiếp sẽ được hiển thị ."
+
+
+
+
+
+
+
+"##### 2010-03-28 #####" = "# # # # # # 2010/03/28 # # # #"
+
+
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "Tất cả các chiến dịch gửi đến danh sách này sẽ được gửi đến địa chỉ email được cung cấp ( es ) . Nhiều email riêng biệt bằng dấu phẩy"
+
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "Tất cả các thuê bao báo cáo lạm dụng sẽ được loại bỏ khỏi danh sách, và các báo cáo lạm dụng sẽ được lưu lại ."
+
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "Chọn tùy chọn này nếu bạn muốn cho phép một chiến dịch được gửi đến một địa chỉ email duy nhất nhiều lần. Nhiều email sẽ chỉ được gửi nếu một email được đăng ký nhiều lần vào cùng một danh sách ."
+
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "Chọn tùy chọn này nếu bạn muốn cho phép các thuê bao đăng ký nhiều lần vào danh sách này với các địa chỉ email."
+
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "Nếu URL tìm kiếm thân thiện được sử dụng , danh sách này có thể có một ID người có thể đọc được đó sẽ là một phần của các liên kết."
+
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "Nếu bạn kiểm tra tùy chọn này tất cả các thuê bao mới sẽ được gửi một bản sao của chiến dịch cuối cùng bạn gửi ngay khi đăng ký ."
+
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "Nếu bạn kiểm tra tùy chọn này thuê bao của bạn sẽ được hỏi tại sao họ bỏ đăng ký sau khi họ thoát khỏi danh sách này . Thuê bao không nhất thiết phải có để cung cấp cho một lý do khi họ bỏ đăng ký - nhưng tùy chọn này yêu cầu họ trình lý do của họ nếu họ muốn chia sẻ thông tin đó."
+
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "Nếu bạn kiểm tra tùy chọn này thuê bao của bạn sẽ phải nhìn vào một hình ảnh và nhập các ký tự mà họ thấy để đăng ký . Này được sử dụng để ngăn chặn chương trình tự động hoặc phần mềm tự động từ đăng ký vào danh sách của bạn ."
+
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "Nếu bạn cá nhân hoá một chiến dịch với tên thuê bao - và một thuê bao không nhập tên - nó sẽ sử dụng tên mặc định này như tên của họ khi gửi chiến dịch đó."
+
+"Select the field that has the date which you want to send an email based off of." = "Chọn trường có ngày mà bạn muốn gửi email dựa tắt của ."
+
+"Select the format that you are saving the date as in your subscriber field you have selected." = "Chọn định dạng mà bạn đang tiết kiệm ngày như trong lĩnh vực thuê bao của bạn, bạn đã chọn."
+
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "Có một phần công cộng, nơi thuê bao của bạn có thể quản lý thuê bao của họ và xem các chiến dịch vừa qua. Nếu bạn kiểm tra hộp này danh sách này sẽ không được hiển thị trong phần công cộng."
+
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "Này được sử dụng trong các kho lưu trữ công cộng và cũng trong phần quản trị. Danh sách được sử dụng để tập hợp nhóm các thuê bao"
+
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "Khi người dùng đăng ký họ được yêu cầu nhập tên . Nếu bạn kiểm tra hộp này nó sẽ không cho phép họ đăng ký , trừ khi họ nhập tên"
+
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Bất cứ khi nào một thuê bao gia vào danh sách này , hệ thống sẽ gửi một email đến những người nhận . Nhiều email riêng biệt bằng dấu phẩy"
+
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Bất cứ khi nào một thuê bao unsubscribes từ danh sách này , hệ thống sẽ gửi một email đến những người nhận . Nhiều email riêng biệt bằng dấu phẩy"
+
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "Bạn có thể chọn để phù hợp với ngày . Nếu bạn đang cố gắng để gửi một email sinh nhật bạn sẽ chọn ' tháng và ngày"vì đó sẽ phù hợp với tất cả mọi thứ nhưng năm nay."
+
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "Bạn có thể chọn để có các email gửi trước hoặc sau khi ngày phù hợp . Nếu bạn muốn gửi email 3 ngày trước sinh nhật của họ, bạn sẽ chọn ' tháng và ngày ' là loại kết hợp và sau đó chọn ' - 3 ngày ' như bù đắp. Nếu bạn muốn có email gửi vào ngày chính xác mà nó phù hợp với bạn sẽ để lại những ngày bù đắp '0 '"
+
+
+
+
+
+
+
+"##### 2010-04-07 #####" = "# # # # # # 2010-04-07 # # # #"
+
+
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "Trong nhập khẩu các thuê bao , họ sẽ được gửi ngay lập tức bất kỳ Autoresponders bạn có thể đã thiết lập ."
+
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "Nếu bạn có tùy chọn này được lựa chọn chiến dịch này sẽ được liệt kê trong các kho lưu trữ công cộng của phần mềm của bạn . Các kho lưu trữ công cộng là một phần của phần công cộng của phần mềm mà thuê bao của bạn ( và du khách khác ) có thể xem các chiến dịch trong quá khứ và quản lý thuê bao của họ ."
+
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "Thuê bao sẽ được đối xử giống như bất kỳ người nào đăng ký từ một bên nào hoặc một mẫu đăng ký ; tất cả Autoresponders ngay lập tức và / hoặc trì hoãn sẽ được gửi đến cho họ trong thời gian tới."
+
+"These subscribers will never receive any further AutoResponders setup in the system." = "Các thuê bao sẽ không bao giờ nhận được bất kỳ thiết lập Autoresponders hơn nữa trong hệ thống."
+
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "Bạn có thể flag Autoresponders như đã được gửi tới các thuê bao , trong trường hợp nhập khẩu các thuê bao không nên nhận được một số trong số họ ."
+
+
+
+
+
+
+
+"##### 2010-07-02 #####" = "# # # # # # 2010-07-02 # # # #"
+
+
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "Trong một số trường hợp , đặc biệt là Active Directory , tên người dùng mà bạn thường đăng nhập với không thực sự là những gì các máy chủ dự kiến ​​sẽ thông qua giao diện LDAP bình thường của nó . Lĩnh vực này là tên của thuộc tính mà bạn muốn sử dụng để đăng nhập với . Trong hầu hết các trường hợp , giá trị đó phải đi đây sẽ là ' sAMAccountName ."
+
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "Trong một số trường hợp , đặc biệt là với Active Directory, chúng ta phải đăng nhập với một tài khoản quản trị trước khi chúng ta thực sự có thể đăng nhập với một người sử dụng . Trong trường hợp đó , bạn sẽ đặt ở đây tên phân biệt đầy đủ của người sử dụng hành chính các máy chủ LDAP của (ví dụ như cn = quản trị , ou = Users, dc = tên miền , dc = com) ."
+
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "Thuộc tính mà các máy chủ LDAP mong muốn chúng ta đăng nhập với . Trong phần lớn các trường hợp , lĩnh vực này nên được ' cn ' (viết tắt của ' tên chung ) ."
+
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "Các cơ sở của sự phân biệt tên mà người dùng sẽ đăng nhập với ; ví dụ, ou = Users, dc = tên miền , dc = com"
+
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "Tên phân biệt đầy đủ của một tài khoản quản trị , cần thiết cho quá trình đăng nhập Active Directory . Ví dụ : cn = quản trị , ou = Users, dc = tên miền , dc = com"
+
+"The password for the administrator account, mentioned above." = "Mật khẩu cho tài khoản quản trị , đề cập ở trên ."
+
+"The password of the administrative user mentioned above." = "Mật khẩu của người sử dụng hành chính nêu trên."
+
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "Với điều này kiểm tra , chúng tôi sẽ đăng nhập với một tên phân biệt đầy đủ hình thành (cn = người sử dụng , ou = Users, dc = tên miền , dc = com) ; không có nó, chúng tôi sẽ đăng nhập với 'người sử dụng và để cho các máy chủ thứ loại ra ."
+
+
+
+
+
+
+
+"##### 2010-09-07 #####" = "# # # # # # 2010/09/07 # # # #"
+
+
+
+"The location of this software on the web. To change this, run Updater from a new location." = "Vị trí của phần mềm này trên web. Để thay đổi điều này, chạy Updater từ một vị trí mới ."
+
+
+
+
+
+
+
+"##### 2010-09-30 #####" = "# # # # # # 2010-09-30 # # # #"
+
+
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "Sau khi đăng nhập vào Twitter, bạn sẽ được yêu cầu xác nhận rằng AwebDesk được phép cập nhật tài khoản Twitter của bạn , sau đó copy số PIN ."
+
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "Để cập nhật một tài khoản Twitter khác nhau , bỏ chọn ở trên Twitter , tiết kiệm , sau đó trở lại và nhập lại thông tin của bạn."
+
+
+
+
+
+
+
+"##### 2010-12-01 #####" = "# # # # # # 2010-12-01 # # # #"
+
+
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "Bất kỳ người dùng có thể đăng nhập vào phần admin của SugarCRM có thể xác thực ở đây"
+
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "Bằng cách kiểm tra hộp này, tất cả các địa chỉ e-mail mà trước đây đã được bỏ đăng ký do nhiều bị trả lại trong quá khứ sẽ không được nhập khẩu ."
+
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "Bằng cách kiểm tra hộp này, bất kỳ thuê bao trong quá trình nhập khẩu này mà đã có trong hệ thống sẽ được cập nhật với bất kỳ thông tin thuê bao mới được tìm thấy trong quá trình nhập khẩu. Nếu ô này không được chọn , những thuê bao sẽ bị bỏ qua trong quá trình nhập khẩu ( chi tiết thuê bao của họ sẽ không được cập nhật) ."
+
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "Chiến dịch đưa vào danh sách này sẽ được gửi đến dịch vụ thông báo của Twitter và sẽ tạo ra một tweet liên kết với bản sao trang web của chiến dịch."
+
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "Nếu có một thuộc tính TITLE trong các liên kết của bạn , phần mềm sẽ cung cấp các giá trị thuộc tính TITLE đầu tiên nó tìm thấy các liên kết cụ thể. Bạn có thể thay đổi dưới đây ."
+
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "Nếu bạn tắt tùy chọn này, các thuê bao bạn đang nhập khẩu bây giờ sẽ không bao giờ nhận được bất kỳ phản ứng tự động ; bây giờ cũng không phải trong tương lai."
+
+"Recommended for large scale imports" = "Đề nghị cho nhập khẩu quy mô lớn"
+
+"Recommended for small scale imports" = "Đề nghị cho nhập khẩu quy mô nhỏ"
+
+"Recommended for synchronization with external services/applications" = "Đề nghị cho đồng bộ hóa với dịch vụ bên ngoài / ứng dụng"
+
+"The default subject any message begins with when you select this template." = "Là chủ đề mặc định bất kỳ tin nhắn bắt đầu với khi bạn chọn mẫu này."
+
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "Các thuê bao nhập khẩu sẽ được đánh dấu là đã nhận được những phản ứng tự động , do đó, những sẽ không được gửi cho họ."
+
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "Đây là tên tài khoản của bạn FreshBooks , được tìm thấy trong URL. IE : https://ACCOUNT.freshbooks.com . Vui lòng cung cấp chỉ là tên tài khoản , và KHÔNG URL ."
+
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "Đây là dấu hiệu xác thực duy nhất của bạn , mà bạn được cung cấp trên trang FreshBooks API. Trong Freshbooks , vào Tài khoản của tôi | FreshBooks API."
+
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "Điều này sẽ phản ánh Twitter xác thực từ danh sách này cho tất cả các danh sách , có nghĩa là tất cả các thư sẽ cập nhật vào tài khoản Twitter này"
+
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "Để tạo ra khóa API của bạn , đăng nhập vào Zoho CRM , sau đó đi đến Setup | CRM API Key | Tạo Bây giờ"
+
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "Khi tùy chọn này được kiểm tra chiến dịch cuối cùng bạn gửi sẽ được gửi đến mỗi thuê bao khi chúng được nhập khẩu."
+
+"You can find your API token from the More | My Settings page in Capsule" = "Bạn có thể tìm thấy mã thông báo API của bạn từ khác | Cài đặt trang của tôi trong Capsule"
+
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "Bạn có thể lấy mã thông báo bảo mật của bạn bằng cách đăng nhập vào Salesforce , và sẽ TÊN CỦA BẠN | Cài đặt | Thiết lập lại mã thông báo bảo mật của bạn (theo Thông tin cá nhân của tôi ) . Sau đó bạn sẽ được gửi mã thông báo bảo mật của bạn ."
+
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "Tên ứng dụng Capsule của bạn , vì nó xuất hiện trong URL mà bạn sẽ truy cập trong trình duyệt ; IE : https://APP.capsulecrm.com . Chỉ bao gồm các phần APP ."
+
+"Your Zoho username or email address" = "Tên truy nhập Zoho của bạn hoặc địa chỉ email"
+
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "Chi tiết xác thực của bạn là không được lưu trên máy chủ này. Bạn phải nhập lại mỗi lần."
+
+"Your unique URL to your SugarCRM installation" = "URL duy nhất của bạn để cài đặt SugarCRM của bạn"
+
+
+
+
+
+
+
+"##### 2011-02-23 #####" = "# # # # # # 2011-02-23 # # # #"
+
+
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "Sau khi đăng nhập vào Facebook, bạn sẽ được yêu cầu xác nhận rằng AwebDesk được phép cập nhật tài khoản Facebook của bạn."
+
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "Các chiến dịch gửi đến danh sách này sẽ được tự động đăng tải lên Facebook với một liên kết đến bản sao trang web chiến dịch của bạn ."
+
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "Các chiến dịch gửi đến danh sách này sẽ được tự động đăng lên Twitter với một liên kết đến bản sao trang web chiến dịch của bạn ."
+
+
+
+
+
+
+
+"##### 2011-03-17 #####" = "# # # # # # 2011-03-17 # # # #"
+
+
+
+"You can generate your API token from the User Preferences page in Tactile CRM" = "Bạn có thể tạo mã thông báo API của bạn từ các trang Sở thích người dùng trong Tactile CRM"
+
+"Your Tactile CRM application name, as it appears in the URL that you would access in a browser; IE: https://APP.tactilecrm.com. Just include the APP portion." = "Tên ứng dụng Tactile CRM của bạn , vì nó xuất hiện trong URL mà bạn sẽ truy cập trong trình duyệt ; IE : https://APP.tactilecrm.com . Chỉ bao gồm các phần APP ."
+
+
+
+
+
+
+
+"##### 2011-04-06 #####" = "# # # # # # 2011-04-06 # # # #"
+
+
+
+"The user who owns the list will determine which branding settings the list uses." = "Người sử dụng những người sở hữu trong danh sách sẽ xác định xây dựng thương hiệu thiết lập danh sách sử dụng ."
+
+
+
+
+
+
+
+"##### 2011-07-13 #####" = "# # # # # # 2011-07-13 # # # #"
+
+
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "Nút này sẽ tái nhập khẩu tất cả các mẫu chứng khoán. XIN LƯU Ý: Điều này sẽ chỉ nhập khẩu mẫu chứng khoán toàn cầu bạn đang thiếu. Nếu bạn đã có một số mẫu cổ phiếu , nhưng đã thay đổi họ, nó sẽ không ghi đè lên các tùy chỉnh thực hiện."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "Giá trị này sẽ được sử dụng như một giữ chỗ cho lĩnh vực cá nhân này . Nếu bạn nhập ' MYTAG ', sau đó nội dung của bạn nên có một trình giữ chỗ %MYTAG% sẽ được thay thế bằng một giá trị trường. Chú ý: không gian sẽ được thay thế bằng một dấu gạch ngang , và % ký tự không được phép."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "Này sẽ xuất hiện trong tài khoản Analytics như một nguồn thăm trang web. Điều này thường là một tên của Danh sách"
+
+"You can generate your API token from the User Preferences page in batchbook CRM" = "Bạn có thể tạo mã thông báo API của bạn từ các trang Sở thích người dùng trong batchbook CRM"
+
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "Tên tài khoản Batchbook của bạn, như nó xuất hiện trong URL mà bạn sẽ truy cập trong trình duyệt ; IE : https://ACCOUNT.batchbook.com . Chỉ bao gồm các phần TÀI KHOẢN ."
+
+
+
+
+
+
+
+"##### 2011-08-01 #####" = "# # # # # # 2011-08-01 # # # #"
+
+
+
+"Include your Freshbooks account name" = "Bao gồm tên tài khoản của bạn Freshbooks"
+
+
+
+"Recommended for synchronization with external database" = "Đề nghị cho đồng bộ hóa với cơ sở dữ liệu bên ngoài"

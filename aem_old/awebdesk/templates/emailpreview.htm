@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+{if $public}{assign var=basepath value=''}{else}{assign var=basepath value='../'}{/if}
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset={"utf-8"|i18n}" />
+	<meta http-equiv="Content-Language" content="{"en-us"|i18n}" />
+	<link href="css/default.css" rel="stylesheet" type="text/css" />
+	{adesk_js lib="scriptaculous/prototype.js"}
+	{adesk_js lib="scriptaculous/scriptaculous.js"}
+	{adesk_js acglobal="ajax,dom,b64,str,array,utf,ui,paginator,loader,tooltip,date,custom_fields,editor,form,progressbar"}
+	<title>{"Inbox Preview"|alang}</title>
+
+<style type="text/css">
+{literal}
+
+	body{
+		overflow:hidden;
+	}
+
+	h2 {
+		margin: 20px 0;
+	}
+
+	.client_name {
+		font-weight:bold;
+	}
+
+	.client_name a, .client_name a:visited {
+
+	}
+
+	ul {
+
+		height: 75px;
+		list-style-type: none;
+		margin: 0;
+		overflow: scroll;
+		padding: 0;
+		width:100%;
+		border:1px solid #EDA7A7;
+		margin-top:6px;
+
+	}
+
+	li {
+		font-family: "Courier New", Courier;
+	}
+
+
+	.current {
+		border-top:1px solid #F1DF0A;
+		border-bottom:1px solid #F1DF0A;
+		background: #ffc !important;
+	}
+
+	.one,
+	.two {
+		padding:10px;
+		paddint-top:5px;
+		padding-bottom:5px;
+	}
+
+	.one {
+		background: #EFEDDE;
+	}
+
+	.two {
+		background: #F8F7ED;
+	}
+
+	.issue_container{
+		border-left:1px solid #FF0000;
+		padding-left:5px;
+
+	}
+	.issue {
+		margin-bottom: 3px;
+	}
+
+	.issues_some {
+		color: red;
+		margin-bottom:4px;
+	}
+
+	.issues_none {
+		color: green;
+	}
+
+	.emailpreview_source_display {
+		display: none; /* hidden for now */
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+	}
+
+	.header{
+		background:#333333;
+		padding:10px;
+		padding-left:15px;
+		color:#FFFFFF;
+		font-size:14px;
+
+	}
+
+{/literal}
+</style>
+
+<script>
+<!--
+
+{include file="emailpreview.js"}
+
+-->
+</script>
+</head>
+
+<body>
+
+	<div id="form">
+
+		<div style="position:absolute; top:11px; right:95px;">
+{if $campaign and $campaign.type == 'split'}
+			<a href="#" onclick="adesk_dom_toggle_class('message_select','adesk_block','adesk_hidden'); return false;" style="margin-right: 25px;color:#CCCCCC;">{"View Other Messages"|alang}</a>
+{/if}
+			 
+			<a href="#" onclick="adesk_dom_toggle_class('email_report','adesk_block','adesk_hidden'); return false;" style="color:#CCCCCC;">{"Email This Report"|alang}</a>
+		</div>
+
+{if $campaign and $campaign.type == 'split'}
+		<div id="message_select" class="adesk_hidden" style="position:absolute; top:32px; right:300px;">
+			<div style="position:absolute; margin-top:-5px; margin-left:164px;"><img src="../awebdesk/media/email-preview-send-arrow.gif"></div>
+			<div style="border:3px solid #CCCCCC;">
+			<div style="border:1px solid #666666; background:#FFFFFF; padding:8px;">
+			<select name="emailpreview_message_select" id="emailpreview_message_select" size="1" style="width: 150px;">
+			{foreach from=$campaign.messages item=m}
+				<option value="{$m.id}" {$m.id|adesk_isselected:$messageid}>{$m.subject|truncate:50}</option>
+			{/foreach}
+			</select>
+			<input type="button" value="{"Show"|alang}" id="email_button" onclick="emailpreview_message_switch();" />
+			</div>
+			</div>
+		</div>
+{/if}
+
+		<div id="email_report" class="adesk_hidden" style="position:absolute; top:32px; right:75px;">
+			<div style="position:absolute; margin-top:-5px; margin-left:164px;"><img src="../awebdesk/media/email-preview-send-arrow.gif"></div>
+			<div style="border:3px solid #CCCCCC;">
+			<div style="border:1px solid #666666; background:#FFFFFF; padding:8px;">
+			<input type="text" name="emailpreview_message_email" id="emailpreview_message_email" onkeypress="adesk_dom_keypress_doif(event, 13, emailpreview_message_send);" style="width: 150px;" />
+			<input type="button" value="{"Send"|alang}" id="email_button" onclick="emailpreview_message_send();" />
+			</div>
+			</div>
+		</div>
+
+
+		<div style="position:absolute; top:8px; right:10px;"><input type="button" value="{"Close"|alang}" onclick="window.close();" /></div>
+		<div class="header">
+			{"Inbox Preview:"|alang} <span id="client_header" style="color:#FFFFD5; font-weight:bold; border-bottom:2px solid #FFFFD5;">{$client_filter_name}</span>
+		</div>
+
+
+
+		{if $campaignParsed}
+
+			<input type="hidden" name="client_filter" id="client_filter" value="{$client_filter}" />
+			<input type="hidden" name="id" value="{$messageid}" />
+			<input type="hidden" name="clients2check" value="{foreach from=$clients2check item=shortname name=counter}{$shortname}{if !$smarty.foreach.counter.last},{/if}{/foreach}" />
+
+			<table id="clients" cellspacing="0" border="0" width="100%">
+
+				<tr>
+
+					<td width="650" align="center" valign="top">
+
+						<iframe src="?showhtml={$client_filter}" name="iframe_html_modified" id="iframe_html_modified" height="563" width="100%" style="border: 0px;" border="0" frameborder="0"></iframe>
+						
+					</td>
+
+					<td valign="top">
+
+						<div style="overflow:scroll; height:563px; overflow-x:hidden; border-left:1px solid #999999;">
+
+							{foreach from=$clients2check item=shortname name=counter}
+
+								{* create var that we can re-use later, since we perform this long test more than once *}
+								{if $clients.$shortname.html_result.issuescnt.style+$clients.$shortname.html_result.issuescnt.inline+$clients.$shortname.html_result.issuescnt.link == 0}
+									{assign var="issues_detected" value="false"}
+								{else}
+									{assign var="issues_detected" value="true"}
+								{/if}
+
+								<div id="{$shortname}_container" class="{if $smarty.foreach.counter.iteration % 2 == 0}one{else}two{/if}{if $client_filter == $shortname} current{/if}">
+
+									<div style="float:left; padding-right:10px;"><img src="../awebdesk/media/{if $issues_detected == "true"}sign_warning.png{else}ok.png{/if}"></div>
+
+									<div class="client_name">
+										<a href="#" onclick="client_show('{$shortname}');return false;">
+											{if isset($clients.$shortname.quickname)}
+												{$clients.$shortname.quickname}
+											{else}
+												{$clients.$shortname.vendor} {$clients.$shortname.software} {$clients.$shortname.version}
+											{/if}
+										</a>
+									</div>
+
+									{if $issues_detected == "false"}
+
+										<div class="issues_none">{"No issues detected!"|alang}</div>
+
+									{else}
+
+										<div class="issues_some">{$clients.$shortname.html_result.issuescnt.style+$clients.$shortname.html_result.issuescnt.inline+$clients.$shortname.html_result.issuescnt.link} {"possible issue(s):"|alang}</div>
+
+										<div id="{$shortname}_issue_container" class="{if $shortname == $client_filter}issue_container{else}adesk_hidden{/if}">
+
+											{foreach from=$clients.$shortname.html_result.issues key=type item=issue}
+
+												{if $type == "locations"}
+
+													{foreach from=$issue key=location item=issue_}
+
+														{foreach from=$issue_ key=element item=issue__ name=counter_}
+
+															<div class="issue">
+																<b>&lt;{$element}&gt;</b> {"in"|alang} <b>&lt;{$location}&gt;</b> {"present"|alang}{if $issue__.occurrences|@count > 1} ({$issue__.occurrences|@count} {"times"|alang}){/if} (<a href="#" onclick="emailpreview_toggle_issues('{$shortname}_issues_locations_{$smarty.foreach.counter_.iteration}');return false;">{"Details"|alang}</a>)
+															</div>
+
+															<ul id="{$shortname}_issues_locations_{$smarty.foreach.counter_.iteration}" class="adesk_hidden">
+																<div style="position:absolute; margin-top:-5px;"><img src="../awebdesk/media/email-preview-arrow.gif"></div>
+																{foreach from=$issue__.occurrences item=occurrence}
+																	<li>{$occurrence.display}</li>
+																{/foreach}
+															</ul>
+
+														{/foreach}
+
+													{/foreach}
+
+												{elseif $type == "selectors"}
+
+													{foreach from=$issue key=selector item=issue_ name=counter_}
+
+														{if $selector == "e"}
+															{assign var="selector_display" value="Type"}
+														{elseif $selector == "e.className"}
+															{assign var="selector_display" value="Class"}
+														{elseif $selector == "e#id"}
+															{assign var="selector_display" value="ID"}
+														{elseif $selector == "e:link"}
+															{assign var="selector_display" value="Link"}
+														{elseif $selector == "e:active"}
+															{assign var="selector_display" value="Link"}
+														{elseif $selector == "e:hover"}
+															{assign var="selector_display" value="Link"}
+														{elseif $selector == "e:first-line"}
+															{assign var="selector_display" value="first-line"}
+														{elseif $selector == "e:first-letter"}
+															{assign var="selector_display" value="first-letter"}
+														{elseif $selector == "e > f"}
+															{assign var="selector_display" value="Child"}
+														{elseif $selector == "e:focus"}
+															{assign var="selector_display" value="focus"}
+														{elseif $selector == "e + f"}
+															{assign var="selector_display" value="Adjacent"}
+														{elseif $selector == "e[foo]"}
+															{assign var="selector_display" value="Attribute"}
+														{else}
+															{assign var="selector_display" value=$selector}
+														{/if}
+
+														<div class="issue">
+															<b>{$selector_display}</b> {"selector present"|alang}{if $issue_.occurrences.total > 1} ({$issue_.occurrences.total} {"times"|alang}){/if} (<a href="#" onclick="emailpreview_toggle_issues('{$shortname}_issues_selectors_{$smarty.foreach.counter_.iteration}');return false;">{"Details"|alang}</a>)
+														</div>
+
+														<ul id="{$shortname}_issues_selectors_{$smarty.foreach.counter_.iteration}" class="adesk_hidden">
+															{foreach from=$issue_.occurrences key=source item=source_occurrences}
+																{if $source != "total"}
+																	{foreach from=$source_occurrences item=occurrence}
+																		{if $source == "style"}
+																			{assign var="source_display" value="&lt;style&gt;"}
+																		{elseif $source == "inline"}
+																			{assign var="source_display" value="inline"}
+																		{else}
+																			{assign var="source_display" value="&lt;link&gt;"}
+																		{/if}
+																		<li>{$occurrence} <span class="emailpreview_source_display">[{$source_display}]</span></li>
+																	{/foreach}
+																{/if}
+															{/foreach}
+														</ul>
+
+													{/foreach}
+
+												{elseif $type == "properties"}
+
+													{foreach from=$issue key=property item=issue_ name=counter_}
+
+														<div class="issue">
+															<b>{$property}</b> {"property present"|alang}{if $issue_.occurrences.total > 1} ({$issue_.occurrences.total} {"times"|alang}){/if} (<a href="#" onclick="emailpreview_toggle_issues('{$shortname}_issues_properties_{$smarty.foreach.counter_.iteration}');return false;">{"Details"|alang}</a>)
+														</div>
+
+														<ul id="{$shortname}_issues_properties_{$smarty.foreach.counter_.iteration}" class="adesk_hidden">
+															{foreach from=$issue_.occurrences key=source item=source_occurrences}
+																{if $source != "total"}
+																	{foreach from=$source_occurrences item=occurrence}
+																		{if $source == "style"}
+																			{assign var="source_display" value="&lt;style&gt;"}
+																		{elseif $source == "inline"}
+																			{assign var="source_display" value="inline"}
+																			{* // reset the $occurrence variable because it is an array for "inline" *}
+																			{assign var="occurrence" value=$occurrence.content}
+																		{else}
+																			{assign var="source_display" value="&lt;link&gt;"}
+																		{/if}
+																		<li>{$occurrence} <span class="emailpreview_source_display">[{$source_display}]</span></li>
+																	{/foreach}
+																{/if}
+															{/foreach}
+														</ul>
+
+													{/foreach}
+
+												{elseif $type == "elements"}
+
+													{foreach from=$issue key=element item=requirements name=counter_}
+
+														{foreach from=$requirements key=requirement item=info}
+
+															<div class="issue">
+																<b>&lt;{$element}&gt;</b> {"property/value"|alang} <b>{$requirement}</b> {"NOT present"|alang}{if $info.total > 1} ({$info.total} {"times"|alang}){/if} (<a href="#" onclick="emailpreview_toggle_issues('{$shortname}_issues_elements_{$smarty.foreach.counter_.iteration}');return false;">{"Details"|alang}</a>)
+															</div>
+
+															<ul id="{$shortname}_issues_elements_{$smarty.foreach.counter_.iteration}" class="adesk_hidden">
+																{foreach from=$info.occurrences item=occurrence}
+
+																	<li style="max-width: 200px;">{$occurrence.element}</li>
+
+																{/foreach}
+															</ul>
+
+														{/foreach}
+
+													{/foreach}
+
+												{/if}
+
+											{/foreach}
+
+										</div>
+
+									{/if}
+
+								</div>
+
+							{/foreach}
+
+						</div>
+
+					</td>
+
+				</tr>
+
+			</table>
+
+		{else}
+
+			<div style="margin:40px; background:url(../awebdesk/media/loader.gif); background-repeat:no-repeat; background-position:left; padding-left:20px;">{"Please wait while your message is checked"|alang}...</div>
+
+			<form method="post" id="hiddencampaignform"></form>
+
+			<script type="text/javascript">
+			{literal}
+
+				if ( typeof window.opener.campaign_obj != 'undefined' ) {
+					//var post = window.opener.campaign_post_prepare();
+				} else {
+					var post = window.opener.message_emailtest_prepare();
+				}
+				var rel = $('hiddencampaignform');
+
+				adesk_dom_remove_children(rel);
+				addarray2hidden(post, '', rel);
+
+				rel.submit();
+
+			{/literal}
+
+			</script>
+
+		{/if}
+
+	</div>
+
+
+<div id="sendfeedback" class="adesk_modal" align="center" style="display:none;">
+  <div class="adesk_modal_inner" align="left">
+	<h1 style="margin:0px; font-size:16px; margin-bottom:10px;">{"Send Us Feedback"|alang}</h3>
+
+	<div class="adesk_help_inline" style="font-size:11px; color:#333333;">
+ While we strive to make inbox preview as accurate as possible, there may be cases where it is not 100% perfect.  We continually update our inbox preview detection and display based on feedback reports.  
+	</div>
+
+	<br />
+
+	<div>
+		If you see any inconsistency between what inbox preview shows and what the email client shows please  send us an email to <b>sandeep@awebdesk.com</b> describing the issue(s).
+	</div>
+	   <input type="button" value='{"Cancel"|alang}' onclick="adesk_dom_display_none('sendfeedback');" />
+	 
+  </div>
+</div>
+</body>
+
+</html>

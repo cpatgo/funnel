@@ -1,0 +1,479 @@
+##### TRANSLATION STRINGS #####
+
+##### Example: original string = your-translation-here #####
+
+
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "( Opcional) Especifique el número de mensajes de correo electrónico que desea enviar con esta conexión de correo antes de buscar la siguiente conexión . Si sólo tiene una conexión de correo este ajuste no importa."
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "( Opcional) Esta opción hará una pausa automáticamente su correo después de un cierto número de mensajes . Esto ayuda a reducir la carga de los servidores de correo . )"
+
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "(Opcional ) Puede especificar un límite de la cantidad de mensajes para enviar en un cierto período de tiempo . ( Ejemplo = Permitir sólo 1.000 correos electrónicos por hora )"
+
+"Attachments will be disabled." = "Se desactivarán Adjuntos ."
+
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "Ambos valores deben ser dados como valores CSS ; 100% sería 100% de la superficie permitida para el editor , o 600px por 600 píxeles."
+
+"Brief Description for you to recognize. Does NOT affect your actual form." = "Breve descripción que usted reconozca . No afecta a su forma actual ."
+
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "Breve descripción que usted reconozca . No afecta a su etiqueta actual personalización."
+
+"Brief Description for you to recognize. Does NOT affect your actual template." = "Breve descripción que usted reconozca . No afecta a su plantilla actual ."
+
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl + clic (o haga clic y arrastre ) para seleccionar / artículos -de selección."
+
+"Enter a brief description for this bounce code here." = "Introduzca una breve descripción de este código de rebote aquí ."
+
+"Enter the character set that will be used on pages where you wish to put this form." = "Introduzca el conjunto de caracteres que se utilizará en las páginas en las que desea poner este formulario."
+
+"Extra users that were not part of the sync will be removed." = "Los usuarios adicionales que no formaban parte de la sincronización serán removidos ."
+
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "Biblioteca GD es necesaria para generar imágenes de la aplicación . El uso más común ( y útil ) son imágenes CAPTCHA ."
+
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "Header tiene que estar en formato ' header-name : valor de la cabecera '"
+
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "Ocultar versión a todos los usuarios , además del usuario admin ? Si se selecciona, la versión no será visible en el panel de control."
+
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "Si Lectura / Tracking Abrir está activada, la imagen rastreador no será Embebido - suscriptores Se volverá a preguntar para descargar imágenes ."
+
+"If authentication is not required, do not enter a password." = "Si no se requiere autenticación, no escriba una contraseña."
+
+"If authentication is not required, do not enter a username." = "Si no se requiere autenticación, no introduzca un nombre de usuario."
+
+"If selected, the software will disable most functions such as deleting, sending and more." = "Si se selecciona, el software inhabilitará la mayoría de las funciones como borrar , enviar y mucho más."
+
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "Si abonado ve la versión del texto , su lectura / abierta se registrará si se hace clic en los enlaces realizados en el mensaje. \ NSi versión HTML es abrir, leer / abrir se registra si se descarguen las imágenes también."
+
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "Si se utiliza la URL , tiene que comenzar con http:// o https://. De lo contrario, se asumirá una ruta de archivo . Si un camino se inicia con '. / ' , Se asumirá la carpeta de la aplicación ."
+
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "Si esta opción está activada, la persona que llena el formulario no será capaz de continuar con el envío de formularios a menos que el campo tiene algún valor introducido."
+
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "Si marca esta opción , se agregará una hora a la GMT offset normal utiliza su zona horaria."
+
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = "Si los agentes de transferencia de correo no incluye el código en forma 5.XX , introduzca una cadena que debe ser igualada por lo que este Código de rebote se puede asignar \ n (ejemplo: ' devuelto : Usuario desconocido")."
+
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "Acuerdo de licencia no le permite establecer su propio derecho de autor, pero puede optar por tener el Invisibe derechos de autor a la vista no código público / . Derechos de autor nunca pueden ser retirados de la código real ."
+
+"List will not be listed on default subscription page." = "Lista no será listado en la página de suscripción predeterminado ."
+
+"Logs will be kept for 30 days." = "Los logs se guardan durante 30 días."
+
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "La mayoría de los agentes de transferencia de correo incluyen el código en forma 5.XX Si el servidor no devuelve los , puede introducir aquí algún identificador para este Código de rebote ."
+
+"Note: this overrides the 'day of the month' option" = "Nota: esto anula el"día del mes"opción"
+
+"Notice: Hold CTRL to select multiple Autoresponders." = "Aviso: Mantenga CTRL para seleccionar varios autoresponders ."
+
+"Notice: Hold CTRL to select multiple destinations." = "Aviso: Mantenga CTRL para seleccionar varios destinos ."
+
+"Notice: Hold CTRL to select multiple items." = "Aviso: Mantenga CTRL para seleccionar varios elementos ."
+
+"Notice: Hold CTRL to select multiple lists." = "Aviso: Mantenga CTRL para seleccionar varias listas."
+
+"Notice: Hold CTRL to select multiple statuses." = "Aviso: Mantenga CTRL para seleccionar varios estados."
+
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este formulario de suscripción será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "Aviso : Esta acción se llevará a cabo en cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este ajuste de rebote será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este encabezado personalizado será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Esta cuenta de correo electrónico será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este patrón de exclusión será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "Aviso: Este mensaje será un miembro de cada grupo seleccionado ! Mantenga CTRL para seleccionar el grupo múltiple."
+
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este mensaje será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Esta personalización será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Este filtro envío será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "Aviso: Esta plantilla será un miembro de cada lista seleccionada ! Mantenga CTRL para seleccionar varias listas."
+
+"Place one email matching pattern per line." = "Coloque una coincidencia de patrones de correo electrónico por línea."
+
+"Please check if any vital function is listed here." = "Por favor, compruebe si alguna función vital en esta lista."
+
+"Separate multiple emails by comma, semicolon or space" = "Separe las direcciones mediante una coma , punto y coma o espacio"
+
+"Sessions need to be enabled in order for this application to work." = "Sesiones deben estar activados para que esta aplicación funcione ."
+
+"Set * for 'every hour'." = "Ajuste * por ' cada hora ' ."
+
+"Set * for 'every minute'." = "Ajuste * por ' cada minuto ' ."
+
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "Rebotes suaves por lo general son correos electrónicos que no fueron entregadas (todavía ) , pero el problema parece ser temporal. Rebotes duros son los que más probabilidades permanente (como la ' dirección de email no es válida ' , etc )"
+
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "Algunas secuencias de comandos podrían no terminar la ejecución dentro del plazo permitido , que se establece a un valor inferior a un valor predeterminado de PHP (30 segundos ) ."
+
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "Suscriptor recibirá un correo electrónico opt -in con un enlace para confirmar la lista de suscripción ( s ) ."
+
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "Los Analytics número debe aparecer en el formato UA- xxxxxxx -y. El ' - Y' hacia el final se refiere al número de perfil ."
+
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "El contenido de este campo se mostrará como una información sobre herramientas cuando el visitante se cierne sobre el campo ."
+
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "La etiqueta de este campo ( un título) puede demostrar tanto sobre el campo , o en su lado fue."
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "Esta función utilizará el plugin mod_rewrite de Apache para formatear sus direcciones URL públicas para aparecer más descriptivo , mencionando por ejemplo el título de un artículo o de una categoría en la URL."
+
+"This is just a label for your own internal use" = "Esto es sólo una etiqueta para su propio uso interno"
+
+"This is the character that separates the fields within the file. Usually this is a comma." = "Este es el carácter que separa los campos dentro del archivo. Por lo general, esta es una coma ."
+
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "Éste es el nombre interno para que usted utilice . Cada trabajo cron debe tener un identificador único."
+
+"This value is too low, and this server imposed limit cannot be changed." = "Este valor es demasiado bajo , y este límite servidor impuesta no se puede cambiar ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "Este valor se utiliza como un marcador de posición para este campo de la personalización. Si introduce ' MyTag ' , entonces su contenido debe tener un marcador de posición %MyTag% que sería reemplazado por un valor de campo ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "Esto aparecerá en su cuenta de Analytics como Fuente de visitas al sitio. Esto suele ser un nombre de Boletín"
+
+"This will turn this Cron Job on or off" = "Esto a su vez esta Cron Job o desactivar"
+
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "Al guardar, el sistema intentará añadir este contenido a tu htaccess . Si no lo tiene ya . Si el archivo no se puede escribir , usted tendrá que poner esto en el archivo %s"
+
+"User will not have options for lists and will not see lists they are subscribing to." = "El usuario no tendrá opciones para las listas y no ver las listas que están suscribiendo a ."
+
+"User will receive a single email confirmation that will be for all the lists selected." = "Usuario recibirá un correo electrónico de confirmación , que será para todas las listas de seleccionados."
+
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "Usuario recibirá un email de confirmación para cada lista que tiene el correo electrónico de confirmación opt-in/out encendido."
+
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "Con el modo seguro , el guión no será capaz de ajustar la configuración del servidor para un rendimiento óptimo ."
+
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Usted es capaz de especificar una selección de texto que se incluirá en la parte inferior de todos los envíos , independientemente de lo que el usuario o la lista se está utilizando . Dejar en blanco si no desea utilizar esta función."
+
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Usted es capaz de especificar una selección de texto que se incluirá en la parte superior de todos los envíos , independientemente de lo que el usuario o la lista se está utilizando . Dejar en blanco si no desea utilizar esta función."
+
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "Usted es responsable de escapar ! Además, si la construcción de una lista, a continuación, las cadenas deben ser encapsulados con citas ."
+
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "Su servidor impone las siguientes limitaciones: el tamaño máximo de carga de archivos es %s , y el tamaño máximo de mensaje es %s ."
+
+"Your server is set to allow less memory than this script requires." = "El servidor está configurado para permitir menos memoria que este guión lo requiere."
+
+
+
+
+
+
+
+##### 2009-05-28 #####
+
+
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "%REPORTLINK% es la abreviatura del vínculo de informe común que se ve arriba."
+
+
+
+
+
+
+
+##### 2009-07-10 #####
+
+
+
+"Notice: Hold CTRL to select multiple formats." = "Aviso: Mantenga CTRL para seleccionar varios formatos."
+
+
+
+
+
+
+
+##### 2009-07-14 #####
+
+
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "( Opcional) Esta opción hará una pausa automáticamente su correo después de un cierto número de mensajes . Esto ayuda a reducir la carga de los servidores de correo ."
+
+"The label of this field (a title) can be shown both above the field, or on its left side." = "La etiqueta de este campo ( un título) puede demostrar tanto sobre el campo , o en su lado izquierdo."
+
+
+
+
+
+
+
+##### 2009-08-27 #####
+
+
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "Esta función utilizará el plugin mod_rewrite de Apache para formatear sus direcciones URL públicas para aparecer más descriptivo , mencionando por ejemplo el título de una lista o formulario en la URL."
+
+
+
+
+
+
+
+##### 2009-11-25 #####
+
+
+
+"Separate multiple emails by comma" = "Separe las direcciones mediante comas"
+
+
+
+
+
+
+
+##### 2009-12-21 #####
+
+
+
+"Begin typing their name and live results will be displayed." = "Comience a escribir aparecerán su nombre y resultados en vivo ."
+
+
+
+
+
+
+
+##### 2010-03-28 #####
+
+
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "Todas las campañas enviadas a esta lista serán enviados a la dirección de correo electrónico facilitada ( es) . Separe las direcciones mediante comas"
+
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "Todos los suscriptores que denuncian los abusos serán eliminados de la lista, y los informes de abuso se registrarán."
+
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "Marque esta opción si desea permitir que una sola campaña que se enviará a una sola dirección de correo electrónico varias veces. Varios correos electrónicos sólo se envían si un correo electrónico es suscrito varias veces a la misma lista ."
+
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "Marque esta opción si desea permitir que los suscriptores se suscriben varias veces a esta lista con la misma dirección de correo electrónico."
+
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "Si se utilizan direcciones URL de búsqueda amigable , esta lista puede tener una identificación legible por humanos que será una parte de los enlaces."
+
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "Si marca esta opción se enviarán todos los nuevos suscriptores una copia de la última campaña que envió inmediatamente después de suscribirse ."
+
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "Si marca esta opción se les pedirá a sus suscriptores por qué no suscribirse después de darse de baja de esta lista. Los suscriptores no tienen necesarily dar razón cuando darse de baja - pero esta opción les pide que presenten su razón si les gustaría compartir esa información."
+
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "Si marca esta opción a sus suscriptores tendrán que mirar una imagen y entrar en los personajes que ven el fin de suscribir. Esto se utiliza para prevenir bots automatizados o software automatizado de suscribirse a su lista."
+
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "Si usted personaliza una campaña con el nombre de los suscriptores - y un abonado no introduzca un nombre - que utilizará este nombre por defecto como su nombre al enviar esa campaña."
+
+"Select the field that has the date which you want to send an email based off of." = "Seleccione el campo que tiene la fecha en la que desea enviar un correo electrónico con sede fuera de ."
+
+"Select the format that you are saving the date as in your subscriber field you have selected." = "Seleccione el formato que va a guardar la fecha como en su campo abonado que ha seleccionado."
+
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "Hay una sección pública donde los suscriptores pueden gestionar su suscripción y ver las campañas pasadas. Si marca esta casilla de esta lista no se mostrará en la sección pública ."
+
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "Este se utiliza en el archivo público y también en la sección administrativa . Las listas se utilizan para agrupar conjuntos de suscriptores"
+
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "Cuando un usuario se suscribe se les pide que introduzca un nombre. Si marca esta casilla no será dejar que suscribirse a menos que introduzca un nombre"
+
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Cada vez que un suscriptor se suscribe a esta lista, el sistema le enviará un correo electrónico a estos destinatarios . Separe las direcciones mediante comas"
+
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Cada vez que un suscriptor cancela la suscripción de esta lista, el sistema le enviará un correo electrónico a estos destinatarios . Separe las direcciones mediante comas"
+
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "Usted puede elegir cómo hacer coincidir la fecha . Si usted está tratando de enviar un correo electrónico de cumpleaños que se elija ' Mes y Día"como que se correspondería con todo, pero el año ."
+
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "Puede elegir que el correo electrónico enviar antes o después , cuando la fecha coincide . Si desea enviar un correo electrónico 3 días antes de su cumpleaños debe seleccionar ' Día Mes y' como el tipo de concordancia y luego seleccione ' - 3 Days' como el desplazamiento . Si usted quiere tener el correo electrónico envía en el día exacto que coincida dejarías las compensado establecido en día '0 '"
+
+
+
+
+
+
+
+##### 2010-04-07 #####
+
+
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "Durante la importación de los suscriptores, que se enviarán las Respuestas automáticas instantáneas que pueda tener la instalación."
+
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "Si usted tiene esta opción seleccionada esta campaña se enumeran en el archivo público de su software. El archivo público es parte de la sección pública del software donde sus abonados ( y otros visitantes ) pueden ver las campañas anteriores y gestionar sus suscripciones."
+
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "Los suscriptores serán tratados igual que cualquier persona que suscribió desde el lado público o un formulario de suscripción ; todos los autoresponders instantáneos y / o tardías serán enviados a su debido tiempo."
+
+"These subscribers will never receive any further AutoResponders setup in the system." = "Estos suscriptores nunca recibirán ningún tipo de configuración adicional Respuestas automáticas en el sistema."
+
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "Puede marcar ciertos autoresponders como ya se ha enviado a estos suscriptores, el número de abonados de casos importados no debe recibir algunos de ellos."
+
+
+
+
+
+
+
+##### 2010-07-02 #####
+
+
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "En algunos casos, sobre todo Active Directory, el nombre de usuario que normalmente se identifique como no es en realidad lo que el servidor espera a través de su interfaz normal de LDAP. Este campo es el nombre del atributo que desea utilizar para acceder al sistema . En la mayoría de los casos , el valor que debe ir de aquí sería ' samAccountName ' ."
+
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "En algunos casos, especialmente con Active Directory, hay que iniciar sesión con una cuenta administrativa antes de que realmente podemos iniciar sesión con un usuario. En ese caso, debería colocar aquí el nombre distinguido completo del usuario administrativo del servidor LDAP (por ejemplo, cn = Administrador , ou = usuarios , dc = dominio, dc = com) ."
+
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "El atributo que el servidor LDAP espera que nos registramos en con . En la gran mayoría de los casos , este campo debe ser ' cn ' ( abreviatura de"nombre común")."
+
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "La base del nombre completo que los usuarios iniciar sesión con ; por ejemplo, ou = usuarios , dc = dominio, dc = com"
+
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "El nombre distintivo de una cuenta de administrador , necesarios para el proceso de inicio de sesión de Active Directory. Ejemplo : cn = Administrador , ou = usuarios , dc = dominio, dc = com"
+
+"The password for the administrator account, mentioned above." = "La contraseña para la cuenta de administrador , mencionado anteriormente."
+
+"The password of the administrative user mentioned above." = "La contraseña del usuario administrativo antes mencionado."
+
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "Con esta marcada, vamos a iniciar la sesión con un nombre distinguido completamente formado (cn = usuario, ou = usuarios , dc = dominio, dc = com) ; sin ella , vamos a iniciar la sesión con"usuario"y dejamos que las cosas servidor de resolver."
+
+
+
+
+
+
+
+##### 2010-09-07 #####
+
+
+
+"The location of this software on the web. To change this, run Updater from a new location." = "La ubicación de este software en la web . Para cambiar esto, Updater ejecuta desde un nuevo lugar."
+
+
+
+
+
+
+
+##### 2010-09-30 #####
+
+
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "Después de entrar en Twitter , se le pedirá que confirme que AwebDesk se le permite actualizar su cuenta de Twitter, a continuación, copie el número PIN."
+
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "Para actualizar una cuenta de Twitter diferente, desmarque Twitter anteriormente, guardar , y luego volver y vuelva a introducir la información."
+
+
+
+
+
+
+
+##### 2010-12-01 #####
+
+
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "Cualquier usuario que pueda iniciar sesión en la sección de administración de SugarCRM puede autenticar aquí"
+
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "Al marcar esta casilla , no se importarán todas las direcciones de correo electrónico que han sido previamente no suscritos debido a los numerosos rebotes en el pasado."
+
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "Al marcar esta casilla , cualquier abonado en este proceso de importación, que ya están presentes en el sistema se actualizará con cualquier nueva información sobre los abonados que se encuentra en el proceso de importación. Si esta casilla no está marcada, los suscriptores se omitirán durante la importación ( los datos de los abonados no se actualizarán ) ."
+
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "Campañas enviados a esta lista serán enviados al servicio de notificación de Twitter y crearán un tweet que enlaza con copia de la tela de su campaña."
+
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "Si hay un atributo TITLE en sus enlaces , el software se suministra el primer valor de atributo TITLE que encuentra para el enlace específico. Usted puede cambiar esto más adelante."
+
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "Si desactiva esta opción, los suscriptores que está importando ahora nunca recibirán ningún auto-respuesta ; ahora ni en el futuro ."
+
+"Recommended for large scale imports" = "Recomendaciones para las importaciones a gran escala"
+
+"Recommended for small scale imports" = "Recomendaciones para las importaciones de pequeña escala"
+
+"Recommended for synchronization with external services/applications" = "Recomendado para la sincronización con los servicios / aplicaciones externas"
+
+"The default subject any message begins with when you select this template." = "El asunto por defecto cualquier mensaje comienza con cuando se selecciona esta plantilla."
+
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "Los suscriptores importados serán marcados como ya se ha recibido estas respuestas automáticas , por lo que estos no serán enviados a ellos."
+
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "Esta es tu FreshBooks nombre de cuenta , que se encuentra en la URL. IE : https://ACCOUNT.freshbooks.com . Proporcione simplemente el nombre de la cuenta , y no la URL."
+
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "Esta es su token de autenticación única, que se le proporciona en la página de API FreshBooks . En Freshbooks , vaya a Mi Cuenta | API FreshBooks ."
+
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "Este será un reflejo de la autenticación de Twitter de esta lista a todas las listas , es decir, todos los envíos se actualizarán a esta cuenta de Twitter"
+
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "Para generar su clave de API , inicie sesión en Zoho CRM, a continuación, vaya a Configuración | Crm API Key | Generar Ahora"
+
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "Cuando esta opción está marcada la última campaña que envió será enviada a cada abonado , ya que se importan ."
+
+"You can find your API token from the More | My Settings page in Capsule" = "Usted puede encontrar el token de la API más | Mi página Configuración de la cápsula"
+
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "Puede obtener el token de seguridad , acceda a Salesforce , e ir a SU NOMBRE | Configuración | Restablecer su token de seguridad ( bajo mi información personal ) . A continuación, se enviará por correo electrónico el token de seguridad."
+
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "Su nombre de la aplicación de la cápsula , tal como aparece en la URL que usted podrá acceder en un navegador ; IE : https://APP.capsulecrm.com . Sólo incluye la porción de APP ."
+
+"Your Zoho username or email address" = "Su nombre de usuario Zoho o dirección de correo electrónico"
+
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "Sus datos de autenticación no se guardan en este servidor. Debes ellos volver a entrar cada vez."
+
+"Your unique URL to your SugarCRM installation" = "Su URL única para la instalación de SugarCRM"
+
+
+
+
+
+
+
+##### 2011-02-23 #####
+
+
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "Después de iniciar sesión en Facebook , se le pedirá que confirme que AwebDesk está autorizado a actualizar su cuenta de Facebook ."
+
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "Campañas enviados a esta lista será automáticamente enviado a Facebook con un enlace a su copia de la tela de la campaña."
+
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "Campañas enviados a esta lista será automáticamente enviado a Twitter con un enlace a su copia de la tela de la campaña."
+
+
+
+
+
+
+
+##### 2011-03-17 #####
+
+
+
+"You can generate your API token from the User Preferences page in Tactile CRM" = "Puede generar el token de API en la página de Preferencias de usuario en CRM táctil"
+
+"Your Tactile CRM application name, as it appears in the URL that you would access in a browser; IE: https://APP.tactilecrm.com. Just include the APP portion." = "Su nombre de la aplicación CRM táctil , tal como aparece en la URL que usted podrá acceder en un navegador ; IE : https://APP.tactilecrm.com . Sólo incluye la porción de APP ."
+
+
+
+
+
+
+
+##### 2011-04-06 #####
+
+
+
+"The user who owns the list will determine which branding settings the list uses." = "El usuario propietario de la lista se determinará qué ajustes branding utiliza la lista ."
+
+
+
+
+
+
+
+##### 2011-07-13 #####
+
+
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "Este botón volver a importar todas las plantillas de las acciones. NOTA: Esto sólo importar plantillas globales de acciones que se están perdiendo . Si ya dispone de algunas plantillas de acciones, sino que las ha modificado , no va a sobrescribir las personalizaciones realizadas ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "Este valor se utiliza como un marcador de posición para este campo de la personalización. Si introduce ' MyTag ' , entonces su contenido debe tener un marcador de posición %MYTAG% que sería reemplazado por un valor de campo . NOTA : los espacios serán reemplazados por un guión y % caracteres no están permitidos ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "Esto aparecerá en su cuenta de Analytics como Fuente de visitas al sitio. Esto suele ser un nombre de la lista"
+
+"You can generate your API token from the User Preferences page in batchbook CRM" = "Puede generar el token de API en la página de Preferencias de usuario en CRM BatchBook"
+
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "Tu nombre de cuenta Batchbook , tal como aparece en la URL que usted podrá acceder en un navegador ; IE : https://ACCOUNT.batchbook.com . Sólo incluye la porción CUENTA."
+
+
+
+
+
+
+
+##### 2011-08-01 #####
+
+
+
+"Include your Freshbooks account name" = "Incluya su nombre de cuenta Freshbooks"
+
+
+
+"Recommended for synchronization with external database" = "Recomendado para la sincronización con la base de datos externa"

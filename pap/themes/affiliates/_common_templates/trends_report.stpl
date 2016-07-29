@@ -1,0 +1,91 @@
+<!-- trends_report -->
+<table class="TrendStats">
+    <tbody>
+        <tr class="gray">
+            <td>##Impressions##</td>
+            <td>##Repeated##</td>
+            <td>##Unique##</td>
+            <td>##All##</td>
+        </tr>
+        <tr class="light">
+            <td>##number##</td>
+            <td>{$selected.impressions->count->raw|number_span}</td>
+            <td>{$selected.impressions->count->unique|number_span}</td>
+            <td>{$selected.impressions->count->all|number_span}</td>
+        </tr>
+        <tr class="dark">
+            <td>##cost##</td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##impressions repeated##({$selected.impressions->count->raw})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.impressions->count->raw}</td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##impressions unique##({$selected.impressions->count->unique})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.impressions->count->unique}</td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##impressions##({$selected.impressions->count->all})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.impressions->count->all}</td>
+        </tr>
+    </tbody>
+</table>        
+
+<table class="TrendStats">
+    <tbody>
+        <tr class="gray">
+            <td>##Clicks##</td>
+            <td>##Repeated##</td>
+            <td>##Unique##</td>
+            <td>##Declined##</td>
+            <td>##All##</td>
+        </tr>
+        <tr class="light">
+            <td>##numbers##</td>
+            <td>{$selected.clicks->count->raw|number_span}</td>
+            <td>{$selected.clicks->count->unique|number_span}</td>
+            <td>{$selected.clicks->count->declined|number_span}</td>
+            <td>{$selected.clicks->count->all|number_span}</td>
+        </tr>
+        <tr class="dark">
+            <td>##cost##</td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##clicks repeated##({$selected.clicks->count->raw})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.clicks->count->raw}</td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##clicks unique##({$selected.clicks->count->unique})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.clicks->count->unique}</td>
+            <td ><span class="NumberData">-</span></td>
+            <td title="##commissions##({$selected.transactions->commission->all}) : ##clicks##({$selected.clicks->count->all})">{ratio|currency_span p1=$selected.transactions->commission->all p2=$selected.clicks->count->all}</td>
+        </tr>
+        <tr class="light">
+            <td>##CTR##</td>
+            <td><span class="NumberData" title="##clicks repeated##({$selected.clicks->count->raw}) : ##impressions raw##({$selected.impressions->count->raw})">{ratioPercentage p1=$selected.clicks->count->raw p2=$selected.impressions->count->raw}</span></td>
+            <td><span class="NumberData" title="##clicks unique##({$selected.clicks->count->unique}) : ##impressions unique##({$selected.impressions->count->unique})">{ratioPercentage p1=$selected.clicks->count->unique p2=$selected.impressions->count->unique}</span></td>
+            <td><span class="NumberData">-</span></td>
+            <td><span class="NumberData" title="##clicks##({$selected.clicks->count->all}) : ##impressions##({$selected.impressions->count->all})">{ratioPercentage p1=$selected.clicks->count->all p2=$selected.impressions->count->all}</span></td>
+        </tr>
+    </tbody>
+</table>       
+    
+<table class="TrendStats">
+    <tbody> 
+        <tr class="gray">
+            <td>##Totals##</td>
+            <td></td>
+        </tr>    
+        <tr class="light">
+            <td>##Commissions##</td>
+            <td>{$selected.transactions->commission->all|currency_span}</td>
+        </tr>
+        <tr class="dark">
+            {if  $selected.transactionTypesFirstTier->types[2]->totalCost->all +
+                 $selected.transactionTypesFirstTier->types[3]->totalCost->all == 0
+            }
+                <td>##Revenue##</td>
+                <td>{$selected.transactionsFirstTier->totalCost->all|currency_span}</td>
+            {else}
+                <td>##Revenue##<br><span style="font-size:10px">total / <span style="color:#B33024">refunds and charge backs</span></span></td>
+                <td>
+                    {math equation="x-y-z" x=$selected.transactionsFirstTier->totalCost->all y=$selected.transactionTypesFirstTier->types[2]->totalCost->all z=$selected.transactionTypesFirstTier->types[3]->totalCost->all assign=selectedTotalCost}
+                    {math equation="x-y-z" x=$selectedTotalCost y=$selected.transactionTypesFirstTier->types[2]->totalCost->all z=$selected.transactionTypesFirstTier->types[3]->totalCost->all assign=selectedTotalCostMinusLoss}{$selectedTotalCostMinusLoss|currency_span} <br>
+                    <span style="font-size:10px">
+                        {math equation="x+y+z" x=$selectedTotalCostMinusLoss y=$selected.transactionTypesFirstTier->types[2]->totalCost->all z=$selected.transactionTypesFirstTier->types[3]->totalCost->all assign=selectedTotalCost}{$selectedTotalCost|currency_span} / 
+                        {math equation="-x-y" x=$selected.transactionTypesFirstTier->types[2]->totalCost->all y=$selected.transactionTypesFirstTier->types[3]->totalCost->all assign=selectedTotalLoss}{$selectedTotalLoss|currency_span}
+                    </span>
+                </td>
+            {/if}
+        </tr>
+        <tr class="light">
+            <td>##avg commission##</td>
+            <td><span class="NumberData" title="##commissions##({$selected.transactions->commission->all}) : ##total cost##({$selected.transactionsFirstTier->totalCost->all})">{ratioPercentage p1=$selected.transactions->commission->all p2=$selected.transactionsFirstTier->totalCost->all}</span></td>
+        </tr>                        
+    </tbody>
+</table>         

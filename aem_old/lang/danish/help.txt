@@ -1,0 +1,240 @@
+##### TRANSLATION STRINGS #####
+##### Example: original string = your-translation-here #####
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "(Valgfrit) Angiv, hvor mange e-mails du ønsker at sende med denne mail-forbindelse, før udkig efter den næste forbindelse. Hvis du kun har én mail tilslutning denne indstilling betyder ikke noget."
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "(Ekstraudstyr) Denne indstilling vil automatisk pause din adresseliste efter et bestemt antal beskeder. Dette hjælper med at reducere din mailservere belastning.)"
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "(Valgfrit) Du kan angive en grænse for antallet af e-mails til at sende i en bestemt periode. (Eksempel = Tillad kun 1.000 e-mails i timen)"
+"Attachments will be disabled." = "Bilag vil blive deaktiveret."
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "Begge værdier skal gives som CSS værdier; 100% ville være 100% af det tilladte område for redaktøren, eller 600px 600 pixels."
+"Brief Description for you to recognize. Does NOT affect your actual form." = "Kort beskrivelse for dig at genkende. Påvirker ikke din faktiske formular."
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "Kort beskrivelse for dig at genkende. Påvirker ikke din faktiske personalisering tag."
+"Brief Description for you to recognize. Does NOT affect your actual template." = "Kort beskrivelse for dig at genkende. Påvirker ikke din faktiske skabelon."
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl + klik (eller klik og træk) for at vælge / fravælge elementer."
+"Enter a brief description for this bounce code here." = "Indtast en kort beskrivelse af denne bounce kode her."
+"Enter the character set that will be used on pages where you wish to put this form." = "Indtast det tegnsæt, som vil blive brugt på sider, hvor du ønsker at sætte denne formular."
+"Extra users that were not part of the sync will be removed." = "Ekstra brugere, der ikke var en del af sync vil blive fjernet."
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "GD Library er nødvendig for at generere billeder fra programmet. Mest almindelige (og nyttigt) brug er CAPTCHA-billeder."
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "Header skal være i formatet 'header-NAME: HEADER VALUE'"
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "Skjul udgave til alle brugere udover bruger admin? Hvis valgt, vil den version ikke være synlig i kontrolpanelet."
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "Hvis Læs / Open Tracking er tændt, vil tracker billede ikke embeded - abonnenter vil stadig blive bedt om at hente billeder."
+"If authentication is not required, do not enter a password." = "Hvis godkendelse ikke er nødvendig, skal du ikke indtaste en adgangskode."
+"If authentication is not required, do not enter a username." = "Hvis godkendelse ikke er nødvendig, skal du ikke angive brugernavn."
+"If selected, the software will disable most functions such as deleting, sending and more." = "Hvis valgt, vil softwaren deaktivere de fleste funktioner, såsom sletning, afsendelse og mere."
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "Hvis abonnenten ser tekstversion, vil hans læse / åbne logget hvis han klikker eventuelle sporede links i meddelelsen. \ NHvis HTML-version er åbne, læse / åben bliver logget, hvis billederne er hentet så godt."
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "Hvis der anvendes URL'en, det har at starte med http:// eller https://. Ellers vil en filsti antages. Hvis en sti begynder med '. /', Programmappen vil blive antaget."
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "Hvis denne indstilling er markeret, vil personen udfylde formularen ikke være i stand til at fortsætte med formularindsendelse medmindre feltet har en vis værdi indtastes."
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "Hvis du markerer denne indstilling, vil en time blive tilføjet til den normale GMT offset din tidszone bruger."
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = "Hvis din mail transfer agenter ikke omfatter koden i formularen 5.XX indtaste en streng, der skal matches, så denne Bounce kodeks kan tildeles \ n (eksempel: 'gav: Unknown User')."
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "Licensaftale giver dig ikke mulighed for at indstille din egen ophavsret, men du kan vælge at have ophavsretten invisibe til offentlig / non-kode visning. Ophavsrettigheder kan aldrig fjernes fra selve koden."
+"List will not be listed on default subscription page." = "Listen vil ikke blive noteret på standard abonnement side."
+"Logs will be kept for 30 days." = "Logs vil blive holdt i 30 dage."
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "De fleste mail transfer midler omfatter koden i formularen 5.XX Hvis serveren ikke returnere dem, kan du indtaste her nogle identifikator for denne Bounce kodeks."
+"Note: this overrides the 'day of the month' option" = "Bemærk: Denne tilsidesætter 'dag i måneden' muligheden"
+"Notice: Hold CTRL to select multiple Autoresponders." = "Bemærk: Hold CTRL nede for at vælge flere autosvar."
+"Notice: Hold CTRL to select multiple destinations." = "Bemærk: Hold CTRL nede for at vælge flere destinationer."
+"Notice: Hold CTRL to select multiple items." = "Bemærk: Hold CTRL nede for at vælge flere elementer."
+"Notice: Hold CTRL to select multiple lists." = "Bemærk: Hold CTRL nede for at vælge flere lister."
+"Notice: Hold CTRL to select multiple statuses." = "Bemærk: Hold CTRL nede for at vælge flere statusser."
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Dette abonnement formular vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne handling vil blive udført på hver valgte liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne bounce indstilling vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne brugerdefineret sidehoved vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne e-mail-konto vil være medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne udelukkelse mønster vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "Bemærk: Denne meddelelse vil være et medlem af hver enkelt udvalgt gruppe! Hold CTRL nede for at vælge flere gruppe."
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne meddelelse vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne personalisering vil være medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Dette sender filter vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "Bemærk: Denne skabelon vil være et medlem af hver enkelt udvalgt liste! Hold CTRL nede for at vælge flere lister."
+"Place one email matching pattern per line." = "Placer en email matchende mønster per linje."
+"Please check if any vital function is listed here." = "Kontroller, om nogen vital funktion er anført her."
+"Separate multiple emails by comma, semicolon or space" = "Adskil flere e-mails med komma, semikolon eller mellemrum"
+"Sessions need to be enabled in order for this application to work." = "Sessions skal aktiveret for at denne ansøgning til at arbejde."
+"Set * for 'every hour'." = "Sæt * for 'hver time'."
+"Set * for 'every minute'." = "Sæt * for"hvert minut"."
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "Bløde afvisninger normalt emails, der ikke blev leveret (endnu), men problemet synes at være timelige. Hårde afvisninger er dem, der mest sandsynligt permanent (såsom"ugyldig e-mail-adresse ', osv.)"
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "Nogle scripts måske ikke færdig udførelse inden for den tilladte tidsramme, der er indstillet til en lavere værdi end en standard PHP-værdi (30 sekunder)."
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "Abonnent vil modtage en opt-in e-mail med et link til at bekræfte liste abonnement (r)."
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "Analytics-kontonummeret skal vises i formatet UA-xxxxxxx-y. Den '-y' i slutningen henviser til profilen nummer."
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "Indholdet af dette felt vil vise sig som et værktøjstip, når besøgende svæver over marken."
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "Mærket af dette felt (en titel) kan vises både over feltet, eller om det er venstre side."
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "Denne funktion vil bruge Apaches mod_rewrite plugin til at omformatere sine offentlige webadresser til at fremstå mere beskrivende, at nævne for eksempel titlen på en artikel eller kategori i webadressen."
+"This is just a label for your own internal use" = "Dette er blot en etiket for din egen interne brug"
+"This is the character that separates the fields within the file. Usually this is a comma." = "Det er det tegn, der adskiller felterne i filen. Normalt er dette et komma."
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "Det er det interne navn for dig at bruge. Hver cron job skal have en entydig identifikation."
+"This value is too low, and this server imposed limit cannot be changed." = "Denne værdi er for lav, og denne server fastsatte grænse kan ikke ændres."
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "Denne værdi vil blive brugt som pladsholder for dette personalisering felt. Hvis du indtaster 'MYTAG', så dit indhold skal have en pladsholder %MYTAG%, der ville blive erstattet med et felt værdi."
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "Dette vil blive vist i din Analytics-konto som en kilde til besøg på stedet. Dette er normalt et navn Nyhedsbrev"
+"This will turn this Cron Job on or off" = "Dette vil igen denne Cron Job til eller fra"
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "Ved opsparing, vil systemet forsøge at tilføje dette indhold til din. Htaccess fil, hvis det ikke har det allerede. Hvis filen ikke kan skrives til, bliver du nødt til at sætte dette i filen %s"
+"User will not have options for lists and will not see lists they are subscribing to." = "Brugeren vil ikke have muligheder for lister og vil ikke se lister, de abonnerer på."
+"User will receive a single email confirmation that will be for all the lists selected." = "Brugeren vil modtage en enkelt e-mail bekræftelse, der vil være for alle lister valgt."
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "Brugeren vil modtage en email bekræftelse for hver liste, der har opt-in/out email bekræftelse tændt."
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "Med fejlsikret tilstand, vil scriptet ikke være i stand til at justere serverkonfigurationen for optimal ydeevne."
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Du er i stand til at angive et udvalg af tekst, der vil blive medtaget i bunden af ​​alle forsendelser uanset hvad bruger eller liste bliver brugt. Efterlad blank hvis du ikke ønsker at bruge denne funktion."
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Du er i stand til at angive et udvalg af tekst, der vil blive medtaget i toppen af ​​alle forsendelser uanset hvad bruger eller liste bliver brugt. Efterlad blank hvis du ikke ønsker at bruge denne funktion."
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "Du er ansvarlig for at undslippe! Også, hvis konstruere en liste, så strengene skal være indkapslet med citater."
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "Din server pålægger følgende begrænsninger: maksimal fil upload størrelse er %s og en maksimal indlæg størrelse er %s."
+"Your server is set to allow less memory than this script requires." = "Din server er indstillet til at tillade mindre hukommelse end dette script kræver."
+
+
+
+##### 2009-05-28 #####
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "%REPORTLINK% er en forkortelse for den delte rapport link, som du ser ovenfor."
+
+
+
+##### 2009-07-10 #####
+
+"Notice: Hold CTRL to select multiple formats." = "Bemærk: Hold CTRL nede for at vælge flere formater."
+
+
+
+##### 2009-07-14 #####
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "(Ekstraudstyr) Denne indstilling vil automatisk pause din adresseliste efter et bestemt antal beskeder. Dette hjælper med at reducere din mailservere belastning."
+"The label of this field (a title) can be shown both above the field, or on its left side." = "Mærket af dette felt (en titel) kan vises både over feltet, eller på sin venstre side."
+
+
+
+##### 2009-08-27 #####
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "Denne funktion vil bruge Apaches mod_rewrite plugin til at omformatere sine offentlige webadresser til at fremstå mere beskrivende, at nævne for eksempel titlen på en liste eller formular i webadressen."
+
+
+
+##### 2009-11-25 #####
+
+"Separate multiple emails by comma" = "Adskil flere e-mails med komma"
+
+
+
+##### 2009-12-21 #####
+
+"Begin typing their name and live results will be displayed." = "Begynde at skrive deres navn og levende resultater vil blive vist."
+
+
+
+##### 2010-03-28 #####
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "Alle kampagner, der sendes til denne liste vil blive sendt til den angivne e-mail-adresse (r). Adskil flere e-mails med komma"
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "Alle abonnenter, der rapporterer misbrug vil blive fjernet fra listen, og misbrug rapporter vil blive logget."
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "Marker denne indstilling, hvis du vil tillade en enkelt kampagne, der skal sendes til en enkelt e-mail-adresse flere gange. Flere e-mails vil kun blive sendt, hvis en e-mail er tilmeldt flere gange for den samme liste."
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "Marker denne indstilling, hvis du gerne vil gøre det muligt for abonnenter at abonnere flere gange til denne liste med samme e-mail-adresse."
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "Hvis der anvendes search-venlige URL'er, kan denne liste har en læsbar id, der vil være en del af disse links."
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "Hvis du markerer denne indstilling alle nye abonnenter vil blive sendt en kopi af den sidste kampagne, du sendte straks ved at abonnere."
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "Hvis du markerer denne valgmulighed dine abonnenter vil blive spurgt, hvorfor de afmeldt efter at de afmelde fra denne liste. Abonnenter ikke necesarily nødt til at give en grund, når de afmelder - men denne mulighed beder dem om at indsende deres grund, hvis de gerne vil dele disse oplysninger."
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "Hvis du markerer denne valgmulighed dine abonnenter bliver nødt til at se på et billede og indtaste de tegn, de ser for at abonnere. Dette bruges til at forhindre automatiserede robotter eller automatiseret software fra at abonnere på din liste."
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "Hvis du tilpasser en kampagne med abonnenter navn - og en abonnent ikke indtaste et navn - det vil benytte denne standard navn som deres navn, når du sender denne kampagne."
+"Select the field that has the date which you want to send an email based off of." = "Vælg det felt, der har den dato, som du ønsker at sende en e-mail baseret ud af."
+"Select the format that you are saving the date as in your subscriber field you have selected." = "Vælg det format, du gemmer datoen som i din abonnent felt, du har valgt."
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "Der er en offentlig sektion, hvor dine abonnenter kan administrere deres abonnement og se tidligere kampagner. Hvis du markerer dette felt denne liste vil ikke blive vist i den offentlige sektion."
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "Dette bruges i det offentlige arkiv og også i administrationen. Lister bruges til at gruppere sæt abonnenter"
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "Når en bruger abonnerer de bliver bedt om at indtaste et navn. Hvis du markerer dette felt, vil ikke lade dem abonnere medmindre de indtaste et navn"
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Når en abonnent abonnerer på denne liste, vil systemet sende en e-mail til disse modtagere. Adskil flere e-mails med komma"
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Når en abonnent Opsiger abonnementet fra denne liste, vil systemet sende en e-mail til disse modtagere. Adskil flere e-mails med komma"
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "Du kan vælge, hvordan at matche dato. Hvis du forsøger at sende en fødselsdagsgave email du ville vælge 'Måned og Dag' som der ville matche alt, men året."
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "Du kan vælge at få e-mail Send før eller efter, når datoen passer. Hvis du ønsker at sende en e-mail 3 dage før deres fødselsdag, du ville vælge 'Måned og Dag' som kampen type og derefter vælge '- 3 dage' som offset. Hvis du vil have e-mail Send på den nøjagtige dag, at det passer dig ville forlade offset sat til '0 dage"
+
+
+
+##### 2010-04-07 #####
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "Under importere abonnenter, vil de blive sendt nogen øjeblikkelige autosvar, du måtte have setup."
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "Hvis du har valgt denne indstilling denne kampagne vil blive opført i det offentlige arkiv af din software. Den offentlige arkiv er en del af den offentlige del af softwaren, hvor dine abonnenter (og andre besøgende) kan få vist tidligere kampagner og administrere deres abonnementer."
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "Abonnenter vil blive behandlet på samme måde som enhver person, der abonnerer fra en offentlig side eller et abonnement form; alle øjeblikkelige og / eller forsinket autosvar vil blive sendt til dem i tide."
+"These subscribers will never receive any further AutoResponders setup in the system." = "Disse abonnenter vil aldrig modtage yderligere autosvar setup i systemet."
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "Du kan flag visse autosvar som allerede er blevet sendt til disse abonnenter, i tilfælde af importerede abonnenter bør ikke modtage nogle af dem."
+
+
+
+##### 2010-07-02 #####
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "I nogle tilfælde, især Active Directory, det brugernavn, du normalt logger ind med, er faktisk ikke hvad serveren forventer gennem sin normale LDAP interface. Dette felt er navnet på den attribut, du vil bruge til at logge ind med. I de fleste af disse tilfælde vil den værdi, der skal gå her være"sAMAccountName"."
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "I nogle tilfælde, især med Active Directory, skal vi logge på med en administrativ konto, før vi virkelig kan logge ind med en bruger. I så fald ville du placere her det fulde entydige navn for LDAP-serveren administrative bruger (f.eks cn = Administrator, ou = brugere, dc = domæne, dc = com)."
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "Attributten at LDAP-serveren forventer os at logge ind med. I langt de fleste tilfælde bør dette felt »KN« (forkortelse for »fælles navn")."
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "Bunden af ​​den fornemme navn, som brugerne vil logge på med; fx ou = brugere, dc = domæne, dc = com"
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "Det fulde entydige navn på en administrator-konto, der er nødvendige for Active Directory login proces. Eksempel: cn = Administrator, ou = brugere, dc = domæne, dc = com"
+"The password for the administrator account, mentioned above." = "Adgangskoden til administrator-konto, der er nævnt ovenfor."
+"The password of the administrative user mentioned above." = "Adgangskoden for den administrative bruger nævnt ovenfor."
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "Med dette markeret, vil vi logge på med en fuldt formet fornem navn (cn = bruger, ou = brugere, dc = domæne, dc = com); uden det, vil vi logge ind med"bruger"og lad server sortere ting."
+
+
+
+##### 2010-09-07 #####
+
+"The location of this software on the web. To change this, run Updater from a new location." = "Placeringen af ​​denne software på nettet. For at ændre dette, skal du køre Updater fra en ny placering."
+
+
+
+##### 2010-09-30 #####
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "Når du er logget ind i Twitter, vil du blive bedt om at bekræfte, at AwebDesk får lov til at opdatere din Twitter-konto og derefter kopiere PIN-koden."
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "For at opdatere en anden Twitter-konto, skal du fjerne markeringen Twitter ovenfor, gemme, og derefter komme tilbage og indtaste dine oplysninger."
+
+
+
+##### 2010-12-01 #####
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "Enhver bruger, der kan logge ind på admin sektion af SugarCRM kan godkende her"
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "Ved at markere dette felt, vil alle e-mail-adresser, der tidligere har været afmeldt på grund af talrige afvisninger i fortiden ikke importeres."
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "Ved at markere dette felt, vil alle abonnenter i denne import proces, der allerede er til stede i systemet blive opdateret med alle nye abonnent oplysninger, der er fundet under importen. Hvis dette felt ikke er markeret, vil disse abonnenter blive sprunget over under importen (abonnentnumre oplysninger vil ikke blive opdateret)."
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "Kampagner, der sendes ind i denne liste vil blive sendt til Twitter meddelelse service og vil skabe et tweet, der linker til din kampagnes web kopi."
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "Hvis der er en titel attribut i dine links, vil softwaren levere den første titel attribut værdi den finder for det specifikke link. Du kan ændre dette nedenfor."
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "Hvis du deaktiverer denne indstilling, vil abonnenterne du importerer nu aldrig modtage nogen auto-responders; nu eller i fremtiden."
+"Recommended for large scale imports" = "Anbefales til import i stor skala"
+"Recommended for small scale imports" = "Anbefales til import i lille skala"
+"Recommended for synchronization with external services/applications" = "Anbefales til synkronisering med eksterne tjenester / applikationer"
+"The default subject any message begins with when you select this template." = "Standardemnet enhver meddelelse begynder med, når du vælger denne skabelon."
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "De importerede abonnenter vil blive markeret som allerede modtaget disse auto-responders, så disse vil ikke blive sendt til dem."
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "Dette er din FreshBooks kontonavn findes i webadressen. IE: https://ACCOUNT.freshbooks.com. Giv bare kontonavn, og IKKE URL'en."
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "Dette er din unikke ægthedsbekræftelsestoken, som du er forsynet på FreshBooks API siden. I Freshbooks, gå til Min konto | FreshBooks API."
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "Dette vil afspejle Twitter godkendelse fra denne liste til alle lister, hvilket betyder alle forsendelser vil opdatere til denne Twitter-konto"
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "For at generere din API-nøgle, skal du logge ind i Zoho CRM, og derefter gå til Setup | CRM API-nøgle | Generer nu"
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "Når denne indstilling er markeret sidste kampagne, du sendte, vil blive sendt til hver abonnent, som de er importeret."
+"You can find your API token from the More | My Settings page in Capsule" = "Du kan finde din API-token fra More | Mine indstillinger side i Capsule"
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "Du kan få din sikkerhed token ved at logge ind Salesforce, og gå til DIT NAVN | Opsætning | Nulstil din sikkerhed token (under Mit personlige oplysninger). Du vil derefter blive sendt din sikkerhed token."
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "Dit Capsule ansøgning navn, som det vises i webadressen, som du ville få adgang til i en browser; IE: https://APP.capsulecrm.com. Bare omfatter APP del."
+"Your Zoho username or email address" = "Din Zoho brugernavn eller email addresse"
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "Dine autentificeringsoplysninger gemmes ikke på denne server. Du skal indtaste dem hver gang."
+"Your unique URL to your SugarCRM installation" = "Din unikke webadresse til dit SugarCRM installation"
+
+
+
+##### 2011-02-23 #####
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "Når du er logget ind på Facebook, vil du blive bedt om at bekræfte, at AwebDesk får lov til at opdatere din Facebook-konto."
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "Kampagner, der sendes til denne liste vil blive auto-indsendt til Facebook med et link til din kampagne web kopi."
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "Kampagner, der sendes til denne liste vil blive auto-udstationeret på Twitter med et link til din kampagne web kopi."
+
+
+
+##### 2011-03-17 #####
+
+"You can generate your API token from the User Preferences page in Tactile CRM" = "Du kan generere din API-token fra Brugerindstillinger siden i taktil CRM"
+"Your Tactile CRM application name, as it appears in the URL that you would access in a browser; IE: https://APP.tactilecrm.com. Just include the APP portion." = "Din Tactile CRM ansøgning navn, som det vises i webadressen, som du ville få adgang til i en browser; IE: https://APP.tactilecrm.com. Bare omfatter APP del."
+
+
+
+##### 2011-04-06 #####
+
+"The user who owns the list will determine which branding settings the list uses." = "Den bruger, der ejer listen vil afgøre, hvilke branding indstillinger listen bruger."
+
+
+
+##### 2011-07-13 #####
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "Denne knap vil re-importere alle lager skabeloner. BEMÆRK: Dette vil kun importere de globale aktie-skabeloner, du mangler. Hvis du allerede har nogle lager skabeloner, men har ændret dem, vil det ikke overskrive tilpasninger lavet."
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "Denne værdi vil blive brugt som pladsholder for dette personalisering felt. Hvis du indtaster 'MYTAG', så dit indhold skal have en pladsholder %MYTAG%, der ville blive erstattet med et felt værdi. BEMÆRK: rum vil blive erstattet med en bindestreg, og % tegn er ikke tilladt."
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "Dette vil blive vist i din Analytics-konto som en kilde til besøg på stedet. Dette er normalt et navn liste"
+"You can generate your API token from the User Preferences page in batchbook CRM" = "Du kan generere din API-token fra Brugerindstillinger side batchbook CRM"
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "Dit Batchbook kontonavn, som det vises i webadressen, som du ville få adgang til i en browser; IE: https://ACCOUNT.batchbook.com. Bare det kontoførende del."
+
+
+
+##### 2011-08-01 #####
+
+"Include your Freshbooks account name" = "Medtag din Freshbooks kontonavn"
+
+"Recommended for synchronization with external database" = "Anbefales til synkronisering med ekstern database"

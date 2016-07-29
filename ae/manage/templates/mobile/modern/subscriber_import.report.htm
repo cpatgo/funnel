@@ -1,0 +1,145 @@
+{*
+	result codes:
+		'succeeded' => 0,
+		'failed' => 2,
+		'bounced' => 4,
+		'duplicated' => 8,
+		'unsubscribed' => 16,
+		'excluded' => 32,
+		('blocked' => 64,)
+*}
+
+<script>
+//<!--
+{literal}
+var resultCodes = {
+	succeeded: 0,
+	failed: 2,
+	bounced: 4,
+	duplicated: 8,
+	unsubscribed: 16,
+	excluded: 32,
+	blocked: 64
+};
+function ihook_import_report(ary) {
+
+	// set counts
+	for ( var res in resultCodes ) {
+		var code = resultCodes[res];
+		var cnt = ( ary.counts[res] && ary.counts[res] > 0 ? ary.counts[res] : 0 );
+		// set count
+		if ( $('report_' + res) ) $('report_' + res).innerHTML = cnt;
+		if ( $('report_' + res + '_box') ) $('report_' + res + '_box').className = 'adesk_hidden';
+		if ( $('import_report_' + res) ) $('import_report_' + res).className = ( cnt > 0 ? 'adesk_block' : 'adesk_hidden' );
+		if ( $('report_' + res + '_list') ) {
+			adesk_dom_remove_children($('report_' + res + '_list'));
+			if ( cnt > 0 ) {
+				// show it
+				for ( var i = 0; i < cnt; i++ ) {
+					var row = ary.lists[res][i];
+					var txt = row.email;
+					if ( res == 'failed' ) {
+						// this one varies, show message
+						txt += ' (' + row.msg + ')';
+					}
+					$('report_' + res + '_list').appendChild(
+						Builder.node(
+							'li',
+							{ className: 'import_report_row' },
+							[
+								Builder._text(txt)
+							]
+						)
+					);
+				}
+			} else {
+				// hide it
+			}
+		}
+	}
+}
+{/literal}
+//-->
+</script>
+
+<div id="import_report" class="adesk_modal{*_report*}" align="center" style="display: none">
+  <div class="adesk_modal_inner">
+    <h3 class="m-b">{"Import Report"|alang}</h3>
+
+	<p>
+		{"This page will show you the activity for the import process performed."|alang}
+		{"By looking at this information you can see if your emails are imported properly."|alang}
+	</p>
+
+    <div style="font-weight:bold;">
+    	{"Total Items Found:"|alang}
+    	<span id="report_count">0</span>
+    </div>
+
+    <div style="font-weight:bold;">
+    	{"Imported:"|alang}
+    	<span id="report_count1">0</span>
+    </div>
+
+    <div style="font-weight:bold;">
+    	{"Not Imported:"|alang}
+    	<span id="report_count0">0</span>
+    </div>
+
+    <hr />
+
+    <div id="import_report_failed" class="adesk_hidden">
+	    <div>
+	    	<a href="#" onclick="adesk_dom_toggle_class('report_failed_box', 'adesk_scroller', 'adesk_hidden');return false;">
+	    		{"Failed Rows:"|alang}
+	    		<span id="report_failed">0</span>
+	    	</a>
+	    </div>
+	    <div id="report_failed_box" class="adesk_hidden">
+		    <ol id="report_failed_list"></ol>
+	    </div>
+    </div>
+
+    <div id="import_report_bounced" class="adesk_hidden">
+	    <div>
+	    	<a href="#" onclick="adesk_dom_toggle_class('report_bounced_box', 'adesk_scroller', 'adesk_hidden');return false;">
+	    		{"Bounced in the past:"|alang}
+	    		<span id="report_bounced">0</span>
+	    	</a>
+	    </div>
+	    <div id="report_bounced_box" class="adesk_hidden">
+		    <ol id="report_bounced_list"></ol>
+	    </div>
+    </div>
+
+    <div id="import_report_unsubscribed" class="adesk_hidden">
+	    <div>
+	    	<a href="#" onclick="adesk_dom_toggle_class('report_unsubscribed_box', 'adesk_scroller', 'adesk_hidden');return false;">
+		    	{"Unsubscribed in the past:"|alang}
+		    	<span id="report_unsubscribed">0</span>
+		    </a>
+	    </div>
+	    <div id="report_unsubscribed_box" class="adesk_hidden">
+		    <ol id="report_unsubscribed_list"></ol>
+	    </div>
+    </div>
+
+    <div id="import_report_excluded" class="adesk_hidden">
+	    <div>
+	    	<a href="#" onclick="adesk_dom_toggle_class('report_excluded_box', 'adesk_scroller', 'adesk_hidden');return false;">
+	    		{"On Exclusion List:"|alang}
+	    		<span id="report_excluded">0</span>
+	    	</a>
+	    </div>
+	    <div id="report_excluded_box" class="adesk_hidden">
+		    <ol id="report_excluded_list"></ol>
+	    </div>
+    </div>
+
+    <br />
+
+    <div>
+      <input type="button" class="adesk_button_close" value="{"Close"|alang}" onclick="adesk_dom_toggle_display('import_report', 'block');" />
+    </div>
+  </div>
+</div>

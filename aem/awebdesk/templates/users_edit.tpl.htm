@@ -1,0 +1,75 @@
+{adesk_modes default="add"}
+
+<script type="text/javascript">
+  var _adesk_text_empty_username = '{"You cannot leave the username field empty"|alang}';
+  var _adesk_text_admin_username = '{"You cannot create a new admin user named \"admin\""|alang}';
+
+  var _adesk_mode = '{$mode_future}';
+
+  {literal}
+  function confirm_input() {
+    if (document.getElementById("username").value == '') {
+      alert(_adesk_text_empty_username);
+      return false;
+    }
+
+    if (_adesk_mode == "insert" && document.getElementById("username").value == "admin") {
+      alert(_adesk_text_admin_username);
+      return false;
+    }
+
+    return true;
+  }
+  {/literal}
+</script>
+
+<h3 class="m-b">{$mode_submit} {"Admin User"|alang}</h3>
+<div class="inner_content">
+  {include file="message.tpl.htm"}
+  <form action="desk.php" method="POST" onsubmit="return confirm_input()">
+    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td>{"Username"|alang}</td>
+        <td><input type="text" name="username" id="username" {if $user.id|default:0 == 1}disabled{/if} value="{$user.username|default:''|adesk_clear_prefix:'num'|html}"></td>
+      </tr>
+      <tr>
+        <td>{"Password"|alang}</td>
+        <td>
+          <input type="text" name="password" value="">
+          <i>{"(Leave blank not to change your password)"|alang}</i>
+        </td>
+      </tr>
+      <tr>
+        <td>{"Repeat Password"|alang}</td>
+        <td>
+          <input type="text" name="password_repeat" value="">
+          <i>{"(You must retype your password here if you intend to change it)"|alang}</i>
+        </td>
+      </tr>
+      <tr>
+        <td>{"First Name"|alang}</td>
+        <td><input type="text" name="first_name" value="{$user.first_name|default:''|html}"></td>
+      </tr>
+      <tr>
+        <td>{"Last Name"|alang}</td>
+        <td><input type="text" name="last_name" value="{$user.last_name|default:''|html}"></td>
+      </tr>
+      <tr>
+        <td>{"Email"|alang}</td>
+        <td><input type="text" name="email" value="{$user.email|default:''|html}"></td>
+      </tr>
+
+      {if isset($post_template)}
+      {include file=$post_template}
+      {/if}
+    </table>
+
+    <div>
+      <input type="submit" value="{$mode_submit}">
+      <input type="button" value='{"Back"|alang}' onclick="window.location.href = 'desk.php?action={$get.action|html}'">
+      <input type="hidden" name="action" value="{$get.action|html}">
+      <input type="hidden" name="mode" value="{$mode_future}">
+      <input type="hidden" name="id" value="{$get.id|default:''|html}">
+    </div>
+  </form>
+</div>

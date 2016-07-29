@@ -1,0 +1,171 @@
+<script type="text/javascript">
+<!--
+{include file="subscribe.js"}
+-->
+</script>
+
+
+
+{if $subscription_message}
+	      <div class="row" style="margin-top:20px;">
+      
+      
+        <div class="col-lg-12">  
+	<div class="confirmation_box">
+	 <ul><li class="label bg-info" style="font-size:14px;">{$subscription_message}</li></ul></div>
+
+ 
+	 </div>
+	</div>
+{else}
+
+
+
+
+
+
+
+      <div class="row" style="margin-top:20px;">
+      
+      
+        <div class="col-lg-6">  
+      
+          
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Subscribe"|plang}</h4>
+            </header>
+            <section style="height:210px" class="panel-body scrollbar scroll-y m-b">
+
+ 
+	{*if $site.general_public*}
+
+		<div id="form">
+
+			<form method="post" action="{$_}/surround.php" id="subscribe_form" onsubmit="return subscribe_validate();">
+
+				<input type="hidden" name="funcml" value="subscribe" />
+
+		 <table border="0" cellspacing="0" cellpadding="5" width="100%">
+								<tr>
+									<td valign="top" >{"Email"|plang}</td>
+									<td ><input type="text" name="email" id="subscribe_email" size="50" style="width:99%;" /></td>
+								</tr>
+
+								<tr>
+									<td valign="top">{"First Name"|plang}</td>
+									<td><input type="text" name="first_name" id="firstnameField" style="width:99%;" /></td>
+								</tr>
+								<tr>
+									<td valign="top">{"Last Name"|plang}</td>
+									<td><input type="text" name="last_name" id="lastnameField" style="width:99%;" /></td>
+								</tr>
+								<tbody id="custom_fields_table">
+
+	{foreach from=$custom_fields item=field}
+	{if $field.type == 6}
+									{adesk_field_html field=$field}
+	{else}
+									<tr>
+										<td width="75" {if $field.label==1}valign="top"{else}align="left"{/if}>{$field.title|adesk_field_title:$field.type}</td>
+										<td>{adesk_field_html field=$field}</td>
+									</tr>
+	{/if}
+	{/foreach}
+
+								</tbody>
+							</table>
+
+							<div id="subscribe_use_captcha" class="{if $show_captcha}adesk_block{else}adesk_hidden{/if}">
+								<p>{"Please also verify yourself by typing the text in the following image into the box below it."|plang}</p>
+								<br/>
+								{if $site.gd}
+								<img src="{$_}/awebdesk/scripts/imgrand.php?rand={$rand}" /><br/>
+								{/if}
+								<input type="text" name="imgverify" id="imgverify" />
+							</div>
+                            </div>
+                            </section></section></div>
+                         <div class="col-lg-6"> 
+          <!-- scrollable inbox widget -->
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Subscribe To Lists"|plang}:</h4>
+            </header>
+            <section style="height:210px" class="panel-body scrollbar scroll-y m-b">
+          
+                            
+	 
+							{if !$listfilter}
+								{* no list filter set; show all lists *}
+								<div id="parentsListBox">
+									{foreach from=$listsList item=l}
+										{if (!$l.private)}
+											<p>
+												<label>
+													<input type="checkbox" name="nlbox[]" id="subscribe_list_{$l.id}" value="{$l.id}" onclick="subscribe_list_loadfields()" />
+													{$l.name}
+												</label>
+											</p>
+										{/if}
+									{/foreach}
+								</div>
+							{else}
+								{* list filter set (either through nl=#, or gl=# in URL), so show those exact lists (nl), or lists pertaining to that group (gl) *}
+								{foreach from=$listsList item=l}
+									{if (!$l.private)}
+										<p>
+											<label>
+												<input type="checkbox" name="nlbox[]" id="subscribe_list_{$l.id}" value="{$l.id}" onclick="subscribe_list_loadfields()" />
+												{$l.name}
+											</label>
+										</p>
+									{/if}
+								{/foreach}
+							{/if}
+							
+				
+						 
+				 
+
+ </section></section></div>
+
+			<div class="row"><div class="col-lg-12"><div class="col-lg-6">
+				  <input type="submit" value="{'Subscribe'|plang}" class="btn btn-info"/> 
+				</div></div></div>
+
+
+	 
+        </div>
+     
+	  </div>
+	  
+	  
+	 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</form>
+		
+
+	{*/if*}
+
+{/if}

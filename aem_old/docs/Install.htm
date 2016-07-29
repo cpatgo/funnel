@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Install Guide</title>
+<style>
+body{
+	background: #fff;
+	font-family:Verdana;
+	font-size:14px;
+}
+.container{
+	background:#FFFFFF;
+	margin:30px;
+	padding:20px;
+	margin-bottom:0px;
+	border:4px solid #109309;
+
+}
+.header{
+	margin-bottom:30px;
+}
+.footer{
+	margin:30px;
+	margin-top:0px;
+	padding:20px;
+	padding-bottom:0px;
+	padding-top:10px;
+	font-size:10px;
+	color:#999999;
+}
+h1{
+	font-size:24px;
+	font-family:"Times New Roman", Times, serif;
+	border-bottom:1px solid #EBEBEB;
+	font-weight:normal;
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+	padding-bottom:5px;
+}
+h2{
+	font-size:12px;
+	border-bottom:1px solid #EBEBEB;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	margin-top:20px;
+	margin-bottom:10px;
+	padding-bottom:5px;
+}
+
+a, a:visited{
+	color:#109309;
+}
+a:hover{
+	color:#999;
+}
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="header">
+	<div style="float:right;"><a href="http://www.awebdesk.com" target="_blank">AwebDesk</a> | <a href="http://support.awebdesk.com/" target="_blank">KnowledgeBase</a> | <a href="http://support.awebdesk.com/" target="_blank">Contact Support</a></div>
+	<a href="http://www.awebdesk.com" target="_blank"><img src="http://awebdesk.com/logo.png" border="0" /></a>
+</div>
+
+<h1>AwebDesk Email Marketing  Software 7.1.0 Installation Guide</h1>
+<p>Thank you for choosing <a href="http://www.awebdesk.com">Email Marketing Software</a> from AwebDesk. <br />
+  <br />
+  This document will assist you with the installation process. If you have questions or need assistance at any time please visit our <a href="http://support.awebdesk.com">support center</a>.</p>
+
+<h2>Follow these steps to install AwebDesk Email Marketing Software.</h2>
+<ol>
+  <li>Unzip the downloaded ZIP file.</li>
+    <br />
+  <li>Rename <strong>Rename_to-serialkey.php</strong> to <span class="style1">serialkey.php</span> in /cache/ directory and Enter the license key which you received on purchasing in  this file. Also update the install url in the same file.</li>
+  <br />
+  <li>Rename <strong>Rename_to-config.inc.php</strong> to <span class="style1">config.inc.php</span> in /upload/manage/ directory</li>
+  <br />
+  <li>Rename <strong>Rename_to-config_ex.inc.php</strong> to <span class="style1">config_ex.inc.php</span> in /upload/manage/ directory</li>
+  <br />
+ 
+ 
+  <li>Upload the contents of package /upload/ to your web server where you want to install the product.In this example we assume you are installing on /AEM/ directory. <br />
+    <br />
+  </li>
+  <li>Adjust the file permissions on the following files:    <br />
+      <font color="#666666"><br />
+    </font></li>
+  <ul>
+    <li><font color="#666666">If installing on a linux server you should CHMOD the following files/folders to 777. Which is full read/write permissions.</font></li>
+    <li><font color="#666666">If installing on a Windows server you should ensure IIS has  full control / full  permissions for the following files/folders. </font><br />
+      <br />
+      <ul>
+      <li>/AEM/manage/config.inc.php </li>
+          <li>/AEM/manage/config_ex.inc.php</li>
+          <li>/AEM/cache/key.php</li>
+          <li>/AEM/cache/</li>
+
+          <li>/AEM/images/</li>
+          <li>/AEM/images/manage/<br /></li>
+          <p>All files and folders inside:</p>
+                    <li>/AEM/cache/public/</li>
+		  <li>/AEM/cache/admin/</li>
+          <li>/AEM/cache/manage/</li>
+            <br />
+         
+          <li style="font-size:10px;"><font color="#999999"> If you find that some of the folders listed above are missing, this may have been
+            caused by your compression program. All that you need to do is add the folders
+            to their respected directories</font><br />
+  <br />
+          </li>
+      </ul>
+    </li>
+  </ul>
+  <li>Run the web based installer by opening the following file (which is located on your web server) in your web browser
+    <ul>
+      <li>/AEM/manage/install.php </li>
+      <li>If something goes wrong or in case you get any license error after installation, please   verify that /cache/ directory and all contents inside it is writable(777   permissions).Also try deleting key.php file from /AEM/cache/ on server   and refresh the page. <br />
+        <br />
+      </li>
+    </ul>
+  </li>
+  <li>Refresh the page twice on first install screen. Follow the onscreen instructions. That completes your setup! You may now login to your software application.<br />
+  <br /><br />
+</li>
+  </ol>
+
+<h2>After installing the software, you should also...</h2>
+<ul>
+  <li>Set up a cron job or scheduled task on your server, which runs the manage/cron.php file every five minutes. This will ensure that all scheduled processes (such as scheduled campaigns and autoresponders) start at the correct times, and that large campaigns or imports do not stall, and will keep running even if you are not logged in to the software. For a basic overview regarding cron jobs, refer to this article: Setting Up A Cron Job<br />
+    <br /></li>
+  <li>Edit your mail sending methods and throttling settings, or add multiple SMTP servers to send with. To add or edit your mail settings, click the Settings link in the upper right corner of the software interface, and scroll to the Mail Settings section on that page. Refer to this article on our site for help configuring mail settings: Mail Sending Options<br/>
+    <br /></li>
+  <li>Configure bounce management, to ensure that any emails that bounce back to you are properly tracked, and that invalid email addresses are automatically removed from the system. Click the Lists tab, and then click Bounce Settings to edit or add a new bounce management settings. The following article explains how to set up Bounce Management: Setting Up Bounce Management<br/>
+    <br /></li>
+</ul>
+
+<h2>Have questions? Need assistance? </h2>
+<p>Please visit our <a href="http://support.awebdesk.com">support center</a> if you have any questions or need assistance with installing or using our product. <br />
+</p>
+</div>
+<div class="footer">
+&copy; 2010-2014 AwebDesk Softwares. All rights reserved.
+</div>
+</body>
+</html>

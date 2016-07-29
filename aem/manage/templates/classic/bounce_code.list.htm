@@ -1,0 +1,54 @@
+<div id="list" class="adesk_hidden">
+  <form action="desk.php?action=bounce_code" method="GET" onsubmit="bounce_code_list_search(); return false">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tr class="adesk_table_header_options">
+        <td align="right">
+          <div>
+            <input type="text" name="qsearch" id="list_search" />
+            <input type="button" value='{"Search"|alang}' onclick="bounce_code_list_search()" />
+            <input type="button" value='{"Clear"|alang}' id="list_clear" style="display:none" onclick="bounce_code_list_clear()" />
+            &nbsp;<a href="#search" style="display:inline;font-size:10px">{"Advanced Search"|alang}</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="1">
+      <thead id="list_head">
+        <tr class="adesk_table_header">
+          <td align="center" width="20">
+            <input id="acSelectAllCheckbox" type="checkbox" value="multi[]" onclick="adesk_form_check_selection_all(this, $('selectXPageAllBox'))" />
+          </td>
+          <td width="50">{"Options"|alang}</td>
+          <td width="50">{adesk_headercol action="bounce_code" id="01" label="Bounce Code"|alang}</td>
+          <td>{adesk_headercol action="bounce_code" id="02" label="Matching String"|alang}</td>
+          <td width="50">{adesk_headercol action="bounce_code" id="03" label="Bounce Type"|alang}</td>
+          <td>{adesk_headercol action="bounce_code" id="04" label="Description"|alang}</td>
+        </tr>
+      </thead>
+      <tbody id="list_table">
+      </tbody>
+    </table>
+    <div id="list_noresults" class="adesk_hidden">
+      <div align="center">{"Nothing found."|alang}</div>
+    </div>
+    <div style="float:right">
+      {include file="pagination.js.tpl.htm" tabelize="bounce_code_list_tabelize" paginate="bounce_code_list_paginate"}
+    </div>
+    <div id="loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+      {"Loading. Please wait..."|alang}
+    </div>
+    <span id="selectXPageAllBox" class="adesk_hidden">
+      <span class="adesk_hidden">{"All Bounce Codes are now selected."|alang}</span>
+      <span class="adesk_hidden">{"All Bounce Codes on this page are now selected."|alang}</span>
+      <a class="adesk_hidden" href="#" onclick="return adesk_form_check_selection_xpage(this.parentNode);">{"Click here to select all %s items."|alang:'<span></span>'}</a>
+    </span>
+  </form>
+
+  <br />
+  {if $admin.id == 1}
+  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
+  {/if}
+  {if $admin.id == 1}
+  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
+  {/if}
+</div>

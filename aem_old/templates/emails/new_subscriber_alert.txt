@@ -1,0 +1,15 @@
+{"A new subscriber has been added to your list."|plang}
+
+{"Subscribed to lists:"|plang}
+{foreach from=$lists item=list}
+{$list.name}
+{/foreach}
+
+{"Email"|plang}: {$subscriber.email}
+{"Name"|plang}: {$subscriber.first_name} {$subscriber.last_name}
+{"IP"|plang}: {$subscriber.ip}
+{"Date/Time"|plang}: {$subscriber.cdate|acpdate:"%m/%d/%Y %H:%M"}
+
+{foreach from=$fields item=field}
+{$field.title}: {$field.val}
+{/foreach}

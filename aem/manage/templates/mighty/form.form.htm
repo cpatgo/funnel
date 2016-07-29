@@ -1,0 +1,214 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="form_form_save(form_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    <input type="hidden" name="lists_optinoptout" id="lists_optinoptout" value="{*$lists_optinoptout*}" />
+
+    <div id="formlistpanel_div" class="h2_wrap">
+      <h2 onclick="adesk_dom_toggle_class('formlistpanel', 'h2_content_invis', 'h2_content');">{"Subscription Form Settings"|alang}</h5><div class="line"></div>
+      <div id="formlistpanel" class="h2_content">
+
+        <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            <td><label for="nameField">{"Form Name"|alang}</label></td>
+            <td>
+            	<input type="text" name="name" id="nameField" value="" size="45" />
+              {"Brief Description for you to recognize. Does NOT affect your actual form."|help}
+             </td>
+          </tr>
+          <tr valign="top">
+            <th colspan="2"><hr width="100%" size="1" noshade="noshade" /></th>
+          </tr>
+          <tr>
+            <td>
+              <label for="type">{"Form Options"|alang}</label>
+            </td>
+            <td>
+							<select name="type" id="type" onchange="form_options_type_change(this.value);">
+							  <option value="both">{"Subscribe &amp; Unsubscribe"|alang}</option>
+							  <option value="subscribe">{"Subscribe Only"|alang}</option>
+							  <option value="unsubscribe">{"Unsubscribe Only"|alang}</option>
+							</select>
+						</td>
+          </tr>
+          <tr valign="top">
+            <th colspan="2"><hr width="100%" size="1" noshade /></th>
+          </tr>
+          <tr valign="top">
+            <td>{"Lists"|alang}</td>
+            <td>
+							<div id="parentsList_div" class="adesk_checkboxlist">
+								{foreach from=$listsList item=p}
+									<div>
+										<label>
+											<input type="checkbox" id="p_{$p.id}" class="parentsList" name="p[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" {if count($listsList) == 1}checked="checked"{/if} />
+											{$p.name|truncate:50}
+										</label>
+									</div>
+								{/foreach}
+							</div>
+					  <div>
+						{"Select:"|alang}
+						<a href="#" onclick="parents_box_select(1, 0); return false;">{"All"|alang}</a>
+						&middot;
+						<a href="#" onclick="parents_box_select(0, 0); return false;">{"None"|alang}</a>
+					  </div>
+
+             </td>
+          </tr>
+          <tr id="list_options_tr" valign="top">
+            <td>{"List Options"|alang}</td>
+            <td>
+              <label>
+              	<input name="allowselection" id="allowselFieldYes" value="1" type="radio" />
+                {"Allow user to select lists they wish to subscribe to or unsubscribe from."|alang}
+              </label>
+              <br />
+							<label>
+	              <input name="allowselection" id="allowselFieldNo" value="0" type="radio" />
+	              {"Force user to subscribe to or unsubscribe from all lists selected above."|alang}
+	              {"User will not have options for lists and will not see lists they are subscribing to."|help}
+              </label>
+            </td>
+          </tr>
+          <tr id="opt_confirmation_tr" valign="top">
+            <td>{"Opt-In/Out Confirmation"|alang}</td>
+            <td>
+              <label>
+                <input name="emailconfirmations" id="emailconfirmationsEach" value="1" type="radio" checked="checked" onclick="form_opt_confirmation_change();" />
+                {"Send individual email confirmations for each list."|alang}
+                {"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on."|help}
+              </label>
+              <br />
+              <label>
+                <input name="emailconfirmations" id="emailconfirmationsAll" value="0" type="radio" onclick="form_opt_confirmation_change();" />
+                {"Send a single email confirmation for all lists."|alang}
+                {"User will receive a single email confirmation that will be for all the lists selected."|help}
+              </label>
+
+							<div id="optinoutchoose" class="form_confirmation">
+          			<div>{"Send this list's confirmation email one time for all lists instead of indiviual confirmations for each list."|alang}</div>
+          			<div>
+            			<select id="optinoutidField" name="optid" size="1">
+										{foreach from=$optsetsList item=o}
+              				<option value="{$o.id}">{$o.name}</option>
+										{/foreach}
+            			</select>
+            			<a href="desk.php?action=optinoptout" onclick="optinout_get($('optinoutidField').value);return false;">{"Manage"|alang}</a>
+            			<a href="desk.php?action=optinoptout#form-0" onclick="optinout_get(0);return false;">{"Add New"|alang}</a>
+          			</div>
+        			</div>
+
+						  {* MODAL FOR ADDING NEW ONE *}
+							{if $admin.pg_list_opt}
+				        <div id="optinoutnew" class="adesk_hidden">
+				          {*include file="form.optinoptout.inc.htm"*}
+				          <br />
+				          <div>
+				            <input type="button" id="optinout_form_save" class="adesk_button_save" value="{"Save"|alang}" onclick="form_form_optinout_set();" />
+				            <input type="button" id="optinout_form_cancel" class="adesk_button_back" value="{"Cancel"|alang}" onclick="$('optinoutnew').className = 'adesk_hidden';" />
+				          </div>
+				        </div>
+							{/if}
+
+						</td>
+          </tr>
+          <tr valign="top">
+            <th colspan="2"><hr width="100%" size="1" noshade /></th>
+          </tr>
+          <tr>
+            <td>{"Fields to request:"|alang}</td>
+            <td>
+            	<label>
+	              <input name="ack4email" type="checkbox" id="ask4emailField" value="1" checked="checked" disabled="disabled" />
+	              {"Email Address "|alang}
+              </label>
+             </td>
+          </tr>
+          <tr id="ask4fname_tr">
+            <td>&nbsp;</td>
+            <td>
+              <label>
+                <input name="ask4fname" id="ask4fnameField" type="checkbox" value="1" />
+                {"First Name"|alang}
+              </label>
+            </td>
+          </tr>
+          <tr id="ask4lname_tr">
+            <td>&nbsp;</td>
+            <td>
+              <label>
+                <input name="ask4lname" id="ask4lnameField" type="checkbox" value="1" />
+                {"Last Name"|alang}
+              </label>
+            </td>
+          </tr>
+
+          <tr id="custom_fields_trs_hr">
+            <td>&nbsp;</td>
+            <td><hr width="100%" size="1" noshade /></td>
+          </tr>
+
+          <tbody id="custom_fields_trs">
+						{foreach from=$fields item=field}
+		          <tr>
+		            <td>&nbsp;</td>
+		            <td>
+		              <label>
+		                <input name="fields[]" id="custom{$field.id}Field" type="checkbox" value="{$field.id}" />
+		                {$field.title}
+		              </label>
+		            </td>
+		          </tr>
+						{/foreach}
+                        
+                          <tr>
+		            <td>&nbsp;</td>
+		            <td>
+		             <a href="desk.php?action=list_field" target="_blank">{"Add a custom field"|alang}</a>
+		            </td>
+		          </tr>
+					</tbody>
+
+          <tbody id="custom_fields_table"></tbody>
+
+          <tr>
+            <td>&nbsp;</td>
+            <td><hr width="100%" size="1" noshade /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>
+{if $site.gd}
+              <label>
+                <input name="captcha" id="captchaField" type="checkbox" value="1" />
+                {"Use Captcha Image"|alang}
+              </label>
+{else}
+              <input type="hidden" id="captchaField" value="0" />
+              {"Captcha requires GD library to be installed with PHP, and GD is not installed or enabled on your system. Please contact your web host to install or enable GD."|alang}
+{/if}
+            </td>
+          </tr>
+        </table></div>
+
+      </div>
+    </div>
+
+    <div id="form_completion_options_div" class="h2_wrap">
+      <h2 onclick="adesk_dom_toggle_class('formredirpanel', 'h2_content_invis', 'h2_content');">{"Form Completion Options"|alang}</h5><div class="line"></div>
+      <div id="formredirpanel" class="h2_content_invis">
+
+				{include file="redirection.form.inc.htm"}
+
+      </div>
+    </div>
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="form_form_save(form_form_id)" />
+      <input type="button" id="view_back" class="adesk_button_back" value="{"Manage Forms"|alang}" onclick="window.location='desk.php?action=form'" />
+      <!--<input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />-->
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

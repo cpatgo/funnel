@@ -1,0 +1,511 @@
+<script type="text/javascript">
+  var group_str_nosendmethod = '{"You did not specify a sending method for this group."|alang|js}';
+	var __ishosted = {jsvar var=$__ishosted};
+
+  {literal}
+  function user_group_defaults_extended() {
+		group_form_defaults_extended();
+  }
+
+  function group_form_defaults_extended() {
+		$A($("group_lists").options).each(function(e) { e.selected = true; });
+		if ( $("group_sendmethods") ) $A($("group_sendmethods").options).each(function(e) { e.selected = true; });
+
+		if ( $("group_unsubscribelink_checkbox") ) $("group_unsubscribelink_checkbox").checked = false;
+		$("group_optinconfirm_checkbox").checked = false;
+
+		$("group_limit_mail").value = "";
+		$("group_limit_mail_type").value = "month";
+		$("group_limit_mail_checkbox").checked = false;
+		$("group_div_limit_mail").style.display = "none";
+
+		$("group_limit_subscriber").value = "";
+		$("group_limit_subscriber_checkbox").checked = false;
+		$("group_div_limit_subscriber").style.display = "none";
+
+		$("group_limit_list").value = "";
+		$("group_limit_list_checkbox").checked = false;
+		$("group_div_limit_list").style.display = "none";
+
+		$("group_limit_campaign").value = "";
+		$("group_limit_campaign_type").value = "month";
+		$("group_limit_campaign_checkbox").checked = false;
+		$("group_div_limit_campaign").style.display = "none";
+
+		if (!__ishosted) {
+			$("group_limit_attachment").value = "";
+			$("group_limit_attachment_checkbox").checked = false;
+			$("group_div_limit_attachment").style.display = "none";
+		}
+
+		$("group_limit_user").value = "";
+		$("group_limit_user_checkbox").checked = false;
+		$("group_div_limit_user").style.display = "none";
+
+		$("group_forcesenderinfo_checkbox").checked = false;
+
+		$("group_req_approval_1st").value = 2;
+		$("group_req_approval_notify").value = '';
+		$("group_req_approval_checkbox").checked = false;
+		$("group_div_req_approval").style.display = "none";
+
+		$("group_pg_user_add").checked = true;
+		$("group_pg_user_edit").checked = true;
+		$("group_pg_user_delete").checked = true;
+		$("group_pg_list_add").checked = true;
+		$("group_pg_list_edit").checked = true;
+		$("group_pg_list_delete").checked = true;
+		$("group_pg_list_opt").checked = true;
+		$("group_pg_list_headers").checked  = true;
+		if ( $("group_pg_list_emailaccount") ) $("group_pg_list_emailaccount").checked = true;
+		if ( $("group_pg_list_bounce") ) $("group_pg_list_bounce").checked = true;
+		$("group_pg_message_add").checked = true;
+		$("group_pg_message_edit").checked = true;
+		$("group_pg_message_delete").checked = true;
+		$("group_pg_message_send").checked = true;
+		group_permission_display('group_pg_message_send');
+		$("group_pg_subscriber_add").checked = true;
+		$("group_pg_subscriber_edit").checked = true;
+		$("group_pg_subscriber_delete").checked = true;
+		$("group_pg_subscriber_import").checked = true;
+		$("group_pg_subscriber_export").checked = true;
+		$("group_pg_subscriber_sync").checked = true;
+		$("group_pg_subscriber_approve").checked = true;
+		$("group_pg_subscriber_filters").checked = true;
+		$("group_pg_subscriber_actions").checked = true;
+		$("group_pg_subscriber_fields").checked  = true;
+		$("group_pg_form_add").checked = true;
+		$("group_pg_form_edit").checked = true;
+		$("group_pg_form_delete").checked = true;
+		$("group_pg_template_add").checked = true;
+		$("group_pg_template_edit").checked = true;
+		$("group_pg_template_delete").checked = true;
+		$("group_pg_reports_campaign").checked = true;
+		$("group_pg_reports_list").checked = true;
+		$("group_pg_reports_user").checked = true;
+		$("group_pg_reports_trend").checked = true;
+  }
+
+  function group_form_save_extended_check() {
+	if ($("group_sendmethods") && $("group_sendmethods").value == "") {
+	  // Granted, this is a multiple select.  But, if nothing is selected, this will be blank.
+	  alert(group_str_nosendmethod);
+	  return false;
+	}
+
+	return true;
+  }
+
+  function group_form_load_cb_extended(ary) {
+		var tmp;
+
+		tmp = ary.lists.toString().split(",");
+		$A($("group_lists").options).each(function(e) { if (tmp.indexOf(e.value) > -1) e.selected = true; else e.selected = false; });
+
+		if ( $("group_sendmethods") ) {
+			tmp = ary.sendmethods.toString().split(",");
+			$A($("group_sendmethods").options).each(function(e) { if (tmp.indexOf(e.value) > -1) e.selected = true; else e.selected = false; });
+		}
+
+		$("group_limit_mail").value = ary.limit_mail > 0 ? ary.limit_mail : "";
+		$("group_limit_mail_type").value = ary.limit_mail_type;
+		if (ary.limit_mail > 0) {
+			$("group_limit_mail_checkbox").checked = true;
+			$("group_div_limit_mail").style.display = "";
+		}
+
+		$("group_limit_subscriber").value = ary.limit_subscriber > 0 ? ary.limit_subscriber : "";
+		if (ary.limit_subscriber > 0) {
+			$("group_limit_subscriber_checkbox").checked = true;
+			$("group_div_limit_subscriber").style.display = "";
+		}
+
+		$("group_limit_list").value = ary.limit_list > 0 ? ary.limit_list : "";
+		if (ary.limit_list > 0) {
+			$("group_limit_list_checkbox").checked = true;
+			$("group_div_limit_list").style.display = "";
+		}
+
+		$("group_limit_campaign").value = ary.limit_campaign > 0 ? ary.limit_campaign : "";
+		$("group_limit_campaign_type").value = ary.limit_campaign_type;
+		if (ary.limit_campaign > 0) {
+			$("group_limit_campaign_checkbox").checked = true;
+			$("group_div_limit_campaign").style.display = "";
+		}
+
+		if (!__ishosted) {
+			$("group_limit_attachment").value = ary.limit_attachment > -1 ? ary.limit_attachment : "";
+			if (ary.limit_attachment > -1) {
+				$("group_limit_attachment_checkbox").checked = true;
+				$("group_div_limit_attachment").style.display = "";
+			}
+		}
+
+		$("group_limit_user").value = ary.limit_user > 0 ? ary.limit_user : "";
+		if (ary.limit_user > 0) {
+			$("group_limit_user_checkbox").checked = true;
+			$("group_div_limit_user").style.display = "";
+		}
+
+		$("group_forcesenderinfo_checkbox").checked = ( ary.forcesenderinfo == 1 );
+
+		$("group_req_approval_1st").value = ( ary.req_approval_1st == 0 ? '' : ary.req_approval_1st );
+		$("group_req_approval_notify").value = ary.req_approval_notify;
+		$("group_req_approval_checkbox").checked = (ary.req_approval == 1);
+		$("group_div_req_approval").style.display = ( ary.req_approval == 1 ? "" : "none" );
+
+		if ( $("group_unsubscribelink_checkbox") ) $("group_unsubscribelink_checkbox").checked = (ary.unsubscribelink == 1);
+		$("group_optinconfirm_checkbox").checked = (ary.optinconfirm == 1);
+
+		$("group_pg_user_add").checked = (ary.pg_user_add == 1);
+		$("group_pg_user_edit").checked = (ary.pg_user_edit == 1);
+		$("group_pg_user_delete").checked = (ary.pg_user_delete == 1);
+		$("group_pg_list_add").checked = (ary.pg_list_add == 1);
+		$("group_pg_list_edit").checked = (ary.pg_list_edit == 1);
+		$("group_pg_list_delete").checked = (ary.pg_list_delete == 1);
+		$("group_pg_list_opt").checked = (ary.pg_list_opt == 1);
+		$("group_pg_list_headers").checked = (ary.pg_list_headers == 1);
+		if ( $("group_pg_list_emailaccount") ) $("group_pg_list_emailaccount").checked = (ary.pg_list_emailaccount == 1);
+		if ( $("group_pg_list_bounce") ) $("group_pg_list_bounce").checked = (ary.pg_list_bounce == 1);
+		$("group_pg_message_add").checked = (ary.pg_message_add == 1);
+		$("group_pg_message_edit").checked = (ary.pg_message_edit == 1);
+		$("group_pg_message_delete").checked = (ary.pg_message_delete == 1);
+		$("group_pg_message_send").checked = (ary.pg_message_send == 1);
+		group_permission_display('group_pg_message_send');
+		$("group_pg_subscriber_add").checked = (ary.pg_subscriber_add == 1);
+		$("group_pg_subscriber_edit").checked = (ary.pg_subscriber_edit == 1);
+		$("group_pg_subscriber_delete").checked = (ary.pg_subscriber_delete == 1);
+		$("group_pg_subscriber_import").checked = (ary.pg_subscriber_import == 1);
+		$("group_pg_subscriber_export").checked = (ary.pg_subscriber_export == 1);
+		$("group_pg_subscriber_sync").checked = (ary.pg_subscriber_sync == 1);
+		$("group_pg_subscriber_approve").checked = (ary.pg_subscriber_approve == 1);
+		$("group_pg_subscriber_filters").checked = (ary.pg_subscriber_filters == 1);
+		$("group_pg_subscriber_actions").checked = (ary.pg_subscriber_actions == 1);
+		$("group_pg_subscriber_fields").checked = (ary.pg_subscriber_fields == 1);
+		$("group_pg_form_add").checked = (ary.pg_form_add == 1);
+		$("group_pg_form_edit").checked = (ary.pg_form_edit == 1);
+		$("group_pg_form_delete").checked = (ary.pg_form_delete == 1);
+		$("group_pg_template_add").checked = (ary.pg_template_add == 1);
+		$("group_pg_template_edit").checked = (ary.pg_template_edit == 1);
+		$("group_pg_template_delete").checked = (ary.pg_template_delete == 1);
+		$("group_pg_reports_campaign").checked = (ary.pg_reports_campaign == 1);
+		$("group_pg_reports_list").checked = (ary.pg_reports_list == 1);
+		$("group_pg_reports_user").checked = (ary.pg_reports_user == 1);
+		$("group_pg_reports_trend").checked = (ary.pg_reports_trend == 1);
+  }
+
+  function group_limitdisplay(id, val) {
+	if (val)
+	  $(id).style.display = "";
+	else
+	  $(id).style.display = "none";
+  }
+
+  function group_permission_display(id) {
+		if (id == "group_pg_message_send") {
+			if ( $("group_pg_message_send").checked == 1 ) {
+				$("group_limit_mail_tr").className = "";
+				$("group_limit_campaign_tr").className = "";
+			}
+			else {
+				$("group_limit_mail_tr").className = "adesk_hidden";
+				$("group_limit_mail_checkbox").checked = false;
+				$("group_limit_campaign_tr").className = "adesk_hidden";
+				$("group_limit_campaign_checkbox").checked = false;
+			}
+		}
+  }
+
+  function group_can_update() {
+	return adesk_js_admin.pg_group_edit == 1;
+  }
+
+  function group_can_add() {
+	return adesk_js_admin.pg_group_add == 1;
+  }
+
+  function group_can_delete() {
+	return adesk_js_admin.pg_group_delete == 1;
+  }
+
+  function user_can_update() {
+	return adesk_js_admin.pg_user_edit == 1;
+  }
+
+  function user_can_add() {
+	return adesk_js_admin.pg_user_add == 1;
+  }
+
+  function user_can_delete() {
+	return adesk_js_admin.pg_user_delete == 1;
+  }
+
+function adesk_group_row_options(ary, row) {
+  return ary;
+}
+
+{/literal}
+</script>
+<tr valign="top">
+  <td>{"Lists"|alang}</td>
+  <td>
+	<select name="lists" id="group_lists" multiple size="5" style="width:99%;">
+	  {foreach from=$lists item=l}
+	  <option value="{$l.id}">{$l.name|escape|truncate:50}</option>
+	  {/foreach}
+	</select>
+  <div>
+    {"Select:"|alang}
+    <a href="#" onclick="return adesk_form_select_multiple_all($('group_lists'));">{"All"|alang}</a>
+    &middot;
+    <a href="#" onclick="return adesk_form_select_multiple_none($('group_lists'));">{"None"|alang}</a>
+    {"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists."|help}
+  </div>
+  </td>
+</tr>
+{if !$__ishosted}
+<tr valign="top">
+  <td>{"Sending methods"|alang}</td>
+  <td>
+	<select name="sendmethods[]" id="group_sendmethods" multiple size="5" style="width:99%;">
+	  {foreach from=$sendmethods item=m}
+	  <option value="{$m.id}">
+	  {if $m.type eq 0}
+	  {"Default mail() method"|alang}
+	  {elseif $m.type eq 3}
+	  {"Sendmail method"|alang}
+	  {else}
+	  {$m.host} {"(SMTP)"|alang}
+	  {/if}
+	  </option>
+	  {/foreach}
+	</select>
+  <div>
+    {"Select:"|alang}
+    <a href="#" onclick="return adesk_form_select_multiple_all($('group_sendmethods'));">{"All"|alang}</a>
+    &middot;
+    <a href="#" onclick="return adesk_form_select_multiple_none($('group_sendmethods'));">{"None"|alang}</a>
+    {"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists."|help}
+  </div>
+  </td>
+</tr>
+{/if}
+</table>
+
+<table border="0" cellspacing="0" cellpadding="5" id="group_perms_box">
+<tr>
+  <td colspan="2"><h3>{"Permissions"|alang}</h3></td>
+</tr>
+<tr>
+  <td>{"Lists"|alang}</td>
+  <td>
+    <label><input type="checkbox" name="pg_list_add" id="group_pg_list_add" value="1" />{"Add"|alang}</label>
+    <label><input type="checkbox" name="pg_list_edit" id="group_pg_list_edit" value="1" />{"Edit"|alang}</label>
+    <label><input type="checkbox" name="pg_list_delete" id="group_pg_list_delete" value="1" />{"Delete"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>
+	<label><input type="checkbox" name="pg_list_opt" id="group_pg_list_opt" value="1" />{"Manage Email Confirmation Sets"|alang}</label>
+	<label><input type="checkbox" name="pg_list_headers" id="group_pg_list_headers" value="1" />{"Manage Custom Email Headers"|alang}</label>
+  </td>
+</tr>
+{if !$__ishosted}
+<tr>
+  <td>&nbsp;</td>
+  <td>
+	<label><input type="checkbox" name="pg_list_emailaccount" id="group_pg_list_emailaccount" value="1" />{"Manage (Un)Subscribe By Email"|alang}</label>
+	<label><input type="checkbox" name="pg_list_bounce" id="group_pg_list_bounce" value="1" />{"Manage Bounce Settings"|alang}</label>
+  </td>
+</tr>
+{/if}
+<tr>
+  <td>{"Campaigns"|alang}</td>
+  <td>
+    <label><input type="checkbox" name="pg_message_add" id="group_pg_message_add" value="1" />{"Add"|alang}</label>
+    <label><input type="checkbox" name="pg_message_edit" id="group_pg_message_edit" value="1" />{"Edit"|alang}</label>
+    <label><input type="checkbox" name="pg_message_delete" id="group_pg_message_delete" value="1" />{"Delete"|alang}</label>
+    <label><input type="checkbox" name="pg_message_send" id="group_pg_message_send" value="1" onclick="group_permission_display('group_pg_message_send');" />{"Send"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>{"Subscribers"|alang}</td>
+  <td>
+    <label><input type="checkbox" name="pg_subscriber_add" id="group_pg_subscriber_add" value="1" />{"Add"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_edit" id="group_pg_subscriber_edit" value="1" />{"Edit"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_delete" id="group_pg_subscriber_delete" value="1" />{"Delete"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_import" id="group_pg_subscriber_import" value="1" />{"Import"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_export" id="group_pg_subscriber_export" value="1" />{"Export"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_sync" id="group_pg_subscriber_sync" value="1" />{"Sync"|alang}</label>
+    <label><input type="checkbox" name="pg_subscriber_approve" id="group_pg_subscriber_approve" value="1" />{"Approve"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>
+    <label><input type="checkbox" name="pg_subscriber_filters" id="group_pg_subscriber_filters" value="1" />{"Subscriber List Segments"|alang}</label>
+		<label><input type="checkbox" name="pg_subscriber_actions" id="group_pg_subscriber_actions" value="1" />{"Subscriber Actions"|alang}</label>
+		<label><input type="checkbox" name="pg_subscriber_fields" id="group_pg_subscriber_fields" value="1" />{"Subscriber Fields"|alang}</label>
+  </td>
+</tr>
+
+<tr>
+  <td>{"Subscription Forms"|alang}</td>
+  <td>
+	<label><input type="checkbox" name="pg_form_add" id="group_pg_form_add" value="1" />{"Add"|alang}</label>
+	<label><input type="checkbox" name="pg_form_edit" id="group_pg_form_edit" value="1" />{"Edit"|alang}</label>
+	<label><input type="checkbox" name="pg_form_delete" id="group_pg_form_delete" value="1" />{"Delete"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>{"Templates"|alang}</td>
+  <td>
+  	<label><input type="checkbox" name="pg_template_add" id="group_pg_template_add" value="1" />{"Add"|alang}</label>
+		<label><input type="checkbox" name="pg_template_edit" id="group_pg_template_edit" value="1" />{"Edit"|alang}</label>
+		<label><input type="checkbox" name="pg_template_delete" id="group_pg_template_delete" value="1" />{"Delete"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>{"Reports"|alang}</td>
+  <td>
+  	<label><input type="checkbox" name="pg_reports_campaign" id="group_pg_reports_campaign" value="1" />{"Campaign"|alang}</label>
+	<label><input type="checkbox" name="pg_reports_list" id="group_pg_reports_list" value="1" />{"List"|alang}</label>
+	<label><input type="checkbox" name="pg_reports_user" id="group_pg_reports_user" value="1" />{"User"|alang}</label>
+	<label><input type="checkbox" name="pg_reports_trend" id="group_pg_reports_trend" value="1" />{"Trends"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td>{"Users"|alang}</td>
+  <td>
+    <label><input type="checkbox" name="pg_user_add" id="group_pg_user_add" value="1" />{"Add"|alang}</label>
+    <label><input type="checkbox" name="pg_user_edit" id="group_pg_user_edit" value="1" />{"Edit"|alang}</label>
+    <label><input type="checkbox" name="pg_user_delete" id="group_pg_user_delete" value="1" />{"Delete"|alang}</label>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">
+    {"Select:"|alang}
+    <a href="#" onclick="return adesk_form_check_selection_element_all('group_perms_box', true);">{"All"|alang}</a>
+    &middot;
+    <a href="#" onclick="return adesk_form_check_selection_element_all('group_perms_box', false);">{"None"|alang}</a>
+  </td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+  <td colspan="2"><h3>{"Limits"|alang}</h3></td>
+</tr>
+<tr id="group_limit_mail_tr">
+  <td colspan="2">
+	<input type="checkbox" name="group_limit_mail_checkbox" id="group_limit_mail_checkbox" onclick="group_limitdisplay('group_div_limit_mail', this.checked)" /> <label for="group_limit_mail_checkbox">{"Limit emails sent"|alang}</label>
+	<div id="group_div_limit_mail" style="display:none; margin-left:40px;">
+	  <input type="text" name="limit_mail" id="group_limit_mail" style="width:40px;">
+	  <select name="limit_mail_type" id="group_limit_mail_type">
+		<option value="day">{"per day"|alang}</option>
+		<option value="week">{"per week"|alang}</option>
+		<option value="month">{"per month (last 30 days)"|alang}</option>
+		<option value="month1st">{"per calendar month (counting from the 1st)"|alang}</option>
+		<option value="monthcdate">{"per calendar month (counting from the user's creation date)"|alang}</option>
+		<option value="year">{"per year"|alang}</option>
+		<option value="ever">{"for all time"|alang}</option>
+	  </select>
+	</div>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">
+		<input type="checkbox" name="group_limit_subscriber_checkbox" id="group_limit_subscriber_checkbox" onclick="group_limitdisplay('group_div_limit_subscriber', this.checked)" /> <label for="group_limit_subscriber_checkbox">{"Limit subscribers"|alang}</label>
+		<div id="group_div_limit_subscriber" style="display:none; margin-left:40px;">
+		  <input type="text" name="limit_subscriber" id="group_limit_subscriber" style="width:40px;">
+		</div>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">
+		<input type="checkbox" name="group_limit_list_checkbox" id="group_limit_list_checkbox" onclick="group_limitdisplay('group_div_limit_list', this.checked)" /> <label for="group_limit_list_checkbox">{"Limit lists"|alang}</label>
+		<div id="group_div_limit_list" style="display:none; margin-left:40px;">
+		  <input type="text" name="limit_list" id="group_limit_list" style="width:40px;">
+		</div>
+  </td>
+</tr>
+<tr id="group_limit_campaign_tr">
+  <td colspan="2">
+		<input type="checkbox" name="group_limit_campaign_checkbox" id="group_limit_campaign_checkbox" onclick="group_limitdisplay('group_div_limit_campaign', this.checked)" /> <label for="group_limit_campaign_checkbox">{"Limit campaigns"|alang}</label>
+		<div id="group_div_limit_campaign" style="display:none; margin-left:40px;">
+		  <input type="text" name="limit_campaign" id="group_limit_campaign" style="width:40px;">
+		  <select name="limit_campaign_type" id="group_limit_campaign_type">
+			<option value="day">{"per day"|alang}</option>
+			<option value="week">{"per week"|alang}</option>
+			<option value="month">{"per month (last 30 days)"|alang}</option>
+			<option value="month1st">{"per calendar month (counting from the 1st)"|alang}</option>
+			<option value="monthcdate">{"per calendar month (counting from the user's creation date)"|alang}</option>
+			<option value="year">{"per year"|alang}</option>
+			<option value="ever">{"for all time"|alang}</option>
+		  </select>
+		</div>
+  </td>
+</tr>
+{if !$__ishosted}
+<tr>
+  <td colspan="2">
+		<input type="checkbox" name="group_limit_attachment_checkbox" id="group_limit_attachment_checkbox" onclick="group_limitdisplay('group_div_limit_attachment', this.checked)" /> <label for="group_limit_attachment_checkbox">{"Limit attachments"|alang}</label>
+		<div id="group_div_limit_attachment" style="display:none; margin-left:40px;">
+		  <input type="text" name="limit_attachment" id="group_limit_attachment" style="width:40px;">
+		  {"per message"|alang}
+		</div>
+  </td>
+</tr>
+{/if}
+<tr>
+  <td colspan="2">
+		<input type="checkbox" name="group_limit_user_checkbox" id="group_limit_user_checkbox" onclick="group_limitdisplay('group_div_limit_user', this.checked)" /> <label for="group_limit_user_checkbox">{"Limit users"|alang}</label>
+		<div id="group_div_limit_user" style="display:none; margin-left:40px;">
+		  <input type="text" name="limit_user" id="group_limit_user" style="width:40px;">
+		</div>
+  </td>
+</tr>
+{if !$__ishosted}
+<tr>
+  <td colspan="2">
+  	<input type="checkbox" name="unsubscribelink" id="group_unsubscribelink_checkbox" /> <label for="group_unsubscribelink_checkbox">{"Require unsubscribe link on all outgoing emails"|alang}</label>
+  </td>
+</tr>
+{/if}
+<tr>
+  <td colspan="2">
+  	<input type="checkbox" name="optinconfirm" id="group_optinconfirm_checkbox" /> <label for="group_optinconfirm_checkbox">{"Require opt-in email confirmation for all new subscribers"|alang}</label>
+  </td>
+</tr>
+
+<tr {if $__ishosted}style="display:none;"{/if}>
+  <td colspan="2">
+  	<label>
+      <input type="checkbox" name="req_approval" id="group_req_approval_checkbox" onclick="adesk_dom_toggle_display('group_div_req_approval', 'block');" />
+      {"Require approval of campaigns before sending starts"|alang}
+    </label>
+    <div id="group_div_req_approval" style="display:none;  margin-left:40px;">
+      <div>
+        {"For the first %s campaign(s)."|alang:'<input type="text" id="group_req_approval_1st" name="req_approval_1st" value="2" size="2" />'}
+      </div>
+      <div>
+        {"Send an email notification when a campaign requires approval:"|alang}<br />
+        <input type="text" id="group_req_approval_notify" name="req_approval_notify" value="{$admin.email}" size="30" />
+      </div>
+      <div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<tr {if $__ishosted}style="display:none;"{/if}>
+  <td colspan="2">
+    <label>
+      <input type="checkbox" name="forcesenderinfo" id="group_forcesenderinfo_checkbox" />
+      {"Require senders contact information for all lists"|alang}
+    </label>
+  </td>
+</tr>
+
+<!-- the end of the table is in /awebdesk/templates/group.form.htm -->

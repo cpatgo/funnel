@@ -1,0 +1,16 @@
+<div id="social" class="adesk_modal_delete" align="center" style="display: none">
+  <div class="adesk_modal_inner">
+    <h1>{"Social Share"|alang}</h1>
+	<div>
+	  {"Use these links to share this campaign on social networks."|alang}
+	</div>
+
+	<div style="margin: 15px 0;">
+		{include file=social.share.inc.htm' shareURL=$webcopy shareTitle=$campaign.messages[0].subject}
+	</div>
+
+    <div>
+      <input type="button" class="adesk_button_close" value="{"Close"|alang}" onclick="campaign_social_toggle(); adesk_ui_anchor_set(report_campaign_list_anchor())" />
+    </div>
+  </div>
+</div>

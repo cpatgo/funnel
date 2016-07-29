@@ -1,0 +1,139 @@
+<script type="text/javascript">
+<!--
+{include file="forward.js"}
+-->
+</script>
+      <div class="row" style="margin-top:20px;">
+     <div class="col-lg-12">  
+      
+          
+          <section class="panel">
+            <header class="panel-heading">
+              <ul class="nav nav-pills pull-right">
+                <li>
+                  <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down fa-lg text-active"></i><i class="fa fa-caret-up fa-lg text"></i></a>
+                </li>
+              </ul>
+             <h4>{"Forward To A Friend"|plang}</h4>
+            </header>
+            <section   class="panel-body   m-b">
+ 
+
+{if $mail_forward_send}
+
+	<p>
+		{"%d email(s) sent."|plang:$mail_forward_results_count}
+	{if !$mail_forward_good}
+		<br />
+		{"The following errors occurred:"|plang}
+		{foreach from=$mail_forward_results item=r}
+			{if !$r.succeeded}
+				{$r.email|escape} - {$r.message}
+			{/if}
+		{/foreach}
+	{/if}
+	</p>
+	<p>
+		<a href="{$view_link2}">{"Forward again"|plang}</a>
+	</p>
+
+{else}
+
+	{if $valid == true}
+
+		<p>{"Send this email to a friend. Simply fill out the information below and click on the send button."|plang}</p>
+
+		<div id="form">
+
+			<form method="post" action="{$_}/index.php?action=forward&mode=forward" onsubmit="forward_update_previewmsg(); return forward_form_submit();">
+
+				<table border="0" cellspacing="0" cellpadding="5">
+
+				  <tr>
+				    <td valign="top">{"Your Email"|plang}</td>
+				    <td>
+				    	{if $valid == true}{$subscriber.email}{/if}
+				    	<input type="{if $valid == true}hidden{else}text{/if}" name="from_email" id="fromemailField" value="{if $valid == true}{$subscriber.email}{/if}" />
+				    </td>
+				  </tr>
+				  <tr>
+				    <td valign="top">{"Your Name"|plang}</td>
+				    <td>
+				    	<input type="text" name="from_name" id="fromnameField" value="{if $valid == true}{$subscriber.name}{/if}" />
+				    </td>
+				  </tr>
+				  <tr>
+				    <td valign="top">{"Friend information"|plang}<br /><a href="#" onclick="clone_1st_tr($('forward_friend_info_tbody'));return false;forward_friend_add(3);">{"Forward to more"|plang}</a></td>
+				    <td>
+				    	<table id="forward_friend_info">
+				    		<tr>
+				    			<td>{"Friend Email"|plang}</td>
+				    			<td>{"Friend Name"|plang}</td>
+				    		</tr>
+				    		<tbody id="forward_friend_info_tbody">
+					    		<tr>
+					    			<td><input type="text" name="to_email[]" /></td>
+					    			<td><input type="text" name="to_name[]" /></td>
+					    		</tr>
+					    		<tr>
+					    			<td><input type="text" name="to_email[]" /></td>
+					    			<td><input type="text" name="to_name[]" /></td>
+					    		</tr>
+					    		<tr>
+					    			<td><input type="text" name="to_email[]" /></td>
+					    			<td><input type="text" name="to_name[]" /></td>
+					    		</tr>
+				    		</tbody>
+				    	</table>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td valign="top">{"Personalized Message"|plang}<br />({"optional"|plang})</td>
+				    <td><textarea name="custom_message" id="custom_message" onblur="forward_update_previewmsg();" style="height: 100px; width: 400px;"></textarea></td>
+				  </tr>
+				  <tr>
+				    <td valign="top">{"Message Preview"|plang}</td>
+				    <td>
+				    	<textarea name="message" id="message" readonly="" style="height: 200px; width: 400px;">{if $valid == true}{"This message is being sent by:"|plang}
+{$subscriber.email}
+
+{"The sender thought the mailing entitled '%s' would be of interest to you."|plang:$message.subject}{else}{"The sender of this message thought the mailing entitled"|plang '%s' would be of interest to you."|plang:$message.subject}
+
+{/if}{"To view the mailing, please visit:"|plang}
+
+{$view_link}</textarea>
+			    	<textarea id="message_default" class="adesk_hidden">{if $valid == true}{"This message is being sent by:"|plang}
+{$subscriber.email}
+
+{"The sender thought the mailing entitled '%s' would be of interest to you."|plang:$message.subject}{else}{"The sender of this message thought the mailing entitled '%s' would be of interest to you."|plang:$message.subject}
+{/if}
+
+
+{"To view the mailing, please visit:"|plang}
+
+{$view_link}</textarea>
+				    </td>
+				  </tr>
+
+				</table>
+
+				<input type="hidden" name="nl" value="{$listid}" />
+				<input type="hidden" name="c" value="{$campaignid}" />
+				<input type="hidden" name="m" value="{$messageid}" />
+				<input type="hidden" name="s" value="{$hash}" />
+				<p><input type="submit" value="{"Send"|plang}" /></p>
+
+			</form>
+
+		</div>
+	{elseif $campaignid == 0}
+		<p>{"This feature does not work with test emails.  This page will work when you actually send the campaign."|plang}</p>
+	{else}
+
+		<p>{"Invalid link. Please retry or contact the list admin."|plang}</p>
+
+	{/if}
+
+{/if}
+
+</section></section></div></div>

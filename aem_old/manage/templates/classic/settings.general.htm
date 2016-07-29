@@ -1,0 +1,178 @@
+<div id="settings_general">
+<h2>{"General"|alang}</h2>
+	<table border="0" cellpadding="5" cellspacing="0" class="adesk_blockquote">
+		{*
+		<tr>
+			<td >{"Site Name"|alang}</td>
+			<td><input type="text" name="site_name" id="site_name" value="{$site.site_name|escape}" style="width: 200px;" /></td>
+		</tr>
+		*}
+		<tr style="display:none;">
+			<td >{"Software URL"|alang}</td>
+			<td>
+				<input type="text" name="p_link" id="p_link" value="{if $__ishosted and isset($site.p_link_precname)}{$site.p_link_precname|escape}{else}{$site.p_link|escape}{/if}" style="width: 200px;background-color:#eee;" readonly="readonly" />
+{if !$__ishosted}
+				{"The location of this software on the web. To change this, run Updater from a new location."|help}
+{/if}
+			</td>
+		</tr>
+	{if $__ishosted}
+	{if $__planid > 0 and !adesk_site_hosted_rsid()}
+	<tr valign="top">
+	  <td>
+		<div style="float:right;">http://</div>
+		{"Domain Alias"|alang}
+	  </td>
+	  <td>
+			{if $cnamefail != ""}
+			<div class="adesk_help_inline">
+				{"Your CNAME record update was not successful"|alang}:
+				{$cnamefail}
+			</div>
+			{/if}
+		<input type="text" id="site_cname" name="site_cname" value="{$hosted_cname}" style="width: 200px;" />
+		<input type="button" id="site_cname_check" value="{'Check'|alang}" onclick="settings_general_cname();" style="display:none;" />
+		<br/>
+		<br/>
+		<a href="/manage/manage/ssl.php" target="_blank">{"Manage your SSL information"|alang}</a>
+	  </td>
+	</tr>
+	<tr>
+	  <td>&nbsp;</td>
+	  <td>
+		<div id="hosted_cname_ok" class="adesk_hidden">
+		  {"Your domain alias is currently setup and working properly."|alang}
+		</div>
+		<div id="hosted_cname_bad" class="adesk_hidden">
+		  {"You have a domain alias set however it does not seem to be working properly at this time. If you just changed your DNS it may take time for your changes to go live."|alang}
+		</div>
+		<div class="hosted_cname_help">
+		  <p>
+		  {"To set a domain alias you need to create a CNAME record that points to your account url."|alang}
+		  </p>
+
+		  <p>
+		  {"Example:"|alang}<br />
+		  {"If you wanted to create a alias for email.yourdomain.com to point to your account %s you would add a cname to your yourdomain.com domain like:"|alang:$hosted_domain}
+		  </p>
+
+		  <p>
+		  email 14400 IN CNAME {$hosted_domain}.
+		  </p>
+
+		  <p>
+		  <b>{"It may take several hours (or longer) for your DNS changes to go live."|alang}</b>
+		  </p>
+		</div>
+	  </td>
+	</tr>
+	{elseif !adesk_site_hosted_rsid()}
+	<tr>
+	  <td>
+		{"Domain Alias"|alang}
+	  </td>
+	  <td>
+		{"Upgrade your plan to enable the domain alias feature.  With a domain alias you can set your account to run under your own domain name (such as email.company.com or www.emailcompany.com)"|alang}
+	  </td>
+	</tr>
+	{/if}
+	{/if}
+		<tr>
+		  <td width="110">{"Default from"|alang}</td>
+		  <td><input type="text" name="emfrom" id="emfrom" value="{$site.emfrom|escape}" style="width: 200px;" /></td>
+	  </tr>
+	  {if $site.general_public}
+		  <tr>
+				<td>{"Down for maintenance"|alang}</td>
+				<td><input type="checkbox" name="general_maint" value="1" onclick="general_maint_check(this.checked)" {$site.general_maint|adesk_ischecked} /></td>
+		  </tr>
+	  {/if}
+		<tbody id="general_maint_tbody" {if $site.general_maint == 1}class="adesk_table_rowgroup"{else}class="adesk_hidden"{/if}>
+		  <tr valign="top">
+			<td>{"Message"|alang}</td>
+			<td><textarea name="general_maint_message">{$site.general_maint_message}</textarea></td>
+		  </tr>
+		</tbody>
+	  {*
+	  <tr>
+			<td>{"Enable RSS Feeds for Message Statistics"|alang}</td>
+			<td><input type="checkbox" name="general_allow_rss" value="1" {$site.general_allow_rss|adesk_ischecked} /></td>
+	  </tr>
+		<tbody id="general_maint_tbody" {if $site.general_maint == 1}class="adesk_table_rowgroup"{else}class="adesk_hidden"{/if}>
+		  <tr valign="top">
+			<td>{"Message"|alang}</td>
+			<td><textarea name="general_maint_message">{$site.general_maint_message}</textarea></td>
+		  </tr>
+		</tbody>
+	  <tr>
+			<td>{"Password protect site"|alang}</td>
+			<td><input type="checkbox" name="general_passprotect" value="1" {$site.general_passprotect|adesk_ischecked} /></td>
+	  </tr>
+	  *}
+		{if !$__ishosted and $rwCheck.apache}
+			  <tr>
+					<td>{"SEO friendly URLs"|alang}</td>
+					<td>
+					  <input type="checkbox" name="public_url_rewrite" value="1" onclick="public_rewrite_check(this.checked)" {$site.general_url_rewrite|adesk_ischecked} />
+					  {"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL."|help}
+					</td>
+			  </tr>
+			<tbody id="public_rewrite_tbody" {if $site.general_url_rewrite == 1}class="adesk_table_rowgroup"{else}class="adesk_hidden"{/if}>
+			  <tr valign="top">
+					<td>&nbsp;</td>
+					<td>
+					  <a href="#public" onclick="public_rewrite_htaccess();">{"View .htaccess Content"|alang}</a>
+				      {"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s"|help:$htaccess}
+					</td>
+			  </tr>
+			</tbody>
+			<tr>
+			  <td>{"Max upload size"|alang}</td>
+			  <td>
+				<input type="text" name="maxuploadfilesize" value="{$site.maxuploadfilesize}" style="width:30px;" /> (MB's)
+				{"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s."|help:$uploadLimit:$postLimit}
+			  </td>
+			</tr>
+
+		{/if}
+	  <tr>
+			<td>{"Disable public section"|alang}</td>
+			<td><input type="checkbox" name="general_public" value="1" {if $site.general_public == 0}checked="checked"{/if} /></td>
+	  </tr>
+
+	</table>
+</div>
+
+
+<div id="htaccess" class="adesk_modal" align="center" style="display: none;">
+  <div class="adesk_modal_inner" style="width: 500px; text-align: center;">
+     <div>
+       {"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already."|alang}<br />
+       {"If the file cannot be written to, you will have to put this into file:"|alang}<br />
+       {$htaccess}
+     </div>
+     <textarea cols="50" rows="10" readonly onclick="adesk_form_highlight(this);">
+# {"URL Rewrite Support"|alang}
+
+Options All -Indexes
+
+ErrorDocument 404 {$URI}/index.php
+
+
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase {$URI}/
+{literal}
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js)$
+{/literal}
+RewriteRule . {$URI}/index.php [L]
+&lt;/IfModule&gt;
+    </textarea>
+{if $rwCheck.iis}
+    <div class="warning">{"You will need to have ISAPI_Rewrite filter turned on in your IIS server."|alang}</div>
+{/if}
+    <div align="center"><input type="button" value="{'Close'|alang}" onclick="$('htaccess').style.display = 'none';" /></div>
+  </div>
+</div>

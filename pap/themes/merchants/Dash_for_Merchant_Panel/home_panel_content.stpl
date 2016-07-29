@@ -1,0 +1,144 @@
+<!-- home_panel_content -->
+
+<div class="DashStatsBlock DashLargeBlock Sales">
+	<h3>##Total cost of Sales## <span>##(This month)##</span></h3>
+	<div class="DashLargeBlockTop">{$thisMonthSales->totalCost->approved|currency_span}<span class="DashStatsLabel">{$thisMonthSales->count->approved} ##Approved##</span></div>
+	<div class="DashLargeBlockBottom">
+		<div class="DashSubstatsBlock">
+			{$thisMonthSales->totalCost->paid|currency_span}
+			<span class="DashStatsLabel">{$thisMonthSales->count->paid} ##Paid##</span>
+		</div>
+		<div class="DashSubstatsBlock">
+			{$thisMonthSales->totalCost->pending|currency_span}
+			<span class="DashStatsLabel">{$thisMonthSales->count->pending} ##Pending##</span>
+		</div>
+	{widget id="commissionsChart"}
+	</div>
+</div>
+
+{widget id="newsContent"}
+
+{if $pendingTasks != false}
+<div class="DashStatsBlock DashSmallBlock PendingTasks">
+	<h3>##Pending Tasks##</h3>
+	<div class="DashSmallBlockBottom">
+		<div class="DashSubstatsBlock">
+			<span class="NumberData">{$pendingTasks.affiliates}</span>
+			<a href="#Affiliate-Manager" class="DashStatsLabel">##Affiliates##</a>			
+		</div>
+		<div class="DashSubstatsBlock">
+			<span class="NumberData">{$pendingTasks.commissions}</span>
+			<a href="#Transaction-Manager" class="DashStatsLabel">##Commissions##</a>			
+		</div>
+		<div class="DashSubstatsBlock">
+			<span class="NumberData">{$pendingTasks.links}</span>
+			<a href="#Direct-Links-Manager" class="DashStatsLabel">##DirecLink Urls##</a>			
+		</div>
+		<div class="DashSubstatsBlock">
+			<span class="NumberData">{$pendingTasks.emails}</span>
+			<a href="#Mail-Outbox" class="DashStatsLabel">##Unsent emails##</a>			
+		</div>
+	</div>
+</div>
+{/if}
+
+<div class="DashStatsBlock DashSmallBlock">
+	<h3>##Clicks## <span>##(30 days)##</span></h3>
+	<div class="DashSmallBlockTop">{$last30DaysClicks->count->all|number_span}<span>##Total##</span></div>
+	<div class="DashSmallBlockBottom">
+		<div class="DashSubstatsBlock">
+			{$last30DaysClicks->count->unique|number_span}
+			<span class="DashStatsLabel">##Unique##</span>
+		</div>
+		<div class="DashSubstatsBlock">
+			{$last30DaysClicks->count->raw|number_span}
+			<span class="DashStatsLabel">##Repeated##</span>
+		</div>
+	</div>
+</div>
+<div class="DashStatsBlock DashSmallBlock">
+	<h3>##Impressions## <span>##(30 days)##</span></h3>
+	<div class="DashSmallBlockTop">{$last30DaysImpressions->count->all|number_span}<span>##Total##</span></div>
+	<div class="DashSmallBlockBottom">
+		<div class="DashSubstatsBlock">
+			{$last30DaysImpressions->count->unique|number_span}
+			<span class="DashStatsLabel">##Unique##</span>
+		</div>
+		<div class="DashSubstatsBlock">
+            {$last30DaysImpressions->count->raw|number_span}
+			<span class="DashStatsLabel">##Repeated##</span>
+		</div>
+	</div>
+</div>
+<div class="DashStatsBlock DashSmallBlock">
+	<h3>##Commissions## <span>##(30 days)##</span></h3>
+	<div class="DashSmallBlockTop">{$last30DaysCommissions->commission->approved|currency_span}<span>##Approved##</span></div>
+	<div class="DashSmallBlockBottom">
+		<div class="DashSubstatsBlock">
+			{$last30DaysCommissions->commission->paid|currency_span}
+			<span class="DashStatsLabel">##Paid##</span>
+		</div>
+		<div class="DashSubstatsBlock">
+			{$last30DaysCommissions->commission->pending|currency_span}
+			<span class="DashStatsLabel">##Pending##</span>
+		</div>
+	</div>
+</div>
+<div class="DashStatsBlock DashSmallBlock">
+	<h3>##All Refunds## <span>##(30 days)##</span></h3>
+	<div class="DashSmallBlockTop">{$last30DaysRefunds->commission->approved|currency_span}<span>##Approved##</span></div>
+	<div class="DashSmallBlockBottom">
+		<div class="DashSubstatsBlock">
+			{$last30DaysRefunds->commission->paid|currency_span}
+			<span class="DashStatsLabel">##Paid##</span>
+		</div>
+		<div class="DashSubstatsBlock">
+			{$last30DaysRefunds->commission->pending|currency_span}
+			<span class="DashStatsLabel">##Pending##</span>
+		</div>
+	</div>
+</div>
+<div class="DashStatsBlock DashSmallBlock">
+    <h3>##All Chargebacks## <span>##(30 days)##</span></h3>
+    <div class="DashSmallBlockTop">{$last30DaysChargebacks->commission->approved|currency_span}<span>##Approved##</span></div>
+    <div class="DashSmallBlockBottom">
+        <div class="DashSubstatsBlock">
+            {$last30DaysChargebacks->commission->paid|currency_span}
+            <span class="DashStatsLabel">##Paid##</span>
+        </div>
+        <div class="DashSubstatsBlock">
+            {$last30DaysChargebacks->commission->pending|currency_span}
+            <span class="DashStatsLabel">##Pending##</span>
+        </div>
+    </div>
+</div>
+{if $actionCommissionsEnabled eq 'Y'}
+<div class="DashStatsBlock DashSmallBlock">
+    <h3>##Number of Actions## <span>##(this month)##</span></h3>
+    <div class="DashSmallBlockTop">{$thisMonthActionCommissions->count->approved|number_span}<span>##Approved##</span></div>
+    <div class="DashSmallBlockBottom">
+        <div class="DashSubstatsBlock">
+            {$thisMonthActionCommissions->count->paid|number_span}
+            <span class="DashStatsLabel">##Paid##</span>
+        </div>
+        <div class="DashSubstatsBlock">
+            {$thisMonthActionCommissions->count->pending|number_span}
+            <span class="DashStatsLabel">##Pending##</span>
+        </div>
+    </div>
+</div>
+<div class="DashStatsBlock DashSmallBlock">
+    <h3>##Total cost of Actions## <span>##(this month)##</span></h3>
+    <div class="DashSmallBlockTop">{$thisMonthActionCommissions->totalCost->approved|currency_span}<span>##Approved##</span></div>
+    <div class="DashSmallBlockBottom">
+        <div class="DashSubstatsBlock">
+            {$thisMonthActionCommissions->totalCost->paid|currency_span}
+            <span class="DashStatsLabel">##Paid##</span>
+        </div>
+        <div class="DashSubstatsBlock">
+            {$thisMonthActionCommissions->totalCost->pending|currency_span}
+            <span class="DashStatsLabel">##Pending##</span>
+        </div>
+    </div>
+</div>
+{/if}

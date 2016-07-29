@@ -1,0 +1,42 @@
+{* CONFIG *}
+{if !isset($base)}{if preg_match('/\/manage\//', adesk_http_geturl())}{assign var=base value='../'}{else}{assign var=base value=''}{/if}{/if} {* assume we're in admin *}
+{if !isset($fieldPrefix)}{assign var=fieldPrefix value='user'}{/if}
+{if !isset($fieldAction)}{assign var=fieldAction value=$fieldPrefix}{/if}
+{if !isset($fieldID)}{assign var=fieldID value='userField'}{/if}
+{if !isset($fieldName)}{assign var=fieldName value='userid'}{/if}
+{if !isset($fieldValue)}{assign var=fieldValue value=''}{/if}
+{if !isset($fieldClass)}{assign var=fieldClass value=''}{/if}
+{if !isset($fieldStyle)}{assign var=fieldStyle value=''}{/if}
+{if !isset($fieldOnClick)}{assign var=fieldOnClick value=''}{/if}
+{if !isset($acOnUpdate)}{assign var=acOnUpdate value='null'}{/if}
+{if !isset($acInUpdate)}{assign var=acInUpdate value='null'}{/if}
+{if !isset($addlParams)}{assign var=addlParams value=''}{/if}
+
+<input
+	type="text"
+	id="{$fieldID}"
+	name="{$fieldName}"
+	value="{$fieldValue}"
+	{if isset($fieldSize)} size="{$fieldSize}"{/if}
+	{if $fieldClass} class="{$fieldClass}"{/if}
+	{if $fieldStyle != ''} style="{$fieldStyle}"{/if}
+	{if $fieldOnClick != ''} onclick="{$fieldOnClick}"{/if}
+/>
+
+<div class="adesk_autocomplete" id="{$fieldID}_autocomplete"></div>
+
+<script type="text/javascript">
+<!--
+var {$fieldPrefix}_auto_completer = new Ajax.Autocompleter(
+	'{$fieldID}', // id of input field
+	'{$fieldID}_autocomplete', // id of dropdown list
+	'awebdeskapi.php?f={$fieldAction}_autocomplete&p[]={$fieldName}{if $addlParams}{foreach from=$addlParams item=value}&p[]={$value}{/foreach}{/if}', // ajax url to call
+	{literal}{{/literal} // with additional settings
+		minChars : 3, // trigger when
+		indicator : null,//'{$fieldID}_loading', // yes, show loading indicator
+		afterUpdateElement : {$acOnUpdate}, // should we do something with a result (onchange)?
+		updateElement : {$acInUpdate} // should we do something with a result (onchange)?
+	{literal}}{/literal}
+);
+-->
+</script>

@@ -1,0 +1,29 @@
+<ul>
+{if $canSendCampaign}
+<li class="special"><a href="desk.php?action=campaign_new" ><img class="va" src="images/mail_add-32-32.png" width="20" height="20" /> {"Create Campaign"|alang}</a></li>
+{/if}
+</ul>
+<ul>
+
+{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+<h2>{"Other options"|alang}</h2>
+ 
+{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete}
+		<li><a href="desk.php?action=campaign#list-01D-0-0"><img class="va" src="css/images/viewcampaigns.png" /> {"View Campaigns"|alang}</a></li>
+{/if}
+{if $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+		<li><a href="desk.php?action=template#list-01-0-0"><img class="va" src="css/images/emailtemplates.png" /> {"Email Templates"|alang}</a></li>
+{/if}
+ 
+{/if}
+</ul>
+
+{if $admin.pg_template_add || $admin.pg_template_edit || $admin.pg_template_delete}
+<ul>
+<h2>{"Advanced options"|alang}</h2>
+ 
+		<li><a href="desk.php?action=personalization#list-01-0-0"><img class="va" src="css/images/messagevariables.png" /> {"Message Variables"|alang}</a></li>
+</ul>	 
+{/if}
+ 
+ 

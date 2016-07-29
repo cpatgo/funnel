@@ -1,0 +1,65 @@
+<div id="forward" class="adesk_hidden">
+  <div class="adesk_help_inline">{"Forwards are only tracked when your subscribers forward the email by clicking on a Forward link you put in your email message."|alang}</div>
+
+  <div class="startup_box_container">
+	<div class="startup_box_container_inner">
+	  <table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td style="font-size:19px;"><span id="forward_total_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Total Forwards"|alang} <span id="forward_total_p" style="color:#999999;">(0.00%)</span></td>
+		  <td width="15">&nbsp;</td>
+		  <td style="font-size:19px;"><span id="forward_unique_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Unique Forwards"|alang} <span id="forward_unique_p" style="color:#999999;">(0.00%)</span> </td>
+		  <td width="15">&nbsp;</td>
+		  <td style="font-size:19px;"><span id="forward_didnt_t">0</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Didn't Forward"|alang} <span id="forward_didnt_p" style="color:#999999;">(0.00%)</span></td>
+		  <td width="15">&nbsp;</td>
+		  <td style="font-size:19px;"><span id="forward_avg">0.00</span></td>
+		  <td width="10">&nbsp;</td>
+		  <td>{"Avg. Recipients Per Forward"|alang}</td>
+		</tr>
+	  </table>
+	</div>
+  </div>
+  <br />
+
+  <form action="desk.php?action=report_campaign" method="GET" onsubmit="forward_list_search(); return false">
+	{if isset($smarty.get.print) and $smarty.get.print == 1} <div style="display:none"> {/if}
+	  <table cellspacing="0" cellpadding="0" width="100%">
+		<tr class="adesk_table_header_options">
+		  <td align="right">
+			<div>
+			  <input type="text" name="qsearch" id="forward_search" />
+			  <input type="button" value='{"Search"|alang}' onclick="forward_list_search()" />
+			  <input type="button" value='{"Clear"|alang}' id="forward_clear" style="display:none" onclick="forward_list_clear()" />
+			</div>
+		  </td>
+		</tr>
+	  </table>
+	  {if isset($smarty.get.print) and $smarty.get.print == 1} </div> {/if}
+	<table width="100%" border="0" cellspacing="0" cellpadding="1">
+	  <thead id="forward_head">
+		<tr class="adesk_table_header">
+		  <td>{adesk_headercol action="forward" idprefix="forward_list_sorter" id="01" label="Email"|alang}</td>
+		  <td>{adesk_headercol action="forward" idprefix="forward_list_sorter" id="02" label="Date"|alang}</td>
+		  <td>{adesk_headercol action="forward" idprefix="forward_list_sorter" id="03" label="# Times"|alang}</td>
+		  <td>{"Message"|alang}</td>
+		</tr>
+	  </thead>
+	  <tbody id="forward_table">
+	  </tbody>
+	</table>
+	<div id="forward_noresults" class="adesk_hidden">
+	  <div align="center">{"Nothing found."|alang}</div>
+	</div>
+	<div style="float:right">
+	  {include file="pagination.js.tpl.htm" paginator=$paginator_forward tabelize="forward_tabelize" paginate="forward_paginate"}
+	</div>
+	<div id="forward_loadingBar" class="adesk_hidden" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+	  {"Loading. Please wait..."|alang}
+	</div>
+  </form>
+</div>

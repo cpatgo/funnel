@@ -1,0 +1,155 @@
+<div style="padding:30px;">
+
+{if $approved or $declined}
+
+{if $approved}
+	<div>{"This campaign has already been accepted."|plang}</div>
+{else} {* elseif $declined *}
+	<div>{"This campaign has already been declined."|plang}</div>
+{/if}
+
+	<br /><div><input type="button" value="{'Close'|plang}" onclick="window.close();" /></div>
+
+{else}
+
+<script>
+{include file='approve.js'}
+</script>
+
+<h3>{"Campaign for Approval"|plang}</h3>
+
+<div id="infobox" class="adesk_block">
+
+	<h4>{"Campaign:"|plang} {$campaign.name}</h4>
+
+	<table>
+		<tr>
+		  <td width="100"><strong>{"Type:"|plang}</strong></td>
+		  <td>{$type_array[$campaign.type]}</td>
+		</tr>
+		<tr>
+		  <td><strong>{"List(s):"|plang}</strong></td>
+		  <td>{foreach from=$campaign.lists item=l name=listloop}{$l.name}{if !$smarty.foreach.listloop.last}, {/if}{/foreach}</td>
+		</tr>
+{if $campaign.filterid}
+		<tr>
+		  <td><strong>{"Segment:"|plang}</strong></td>
+		  <td>{$campaign.filter.name}</td>
+		</tr>
+{/if}
+		<tr>
+		  <td><strong>{"Date/Time:"|plang}</strong></td>
+		  <td>{$message.cdate}</td>
+		</tr>
+		<tr>
+		  <td><strong>{"Recipients:"|plang}</strong></td>
+		  <td>{$campaign.total_amt}</td>
+		</tr>
+
+
+	</table>
+	<hr />
+
+	<h4>{"User:"|plang} {$user.username}</h4>
+
+	<table>
+		<tr>
+		  <td width="100"><strong>{"User:"|plang}</strong></td>
+		  <td>{$user.first_name} {$user.last_name}</td>
+		</tr>
+		<tr>
+		  <td><strong>{"E-mail:"|plang}</strong></td>
+		  <td><a href="mailto:{$user.email}">{$user.email}</a></td>
+		</tr>
+		<tr>
+		  <td valign="top"><strong>{"Group(s):"|plang}</strong></td>
+		  <td>{foreach from=$groups item=g name=grouploop}<div title="{$g.descript}">{$g.title}</div>{if !$smarty.foreach.listloop.last}, {/if}{/foreach}</td>
+		</tr>
+
+	</table>
+	<hr />
+{if $message.format != 'text'}
+	<h4>{"Message (HTML Version)"|plang}</h4>
+
+	<iframe src="{$_}/awebview.php?c={$campaign.id}&m={$message.id}&previewtype=html{if $subscriber}&s={$subscriber.hash}{/if}&nolt=1" height="400" width="100%" style="border: 0px;" border="0" frameborder="0"></iframe>
+{/if}
+
+{if $message.format != 'html'}
+	<h4>{"Message (Text Version)"|plang}</h4>
+
+	<iframe src="{$_}/awebview.php?c={$campaign.id}&m={$message.id}&previewtype=text{if $subscriber}&s={$subscriber.hash}{/if}&nolt=1" height="400" width="100%" style="border: 0px;" border="0" frameborder="0"></iframe>
+{/if}
+
+
+
+	<hr />
+
+	<div>
+		<input type="button" value="{'Approve'|plang}" class="adesk_button_ok" style="font-size:13px; font-weight:bold;" onclick="approval_approve();" />
+		<input type="button" value="{'Decline'|plang}" class="adesk_button_cancel" style="font-size:13px;" onclick="approval_decline_toggle();" />
+	</div>
+
+</div>
+
+<div id="declinebox" class="adesk_hidden">
+	<h4>{"Send Notification to "|plang} {$user.username|upper}</h4>
+	<div>
+		<label>
+			{"FROM E-mail:"|plang}<br />
+			<input type="text" name="from_mail" value="{if $admin.email}{$admin.email}{else}{$site.emfrom}{/if}" />
+		</label>
+	</div>
+	<div>
+		<label>
+			{"FROM Name:"|plang}<br />
+			<input type="text" name="from_name" value="{if $admin.id}{$admin.first_name} {$admin.last_name}{else}{* $site.site_name *}{/if}" />
+		</label>
+	</div>
+	<div>
+		<label>
+			{"TO E-mail:"|plang}<br />
+			<input type="text" name="to_mail" value="{$user.email}" />
+		</label>
+	</div>
+	<div>
+		<label>
+			{"TO Name:"|plang}<br />
+			<input type="text" name="to_name" value="{$user.first_name} {$user.last_name}" />
+		</label>
+	</div>
+	<div>
+		<label>
+			{"Subject:"|plang}<br />
+			<input type="text" name="subject" value="{'Your campaign needs to be updated'|plang}" />
+		</label>
+	</div>
+	<div>
+		<label>
+			{"Message:"|plang}<br />
+			<textarea name="message" style="width:100%;height:150px;">{"Your campaign &quot;%s&quot; could not be approved at this time."|plang:$campaign.name}
+
+{"Please check your message you were sending to ensure it meets our sending policy."|plang}
+
+{"Modify Campaign:"|plang} {$_}/manage/desk.php?action=campaign_new&campaignid={$campaign.id}
+{"Modify Message:"|plang} {$_}/manage/desk.php?action=message#form-{$message.id}
+
+{"Once you have updated your message you can try to send it again."|plang}
+			</textarea>
+		</label>
+	</div>
+
+	<br />
+
+	<div>
+		<input type="button" value="{'Decline & Send Email'|plang}" class="adesk_button_ok" onclick="approval_decline();" />
+		<input type="button" value="{'Back'|plang}" class="adesk_button_close" onclick="approval_decline_toggle();" />
+	</div>
+
+</div>
+
+<div id="approvedbox" class="adesk_hidden">{"Campaign Approved."|plang}</div>
+<div id="declinedbox" class="adesk_hidden">{"Campaign Declined."|plang}</div>
+
+{/if} {* if !$approved and !$declined *}
+
+</div>

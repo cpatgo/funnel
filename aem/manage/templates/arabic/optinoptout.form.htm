@@ -1,0 +1,13 @@
+<div id="form" class="adesk_hidden">
+  <form method="POST" onsubmit="optinoptout_form_save(optinoptout_form_id); return false">
+    <input type="hidden" name="id" id="form_id" />
+    {include file="form.optinoptout.inc.htm"}
+
+    <br />
+    <div>
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="optinoptout_form_save(optinoptout_form_id)" />
+      <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+    </div>
+    <input type="submit" style="display:none"/>
+  </form>
+</div>

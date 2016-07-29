@@ -1,0 +1,317 @@
+##### TRANSLATION STRINGS #####
+##### Example: original string = your-translation-here #####
+
+"%d  email(s) sent." = "%d  ایمیل (بازدید کنندگان) ارسال می شود."
+"%s  thought you may be interested in this mailing." = "%s  فکر کردم شما ممکن است علاقه مند به این پستی ."
+"(Optional) Why did you decide to unsubscribe?" = "(اختیاری) چرا شما تصمیم به لغو کنم؟"
+"(Subscribed  %s )" = "( مشترک  %s  )"
+"A new subscriber has been added to your list." = "مشترک جدید به لیست شما اضافه شده است."
+"A request to reset your password has been received." = "درخواست رمز عبور خود را برای تنظیم مجدد دریافت شده است."
+"A subscriber has been removed from your list." = "مشترک شده است از لیست شما حذف خواهند شد."
+"Account Lookup" = "حساب گرین کارت آمریکا"
+"Additional Information" = "اطلاعات اضافی"
+"All rights reserved." = "همه حقوق محفوظ است ."
+"Archive" = "بایگانی"
+"Cancel" = "لغو کردن"
+"Changes Saved." = "تغییرات ذخیره شده ."
+"Clear" = "واضح"
+"Comment from" = "نظر از"
+"Completed" = "تکمیل شده"
+"Content" = "مقدار"
+"Create Date" = "ایجاد عضویت"
+"Date/Time" = "تاریخ / زمان"
+"Date/Time:" = "تاریخ / زمان:"
+"Draft" = "پیش نویس"
+"E-mail address is invalid." = "آدرس ایمیل نامعتبر است."
+"Email" = "پست الکترونیک"
+"Email Sent." = "ایمیل ارسال شد."
+"Error Occurred!" = "خطا رخ داده است !"
+"First Name" = "نام"
+"Forward To A Friend" = "ارسال به دوستان"
+"Forward again" = "به جلو دوباره"
+"Forward to a Friend" = "ارسال به دوستان"
+"Forward to more" = "به جلو به تر"
+"Friend Email" = "ایمیل دوست شما"
+"Friend Name" = "نام دوست"
+"Friend information" = "دوستان اطلاعات"
+"From email is not valid." = "از ایمیل معتبر نیست."
+"From:" = "از:"
+"From:" = "از:"
+"HTML Editor" = "HTML ویرایشگر"
+"Here are the links to modify your accounts:" = "در اینجا لینک به تغییر حساب خود می باشد :"
+"Here is the link to modify your account:" = "در اینجا لینک به تغییر حساب خود می باشد :"
+"IP" = "IP"
+"Invalid email address" = "آدرس ایمیل نامعتبر است"
+"Invalid link. Please retry or contact the list admin." = "لینک اشتباه است . لطفا دوباره تلاش کنید و یا لیست تماس با مدیر ."
+"Last Name" = "نام خانوادگی"
+"List Name" = "نام"
+"Loading..." = "در حال بارگذاری ..."
+"Login" = "ورود به سیستم"
+"Message" = "پیام"
+"Message (HTML Version)" = "پیام ( HTML نسخه )"
+"Message (Text Version)" = "پیام ( نسخه اصلی )"
+"Message Details" = "جزئیات پیام"
+"Message Preview" = "پیام پیش"
+"Message could not be previewed." = "پیام نمی تواند پیش نمایش شود ."
+"Message type not found." = "نوع پیام یافت نشد."
+"Messages" = "پیام"
+"Modify Account" = "اصلاح حساب"
+"Name" = "نام"
+"Next" = "بعد"
+"OK" = "خوب"
+"Paused" = "متوقف شد"
+"Personalized Message" = "پیام شخصی"
+"Please also verify yourself by typing the text in the following image into the box below it." = "همچنین خود را با تایپ کردن متن در تصویر زیر را در کادر زیر آن را بررسی کنید."
+"Please also verify yourself by typing the text in the following image into the box next to it." = "همچنین خود را با تایپ کردن متن در تصویر زیر را در کادر کنار آن بررسی کنید."
+"Please ensure all email addresses are valid." = "لطفا مطمئن شوید که آدرس های ایمیل معتبر می باشد."
+"Please fill out at least one Friend email address and name." = "لطفا با پر کردن آدرس ایمیل حداقل یک دوست و نام ."
+"Please include a text from the image." = "لطفا متن از تصویر ."
+"Please include a valid email address." = "لطفا یک آدرس ایمیل معتبر باشد."
+"Please include an email address." = "لطفا یک آدرس ایمیل باشد."
+"Please include your name." = "لطفا نام خود را شامل ."
+"Please type the correct text that appears in the image." = "لطفا متن درست است که در تصویر ظاهر می شود را تایپ کنید."
+"Powered by" = "صفحه"
+"Previous" = "قبلی"
+"Public messages from List" = "پیام های عمومی از فهرست"
+"Public messages from all Lists" = "پیام های عمومی از همه لیست"
+"Scheduled" = "برنامه ریزی"
+"Search" = "جستجو"
+"Select Lists To Unsubscribe From" = "انتخاب لیست را برای لغو اشتراک"
+"Select a Campaign from List" = "کمپین از لیست انتخاب کنید"
+"Select a List" = "انتخاب فهرست"
+"Send" = "ارسال"
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "ارسال این ایمیل به دوستان . نگران نباشید، زیر پر کردن اطلاعات و کلیک بر روی دکمه فرستادن بزنید."
+"Sending" = "ارسال"
+"Set as Default" = "تنظیم به عنوان پیش فرض"
+"Stopped" = "متوقف"
+"Subject" = "موضوع"
+"Subject:" = "موضوع:"
+"Subscribe" = "اشتراک"
+"Subscribe To Lists" = "مشترک شدن در لیست"
+"Subscriber ID is invalid." = "مشترک ID نامعتبر است."
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "اشتراک نمی تواند پردازش شود از شما یک لیست را انتخاب کنید. لطفا یک لیست انتخاب کنید و دوباره امتحان کنید."
+"Text Editor" = "ویرایشگر متن"
+"Thank you for confirming your subscription." = "تشکر از شما برای تأیید اشتراک خود را ."
+"Thank you for confirming your unsubscription." = "تشکر از شما برای تایید لغو عضویت خود را ."
+"The following errors occurred:" = "خطاهای زیر رخ داد:"
+"The link to modify your account has been sent. Please check your email." = "لینک به تغییر حساب کاربری شما ارسال شده است . لطفا ایمیل خود را چک کنید ."
+"The sender of this message thought the mailing entitled" = "فرستنده این پیام فکر پستی تحت عنوان"
+"The sender of this message thought the mailing entitled ' %s ' would be of interest to you." = "فرستنده این پیام فکر پستی تحت عنوان ' %s  ' که مورد علاقه شما باشد."
+"The sender thought the mailing entitled ' %s ' would be of interest to you." = "فرستنده فکر پستی تحت عنوان ' %s  ' که مورد علاقه شما باشد."
+"This e-mail address cannot be added to list." = "این آدرس ایمیل نمیتواند اضافه شود به لیست ."
+"This e-mail address could not be unsubscribed." = "این آدرس ایمیل نمی تواند لغو شده است."
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "این آدرس ایمیل شده است در گذشته به مشترک پردازش ، با این حال اشتراک خود را هرگز تایید شد."
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "این آدرس ایمیل پردازش شده است . لطفا ایمیل خود را برای تأیید اشتراک خود را چک کنید ."
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "این آدرس ایمیل پردازش شده است . لطفا ایمیل خود را برای تایید لغو عضویت خود را چک کنید ."
+"This e-mail address has been unsubscribed from the list." = "این آدرس ایمیل شده است را از لیست لغو شده است."
+"This e-mail address has subscribed to the list." = "این آدرس ایمیل به لیست مشترک ."
+"This e-mail address is already subscribed to this mailing list." = "این آدرس ایمیل در حال حاضر در این لیست پستی عضو هستید."
+"This e-mail address is on the global exclusion list." = "این آدرس ایمیل در لیست خروج جهانی است."
+"This e-mail address was not subscribed to the list." = "این آدرس ایمیل به لیست شده مشترک نیست."
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "این لیست در حال حاضر پذیرش مشترکان نیست. این لیست تا به تعداد بالا خود را از مشترکان اجازه ملاقات کرد."
+"This message is being sent by:" = ": این پیام است که توسط فرستاده"
+"This subscriber does not exist." = "این مشترک وجود ندارد."
+"To confirm this request please click on the link below:" = "برای تأیید این درخواست لطفا روی لینک زیر کلیک کنید :"
+"To email is not valid." = "به ایمیل معتبر نیست."
+"To log into the system visit:" = "برای ورود به سایت بازدید سیستم :"
+"To view the mailing, please visit:" = "برای مشاهده پستی، مراجعه کنید:"
+"To:" = "به :"
+"Unable to redirect you to this link. Please try again or contact your list admin." = "قادر به تغییر مسیر شما را به این لینک . لطفا دوباره امتحان کنید یا با فهرست شما مدیر ."
+"Unknown response code. Please resubmit the subscription form." = "کد پاسخ در دست نیست. لطفا فرم ثبت نامدوباره ارائه ."
+"Unsubscribe" = "لغو اشتراک"
+"Update Account" = "به روز رسانی حساب"
+"Update Your Account" = "به روز رسانی حساب کاربری شما"
+"You are not allowed to access this page." = "شما مجاز به دسترسی به این صفحه ."
+"You are unable to be added to this list at this time." = "شما قادر به این لیست در این زمان اضافه شده است."
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "شما یک لیست می کند که تکراری اجازه نمی دهد انتخاب شده است. این ایمیل که در سیستم در حال حاضر ، لطفا به جای ویرایش کنید که مشترک."
+"Your Email" = "آدرس ایمیل شما"
+"Your Name" = "نام شما"
+"Your changes have been saved." = "تغییرات شما ذخیره شده است."
+"Your e-mail address" = "آدرس پست الکترونیکی شما"
+"Your e-mail address (Required)" = "آدرس ایمیل شما ( مورد نیاز )"
+"Your password has been reset to:" = "رمز عبور خود را شده است به تنظیم مجدد :"
+"Your subscription request for this list could not be processed as you are missing required fields." = "درخواست اشتراک شما برای این لیست نمی تواند پردازش شود که شما از دست رفته زمینه های مورد نیاز ."
+"Your subscription request for this list could not be processed as you must type your name." = "درخواست اشتراک شما برای این لیست نمی تواند پردازش شود که شما باید نام و نام خانوادگی خود را تایپ کنید."
+"[Unknown]" = "[ ناشناخته]"
+"optional" = "اختیاری"
+
+
+
+##### 2009-07-10 #####
+
+"Account" = "حساب"
+"Disabled" = "غیر فعال"
+
+
+
+##### 2009-07-29 #####
+
+"Subscribed to lists:" = "مشترک به لیست :"
+"The image text you typed did not register. Please go back, reload the page, and try again." = "متن تصویر را تایپ به ثبت نام نیست. لطفا باز ، صفحه ، و دوباره سعی کنید."
+"Unsubscribed from lists:" = "لغو اشتراک از لیست :"
+
+
+
+##### 2009-08-13 #####
+
+"Attachment not found." = "فایل پیوست یافت نشد."
+"Attachments:" = "فایل های پیوست :"
+"Content not found." = "مطلب یافت نشد."
+"Nothing was selected for viewing." = "هیچ چیز را برای مشاهده انتخاب شد."
+"Preview" = "پیش بازی"
+"Template not found." = "قالب یافت نشد."
+"To:" = "به :"
+"Version not found." = "نسخه یافت نشد."
+"Your Account" = "حساب کاربری شما"
+
+
+
+##### 2009-10-06 #####
+
+"Back" = "به عقب"
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "این قابلیت با ایمیل آزمون کار نمی کند. این صفحه کار خواهد کرد زمانی که شما در واقع مبارزات انتخاباتی ارسال کنید."
+
+
+
+##### 2009-10-14 #####
+
+"Language changed" = "زبان تغییر"
+"Rewrite Test" = "بازنویسی تست"
+
+
+
+##### 2009-12-21 #####
+
+"Update Subscription Account" = "حساب اشتراک رسانی"
+
+
+
+##### 2010-01-13 #####
+
+"Abuse Complaint" = "شکایت سوء استفاده"
+"Abuse Complaints Reported:" = "شکایات سوء استفاده گزارش شده :"
+"Abuse Complaints have been removed." = "شکایات در مورد سوءاستفاده حذف شده اند."
+"Abuse Ratio has been updated." = "نسبت سوء استفاده به روز شده است ."
+"Abuse Report Received." = "گزارش تخلف دریافت ."
+"Approve" = "تصویب"
+"Approve Campaign Sending" = "تصویب کمپین در حال ارسال"
+"Campaign Approved." = "کمپین تایید شده است."
+"Campaign Declined." = "کمپین کاهش یافته است."
+"Campaign Name" = "نام کمپین"
+"Campaign for Approval" = "کمپین برای تصویب"
+"Campaign:" = "کمپین :"
+"Change Abuse Ratio" = "نسبت تغییر تخلف"
+"Click here to view and approve the campaign sending:" = "برای مشاهده و تایید مبارزات انتخاباتی ارسال اینجا را کلیک کنید :"
+"Close" = "نزدیک"
+"Current Abuse Ratio:" = "نسبت سوء :"
+"Decline" = "کاهش"
+"Decline & Send Email" = "کاهش و ارسال ایمیل"
+"E-mail:" = "فرستادن به ایمیل :"
+"E-mails Sent:" = "ایمیل فرستاده شد:"
+"FROM E-mail:" = "FROM فرستادن به ایمیل :"
+"FROM Name:" = "FROM نام :"
+"Group(s):" = "گروه (ها) :"
+"Group:" = "گروه:"
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "اگر شما تا به حال درخواست به این فرستنده و / یا درباره این اطلاعات کلیک بر روی دکمه گزارش به فایل گزارش سوء استفاده شما تماس گرفته شود ."
+"List(s):" = "لیست (ها) :"
+"Message:" = "پیام:"
+"Modify Campaign:" = "اصلاح کمپین :"
+"Modify Message:" = "تغییر پیام:"
+"Name:" = "نام و نام خانوادگی :"
+"New Abuse Ratio:" = "نسبت سوء استفاده جدید :"
+"Notify Senders" = "با خبر سازی به فرستندگان"
+"Notify user(s) in this group:" = "اطلاع کاربر (های) در این گروه :"
+"Once you have updated your message you can try to send it again." = "هنگامی که پیام خود را به شما به روز شده است شما می توانید سعی کنید آن را ارسال کنید."
+"Please check your message you were sending to ensure it meets our sending policy." = "لطفا پیام خود را به شما ارسال شد برای اطمینان از آن را در کنار سیاست های ارسال ما را بررسی کنید ."
+"Please verify the information below." = "لطفا اطلاعات زیر را تأیید کنید ."
+"Preset Abuse Ratio:" = "نسبت تخلف از پیش تعیین شده :"
+"Private campaign." = "کمپین خصوصی."
+"Private message." = "پیام خصوصی ."
+"Report Abuse" = "گزارش تخلف"
+"Reset Abuse Complaints" = "تنظیم مجدد شکایات در مورد سوءاستفاده"
+"Segment:" = "بخش :"
+"Send From:" = "ارسال از:"
+"Send Notification to" = "ارسال هشدار از طریق به"
+"TO E-mail:" = "به ایمیل :"
+"TO Name:" = "به نام و نام خانوادگی :"
+"The senders information is:" = "اطلاعات فرستنده است :"
+"The subscriber information that this sender sent to is:" = "اطلاعات مشترک است که این فرستنده فرستاده شده به است :"
+"This campaign has already been accepted." = "این کمپین در حال حاضر پذیرفته شده است."
+"This campaign has already been declined." = "این کمپین در حال حاضر رد شده است."
+"This feature is not available in test campaigns." = "این قابلیت در مبارزات آزمون در دسترس نیست."
+"This feature is not supported when testing campaigns." = "این قابلیت پشتیبانی نمی شود در هنگام تست مبارزات ."
+"Type:" = "نوع :"
+"Update" = "به روز رسانی"
+"User" = "کاربر"
+"User:" = "کاربر :"
+"View Abuses" = "مشاهده نقض"
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender." = "ما را گزارش سوء استفاده بسیار جدی و مطابق قوانین بازاریابی ایمیل می باشد. با نظرات خود ما می توانیم ایمیل ها بیشتر از اینکه توسط این فرستنده ارسال می شود جلوگیری می کند. با گزارش این ایمیل را به عنوان سوء استفاده از شما هیچ ایمیل بیشتر از این فرستنده دریافت نخواهید کرد."
+"You have abused the mailing system  %s" = "شما مورد آزار قرار گرفته اند سیستم پستی  %s"
+"Your Abuse Report Has Been Received" = "گزارش تخلف شما دریافت شده است"
+"Your campaign &quot; %s &quot; could not be approved at this time." = "مبارزات انتخاباتی خود را"%s "می تواند در این زمان نمی توان تایید شده است."
+"Your campaign needs to be updated" = "مبارزات انتخاباتی خود را باید به روز شود"
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "آدرس پست الکترونیکی شما نیز از این لیست حذف شده است. عذرخواهی ما را برای هر گونه ناراحتی این ممکن است شما ایجاد می شود."
+
+
+
+##### 2010-02-02 #####
+
+"Abuse Reported." = "را گزارش کردند."
+"Campaign Name:" = "نام کمپین :"
+"Click here to manage this user's abuse settings" = "برای مدیریت تنظیمات سوء استفاده کاربر اینجا را کلیک کنید"
+"Click here to manage this user's abuse settings:" = "برای مدیریت تنظیمات سوء استفاده کاربر اینجا را کلیک کنید :"
+"User  %s  has been suspended due to abuse reports" = "کاربر %s به علت گزارش سوء استفاده به حالت تعلیق"
+"With a current limit of" = "با حد فعلی"
+"before being suspended." = "قبل از اینکه به حالت تعلیق ."
+
+
+
+##### 2010-03-01 #####
+
+"Page  %d  of  %d" = "صفحه  %d  از  %d"
+
+
+##### 2010-03-28 #####
+
+"%s  per page" = "%s  صفحه در هر"
+
+
+
+##### 2010-07-02 #####
+
+"%s  Private Messages" = "%s  پیام های خصوصی"
+"From" = "از"
+"Private Messages published at  %s ." = "پیام های خصوصی در  %s  منتشر شده است."
+"Recipients:" = "گیرنده :"
+"Sent" = "فرستاده"
+
+
+
+##### 2010-09-07 #####
+
+"You have a new subscriber to your list." = "شما باید یک مشترک جدید را به لیست خود ."
+
+
+
+##### 2010-12-01 #####
+
+"This feature is not supported when testing messages." = "این قابلیت پشتیبانی نمی شود در هنگام تست پیام است."
+
+
+
+##### 2011-01-11 #####
+
+"Share on Digg" = "به اشتراک گذاشتن در دیگ"
+"Share on Facebook" = "به اشتراک گذاشتن در فیس بوک"
+"Share on Reddit" = "به اشتراک گذاشتن در ق"
+"Share on StumbleUpon" = "به اشتراک گذاشتن در نیست."
+"Share on buzz" = "به اشتراک گذاشتن در وزوز"
+"Share on del.icio.us" = "به اشتراک گذاشتن در del.icio.us"
+"Share via Twitter" = "اشتراک از طریق توییتر"
+
+
+
+##### 2011-02-23 #####
+
+"Currently reading" = "در حال حاضر خواندن"
+"Social Share" = "به اشتراک گذاری اجتماعی"

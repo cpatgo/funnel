@@ -1,0 +1,20 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="form.js"}
+</script>
+{include file="syntaxhighlighter.htm" tag='textarea'}
+
+<h1>{"Subscription Forms"|alang}<span id="form_list_count" class="adesk_hidden"></span></h1>
+
+{include file="form.list.htm"}
+{include file="form.form.htm"}
+{include file="form.view.htm"}
+{include file="form.delete.htm"}
+{include file="form.search.htm"}
+{include file="editor.personalize.inc.htm"}
+{include file="editor.conditional.inc.htm"}
+
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(form_process, true);
+</script>

@@ -1,0 +1,11 @@
+<!-- account_topmenu  -->
+<div class="Navigation">
+	<div class="NavigationLeft">
+		<div class="NavigationRight">
+			<ul class="nav">
+                <li><a href="{$baseUrl}/">##Home##</a></li>
+                <li><a href="/">##Login##</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

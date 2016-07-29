@@ -1,0 +1,70 @@
+<!-- samples_tests -->
+<div class="c1_MainBox c1_SamplesMainbox">
+	<div class="c1_MainBoxContainer">
+		<h1>##Samples & Tests##</h1>
+		<p>##This directory (/samples_tests) contains examples and tests to walk you through the various possibilities of the affiliate system.
+When you are ready to go online with your affiliate program, you can delete or rename this directory.##
+		</p>
+		<a class="c1_sButton" href="{$baseUrl}/merchants/login.php#login">##Merchant Login##</a>
+	</div>
+</div>
+<div class="c1_Wrapper">
+	<div class="WrapperContainer">
+		<div class="c1_SampleBox c1_SampleBanners">
+			<h2>##Banner##</h2>
+			<div class="c1_SampleImg"></div>
+			<ul>
+				<li><a href="./banners_sample.php">##Banners sample##</a><br/>
+				##you can see all banner types in action and you can test clicks##
+				</li>
+		
+				<li><a href="./banners_linking.php">##Banners with different link types##</a><br/>
+				##the banners below use different affiliate link types to demonstrate this functionality.##
+				</li>
+		
+				<li><a href="./banners_subid.php">##Banners with channels and SubId tracking##</a><br/>
+				##sample how your affiliates can track advertising channels and use subId tracking##
+				</li>
+			</ul>
+		</div>
+
+		<div class="c1_SampleBox c1_SampleReferral">
+			<h2>##Referral (click) tracking##</h2>
+			<div class="c1_SampleImg"></div>
+			<ul>
+				<li><a href="./sample_homepage.php">##Sample homepage##</a><br/>
+				##the page that is the target of the banners and simulates your home page. It contains referral (click) tracking code.##
+				</li>
+		
+				<li><a href="./cookie_info.php">##Cookie information##</a><br/>
+				##Find out if the referral cookies were registered for this domain.##
+				</li>
+			</ul>
+		</div>
+
+		<div class="c1_SampleBox c1_SampleSale">
+			<h2>##Sale / lead tracking##</h2>
+			<div class="c1_SampleImg"></div>
+			<ul>
+				<li><a href="./sale_tracking_normal.php">##Normal sale tracking using general tracking method##</a><br/>
+				##page with active sale tracking code##</li>
+		
+				<li><a href="./sale_tracking_docu.php">##Sale tracking with another optional parameters##</a><br/>
+				##description of all parameters you can pass to the sale tracking script##
+				</li>
+			</ul>
+		</div>
+
+		<div class="c1_SampleBox c1_SamplePage">
+			<h2>##Signup form##</h2>
+			<div class="c1_SampleImg"></div>
+			<ul>
+				<li><a href="./signup_html.php">##HTML Signup form##</a><br/>
+				##Except normal signup form PAP allows you to create pure HTML signup form and place it to any page.
+				Here is an example of such signup form.##
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+#########################################################################
+
+# WHEN ADDING A STRING TO THIS FILE, ADD IT TO OTHER LANGUAGES AS WELL! #
+
+#########################################################################
+
+
+
+"Don't wait until users mark your email as spam - place the unsubscribe option at the beginning of your emails too. Be sure to make the unsubscribing process as obvious and easy as possible." = "Wacht niet totdat gebruikers markeer uw bericht als spam - ??plaats de unsubscribe optie aan het begin van uw e-mails ook. Zorg ervoor dat u de afmelding proces zo duidelijk en eenvoudig mogelijk te maken ."
+
+"Make it easy for people to share some information from your newsletter with their friends and colleagues by inserting the link to share and a call to action in your newsletter." = "Maak het makkelijk voor mensen om wat informatie van uw nieuwsbrief met hun vrienden en collega's te delen door het plaatsen van de link en een oproep tot actie in uw nieuwsbrief ."
+
+"You should make every message clear to the recipient. Make your reader confident that he received a letter from a responsible sender." = "Je moet elke boodschap duidelijk aan de ontvanger te maken. Maak uw lezer ervan overtuigd dat hij een brief ontvangen van een verantwoordelijke afzender ."
+
+"To improve the number of response to your newsletters, you can start split testing your email sales with measurable scientific methodology. You can evaluate the effectiveness of the mailings with number of opens and clicks." = "Om het aantal antwoord op uw nieuwsbrieven te verbeteren , kunt u beginnen met split testen van uw e-mail verkoop met meetbare wetenschappelijke methodologie . U kunt de effectiviteit van de mailings te evalueren met het aantal Opent en clicks ."
+
+"If the user confirms their subscription, you should send them a welcome email. It helps to establish a relationship and also confirms that you have received their subscription. It also helps show that you appreciate their interest in your products and/or services." = "Als de gebruiker zijn abonnement bevestigt , moet je ze een welkome e-mail . Het helpt om een ??relatie op te bouwen en ook bevestigt dat u hun abonnement hebben ontvangen. Het helpt ook laten zien dat je hun interesse in uw producten en / of diensten waarderen ."
+
+"Always send a confirmation email to validate address accuracy. This is the essential rule of permission email marketing. Send a message that repeats the subscriber's opt-in data to be sure you get the right e-mail address in your database." = "Stuur altijd een bevestiging e-mail naar het adres van nauwkeurigheid te valideren . Dit is de essentiële regel van toestemming e-mail marketing . Stuur een bericht dat opt-in gegevens van de abonnee wordt herhaald om zeker te zijn van de juiste e - mail adres te krijgen in uw database ."
+
+"If you have a list of email addresses you haven't send messages for a while you need to send them a Re-Introduction email first. Remind them how you've got their address or how they've bought something from you. Attract their attention so not to be marked as 'spam'." = "Als u een lijst met e-mailadressen die u hebt geen berichten te versturen voor een tijdje je ze nodig hebt een herintroductie email te sturen als eerste. Herinner hen hoe je hun adres hebt of hoe ze iets van je hebt gekocht . Trekken hun aandacht dus niet te worden gemarkeerd als 'spam' ."
+
+"Tradeshows and special networking events give you a great chance to enlarge your emails database. Tell people about special offers you have and benefits they can get after signing up. They can subscribe immediately using a computer or mobile device you setup." = "Beurzen en speciale evenementen voor netwerkvorming geven je een grote kans om te vergroten je e -database . Vertel mensen over jullie speciale aanbiedingen en voordelen die ze kunnen krijgen na het aanmelden . Ze kunnen direct inschrijven met behulp van een computer of mobiel apparaat je setup ."
+
+"People usually scan their e-mails in seconds. You should write your message with clear content, clickable links and the message should be attractive enough to make people click the links." = "Mensen meestal scannen hun e -mails in seconden. U moet uw boodschap met duidelijke inhoud, aanklikbare links en de boodschap aantrekkelijk genoeg om mensen op de koppelingen moet schrijven ."
+
+"Write naturally, be clear when explaining the subject. To persuade people to do something (to click the link or to accept your offer), you should know what problems your readers want to solve and describe what your offer is, why they should use it, how it they will be able to use it and who exactly will benefit from the offer." = "Schrijf natuurlijk , duidelijk bij de uitleg van het onderwerp. Om mensen te overtuigen om iets ( op de link klikken of om uw aanbod te accepteren ) doet, moet je weten welke problemen je lezers wilt oplossen en beschrijven wat uw aanbod is , waarom ze moeten gebruiken , hoe het zal zij in staat om het te gebruiken en wie precies zal profiteren van dit aanbod ."
+
+"As your customers have different email clients, your message will be displayed differently. Users also have different computer preferences. It's important to optimize email rendering so that clients could see your message correctly.  Use the Inbox Preview Tool to help with this." = "Als uw klanten hebben verschillende e-mailclients , zal uw bericht anders weergegeven . Gebruikers hebben ook verschillende computer voorkeuren. Het is belangrijk om e- weergave te optimaliseren, zodat klanten uw boodschap goed kon zien . Gebruik de Inbox preview-tool om te helpen met dit."
+
+"You should design an email so that it will fit in the viewing area of most email clients. A width of 650 pixels will fit in most email client windows." = "U moet een e-mail te ontwerpen dat het past in het weergavegebied van de meeste e-mailclients . Een breedte van 650 pixels past in de meeste e-mailprogramma ramen."
+
+"JavaScript, ActiveX, Flash, and videos usually don't work in HTML emails. Even if you send them your reader most likely won't be able to see them. Most email programs block it for safety." = "JavaScript, ActiveX , Flash en video's meestal niet werken in HTML- e-mails. Zelfs als je ze sturen je lezer zal waarschijnlijk niet in staat zijn om ze te zien . De meeste e-mailprogramma's blokkeren voor de veiligheid."
+
+"The best way to include a video in your email is an animated GIF. But if you need sound or video of better quality you should place a link from your email to the video." = "De beste manier om een ??video in uw e-mail bevatten is een geanimeerde GIF . Maar als je muziek of video van betere kwaliteit moet u moet een link plaatsen van uw e-mail naar de video."
+
+"You can use web analytics to track the page views of the subscribers. It gives you valuable information about your visitors' habits. You can use these facts to develop more relevant email campaigns and landing pages in the future." = "U kunt web analytics gebruiken om de pageviews van de abonnees te volgen . Het geeft je waardevolle informatie over de gewoonten van uw bezoekers . U kunt deze gegevens gebruiken om meer relevante e-mailcampagnes en bestemmingspagina's in de toekomst te ontwikkelen ."
+
+"By dividing your subscribers into groups with distinct needs you will get higher response rates to your letters. You will also lose fewer subscribers, if your mailings are relevant." = "Door te delen uw abonnees in groepen met verschillende behoeften vindt u een hogere respons te krijgen op uw brieven . Je verliest ook minder abonnees , als uw mailings relevant zijn ."

@@ -1,0 +1,55 @@
+<div id="mailer_form" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+    {include file="settings.mailsending.form.htm"}
+	<br />
+	<input type="button" value='{"Save"|alang}' onclick="mailer_save();" />
+	<input type="button" value='{"Cancel"|alang}' onclick="$('mailer_form').hide()" />
+
+<hr />
+{* sending speed calculator *}
+<div style="background-color: #ffffff; border: 1px solid #cccccc; margin: 5px; padding: 10px; font-size:10px;">
+	<em>{"Estimated Sending Speeds:"|alang}</em><br />
+
+	{"Max. of emails per hour:"|alang} <span id="eph" class="changeableContent"></span><br />
+	{"Max. of emails per minute:"|alang} <span id="epm" class="changeableContent"></span><br />
+	{"Max. of emails per second:"|alang} <span id="eps" class="changeableContent"></span><br />
+	{"An email every "|alang} <span id="spe" class="changeableContent"></span> {"seconds"|alang}
+</div>
+
+  </div>
+</div>
+
+<div id="mailer_test" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+    <h5>{"Send Test Email"|alang}</h5><div class="line"></div>
+    <div class="adesk_help_inline">{"You can use this to test this connection settings. Enter the destination email address, and the system will attemp to send it an email."|alang}</div>
+    <div>
+      {"Send a test email to this email address:"|alang}<br />
+	  <input id="testEmailField" type="input" size="30" value="{$admin.email}" onFocus="this.select();" />
+    </div>
+	<br />
+{if !$demoMode}
+	<input id="testEmailButton" class="adesk_button_test" type="button" value="{"Send Test Email"|alang}" onClick="mailer_send();" />
+{else}
+	<span class="demoDisabled">{"Disabled in demo"|alang}</span>
+{/if}
+	<input type="button" value='{"Cancel"|alang}' onclick="$('mailer_test').hide()" />
+	<input type="hidden" value="" id="mailer_test_id" />
+  </div>
+</div>
+
+<div id="mailer_delete" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+    <h5>{"Delete Mail Connection"|alang}</h5><div class="line"></div>
+    <div class="adesk_help_inline">{"Are you sure you wish to delete this Mail Connection?"|alang}</div>
+    <span id="deleteEmailMsg"></span>
+	<br />
+{if !$demoMode}
+	<input id="deleteEmailButton" class="adesk_button_test" type="button" value="{"Delete This Mail Connection"|alang}" onClick="mailer_remove();" />
+{else}
+	<span class="demoDisabled">{"Disabled in demo"|alang}</span>
+{/if}
+	<input type="button" value='{"Cancel"|alang}' onclick="$('mailer_delete').hide()" />
+	<input type="hidden" value="" id="mailer_delete_id" />
+  </div>
+</div>

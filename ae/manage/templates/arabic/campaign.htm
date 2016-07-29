@@ -1,0 +1,26 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="campaign.js"}
+</script>
+
+<h3 class="m-b">{"Campaigns"|alang}<span id="campaign_list_count" class="adesk_hidden"></span></h3>
+
+{if !$campaignscnt}
+
+<div class="adesk_listing_empty">
+  {"You currently do not have any campaigns."|alang} {if $admin.pg_message_add}<a href="desk.php?action=campaign_new">{"Create a new campaign"|alang}</a> {"or choose an option from the right"|alang}.{/if}
+</div>
+
+
+
+{else}
+
+{include file="campaign.list.htm"}
+{include file="campaign.delete.htm"}
+{include file="campaign.search.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(campaign_process, true);
+</script>
+
+{/if}

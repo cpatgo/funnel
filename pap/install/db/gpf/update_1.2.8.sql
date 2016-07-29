@@ -1,0 +1,2 @@
+ALTER TABLE `qu_g_hierarchicaldatanodes` CHANGE `type` `type` VARCHAR( 9 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'node type - used to identify nodes of one type (for example for one plugin)';
+ALTER TABLE `qu_g_hierarchicaldatanodes` CHANGE `code` `code` CHAR( 8 ) NOT NULL;

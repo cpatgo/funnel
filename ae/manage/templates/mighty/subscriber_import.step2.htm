@@ -1,0 +1,116 @@
+<h5>{"Select Fields to Map"|alang}</h5><div class="line"></div>
+
+<form id="importRunForm" action="import.php?action=subscriber_import" method="post" target="importRunFrame">
+	<input name="test" type="hidden" value="0" id="importRunType" />
+	<input name="import_file" type="hidden" value='{$config.import_file|default:""}' />
+	<input name="external" id="external" type="hidden" value='{$external}' />
+
+	<div class="adesk_help_inline">{"Select which fields you wish to synchronize to their destinations."|alang}</div>
+
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr class="adesk_table_header">
+			<td width="250">{"Column To Import"|alang}</td>
+			<td>{"Map Into Field"|alang}</td>
+		</tr>
+{foreach from=$config.columns item=column key=i}
+		<tr class="adesk_table_row">
+			<td>{$column.name} ({$column.type})</td>
+			<td>
+				<select name="column[{$i}]" id="column_{$i}" size="1" onchange="cfield_open(this);">
+					<option value="DNI" {$column.default|adesk_isselected:''} style="color:#999999;">{"Do Not Import This Field"|alang}</option>
+{if $cfields}
+					<optgroup label="{'Standard Fields'|alang}">
+{/if}
+						<option value="email" {$column.default|adesk_isselected:'email'}>{if $config.status == 3}{"Email Pattern"|alang}{else}{"Email Address"|alang}{/if}</option>
+{*if $config.status == 3*}
+						<option value="first_name" {$column.default|adesk_isselected:'firstname'}>{"First Name"|alang}</option>
+						<option value="last_name" {$column.default|adesk_isselected:'lastname'}>{"Last Name"|alang}</option>
+						<option value="cdate" {$column.default|adesk_isselected:'date'}>{"Create Date"|alang}</option>
+						<option value="ip">{"IP Address"|alang}</option>
+						<option value="ua">{"Computer Info"|alang}</option>
+{*/if*}
+					</optgroup>
+					<optgroup id="customfieldsoptgroup_{$i}" label="{'Custom Subscriber Fields'|alang}">
+{foreach from=$cfields item=field}
+						<option value="{$field.id}">{$field.title}</option>
+{/foreach}
+					</optgroup>
+					<option value="NEW" style="font-weight:bold; color:#006600;">{"[ Add New Field ]"|alang}</option>
+				</select>
+
+			</td>
+		</tr>
+{/foreach}
+	</table></div>
+
+</form>
+
+<div style="margin-top: 15px;">
+	<div style="float:right;"><input type="button" class="adesk_button_test" value="{"Back"|alang}" onclick="import_back();" /></div>
+	<input type="button" class="adesk_button_test" value="{"Test"|alang}" onclick="import_run(true);" style="display:none;" />
+	<input type="button" class="adesk_button_next" value="{"Import Now"|alang}" onclick="import_run(false);" />
+</div>
+
+
+<div id="import_cfield" class="adesk_modal" align="center" style="display: none">
+  <div class="adesk_modal_inner">
+    <h3 class="m-b">{"Add New Custom Field"|alang}</h3>
+
+  <!-- the select list that was used to trigger this modal -->
+  <input type="hidden" id="cfield_select_source" />
+
+	<div class="adesk_help_inline">{"Please define your new custom field here:"|alang}</div>
+
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellpadding="0" cellspacing="5">
+		<tr>
+			<td>{"Field Name"|alang}</td>
+			<td><input type="text" id="cfield_title" value="" /></td>
+		</tr>
+		<tr>
+			<td>{"Field Type"|alang}</td>
+			<td>
+				<select id="cfield_type" size="1">
+{foreach from=$cfield_types item=v key=k}
+					<option value="{$k}">{$v}</option>
+{/foreach}
+				</select>
+			</td>
+		</tr>
+        <tr>
+  <td>{"Show on subscriber listing page?"|alang}</td>
+  <td>
+    <input name="show_in_list" type="checkbox" value="1" {if isset($field.show_in_list) and $field.show_in_list}checked{/if} />
+  </td>
+</tr>
+  
+      <tr>
+{if $mirroring}
+        <td valign="top">{"Mirror this in"|alang}</td>
+{else}
+        <td valign="top">{"For use in"|alang}</td>
+{/if}
+        <td>
+          <select id="mirrorsList" name="mirror[]" multiple>
+            {foreach from=$lists item=m}
+            <option value="{$m.id}" {$m.selected|adesk_isselected:true} {if isset($m.disabled)}{$m.disabled|adesk_isdisabled:true}{/if}>{$m.name|html|truncate:50}</option>
+            {/foreach}
+          </select>
+          <div>
+            {"Select:"|alang}
+            <a href="#" onclick="return adesk_form_select_multiple_all($('mirrorsList'), $('mirrorsList').getElementsByTagName('option')[0].value == '0');">{"All"|alang}</a>
+            &middot;
+            <a href="#" onclick="return adesk_form_select_multiple_none($('mirrorsList'));">{"None"|alang}</a>
+          </div>
+        </td>
+      </tr>
+   
+	</table></div>
+
+    <br />
+
+    <div>
+      <input type="button" class="adesk_button_ok" value="{"OK"|alang}" onclick="cfield_add()" />
+      <input type="button" class="adesk_button_cancel" value="{"Cancel"|alang}" onclick="adesk_dom_toggle_display('import_cfield', 'block');" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div id="global" align="center" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner_global_users" style="overflow: auto">
+  	<h3 class="m-b">{"Global Users"|alang}</h3>
+	<div class=" table-responsive"><table width="100%" border="0" cellspacing="0" cellpadding="1" class="table table-striped m-b-none dataTable">
+	  <thead>
+		<tr class="adesk_table_header">
+		  <td width="75">{"Options"|alang}</td>
+		  <td>{"Username"|alang}</td>
+		  <td>{"Name"|alang}</td>
+		  <td>{"Email"|alang}</td>
+		</tr>
+	  </thead>
+	  <tbody id="user_global_table">
+	  </tbody>
+	  <tfoot>
+		<td align="left">
+		  </div>
+		</td>
+		<td colspan="5" align="right">&nbsp;
+		</td>
+	  </tfoot>
+	</table></div>
+	<div style="float:right;">{include file="pagination.js.tpl.htm" paginator=$global_paginator tabelize="user_global_tabelize" paginate="user_global_list"}</div>
+	<input type="button" value='{"Cancel"|alang}' onclick='adesk_dom_toggle_display("global", "block")' />
+  </div>
+</div>

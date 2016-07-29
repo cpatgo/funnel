@@ -1,0 +1,52 @@
+{include file="message.tpl.htm"}
+
+<h3 class="m-b">Plugin Manager</h3>
+
+<div class="tab_nav"><a href="desk.php?action=plugins"><strong>{"Plugins"|alang}</strong></a> <a href="desk.php?action=plugins&mode=hooks">{"Hooks"|alang}</a></div>
+
+<script type="text/javascript">
+  var str = "Are you sure you want to delete this plugin?  This action cannot be undone!";
+
+  {literal}
+  function delete_double_check() {
+    return confirm(str);
+  }
+  {/literal}
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="1">
+  <tr class="row_header">
+    <td>{"Options"|alang}</td>
+    <td>{"Plugin"|alang}</td>
+    <td>{"Description"|alang}</td>
+    <td>{"Status"|alang}</td>
+  </tr>
+  {foreach from=$groups item=g}
+  <tr class="row_normal">
+    <td>
+      <a href="desk.php?action=plugins&mode=edit&id={$g.id}">Edit</a>
+      <a href="desk.php?action=plugins&mode=delete&id={$g.id}" onclick="return delete_double_check();">Delete</a>
+      <a href="{$site.p_link|html}/awebdesk/functions/xml_export.php?groupid={$g.id}">Export</a>
+    </td>
+    <td>{$g.name|html}</td>
+    <td>{$g.description|html}</td>
+    <td>{$g.status|capitalize|html}</td>
+  </tr>
+  {/foreach}
+</table>
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="175"><form action="desk.php" method="post">
+      <input type="submit" value="Add Plugin"/>
+      <input type="hidden" name="action" value="{$get.action|html}" />
+      <input type="hidden" name="mode" value="add" />
+            </form></td>
+    <td align="right"><form action="desk.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Import" />
+      <input type="hidden" name="action" value="{$get.action|html}" />
+      <input type="hidden" name="mode" value="import" />
+        </form></td>
+  </tr>
+</table>

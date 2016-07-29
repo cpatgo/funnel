@@ -1,0 +1,223 @@
+{if $hosted_down4 != 'nobody'}
+{"Due to your account status, you are unable to send any campaigns."|alang}
+<a href="desk.php">{"Return to the Dashboard."|alang}</a>
+{elseif $pastlimit}
+{"Sending to this list would put you past your limit of allowed emails."|alang}
+<a href="desk.php?action=campaign_new_list&id={$campaignid}">{"Please choose another list."|alang}</a>
+{else}
+
+<script type="text/javascript">
+	{include file="campaign_new.shared.js" step="message"}
+{include file="campaign_new_message.js"}
+</script>
+
+<form id="campaignform" method="POST" action="desk.php" onsubmit="return false">
+	{include file="campaign_new.header.htm" step="message" highlight=2}
+	<input type="hidden" name="action" value="campaign_new_message">
+	<input type="hidden" name="managetext" id="campaign_managetextid" value="{$campaign.managetext}">
+
+
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="48%" valign="top">
+				<h5>{"From Name"|alang}</h5><div class="line"></div>
+				<div class="campaign_help">
+					{"Receivers will get email from this name.<br>It is suggested to use your company or personal name here."|alang}
+				</div>
+				<div  class="campaign_input">
+					<input type="text" tabindex="1" name="fromname" id="campaign_fromname" onkeyup="campaign_different()" value="" style="width: 99%">
+				</div>
+			</td>
+			<td width="4%" valign="top">&nbsp;</td>
+			<td width="48%" valign="top">
+				<h5>{"From Email"|alang}</h5><div class="line"></div>
+				<div class="campaign_help">
+					{"Receivers will get email from this email id.<br> You can also set a different"|alang} <a href="#" onclick="adesk_dom_toggle_display('replyto', 'block'); return false">reply-to</a>.
+				</div>
+				<div  class="campaign_input">
+					<input type="text" tabindex="2" name="fromemail" id="campaign_fromemail" onkeyup="campaign_different()" value="" style="width: 99%">
+				</div>
+
+				<div id="replyto" style="{if !$message.reply2 or $message.fromemail == $message.reply2}display:none;{/if}">
+					<h2 style="margin-top:15px;">{"Reply-To Email"|alang}</h5><div class="line"></div>
+					<div class="campaign_input border_top_5">
+						<input type="text" name="reply2" id="campaign_reply2" onkeyup="campaign_different();" value="" style="width: 100%">
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table></div>
+
+
+
+	<h2 style="margin-top:20px;">{"Subject & Message"|alang}</h5><div class="line"></div>
+	<div class="campaign_help">
+		{"This is the subject your subscribers will see.  We suggest a brief yet informative sentence.  This is what will engage your subscriber to open your email."|alang}
+	</div>
+
+	<div  class="campaign_input">
+		{if $admin.limit_attachment != 0}
+
+		<div style="float:right; padding-top:11px;" onclick="$('message_attach').show()"><img id="attachimg" src="images/mesg-attach.gif" style="cursor:pointer;" /></div>
+		<div style="margin-right:25px;">
+			{/if}
+			<input tabindex="3" type="text" name="subject" id="campaign_subject" onkeyup="campaign_different()" value="{$message.subject|default:''}" style="width: 99%; font-size:18px; padding:5px;">
+			{if $admin.limit_attachment != 0}
+		</div>
+		{/if}
+		<div style="margin-top:20px;">
+		<div class="adesk_help_inline" id="editorfetch" {if $fetch == "now"}style="display:none"{/if}>
+			<div style="font-size: 12px">
+				{"When your campaign is sent, its HTML content will be fetched from"|alang}
+				<a id="fetchhelplink" target="_blank" href="{$fetchurl}">{$fetchurl}</a>.
+			</div>
+
+			<div style="margin-top: 15px;">
+				<input type="button" value='{"Edit"|alang}' onclick="campaign_fetch_open()">
+				<input type="button" value='{"Do not fetch"|alang}' onclick="campaign_fetch_stop()">
+			</div>
+		</div>
+
+{if $campaign.type == 'deskrss'}
+		<div class="rss_sidebar">
+        	<div id="deskrss_add" class="rss_sidebar_highlight" style="{if $campaign.deskrss_url}display:none;{/if}">
+                <div style="font-size:14px; font-weight:bold;">{"Insert your RSS feed"|alang}</div>
+
+                <div style="margin-top:10px;">{"Your RSS feed URL"|alang}:</div>
+                <div><input type="text" name="deskrss_url" id="deskrss_url" value="{if $campaign.deskrss_url}{$campaign.deskrss_url}{else}http://{/if}" style="width:99%;" /></div>
+
+                <div style="margin-top:10px;">{"Number of feed items to include"|alang}:</div>
+                <div>
+                	<select name="deskrss_items" id="deskrss_items" size="1">
+                	{section start=1 loop=21 step=1 name=foo}
+                		<option value="{$smarty.section.foo.index}" {$smarty.section.foo.index|adesk_isselected:$campaign.deskrss_items}>{$smarty.section.foo.index}</option>
+                	{/section}
+                	</select>
+                </div>
+
+                <div style="margin-top:10px;"><input type="button" value="&lt; {"Get Code"|alang}" style="font-weight:bold;" onclick="deskrss_add();" /></div>
+                <div id="deskrss_loading" style="margin-top:10px;display:none;">{"Please wait while your feed is loaded..."|alang}</div>
+            </div>
+        	<div id="deskrss_use" class="rss_sidebar_highlight" style="{if !$campaign.deskrss_url}display:none;{/if}">
+                <div style="font-size:14px; font-weight:bold;">{"Your RSS feed tags"|alang}</div>
+
+								<div style="margin-top:10px;">{"Copy and paste your RSS code into your message."|alang} {"The following needs to be included within your email"|alang}:</div>
+                <div style="margin-top:5px;"><textarea style="width:99%; height:200px; font-size:10px;" id="deskrss_preview" wrap="off" />
+%RSS-FEED|URL:{$campaign.deskrss_url}|SHOW:ALL%
+
+%RSS:CHANNEL:TITLE%
+
+%RSS-LOOP|LIMIT:10%
+
+%RSS:ITEM:DATE%
+%RSS:ITEM:TITLE%
+%RSS:ITEM:SUMMARY%
+%RSS:ITEM:LINK%
+
+%RSS-LOOP%
+
+%RSS-FEED%</textarea></div>
+                <div style="margin-top:10px;"><a href="#" onclick="deskrss_reset();return false;">{"Start over with a new feed"|alang}</a></div>
+            </div>
+
+            <div class="rss_sidebar_help">
+            	{"Specify any RSS feed URL (such as your blog's RSS feed) and we will check it daily for new posts."|alang}<br /><br />
+				{"When we find a new post we will send this campaign.  The campaign will include the new posts."|alang}<br /><br />
+				{"You can specify the max number of new items to include in this campaign as well."|alang}
+            </div>
+        </div>
+{/if}
+		<div style="{if $campaign.type == 'deskrss'}margin-right:195px;{/if}">
+		<div id="editordiv" {if $fetch != "now"}style="display:none"{/if}>
+			<div id="editorhtml">
+				<div style="margin:0px; padding-bottom:0px;">
+
+					<div style="float:right; margin-bottom:3px;">
+						<div align="right" style="vertical-align: middle;">
+							{if $campaign.type != "deskrss"}
+							<a href="#" onclick="campaign_fetch_open(); return false" style="padding:2px; background:url(images/editor_fetch.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Fetch From URL'|alang}</a>
+							<a href="#" onclick="campaign_deskrss_open(); return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+							{/if}
+							<a href="#" onclick="campaign_conditional_open(); return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+							<a href="#" onclick="campaign_personalization_open(); return false;" style="  padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+						</div>
+					</div>
+
+					<div>
+						<ul class="navlist" style="padding-left:4px; margin-top: 3px; border-bottom:0px;">
+
+							<li id="messageEditorLinkOn" class="{if $admin.htmleditor}currenttab{else}othertab{/if}">
+							<a href="#" onclick="return campaign_message_toggle_editor('message', true, adesk_editor_init_word_object); return false" style="border-bottom:0px;"><span>{"Visual Editor"|alang}</span></a>
+							</li>
+							<li id="messageEditorLinkOff" class="{if !$admin.htmleditor}currenttab{else}othertab{/if}">
+							<a href="#" onclick="return campaign_message_toggle_editor('message', false, adesk_editor_init_word_object); return false" style="border-bottom:0px;"><span>{"Code Editor"|alang}</span></a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div id="messageEditorLinkDefault" style="display:none;padding:2px; padding-left:4px; font-size:10px; background:none; border-top:1px solid #CCCCCC; background:#FFFFD5; ">
+						<a href="#" onclick="return campaign_message_setdefaulteditor('message');" style="color:#666666;">{"Set as default editor mode"|alang}</a>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<textarea tabindex="4" name="html" id="messageEditor" style="width: {$admin.editorsize_w}; height: {$admin.editorsize_h}; padding:0px;  margin-right:0px;" onblur="messageChanged=true;"></textarea>
+
+		</div>
+		{if $admin.htmleditor}<script>campaign_message_toggle_editor('message', true, adesk_editor_init_word_object);</script>{/if}
+        </div>
+        </div>
+	</div>
+
+
+
+	<div class="campaign_input" style=" padding-top:0px; font-size:11px; color:#666;">
+		<div id="askmanagetext" style="{if $campaign.managetext}display:none{/if}">
+			{"We will automatically create a nicely formatted text-only version of your message for you."|alang}
+
+			<div style="float: right">
+				<a href="#" onclick="campaign_managetext(1); campaign_different(); return false" style="color:#999;">{"Let me manage the text only version"|alang}</a>
+			</div>
+		</div>
+
+		<div id="willmanagetext" style="{if !$campaign.managetext}display: none{/if}">
+			{"You have chosen to manage the text version of your message."|alang}
+
+			<div style="float: right">
+				<a href="#" onclick="campaign_managetext(0); campaign_different(); return false" style="color:#999;">{"No, I'd rather let it be generated automatically"|alang}</a>
+			</div>
+		</div>
+	</div>
+
+	<div style="margin-top:20px;">
+		<div style="float:right;">
+			<input value='{"Save & Exit"|alang}' type="button" onclick="campaign_save('exit')" style="font-size:14px;" />
+			<input value='{"Save"|alang}' type="button" onclick="campaign_save('nothing')" style="font-size:14px;" />
+		</div>
+		<input value="{'Back'|alang}" type="button" onclick="campaign_save('back')" style="font-size:14px;" />
+		<input value="{'Next'|alang}" type="button" onclick="campaign_save('next')" style="font-weight:bold; font-size:14px;" />
+	</div>
+
+	<script type="text/javascript">
+		campaign_save_auto_runagain();
+
+{literal}
+if (message_obj.html != "") {
+	adesk_form_value_set($("messageEditor"), message_obj.html);
+}
+{/literal}
+</script>
+
+{include file="campaign_new_message.attach.htm"}
+{include file="campaign_new_message.fetch.htm"}
+</form>
+
+{include file="campaign_new_message.personalize.htm"}
+{include file="campaign_new_message.conditional.htm"}
+{include file="campaign_new_message.deskrss.htm"}
+
+{/if}

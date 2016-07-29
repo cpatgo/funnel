@@ -1,0 +1,15 @@
+{* THIS INCLUDE NEEDS A OBJECT CALLED $paginator IN ORDER TO WORK *}
+{*"Page %d of %d"|plang:$paginator->thisPage:$paginator->linksCnt*}
+{if $paginator->hasPrevious} <a href="{$paginator->previousLink|html}">{"Previous"|plang}</a> &nbsp; {/if}
+{if $paginator->hasNext} <a href="{$paginator->nextLink|html}">{"Next"|plang}</a> &nbsp; {/if}
+{if $paginator->showSpan > 0 and $paginator->thisPage > $paginator->showSpan}<a href="{$paginator->links[1].link|html}">&lt;&lt;</a> ...{/if}
+{foreach from=$paginator->links item=p key=number}
+{if $p.show}
+{if !$p.this}
+<a href="{$p.link|html}">{$number|html}</a>
+{elseif $paginator->linksCnt > 1}
+<strong>{$number|html}</strong>
+{/if}
+{/if}
+{/foreach}
+{if $paginator->showSpan > 0 and $paginator->thisPage <= $paginator->linksCnt - $paginator->showSpan}... <a href="{$p.link|html}">&gt;&gt;</a>{/if}

@@ -1,0 +1,26 @@
+<div id="optin" class="adesk_modal_delete" align="center" style="display: none">
+  <div class="adesk_modal_inner">
+    <form method="POST">
+	  <h3 class="m-b">{"Send Email Reminder to Unconfirmed Subscriber(s)"|alang}</h3>
+	  <span id="optin_message"></span>
+	  <ul id="optin_list"></ul>
+	  <br />
+	  <br />
+	  <div>
+		{"You can choose which Email Confirmation Set to send to the selected subscriber(s):"|alang}
+	  </div>
+	  <div>
+	    <select name="optid" size="1" id="optin_optid">
+{foreach from=$optins item=v}
+	      <option value="{$v.id}">{$v.name}</option>
+{/foreach}
+	    </select>
+	  </div>
+	  <br />
+	  <div>
+		<input type="button" class="adesk_button_ok" value="{"OK"|alang}" onclick="subscriber_optin(subscriber_optin_id)" />
+		<input type="button" class="adesk_button_cancel" value="{"Cancel"|alang}" onclick="adesk_dom_toggle_display('optin', 'block'); adesk_ui_anchor_set(subscriber_list_anchor())" />
+	  </div>
+    </form>
+  </div>
+</div>

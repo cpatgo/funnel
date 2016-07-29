@@ -1,0 +1,48 @@
+<div id="message_conditional" class="adesk_modal" align="center" style="display:none;">
+  <div class="adesk_modal_inner" align="left">
+	<h1>{"Insert Conditional Content"|alang}</h1>
+
+	<div class="adesk_help_inline">{"Insert conditional content in your message by creating a section of content that will only show if a certain condition is matched."|alang}</div>
+
+	<br />
+
+	<div style="font-size:12px; font-weight:bold; margin-bottom:10px;">{"Show a block of content to subscriber if..."|alang}</div>
+
+	<select id="conditionalfield" name="field" style="width:369px;">
+		<option value="%EMAIL%">{"Email Address"|alang}</option>
+		<option value="%FIRSTNAME%">{"First Name"|alang}</option>
+		<option value="%LASTNAME%">{"Last Name"|alang}</option>
+		<option value="%FULLNAME%">{"Full Name"|alang}</option>
+		{foreach from=$fields item=e}
+		<option value="{if $e.perstag != ""}%{$e.perstag|escape}%{else}{$e.tag}{/if}">{$e.title|escape}</option>
+		{/foreach}
+		<option value="%SUBDATE%">{"Date Subscribed"|alang}</option>
+		<option value="%SUBDATE%">{"Time Subscribed"|alang}</option>
+		<option value="%SUBSCRIBERIP">{"Subscriber's IP Address"|alang}</option>
+		<option value="%LISTNAME%">{"Subscriber's List"|alang}</option>
+		<option value="%SUBSCRIBERID%">{"Subscriber ID"|alang}</option>
+	</select>
+	<select id="conditionalcond" name="cond" style="width:369px;">
+		<option value="==">{"Equals (Is)"|alang}</option>
+		<option value="!=">{"Does Not Equal (Is Not)"|alang}</option>
+		<option value="&gt;=">{"Is Greater Than Or Equal To"|alang}</option>
+		<option value="&lt;=">{"Is Less Than Or Equal To"|alang}</option>
+		<option value="&gt;">{"Is Greater Than"|alang}</option>
+		<option value="&lt;">{"Is Less Than"|alang}</option>
+		<option value="CONTAINS">{"Contains"|alang}</option>
+		<option value="DCONTAINS">{"Does NOT Contain"|alang}</option>
+	</select>
+	<div>
+		<input id="conditionalvalue" name="value" type="text" style="width:365px;" />
+	</div>
+
+	<br />
+
+    <div>
+      <input type="button" value='{"Insert"|alang}' onclick="campaign_conditional_insert();" class="adesk_button_ok" />
+      <input type="button" value='{"Cancel"|alang}' onclick="adesk_dom_toggle_display('message_conditional', 'block');" />
+      <input type="hidden" value="text" id="conditional4" />
+      <input type="hidden" value="" id="conditional2" />
+    </div>
+  </div>
+</div>

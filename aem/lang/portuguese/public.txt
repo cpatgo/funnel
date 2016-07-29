@@ -1,0 +1,628 @@
+﻿##### TRANSLATION STRINGS #####
+
+##### Example:"original string" = "TRADUÇÕES PARA PORTUGUÊS 12-04-2010"#####
+
+
+
+"%d email(s) sent." = "%d de e-mail(s) enviados"
+
+"%s thought you may be interested in this mailing." = "%s Penso que este e-mail poderá ter interessasse para ti."
+
+"(Optional) Why did you decide to unsubscribe?" = "(Opcional) Qual a razão pela qual não pretende mais receber este mailing?"
+
+"(Subscribed %s)" = "(Subscritos %s)"
+
+"A new subscriber has been added to your list." = "Um novo subscritor foi adicionado à lista."
+
+"A request to reset your password has been received." = "Recebemos um pedido para modificação da sua senha de acesso."
+
+"A subscriber has been removed from your list." = "Um subscritor foi removido da lista."
+
+"Account Lookup" = "Pesquisa de conta"
+
+"Additional Information" = "Informação adicional"
+
+"All rights reserved." = "Todos os direitos reservados"
+
+"Archive" = "Ficheiro"
+
+"Cancel" = "Cancelar"
+
+"Changes Saved." = "Alterações efectuadas"
+
+"Clear" = "Limpar"
+
+"Comment from" = "Comentário de"
+
+"Completed" = "Terminado"
+
+"Content" = "assetso"
+
+"Create Date" = "Data de criação"
+
+"Date/Time" = "Data/Hora"
+
+"Date/Time:" = "Data/Hora:"
+
+"Draft" = "Rascunho"
+
+"E-mail address is invalid." = "E-mail inválido"
+
+"Email" = "E-mail"
+
+"Email Sent." = "E-mail enviado"
+
+"Error Occurred!" = "Ocorreu um erro!"
+
+"First Name" = "Primeiro nome"
+
+"Forward To A Friend" = "Enviar a Um amigo"
+
+"Forward again" = "Enviar de novo"
+
+"Forward to a Friend" = "Envia a Um amigo"
+
+"Forward to more" = "Enviar a mais"
+
+"Friend Email" = "E-mail do amigo"
+
+"Friend Name" = "Nome do amigo"
+
+"Friend information" = "Informação do amigo"
+
+"From email is not valid." = "E-mail de origem não é válido."
+
+"From:" = "De:"
+
+"From:" = "De:"
+
+"HTML Editor" = "Editor HTML"
+
+"Here are the links to modify your accounts:" = "Links para modificação da sua conta:"
+
+"Here is the link to modify your account:" = "Link para modificação da sua conta:"
+
+"IP" = "IP"
+
+"Invalid email address" = "E-mail não é válido"
+
+"Invalid link. Please retry or contact the list admin." = "Link não é válido. Por favor tente de novo ou entre em contato com o administrador."
+
+"Last Name" = "Último nome"
+
+"List Name" = "Nome da lista"
+
+"Loading..." = "A carregar..."
+
+"Login" = "Login"
+
+"Message" = "Mensagem"
+
+"Message (HTML Version)" = "Messagem (versão HTML)"
+
+"Message (Text Version)" = "Mensagem (Versão TEXTO)"
+
+"Message Details" = "Detalhes da mensagem"
+
+"Message Preview" = "Visualização da mensagem"
+
+"Message could not be previewed." = "Não foi possível visualizar a mensagem."
+
+"Message type not found." = "O tipo de mensagem não foi encontrado."
+
+"Messages" = "Mensagens"
+
+"Modify Account" = "Modifique a conta"
+
+"Name" = "Nome"
+
+"Next" = "Próximo"
+
+"OK" = "OK"
+
+"Paused" = "Em pausa"
+
+"Personalized Message" = "Mensagem personalizada"
+
+"Please also verify yourself by typing the text in the following image into the box below it." = "Por favor, introduza o texto da imagem na caixa de texto abaixo."
+
+"Please also verify yourself by typing the text in the following image into the box next to it." = "Por favor, introduza o texto da imagem na caixa de texto ao lado."
+
+"Please ensure all email addresses are valid." = "Por favor, verifique que todos os e-mails são válidos."
+
+"Please fill out at least one Friend email address and name." = "Por favor, preencha pelo menos um e-mail e um nome de um amigo."
+
+"Please include a text from the image." = "Por favor, introduza o texto da imagem."
+
+"Please include a valid email address." = "Por favor, indique um e-mail válido."
+
+"Please include an email address." = "Por favor, indique um e-mail."
+
+"Please include your name." = "Por favor, indique o seu nome"
+
+"Please type the correct text that appears in the image." = "Por favor, introduza correctamente o texto que aparece na imagem."
+
+"Powered by" = "Powered by"
+
+"Previous" = "Anterior"
+
+"Public messages from List" = "Mensagens públicas da lista"
+
+"Public messages from all Lists" = "Mensagens públicas de todas as listas"
+
+"Scheduled" = "Agendado"
+
+"Search" = "Pesquisa"
+
+"Select Lists To Unsubscribe From" = "Selecione as listas para as quais pretende cancelar a subscrição"
+
+"Select a Campaign from List" = "Selecione um mailing da lista"
+
+"Select a List" = "Selecione uma lista"
+
+"Send" = "Enviar"
+
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "Envie este e-mail a um amigo. Por favor, introduza as informações abaixo e clique no botão para enviar."
+
+"Sending" = "A enviar"
+
+"Set as Default" = "Estabelece como padrão"
+
+"Stopped" = "Parada"
+
+"Subject" = "Assunto"
+
+"Subject:" = "Assunto:"
+
+"Subscribe" = "Subscrever"
+
+"Subscribe To Lists" = "Subscrever as listas"
+
+"Subscriber ID is invalid." = "O código do subscritor não é válido."
+
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "A subscrição não pode ser processada porque não seleccionou uma lista. Por favor, seleccione uma lista e tente de novo."
+
+"Text Editor" = "Editor de texto"
+
+"Thank you for confirming your subscription." = "Obrigado pela confirmação da subscrição."
+
+"Thank you for confirming your unsubscription." = "Obrigada por confirmar o cancelamento da subscrição."
+
+"The following errors occurred:" = "Ocorreram os seguintes erros:"
+
+"The link to modify your account has been sent. Please check your email." = "Foi-lhe enviado um link modificação da sua conta. Por favor, verifique O endereço de e-mail."
+
+"The sender of this message thought the mailing entitled" = "O remetente desta mensagem achou que o tema"
+
+"The sender of this message thought the mailing entitled '%s' would be of interest to you." = "O remetente desta mensagem, achou que o tema '%s' desta lista seria interessante para si."
+
+"The sender thought the mailing entitled '%s' would be of interest to you." = "O remetente desta mensagem achou que a lista com tema '%s' seria interessante para si."
+
+"This e-mail address cannot be added to list." = "Este e-mail não pode ser adiccionado à lista."
+
+"This e-mail address could not be unsubscribed." = "Não foi possível cancelar a subscriçao deste e-mail"
+
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "Este e-mail no passado já solicitou a subscrição, mas a mesma nunca foi confirmada."
+
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "Este e-mail foi processado. Por favor, confirme e verifique O endereço de e-mail para confirmar a subscrição."
+
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "Este e-mail foi processado. Por favor, confirme e verifique O endereço de e-mail para confirmar o cancelamento da subscrição."
+
+"This e-mail address has been unsubscribed from the list." = "Este e-mail foi tirado da lista."
+
+"This e-mail address has subscribed to the list." = "Este e-mail foi incluído na lista."
+
+"This e-mail address is already subscribed to this mailing list." = "Este e-mail já existe na lista."
+
+"This e-mail address is on the global exclusion list." = "Este e-mail pertence à lista global de exclusão."
+
+"This e-mail address was not subscribed to the list." = "Este e-mail não existe na lista de subscrição, pelo que não pode ser removido."
+
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "Esta lista não está a aceitar subscritores, porque atingiu o número máximo de subscritores."
+
+"This message is being sent by:" = "Esta mensagem está a ser enviada por:"
+
+"This subscriber does not exist." = "Este subscritor não existe."
+
+"To confirm this request please click on the link below:" = "Para confirmar o pedido, clique por favor, no link abaixo:"
+
+"To email is not valid." = "O e-mail de destino não é válido"
+
+"To log into the system visit:" = "Para fazer login no sistema visite:"
+
+"To view the mailing, please visit:" = "Para ver o mailing, por favor visite:"
+
+"To:" = "Para:"
+
+"Unable to redirect you to this link. Please try again or contact your list admin." = "Não foi possível redirecioná-lo para este link. Por favor, tente de novo ou entre em contato com o administrador."
+
+"Unknown response code. Please resubmit the subscription form." = "Erro desconhecido. Por favor, envie de novo o formulário de subscrição."
+
+"Unsubscribe" = "Cancelar a subscrição"
+
+"Update Account" = "Atualizar a conta"
+
+"Update Your Account" = "Atualizar a sua conta"
+
+"You are not allowed to access this page." = "Não tem autorização para aceder a esta página"
+
+"You are unable to be added to this list at this time." = "Não foi possível adicioná-lo à lista neste momento."
+
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "Selecionou uma lista que não permite e-mails duplicados. Este e-mail já existe no sistema. Por favor, edite o subscritor."
+
+"Your Email" = "E-mail"
+
+"Your Name" = "O seu nome"
+
+"Your changes have been saved." = "As alterações foram efectuadas."
+
+"Your e-mail address" = "O endereço de e-mail"
+
+"Your e-mail address (Required)" = "O endereço de e-mail (obrigatório)"
+
+"Your password has been reset to:" = "A sua senha de acesso foi alterada para:"
+
+"Your subscription request for this list could not be processed as you are missing required fields." = "O seu pedido de subscrição desta lista não pode ser aceite, porque há campos obrigatórios que precisam ser preenchidos."
+
+"Your subscription request for this list could not be processed as you must type your name." = "O seu pedido de subscrição desta lista não pode ser aceite, porque tem que indicar qual é o seu nome."
+
+"[Unknown]" = "[Desconhecido]"
+
+"optional" = "Opcional"
+
+
+
+
+
+##### 2009-07-10 #####
+
+
+
+"Account" = "Conta"
+
+"Disabled" = "Desactivado"
+
+
+
+
+
+##### 2009-07-29 #####
+
+
+
+"Subscribed to lists:" = "Subscrito nas listas:"
+
+"The image text you typed did not register. Please go back, reload the page, and try again." = "O texto que introduziu não está correcto. Volte atrás e tente de novo."
+
+"Unsubscribed from lists:" = "Cancelada a subscrição das listas:"
+
+
+
+
+
+##### 2009-08-13 #####
+
+
+
+"Attachment not found." = "Anexos não encontrados:"
+
+"Attachments:" = "Anexos:"
+
+"Content not found." = "Conteúdo não encontrado."
+
+"Nothing was selected for viewing." = "Não foi seleccionado nada para visualizar."
+
+"Preview" = "Visualizar"
+
+"Template not found." = "Modelo não encontrado."
+
+"To:" = "Para:"
+
+"Version not found." = "Versão não encontrada."
+
+"Your Account" = "A sua conta"
+
+
+
+
+
+##### 2009-10-06 #####
+
+
+
+
+
+"Back" = "Voltar"
+
+
+
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "Esta funcionalidade não está activa nos mailings em separado. Esta página só vai funcionar quando enviar de facto o mailing."
+
+
+
+
+
+
+
+
+
+##### 2009-10-14 #####
+
+
+
+"Language changed" = "Língua alterada"
+
+"Rewrite Test" = "Teste de reescrita"
+
+
+
+
+
+##### 2009-12-21 #####
+
+
+
+"Update Subscription Account" = "Actualizar a conta de subscrição"
+
+
+
+
+
+
+
+##### 2010-01-13 #####
+
+
+
+"Abuse Complaint" = "Reclamação"
+
+"Abuse Complaints Reported:" = "Reclamações reportadas:"
+
+"Abuse Complaints have been removed." = "As reclamações foram removidas."
+
+"Abuse Ratio has been updated." = "O Rácio de reclamações foi actualizado."
+
+"Abuse Report Received." = "Relatório de reclamações foi recebido."
+
+"Approve" = "Aprovado"
+
+"Approve Campaign Sending" = "Enviar o mailing aprovado"
+
+"Campaign Approved." = "Mailing aprovado."
+
+"Campaign Declined." = "Mailing rejeitado."
+
+"Campaign Name" = "Nome do mailing"
+
+"Campaign for Approval" = "Mailing a aprovar"
+
+"Campaign:" = "Mailing:"
+
+"Change Abuse Ratio" = "Alterar o rácio de reclamações"
+
+"Click here to view and approve the campaign sending:" = "Clicar aqui para ver e aprovar o envio do mailing:"
+
+"Close" = "Fechar"
+
+"Current Abuse Ratio:" = "Rácio de reclamações actual:"
+
+"Decline" = "Recusar"
+
+"Decline & Send Email" = "Recusar & Enviar e-mail"
+
+"E-mail:" = "E-mail:"
+
+"E-mails Sent:" = "E-mails enviados:"
+
+"FROM E-mail:" = "E-mail do remetente:"
+
+"FROM Name:" = "Nome do remetente:"
+
+"Group(s):" = "Grupo(s):"
+
+"Group:" = "Grupo:"
+
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "Se nunca solicitou ser contactado pelo remetente desta mensagem ou sobre este assunto clique no botão Enviar reclamação para reportar o abuso."
+
+"List(s):" = "Lists(s):"
+
+"Message:" = "Mensagem:"
+
+"Modify Campaign:" = "Modificar mailing:"
+
+"Modify Message:" = "Modificar mensagem:"
+
+"Name:" = "Nome:"
+
+"New Abuse Ratio:" = "Novo rácio de reclamações:"
+
+"Notify Senders" = "Notificar os remetentes"
+
+"Notify user(s) in this group:" = "Notificar os utilizadores deste grupo"
+
+"Once you have updated your message you can try to send it again." = "Após ter actualizado a sua mensagem pode tentar enviar de novo."
+
+"Please check your message you were sending to ensure it meets our sending policy." = ""
+
+"Please verify the information below." = "Por favor verifique a informação abaixo."
+
+"Preset Abuse Ratio:" = "Reinicie o rácio de reclamações:"
+
+"Private campaign." = "Mailing privado."
+
+"Private message." = "Mensagem privado."
+
+"Report Abuse" = "Enviar uma reclamação"
+
+"Reset Abuse Complaints" = "Reinicie o contador de reclamações"
+
+"Segment:" = "Filtro:"
+
+"Send From:" = "Enviar de:"
+
+"Send Notification to" = "Enviar notificações para"
+
+"TO E-mail:" = "E-mail do destinatário:"
+
+"TO Name:" = "Nome do destinatário:"
+
+"The senders information is:" = "A informação do remetente é:"
+
+"The subscriber information that this sender sent to is:" = "A informação do destinatário que este remetente indicou é:"
+
+"This campaign has already been accepted." = "Esta campanha já foi aceite."
+
+"This campaign has already been declined." = "Esta campanha já foi recusada."
+
+"This feature is not available in test campaigns." = "Esta funcionalidade não está disponível nos testes de envio."
+
+"This feature is not supported when testing campaigns." = "Esta funcionalidade não está disponível nos testes de envio."
+
+"Type:" = "Tipo"
+
+"Update" = "Actualizar"
+
+"User" = "Utilizador"
+
+"User:" = "Utilizador:"
+
+"View Abuses" = "Ver reclamações"
+
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender."= Para a nossa empresa as reclamações são um assunto sério uma vez que respeitamos os nossos clientes e potenciais clientes. Com o seu feedback podemos evitar que mais e-mails sejam enviados por este remetente. Ao reportar uma reclamação sobre este e-mail não receberá mais e-mails deste remetente.""
+
+"You have abused the mailing system %s" = "Tem reclamações sobre o seu sistema de envio %s"
+
+"Your Abuse Report Has Been Received" = "O seu relatório de reclamação foi recebido"
+
+"Your campaign &quot;%s&quot; could not be approved at this time." = "A sua campanha  &quot;%s&quot; não foi aprovada."
+
+"Your campaign needs to be updated" = "A sua campanha tem que ser actualizada"
+
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "O endereço de e-mail foi retirado desta lista. Pedimos desculpa por algum incoveniente que lhe tenhamos causado."
+
+
+
+
+
+
+
+##### 2010-02-02 #####
+
+
+
+"Abuse Reported." = "Queixa de abuso"
+
+"Campaign Name:" = "Nome do emailing:"
+
+"Click here to manage this user's abuse settings" = "Clique aqui para gerir as configurações de abuso deste utilizador"
+
+"Click here to manage this user's abuse settings:" = "Clique aqui para gerir as configurações de abuso deste utilizador:"
+
+"User %s has been suspended due to abuse reports" = "O utilizador %s foi suspenso devido a queixas de abusos"
+
+"With a current limit of" = "Com o limite superior de"
+
+"before being suspended." = "antes de ser suspenso."
+
+
+
+
+
+
+
+##### 2010-03-01 #####
+
+
+
+"Page %d of %d" = "Página %d de %d"
+
+
+
+
+
+##### 2010-03-28 #####
+
+
+
+"%s per page" = "%s por página"
+
+
+
+
+
+##### 2010-07-02 #####
+
+
+
+"%s Private Messages" = "%s Mensagens Privadas"
+
+"From" = "a partir de"
+
+"Private Messages published at %s." = "Mensagens Privadas publicados em %s."
+
+"Recipients:" = "Destinatários:"
+
+"Sent" = "enviado"
+
+
+
+
+
+
+
+##### 2010-09-07 #####
+
+
+
+"You have a new subscriber to your list." = "Você tem um novo assinante à sua lista."
+
+
+
+
+
+
+
+##### 2010-12-01 #####
+
+
+
+"This feature is not supported when testing messages." = "Este recurso não é suportado quando o teste mensagens."
+
+
+
+
+
+
+
+##### 2011-01-11 #####
+
+
+
+"Share on Digg" = "Partilhar no Digg"
+
+"Share on Facebook" = "Share on Facebook"
+
+"Share on Reddit" = "Compartilhar no Reddit"
+
+"Share on StumbleUpon" = "Partilhar no StumbleUpon"
+
+"Share on buzz" = "Compartilhar no Buzz"
+
+"Share on del.icio.us" = "Compartilhar no del.icio.us"
+
+"Share via Twitter" = "Compartilhar via Twitter"
+
+
+
+
+
+
+
+##### 2011-02-23 #####
+
+
+
+"Currently reading" = "Em leitura"
+
+"Social Share" = "Sociais Compartilhar"
+

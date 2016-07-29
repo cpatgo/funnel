@@ -1,0 +1,12 @@
+<font size="2">
+<span style="font-family: Arial;">##Dear merchant,##</span><br/><br/>
+<span style="font-family: Arial;">##Affiliate## {$firstname|escape} {$lastname|escape} ##is requesting payment for unpaid commissions##.</span><br/><br/>
+<span style="font-family: Arial;">##Affiliate name##: <span style="font-weight: bold;">{$firstname|escape} {$lastname|escape}</span></span><br/>
+<span style="font-family: Arial;">##Affiliate email##: <span style="font-weight: bold;">{$username|escape}{*Username*}</span></span><br/>
+<span style="font-family: Arial;">##Affiliate ID##: <span style="font-weight: bold;">{$userid}{*Affiliate ID*}</span></span><br/>
+<span style="font-family: Arial;">##Unpaid commissions (approved / pending):## <span style="font-weight: bold;">{$totalCommisonsApprovedUnpaid|currency} / {$totalCommissionsPendingUnpaid|currency}</span></span><br/>
+<br/>
+
+<span style="font-family: Arial;">##Regards##,</span><br/><br/>
+<span style="font-family: Arial;">##Your## {$postAffiliatePro|escape}.</span>
+</font>

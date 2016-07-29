@@ -1,0 +1,84 @@
+<input type="hidden" name="aftersave" id="campaign_aftersave" value="next">
+<input type="hidden" name="step" value="{$step}">
+
+<input type="hidden" name="id" id="form_id" value="{$campaignid}" />
+<input type="hidden" name="debugging" id="form_debugging" value="{$debugging}" />
+
+
+<div class="campaign_new_progress_container"  >
+	<div id="campaign_new_progress" class="campaign_new_progress">
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	campaign_header({$highlight|default:0}, {$campaignid|default:0});
+</script>
+
+
+
+ 
+<div id="campaign_send_warning" class="{if !$canSendCampaign or ($__ishosted and $maillimit > 0 and (int)$maillimitleft_raw < 0)}adesk_block{else}adesk_hidden{/if}">
+	<div id="campaign_send_warning_campaign" class="{if !$canSendCampaign}adesk_block{else}adesk_hidden{/if}">
+
+		{if !$admin.pg_message_send}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per day."|alang}
+		{else}
+		{if $admin.abuseratio_overlimit}
+		{"You are currently not able to send any new campaigns due to high abuse complaints.  Please contact your administrator with any questions."|alang}
+		{elseif $admin.limit_campaign_type == 'day'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per day."|alang}
+		{elseif $admin.limit_campaign_type == 'week'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per week."|alang}
+		{elseif $admin.limit_campaign_type == 'month'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per month."|alang}
+		{elseif $admin.limit_campaign_type == 'month1st'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per calendar month."|alang}
+		{elseif $admin.limit_campaign_type == 'monthcdate'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per calendar month."|alang}
+		{elseif $admin.limit_campaign_type == 'year'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns per year."|alang}
+		{elseif $admin.limit_campaign_type == 'ever'}
+		{"This campaign cannot be sent as it would exceed your currently allowed campaigns."|alang}
+		{/if}
+		{/if}
+	</div>
+	<div id="campaign_send_warning_mail" class="adesk_hidden">
+		{if $admin.limit_mail_type == 'day'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per day."|alang}
+		{elseif $admin.limit_mail_type == 'week'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per week."|alang}
+		{elseif $admin.limit_mail_type == 'month'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per month."|alang}
+		{elseif $admin.limit_mail_type == 'month1st'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per calendar month."|alang}
+		{elseif $admin.limit_mail_type == 'monthcdate'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per calendar month."|alang}
+		{elseif $admin.limit_mail_type == 'year'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails per year."|alang}
+		{elseif $admin.limit_mail_type == 'ever'}
+		{"This campaign cannot be sent as it would exceed your currently allowed emails."|alang}
+		{/if}
+	</div>
+	<div id="campaign_send_warning_subscriber" class="{if $__ishosted and $maillimit > 0 and (int)$maillimitleft_raw < 0}adesk_block{else}adesk_hidden{/if}">
+		{"This campaign cannot be sent as you have exceeded your currently allowed subscribers for your account."|alang}
+	</div>
+</div>
+
+{if $formSubmitted}
+<script>
+	{if $submitResult.succeeded and $submitResult.message}
+adesk_result_show({jsvar var=$submitResult.message});
+	{elseif $submitResult.message}
+adesk_error_show({jsvar var=$submitResult.message});
+	{/if}
+</script>
+{/if}
+
+{if $formSubmitted}
+	{if $submitResult.succeeded and $submitResult.message}
+<div class="adesk_help_inline">{$submitResult.message}</div>
+	{elseif $submitResult.message}
+<div class="adesk_help_inline">{$submitResult.message}</div>
+	{/if}
+{/if}

@@ -1,0 +1,95 @@
+{if $__ishosted}
+<div id="settings_admin" style="margin-top: 10px">
+  <h5>{"Deliverability Tools"|alang}</h5><div class="line"></div>
+  <div class="adesk_blockquote">
+
+  <div style="background:#F3F3F0; padding:5px; padding-left:10px;">{"Improve Deliverability"|alang}</div>
+    <div style="padding:10px; border: 1px solid #E0DFDC; margin-bottom:20px;">
+	  <label>
+        <input type="checkbox" name="onbehalfof" id="onbehalfof" value="1" {$site.onbehalfof|adesk_ischecked} onclick="if(!this.checked)$('onbehalfof_notify').show();else $('onbehalfof_notify').hide();" />
+        {"Authenticate all outgoing emails"|alang}
+        <span id="onbehalfof_notify" style="font-weight:bold; color:red;{if $site.onbehalfof}display:none;{/if}">(Enable this to improve your deliverability)</span>
+	  </label>
+	  <br />
+      <div style="margin-left:23px;">{"This will add a \"Sent on behalf of\" header to all outgoing emails.  Most of your subscribers will not see this and will be entirely unaware of this unless they inspect the email source code."|alang}</div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+{else}
+
+<div id="settings_admin" style="margin-top: 10px">
+<h5>{"Deliverability Tools"|alang}</h5><div class="line"></div>
+<div class="adesk_blockquote">
+
+{include file="settings.delivery.abuse.htm"}
+{include file="settings.delivery.feedbackloop.htm"}
+{include file="settings.delivery.spf.htm"}
+
+</div>
+</div>
+
+
+<div id="settings_delivery_viewabuse" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="1">
+	  <thead id="viewlist_head">
+		<tr class="adesk_table_header">
+		  <td width="150">{"Date"|alang}</td>
+		  <td>{"Campaign"|alang}</td>
+		</tr>
+	  </thead>
+	  <tbody id="viewlist_table">
+	  </tbody>
+	  <tbody id="viewlist_noresults" style="display:none">
+		<tr>
+		  <td colspan="2" align="center">
+			<div>{"Nothing found."|alang}</div>
+		  </td>
+		</tr>
+	  </tbody>
+	  <tfoot>
+		<td colspan="2" align="left">
+		  <div id="viewloadingBar" style="display:none" style="background: url(../awebdesk/media/loader.gif); background-repeat: no-repeat; padding: 5px; padding-left: 20px; padding-top: 2px; color: #999999; font-size: 10px; margin: 5px">
+			{"Loading. Please wait..."|alang}
+		  </div>
+		</td>
+	  </tfoot>
+	</table></div>
+	<br />
+	<input type="button" value='{"Close"|alang}' onclick="$('settings_delivery_viewabuse').hide()">
+  </div>
+</div>
+
+<div id="settings_delivery_viewfbl" class="adesk_modal" style="display:none">
+  <div class="adesk_modal_inner">
+    <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellspacing="0" cellpadding="1">
+	  <thead id="fbllist_head">
+	    <tr class="adesk_table_header">
+		  <td>{"Date"|alang}</td>
+		  <td>{"Campaign"|alang}</td>
+		  <td>{"Subscriber"|alang}</td>
+	    </tr>
+	  </thead>
+	  <tbody id="fbllist_table">
+{foreach from=$feedbackloops item=fbl}
+	    <tr>
+	      <td>{$fbl.tstamp|acpdate:$site.datetimeformat}</td>
+	      <td><a href="desk.php?action=report_campaign&id={$fbl.campaignid}">{$fbl.name}</a></td>
+	      <td><a href="desk.php?action=subscriber_view&id={$fbl.subscriberid}">{$fbl.email}</a></td>
+	    </tr>
+{/foreach}
+	  </tbody>
+    </table></div>
+	<br />
+	<input type="button" value='{"Close"|alang}' onclick="$('settings_delivery_viewfbl').hide()">
+  </div>
+</div>
+
+<script type="text/javascript">
+  paginators[1].paginate(0);
+</script>
+{/if}
+

@@ -1,0 +1,243 @@
+<div class="h2_wrap_static" style="margin-bottom:10px;">
+  <h5>{"Email Confirmation Set Name"|alang}</h5><div class="line"></div>
+  <div id="optinform" class="h2_content">
+	<input name="optname" type="text" id="optnameField" value="" size="45" />
+  </div>
+</div>
+
+{if isset($lists)}
+<div class="h2_wrap_static" style="margin-bottom:10px;">
+  <h5>{"Lists Which May Access this Confirmation Set"|alang}</h5><div class="line"></div>
+  <div id="optinform" class="h2_content">
+	<select id="form_lists" name="lists" multiple>
+	  {foreach from=$lists item=e}
+	  <option id="form_list{$e.id}" value="{$e.id}">{$e.name|html}</option>
+	  {/foreach}
+	</select>
+  </div>
+</div>
+{/if}
+
+<div class="h2_wrap_static" style="margin-bottom:10px;">
+  <h5>{"Opt-In Confirmations"|alang}</h5><div class="line"></div>
+
+  <div id="optinform" class="h2_content">
+
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="5">
+	  <tr>
+		<td>{"Confirm Opt-In"|alang}</td>
+		<td id="optinselectors">
+		  <label><input type="radio" name="optin_confirm" id="optinconfirmFieldYes" value="1" onclick="adesk_editor_mime_toggle('optin',  this.checked);" /> {"Yes"|alang}</label> &nbsp;&nbsp;&nbsp;
+		  <label><input type="radio" name="optin_confirm" id="optinconfirmFieldNo"  value="0" onclick="adesk_editor_mime_toggle('optin', !this.checked);" /> {"No"|alang}</label>
+		</td>
+	  </tr>
+	  <tbody id="optintable" class="adesk_hidden">
+		<tr>
+		  <td>{"Format"|alang}</td>
+		  <td>
+			<select name="optin_format" id="optinformatField" onchange="adesk_editor_mime_prompt('optin', this.value);">
+              <option value="html">{"HTML Email"|alang}</option>
+              <option value="text">{"Text Only Email"|alang}</option>
+              <option value="mime">{"HTML & TEXT Email"|alang}</option>
+			</select>
+		  </td>
+		</tr>
+		<tr>
+		  <td>{"Subject"|alang}</td>
+		  <td><input name="optin_subject" type="text" id="optinsubjectField" value="" size="45" /></td>
+		</tr>
+		<tr>
+		  <td>{"From Name"|alang}</td>
+		  <td><input name="optin_from_name" type="text" id="optinfromnameField" value="" size="45" /></td>
+		</tr>
+		<tr>
+		  <td>{"From Email"|alang}</td>
+		  <td><input name="optin_from_email" type="text" id="optinfromemailField" value="" size="45" /></td>
+		</tr>
+	  </tbody>
+	</table></div>
+
+	<div id="optinhtml" class="adesk_hidden">
+
+        <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"HTML Version Of Your Message"|alang}</h3>
+			<div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; border-top:1px solid #CCCCCC; margin:0px; padding:2px; padding-bottom:0px; background:#F0F0EE;">
+				<div style="float:right; margin-top:5px; margin-bottom:3px;">
+
+					<div align="right" style="vertical-align: middle;">
+{if $templatesCnt}
+						<a href="#" onclick="form_editor_template_open('html', 'optinEditor');return false;" style="padding:2px; background:url(images/editor_template.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Template'|alang}</a>
+{/if}
+{*
+						<a href="#" onclick="form_editor_deskrss_open('html', 'optinEditor');return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+*}
+						<a href="#" onclick="form_editor_conditional_open('html', 'optinEditor');return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+						<a href="#" onclick="form_editor_personalize_open('html', 'optinEditor'); return false;" style=" margin-right:8px; padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+					</div>
+				</div>
+
+				<div>
+				<ul class="navlist" style="padding-left:4px; border-bottom:0px;">
+
+					<li id="optinEditorLinkOn" class="{if $admin.htmleditor}currenttab{else}othertab{/if}">
+						<a href="#" onclick="return toggleEditor('optin', true, adesk_editor_init_word_object);" style="border-bottom:0px;"><span>{"Visual Editor"|alang}</span></a>
+					</li>
+					<li id="optinEditorLinkOff" class="{if !$admin.htmleditor}currenttab{else}othertab{/if}">
+						<a href="#" onclick="return toggleEditor('optin', false, adesk_editor_init_word_object);" style="border-bottom:0px;"><span>{"Code Editor"|alang}</span></a>
+					</li>
+
+				</ul>
+				</div>
+				<div id="optinEditorLinkDefault" class="adesk_hidden" style="padding:2px; padding-left:4px; font-size:10px; background:none; border-top:1px solid #CCCCCC; background:#FFFFD5; ">
+					<a href="#" onclick="return setDefaultEditor('optin');" style="color:#666666;">{"Set as default editor mode"|alang}</a>
+				</div>
+			</div>
+
+	  <textarea name="optin_html" id="optinEditor" style="width: {$admin.editorsize_w}; height: {$admin.editorsize_h}; padding:0px; border:1px solid #CCCCCC; margin:0px;"></textarea>
+	  {if $admin.htmleditor}<script>toggleEditor('optin', true, adesk_editor_init_word_object);</script>{/if}
+
+	</div>
+
+	<div id="optintext" class="adesk_hidden">
+      <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"Text Version Of Your Message"|alang}</h3>
+      <div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; margin:0px; padding:2px; background:#F0F0EE;">
+        <div align="right" style="vertical-align: middle; margin-top:5px; margin-bottom:3px;">
+{if $templatesCnt}
+          <a href="#" onclick="form_editor_template_open('text', 'optintextField');return false;" style="padding:2px; background:url(images/editor_template.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Template'|alang}</a>
+{/if}
+{*
+          <a href="#" onclick="form_editor_deskrss_open('text', 'optintextField');return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+*}
+          <a href="#" onclick="form_editor_conditional_open('text', 'optintextField');return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+          <a href="#" onclick="form_editor_personalize_open('text', 'optintextField'); return false;" style=" margin-right:8px; padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+        </div>
+      </div>
+      <div style="margin:0px; padding:0px; border:1px solid #ccc;">
+		<textarea name="optin_text" class="text_ruler" cols="65" rows="10" id="optintextField" style="width:{$admin.editorsize_w}; height: {$admin.editorsize_h}; border:none;"></textarea>
+	  </div>
+	</div>
+
+	{if $admin.limit_attachment}
+	<div id="optinattachments" class="adesk_block">
+      <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"Opt-In Message Attachments"|alang}</h3>
+      <div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; margin:0px; padding:2px; background:#F0F0EE;">
+        <br />
+	    {adesk_upload id='optin_attach' name='optinattach' action='optinoptout_attach' limit=$admin.limit_attachment}
+	  </div>
+	</div>
+	{/if}
+
+  </div>
+
+</div>
+
+<div class="h2_wrap_static">
+
+  <h5>{"Opt-Out Confirmations"|alang}</h5><div class="line"></div>
+  <div id="optoutform" class="h2_content">
+	<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="5">
+	  <tr>
+		<td>{"Confirm Opt-Out"|alang}</td>
+		<td id="optoutselectors">
+		  <label><input type="radio" name="optout_confirm" id="optoutconfirmFieldYes" value="1" onclick="adesk_editor_mime_toggle('optout',  this.checked);" /> {"Yes"|alang}</label> &nbsp;&nbsp;&nbsp;
+		  <label><input type="radio" name="optout_confirm" id="optoutconfirmFieldNo"  value="0" onclick="adesk_editor_mime_toggle('optout', !this.checked);" /> {"No"|alang}</label>
+		</td>
+	  </tr>
+	  <tbody id="optouttable" class="adesk_hidden">
+		<tr>
+		  <td>{"Format"|alang}</td>
+		  <td>
+			<select name="optout_format" id="optoutformatField" onchange="adesk_editor_mime_prompt('optout', this.value);">
+              <option value="html">{"HTML Email"|alang}</option>
+              <option value="text">{"Text Only Email"|alang}</option>
+              <option value="mime">{"HTML & TEXT Email"|alang}</option>
+			</select>
+		  </td>
+		</tr>
+		<tr>
+		  <td>{"Subject"|alang}</td>
+		  <td><input name="optout_subject" type="text" id="optoutsubjectField" value="" size="45" /></td>
+		</tr>
+		<tr>
+		  <td>{"From Name"|alang}</td>
+		  <td><input name="optout_from_name" type="text" id="optoutfromnameField" value="" size="45" /></td>
+		</tr>
+		<tr>
+		  <td>{"From Email"|alang}</td>
+		  <td><input name="optout_from_email" type="text" id="optoutfromemailField" value="" size="45" /></td>
+		</tr>
+	  </tbody>
+	</table></div>
+
+	<div id="optouthtml" class="adesk_hidden">
+
+        <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"HTML Version Of Your Message"|alang}</h3>
+			<div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; border-top:1px solid #CCCCCC; margin:0px; padding:2px; padding-bottom:0px; background:#F0F0EE;">
+				<div style="float:right; margin-top:5px; margin-bottom:3px;">
+
+					<div align="right" style="vertical-align: middle;">
+{if $templatesCnt}
+						<a href="#" onclick="form_editor_template_open('html', 'optoutEditor');return false;" style="padding:2px; background:url(images/editor_template.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Template'|alang}</a>
+{/if}
+{*
+						<a href="#" onclick="form_editor_deskrss_open('html', 'optoutEditor');return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+*}
+						<a href="#" onclick="form_editor_conditional_open('html', 'optoutEditor');return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+						<a href="#" onclick="form_editor_personalize_open('html', 'optoutEditor'); return false;" style=" margin-right:8px; padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+					</div>
+				</div>
+
+				<div>
+				<ul class="navlist" style="padding-left:4px; border-bottom:0px;">
+
+					<li id="optoutEditorLinkOn" class="{if $admin.htmleditor}currenttab{else}othertab{/if}">
+						<a href="#" onclick="return toggleEditor('optout', true, adesk_editor_init_word_object);" style="border-bottom:0px;"><span>{"Visual Editor"|alang}</span></a>
+					</li>
+					<li id="optoutEditorLinkOff" class="{if !$admin.htmleditor}currenttab{else}othertab{/if}">
+						<a href="#" onclick="return toggleEditor('optout', false, adesk_editor_init_word_object);" style="border-bottom:0px;"><span>{"Code Editor"|alang}</span></a>
+					</li>
+
+				</ul>
+				</div>
+				<div id="optoutEditorLinkDefault" class="adesk_hidden" style="padding:2px; padding-left:4px; font-size:10px; background:none; border-top:1px solid #CCCCCC; background:#FFFFD5; ">
+					<a href="#" onclick="return setDefaultEditor('optout');" style="color:#666666;">{"Set as default editor mode"|alang}</a>
+				</div>
+			</div>
+
+	  <textarea name="optout_html" id="optoutEditor" style="width: {$admin.editorsize_w}; height: {$admin.editorsize_h}; padding:0px; border:1px solid #CCCCCC; margin:0px;"></textarea>
+	  {if $admin.htmleditor}<script>toggleEditor('optout', true, adesk_editor_init_word_object);</script>{/if}
+
+	</div>
+
+	<div id="optouttext" class="adesk_hidden">
+      <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"Text Version Of Your Message"|alang}</h3>
+      <div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; margin:0px; padding:2px; background:#F0F0EE;">
+        <div align="right" style="vertical-align: middle; margin-top:5px; margin-bottom:3px;">
+{if $templatesCnt}
+          <a href="#" onclick="form_editor_template_open('text', 'optouttextField');return false;" style="padding:2px; background:url(images/editor_template.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Template'|alang}</a>
+{/if}
+{*
+          <a href="#" onclick="form_editor_deskrss_open('text', 'optouttextField');return false;" style="padding:2px; background:url(images/editor_deskrss.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert RSS'|alang}</a>
+*}
+          <a href="#" onclick="form_editor_conditional_open('text', 'optouttextField');return false;" style="padding:2px; background:url(images/editor_conditional.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; margin-right:10px;">{'Insert Conditional Content'|alang}</a>
+          <a href="#" onclick="form_editor_personalize_open('text', 'optouttextField'); return false;" style=" margin-right:8px; padding:2px; background:url(images/editor_personalization.gif); background-position:left; background-repeat:no-repeat; padding-left:25px; font-weight:bold; color:#006600;">{'Personalize Message'|alang}</a>
+        </div>
+      </div>
+      <div style="margin:0px; padding:0px; border:1px solid #ccc;">
+		<textarea name="optout_text" class="text_ruler" cols="65" rows="10" id="optouttextField" style="width:{$admin.editorsize_w}; height: {$admin.editorsize_h}; border:none;"></textarea>
+	  </div>
+	</div>
+
+	{if $admin.limit_attachment}
+	<div id="optoutattachments" class="adesk_block">
+      <h3 style="background:#D3E2F1; padding:5px; padding-left:12px; font-size:14px;">{"Opt-Out Message Attachments"|alang}</h3>
+      <div style="border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; margin:0px; padding:2px; background:#F0F0EE;">
+        <br />
+	    {adesk_upload id='optout_attach' name='optoutattach' action='optinoptout_attach' limit=$admin.limit_attachment}
+	  </div>
+	</div>
+	{/if}
+
+  </div>
+
+</div>
+

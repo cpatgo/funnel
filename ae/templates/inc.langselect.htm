@@ -1,0 +1,9 @@
+			{if count($languages) > 1}
+				<div style="float:right; padding-top:8px;">
+					<form action="" method="post" name="" id="langchangeform">
+						<select name="lang_ch" id="lang_ch" onchange="$('langchangeform').submit();" style="font-size:10px; border:1px solid #cccccc; color:#999999;">
+							{html_options options=$languages selected=$admin.lang}
+						</select>
+					</form>
+				</div>
+			{/if}

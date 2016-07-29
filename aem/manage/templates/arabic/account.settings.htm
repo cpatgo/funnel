@@ -1,0 +1,96 @@
+      <tr valign="top">
+      <td>{"Default Dashboard theme"|alang}</td>
+      <td>
+		<select name="default_dashboard">
+		  <option value="modern" {$admin.default_dashboard|adesk_isselected:modern}>Modern</option>
+<option value="mighty" {$admin.default_dashboard|adesk_isselected:mighty}>Mighty</option>
+		  <option value="classic" {$admin.default_dashboard|adesk_isselected:classic}>Classic</option>
+		  <option value="arabic" {$admin.default_dashboard|adesk_isselected:arabic}>Arabic(RTL)</option>
+        </select>
+	  </td>
+      </td>
+    </tr> 
+            <tr valign="top">
+      <td>{"Default Mobile Dashboard theme"|alang}</td>
+      <td>
+		<select name="default_mobdashboard">
+		  <option value="modern" {$admin.default_mobdashboard|adesk_isselected:modern}>Modern</option> 
+ 
+          
+		  
+		  
+ 
+		</select>
+	  </td>
+      </td>
+    </tr> 
+      
+    <tr valign="top">
+      <td>{"Lists per Page"|alang}</td>
+      <td>
+		<select name="lists_per_page">
+		  <option value="5" {$admin.lists_per_page|adesk_isselected:5}>5</option>
+		  <option value="10" {$admin.lists_per_page|adesk_isselected:10}>10</option>
+		  <option value="20" {$admin.lists_per_page|adesk_isselected:20}>20</option>
+		  <option value="50" {$admin.lists_per_page|adesk_isselected:50}>50</option>
+		  <option value="100" {$admin.lists_per_page|adesk_isselected:100}>100</option>
+		</select>
+	  </td>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>{"Messages per Page"|alang}</td>
+      <td>
+		<select name="messages_per_page">
+		  <option value="5" {$admin.messages_per_page|adesk_isselected:5}>5</option>
+		  <option value="10" {$admin.messages_per_page|adesk_isselected:10}>10</option>
+		  <option value="20" {$admin.messages_per_page|adesk_isselected:20}>20</option>
+		  <option value="50" {$admin.messages_per_page|adesk_isselected:50}>50</option>
+		  <option value="100" {$admin.messages_per_page|adesk_isselected:100}>100</option>
+		</select>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>{"Subscribers per Page"|alang}</td>
+      <td>
+		<select name="subscribers_per_page">
+		  <option value="5" {$admin.subscribers_per_page|adesk_isselected:5}>5</option>
+		  <option value="10" {$admin.subscribers_per_page|adesk_isselected:10}>10</option>
+		  <option value="20" {$admin.subscribers_per_page|adesk_isselected:20}>20</option>
+		  <option value="50" {$admin.subscribers_per_page|adesk_isselected:50}>50</option>
+		  <option value="100" {$admin.subscribers_per_page|adesk_isselected:100}>100</option>
+		</select>
+      </td>
+    </tr>
+	<tr valign="top">
+	  <td>{"Default message editor size"|alang}</td>
+	  <td>
+		<input type="text" name="editorsize_w" id="editorsize_w" value="{$admin.editorsize_w}"> {"(width)"|alang}<br>
+		<input type="text" name="editorsize_h" id="editorsize_h" value="{$admin.editorsize_h}"> {"(height)"|alang}
+		{"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels."|help}
+	  </td>
+	</tr>
+    <tr>
+      <td valign="top">{"Auto Update Pages"|alang}</td>
+      <td>
+        <select name="autoupdate" id="autoupdate" size="1">
+          <option value="30"{if $admin.autoupdate == 30} selected{/if}>{"Update every 30 seconds"|alang}</option>
+          <option value="60"{if $admin.autoupdate == 60} selected{/if}>{"Update every minute"|alang}</option>
+          <option value="120"{if $admin.autoupdate == 120} selected{/if}>{"Update every 2 minutes"|alang}</option>
+          <option value="180"{if $admin.autoupdate == 180} selected{/if}>{"Update every 3 minutes"|alang}</option>
+          <option value="300"{if $admin.autoupdate == 300} selected{/if}>{"Update every 5 minutes"|alang}</option>
+          <option value="600"{if $admin.autoupdate == 600} selected{/if}>{"Update every 10 minutes"|alang}</option>
+        </select>
+      </td>
+    </tr>
+    {*
+    <tr>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">
+        <label>
+          <input type="checkbox" name="autosave" id="autosave" value="1" {if $admin.autosave} checked="checked"{/if} />
+          {"Auto Save Campaigns every minute"|alang}
+        </label>
+      </td>
+    </tr>
+    *}

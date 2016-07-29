@@ -1,0 +1,238 @@
+{assign var="hash" value=$smarty.get.hash|default:''}
+
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="report_campaign.js"}
+  var report_campaign_id = '{$smarty.get.id|default:0}';
+</script>
+
+{if !isset($smarty.get.print) or $smarty.get.print == 0}
+<div style="float:right;">
+  <div id="exportbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline;">
+	<a href="#" onclick="report_campaign_export(); return false">{"Export"|alang}</a>
+  </div>
+  {if !$isShared and $logFile}
+  <div id="logbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="../cache/campaign-{$campaign.id}.log" target="_blank">{"Log File"|alang}</a>
+  </div>
+  {/if}
+  {if !isset($usesharelink) or $usesharelink == 1}
+  <div id="sharebutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="#share">{"Share Report"|alang}</a>
+  </div>
+  {/if}
+  <div id="socialbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="#social">{"Social Share"|alang}</a>
+  </div>
+  {if !isset($useresendlink) or $useresendlink == 1}
+  <div id="resendbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="desk.php?action=campaign_new&copyid={$campaign.id|default:0}">{"Resend"|alang}</a>
+  </div>
+  {/if}
+  <div id="printbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="#" onclick="report_campaign_print(); return false">{"Print"|alang}</a>
+  </div>
+  {if $campaign.status == 1}{*scheduled ones are editable*}
+  <div id="editbutton" style="float:right; padding:5px; margin-top:-5px; font-weight:bold; text-decoration:underline; margin-left:10px;">
+	<a href="desk.php?action=campaign_new&campaignid={$campaign.id|default:0}">{"Edit Campaign"|alang}</a>
+  </div>
+  {/if}
+  {if isset($messages) and count($messages) > 1}
+  <div align="right" style="margin-left:5px;">
+	<select name="messageid" id="messageid" onchange="report_campaign_messagefilter(this.value)" style="font-size:10px;">
+	  <option value="0">{"Filter Split Test Campaign"|alang}</option>
+	  {foreach from=$messages item=m}
+	  <option value="{$m.messageid}">{$m.subject}</option>
+	  {/foreach}
+	</select>
+  </div>
+  {else}
+  <input type="hidden" name="messageid" id="messageid" value="0"/>
+  {/if}
+
+</div>
+{else}
+<input type="hidden" name="messageid" id="messageid" value="0"/>
+{/if}
+
+<h1 style="{$h1_style}">{"Campaign Report:"|alang} {$campaign.name|default:''|truncate:60}</h1>
+{if !isset($smarty.get.print) or $smarty.get.print == 0}
+<div style="margin-bottom:10px; margin-top:-4px; color:#999999;">{"Campaign Reports"|alang} &gt; {"Campaign Report"|alang}</div>
+{/if}
+
+{if isset($smarty.get.print) and $smarty.get.print == 1}
+<div style="display:none">
+  {/if}
+
+  <ul id="tablist" class="navlist">
+	<li id="main_tab_general" class="currenttab"><a href="#general-01-0-0-0">{"Overview"|alang       }<span id="count_tab_general">&nbsp;</span></a></li>
+	<li id="main_tab_message" class="othertab"  ><a href="#message-01-0-0-0">{"Message"|alang        }<span id="count_tab_message">&nbsp;</span></a></li>
+	<li id="main_tab_open" class="othertab"     ><a href="#open-01-0-0-0"   >{"Opens"|alang          } <span id="count_tab_open">(0)</span></a></li>
+	<li id="main_tab_link" class="othertab"     ><a href="#link-01-0-0-0"   >{"Links"|alang          } <span id="count_tab_link">(0)</span></a></li>
+	<li id="main_tab_forward" class="othertab"  ><a href="#forward-01-0-0-0">{"Forwards"|alang       } <span id="count_tab_forward">(0)</span></a></li>
+	<li id="main_tab_bounce" class="othertab"   ><a href="#bounce-01-0-0-0" >{"Bounces"|alang        } <span id="count_tab_bounce">(0)</span></a></li>
+	<li id="main_tab_unsub" class="othertab"    ><a href="#unsub-01-0-0-0"  >{"Unsubscriptions"|alang} <span id="count_tab_unsub">(0)</span></a></li>
+	<li id="main_tab_update" class="othertab"   ><a href="#update-01-0-0-0" >{"Updates"|alang       }  <span id="count_tab_update">(0)</span></a></li>
+	<li id="main_tab_socialsharing" class="othertab"   ><a href="#socialsharing-01-0-0-0" >{"Social Sharing"|alang       }  <span id="count_tab_socialsharing">(0)</span></a></li>
+  </ul>
+  {if isset($smarty.get.print) and $smarty.get.print == 1}
+</div>
+{/if}
+
+<br />
+<div id="general" class="adesk_hidden">
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	  <td class="startup_box_container">
+		<div>
+		  <div class="startup_box_title">
+			<span id="general_readlabel_date" class="startup_selected"><a href="#" onclick="report_campaign_showdiv_general('chart_read_bydate', 'general_readlabel_date')">{"Daily Read Trend"|alang}</a></span>
+			<span id="general_linklabel_date"><a href="#" onclick="report_campaign_showdiv_general('chart_link_bydate', 'general_linklabel_date')">{"Daily Link Trend"|alang}</a></span>
+			<span id="general_readlabel_hour"><a href="#" onclick="report_campaign_showdiv_general('chart_read_byhour', 'general_readlabel_hour')">{"Hourly Open Trend"|alang}</a></span>
+			<span id="general_linklabel_hour"><a href="#" onclick="report_campaign_showdiv_general('chart_link_byhour', 'general_linklabel_hour')">{"Hourly Link Trend"|alang}</a></span>
+		  </div>
+
+		  <div class="startup_box_container_inner">
+			<script type="text/javascript" src="../awebdesk/amline/swfobject.js"></script>
+			{adesk_amchart type="line" divid="chart_read_bydate" location="admin" url="graph.php?g=read_bydate&id=`$campaign.id`&hash=`$hash`" width="100%" height="175" bgcolor="#FFFFFF"}
+			{adesk_amchart type="line" divid="chart_read_byhour" location="admin" url="graph.php?g=read_byhour&campaignid=`$campaign.id`&hash=`$hash`" width="100%" height="175" bgcolor="#FFFFFF" display=false}
+			{adesk_amchart type="line" divid="chart_link_bydate" location="admin" url="graph.php?g=link_bydate&id=`$campaign.id`&hash=`$hash`" width="100%" height="175" bgcolor="#FFFFFF" display=false}
+			{adesk_amchart type="line" divid="chart_link_byhour" location="admin" url="graph.php?g=link_byhour&campaignid=`$campaign.id`&hash=`$hash`" width="100%" height="175" bgcolor="#FFFFFF" display=false}
+		  </div>
+		</div>
+	  </td>
+	</tr>
+  </table>
+
+  <br />
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	  <td width="59%" valign="top" class="startup_box_container">
+		<div class="startup_box_title">
+		  <span class="startup_selected">{"Emails"|alang}</span>
+		</div>
+		{adesk_amchart type="pie" divid="chart_open_pie" location="admin" url="graph.php?g=open_pie&id=`$campaign.id`&hash=`$hash`" width="100%" height="240" bgcolor="#FFFFFF"}
+	  </td>
+	  <td width="2%">&nbsp;
+
+	  </td>
+	  <td width="39%" valign="top" class="startup_box_container">
+		<div class="startup_box_title">
+		  <span class="startup_selected">{"Overview"|alang}</span>
+		  <span id="campaign_overview_details_link" style="color:#999999;">(<a href="#" onclick="adesk_dom_toggle_class('campaign_overview_details_box', 'adesk_block', 'adesk_hidden');return false;" style="border:none; background:none; padding:0px; margin:0px;">{"Show all details"|alang}</a>)</span>
+		</div>
+		<div class="startup_box_container_inner" align="center">
+
+		  <table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_total_t">0</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left">{"Recipients"|alang}</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_success_t">0</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left">{"Successfully Sent"|alang}</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_open_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#open-01-0-0-0">{"Opened This Campaign"|alang}</a> (<span id="general_open_t">0</span>)</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_link_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#link-01-0-0-0">{"Clicked A Link"|alang}</a> (<span id="general_link_t">0</span>)</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_unsub_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#unsub-01-0-0-0">{"Unsubscribed"|alang}</a> (<span id="general_unsub_t">0</span>)</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_forward_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#forward-01-0-0-0">{"Forwarded"|alang}</a> (<span id="general_forward_t">0</span>)</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_update_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#update-01-0-0-0">{"Updated"|alang}</a> (<span id="general_update_t">0</span>)</td>
+			</tr>
+			<tr>
+			  <td height="30" align="left" style="font-size:19px;"><span id="general_bounce_p">0.00%</span></td>
+			  <td width="10" align="left">&nbsp;</td>
+			  <td align="left"><a href="#bounce-01-0-0-0">{"Bounced"|alang}</a> (<span id="general_bounce_t">0</span>)</td>
+			</tr>
+		  </table>
+		  <div id="campaign_overview_details_box" class="adesk_hidden" style="border-top:1px solid #CCCCCC; margin-top:5px; padding-top:5px;">
+		  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Type:"|alang}</td>
+			  <td align="left"><span id="general_type_t">{$type_array[$campaign.type]}</span></td>
+			</tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Status:"|alang}</td>
+			  <td align="left"><span id="general_status_t">{$status_array[$campaign.status]}</span></td>
+			</tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Send Date/Time:"|alang}</td>
+			  <td align="left"><span id="general_sdate_t">{$campaign.sdate|acpdate:$site.datetimeformat}</span></td>
+			</tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Completion Date/Time:"|alang}</td>
+			  <td align="left"><span id="general_ldate_t">{$campaign.ldate|acpdate:$site.datetimeformat}</span></td>
+			</tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"List(s):"|alang}</td>
+			  <td align="left"><span id="general_lists_t">{foreach from=$campaign.lists item=l name=listloop}{$l.name}{if !$smarty.foreach.listloop.last}, {/if}{/foreach}</span></td>
+			</tr>
+{if $campaign.filterid}
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Segment:"|alang}</td>
+			  <td align="left"><span id="general_segment_t">{$campaign.filter.name}</span></td>
+			</tr>
+{/if}
+{if $senduser}
+			<tr>
+			  <td>&nbsp;</td>
+			  <td width="120" align="left">{"Sender:"|alang}</td>
+			  <td align="left"><span id="general_sender_t">{$senduser.fullname} ({$senduser.username})</span></td>
+			</tr>
+{/if}
+		  </table>
+		  </div>
+		</div>
+	  </td>
+	</tr>
+  </table>
+</div>
+
+{include file="report_campaign_message.inc.htm"}
+{include file="report_campaign_open.inc.htm"}
+{include file="report_campaign_forward.inc.htm"}
+{include file="report_campaign_bounce.inc.htm"}
+{include file="report_campaign_unsub.inc.htm"}
+{include file="report_campaign_unopen.inc.htm"}
+{include file="report_campaign_link.inc.htm"}
+{include file="report_campaign_linkinfo.inc.htm"}
+{include file="report_campaign_share.inc.htm"}
+{include file="report_campaign_social.inc.htm"}
+{include file="report_campaign_update.inc.htm"}
+{include file="report_campaign_socialsharing.inc.htm"}
+<script>
+{include file="spamcheck.inc.js" mode=report}
+</script>
+{include file="spamcheck.inc.htm" mode=report}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(report_campaign_process, true);
+</script>

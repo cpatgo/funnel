@@ -1,0 +1,15 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="approval.js"}
+</script>
+
+<h3 class="m-b">{"Campaign Approval Queue"|alang}</h3>
+
+{include file="approval.list.htm"}
+{* include file="approval.view.htm" *}
+{* include file="approval.delete.htm" *}
+{* include file="approval.search.htm" *}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(approval_process, true);
+</script>

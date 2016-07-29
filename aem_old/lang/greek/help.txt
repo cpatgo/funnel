@@ -1,0 +1,330 @@
+﻿##### TRANSLATION STRINGS #####
+
+##### Example: original string = your-translation-here #####
+
+"(Optional) Specify how many emails you wish to send with this mail connection before looking for the next connection. If you only have one mail connection this setting does not matter." = "( Προαιρετικό) Καθορίστε πόσα μηνύματα που θέλετε να στείλετε με τη σύνδεση ταχυδρομείο πριν ψάχνει για την επόμενη σύνδεση . Αν έχετε μόνο μία σύνδεση ταχυδρομείο αυτή η ρύθμιση δεν έχει σημασία ."
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load.)" = "( Προαιρετικό) Αυτή η επιλογή θα σταματήσει αυτόματα την ταχυδρομική σας μετά από ένα ορισμένο αριθμό των μηνυμάτων . Αυτό βοηθά στη μείωση του φορτίου τους διακομιστές e-mail σας . )"
+
+"(Optional) You can specify a limit of the number of emails to send in a certain time period. (Example = Only allow 1,000 emails per hour)" = "( Προαιρετικό) Μπορείτε να καθορίσετε ένα όριο για τον αριθμό των e-mail για να στείλετε σε ένα ορισμένο χρονικό διάστημα . ( Παράδειγμα = Να επιτρέπεται μόνο σε 1.000 μηνύματα ηλεκτρονικού ταχυδρομείου ανά ώρα)"
+
+"Attachments will be disabled." = "Συνημμένα θα απενεργοποιηθεί ."
+
+"Both values should be given as CSS values; 100% would be 100% of the allowed area for the editor, or 600px for 600 pixels." = "Και οι δύο τιμές πρέπει να δίνονται ως τιμές CSS ? 100 % θα ήταν 100% της επιτρεπόμενης περιοχής για τον επεξεργαστή , ή 600px 600 pixels ."
+
+"Brief Description for you to recognize. Does NOT affect your actual form." = "Σύντομη περιγραφή για σας να αναγνωρίσει . Δεν επηρεάζει την πραγματική μορφή σας ."
+
+"Brief Description for you to recognize. Does NOT affect your actual personalization tag." = "Σύντομη περιγραφή για σας να αναγνωρίσει . Δεν επηρεάζει την πραγματική ετικέτα εξατομίκευσης σας ."
+
+"Brief Description for you to recognize. Does NOT affect your actual template." = "Σύντομη περιγραφή για σας να αναγνωρίσει . Δεν επηρεάζει την πραγματική πρότυπό σας ."
+
+"Ctrl + click (or click and drag) to select/de-select items." = "Ctrl + κλικ ( ή κάντε κλικ και σύρετε ) για να επιλέξετε / de - επιλογή στοιχείων ."
+
+"Enter a brief description for this bounce code here." = "Πληκτρολογήστε μια σύντομη περιγραφή για αυτόν τον κωδικό αναπήδηση εδώ ."
+
+"Enter the character set that will be used on pages where you wish to put this form." = "Πληκτρολογήστε το σύνολο χαρακτήρων που θα χρησιμοποιηθεί σε σελίδες στις οποίες θέλετε να βάλετε αυτό το έντυπο ."
+
+"Extra users that were not part of the sync will be removed." = "Extra χρήστες που δεν αποτελούσαν μέρος του συγχρονισμού θα πρέπει να αφαιρεθεί ."
+
+"GD Library is needed to generate images from the application. Most common (and useful) use are CAPTCHA images." = "Βιβλιοθήκη GD είναι απαραίτητη για να δημιουργήσει εικόνες από την εφαρμογή . Τα πιο κοινά ( και χρήσιμο ) χρήση είναι εικόνες CAPTCHA ."
+
+"Header needs to be in format 'HEADER-NAME: HEADER VALUE'" = "Header πρέπει να είναι σε μορφή « HEADER -NAME : HEADER ΑΞΙΑ »"
+
+"Hide version to all users besides user admin? If selected, the version will NOT be visible in the control panel." = "Απόκρυψη έκδοση σε όλους τους χρήστες εκτός από το admin χρήστη ; Αν επιλεγεί , η έκδοση ΔΕΝ θα είναι ορατό στον πίνακα ελέγχου ."
+
+"If Read/Open Tracking is on, tracker image will not be embeded - subscribers will still be prompted to download images." = "Εάν Διαβάστε / Open Tracking είναι , tracker εικόνα δεν θα embeded - συνδρομητές θα εξακολουθεί να σας ζητηθεί να κάνετε λήψη εικόνων ."
+
+"If authentication is not required, do not enter a password." = "Εάν δεν απαιτείται έλεγχος ταυτότητας , μην εισαγάγετε έναν κωδικό πρόσβασης ."
+
+"If authentication is not required, do not enter a username." = "Εάν δεν απαιτείται έλεγχος ταυτότητας , μην εισάγετε ένα όνομα χρήστη ."
+
+"If selected, the software will disable most functions such as deleting, sending and more." = "Αν επιλεγεί , το λογισμικό θα απενεργοποιήσει τις περισσότερες λειτουργίες , όπως η διαγραφή , αποστολή και περισσότερο ."
+
+"If subscriber views the text version, his read/open will be logged if he clicks any tracked links in the message.\nIf HTML version is open, read/open will be logged if images are downloaded as well." = "Εάν συνδρομητής βλέπει την έκδοση του κειμένου , ανάγνωσης του / ανοικτή θα καταγραφούν αν κάνει κλικ κάθε παρακολουθούνται συνδέσεις στο μήνυμα . \ NΕάν η έκδοση HTML είναι ανοιχτό , διαβάστε / ανοικτή θα καταγραφούν αν οι εικόνες που έχετε κατεβάσει , καθώς και."
+
+"If the URL is used, it has to start with http:// or https:// . Otherwise, a file path will be assumed. If a path starts with './', the application folder will be assumed." = "Εάν χρησιμοποιείται το URL , θα πρέπει να ξεκινήσει με http:// ή https:// . Διαφορετικά , μια διαδρομή του αρχείου θα αναλάβει . Αν μια διαδρομή που ξεκινά με './', Ο φάκελος αίτησης θα πρέπει να θεωρείται ."
+
+"If this option is checked, the person filling the form will not be able to proceed with form submission unless the field has some value entered." = "Εάν αυτή η επιλογή είναι ενεργοποιημένη , το πρόσωπο συμπληρώνοντας την φόρμα δεν θα είναι σε θέση να προχωρήσει με την υποβολή της φόρμας , εκτός αν το πεδίο έχει κάποια αξία εισαχθεί ."
+
+"If you check this option, one hour will be added to the normal GMT offset your time zone uses." = "Αν επιλέξετε αυτή την επιλογή , μία ώρα θα προστίθεται στην κανονική GMT offset ζώνη ώρας σας χρησιμοποιεί ."
+
+"If your mail transfer agents does not include the code in form 5.X.X., enter a string that should be matched so this Bounce Code can be assigned.\n(example: ' returned: Unknown User')" = "Εάν πράκτορες μεταφοράς ταχυδρομείου σας δεν περιλαμβάνει τον κώδικα σε μορφή 5.xx , εισάγετε μια σειρά που θα πρέπει να συνδυάζεται έτσι αυτό Bounce κώδικας μπορεί να αποδίδεται \ n ( παράδειγμα : « επέστρεψε : Άγνωστη Χρήστης ») ."
+
+"License agreement does not allow you to set your own copyright, but you may opt to have the copyright invisibe to public/non-code view. Copyrights may never be removed from the actual code." = "Άδεια χρήσης δεν σας επιτρέπει να ορίσετε τα δικά σας δικαιώματα πνευματικής ιδιοκτησίας , αλλά μπορείτε να επιλέξετε να έχουν την invisibe πνευματικών δικαιωμάτων άποψη δημόσιες / μη -code . Τα πνευματικά δικαιώματα δεν μπορεί ποτέ να αφαιρεθεί από τον πραγματικό κώδικα ."
+
+"List will not be listed on default subscription page." = "Ο κατάλογος δεν θα πρέπει να αναφέρονται στη σελίδα προεπιλεγμένη συνδρομή ."
+
+"Logs will be kept for 30 days." = "Logs θα κρατηθούν για 30 ημέρες ."
+
+"Most mail transfer agents include the code in form 5.X.X. If your server is not returning those, you can enter here some identifier for this Bounce Code." = "Οι περισσότεροι πράκτορες μεταφοράς ταχυδρομείου περιλαμβάνει τον κωδικό σε μορφή 5.xx Εάν ο διακομιστής σας δεν επιστρέφει εκείνοι , μπορείτε να εισάγετε εδώ κάποια αναγνωριστικό για αυτό το Bounce Κώδικα ."
+
+"Note: this overrides the 'day of the month' option" = "Σημείωση : αυτό παρακάμπτει την « ημέρα του μήνα» επιλογή"
+
+"Notice: Hold CTRL to select multiple Autoresponders." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές Autoresponders ."
+
+"Notice: Hold CTRL to select multiple destinations." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλούς προορισμούς ."
+
+"Notice: Hold CTRL to select multiple items." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλά στοιχεία ."
+
+"Notice: Hold CTRL to select multiple lists." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: Hold CTRL to select multiple statuses." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές καταστάσεις ."
+
+"Notice: This Subscription Form will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Το παρόν έντυπο εγγραφής θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This action will be performed on each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτή η δράση θα υλοποιηθεί σε κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This bounce setting will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτή η ρύθμιση αναπήδηση θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This custom header will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτή η προσαρμοσμένη κεφαλίδα θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This email account will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτός ο λογαριασμός ηλεκτρονικού ταχυδρομείου θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This exclusion pattern will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτό το πρότυπο αποκλεισμού θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This message will be a member of each selected group! Hold CTRL to select multiple group." = "Σημείωση: Αυτό το μήνυμα θα είναι μέλος της κάθε επιλεγμένης ομάδας ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές ομάδα ."
+
+"Notice: This message will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτό το μήνυμα θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This personalization will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτή η εξατομίκευση θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This sending filter will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτή η αποστολή του φίλτρου θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Notice: This template will be a member of each selected list! Hold CTRL to select multiple lists." = "Σημείωση: Αυτό το πρότυπο θα είναι ένα μέλος από κάθε επιλεγμένη λίστα ! Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές λίστες ."
+
+"Place one email matching pattern per line." = "Τοποθετήστε ένα email ταιριάζουν με την επιλογή ανά γραμμή ."
+
+"Please check if any vital function is listed here." = "Παρακαλώ ελέγξτε αν υπάρχει ζωτική λειτουργία που αναφέρονται εδώ ."
+
+"Separate multiple emails by comma, semicolon or space" = "Διαχωρίστε τα πολλαπλά e-mail με κόμμα , τελεία ή το χώρο"
+
+"Sessions need to be enabled in order for this application to work." = "Συνεδρίες πρέπει να είναι ενεργοποιημένη για αυτή την εφαρμογή για να λειτουργήσει ."
+
+"Set * for 'every hour'." = "Ορισμός * για « κάθε ώρα » ."
+
+"Set * for 'every minute'." = "Ορισμός * για « κάθε λεπτό » ."
+
+"Soft bounces usually are emails that were not delivered (yet), but the problem appears to be temporal. Hard bounces are the ones that most likely permanent (such as 'invalid email address', etc.)" = "Μαλακό αναπηδά συνήθως είναι μηνύματα που δεν παραδόθηκαν ( ακόμη) , αλλά το πρόβλημα φαίνεται να είναι διαχρονικά . Σκληρό αναπηδήσεις είναι αυτοί που πιθανότατα μόνιμη ( όπως « έγκυρη διεύθυνση e-mail , κλπ.)"
+
+"Some scripts might not finish the execution within the allowed timeframe, which is set to a value lower than a default PHP value (30 seconds)." = "Κάποια scripts δεν θα μπορούσε να τελειώσει την εκτέλεση εντός του επιτρεπόμενου χρονικού πλαισίου , το οποίο έχει οριστεί σε μια τιμή μικρότερη από μια προκαθορισμένη τιμή PHP (30 δευτερόλεπτα) ."
+
+"Subscriber will receive an opt-in email with a link to confirm list subscription(s)." = "Συνδρομητής θα λάβει ένα opt -in email με ένα link για να επιβεβαιώσετε την εγγραφή ( ες ) κατάλογο ."
+
+"The Analytics account number should appear in the format UA-xxxxxxx-y. The '-y' towards the end refers to the profile number." = "Ο αριθμός λογαριασμού Analytics θα πρέπει να εμφανίζονται με τη μορφή UA - xxxxxxx - y . Το '-y' προς το τέλος αναφέρεται στον αριθμό προφίλ."
+
+"The contents of this field will show up as a tooltip when visitor hovers over the field." = "Το περιεχόμενο αυτού του πεδίου θα εμφανίζεται ως επεξήγηση εργαλείου, όταν επισκέπτης αιωρείται πάνω από το πεδίο ."
+
+"The label of this field (a title) can be shown both above the field, or on it's left side." = "Η ετικέτα του εν λόγω τομέα ( τίτλος) μπορεί να αποδειχθεί τόσο πάνω από το πεδίο , ή σε αυτό είναι στην αριστερή πλευρά ."
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of an article or category in the URL." = "Αυτό το χαρακτηριστικό θα χρησιμοποιήσετε το mod_rewrite του Apache plugin για να διαμορφώσετε τις δημόσιες διευθύνσεις του να εμφανίζεται πιο περιγραφικό , αναφέροντας για παράδειγμα τον τίτλο ενός άρθρου ή μιας κατηγορίας στη διεύθυνση URL ."
+
+"This is just a label for your own internal use" = "Αυτό είναι απλά μια ετικέτα για τη δική σας εσωτερική χρήση"
+
+"This is the character that separates the fields within the file. Usually this is a comma." = "Αυτό είναι ο χαρακτήρας που διαχωρίζει τα πεδία στο αρχείο . Συνήθως αυτό είναι ένα κόμμα ."
+
+"This is the internal name for you to use. Every cron job needs to have a unique identifier." = "Αυτό είναι το εσωτερικό όνομα για να το χρησιμοποιήσετε . Κάθε εργασία cron πρέπει να έχει ένα μοναδικό αναγνωριστικό ."
+
+"This value is too low, and this server imposed limit cannot be changed." = "Αυτή η τιμή είναι πολύ χαμηλή , και αυτός ο διακομιστής επιβληθεί όριο αυτό δεν μπορεί να αλλάξει ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value." = "Η τιμή αυτή θα χρησιμοποιηθεί ως ένα σύμβολο κράτησης θέσης για αυτόν τον τομέα εξατομίκευσης . Αν πληκτρολογήσετε « MYTAG » , τότε το περιεχόμενό σας πρέπει να έχει ένα σύμβολο κράτησης θέσης % MYTAG % που θα πρέπει να αντικατασταθεί με την τιμή του πεδίου ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of Newsletter" = "Αυτό θα εμφανιστεί στο λογαριασμό σας στο Analytics ως πηγή των επιτόπιων επισκέψεων . Αυτό είναι συνήθως ένα Όνομα Ενημερωτικό Δελτίο"
+
+"This will turn this Cron Job on or off" = "Αυτό θα μετατρέψει αυτό το Cron Job ή απενεργοποίηση"
+
+"Upon saving, the system will try to add this content to your .htaccess file if it doesn't have it already. If the file cannot be written to, you will have to put this into file %s" = "Μετά την αποταμίευση , το σύστημα θα προσπαθήσει να προσθέσετε αυτό το περιεχόμενο στο αρχείο htaccess σας . Αν δεν το έχετε ήδη . Εάν το αρχείο δεν μπορεί να εγγραφεί , θα πρέπει να το βάλουμε στο αρχείο %s"
+
+"User will not have options for lists and will not see lists they are subscribing to." = "Ο χρήστης δεν θα έχει επιλογές για λίστες και δεν θα δείτε τους καταλόγους που είναι συνδρομητές ."
+
+"User will receive a single email confirmation that will be for all the lists selected." = "Χρήστης θα λάβει ένα ενιαίο email επιβεβαίωσης που θα είναι για όλες τις λίστες επιλεγεί ."
+
+"User will receive an email confirmation for each list that has the opt-in/out email confirmation turned on." = "Χρήστης θα λάβετε ένα email επιβεβαίωσης για κάθε λίστα που έχει η opt-in/out email επιβεβαίωσης ενεργοποιημένη ."
+
+"With safe mode on, the script will not be able to adjust the server configuration for optimal performance." = "Με safe mode για το σενάριο δεν θα είναι σε θέση να προσαρμόσετε τις ρυθμίσεις του διακομιστή για τη βέλτιστη απόδοση ."
+
+"You are able to specify a selection of text that will be included at the bottom of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Είστε σε θέση να καθορίσετε μια επιλογή του κειμένου που θα συμπεριληφθεί στο κάτω μέρος όλων των αποστολών , ανεξάρτητα από το τι χρήστη ή τη λίστα που χρησιμοποιείται . Αφήστε κενό αν δεν θέλετε να χρησιμοποιήσετε αυτήν τη δυνατότητα ."
+
+"You are able to specify a selection of text that will be included at the top of all mailings regardless of what user or list is being used. Leave blank if you do not wish to use this feature." = "Είστε σε θέση να καθορίσετε μια επιλογή του κειμένου που θα συμπεριληφθεί στην κορυφή όλων των αποστολών , ανεξάρτητα από το τι χρήστη ή τη λίστα που χρησιμοποιείται . Αφήστε κενό αν δεν θέλετε να χρησιμοποιήσετε αυτήν τη δυνατότητα ."
+
+"You are responsible for escaping! Also, if constructing a LIST, then strings should be encapsulated with quotes." = "Είστε υπεύθυνοι για τη διαφυγή ! Επίσης , αν η κατασκευή ενός καταλόγου , τότε χορδές θα πρέπει να περικλείονται μέσα σε εισαγωγικά ."
+
+"Your server imposes the following limits: maximum file upload size is %s and maximum post size is %s." = "Ο διακομιστής σας επιβάλλει τα ακόλουθα όρια : μέγιστο μέγεθος αρχείου αποστολής είναι %s και μετά μέγιστο μέγεθος είναι %s ."
+
+"Your server is set to allow less memory than this script requires." = "Ο διακομιστής σας έχει ρυθμιστεί να επιτρέπει λιγότερη μνήμη από αυτό το σενάριο απαιτεί ."
+
+##### 2009-05-28 #####
+
+"%REPORTLINK% is shorthand for the shared report link that you see above." = "REPORTLINK % % είναι συντομογραφία για τον κοινόχρηστο σύνδεσμο έκθεση που βλέπετε παραπάνω ."
+
+##### 2009-07-10 #####
+
+"Notice: Hold CTRL to select multiple formats." = "Σημείωση: Κρατήστε το πλήκτρο CTRL για να επιλέξετε πολλές μορφές."
+
+##### 2009-07-14 #####
+
+"(Optional) This option will automatically pause your mailing after a certain number of messages.  This helps reduce your mail servers load." = "( Προαιρετικό) Αυτή η επιλογή θα σταματήσει αυτόματα την ταχυδρομική σας μετά από ένα ορισμένο αριθμό των μηνυμάτων . Αυτό βοηθά στη μείωση του φορτίου τους διακομιστές e-mail σας ."
+
+"The label of this field (a title) can be shown both above the field, or on its left side." = "Η ετικέτα αυτού του πεδίου ( τίτλος) μπορεί να αποδειχθεί τόσο πάνω από το πεδίο ή στην αριστερή πλευρά του."
+
+##### 2009-08-27 #####
+
+"This feature will use Apache's mod_rewrite plugin to reformat its public URLs to appear more descriptive, mentioning for example the title of a list or form in the URL." = "Αυτό το χαρακτηριστικό θα χρησιμοποιήσετε το mod_rewrite του Apache plugin για να διαμορφώσετε τις δημόσιες διευθύνσεις του να εμφανίζεται πιο περιγραφικό , αναφέροντας για παράδειγμα τον τίτλο μιας λίστας ή μορφή στη διεύθυνση URL ."
+
+##### 2009-11-25 #####
+
+"Separate multiple emails by comma" = "Διαχωρίστε τα πολλαπλά e-mail με κόμμα"
+
+##### 2009-12-21 #####
+
+"Begin typing their name and live results will be displayed." = "Ξεκινήστε να πληκτρολογείτε το όνομά τους και ζωντανά αποτελέσματα θα εμφανιστούν ."
+
+##### 2010-03-28 #####
+
+"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma" = "Όλες οι καμπάνιες που αποστέλλονται σε αυτήν τη λίστα θα αποσταλεί στην καταχωρημένη διεύθυνση ηλεκτρονικού ταχυδρομείου ( εις) . Διαχωρίστε τα πολλαπλά e-mail με κόμμα"
+
+"All subscribers who report abuses will be removed from the list, and abuse reports will be logged." = "Όλοι οι συνδρομητές που καταγγέλλουν καταπατήσεις θα αφαιρεθεί από τη λίστα , και στις αναφορές καταχρήσεων θα καταγραφούν ."
+
+"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list." = "Ενεργοποιήστε αυτήν την επιλογή αν θέλετε να επιτρέπει σε ένα ενιαίο εκστρατεία για να σταλούν σε μια ενιαία διεύθυνση ηλεκτρονικού ταχυδρομείου πολλές φορές . Πολλαπλά μηνύματα ηλεκτρονικού ταχυδρομείου θα αποσταλεί μόνο εάν ένα μήνυμα ηλεκτρονικού ταχυδρομείου εγγραφεί πολλές φορές στην ίδια λίστα ."
+
+"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address." = "Ενεργοποιήστε αυτήν την επιλογή αν θέλετε να επιτρέπουν στους συνδρομητές να εγγραφούν πολλές φορές σε αυτή τη λίστα με την ίδια διεύθυνση ηλεκτρονικού ταχυδρομείου ."
+
+"If search-friendly URLs are used, this list can have a human readable ID that will be a part of the links." = "Εάν η αναζήτηση φιλικών URLs χρησιμοποιούνται , ο κατάλογος αυτός μπορεί να έχει ένα αναγνώσιμο από τον άνθρωπο ταυτότητας που θα είναι ένα μέρος από τους συνδέσμους ."
+
+"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing." = "Αν επιλέξετε αυτή την επιλογή όλοι οι νέοι συνδρομητές θα αποσταλεί ένα αντίγραφο της τελευταίας καμπάνιας που έστειλε αμέσως μετά την εγγραφή ."
+
+"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information." = "Αν επιλέξετε αυτή την επιλογή συνδρομητές σας θα σας ζητηθεί γιατί αδιάθετες μετά διαγραφείτε από αυτή τη λίστα . Οι συνδρομητές δεν έχουν necesarily να δώσει ένα λόγο όταν διαγραφείτε - αλλά αυτή η επιλογή τους ζητεί να υποβάλουν το λόγο τους, αν θα ήθελαν να μοιραστούν αυτές τις πληροφορίες ."
+
+"If you check this option your subscribers will have to look at an image and enter the characters that they see in order to subscribe.  This is used to prevent automated bots or automated software from subscribing to your list." = "Αν επιλέξετε αυτή την επιλογή οι συνδρομητές σας θα πρέπει να δούμε μια εικόνα και να εισάγετε τους χαρακτήρες που βλέπετε στην Για να εγγραφείτε . Αυτό χρησιμοποιείται για να εμποδίζει τις αυτόματες bots ή αυτοματοποιημένο λογισμικό από την εγγραφή στη λίστα σας ."
+
+"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign." = "Εάν διαμορφώσετε μια καμπάνια με το όνομα τους συνδρομητές - και ενός συνδρομητή δεν εισάγετε ένα όνομα - θα χρησιμοποιήσετε το προεπιλεγμένο όνομα , όπως το όνομά τους κατά την αποστολή αυτήν την καμπάνια ."
+
+"Select the field that has the date which you want to send an email based off of." = "Επιλέξτε το πεδίο που έχει την ημερομηνία που θέλετε να στείλετε ένα μήνυμα ηλεκτρονικού ταχυδρομείου που βασίζονται στα ανοικτά του ."
+
+"Select the format that you are saving the date as in your subscriber field you have selected." = "Επιλέξτε τη μορφή που αποθηκεύετε την ημερομηνία στον τομέα συνδρομητών σας που έχετε επιλέξει."
+
+"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section." = "Υπάρχει ένα δημόσιο τμήμα όπου οι συνδρομητές σας να διαχειρίζεστε τη συνδρομή τους και να προβάλετε προηγούμενες εκστρατείες . Αν επιλέξετε αυτό το πλαίσιο ο κατάλογος αυτός δεν θα εμφανίζονται στο δημόσιο τμήμα ."
+
+"This is used in the public archive and also in the administrative section.  Lists are used to group sets of subscribers" = "Αυτό χρησιμοποιείται στο δημόσιο αρχείο , αλλά και στο διοικητικό τμήμα. Λίστες χρησιμοποιούνται για την ομάδα σύνολα των συνδρομητών"
+
+"When a user subscribes they are asked to enter a name.  If you check this box it will not let them subscribe unless they enter a name" = "Όταν ένας χρήστης εγγράφεται έχουν ζητηθεί να εισάγετε ένα όνομα . Αν επιλέξετε αυτό το πλαίσιο , δεν θα τους αφήσουμε να εγγραφείτε εάν δεν εισαγάγετε ένα όνομα"
+
+"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Κάθε φορά που ένας συνδρομητής εγγράφεται στον κατάλογο αυτό , το σύστημα θα στείλει ένα email σε αυτούς τους παραλήπτες . Διαχωρίστε τα πολλαπλά e-mail με κόμμα"
+
+"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma" = "Κάθε φορά που ένας συνδρομητής unsubscribes από αυτή τη λίστα , το σύστημα θα στείλει ένα email σε αυτούς τους παραλήπτες . Διαχωρίστε τα πολλαπλά e-mail με κόμμα"
+
+"You can choose how to match the date.  If you are trying to send a birthday email you would choose 'Month and Day' as that would match everything but the year." = "Μπορείτε να επιλέξετε πώς να ταιριάζει με την ημερομηνία . Εάν προσπαθείτε να στείλετε ένα μήνυμα ηλεκτρονικού ταχυδρομείου γενεθλίων που θα επιλέξετε « Μήνας και Ημέρα » , όπως ότι θα ταιριάζει με τα πάντα, αλλά το έτος ."
+
+"You can choose to have the email send before or after when the date matches.  If you want to send an email 3 days before their birthday you would select 'Month and Day' as the match type and then choose '- 3 Days' as the offset.  If you want to have the email send on the exact day that it matches you would leave the offset set to '0 days'" = "Μπορείτε να επιλέξετε να έχει το e-mail αποστολή πριν ή μετά , όταν η ημερομηνία ταιριάζει . Αν θέλετε να στείλετε ένα e-mail 3 ημέρες πριν τα γενέθλιά τους θα πρέπει να επιλέξετε «Ημέρα Μήνας και « με τον τύπο αντιστοίχισης και , στη συνέχεια, επιλέξτε"- 3 Ημέρες », όπως τη μετατόπιση . Αν θέλετε να έχετε το e-mail αποστολή για την ακριβή ημέρα που θα ταιριάζει θα αφήσει τα offset '0 ημέρες"
+
+##### 2010-04-07 #####
+
+"During importing the subscribers, they will be sent any instant AutoResponders you might have setup." = "Κατά την εισαγωγή τους συνδρομητές , που θα σταλεί στιγμιαίο να Autoresponders μπορεί να έχετε setup ."
+
+"If you have this option selected this campaign will be listed in the public archive of your software.  The public archive is part of the public section of the software where your subscribers (and other visitors) can view past campaigns and manage their subscriptions." = "Αν έχετε αυτή την επιλογή που επιλέγεται αυτή η εκστρατεία θα πρέπει να περιλαμβάνονται στο δημόσιο αρχείο του λογισμικού σας . Το δημόσιο αρχείο είναι μέρος του δημόσιου τμήματος του λογισμικού, όπου οι συνδρομητές σας ( και άλλους επισκέπτες ) να προβάλετε προηγούμενες εκστρατείες και διαχείριση των συνδρομών τους ."
+
+"Subscribers will be treated the same as any person that subscribed from a public side or a subscription form; all instant and/or delayed AutoResponders will be sent to them in due time." = "Οι συνδρομητές θα πρέπει να αντιμετωπίζονται το ίδιο όπως και κάθε πρόσωπο που εγγραφεί από δημόσια πλευρά ή μια φόρμα εγγραφής ? όλα τα στιγμιαία ή / και καθυστέρησαν να Autoresponders θα τους αποσταλεί εν ευθέτω χρόνω ."
+
+"These subscribers will never receive any further AutoResponders setup in the system." = "Αυτές οι συνδρομητές δεν θα λάβουν καμία περαιτέρω να Autoresponders ρύθμισης του συστήματος ."
+
+"You can flag certain AutoResponders as already been sent to these subscribers, in case imported subscribers shouldn't receive some of them." = "Μπορείτε να προσθέσετε σημαία ορισμένων να Autoresponders όπως ήδη σταλεί σε αυτούς τους συνδρομητές , σε περίπτωση που τα εισαγόμενα συνδρομητές δεν θα πρέπει να λάβουν κάποια από αυτά ."
+
+##### 2010-07-02 #####
+
+"In some cases, particularly Active Directory, the user name you normally log in with is not actually what the server expects through its normal LDAP interface.  This field is the name of the attribute that you want to use to log in with.  In most of those cases, the value which must go here would be 'samAccountName'." = "Σε ορισμένες περιπτώσεις , ιδιαίτερα Active Directory , το όνομα χρήστη που συνήθως συνδέεστε με το να μην είναι στην πραγματικότητα αυτό που περιμένει ο διακομιστής μέσω κανονική διεπαφή του LDAP . Αυτό το πεδίο είναι το όνομα του χαρακτηριστικού που θέλετε να χρησιμοποιήσετε για να συνδεθείτε με . Στις περισσότερες από τις περιπτώσεις αυτές , η αξία που πρέπει να πάτε εδώ θα είναι « samAccountName » ."
+
+"In some cases, particularly with Active Directory, we must log in with an administrative account before we can truly log in with a user.  In that case, you would place here the full distinguished name of the LDAP server's administrative user (e.g. cn=Administrator,ou=Users,dc=domain,dc=com)." = "Σε ορισμένες περιπτώσεις , ιδιαίτερα με το Active Directory , θα πρέπει να συνδεθείτε με ένα λογαριασμό διαχειριστή πριν μπορούμε πραγματικά να συνδεθείτε με το χρήστη. Στην περίπτωση αυτή , θα πραγματοποιηθεί εδώ το πλήρες διακεκριμένο όνομα του χρήστη με δικαιώματα διαχειριστή του διακομιστή LDAP (π.χ. cn = διοικήσεως, ou = Users , dc = τομέα , dc = com) ."
+
+"The attribute that the LDAP server expects us to log in with.  In the vast majority of cases, this field should be 'cn' (short for 'common name')." = "Το χαρακτηριστικό ότι ο διακομιστής LDAP περιμένει από εμάς να συνδεθείτε με . Στη συντριπτική πλειονότητα των περιπτώσεων , αυτό το πεδίο θα πρέπει να «ΣΟ» ( μικρή για « κοινή ονομασία » ) ."
+
+"The base of the distinguished name that users would log in with; e.g., ou=Users,dc=domain,dc=com" = "Η βάση του διακεκριμένου όνομα που οι χρήστες θα συνδεθείτε με το ? π.χ. , ou = Users , dc = τομέα, dc = com"
+
+"The full distinguished name of an administrator account, necessary for Active Directory's login process.  Example: cn=Administrator,ou=Users,dc=domain,dc=com" = "Το πλήρες διακεκριμένο όνομα ενός λογαριασμού διαχειριστή , που είναι αναγκαία για διαδικασία σύνδεσης Active Directory του . Παράδειγμα : cn = διοικήσεως, ou = Users , dc = τομέα, dc = com"
+
+"The password for the administrator account, mentioned above." = "Ο κωδικός πρόσβασης για το λογαριασμό διαχειριστή , που αναφέρονται παραπάνω ."
+
+"The password of the administrative user mentioned above." = "Ο κωδικός της διοικητικής χρηστών που αναφέρονται παραπάνω ."
+
+"With this checked, we will log in with a fully-formed distinguished name (cn=user,ou=Users,dc=domain,dc=com); without it, we'll log in with 'user' and let the server sort things out." = "Με αυτό ελέγχεται , θα συνδεθείτε με ένα πλήρως σχηματισμένο διακεκριμένο όνομα ( cn = χρήστης , ou = Users , dc = τομέα, dc = com) ? χωρίς αυτό , θα συνδεθείτε με το «χρήστη» και αφήστε τα πράγματα διακομιστή λύσουμε."
+
+##### 2010-09-07 #####
+
+"The location of this software on the web. To change this, run Updater from a new location." = "Η θέση αυτού του λογισμικού στο διαδίκτυο . Για να το αλλάξετε αυτό , εκτελέστε Updater από μια νέα τοποθεσία ."
+
+##### 2010-09-30 #####
+
+"After logging into Twitter, you will be asked to confirm that AwebDesk is allowed to update your Twitter account, then copy the PIN number." = "Μετά την είσοδο στο Twitter , θα σας ζητηθεί να επιβεβαιώσετε ότι AwebDesk επιτρέπεται να ενημερώσετε το λογαριασμό σας στο Twitter , στη συνέχεια, αντιγράψτε τον αριθμό PIN ."
+
+"To update a different Twitter account, uncheck Twitter above, save, then come back and re-enter your information." = "Για να ενημερώσετε ένα διαφορετικό λογαριασμό Twitter , καταργήστε Twitter παραπάνω , αποθηκεύσετε και στη συνέχεια να έρθει πίσω και ξανά - εισάγετε τα στοιχεία σας ."
+
+##### 2010-12-01 #####
+
+"Any user that can log into the admin section of SugarCRM can authenticate here" = "Οποιοσδήποτε χρήστης μπορεί να συνδεθεί στο admin τμήμα της εφαρμογή μπορεί επικύρωση εδώ"
+
+"By checking this box, all e-mail addresses that have previously been unsubscribed due to numerous bounces in the past will not be imported." = "Επιλέγοντας αυτό το πλαίσιο , όλες οι διευθύνσεις e - mail που έχουν ήδη καταργήσει την εγγραφή σας , λόγω των πολλών αναπηδήσεις στο παρελθόν δεν θα εισαχθούν ."
+
+"By checking this box, any subscribers in this import process which are already present in the system will be updated with any new subscriber information that is found during the import process. If this box is not checked, those subscribers will be skipped during the import (their subscriber details will not be updated)." = "Επιλέγοντας αυτό το πλαίσιο , οποιαδήποτε συνδρομητές σε αυτή τη διαδικασία εισαγωγής, τα οποία υπάρχουν ήδη στο σύστημα θα ενημερώνεται με κάθε νέα πληροφορία συνδρομητή που βρίσκεται κατά τη διαδικασία εισαγωγής . Εάν το πλαίσιο αυτό δεν είναι επιλεγμένο , οι συνδρομητές θα πρέπει να παραλείπεται κατά τη διάρκεια της εισαγωγής ( στοιχεία του συνδρομητή τους δεν θα ενημερωθεί ) ."
+
+"Campaigns sent into this list will be sent to Twitter's notification service and will create a tweet that links to your campaign's web copy." = "Καμπάνιες που αποστέλλονται σε αυτήν τη λίστα θα αποσταλεί στην υπηρεσία γνωστοποίησης Twitter και θα δημιουργήσει ένα tweet που συνδέεται με το αντίγραφο Ιστού της καμπάνιας σας ."
+
+"If there is a TITLE attribute in your links, the software will supply the first TITLE attribute value it finds for the specific link. You can change this below." = "Αν υπάρχει ένα χαρακτηριστικό ΤΙΤΛΟΣ σε συνδέσμους σας , το λογισμικό θα παρέχει την πρώτη ΤΙΤΛΟΣ τιμή του χαρακτηριστικού να διαπιστώσει ότι για το συγκεκριμένο σύνδεσμο . Μπορείτε να αλλάξετε αυτό παρακάτω ."
+
+"If you turn off this option, the subscribers you are importing now will never receive any auto-responders; now nor in the future." = "Εάν απενεργοποιήσετε αυτήν την επιλογή , οι συνδρομητές που εισάγουν τώρα ποτέ δεν θα λάβουν κανένα auto-ανταποκρίθηκαν ? τώρα ούτε στο μέλλον ."
+
+"Recommended for large scale imports" = "Συνιστάται για την εισαγωγή μεγάλης κλίμακας"
+
+"Recommended for small scale imports" = "Συνιστάται για εισαγωγές μικρής κλίμακας"
+
+"Recommended for synchronization with external services/applications" = "Συνιστάται για συγχρονισμό με εξωτερικές υπηρεσίες / εφαρμογές"
+
+"The default subject any message begins with when you select this template." = "Το προεπιλεγμένο θέμα οποιοδήποτε μήνυμα αρχίζει με όταν επιλέγετε αυτό το πρότυπο ."
+
+"The imported subscribers will be marked as already received these auto-responders, so these will not be sent to them." = "Τα εισαγόμενα συνδρομητές θα πρέπει να επισημαίνονται ως ήδη λάβει αυτά τα auto-ανταποκρίθηκαν , έτσι αυτά δεν θα πρέπει να απευθύνονται σε αυτούς."
+
+"This is your FreshBooks account name, found in the URL. IE: https://ACCOUNT.freshbooks.com. Please provide just the account name, and NOT the URL." = "Αυτό είναι FreshBooks σας όνομα λογαριασμού , που βρέθηκε στη διεύθυνση URL . IE : https://ACCOUNT.freshbooks.com . Παρακαλώ δώστε μόνο το όνομα του λογαριασμού και όχι τη διεύθυνση URL ."
+
+"This is your unique authentication token, which you are provided on the FreshBooks API page. In Freshbooks, go to My Account | FreshBooks API." = "Αυτό είναι το μοναδικό διακριτικό έλεγχο ταυτότητας σας , οι οποίες παρέχονται στη σελίδα FreshBooks API . Στην Freshbooks , πηγαίνετε στο λογαριασμό μου | FreshBooks API ."
+
+"This will mirror Twitter authentication from this list to all lists, meaning all mailings will update to this Twitter account" = "Αυτό θα αντικατοπτρίζει Twitter ταυτότητας από τον κατάλογο αυτό σε όλους τους τιμοκαταλόγους , που σημαίνει ότι όλες οι ταχυδρομικές αποστολές θα ενημερώσει σε αυτόν το λογαριασμό Twitter"
+
+"To generate your API key, log into Zoho CRM, then go to Setup | Crm API Key | Generate Now" = "Για να δημιουργήσετε το κλειδί API σας , συνδεθείτε στο Zoho CRM , στη συνέχεια, μεταβείτε στο μενού Setup | Crm κλειδί API | Δημιουργήστε τώρα"
+
+"When this option is checked the last campaign you sent will be sent to each subscriber as they are imported." = "Όταν αυτή η επιλογή είναι επιλεγμένη η τελευταία εκστρατεία που στείλατε θα σταλεί σε κάθε συνδρομητή που εισάγονται ."
+
+"You can find your API token from the More | My Settings page in Capsule" = "Μπορείτε να βρείτε API κουπόνι σας από την Περισσότερα | σελίδα Ρυθμίσεις μου Capsule"
+
+"You can obtain your security token by logging into Salesforce, and going to YOUR NAME | Setup | Reset your security token (under My Personal Information). You will then be emailed your security token." = "Μπορείτε να αποκτήσετε το διακριτικό ασφαλείας σας με σύνδεση στο Salesforce , και πρόκειται να ΟΝΟΜΑ ΣΑΣ | Ρύθμιση | Επαναφορά κωδικού ασφαλείας σας (κάτω από τα προσωπικά μου στοιχεία ) . Τότε θα πρέπει να αποσταλεί το διακριτικό ασφαλείας σας ."
+
+"Your Capsule application name, as it appears in the URL that you would access in a browser; IE: https://APP.capsulecrm.com. Just include the APP portion." = "Κάψουλα σας όνομα της εφαρμογής , όπως εμφανίζεται στη διεύθυνση URL που θα έχουν πρόσβαση σε ένα πρόγραμμα περιήγησης ? IE : https://APP.capsulecrm.com . Απλά να περιλαμβάνουν το τμήμα ΑΡΡ."
+
+"Your Zoho username or email address" = "Zoho το όνομα χρήστη σας ή την email σας"
+
+"Your authentication details are NOT saved on this server. You must re-enter them each time." = "Τα στοιχεία της ταυτότητας σας δεν αποθηκεύονται σε αυτόν το διακομιστή . Θα πρέπει να εισέλθει εκ νέου κάθε φορά ."
+
+"Your unique URL to your SugarCRM installation" = "Μοναδική διεύθυνση URL σας με την εγκατάσταση σας SugarCRM"
+
+##### 2011-02-23 #####
+
+"After logging into Facebook, you will be asked to confirm that AwebDesk is allowed to update your Facebook account." = "Μετά την είσοδο στο Facebook , θα σας ζητηθεί να επιβεβαιώσετε ότι AwebDesk επιτρέπεται να ενημερώσετε το λογαριασμό σας στο Facebook ."
+
+"Campaigns sent to this list will be auto-posted to Facebook with a link to your campaign web copy." = "Καμπάνιες που αποστέλλονται σε αυτόν τον κατάλογο θα είναι αυτόματα δημοσιεύτηκε στο Facebook με έναν σύνδεσμο για την καμπάνια αντίγραφο Ιστού σας ."
+
+"Campaigns sent to this list will be auto-posted to Twitter with a link to your campaign web copy." = "Καμπάνιες που αποστέλλονται σε αυτόν τον κατάλογο θα είναι αυτόματα δημοσιεύτηκε στο Twitter με ένα σύνδεσμο για την καμπάνια αντίγραφο Ιστού σας ."
+
+##### 2011-07-13 #####
+
+"This button will re-import all stock templates. PLEASE NOTE: This will only import global stock templates you are missing. If you already have some stock templates, but have modified them, it will NOT overwrite customizations made." = "Αυτό το κουμπί θα επανεξετάσει την εισαγωγή όλα τα πρότυπα αποθεμάτων . ΣΗΜΕΙΩΣΗ : Αυτό θα εισάγει μόνο παγκόσμια πρότυπα απόθεμα που λείπουν . Αν έχετε ήδη κάποια πρότυπα απόθεμα, αλλά τα έχουν τροποποιηθεί, ΔΕΝ θα αντικαταστήσει προσαρμογές έχουν γίνει ."
+
+"This value will be used as a placeholder for this personalization field. If you enter 'MYTAG', then your content should have a placeholder %MYTAG% that would be replaced with a field value. NOTE: spaces will be replaced with a dash, and % characters are not allowed." = "Η τιμή αυτή θα χρησιμοποιηθεί ως ένα σύμβολο κράτησης θέσης για αυτόν τον τομέα εξατομίκευσης . Αν πληκτρολογήσετε « MYTAG » , τότε το περιεχόμενό σας πρέπει να έχει ένα σύμβολο κράτησης θέσης % MYTAG % που θα πρέπει να αντικατασταθεί με την τιμή του πεδίου . ΣΗΜΕΙΩΣΗ : χώροι θα αντικατασταθεί με μια παύλα , και % χαρακτήρες δεν επιτρέπονται ."
+
+"This will appear in your Analytics account as a Source of site visits. This is usually a Name of List" = "Αυτό θα εμφανιστεί στο λογαριασμό σας στο Analytics ως πηγή των επιτόπιων επισκέψεων . Αυτό είναι συνήθως ένα όνομα της λίστας"
+
+"You can generate your API token from the User Preferences page in batchbook CRM" = "Μπορείτε να δημιουργήσετε API κουπόνι σας από τη σελίδα Προτιμήσεις χρήστη σε batchbook CRM"
+
+"Your Batchbook account name, as it appears in the URL that you would access in a browser; IE: https://ACCOUNT.batchbook.com. Just include the ACCOUNT portion." = "Batchbook το όνομα λογαριασμού σας , όπως εμφανίζεται στη διεύθυνση URL που θα έχουν πρόσβαση σε ένα πρόγραμμα περιήγησης ? IE : https://ACCOUNT.batchbook.com . Απλά περιλαμβάνει το τμήμα ACCOUNT ."
+
+"##### 2011-08-01 #####
+
+"Include your Freshbooks account name" = "Συμπεριλάβετε Freshbooks όνομα του λογαριασμού σας"
+
+"Recommended for synchronization with external database" = "Συνιστάται για συγχρονισμό με εξωτερική βάση δεδομένων"
+⁤

@@ -1,0 +1,318 @@
+﻿##### TRANSLATION STRINGS #####
+##### Example: original string = your-translation-here #####
+
+"%d email(s) sent." = "%d e-mail (y) odeslání."
+"%s thought you may be interested in this mailing." = "%s myslel, možná vás bude zajímat v této zásilky."
+"(Optional) Why did you decide to unsubscribe?" = "(Volitelné) Proč jste se rozhodli odhlásit?"
+"(Subscribed %s)" = "(Upsaný %s)"
+"A new subscriber has been added to your list." = "Nový účastník byl přidán do vašeho seznamu."
+"A request to reset your password has been received." = "Žádost o resetování hesla byla přijata."
+"A subscriber has been removed from your list." = "Účastník byl odstraněn ze seznamu."
+"Account Lookup" = "Účet vyhledávání"
+"Additional Information" = "Další informace"
+"All rights reserved." = "Všechna práva vyhrazena."
+"Archive" = "Archiv"
+"Cancel" = "Zrušit"
+"Changes Saved." = "Změny byly uloženy."
+"Clear" = "Jasný"
+"Comment from" = "Komentář od"
+"Completed" = "Dokončený"
+"Content" = "Obsah"
+"Create Date" = "Vytvořte Datum"
+"Date/Time" = "Datum / čas"
+"Date/Time:" = "Datum / Čas:"
+"Draft" = "Návrh"
+"E-mail address is invalid." = "E-mailová adresa je neplatná."
+"Email" = "E-mail"
+"Email Sent." = "E-mail odeslán."
+"Error Occurred!" = "Došlo k chybě!"
+"First Name" = "Jméno"
+"Forward To A Friend" = "Poslat přátelům"
+"Forward again" = "Opět vpřed"
+"Forward to a Friend" = "Přeposlat známému"
+"Forward to more" = "Přeposlat více"
+"Friend Email" = "Email přítele"
+"Friend Name" = "Přítel Název"
+"Friend information" = "Informace o přítele"
+"From email is not valid." = "Z e-mailu není platný."
+"From:" = "Od:"
+"From: " = "Od:"
+"HTML Editor" = "HTML Editor"
+"Here are the links to modify your accounts:" = "Zde jsou odkazy na upravit své účty:"
+"Here is the link to modify your account:" = "Zde je odkaz upravit svůj účet:"
+"IP" = "IP"
+"Invalid email address" = "Neplatná e-mailová adresa"
+"Invalid link. Please retry or contact the list admin." = "Neplatný odkaz. Zkuste to prosím znovu nebo se obraťte na správce seznamu."
+"Last Name" = "Příjmení"
+"List Name" = "List Name"
+"Loading..." = "Loading ..."
+"Login" = "Přihlášení"
+"Message" = "Zpráva"
+"Message (HTML Version)" = "Zpráva (HTML verze)"
+"Message (Text Version)" = "Message (Textová verze)"
+"Message Details" = "Podrobnosti zpráv"
+"Message Preview" = "Náhled zprávy"
+"Message could not be previewed." = "Zpráva nemohla být již zobrazilo."
+"Message type not found." = "Typ Zpráva nebyla nalezena."
+"Messages" = "Zprávy"
+"Modify Account" = "Upravit účet"
+"Name" = "Název"
+"Next" = "Další"
+"OK" = "OK"
+"Paused" = "Pozastaveno"
+"Personalized Message" = "Personalizované zprávy"
+"Please also verify yourself by typing the text in the following image into the box below it." = "Prosím také ověřit sami zadáním textu v následujícím obrázku do pole pod ním."
+"Please also verify yourself by typing the text in the following image into the box next to it." = "Prosím také ověřit sami zadáním textu v následujícím obrázku do políčka vedle něj."
+"Please ensure all email addresses are valid." = "Ujistěte se prosím, všechny e-mailové adresy jsou platné."
+"Please fill out at least one Friend email address and name." = "Vyplňte prosím alespoň jeden přítel e-mailovou adresu a jméno."
+"Please include a text from the image." = "Uveďte prosím text z obrázku."
+"Please include a valid email address." = "Uveďte prosím platnou e-mailovou adresu."
+"Please include an email address." = "Uveďte prosím e-mailovou adresu."
+"Please include your name." = "Prosím uvést své jméno."
+"Please type the correct text that appears in the image." = "Prosím, zadejte správný text, který se zobrazí v obraze."
+"Powered by" = "Powered by"
+"Previous" = "Předchozí"
+"Public messages from List" = "Veřejné zprávy ze seznamu"
+"Public messages from all Lists" = "Veřejné zprávy ze všech seznamů"
+"Scheduled" = "Plánované"
+"Search" = "Hledání"
+"Select Lists To Unsubscribe From" = "Vyberte seznamy odhlásit"
+"Select a Campaign from List " = "Vyberte kampaň ze seznamu"
+"Select a List" = "Vyberte seznam"
+"Send" = "Odeslat"
+"Send this email to a friend. Simply fill out the information below and click on the send button." = "Pošli tento email přátelům. Jednoduše vyplňte informace níže a klikněte na tlačítko odeslat."
+"Sending" = "Odeslání"
+"Set as Default" = "Nastavit jako výchozí"
+"Stopped" = "Zastaveno"
+"Subject" = "Předmět"
+"Subject:" = "Předmět:"
+"Subscribe" = "Odebírat"
+"Subscribe To Lists" = "Přihlásit se seznamy"
+"Subscriber ID is invalid." = "Účastník číslo je neplatné."
+"Subscription could not be processed since you did not select a list. Please select a list and try again." = "Přihlášení nemohla být zpracována, protože jste nevybrali seznam. Prosím, vyberte seznam a zkuste to znovu."
+"Text Editor" = "Textový editor"
+"Thank you for confirming your subscription." = "Děkujeme za potvrzení vašeho předplatného."
+"Thank you for confirming your unsubscription." = "Děkuji za potvrzení vašich odhlašování."
+"The following errors occurred:" = "Byly zjištěny následující chyby:"
+"The link to modify your account has been sent. Please check your email." = "Odkaz upravit váš účet byl odeslán. Zkontrolujte prosím Váš e-mail."
+"The sender of this message thought the mailing entitled" = "Odesílatel této zprávy si myslel, že poštovní nárok"
+"The sender of this message thought the mailing entitled '%s' would be of interest to you." = "Odesílatel této zprávy si myslel, že poštovní názvem '%s 'by být pro vás zajímavé."
+"The sender thought the mailing entitled '%s' would be of interest to you." = "Odesílatel si myslel, poštovní názvem '%s 'by být pro vás zajímavé."
+"This e-mail address cannot be added to list." = "Tato e-mailová adresa nemůže být přidána do seznamu."
+"This e-mail address could not be unsubscribed." = "Tato e-mailová adresa nemůže být odhlášeni."
+"This e-mail address has been processed in the past to be subscribed, however your subscription was never confirmed." = "Tato e-mailová adresa byla zpracována v minulosti má být upsaný, ale vaše předplatné nebylo nikdy potvrzeno."
+"This e-mail address has been processed. Please check your email to confirm your subscription." = "Tato e-mailová adresa byla zpracována. Zkontrolujte prosím Váš e-mail pro potvrzení své předplatné."
+"This e-mail address has been processed. Please check your email to confirm your unsubscription." = "Tato e-mailová adresa byla zpracována. Zkontrolujte prosím Váš e-mail k potvrzení odhlašování."
+"This e-mail address has been unsubscribed from the list." = "Tato e-mailová adresa byla odhlásil ze seznamu."
+"This e-mail address has subscribed to the list." = "Tato e-mailová adresa se připojila do seznamu."
+"This e-mail address is already subscribed to this mailing list." = "Tato e-mail adresa je již přihlášen na tomto mailing listu."
+"This e-mail address is on the global exclusion list." = "Tato e-mailová adresa je na světovém seznamu výjimek."
+"This e-mail address was not subscribed to the list." = "Tato e-mailová adresa nebyla k odběru seznamu."
+"This list is currently not accepting subscribers. This list has met its top number of allowed subscribers." = "Tento seznam je v současné době nepřijímá předplatitelů. Tento seznam splnila svůj nejvyšší povolený počet účastníků."
+"This message is being sent by:" = "Tato zpráva je zaslána:"
+"This subscriber does not exist." = "Tento účastník neexistuje."
+"To confirm this request please click on the link below:" = "Pro potvrzení tohoto požadavku klikněte prosím na odkaz níže:"
+"To email is not valid." = "Na e-mail není validní."
+"To log into the system visit:" = "Pro přihlášení do systému na adrese:"
+"To view the mailing, please visit:" = "Chcete-li zobrazit pošty naleznete na adrese:"
+"To: " = "Chcete-li:"
+"Unable to redirect you to this link. Please try again or contact your list admin." = "Nelze přesměrovat na tento odkaz. Zkuste to prosím znovu nebo kontaktujte svého seznamu správce."
+"Unknown response code. Please resubmit the subscription form." = "Neznámý kód odpovědi. Prosím znovu formulář předplatného."
+"Unsubscribe" = "Odhlásit se"
+"Update Account" = "Aktualizace účet"
+"Update Your Account" = "Aktualizace Váš účet"
+"You are not allowed to access this page." = "Nejste oprávněni k přístupu na tuto stránku."
+"You are unable to be added to this list at this time." = "Jste schopni být do tohoto seznamu přidány v tomto okamžiku."
+"You selected a list that does not allow duplicates. This email is in the system already, please edit that subscriber instead." = "Vybrali jste seznam, který neumožňuje duplikáty. Tento e-mail je v systému již, prosím upravte tuto účastníka místo."
+"Your Email" = "Váš e-mail"
+"Your Name" = "Vaše jméno"
+"Your changes have been saved." = "Vaše změny byly uloženy."
+"Your e-mail address" = "Vaše e-mailová adresa"
+"Your e-mail address (Required)" = "Vaše e-mailová adresa (vyžadováno)"
+"Your password has been reset to:" = "Vaše heslo bylo obnoveno:"
+"Your subscription request for this list could not be processed as you are missing required fields." = "Váš požadavek předplatné na tomto seznamu nelze zpracovat, protože vám chybí požadované pole."
+"Your subscription request for this list could not be processed as you must type your name." = "Váš požadavek předplatné na tomto seznamu nelze zpracovat, protože musíte zadat své jméno."
+"[Unknown]" = "[Neznámý]"
+"optional" = "volitelný"
+
+
+
+##### 2009-07-10 #####
+
+"Account" = "Účet"
+"Disabled" = "Invalidní"
+
+
+
+##### 2009-07-29 #####
+
+"Subscribed to lists:" = "Jste přihlášeni k odběru seznamů:"
+"The image text you typed did not register. Please go back, reload the page, and try again." = "Image text, který jste zadali nezaregistrovali. Prosím vraťte se zpět, obnovte stránku a zkuste to znovu."
+"Unsubscribed from lists:" = "Odhlášení ze seznamu:"
+
+
+
+##### 2009-08-13 #####
+
+"Attachment not found." = "Příloha nebyl nalezen."
+"Attachments:" = "Přílohy:"
+"Content not found." = "Obsah nebyl nalezen."
+"Nothing was selected for viewing." = "Nic byl vybrán pro prohlížení."
+"Preview" = "Náhled"
+"Template not found." = "Šablona nebyla nalezena."
+"To:" = "Chcete-li:"
+"Version not found." = "Verze nebyl nalezen."
+"Your Account" = "Váš účet"
+
+
+
+##### 2009-10-06 #####
+
+"Back" = "Zpátky"
+"This feature does not work with test emails.  This page will work when you actually send the campaign." = "Tato funkce nebude pracovat s testovacími e-maily. Tato stránka bude fungovat, když jste ve skutečnosti poslat kampaň."
+
+
+
+##### 2009-10-14 #####
+
+"Language changed" = "Jazyk změnit"
+"Rewrite Test" = "Přepište Otestujte"
+
+
+
+##### 2009-12-21 #####
+
+"Update Subscription Account" = "Aktualizace novinek účet"
+
+
+
+##### 2010-01-13 #####
+
+"Abuse Complaint" = "Stížnost Stížnost"
+"Abuse Complaints Reported:" = "Zneužití Stížnosti Přihlášeno:"
+"Abuse Complaints have been removed." = "Zneužití Stížnosti byly odstraněny."
+"Abuse Ratio has been updated." = "Stížnost poměr byl aktualizován."
+"Abuse Report Received." = "Ohlásit porušení pravidel Přijaté."
+"Approve" = "Schvalovat"
+"Approve Campaign Sending" = "Schválit kampaň odesílání"
+"Campaign Approved." = "Kampaň Schváleno."
+"Campaign Declined." = "Kampaň byla odmítnuta."
+"Campaign Name" = "Název kampaně"
+"Campaign for Approval" = "Kampaň pro schválení"
+"Campaign:" = "Kampaň:"
+"Change Abuse Ratio" = "Změna zneužívání poměr"
+"Click here to view and approve the campaign sending:" = "Chcete-li zobrazit a schválit kampaň odesílání Klikněte zde:"
+"Close" = "Zavřít"
+"Current Abuse Ratio:" = "Aktuální zneužívání Ratio:"
+"Decline" = "Pokles"
+"Decline & Send Email" = "Pokles & Odeslat e-mail"
+"E-mail:" = "E-mail:"
+"E-mails Sent:" = "E-maily Sent:"
+"FROM E-mail:" = "Z e-mailu:"
+"FROM Name:" = "Z Jméno:"
+"Group(s):" = "Skupina (y):"
+"Group:" = "Skupina:"
+"If you did not ever request to be contacted by this sender and/or about this information click the Report Abuse button to file your abuse report." = "Pokud jste si někdy vyžádá si být kontaktován tohoto odesílatele a / nebo o tyto informace klepněte na tlačítko Nahlásit zneužití podat zprávy o zneužití."
+"List(s):" = "Seznam (y):"
+"Message:" = "Zpráva:"
+"Modify Campaign:" = "Upravit kampaň:"
+"Modify Message:" = "Upravit zprávu:"
+"Name:" = "Jméno:"
+"New Abuse Ratio:" = "New Abuse Ratio:"
+"Notify Senders" = "Informujte odesílatelů"
+"Notify user(s) in this group:" = "Informujte Uživatel (é) v této skupině:"
+"Once you have updated your message you can try to send it again." = "Jakmile jste aktualizovali svou zprávu, můžete se pokusit jej poslat znovu."
+"Please check your message you were sending to ensure it meets our sending policy." = "Zkontrolujte prosím svou zprávu jste odesílání, aby zajistily, že splňuje naše odeslání politiku."
+"Please verify the information below. " = "Ověřte prosím níže uvedené informace."
+"Preset Abuse Ratio:" = "Preset zneužívání Ratio:"
+"Private campaign." = "Soukromá kampaň."
+"Private message." = "Soukromá zpráva."
+"Report Abuse" = "Zpráva o zneužívání"
+"Reset Abuse Complaints" = "Obnovit stížnosti na zneužití"
+"Segment:" = "Segment:"
+"Send From:" = "Poslat Od:"
+"Send Notification to " = "Poslat upozornění na"
+"TO E-mail:" = "Na e-mail:"
+"TO Name:" = "TO Jméno:"
+"The senders information is:" = "Informace odesílatelů je:"
+"The subscriber information that this sender sent to is:" = "Informace účastník, že to odesílatel poslal, je:"
+"This campaign has already been accepted." = "Tato kampaň již byla přijata."
+"This campaign has already been declined." = "Tato kampaň již byla odmítnuta."
+"This feature is not available in test campaigns." = "Tato funkce není k dispozici v testovací kampaně."
+"This feature is not supported when testing campaigns." = "Tato funkce je při testování kampaní není podporován."
+"Type:" = "Typ:"
+"Update" = "Aktualizovat"
+"User" = "Uživatel"
+"User:" = "Uživatel:"
+"View Abuses" = "Zobrazit Zneužívání"
+"We take abuse reports very seriously and are in compliance of email marketing laws.  With your feedback we can prevent further emails from being sent by this sender.  By reporting this email as abuse you will not receive any further emails from this sender." = "Bereme zneužívání zprávy velmi vážně a jsou v souladu e-mailových marketingových zákonů. S vaší zpětné vazby můžeme zabránit dalším e-maily od odesílány tohoto odesílatele. Do hlášení tohoto e-mailu jako zneužití nebudete dostávat žádné další e-maily od tohoto odesílatele."
+"You have abused the mailing system %s" = "Jste zneužil poštovní systém %s"
+"Your Abuse Report Has Been Received" = "Váš Ohlásit porušení pravidel byla přijata"
+"Your campaign &quot;%s&quot; could not be approved at this time." = "Vaše kampaň "%s" nemůže být schválen v tomto okamžiku."
+"Your campaign needs to be updated" = "Vaše kampaň je třeba aktualizovat"
+"Your e-mail address has also been removed from this list. We apologize for any inconvenience this might have caused you." = "Vaše e-mailová adresa byla také odstraněna ze seznamu. Omlouváme se za případné nepříjemnosti, může to ti způsobil."
+
+
+
+##### 2010-02-02 #####
+
+"Abuse Reported." = "Zneužívání hlášeny."
+"Campaign Name:" = "Název kampaně:"
+"Click here to manage this user's abuse settings" = "Klikněte sem a spravovat nastavení zneužívání tohoto uživatele"
+"Click here to manage this user's abuse settings:" = "Klikněte sem a spravovat nastavení zneužívání tohoto uživatele:"
+"User %s has been suspended due to abuse reports" = "Uživatel %s byl pozastaven kvůli zneužití zpráv"
+"With a current limit of" = "Při současném limitu"
+"before being suspended." = "předtím, než je pozastavena."
+
+
+
+##### 2010-03-01 #####
+
+"Page %d of %d" = "Strana %d z %d"
+
+
+##### 2010-03-28 #####
+
+"%s per page" = "%s na str."
+
+
+
+##### 2010-07-02 #####
+
+"%s Private Messages" = "%s Soukromé zprávy"
+"From" = "Od"
+"Private Messages published at %s." = "Soukromé zprávy publikované v %s."
+"Recipients:" = "Příjemci:"
+"Sent" = "Odesláno"
+
+
+
+##### 2010-09-07 #####
+
+"You have a new subscriber to your list." = "Máte nového účastníka do svého seznamu."
+
+
+
+##### 2010-12-01 #####
+
+"This feature is not supported when testing messages." = "Tato funkce je při testování zpráv není podporováno."
+
+
+
+##### 2011-01-11 #####
+
+"Share on Digg" = "Sdílet na Digg"
+"Share on Facebook" = "Sdílet na Facebooku"
+"Share on Reddit" = "Sdílet na Reddit"
+"Share on StumbleUpon" = "Sdílet na StumbleUpon"
+"Share on buzz" = "Podíl na Buzz"
+"Share on del.icio.us" = "Sdílet na del.icio.us"
+"Share via Twitter" = "Sdílet přes Twitter"
+
+
+
+##### 2011-02-23 #####
+
+"Currently reading" = "V současné době čtení"
+"Social Share" = "Sociální Sdílet"
+

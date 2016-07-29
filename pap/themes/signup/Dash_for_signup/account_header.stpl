@@ -1,0 +1,19 @@
+<!-- account_header -->
+<div class="c1_TopBar">
+	<div class="c1_TopBarContainer">
+		<a href="{$baseUrl}/affiliates/login.php#login">Affiliate login</a><span>|</span>
+        <a href="{$baseUrl}/merchants/login.php#login">Merchant login</a>
+	</div>
+</div>
+<div class="c1_Header">
+	<div class="c1_HeaderContainer">
+		<div class="c1_HeaderInfo">
+			<strong>
+				<a class="c1_Logo" title="{$programName|escape}" href="{$baseUrl}/">
+					<img src="{$programLogo|escape}" class="LogoImage" />
+				</a>
+			</strong>
+		</div>
+		{include file='account_topmenu.stpl'}<div class="clear"></div>
+	</div>
+</div>

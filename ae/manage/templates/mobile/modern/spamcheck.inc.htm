@@ -1,0 +1,80 @@
+<div id="send_test_spam" class="adesk_modal" align="center" style="display:none;">
+  <div class="adesk_modal_inner" align="left">
+	<h3 class="m-b">{"Check against spam filters"|alang}</h3>
+
+    <div id="spamloader" class="adesk_hidden" align="center" style="margin:10px;">
+		<img src="images/loader3.gif" />
+		<div style="font-size:10px; color:#999999;">{"Loading"|alang}</div>
+		<div align="left" style="margin-top:20px;">
+		  <input type="button" value='{"Cancel"|alang}' onclick="adesk_ui_api_callback();adesk_dom_toggle_display('send_test_spam', 'block');" class="adesk_button_ok" />
+		</div>
+    </div>
+
+    <div id="spamresult" class="adesk_hidden">
+		<hr />
+		<div style="font-size:10px; color:#999999;" align="center">{"Your spam probability is:"|alang}</div>
+		<div id="emailcheck_score" style="font-size:38px;" align="center"></div>
+		<div id="emailcheck_table" class="adesk_hidden">
+			<hr />
+			{"Things that could cause your message to be flagged as spam:"|alang}<br /><br />
+			<div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  width="100%" border="0" cellpadding="0" cellspacing="0">
+			  <tbody id="emailcheck_rules"></tbody>
+	        </table></div>
+			<hr />
+		</div>
+		{if !isset($mode) or $mode != 'report'}
+		<div align="right"><a href="#" onclick="$('spamresult').className='adesk_hidden';$('spamform').className='adesk_block';return false;">{"Check another"|alang}</a></div>
+		{/if}
+		<br />
+
+	    <div>
+	      <input type="button" value='{"OK"|alang}' onclick="adesk_dom_toggle_display('send_test_spam', 'block');" class="adesk_button_ok" />
+	    </div>
+	</div>
+
+    <div id="spamform" class="adesk_block">
+      <div class="adesk_help_inline">{"Type in a name or email of a subscriber that you wish to check the test email for. Partial search phrases are allowed.  You can also type an email that does not exist in your list.  If the email is found in any list, it will be personalized "|alang}</div>
+      <br />
+      <div class=" table-responsive"><table class="table table-striped m-b-none dataTable"  border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td>{"To email"|alang}</td>
+          <td width="15">&nbsp;</td>
+          <td id="spamcheckemailtypelabel">{"Format"|alang}</td>
+        </tr>
+        <tr>
+          <td>
+		  {include file='autocomplete.inc.htm' fieldPrefix='subscriber' fieldID='subscriberEmailCheckField' fieldName='spamcheckemail' fieldSize='25' fieldValue=$admin.email fieldStyle='width:90%;'}
+		  <script>$('subscriberEmailCheckField').onkeypress = adesk_ui_stopkey_enter;</script>
+          </td>
+          <td>&nbsp;</td>
+          <td width="100">
+            <select name="spamcheckemailtype" id="spamcheckemailtype" size="1">
+              <option value="mime">{"HTML and TEXT"|alang}</option>
+              <option value="html">{"HTML"|alang}</option>
+              <option value="text">{"Text"|alang}</option>
+            </select>
+          </td>
+        </tr>
+        <tbody id="spamcheckemailsplitbox" class="adesk_hidden">
+          <tr>
+            <td colspan="3">
+              {"Select a message you wish to use for this test:"|alang}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <select name="spamcheckemailsplit" id="spamcheckemailsplit" size="5" style="width:99%" onchange="spamcheck_set(this.value);"></select>
+            </td>
+          </tr>
+        </tbody>
+      </table></div>
+	<br />
+
+    <div>
+      <input type="button" value='{"Check"|alang}' onclick="spamcheck_emailcheck();" class="adesk_button_ok" />
+      <input type="button" value='{"Cancel"|alang}' onclick="adesk_dom_toggle_display('send_test_spam', 'block');" class="adesk_button_cancel" />
+    </div>
+    </div>
+
+  </div>
+</div>

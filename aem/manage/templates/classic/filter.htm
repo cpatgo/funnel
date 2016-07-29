@@ -1,0 +1,15 @@
+{adesk_js lib="really/simplehistory.js"}
+<script type="text/javascript">
+  {include file="filter.js"}
+</script>
+
+<h1>{"List Segments"|alang}<span id="filter_list_count" class="adesk_hidden_ie"></span></h1>
+
+{include file="filter.list.htm"}
+{include file="filter.form.htm"}
+{include file="filter.delete.htm"}
+{include file="filter.search.htm"}
+
+<script type="text/javascript">
+  adesk_ui_rsh_init(filter_process, true);
+</script>

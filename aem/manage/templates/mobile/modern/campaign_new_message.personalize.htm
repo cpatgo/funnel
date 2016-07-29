@@ -1,0 +1,110 @@
+<div id="message_personalize" class="adesk_modal" align="center" style="display:none;">
+  <div class="adesk_modal_inner" align="left">
+	<h3 class="m-b">{"Personalize Message"|alang}</h3>
+
+	<div>
+		<ul class="navlist" style="padding-left:0px;">
+			<li id="subinfo_tab" class="currenttab"><a href="#" onclick="campaign_personalization_show('personalize_subinfo'); return false">{"Subscriber Info"|alang}</a></li>
+			<li id="message_tab"><a href="#" onclick="campaign_personalization_show('personalize_message'); return false">{"Message Options & Links"|alang}</a></li>
+			<li id="socmedia_tab"><a href="#" onclick="campaign_personalization_show('personalize_socmedia'); return false">{"Social Media"|alang}</a></li>
+			<li id="other_tab"><a href="#" onclick="campaign_personalization_show('personalize_other'); return false">{"Other"|alang}</a></li>
+		</ul>
+	</div>
+	<br />
+
+	<div id="personalizelist">
+	  <div id="personalize_subinfo" class="personalizelistsection">
+			<ul>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%EMAIL%'); return false">{"Email Address"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%FIRSTNAME%'); return false">{"First Name"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%LASTNAME%'); return false">{"Last Name"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%FULLNAME%'); return false">{"Full Name"|alang}</a></li>
+				<!-- fields -->
+				{foreach from=$fields item=e}
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('{if $e.perstag != ""}%{$e.perstag|escape}%{else}{$e.tag}{/if}'); return false">{$e.title|escape}</a>
+				{if $e.bubble_content != ""}
+				<div>{$e.bubble_content}</div>
+				{/if}
+				</li>
+				{/foreach}
+				<!-- the rest -->
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SUBDATE%'); return false">{"Date Subscribed"|alang}</a>
+				<div>{"The date that this subscriber subscribed."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SUBTIME%'); return false">{"Time Subscribed"|alang}</a>
+				<div>{"The time of the day the subscriber subscribed."|alang}</div>
+				</li>
+			</ul>
+	  </div>
+		<div id="personalize_message" style="display:none">
+			<ul>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%UNSUBSCRIBELINK%'); return false">{"Unsubscribe Link"|alang}</a>
+				<div>{"Unsubscribes the subscriber from the list used to send the email."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%WEBCOPY%'); return false">{"Web Copy"|alang}</a>
+				<div>{"Allow subscribers to view the email in their browser."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%UPDATELINK%'); return false">{"Update Subscription Account Link"|alang}</a>
+				<div>{"Allow subscribers to update their subscription details."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%FORWARD2FRIEND%'); return false">{"Send to Friend Link"|alang}</a>
+				<div>{"Your subscribers can forward the email to multiple people."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%UNSUBSCRIBELINK%&ALL'); return false">{"Unsubscribe Link (All Lists)"|alang}</a>
+				<div>{"Unsubscribe from all lists. Even lists not included in the email sent."|alang}</div>
+				</li>
+			</ul>
+		</div>
+		<div id="personalize_socmedia" class="personalizelistsection" style="display:none">
+			<ul>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE%'); return false">{"Social Submit Links"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIAL-FACEBOOK-LIKE%'); return false">{"Facebook Like Button"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-FACEBOOK%'); return false">{"Share on Facebook Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-TWITTER%'); return false">{"Share on Twitter Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-DIGG%'); return false">{"Share on Digg Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-REDDIT%'); return false">{"Share on Reddit Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-DELICIOUS%'); return false">{"Share on del.icio.us Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-GREADER%'); return false">{"Share on Google Reader Link"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SOCIALSHARE-STUMBLEUPON%'); return false">{"Share on StumbleUpon Link"|alang}</a></li>
+			</ul>
+		</div>
+		<div id="personalize_other" class="personalizelistsection" style="display:none">
+			<ul>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%TODAY%'); return false">{"Today's Date"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%TODAY*%'); return false">{"Today's Date +/- X day(s)"|alang}</a></li>
+				<li><a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SENDER-INFO%'); return false">{"List Sender Info"|alang}</a></li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SUBSCRIBERIP%'); return false">{"Subscriber's IP Address"|alang}</a>
+				<div>{"The IP Address of the subscriber when they subscribed to this list."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%LISTNAME%'); return false">{"Subscriber's List"|alang}</a>
+				<div>{"Show the name of the list that this email was sent to."|alang}</div>
+				</li>
+				<li>
+				<a href="#" style="font-weight: bold" onclick="campaign_personalization_insert('%SUBSCRIBERID%'); return false">{"Subscriber ID"|alang}</a>
+				<div>{"Display the ID # of the subscriber."|alang}</div>
+				</li>
+			</ul>	
+		</div>
+	</div>
+
+	<br />
+
+	<div style="float:right; font-style:italic; color:#999; padding-top:7px;">{"Click the item you would like to insert."|alang}</div>
+    <div>
+    {*<input type="button" value='{"Insert"|alang}' onclick="campaign_personalization_insert();" class="adesk_button_ok" />*}
+      <input type="button" value='{"Close"|alang}' onclick="adesk_dom_toggle_display('message_personalize', 'block');" />
+      <input type="hidden" value="text" id="personalize4" />
+      <input type="hidden" value="" id="personalize2" />
+    </div>
+  </div>
+</div>
