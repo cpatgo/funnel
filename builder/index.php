@@ -43,7 +43,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 		
   		<div class="main" id="main">
         <div class="sideButtons clearfix">
-          <a href="/dashboard" class="btn btn-info menu_dashboard" style="background-color:#036bab;">> My Dashboard</a>
+          <a href="/dashboard" class="btn btn-info menu_dashboard" style="background-color:#036bab;">> GLC Hub</a>
         </div>
 			  		  			
   			<h3><span class="fui-list"></span> Blocks</h3>

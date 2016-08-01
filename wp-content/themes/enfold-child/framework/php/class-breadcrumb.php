@@ -186,7 +186,7 @@ function avia_breadcrumbs( $args = array() ) {
 		'before' => '<span class="breadcrumb-title">' . __( 'You are here:', 'avia_framework' ) . '</span>',
 		'after' => false,
 		'front_page' => true,
-		'show_home' => (is_user_logged_in()) ? __( 'My Dashboard', 'avia_framework' ) : __( 'Home', 'avia_framework' ),
+		'show_home' => (is_user_logged_in()) ? __( 'GLC Hub', 'avia_framework' ) : __( 'Home', 'avia_framework' ),
 		'echo' => false,
 		'show_categories' => true,
 		'show_posts_page' => true,

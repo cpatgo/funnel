@@ -94,7 +94,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="container">
 
             <header class="clearfix" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                <a href="/dashboard" class="btn btn-success btn-embossed pull-right" style="margin-left: 10px;"><span class="fui-arrow-right"></span> My Dashboard</a>
+                <a href="/dashboard" class="btn btn-success btn-embossed pull-right" style="margin-left: 10px;"><span class="fui-arrow-right"></span> GLC Hub</a>
 
                 <a href="#" id="clearScreen" class="btn btn-danger btn-embossed pull-right disabled actionButtons"><span class="fui-trash"></span> Empty Page</a>
 
