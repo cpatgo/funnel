@@ -20,16 +20,16 @@ if($responsive)
 	echo '<a id="advanced_menu_hide" href="#" 	'.av_icon_string('close').'></a>';
 }
 
-
 //subheader, only display when the user chooses a social header
 if($headerS['header_topbar'] == true)
 {
+	$logo = avia_get_option('logo');
 ?>
 		<div id='header_meta' class='container_wrap container_wrap_meta <?php echo avia_header_class_string(array('header_social', 'header_secondary_menu', 'header_phone_active'), 'av_'); ?>'>
 		
 			      <div class='container'>
 				      <div class="logo_container">
-				      	<div class="logo"><a href="/"><img src="/wp-content/uploads/2016/08/glghub-whtelogo.png" alt="Global Learning Center"><span class="subtext"><img src="/wp-content/uploads/2016/08/glghub-whtelogo.png" class="alternate" alt="" title=""></span></a></div>
+				      	<div class="logo"><a href="/"><img src="<?php echo $logo; ?>" alt="Global Learning Center"><span class="subtext"><img src="<?php echo $logo; ?>" class="alternate" alt="" title=""></span></a></div>
 				      </div>
 			      <?php
 			            /*
@@ -183,7 +183,7 @@ if($headerS['header_topbar'] == true)
 							#$addition = "<img src='".$headerS['header_replacement_logo']."' class='alternate' alt='' title='' />";
 						}
 						
-						$output .= avia_logo(AVIA_BASE_URL.'images/layout/logo.png', $addition, 'strong', true);
+						// $output .= avia_logo(AVIA_BASE_URL.'images/layout/logo.png', $addition, 'strong', true);
 						
 							if(!empty($headerS['bottom_menu']))
 							{
