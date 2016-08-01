@@ -83,11 +83,11 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>
         <hr>
         <div class="sideButtons clearfix">
-          <a href="/glchub" class="btn btn-info menu_dashboard glchub" style="background-color:#036bab;">> GLC Hub</a>
+          <a href="/glchub" class="btn btn-info menu_dashboard glchub">> GLC Hub</a>
         </div>
         <hr>
         <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer" style="background-color:#036bab;">> GLC eMarketer</a>
+          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">> GLC eMarketer</a>
         </div>
   	
   		</div><!-- /.main -->
