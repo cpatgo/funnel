@@ -1,48 +1,40 @@
-      <span class="rounded">
-	  
-	  {if $admin.pg_form_add || $admin.pg_form_edit || $admin.pg_form_delete}
-		{if $style_integration != ''}
-	 <a href="desk.php?action=form#list-01-0-0"><img class="va"
-  src="css/images/integration2.png" /> {"Integration"|alang}</a> 
-		{else}
-			 <a href="desk.php?action=form#list-01-0-0"><img class="va"
-      alt="Menu_dashboard" src="css/images/integration2.png" /> {"Integration"|alang}</a> 
-		{/if}
-	{/if}
-	 {if adesk_admin_ismaingroup()}   <a href="desk.php?action=design#list-01-0-0"><img class="va" src="css/images/designsettiings.png" width="10" height="10"/> {"Branding"|alang}</a>
- 	{/if}
-	{if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
-	 <a href="desk.php?action=user#list-01-0-0"><img class="va" src="css/images/users.png" width="10" height="10"/> {"Users"|alang}</a> 
-{/if}
-{if adesk_admin_ismaingroup() and !$__ishosted}
- 
- <a href="desk.php?action=cron#list-01-0-0"><img class="va" src="css/images/scheduledtasks.png" width="10" height="10"/> {"Cron Settings"|alang}</a> 
- 
-{/if}
-   {if adesk_admin_ismain()}
-	    
-	   <a href="desk.php?action=settings#settings_mailsending" title="{"Settings"|alang}"><img class="va"
-  src="css/images/smtp.png" /> {"SMTP Connections"|alang}</a>
-	   {/if}
-	  {if adesk_admin_ismain()}
-	  
-
-					<a href="desk.php?action=settings" title="{"Settings"|alang}"><img class="va"
-  src="css/images/settings2.png" /> {"Settings"|alang}</a>
-    {else}
-					<a href="desk.php?action=account" title="{"Settings"|alang}"><img class="va"
-  src="css/images/settings.png" /> {"Settings"|alang}</a>
-    {/if}
-	
-	  
-	   <a href=
-      "index.php?action=logout"><img alt="Preferences" class=
-      "va" src="css/images/logout.png" /> Logout</a></span>
+        <span class="rounded">
+              
+            {if $admin.pg_form_add || $admin.pg_form_edit || $admin.pg_form_delete}
+                {if $style_integration != ''}
+                    <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Integration"|alang}</a> 
+                {else}
+                    <a href="desk.php?action=form#list-01-0-0"><img class="va" alt="Menu_dashboard" src="css/images/integration2.png" />{"Integration"|alang}</a> 
+                {/if}
+            {/if}
+            {if adesk_admin_ismaingroup()}   
+                <a href="desk.php?action=design#list-01-0-0"><img class="va" src="css/images/designsettiings.png" width="10" height="10"/> {"Branding"|alang}</a>
+            {/if}
+            {if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+                <a href="desk.php?action=user#list-01-0-0"><img class="va" src="css/images/users.png" width="10" height="10"/> {"Users"|alang}</a> 
+            {/if}
+            {if adesk_admin_ismaingroup() and !$__ishosted}
+                <a href="desk.php?action=cron#list-01-0-0"><img class="va" src="css/images/scheduledtasks.png" width="10" height="10"/> {"Cron Settings"|alang}</a> 
+            {/if}
+            {if adesk_admin_ismain()}
+                <a href="desk.php?action=settings#settings_mailsending" title="{"Settings"|alang}"><img class="va" src="css/images/smtp.png" /> {"SMTP Connections"|alang}</a>
+            {/if}
+            {if adesk_admin_ismain()}
+                <a href="desk.php?action=settings" title="{"Settings"|alang}"><img class="va" src="css/images/settings2.png" /> {"Settings"|alang}</a>
+            {else}
+                <!--<a href="desk.php?action=account" title="{"Settings"|alang}"><img class="va" src="css/images/settings.png" /> {"Settings"|alang}</a>-->
+            {/if}
+            
+            {if adesk_admin_ismaingroup()} 
+                <a href="index.php?action=logout"><img alt="Preferences" class="va" src="css/images/logout.png" /> Logout</a>
+            {/if}
+        </span>
     </div>
-  </div>
+</div>
 
-  <div class="yui-gc" id="submenu">
-    <div class="yui-u first">{if !isset($usemainmenu) or $usemainmenu == 1}
-	{include file="menu.htm"}
-{/if}
+<div class="yui-gc" id="submenu">
+    <div class="yui-u first">
+        {if !isset($usemainmenu) or $usemainmenu == 1}
+            {include file="menu.htm"}
+        {/if}
  
