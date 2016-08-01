@@ -92,10 +92,21 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 .sub-menu{ top: 20px !important; }
 
+.btn-events { color: #fff; }
 
 .btn-plans-and-pricing a{
     background-color: #ff910f !important;
     color: white !important;
+}
+
+
+
+.av-seperator-icon{ font-size: 44px; line-height:1.1; }
+
+.hr-custom.hr-icon-yes .hr-inner {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
 }
 
 .btn a { 
@@ -187,7 +198,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 	/*line-height: normal !important;*/
     /*margin: 23px 0px !important;*/
     padding: 8px 14px !important;
-    border: 2px solid #258dcd !important;
+    /* border: 2px solid #258dcd !important; */
     border-radius: 6px !important;
 }
 
