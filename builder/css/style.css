@@ -375,8 +375,15 @@ body .sp-input {
 
 /* side */
 
+.fui-export, #exportPage {
+	background-color: #258dcd;
+	border-color: #258dcd;
+}
+
 .menu_dashboard {
     width: 100% !important;
+    background-color: #258dcd;
+    border-color: #258dcd;
 }
 
 .menu {
