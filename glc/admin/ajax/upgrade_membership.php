@@ -289,7 +289,7 @@ if((int)$payment_error !== 1):
 	$membership_class->insert_upgrade_membership($data);
 
     $msg = 'Your account has been successfully upgraded and we have sent you a reciept. Please check your junk or spam mail folder. Click <a href="/dashboard">HERE</a> to return to your GLC Dashboard. Thank you.';
-    if($status == 0) $msg = sprintf('Your account will be upgraded after we verify your payment. Thank you. Return to <a href="/dashboard">My Dashboard</a>.');
+    if($status == 0) $msg = sprintf('Your account will be upgraded after we verify your payment. Thank you. Return to <a href="/dashboard">GLC Hub</a>.');
 
 	$result = array('result' => 'success', 'message' => $msg);
 	die(json_encode($result));

@@ -44,7 +44,7 @@
 			<li>
 				<a href="/dashboard/">
 					<i class="fa fa-video-camera"></i>
-					<span class="nav-label">My Dashboard</span>
+					<span class="nav-label">GLC Hub</span>
 				</a> 
 			</li>
 		</ul>
