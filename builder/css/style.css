@@ -373,7 +373,8 @@ body .sp-input {
 /* side */
 
 .menu_dashboard {
-    width: 100% !important;
+    background-color: #258dcd;
+    color: #fff;
 }
 
 .menu {

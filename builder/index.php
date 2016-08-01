@@ -42,10 +42,6 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   	<div class="menu" id="menu">
 		
   		<div class="main" id="main">
-        <div class="sideButtons clearfix">
-          <a href="/dashboard" class="btn btn-info menu_dashboard" style="background-color:#036bab;">> GLC Hub</a>
-        </div>
-			  		  			
   			<h3><span class="fui-list"></span> Blocks</h3>
   			
   			<ul id="elements">
@@ -84,7 +80,14 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="text-center xsProjectLInk" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
           <a href="#xsImpModal" id="projectModal" class="btn btn-warning btn-block" data-toggle="modal">Export/ Import Project</a>
         </div>
-  	
+        <hr>
+  	    <div class="text-center" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
+          <a href="/glchub" class="btn btn-block menu_dashboard" data-toggle="modal">> GLC Hub</a>
+        </div>
+        <hr>
+        <div class="text-center" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
+          <a href="/aem/manage" class="btn btn-block menu_dashboard" data-toggle="modal">> GLC eMarketer</a>
+        </div>
   		</div><!-- /.main -->
   	
   		<div class="second" id="second">
