@@ -209,8 +209,8 @@ function avia_breadcrumbs( $args = array() ) {
 	if ( !is_front_page() && $show_home ):
 		if(is_user_logged_in()):
 			$pagename = get_query_var('pagename');
-			if($pagename !== 'dashboard'):
-				$trail[] = '<a href="' . home_url() . '/dashboard" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';
+			if($pagename !== 'glchub'):
+				$trail[] = '<a href="' . home_url() . '/glchub" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';
 			endif;
 		else:
 			$trail[] = '<a href="' . home_url() . '/" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';

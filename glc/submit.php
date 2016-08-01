@@ -913,7 +913,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 glc_auto_login($response['message'], $userdata);
 
                                 $result['result'] = 'success';
-                                $result['message'] = sprintf('%s/dashboard', GLC_URL);
+                                $result['message'] = sprintf('%s/glchub', GLC_URL);
                             else:
                                 $result['result'] = 'success';
                                 $result['message'] = sprintf('%s/glc/login.php?reg=1&email=%s&pkg=%s', GLC_URL, $email, $membership);
@@ -1732,7 +1732,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                     $userdata['password'] = $pw_nohash;
                                     glc_auto_login($user_id, $userdata);
 
-                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/dashboard', GLC_URL));
+                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/glchub', GLC_URL));
                                     // var_dump(json_decode($result));
                                     die(json_encode($result));    
                                 else:
@@ -2107,7 +2107,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                     $userdata['password'] = $pw_nohash;
                                     glc_auto_login($user_id, $userdata);
 
-                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/dashboard', GLC_URL));
+                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/glchub', GLC_URL));
                                     die(json_encode($result));    
                                 else:
                                     $result = array('result' => 'error', 'message' => sprintf('There is a problem with your payment. Please contact administrator.')); 
@@ -2478,7 +2478,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                     $userdata['password'] = $pw_nohash;
                                     glc_auto_login($user_id, $userdata);
 
-                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/dashboard', GLC_URL));
+                                    $result = array('result' => 'success', 'message' => sprintf('%s/glc/glchub', GLC_URL));
                                     die(json_encode($result));    
                                 else:
                                     $result = array('result' => 'error', 'message' => sprintf('There is a problem with your payment. Please contact administrator.')); 
