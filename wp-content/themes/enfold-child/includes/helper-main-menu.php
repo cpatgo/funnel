@@ -29,7 +29,7 @@ if($headerS['header_topbar'] == true)
 		
 			      <div class='container'>
 				      <div class="logo_container">
-				      	<div class="logo"><a href="/"><img src="/wp-content/uploads/2016/07/glc-logo-250x43.png" alt="Global Learning Center"><span class="subtext"><img src="/wp-content/uploads/2016/07/glc-logo-250x43.png" class="alternate" alt="" title=""></span></a></div>
+				      	<div class="logo"><a href="/"><img src="/wp-content/uploads/2016/08/glc-logo-empowering.png" alt="Global Learning Center"><span class="subtext"><img src="/wp-content/uploads/2016/08/glc-logo-empowering.png" class="alternate" alt="" title=""></span></a></div>
 				      </div>
 			      <?php
 			            /*
