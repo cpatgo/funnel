@@ -20,4 +20,4 @@ $user_data[0]['password'] = $pww;
 //Auto login user
 glc_auto_login($user_id, $user_data[0]);
 //Redirect user to dashboard
-printf('<script type="text/javascript">window.location="%s/dashboard";</script>', GLC_URL);
+printf('<script type="text/javascript">window.location="%s/glchub";</script>', GLC_URL);
