@@ -38,7 +38,7 @@ Example response:
 
 // By default, this sample code is designed to get the result from your
 // server (where AwebDesk Email Marketing is installed) and log in the person who opened this page
-$url    = 'http://glcv2.cretetech.com/aem';
+$url    = sprintf('%s/aem', GLC_URL);
 
 
 $params = array(

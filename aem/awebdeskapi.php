@@ -34,9 +34,9 @@ $allowed = array(
 	'abuse.abuse_notify' => '',
 	'abuse.abuse_update' => '',
   // sso
-  /* Disabled for security reasons
+  /* Disabled for security reasons */
 	"singlesignon!adesk_sso_token_generate" => "",
-	"singlesignon!adesk_sso_sameserver" => "", */
+	"singlesignon!adesk_sso_sameserver" => "", 
 );
 
 
@@ -45,14 +45,14 @@ $allowed = array(
 */
 $whitelist = array(
 	// singlesignon
-/*	'singlesignon' => array(
+	'singlesignon' => array(
 		'action' => 'singlesignon!adesk_sso_token_generate',
 		'params' => array('sso_addr', 'sso_user', 'sso_pass', 'sso_duration'),
 	),
 	'singlesignon_sameserver' => array(
 		'action' => 'singlesignon!adesk_sso_sameserver',
 		'params' => array(),
-	), */
+	), 
 );
 
 
