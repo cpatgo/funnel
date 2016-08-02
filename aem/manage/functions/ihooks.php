@@ -1902,7 +1902,7 @@ function ihook_adesk_user_account_update() {
 	}
 
 	$update = array(
-		'default_dashboard'       =>  'classic',
+		'default_dashboard'       =>  $_POST['default_dashboard'],
 		'default_mobdashboard'       =>  $_POST['default_mobdashboard'],
 		'lists_per_page'       => (int)$_POST['lists_per_page'],
 		'messages_per_page'    => (int)$_POST['messages_per_page'],
