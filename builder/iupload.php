@@ -31,6 +31,13 @@
 	
 	}
 
+	// Check file size
+	if ($_FILES["imageFileField"]["size"] > 2000000) {
+		$return['code'] = 0;
+		$return['response'] = "Sorry the file is too large. Please upload an image not more than 2Mb.";
+		die( json_encode( $return ) );
+	}
+
 	if ( !isset($_FILES['imageFileField']['error']) || is_array($_FILES['imageFileField']['error']) ) {
 	
 		$return['code'] = 0;
