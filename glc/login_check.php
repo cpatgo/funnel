@@ -46,7 +46,7 @@ if(!empty($user))
     
 
 
-    printf('<script type="text/javascript">window.location="%s/glchub/";</script>', GLC_URL);
+    printf('<script type="text/javascript">window.location="%s/myhub/";</script>', GLC_URL);
 }
 else
 {   

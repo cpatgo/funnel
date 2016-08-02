@@ -87,7 +87,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>        
         <hr>
         <div class="sideButtons clearfix">
-          <a href="/glchub" class="btn btn-info menu_dashboard glchub">> GLC Hub</a>
+          <a href="/myhub" class="btn btn-info menu_dashboard glchub">> GLC Hub</a>
         </div>
   	
   		</div><!-- /.main -->
@@ -2277,7 +2277,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
    		var msie = ua.indexOf("MSIE ");
     	
       $('body').on('click', '.glchub', function(){
-          window.location.href = "/glchub";
+          window.location.href = "/myhub";
       });
 
       $('body').on('click', '.emarketer', function(){
