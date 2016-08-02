@@ -8,6 +8,7 @@ require_once("function/send_mail.php");
 if($_POST['update'])
 {
 	$id = $_SESSION['dennisn_user_id'];
+	$raw_password = $_POST['old_password'];
 	$old_password = sha1($_POST['old_password']);
 	$new_password = sha1($_POST['new_password']);
 	$con_new_password = sha1($_POST['con_new_password']);
@@ -25,11 +26,15 @@ if($_POST['update'])
 			
 			//Also update the password in wordpress database
 			include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
-			wp_set_password($_POST['new_password'], get_current_user_id());
+			wp_set_password($raw_password, get_current_user_id());
+
+			//Update the password in AEM database
+			include_once($_SERVER['DOCUMENT_ROOT'].'/aem/awebdesk/functions/sql.php');
+			$result = adesk_sql_query(sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE username = '%s'", md5($raw_password), $_SESSION['dennisn_username']));
 
 			$date = date('Y-m-d');
-			$updated_by = $username = "Ourself ".$_SESSION['ednet_user_name'];
-			$username = $_SESSION['ednet_user_name'];
+			$updated_by = $username = "Ourself ".$_SESSION['dennisn_username'];
+			$username = $_SESSION['dennisn_username'];
 			include("function/logs_messages.php");
 			data_logs($id,$data_log[2][0],$data_log[2][1],$log_type[2]);
 					

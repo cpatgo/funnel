@@ -48,7 +48,6 @@ if (defined('adesk_SQL_QUERY_DEBUG')) {
         $GLOBALS['dbLastQuery'] = array($query);
 
         $result = mysql_query($query, $GLOBALS['db_link']);
-
         return $result;
     }
 }
