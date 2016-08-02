@@ -56,7 +56,8 @@ class useraccount_assets extends AWEBP_Page {
 		}
 		// deal with standard stuff here
 		$update['lang'] = $_POST['lang_ch'];
-		$update['default_dashboard'] = $_POST['default_dashboard'];
+		// $update['default_dashboard'] = $_POST['default_dashboard'];
+		$update['default_dashboard'] = 'classic';
 		$update['default_mobdashboard'] = $_POST['default_mobdashboard'];
 		if ( isset($this->admin['local_zoneid']) ) {
 			$update["local_zoneid"]                 = $_POST["local_zoneid"];
