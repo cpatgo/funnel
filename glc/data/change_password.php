@@ -29,8 +29,10 @@ if($_POST['update'])
 			wp_set_password($raw_password, get_current_user_id());
 
 			//Update the password in AEM database
-			include_once($_SERVER['DOCUMENT_ROOT'].'/aem/awebdesk/functions/sql.php');
-			$result = adesk_sql_query(sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE username = '%s'", md5($raw_password), $_SESSION['dennisn_username']));
+			include_once($_SERVER['DOCUMENT_ROOT'].'/aem/manage/config.inc.php');
+			$aem_con = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWEBP_AUTHDB_PASS, AWEBP_AUTHDB_DB);
+			mysqli_query($aem_con, sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE username = '%s'", md5($raw_password), $_SESSION['dennisn_username']));
+			mysqli_close($aem_con);
 
 			$date = date('Y-m-d');
 			$updated_by = $username = "Ourself ".$_SESSION['dennisn_username'];
