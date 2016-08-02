@@ -1529,8 +1529,6 @@ class Class_User extends Class_Database
     {
         $doctype = ($country == 'United States' or $country == 'US') ? 4 : 3;
         $sql = sprintf("SELECT * FROM documents WHERE user_id = %d AND (doctype = 3 OR doctype = 4) AND approved = 1", $user_id);
-        echo $sql;
-        die();
         return $this->select($sql);
     }
 
