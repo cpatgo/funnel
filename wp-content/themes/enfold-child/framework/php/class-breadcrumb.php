@@ -186,7 +186,7 @@ function avia_breadcrumbs( $args = array() ) {
 		'before' => '<span class="breadcrumb-title">' . __( 'You are here:', 'avia_framework' ) . '</span>',
 		'after' => false,
 		'front_page' => true,
-		'show_home' => (is_user_logged_in()) ? __( 'GLC Hub', 'avia_framework' ) : __( 'Home', 'avia_framework' ),
+		'show_home' => (is_user_logged_in()) ? __( 'My Hub', 'avia_framework' ) : __( 'Home', 'avia_framework' ),
 		'echo' => false,
 		'show_categories' => true,
 		'show_posts_page' => true,
@@ -209,8 +209,8 @@ function avia_breadcrumbs( $args = array() ) {
 	if ( !is_front_page() && $show_home ):
 		if(is_user_logged_in()):
 			$pagename = get_query_var('pagename');
-			if($pagename !== 'glchub'):
-				$trail[] = '<a href="' . home_url() . '/glchub" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';
+			if($pagename !== 'myhub'):
+				$trail[] = '<a href="' . home_url() . '/myhub" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';
 			endif;
 		else:
 			$trail[] = '<a href="' . home_url() . '/" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" class="trail-begin">' . $show_home . '</a>';

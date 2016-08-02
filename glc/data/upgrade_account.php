@@ -265,7 +265,7 @@ foreach($active_merchants as $mkey => $mvalue) {
 <!-- Do not allow to upgrade if membership is Masters already -->
 <?php else: ?>
 	<div class="ibox-title">
-	    <h5>You account cannot be upgraded further. Return to <a href="/dashboard">GLC Hub</a> </h5>
+	    <h5>You account cannot be upgraded further. Return to <a href="/dashboard">My Hub</a> </h5>
 	</div>
 <?php endif; ?>
 
