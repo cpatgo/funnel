@@ -104,17 +104,17 @@ if (have_posts()) :
 
 
         //echo preview image
-        if($blog_global_style !== 'elegant-blog')
-        {
-		    if(strpos($blog_style, 'big') !== false)
-		    {
-		        if($slider) $slider = '<a href="'.$link.'" title="'.$featured_img_desc.'">'.$slider.'</a>';
-		        if($slider) echo '<div class="big-preview '.$blog_style.'">'.$slider.'</div>';
-		    }
+  //       if($blog_global_style !== 'elegant-blog')
+  //       {
+		//     if(strpos($blog_style, 'big') !== false)
+		//     {
+		//         if($slider) $slider = '<a href="'.$link.'" title="'.$featured_img_desc.'">'.$slider.'</a>';
+		//         if($slider) echo '<div class="big-preview '.$blog_style.'">'.$slider.'</div>';
+		//     }
 			
-		    if(!empty($before_content))
-		        echo '<div class="big-preview '.$blog_style.'">'.$before_content.'</div>';
-		}
+		//     if(!empty($before_content))
+		//         echo '<div class="big-preview '.$blog_style.'">'.$before_content.'</div>';
+		// }
 		
         echo "<div class='blog-meta'>";
 
@@ -233,14 +233,14 @@ if (have_posts()) :
                     {
                         echo '<span class="blog-categories minor-meta">'.__('in','avia_framework')." ";
                         echo $cats;
-                        echo '</span><span class="text-sep text-sep-cat">/</span>';
+                        // echo '</span><span class="text-sep text-sep-cat">/</span>';
                     }
 
 
-                    echo '<span class="blog-author minor-meta">'.__('by','avia_framework')." ";
-                    echo '<span class="entry-author-link" >';
-                    echo '<span class="vcard author"><span class="fn">';
-                    the_author_posts_link();
+                    // echo '<span class="blog-author minor-meta">'.__('by','avia_framework')." ";
+                    // echo '<span class="entry-author-link" >';
+                    // echo '<span class="vcard author"><span class="fn">';
+                    // the_author_posts_link();
                     echo '</span></span>';
                     echo '</span>';
                     echo '</span>';
