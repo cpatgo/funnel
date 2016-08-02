@@ -8,7 +8,7 @@ require_once("function/send_mail.php");
 if($_POST['update'])
 {
 	$id = $_SESSION['dennisn_user_id'];
-	$raw_password = $_POST['old_password'];
+	$raw_password = $_POST['new_password'];
 	$old_password = sha1($_POST['old_password']);
 	$new_password = sha1($_POST['new_password']);
 	$con_new_password = sha1($_POST['con_new_password']);
