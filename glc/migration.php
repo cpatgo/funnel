@@ -1,7 +1,7 @@
 <?php
-if(!isset($_POST['do'])) printf('<script type="text/javascript">window.location="%s/glc/admin";</script>', GLC_URL);
 require_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/wp-content/plugins/lifterlms/includes/class.llms.student.php');
+if(!isset($_GET['do'])) printf('<script type="text/javascript">window.location="%s/glc/admin";</script>', GLC_URL);
 
 $users = get_users("orderby=ID");
 
