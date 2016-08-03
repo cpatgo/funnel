@@ -43,7 +43,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 		
   		<div class="main" id="main">
         <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">> GLC eMarketer</a>
+          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">> eMarketer</a>
         </div>
         <hr>
 			  		  			
