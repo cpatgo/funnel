@@ -284,13 +284,20 @@ if ( !class_exists( 'avia_sc_table' ) )
 								$content = preg_replace('!(\$|€|¥|£|¢|¤|%|‰|&cent;|&curren;|&pound;|&yen;|&euro;)!','<span class="currency-symbol">$1</span>', $content);
 							}
 							
-							
-							$output .= "<li class='".$ul['attr'][$key]['row_style']."'>";
-							$output .= $key == 0 ? "<div class='first-table-item'>{$content}</div>" : $content;
-							$output .= $key == 0 ? "<span class='pricing-extra'></span>" :"";
-							
-							$output .= "</li>";
-							
+							if ( $ul['attr'][$key]['row_style'] ) { 
+								$output .= "<li class='".$ul['attr'][$key]['row_style']."'>";
+								$output .= $key == 0 ? "<div class='first-table-item'>{$content}</div>" : $content;
+								$output .= $key == 0 ? "<span class='pricing-extra'></span>" :"";
+								
+								$output .= "</li>";
+							}
+							else{
+								$output .= "<li class='check_option pricing-features'><span class='include_option'>";
+								$output .= $key == 0 ? "<div class='first-table-item'>{$content}</div>" : $content;
+								$output .= $key == 0 ? "<span class='pricing-extra'></span>" :"";
+								
+								$output .= "</span></li>";
+							}
 							
 						}
 						
