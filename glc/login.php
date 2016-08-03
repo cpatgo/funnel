@@ -34,131 +34,134 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 
 <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">  
   
-<script type='text/javascript' src='js/jquery.js'></script>
-<script src="js/bootstrap.min.js"></script>
+
 <style type="text/css">
-body {
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-a{
-	color: #2895f1 !important;
-}
-
-.logo a{
-	margin-top: 30px;
-	color:#222;
-	font-size:35ptfont-weight:600; 
-	letter-spacing:-2px;
-	display: block;
-	text-decoration: none;
-}
-.ulink{
-	text-decoration: underline;
-}
-legend{
-	text-transform: uppercase;
-	padding: 10px 0;
-	color: #666;
-    font-size: 18px;
-	margin: 0;
-}
-div.clear
-{
-    clear: both;
-}
-
-div.product-chooser{
-    
-}
-
-    div.product-chooser.disabled div.product-chooser-item
-	{
-		zoom: 1;
-		filter: alpha(opacity=60);
-		opacity: 0.6;
-		cursor: default;
+	body {
+		background: url('images/global-business.jpg') center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	a{
+		color: #2895f1 !important;
 	}
 
-	div.product-chooser div.product-chooser-item{
-		padding: 11px;
-		border-radius: 6px;
-		cursor: pointer;
-		position: relative;
-		border: 1px solid #efefef;
-		margin-bottom: 10px;
-        margin-left: 10px;
-        margin-right: 10x;
-		background: #ffffff;
-	}
-	
-	div.product-chooser div.product-chooser-item.selected{
-		border: 4px solid #428bca;
-		background: #efefef;
-		padding: 8px;
-		filter: alpha(opacity=100);
-		opacity: 1;
-	}
-	
-		div.product-chooser div.product-chooser-item img{
-			padding: 0;
-		}
-		
-		div.product-chooser div.product-chooser-item span.title{
-			display: block;
-			margin: 10px 0 5px 0;
-			font-weight: bold;
-			font-size: 12px;
-		}
-		
-		div.product-chooser div.product-chooser-item span.description{
-			font-size: 12px;
-		}
-		
-		div.product-chooser div.product-chooser-item input{
-			position: absolute;
-			left: 0;
-			top: 0;
-			visibility:hidden;
-		}
-	#options-error{
-		position: absolute;
-		top: -20px;
-		left: 0;
-		width: 100%;
-	}
-	.btn-group{
-		width: 100%;
-	}
-	.btn-group label{
-		width: 20%;
-		white-space: normal;
-	}
-	.btn-group label strong{
-		font-size: 18px;
-	}
-    .box{ display: none; }
-
-    .cash{ background: none; }
-
-    .paypal{background: none; }
-
-    .e_pin{ background: none; }
-	.free{ background: none; }
-
-	.payments input{display: inline;}
-	.full-width{
-		width: 100%;
-	}
-	.boxed {
-		background: #eee none repeat scroll 0 0;
-		border-radius: 5px;
+	.logo a{
+		margin-top: 30px;
+		color:#222;
+		font-size:35ptfont-weight:600; 
+		letter-spacing:-2px;
 		display: block;
-		padding: 20px 60px;
-		margin: 5px 5px 10px;
-		overflow: hidden;
-		position: relative;
-		width: auto;
+		text-decoration: none;
 	}
+	.ulink{
+		text-decoration: underline;
+	}
+	legend{
+		text-transform: uppercase;
+		padding: 10px 0;
+		color: #666;
+	    font-size: 18px;
+		margin: 0;
+	}
+	div.clear
+	{
+	    clear: both;
+	}
+
+	div.product-chooser{
+	    
+	}
+
+	    div.product-chooser.disabled div.product-chooser-item
+		{
+			zoom: 1;
+			filter: alpha(opacity=60);
+			opacity: 0.6;
+			cursor: default;
+		}
+
+		div.product-chooser div.product-chooser-item{
+			padding: 11px;
+			border-radius: 6px;
+			cursor: pointer;
+			position: relative;
+			border: 1px solid #efefef;
+			margin-bottom: 10px;
+	        margin-left: 10px;
+	        margin-right: 10x;
+			background: #ffffff;
+		}
+		
+		div.product-chooser div.product-chooser-item.selected{
+			border: 4px solid #428bca;
+			background: #efefef;
+			padding: 8px;
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}
+		
+			div.product-chooser div.product-chooser-item img{
+				padding: 0;
+			}
+			
+			div.product-chooser div.product-chooser-item span.title{
+				display: block;
+				margin: 10px 0 5px 0;
+				font-weight: bold;
+				font-size: 12px;
+			}
+			
+			div.product-chooser div.product-chooser-item span.description{
+				font-size: 12px;
+			}
+			
+			div.product-chooser div.product-chooser-item input{
+				position: absolute;
+				left: 0;
+				top: 0;
+				visibility:hidden;
+			}
+		#options-error{
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 100%;
+		}
+		.btn-group{
+			width: 100%;
+		}
+		.btn-group label{
+			width: 20%;
+			white-space: normal;
+		}
+		.btn-group label strong{
+			font-size: 18px;
+		}
+	    .box{ display: none; }
+
+	    .cash{ background: none; }
+
+	    .paypal{background: none; }
+
+	    .e_pin{ background: none; }
+		.free{ background: none; }
+
+		.payments input{display: inline;}
+		.full-width{
+			width: 100%;
+		}
+		.boxed {
+			background: #eee none repeat scroll 0 0;
+			border-radius: 5px;
+			display: block;
+			padding: 20px 60px;
+			margin: 5px 5px 10px;
+			overflow: hidden;
+			position: relative;
+			width: auto;
+		}
+
+
 </style>
 
 </head>
@@ -186,6 +189,11 @@ div.product-chooser{
 	<form class="m-t boxed" role="form" action="login_check.php" method="post">
 		<fieldset>
 			<legend>Sign in</legend>
+			<div class="input-group">
+				<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+				<input type="text" class="form-control" placeholder="Username" required="" name="username">
+				<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
+			</div>
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Username" required="" name="username">
 			</div>
@@ -204,6 +212,7 @@ div.product-chooser{
 	<p class="text-center"><a href="/">&laquo; Back to Site</a></p>
 </div>
 </div>
-
+<script type='text/javascript' src='js/jquery.js'></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
