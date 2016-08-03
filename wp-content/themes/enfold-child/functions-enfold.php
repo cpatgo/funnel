@@ -1777,6 +1777,23 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 // Enable shortcodes in text widgets
 add_filter('widget_text', 'do_shortcode');
 
+function lifterlms_sidebar_compatibility( $sidebars_widgets ) {
+	
+	// replace the widgets in the primary sidebar with LifterLMS Course sidebar on Course Pages
+	if ( is_singular( 'course' ) && array_key_exists( 'llms_course_widgets_side', $sidebars_widgets ) ) {
+		// replace "sidebar-1" with your theme's sidebar id
+		$sidebars_widgets['av_everywhere'] = $sidebars_widgets['llms_course_widgets_side'];
+	}
+	// replace the widgets in the primary sidebar with LifterLMS Lesson sidebar on Lesson Pages
+	elseif ( is_singular( 'lesson' ) && array_key_exists( 'llms_lesson_widgets_side', $sidebars_widgets ) ) {
+		// replace "sidebar-1" with your theme's sidebar id
+		  $sidebars_widgets['av_everywhere'] = $sidebars_widgets['llms_lesson_widgets_side']; 
+	}
+
+	return $sidebars_widgets;
+
+}
+add_filter( 'sidebars_widgets', 'lifterlms_sidebar_compatibility' );
 
 
 

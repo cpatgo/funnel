@@ -19,6 +19,34 @@
     animation: avia_fade_move_down 2s ease-in-out infinite;
 }
 
+#top .iconbox.av-no-box .iconbox_icon { 
+    border-width: 5px !important;
+}
+
+.pricing-table-wrap > .pricing-table > li.pricing-features{
+    font-size: 14px;
+    padding-left: 10%;
+}
+
+.pricing-table-wrap > .pricing-table > li span.include_option{
+    position:relative;
+}
+
+.pricing-table-wrap > .pricing-table > li span.include_option:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    background: url(//cdn.elegantthemes.com/images/package_icon.png) no-repeat;
+    width: 20px;
+    height: 19px;
+}
+
+.pricing-table-wrap > .pricing-table > .avia-heading-row > .first-table-item {
+    text-transform: Uppercase;
+    font-size: 22px;
+}
+
 
 #header_main_alternate, .av_header_transparency #header_main .social_bookmarks li a {
     color: inherit;
@@ -262,7 +290,7 @@ span.user_header strong { color: #fff; }
     display: none;
 }
 
-.course_cat-e-books span.post-meta-infos {
+.course_cat-e-books span.post-meta-infos, span.post-meta-infos {
     display: none;
 }
 
@@ -548,6 +576,8 @@ body .datepicker.dropdown-menu, #top .main_color #tribe-bar-form input[type='tex
     font-size: 24px;
     min-width: 200px;
 }
+
+
 
 /*
 Desktop Styles

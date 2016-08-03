@@ -182,3 +182,15 @@
 [30-Jul-2016 16:53:23 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
 [01-Aug-2016 10:57:53 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
 [01-Aug-2016 13:02:01 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:01 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:08 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/login_check.php on line 3
+[02-Aug-2016 15:04:22 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/login_check.php on line 3
+[02-Aug-2016 15:04:23 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:32 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:32 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[02-Aug-2016 15:04:37 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:37 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[02-Aug-2016 15:04:40 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[02-Aug-2016 15:04:40 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[02-Aug-2016 15:04:40 America/New_York] PHP Warning:  Missing argument 2 for send_step_2_email(), called in /home/identifz/public_html/glcv2/glc/function/insert_board_third.php on line 162 and defined in /home/identifz/public_html/glcv2/glc/function/insert_board.php on line 191
+[02-Aug-2016 19:04:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/admin/index.php:50) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
