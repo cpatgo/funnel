@@ -211,21 +211,29 @@
  
 </div>
 
-  <div class="yui-g" id="sub_submenu">
-{if $processesCnt or $pausedProcessesCnt}
-<h2>{"Ongoing Processes"|alang}</h2>
-<ul>{if $processesCnt}
-        <li><a href="desk.php?action=processes#list-01-0-0"><img class="va" src="css/images/currentprocesses.png" /> {"Current Processes (%s)"|alang:$processesCnt}</a></li>{/if}
-        {if $pausedProcessesCnt}
-        <li><a href="desk.php?action=processes&status=paused#list-01-0-0"><img class="va" src="css/images/pausedprocesses.png" /> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a></li>
-        {/if}
-</ul>
-{else if}
-<h2>{"Ongoing Processes"|alang}</h2>
-<ul><li style="color:red; font-weight:bolder;">No Active process Now</li></ul>
-
-
+{if adesk_admin_ismain()}
+<div class="yui-g" id="sub_submenu">
+  {if $processesCnt or $pausedProcessesCnt}
+    <h2>{"Ongoing Processes"|alang}</h2>
+    <ul>
+      {if $processesCnt}
+          <li>
+            <a href="desk.php?action=processes#list-01-0-0"><img class="va" src="css/images/currentprocesses.png" /> {"Current Processes (%s)"|alang:$processesCnt}</a>
+          </li>
+      {/if}
+      {if $pausedProcessesCnt}
+          <li>
+            <a href="desk.php?action=processes&status=paused#list-01-0-0"><img class="va" src="css/images/pausedprocesses.png" /> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a>
+          </li>
+      {/if}
+    </ul>
+  {else if}
+    <h2>{"Ongoing Processes"|alang}</h2>
+    <ul>
+      <li style="color:red; font-weight:bolder;">No Active process Now</li>
+    </ul>
 </div>
+  {/if}
 {/if}
 
 </div>
