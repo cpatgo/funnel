@@ -36,6 +36,9 @@ foreach($active_merchants as $mkey => $mvalue) {
                     <div class="col-sm-7 col-sm-offset-2">
                         <?php if(isset($_GET['msg']) && !empty($_GET['msg'])) printf('<div class="alert alert-success">%s</div>', $_GET['msg']); ?>
                         <?php if(isset($_GET['err']) && !empty($_GET['err'])) printf('<div class="alert alert-danger">%s</div>', $_GET['err']); ?>
+                        <!-- <button class="btn btn-primary btn-large">BACK TO MY HUB</button> -->
+                        <br>
+                        <h3><a href="/myhub" class="btn btn-primary blue">MY HUB</a></h3>
                         <div class="ibox-title">
                             <h5>Select membership and fill out the payment form.</h5>
                         </div>
