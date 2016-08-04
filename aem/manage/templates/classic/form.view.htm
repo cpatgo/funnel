@@ -40,7 +40,7 @@
 <br />
 
 <div id="formview_code" class="h2_wrap_static">
-    <h2>{"Get Code"|alang}</h2>
+    <h2 style="display:none;">{"Get Code"|alang}</h2>
     <div class="h2_content">
         <div id="integration_details_html" class="integration_details">
             {"Copy the HTML source code in the text box below and paste it anywhere into your web site."|alang}
@@ -56,7 +56,7 @@
         </div>
 
         <textarea id="codeBox" readonly="readonly" rows="14" cols="80" style="width: 99%;" onfocus="adesk_form_highlight(this);"></textarea>
-        <div style="float:right;">
+        <div style="float:right;display:none;">
             <a href="#" id="previewLink">{"Preview"|alang}</a>
         </div>
         {"Character Set:"|alang}
@@ -79,7 +79,7 @@
 
 <br />
 <div>
-    <input type="button" class="adesk_button_back" value="{"Edit This Form"|alang}" onclick="window.location='desk.php?action=form#form-' + form_view_id;" />
+    <!-- <input type="button" class="adesk_button_back" value="{"Edit This Form"|alang}" onclick="window.location='desk.php?action=form#form-' + form_view_id;" /> -->
     <input type="button" class="adesk_button_back" value="{"Manage Forms"|alang}" onclick="window.location='desk.php?action=form'" />
     <input type="button" class="adesk_button_back" value="{"Add a New Form"|alang}" onclick="window.location='desk.php?action=form#form-0'" />
 </div>
