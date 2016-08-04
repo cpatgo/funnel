@@ -4,7 +4,7 @@
     <input type="hidden" name="lists_optinoptout" id="lists_optinoptout" value="{*$lists_optinoptout*}" />
 
     <div id="formlistpanel_div" class="h2_wrap">
-      <h2 onclick="adesk_dom_toggle_class('formlistpanel', 'h2_content_invis', 'h2_content');">{"Subscription Form Settings"|alang}</h2>
+      <h2 onclick="adesk_dom_toggle_class('formlistpanel', 'h2_content_invis', 'h2_content');">{"Form Settings"|alang}</h2>
       <div id="formlistpanel" class="h2_content">
 
         <table border="0" cellspacing="0" cellpadding="5">
@@ -24,7 +24,7 @@
             </td>
             <td>
 							<select name="type" id="type" onchange="form_options_type_change(this.value);">
-							  <option value="both">{"Subscribe &amp; Unsubscribe"|alang}</option>
+							  <!-- <option value="both">{"Subscribe &amp; Unsubscribe"|alang}</option> -->
 							  <option value="subscribe">{"Subscribe Only"|alang}</option>
 							  <option value="unsubscribe">{"Unsubscribe Only"|alang}</option>
 							</select>
@@ -34,7 +34,7 @@
             <th colspan="2"><hr width="100%" size="1" noshade /></th>
           </tr>
           <tr valign="top">
-            <td>{"Lists"|alang}</td>
+            <td>{"Campaign List Name"|alang}</td>
             <td>
 							<div id="parentsList_div" class="adesk_checkboxlist">
 								{foreach from=$listsList item=p}
@@ -116,7 +116,8 @@
             <th colspan="2"><hr width="100%" size="1" noshade /></th>
           </tr>
           <tr>
-            <td>{"Fields to request:"|alang}</td>
+            <td>{"Form Fields Required:"|alang}</td>
+            <td><i>Check the box to require a subscriber information</i></td>
             <td>
             	<label>
 	              <input name="ack4email" type="checkbox" id="ask4emailField" value="1" checked="checked" disabled="disabled" />
@@ -161,7 +162,7 @@
 		          </tr>
 						{/foreach}
                         
-                          <tr>
+                          <tr style="display:none;">
 		            <td>&nbsp;</td>
 		            <td>
 		             <a href="desk.php?action=list_field" target="_blank">{"Add a custom field"|alang}</a>
