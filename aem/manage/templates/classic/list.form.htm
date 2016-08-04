@@ -2,7 +2,7 @@
   <form method="POST" onsubmit="list_form_save(list_form_id); return false">
     <input type="hidden" name="id" id="form_id" />
 
-  <h1 id="list_title_add">{"Add New List"|alang}</h1>
+  <h1 id="list_title_add">{"Add new list for your campaign"|alang}</h1>
   <h1 id="list_title_edit">{"Edit This List"|alang}</h1>
 
     {include file="list.form.settings.inc.htm"}
@@ -14,7 +14,7 @@
 
     <br />
     <div>
-      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="list_form_save(list_form_id)" />
+      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Create campagin list"|alang}" onclick="list_form_save(list_form_id)" />
       <input type="button" id="form_back" class="adesk_button_back" value="{"Back"|alang}" onclick="window.history.go(-1)" />
     </div>
     <input type="submit" style="display:none"/>
