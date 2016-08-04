@@ -33,12 +33,39 @@ switch ($msg) {
 
 <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">  
   
-<script type='text/javascript' src='js/jquery.js'></script>
-<script src="js/bootstrap.min.js"></script>
+
 <style type="text/css">
 body {
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+		background: url('images/glc-login3.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		      -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+	color:#333;
+	}
+
+	div.input-group { width:100%; }
+
+	#login_form {
+			margin-top: 125px;
+			/* Fallback for web browsers that doesn't support RGBa */
+			background: rgb(255, 255, 255);
+
+			/* RGBa with 0.6 opacity */
+			background: rgba(255, 255, 255, 0.9);
+
+			/* For IE 5.5 - 7*/
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+
+			/* For IE 8*/
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+			border-radius:30px;
+		}
 a{
 	color: #428bca !important;
 }
@@ -163,33 +190,56 @@ div.product-chooser{
 <body class="gray-bg">
 <div class="container-fluid">
 <div class="row col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-lg-4 col-lg-offset-4">
-	<div class="text-center">
-		<h1 class="logo">
-			<a href="/"><img src="<?php echo $site_url; ?>/wp-content/uploads/2016/06/glc-logoblk-250x50.png" alt="GLobal Lerning Center" /></a>
-		</h1>
-	</div>
-	<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
-	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  
-	<div class="text-center">Already have an account? <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink">Click here to Login.</a></div>
+	
+	
+	
 <div id="box-content">
 <div class="clearfix"></div><br />
-	<form class="m-t boxed" role="form" action="password.php" method="POST">
-		<fieldset>
-			<legend>Forgot Password</legend>
-			<div class="form-group">
-				<input type="email" class="form-control" placeholder="Email Address" required="" name="email">
+	<form class="m-t boxed" role="form" action="password.php" method="POST" id="login_form">
+		<div class="text-center">
+			<div class="logo">
+				<a href="/">
+	                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-120x86.png" alt="GLobal Learning Center" />
+	            </a>
 			</div>
+		</div>
+		<!-- <div class="text-center" style="margin-top:10px;">Already have an account? <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink">Click here to Login.</a> or <a href="/choose-your-membership/" class="ulink">Register.</a> -->
+		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/choose-your-membership/" class="ulink" style="text-decoration:none;">Register</a>
+		</div>
+		
+		<fieldset>
+
+			<div class="text-center" style="margin:20px 0px; text-transform:uppercase; font-size:20px;">Forgot Your Password?</div>
+		<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
+		<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  
+			<div class="form-group has-feedback">
+				<!-- <label class="control-label" for="inputGroupSuccess1">Input group with success</label> -->
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+					<input type="email" class="form-control input-lg" placeholder="Email Address" required="" name="email">
+					<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
+				</div>
+			</div>
+			
 			<button type="submit" name="submit" class="btn btn-primary block full-width btn-lg m-b">Submit</button>
 			<br /><br />
+			<hr />
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="text-center"><a href="/">&laquo; Back to Site</a></p>
+				</div>
+			</div>
 		</fieldset>
 	</form>
 </div>
 
-<div class="text-center">Do not have an account? <a href="/choose-your-membership/" class="ulink">Sign up here.</a></div>
-<br />
-	<p class="text-center"><a href="/">&laquo; Back to Site</a></p>
+<!-- <div class="text-center">Do not have an account? <a href="/choose-your-membership/" class="ulink">Sign up here.</a></div> -->
+<!-- <br /> -->
+	<!-- <p class="text-center"><a href="/">&laquo; Back to Site</a></p> -->
 </div>
 </div>
-
+<script type='text/javascript' src='js/jquery.js'></script>
+<script src="https://use.fontawesome.com/ef891bd0fd.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
