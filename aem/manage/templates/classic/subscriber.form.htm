@@ -26,7 +26,22 @@
 	  <tr>
 		<td valign="top"></td>
 		<td>
-			<a href="#" onclick="$('statusadvanced').toggle(); return false">{"Advanced Options"|alang}</a>
+			<div id="liststatus1Stuff">
+			  <div>
+				<label>
+				  <input type="checkbox" name="instantresponders" id="instantrespondersField" value="1" />
+				  {"Send instant autoresponders"|alang}
+				</label>
+			  </div>
+			  <div style="display:none;">
+				<label>
+				  <input type="checkbox" name="lastmessage" id="lastmessageField" value="1" />
+				  {"Send the last broadcast campaign"|alang}
+				</label>
+			  </div>
+			</div>
+
+			<a href="#" style="display:none;" onclick="$('statusadvanced').toggle(); return false">{"Advanced Options"|alang}</a>
 		  <div id="statusadvanced" style="display:none; margin: 15px 0 15px 15px;">
 		  	{"Status"|alang}:
 		  	<br />
@@ -50,20 +65,6 @@
 					{"Send opt-in email (to confirm subscription)"|alang}
 				  </label>
 				  {"Subscriber will receive an opt-in email with a link to confirm list subscription(s)."|help}
-				</div>
-				<div id="liststatus1Stuff" style="display:none">
-				  <div>
-					<label>
-					  <input type="checkbox" name="instantresponders" id="instantrespondersField" value="1" />
-					  {"Send instant autoresponders"|alang}
-					</label>
-				  </div>
-				  <div>
-					<label>
-					  <input type="checkbox" name="lastmessage" id="lastmessageField" value="1" />
-					  {"Send the last broadcast campaign"|alang}
-					</label>
-				  </div>
 				</div>
 		  </div>
 		</td>
