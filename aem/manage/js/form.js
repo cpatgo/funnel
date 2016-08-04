@@ -1,4 +1,3 @@
-{include file="clipboard.min.js"}
 {include file="form.list.js"}
 {include file="form.form.js"}
 {include file="form.view.js"}
