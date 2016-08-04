@@ -2,7 +2,7 @@
 
 
 <div id="formview_integration" class="h2_wrap_static">
-    <h2>{"What type of integration would you like?"|alang}</h2>
+    <h2>{"Click the "Copy Form" button and this will save it so you can paste your this Campaign Form into your Website."|alang}</h2>
     <div class="h2_content">
         <div class="icon_box_selector">
             <a href="#" id="form_select_html" onclick="return form_view_switch('html');" class="selected" style="height:52px; width:250px;">
@@ -59,8 +59,8 @@
         <div style="float:right;display:none;">
             <a href="#" id="previewLink">{"Preview"|alang}</a>
         </div>
-        {"Character Set:"|alang}
-         <input type="text" id="charsetField" value="" size="6" />
+        <!-- {"Character Set:"|alang} -->
+         <input type="text" id="charsetField" style="display:none;" value="" size="6" />
 
         {if adesk_admin_ismaingroup()} 
         <input type="button" value="{'Update'|alang}" onclick="form_view_regenerate();" />
