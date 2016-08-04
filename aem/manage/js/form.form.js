@@ -99,6 +99,10 @@ function form_form_defaults() {
 		}
 	}
 
+	// Hide Unsubscibe and Other options by default
+	$("redirection_unsubscription").className = "adesk_hidden";
+	$("redirection_other").className = "adesk_hidden";
+
 	// Fields to request
 	$("custom_fields_trs_hr").className = "";
 	$("custom_fields_trs").className = "";
