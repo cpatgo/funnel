@@ -408,7 +408,7 @@ body .sp-input {
 }
 
 .menu .main {
-	background: none repeat scroll 0 0 #34495e;
+	background: none repeat scroll 0 0 #7b838b; 
     height: 100% !important;
     overflow-y: auto;
     padding-top: 20px;
