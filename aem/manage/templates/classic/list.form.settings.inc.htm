@@ -24,10 +24,10 @@
                 <a href="#" onclick="adesk_form_check_selection_element_all('otherpanel', false);return false;">{"None"|alang}</a>
               </td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td>{"Allow duplicate emails to subscribe"|alang}</td>
               <td><input type="checkbox" name="p_duplicate_subscribe" id="duplicatesubscribePField" value="1" /> {"Check this option if you would like to allow subscribers to subscribe multiple times to this list with the same email address."|help}</td>
-            </tr>
+            </tr> -->
             <tr>
               <td>{"Allow duplicate emails to be sent"|alang}</td>
               <td><input type="checkbox" name="p_duplicate_send" id="duplicatesendPField" value="1" /> {"Check this option if you would like to allow a single campaign to be sent to a single email address multiple times.  Multiple emails would only be sent if an email is subscribed multiple times to the same list."|help}</td>
@@ -36,10 +36,10 @@
               <td>{"Ask for reason for unsubscription"|alang}</td>
               <td><input type="checkbox" name="get_unsubscribe_reason" id="unsubreasonPField" value="1" /> {"If you check this option your subscribers will be asked why they unsubscribed after they unsubscribe from this list.  Subscribers do not necesarily have to give a reason when they unsubscribe - but this option asks them to submit their reason if they would like to share that information."|help}</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td>{"Send last campaign to new subscribers"|alang}</td>
               <td><input type="checkbox" name="send_last_broadcast" id="lastbroadcastPField" value="1" /> {"If you check this option all new subscribers will be sent a copy of the last campaign you sent immediately upon subscribing."|help}</td>
-            </tr>
+            </tr> -->
             <tr>
               <td>{"Use Captcha Image"|alang}</td>
               <td>
@@ -59,17 +59,17 @@
               <td>{"Do not show in public section"|alang}</td>
               <td><input type="checkbox" name="private" id="privatelistPField" value="1" /> {"There is a public section where your subscribers can manage their subscription and view past campaigns.  If you check this box this list will not be shown in the public section."|help}</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td>{"Default Subscriber Name"|alang}</td>
               <td><input type="text" name="to_name" id="tonameField" value="" size="30" /> {"If you personalize a campaign with the subscribers name - and a subscriber did not enter a name - it will use this default name as their name when sending that campaign."|help} </td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
               <td>{"Send copies of campaigns to"|alang}</td>
               <td>
                 <input name="carboncopy" type="text" id="carboncopyField" value="" size="30" />
                 {"All campaigns sent to this list will be sent to the provided email address(es). Separate multiple emails by comma"|help}
               </td>
-            </tr>
+            </tr> -->
             <tr>
               <td>{"Public URL Short Name"|alang}</td>
               <td>
@@ -83,14 +83,14 @@
                 <input name="subscription_notify" type="text" id="subscriptnotifyField" value="" size="30" />
                 {"Whenever a subscriber subscribes to this list, the system will send an email to these recipients. Separate multiple emails by comma"|help}
             </tr>
-            <tr>
+            <!-- <tr>
               <td>
                 {"Unsubscription notification email"|alang}<br /></td>
               <td>
                 <input name="unsubscription_notify" type="text" id="unsubscriptnotifyField" value="" size="30" />
                 {"Whenever a subscriber unsubscribes from this list, the system will send an email to these recipients. Separate multiple emails by comma"|help}
               </td>
-            </tr>
+            </tr> -->
 
 {if adesk_admin_ismaingroup()}
             <tr>
