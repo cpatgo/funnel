@@ -37,10 +37,19 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 
 <style type="text/css">
 	body {
-		background: url('images/global-business.jpg') center;
+		background: url('images/glclogin2.jpg');
 	    background-repeat: no-repeat;
 	    background-size: cover;
+		      -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
 	}
+
+	div.input-group { width:100%; }
+
 	a{
 		color: #2895f1 !important;
 	}
@@ -161,6 +170,23 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 			width: auto;
 		}
 
+		#login_form {
+			margin-top: 125px;
+			/* Fallback for web browsers that doesn't support RGBa */
+			background: rgb(0, 0, 0);
+
+			/* RGBa with 0.6 opacity */
+			background: rgba(0, 0, 0, 0.6);
+
+			/* For IE 5.5 - 7*/
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+
+			/* For IE 8*/
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+			border-radius:30px;
+		}
+
 
 </style>
 
@@ -168,51 +194,77 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 <body class="gray-bg">
 <div class="container-fluid">
 <div class="row col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-lg-4 col-lg-offset-4">
-	<div class="text-center">
+	<!-- <div class="text-center">
 		<h1 class="logo">
 			<a href="/">
                 <img src="<?php echo $site_url; ?>/wp-content/uploads/2016/06/glc-logoblk-250x50.png" alt="GLobal Learning Center" />
             </a>
 		</h1>
-	</div>
-	<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
+	</div> -->
+	
+
+<div id="box-content">
+<div class="clearfix"></div><br />
+
+	<form class="m-t boxed" role="form" action="login_check.php" method="post" id="login_form">
+		<fieldset>
+			<!-- <legend>Sign in</legend> -->
+			<div class="text-center">
+				<div class="logo">
+					<a href="/">
+		                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-200x100.png" alt="GLobal Learning Center" />
+		            </a>
+				</div>
+			</div>
+			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/choose-your-membership/" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
+			<br /><br />
+			<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
 	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  
 	<?php 
 		if( isset($pkg) && isset($email) ) {
 			echo '<div class="alert alert-success">'.$free_message.' </div>'; 
 		}
 	?>  
-
-<div id="box-content">
-<div class="clearfix"></div><br />
-<div class="text-center">Do not have an account? <a href="/choose-your-membership/" class="ulink" style="font-size: 16px">Sign up</a></div>
-	<form class="m-t boxed" role="form" action="login_check.php" method="post">
-		<fieldset>
-			<legend>Sign in</legend>
-			<div class="input-group">
-				<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-				<input type="text" class="form-control" placeholder="Username" required="" name="username">
-				<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
+			<div class="form-group has-feedback">
+				<!-- <label class="control-label" for="inputGroupSuccess1">Input group with success</label> -->
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+					<input type="text" class="form-control input-lg" placeholder="Username" required="" name="username">
+					<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Username" required="" name="username">
+			<div class="form-group has-feedback">
+				<!-- <label class="control-label" for="inputGroupSuccess1">Input group with success</label> -->
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+					<input type="password" class="form-control input-lg" placeholder="Password" required="" name="password">
+					<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="password" class="form-control" placeholder="Password" required="" name="password">
-			</div>
-			<button type="submit" name="submit" class="btn btn-primary block full-width btn-lg m-b">Sign in</button>
+			
+			
+			<button type="submit" name="submit" class="btn btn-primary block full-width btn-lg m-b"><i class="fa fa-sign-in"></i> Sign In </button>
 			<br /><br />
-			<p class="text-center"><a href="forgot_password.php">Forgot password?</a></p>
+			<hr />
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="text-center"><a href="/">&laquo; Back to Site</a></p>
+				</div>
+				<div class="col-sm-6">
+					<p class="text-center"><a href="forgot_password.php">Forgot Password?</a></p>
+				</div>
+			</div>
 		</fieldset>
 	</form>
 </div>
 
 
 <br />
-	<p class="text-center"><a href="/">&laquo; Back to Site</a></p>
+	
 </div>
 </div>
 <script type='text/javascript' src='js/jquery.js'></script>
+<script src="https://use.fontawesome.com/ef891bd0fd.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
