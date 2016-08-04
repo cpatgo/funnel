@@ -49,13 +49,13 @@ list_table.setcol(3, function(row) {
 	return Builder.node("div", { align: "center" }, [ Builder._text( adesk_number_format(row.subscribers, decimalDelim, commaDelim) ) ]);
 });
 
-// list_table.setcol(4, function(row) {
-// 	return Builder.node("div", { align: "center" }, [ Builder._text( adesk_number_format(row.campaigns, decimalDelim, commaDelim) ) ]);
-// });
+list_table.setcol(4, function(row) {
+	return Builder.node("div", { align: "center" }, [ Builder._text( adesk_number_format(row.campaigns, decimalDelim, commaDelim) ) ]);
+});
 
-// list_table.setcol(5, function(row) {
-// 	return Builder.node("div", { align: "center" }, [ Builder._text( adesk_number_format(row.emails, decimalDelim, commaDelim) ) ]);
-// });
+list_table.setcol(5, function(row) {
+	return Builder.node("div", { align: "center" }, [ Builder._text( adesk_number_format(row.emails, decimalDelim, commaDelim) ) ]);
+});
 
 function list_list_anchor() {
 	return sprintf("list-%s-%s-%s", list_list_sort, list_list_offset, list_list_filter);
