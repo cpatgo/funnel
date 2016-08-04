@@ -3,7 +3,6 @@
 {include file="form.view.js"}
 {include file="form.delete.js"}
 {include file="form.search.js"}
-// {include file="clipboard.min.js"}
 
 var form_listfilter = {jsvar var=$listfilter};
 
