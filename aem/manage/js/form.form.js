@@ -76,7 +76,7 @@ function form_form_defaults() {
 
 	$("form_id").value = 0;
 	$('nameField').value = '';
-	$('type').value = 'both';
+	$('type').value = 'subscribe';
 	$('allowselFieldNo').checked = true;
 	$('ask4fnameField').checked = true;
 	$('ask4lnameField').checked = true;
