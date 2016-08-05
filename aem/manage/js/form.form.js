@@ -11,8 +11,8 @@ var form_form_custommessage_unsub3 = '{"Your unsubscription has been confirmed."
 var form_form_custommessage_unsub4 = '{"An error occurred while trying to unsubscribe:"|alang|js}';
 var form_form_custommessage_up1 = '{"Your request to update subscription details has been processed."|alang|js}';
 var form_form_custommessage_up2 = '{"Your subscription details have been updated."|alang|js}';
-var form_form_add = '{"Add & Continue"|alang|js}';
-var form_form_edit = '{"Update & Continue"|alang|js}';
+var form_form_add = '{"Create New Form & Continue"|alang|js}';
+var form_form_edit = '{"Update & Continue "|alang|js}';
 
 {jsvar name=fields var=$fields}
 
