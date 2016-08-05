@@ -178,7 +178,7 @@ function list_form_load(id) {
 		adesk_ajax_call_cb("awebdeskapi.php", "list.list_select_row", list_form_load_cb, id);
 	}
 	else {
-		$("form_submit").className = "adesk_button_add";
+		$("form_submit").className = "adesk_button_add glc_button glc_btn_large";
 		$("form_submit").value = jsAdd;
 		$("form").className = "adesk_block";
 		$("external").className = "adesk_hidden";
