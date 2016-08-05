@@ -2,3 +2,4 @@
 
 [02-Aug-2016 21:26:19 UTC] 2016-08-02 21:26:19 wpMandrill::getCurrentStats (Empty Transient. Getting persistent copy)
 
+[04-Aug-2016 03:33:40 UTC] WordPress database error Deadlock found when trying to get lock; try restarting transaction for query DELETE FROM `wpeu_options` WHERE `option_name` = '_wp_session_a6ea0ec586c4d87f4405333577bb685d' made by shutdown_action_hook, do_action('shutdown'), call_user_func_array, wp_session_write_close, WP_Session->write_data, delete_option

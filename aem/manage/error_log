@@ -2,3 +2,5 @@
 [01-Aug-2016 17:00:52 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132938815 bytes) in Unknown on line 0
 [01-Aug-2016 17:00:54 America/New_York] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/identifz/public_html/glcv2/aem/cache/admin/classic/%%74^748^748D596E%%main.htm.php on line 34
 [01-Aug-2016 18:00:12 America/New_York] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/identifz/public_html/glcv2/aem/cache/admin/classic/%%2A^2A6^2A635D2E%%form.view.htm.php on line 39
+[04-Aug-2016 17:45:30 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 145031904 bytes) in Unknown on line 0
+[04-Aug-2016 17:53:47 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 144958433 bytes) in Unknown on line 0
