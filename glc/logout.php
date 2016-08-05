@@ -22,9 +22,9 @@ if(isset($_SESSION['temp_dennisn_user_login']))
 
 	session_unset();
 	((is_null($___mysqli_res = mysqli_close($con))) ? false : $___mysqli_res);
-	header('Location: login.php');
+	header('Location: /');
 	echo '<script type="text/javascript">' . "\n";
-	echo 'window.location="login.php";';
+	echo 'window.location="/";';
 	echo '</script>';
 
 	
@@ -40,9 +40,9 @@ else
 	
 	session_unset();
 	((is_null($___mysqli_res = mysqli_close($con))) ? false : $___mysqli_res);
-	header('Location: login.php');
+	header('Location: /');
 	echo '<script type="text/javascript">' . "\n";
-	echo 'window.location="login.php";';
+	echo 'window.location="/";';
 	echo '</script>'; 
 	wp_logout();	
 }

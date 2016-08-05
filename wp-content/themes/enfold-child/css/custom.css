@@ -23,6 +23,48 @@
     border-width: 5px !important;
 }
 
+.breadcrumb .sep {
+    display: block;
+    overflow: hidden;
+    width: 16px !important;
+    line-height: 1 !important;
+}
+
+td.avia-center-col { vertical-align: middle; }
+
+td.avia-desc-col { 
+    text-align: right !important;
+    text-transform: none; 
+}
+
+#browsefeatures div.hr{ margin-top:-42px; z-index:-1;  }
+#browsefeatures div.hr span.hr-inner { border-color: #333 !important; border-style: dashed !important; }
+#browsefeatures .avia-button:hover { opacity: 1 !important; }
+
+.scroll-down-link { display: none; visibility: hidden; }
+
+/*.flex_column_table  { box-shadow: 0 0 20px rgba(0,0,0,0.5); }*/
+#glclibrary-course-list .av_one_third {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+    border-color: rgba(62,67,78,0.5);
+    /*border-radius: 25px 25px 25px 25px;*/
+}
+
+#glclibrary-course-list .av_one_third .av-special-heading-tag { background: #208bce; padding:10px 0px; color: #fff !important; }
+
+#glclibrary-course-list .avia-image-container-inner { margin-top: 40px; }
+
+/*#glclibrary-course-list .flex_column_table .av_one_third .avia-image-container {
+    border-radius: 25px 25px 0px 0px;
+}*/
+
+.main_color .pricing-table>li:nth-child(even).pricing-features { color: #222; font-weight: bold; }
+
+#glclibrary-course-list .av-subheading_below{
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+}
+
 .pricing-table-wrap > .pricing-table > li.pricing-features{
     font-size: 14px;
     padding-left: 10%;
@@ -30,6 +72,13 @@
 
 .pricing-table-wrap > .pricing-table > li span.include_option{
     position:relative;
+}
+
+aside.sidebar > section.widget{
+    border: 1px solid #f1f1f1 !important;
+    margin-bottom: 20px;
+    padding: 20px 26px;
+    border-radius: 7px;
 }
 
 .pricing-table-wrap > .pricing-table > li span.include_option:before {
@@ -41,6 +90,16 @@
     width: 20px;
     height: 19px;
 }
+
+.pricing-table-wrap > .pricing-table > li span.exclude_option:before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    background-image: url(//cdn.elegantthemes.com/images/package_no_icon.png);
+    width: 20px;
+    height: 19px;
+ }
 
 .pricing-table-wrap > .pricing-table > .avia-heading-row > .first-table-item {
     text-transform: Uppercase;
@@ -298,8 +357,16 @@ span.breadcrumb-title {
     color: #333;
 }
 
+.sidebar .widget:first-child { padding-top:20px !important; }
+
+h3.widgettitle{
+    order-bottom: 1px solid #999;
+    padding-bottom: 4px;
+}
+
 .breadcrumb.breadcrumbs.avia-breadcrumbs {
     font-size: 14px;
+    padding-top: 20px;
 }
 
 span.sep {
