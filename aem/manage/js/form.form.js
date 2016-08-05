@@ -185,7 +185,7 @@ function form_form_load(id) {
 		customFieldsObj.selection = [];
 		customFieldsObj.fetch(0);
 
-		$("form_submit").className = "adesk_button_add glc_button glc_btn_large";
+		$("form_submit").className = "adesk_button_add glc_button";
 		$("form_submit").value = form_form_add;
 		$("form").className = "adesk_block";
 		$('nameField').focus();
