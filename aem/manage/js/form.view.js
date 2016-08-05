@@ -10,6 +10,7 @@ var form_view_str_sub         = '{"Subscribe"|alang|js}';
 var form_view_str_unsub       = '{"Unsubscribe"|alang|js}';
 var form_view_str_link        = '{"Click Here To Subscribe"|alang|js}';
 
+
 var form_view_charset         = _charset;
 
 {literal}
