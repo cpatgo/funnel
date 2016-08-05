@@ -54,7 +54,7 @@ function subscriber_form_load(id) {
 	//$$(".listField").each(function(e) { e.checked = false; });
 	customFieldsObj.fetch(0);
 	//update_custom_fields_checkbox(0);
-	$("form_submit").className = "adesk_button_add glc_btn_large";
+	$("form_submit").className = "adesk_button_add glc_button glc_btn_large";
 	$("form_submit").value = jsAdd;
 	$("form").className = "adesk_block";
 	$("emailField").focus();
