@@ -46,9 +46,9 @@
 
   <br />
   {if $admin.id == 1}
-  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
+  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
   {/if}
   {if $admin.id == 1}
-  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
+  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
   {/if}
 </div>
