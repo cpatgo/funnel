@@ -9,6 +9,7 @@ var form_view_str_lists       = '{"Select Lists:"|alang|js}';
 var form_view_str_sub         = '{"Subscribe"|alang|js}';
 var form_view_str_unsub       = '{"Unsubscribe"|alang|js}';
 var form_view_str_link        = '{"Click Here To Subscribe"|alang|js}';
+var form_view_str_code 		  = '';
 
 
 var form_view_charset         = _charset;
@@ -321,6 +322,7 @@ function form_view_generate_html(arr) {
 	);
 	// copy it to code
 	code.value = preview.innerHTML;
+	form_view_str_code = code.value;
 }
 
 function form_view_generate_xml(arr) {
