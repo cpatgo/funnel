@@ -54,9 +54,9 @@
 
   <br />
   {if $admin.pg_list_bounce}
-  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
+  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
   {/if}
   {if $admin.pg_list_bounce}
-  <input type="button" id="list_delete_button" value="{"Delete Selected"|alang}" onclick="adesk_ui_anchor_set('delete_multi')" />
+  <input type="button" value="{"Add"|alang}" onclick="adesk_ui_anchor_set('form-0')" />
   {/if}
 </div>
