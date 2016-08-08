@@ -644,7 +644,10 @@ body .datepicker.dropdown-menu, #top .main_color #tribe-bar-form input[type='tex
     min-width: 200px;
 }
 
-
+.main-label {
+    text-align: center;
+    background: url(/wp-content/uploads/2016/08/glchubbgbluelabel.png);
+}
 
 /*
 Desktop Styles
