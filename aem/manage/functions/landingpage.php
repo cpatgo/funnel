@@ -3,6 +3,9 @@
 require_once awebdesk_classes("select.php");
 require_once awebdesk_functions("process.php");
 
+$action = $_POST['action'];
+if($action === 'list_insert_post') list_insert_post();
+
 function list_insert_post() {
 	// user access
 	$admin = adesk_admin_get();
@@ -29,7 +32,7 @@ function list_insert_post() {
 	return adesk_ajax_api_added(_a("Landing Page"), array("id" => $id));
 }
 
-function landingpage($id) {
+function landingpage_post_prepare($id) {
 
 	$admin = adesk_admin_get();
 	$r = array();
