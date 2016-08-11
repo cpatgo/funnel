@@ -1,6 +1,0 @@
-{"Your password has been reset to:"|alang}
-
-{$pass}
-
-{"To log into the system visit:"|alang}
-{$site_link}
