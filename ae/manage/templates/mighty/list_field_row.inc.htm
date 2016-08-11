@@ -1,6 +1,0 @@
-{foreach from=$f.lists item=l name=ls}
-	<span style="cursor: pointer;">{$l.title}</span>
-	{if !$smarty.foreach.ls.last}&middot;{/if}
-{foreachelse}
-	<em>{"This field is not used in any list."|alang}</em>
-{/foreach}
