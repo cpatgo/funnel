@@ -36,10 +36,12 @@
 			<div class="campaign_input border_top_5" style="padding:5px;">
 				<div style="padding:10px; padding-bottom:1px; background:#FFFFFF; font-size:14px;" class="border_5">
 					{foreach from=$lists item=e}
-					<label>
-						<div style="float:left; margin-top:-2px; margin-right:5px;"><input type="checkbox" name="listid"  value="{$e.id}" class="listsList" onclick="campaign_filters(); campaign_different();"></div>
-						<div style="margin-bottom:10px;">{$e.name|truncate:100} <span style="color:#666;">({$e.count} {"subscribers"|alang})</span></div>
-					</label>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="listid"  value="{$e.id}" class="listsList form-control" onclick="campaign_filters(); campaign_different();">
+							{$e.name|truncate:100} <span style="color:#666;">({$e.count} {"subscribers"|alang})</span>
+						</label>
+					</div>
 					{/foreach}
 				</div>
 			</div>

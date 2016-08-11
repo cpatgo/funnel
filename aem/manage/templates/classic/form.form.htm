@@ -7,12 +7,11 @@
       <h2 onclick="adesk_dom_toggle_class('formlistpanel', 'h2_content_invis', 'h2_content');">{"Form Settings"|alang}</h2>
       <div id="formlistpanel" class="h2_content">
 
-        <table border="0" cellspacing="0" cellpadding="5">
+        <table border="0" cellspacing="0" cellpadding="5" class="table-width">
           <tr>
-            <td><label for="nameField">{"Form Name"|alang}</label></td>
+            <td><label for="nameField">{"Form Name"|alang} {"As you create different campaigns - you will want to keep track of each Optin form with a unique name. This way you can track the success of email campaign."|help}</label></td>
             <td>
-            	<input type="text" name="name" id="nameField" value="" size="45" />
-              {"As you create different campaigns - you will want to keep track of each Optin form with a unique name. This way you can track the success of email campaign."|help}
+            	<input type="text" name="name" id="nameField" value="" size="45" class="form-control" />
              </td>
           </tr>
           <tr valign="top">
@@ -23,7 +22,7 @@
               <label for="type">{"Form Options"|alang}</label>
             </td>
             <td>
-							<select name="type" id="type" onchange="form_options_type_change(this.value);">
+							<select name="type" id="type" onchange="form_options_type_change(this.value);" class="form-control">
 							  <!-- <option value="both">{"Subscribe &amp; Unsubscribe"|alang}</option> -->
 							  <option value="subscribe">{"Subscribe Only"|alang}</option>
 							  <option value="unsubscribe">{"Unsubscribe Only"|alang}</option>
@@ -88,7 +87,7 @@
 							<div id="optinoutchoose" class="form_confirmation">
           			<div>{"Send this list's confirmation email one time for all lists instead of indiviual confirmations for each list."|alang}</div>
           			<div>
-            			<select id="optinoutidField" name="optid" size="1">
+            			<select id="optinoutidField" name="optid" size="1" class="form-control">
 										{foreach from=$optsetsList item=o}
               				<option value="{$o.id}">{$o.name}</option>
 										{/foreach}

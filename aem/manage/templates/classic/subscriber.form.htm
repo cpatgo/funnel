@@ -1,7 +1,7 @@
 <div id="form" class="adesk_hidden">
   <form method="POST" onsubmit="subscriber_form_save(subscriber_form_id); return false">
 	<input type="hidden" name="id" id="form_id" />
-	<table border="0" cellspacing="0" cellpadding="5">
+	<table border="0" cellspacing="0" cellpadding="5" class="table-width">
 	  <tr>
 		<td valign="top">{"Subscribed to Lists"|alang}</td>
 		<td>
@@ -71,15 +71,15 @@
 	  </tr>
 	  <tr>
 		<td valign="top">{"Email"|alang}</td>
-		<td><input type="text" value="" name="email" id="emailField" /></td>
+		<td><input type="text" value="" name="email" id="emailField" class="form-control" /></td>
 	  </tr>
 	  <tr>
 		<td valign="top">{"First Name"|alang}</td>
-		<td><input type="text" value="" name="first_name" id="firstnameField" /></td>
+		<td><input type="text" value="" name="first_name" id="firstnameField" class="form-control"/></td>
 	  </tr>
 	  <tr>
 		<td valign="top">{"Last Name"|alang}</td>
-		<td><input type="text" value="" name="last_name" id="lastnameField" /></td>
+		<td><input type="text" value="" name="last_name" id="lastnameField" class="form-control" /></td>
 	  </tr>
 
 	  <tbody id="custom_fields_table"></tbody>
@@ -87,10 +87,21 @@
 	</table>
 
 	<br />
-	<div>
-	  <input type="button" id="form_view" class="adesk_button_view" value="{"View this Subscriber"|alang}" onclick="window.location = 'desk.php?action=subscriber_view&id=' + subscriber_form_id;" style="float: right;" />
-	  <input type="button" id="form_back" class="adesk_button_back glc_button_back glc_btn_large" value="{"Back"|alang}" onclick="window.history.go(-1)" />
-	  <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="subscriber_form_save(subscriber_form_id)" />
+	<div class="h2_wrap_static">
+	  <div class="adesk_blockquote">
+	    <table border="0" cellspacing="0" cellpadding="5" class="table-width">
+	      <tbody>
+	        <tr>
+	          <td colspan="2" style="text-align: center;padding: 0;">
+	            <input type="button" id="form_back" class="adesk_button_back glc_button_back glc_btn_large" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+	            <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="subscriber_form_save(subscriber_form_id)" />
+	            <br>
+	            <input type="button" id="form_view" class="adesk_button_view" value="{"View this Subscriber"|alang}" onclick="window.location = 'desk.php?action=subscriber_view&id=' + subscriber_form_id;" />
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div>
 	</div>
 	<input type="submit" style="display:none"/>
   </form>

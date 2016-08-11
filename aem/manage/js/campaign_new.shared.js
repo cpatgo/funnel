@@ -2,12 +2,12 @@ var campaign_obj = {jsvar var=$campaign};
 
 var campaign_step = {jsvar var=$step};
 
-var campaign_header_str_type = '{"Type"|alang|js}';
-var campaign_header_str_list = '{"Lists"|alang|js}';
-var campaign_header_str_message = '{"Message"|alang|js}';
-var campaign_header_str_messages = '{"Messages"|alang|js}';
-var campaign_header_str_summary = '{"Summary & Options"|alang|js}';
-var campaign_header_str_done = '{"Done"|alang|js}';
+var campaign_header_str_type = '{"1. Type"|alang|js}';
+var campaign_header_str_list = '{"2. Lists"|alang|js}';
+var campaign_header_str_message = '{"3. Message"|alang|js}';
+var campaign_header_str_messages = '{"3. Messages"|alang|js}';
+var campaign_header_str_summary = '{"4. Summary & Options"|alang|js}';
+var campaign_header_str_done = '{"5. Done"|alang|js}';
 var campaign_header_str_noname = '{"Create a New Campaign"|alang|js}';
 var campaign_header_str_name = '{"Campaign: %s"|alang|js}';
 
@@ -109,12 +109,14 @@ function campaign_header_build(highlight, id) {
 		inner = campaign_header_str_type;
 	div = Builder.node("div", inner);
 	if (highlight == 0)
-		div.className = "selected";
+		div.className = "selected test";
 	divs.push(div);
 
 	if (max >= 1 && max < 4)
+		
 		inner = Builder.node("a", { href: sprintf("desk.php?action=campaign_new_list&id=%s", id) }, [ campaign_header_str_list ]);
 	else
+	
 		inner = campaign_header_str_list;
 
 	div = Builder.node("div", inner);
@@ -178,11 +180,11 @@ function campaign_header(highlight, id) {
 
 function campaign_header_max() {
 	switch (campaign_obj.laststep) {
-		case "type":
+		case "list":
 		default:
 			return 0;
 
-		case "list":
+		case "type":
 			return 1;
 
 		case "template":

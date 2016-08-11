@@ -1,6 +1,6 @@
         <div id="redirections" class="adesk_block">
 
-          <table border="0" cellspacing="0" cellpadding="5">
+          <table border="0" cellspacing="0" cellpadding="5" class="table-width">
           	<tbody id="redirection_subscription">
 	            <tr>
 	              <td valign="top"><strong>{"Subscription"|alang}</strong></td>
@@ -9,7 +9,7 @@
 	            <tr>
 	              <td valign="top"><label for="sub1">{"Successful Subscription"|alang}</label></td>
 	              <td valign="top">
-		              <select name="sub1" id="sub1" onchange="form_completion_change('sub1_' + this.value)">
+		              <select name="sub1" id="sub1" onchange="form_completion_change('sub1_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -24,7 +24,7 @@
 	            <tr>
 	              <td valign="top"><label for="sub2">{"Awaiting Confirmation"|alang}</label></td>
 	              <td valign="top">
-		              <select name="sub2" id="sub2" onchange="form_completion_change('sub2_' + this.value)">
+		              <select name="sub2" id="sub2" onchange="form_completion_change('sub2_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -39,7 +39,7 @@
 	            <tr>
 	              <td valign="top"><label for="sub3">{"Confirmed Subscription"|alang}</label></td>
 	              <td valign="top">
-		              <select name="sub3" id="sub3" onchange="form_completion_change('sub3_' + this.value)">
+		              <select name="sub3" id="sub3" onchange="form_completion_change('sub3_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -54,7 +54,7 @@
 	            <tr>
 	              <td valign="top"><label for="sub4">{"Subscription Error"|alang}</label></td>
 	              <td valign="top">
-		              <select name="sub4" id="sub4" onchange="form_completion_change('sub4_' + this.value)">
+		              <select name="sub4" id="sub4" onchange="form_completion_change('sub4_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -76,7 +76,7 @@
 	            <tr>
 	              <td valign="top"><label for="unsub1">{"Successful UnSubscription"|alang}</label></td>
 	              <td valign="top">
-		              <select name="unsub1" id="unsub1" onchange="form_completion_change('unsub1_' + this.value)">
+		              <select name="unsub1" id="unsub1" onchange="form_completion_change('unsub1_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -91,7 +91,7 @@
 	            <tr>
 	              <td valign="top"><label for="unsub2">{"Awaiting Confirmation"|alang}</label></td>
 	              <td valign="top">
-		              <select name="unsub2" id="unsub2" onchange="form_completion_change('unsub2_' + this.value)">
+		              <select name="unsub2" id="unsub2" onchange="form_completion_change('unsub2_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -106,7 +106,7 @@
 	            <tr>
 	              <td valign="top"><label for="unsub3">{"Confirmed UnSubscription"|alang}</label></td>
 	              <td valign="top">
-		              <select name="unsub3" id="unsub3" onchange="form_completion_change('unsub3_' + this.value)">
+		              <select name="unsub3" id="unsub3" onchange="form_completion_change('unsub3_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -121,7 +121,7 @@
 	            <tr>
 	              <td valign="top"><label for="unsub4">{"UnSubscription Error"|alang}</label></td>
 	              <td valign="top">
-		              <select name="unsub4" id="unsub4" onchange="form_completion_change('unsub4_' + this.value)">
+		              <select name="unsub4" id="unsub4" onchange="form_completion_change('unsub4_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -143,7 +143,7 @@
 	            <tr>
 	              <td valign="top"><label for="up1">{"Request to update subscription details"|alang}</label></td>
 	              <td valign="top">
-		              <select name="up1" id="up1" onchange="form_completion_change('up1_' + this.value)">
+		              <select name="up1" id="up1" onchange="form_completion_change('up1_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
@@ -158,7 +158,7 @@
 	            <tr>
 	              <td valign="top"><label for="up2">{"Updated subscription details"|alang}</label></td>
 	              <td valign="top">
-		              <select name="up2" id="up2" onchange="form_completion_change('up2_' + this.value)">
+		              <select name="up2" id="up2" onchange="form_completion_change('up2_' + this.value)" class="form-control">
 						<option value="default">{"Default Message"|alang}</option>
 						<option value="custom">{"Custom Message"|alang}</option>
 						<option value="redirect" selected="selected">{"Redirect to URL"|alang}</option>
