@@ -2,11 +2,13 @@
 
 function landingpage_form_save() {
 	var post = adesk_form_post($("form"));
+	console.log(post);
 	adesk_ajax_post_cb("awebdeskapi.php", "landingpage.landingpage_insert_post", landingpage_form_save_cb, post);
 }
 
 function landingpage_form_save_cb(xml) {
 	var ary = adesk_dom_read_node(xml);
+	console.log(ary);
 	adesk_ui_api_callback();
 
 	if (ary.succeeded != "0") {
