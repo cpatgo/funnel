@@ -10,7 +10,8 @@
  <meta name="robots" content="noindex,nofollow">
     {* Don't escape site_name here, since the title element is CDATA *}
     <title>{$site.site_name} - {$pageTitle}</title>
-    <script type="text/javascript" src="../awebdesk/js/jquery-1.2.6.min.js"></script>
+    <!-- <script type="text/javascript" src="../awebdesk/js/jquery-1.2.6.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     {adesk_js lib="scriptaculous/prototype.js"}
     {adesk_js lib="scriptaculous/scriptaculous.js"}
 
@@ -22,8 +23,9 @@
     {foreach from=$header_lines item=line}
     {$line}
     {/foreach}
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         <link href="templates/classic/css/default.css" rel="stylesheet" type="text/css" />
- 
       <link media="screen" href="templates/classic/css/grids-min.css" type="text/css" rel="stylesheet" />
   <link media="screen" href="templates/classic/css/awebdeskstyle.css" type="text/css" rel="stylesheet" />
   <link media="print" href="templates/classic/css/print.css" type="text/css" rel="stylesheet" />
@@ -71,195 +73,182 @@
 {/if}
       -->
     </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
   </head>
   {php} flush(); {/php}
 <body class="yui-skin-sam">
     <script language="JavaScript" type="text/javascript" src="../awebdesk/editor_tiny/tiny_mce.js?_v=3.4.3.2"></script>
-
+<div class="container-fluid">
+<div class="row">
     <div id="adesk_loading_bar" class="adesk_hidden"><span id="adesk_loading_text">{"Loading..."|alang}</span></div>
     <div id="adesk_result_bar" class="adesk_hidden"><span id="adesk_result_text">{"Changes Saved."|alang}</span></div>
     <div id="adesk_error_bar" class="adesk_hidden"><span id="adesk_error_text">{"Error Occurred!"|alang}</span></div>
 
-
-
-
     {if isset($site.templates)}
-    {$site.templates.precontent}
+      {$site.templates.precontent}
     {/if}
     
-    
-    
-    
-    
-    
-    
-    
-    
+<div class="yui-t2" id="doc3">
+  <div id="bd" class="col-md-12">
+    <div class="row">
 
-  <div class="yui-t2" id="doc3">
-    <div id="bd">
-      <div id="yui-main">
-        <div class="yui-b">
-          
- 
-<div id="content">
-
-<div id="admin_content">
-     
-  <div id="admin_side" style="width:100%;">
- 
- 
-        { include file=$content_template }
- </div>
-    </div>
-    
-    
-    
-              </div>
-        </div>
-     
-      </div>
-     
-    
-    
 {if isset($side_content_template)}
     {if $side_content_template != ''}
-          <div class="yui-b" id="sidebar">
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
+    <div class="col-md-2"> 
+      <div class="panel" id="sidebar">
         <div class="yui-g" id="sub_submenu">
-        { include file=$side_content_template }
-    </div></div>
-    {/if}
-    
- 
-     
+          { include file=$side_content_template }
+        </div>
+      </div>
+    </div>         
+    {/if}     
 {/if}
+
 {if (!$side_content_template) }
-          <div class="yui-b" id="sidebar" >
-          
- 
-          
-        <div class="yui-g" id="sub_submenu">
-     <h2>{"Create Campaign"|alang}</h2>
-     
-     
-<ul> 
+  <div class="col-md-2">
+    <div class="panel" id="sidebar" >
 
-{if $admin.pg_list_add}
-    <li class="special small"><a href="desk.php?action=list#form-0"><img class="va" src="css/images/addnewlist.png" /> {"Add New List"|alang}</a></li>
-{/if}
-{if $canAddSubscriber}  
-    <li class="special small">
-        <a href="desk.php?action=subscriber#form-0"><img  class="va" src="images/user_add-32.png" width="16" height="16" /> 
-            {"Add Subscriber"|alang}, or
-        </a>
-    </li>  
-{/if}
-{if $canImportSubscriber}
-    <li class="special small">
-        <a href="desk.php?action=subscriber_import"><img  class="va" src="images/users4_add-32.png" width="16" height="16" /> 
-            {"Import Subscribers"|alang}
-        </a>
-    </li>     
-{/if}
-{if $admin.pg_message_add}
-    <li class="special small">
-            <a href="desk.php?action=campaign_new"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
-            {"Create Campaign"|alang}</a>
-    </li>
-{/if}
+    <div class="yui-g" id="sub_submenu">
+      <h2>{"Quick Links"|alang}</h2>     
+      <ul> 
 
-{if $admin.pg_form_add || $admin.pg_form_edit || $admin.pg_form_delete}
-    {if $style_integration != ''}
+        {if $admin.pg_list_add}
+        <li class="special small"><a href="desk.php?action=list#form-0"><img class="va" src="css/images/addnewlist.png" /> {"Add New List"|alang}</a></li>
+        {/if}
+
+        {if $canAddSubscriber}  
+        <li class="special small">
+            <a href="desk.php?action=subscriber#form-0"><img  class="va" src="images/user_add-32.png" width="16" height="16" /> 
+                {"Add Subscriber"|alang}, or
+            </a>
+        </li>  
+        {/if}
+
+        {if $canImportSubscriber}
+        <li class="special small">
+            <a href="desk.php?action=subscriber_import"><img  class="va" src="images/users4_add-32.png" width="16" height="16" /> 
+                {"Import Subscribers"|alang}
+            </a>
+        </li>     
+        {/if}
+
+        {if $admin.pg_message_add}
+        <li class="special small">
+          <a href="desk.php?action=campaign_new"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
+                {"Create Campaign"|alang}</a>
+        </li>
+        {/if}
+
+        {if $admin.pg_form_add || $admin.pg_form_edit || $admin.pg_form_delete}
+          {if $style_integration != ''}
+  
         <li class="special small">
             <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Forms"|alang}</a> 
         </li>
-    {else}
+      
+          {else}
+    
         <li class="special small">
             <a href="desk.php?action=form#list-01-0-0"><img class="va" alt="Menu_dashboard" src="css/images/integration2.png" />{"Forms"|alang}</a> 
         </li>
-    {/if}
-{/if}
 
-{if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
-    <li class="special small">
-        <a href="desk.php?action=campaign#list-01D-0-0"><img class="va" src="css/images/campaign.png" /> {"View / Send Drafts"|alang}</a> 
-    </li>
-{/if}
-{if $admin.pg_reports_campaign}   
-    <li class="special small">
-        <a href="desk.php?action=campaign&reports=1"><img  class="va" src="images/chart_pie2-32-32.png" width="16" height="16" /> 
-            {"Campaign Reports"|alang}
-        </a>
-    </li> 
-{/if}
-  
-    <li class="special small">
-        <a href="/builder" class="glc_button" style="color: #fff !important;">{"Back to Builder"|alang}</a> 
-    </li>
-    <li class="special small">
-        <a href="/myhub" class="glc_button" style="color: #fff !important;">{"My Hub"|alang}</a> 
-    </li>
-      
-
-          </ul>
- 
-</div>
-
-{if adesk_admin_ismain()}
-<div class="yui-g" id="sub_submenu">
-  {if $processesCnt or $pausedProcessesCnt}
-    <h2>{"Ongoing Processes"|alang}</h2>
-    <ul>
-      {if $processesCnt}
-          <li>
-            <a href="desk.php?action=processes#list-01-0-0"><img class="va" src="css/images/currentprocesses.png" /> {"Current Processes (%s)"|alang:$processesCnt}</a>
-          </li>
-      {/if}
-      {if $pausedProcessesCnt}
-          <li>
-            <a href="desk.php?action=processes&status=paused#list-01-0-0"><img class="va" src="css/images/pausedprocesses.png" /> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a>
-          </li>
-      {/if}
-    </ul>
-  {else if}
-    <h2>{"Ongoing Processes"|alang}</h2>
-    <ul>
-      <li style="color:red; font-weight:bolder;">No Active process Now</li>
-    </ul>
-</div>
-  {/if}
-{/if}
-
-</div>
-{/if}
- 
- </div>
-    
-    
-    
-    
-    
-    
-
- 
-     
-
-
-        {if isset($site.templates)}
-        {$site.templates.postcontent}
+          {/if}
         {/if}
 
+        {if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
+        <li class="special small">
+            <a href="desk.php?action=campaign#list-01D-0-0"><img class="va" src="css/images/campaign.png" /> {"View / Send Drafts"|alang}</a> 
+        </li>
+        {/if}
+
+        {if $admin.pg_reports_campaign}   
+        <li class="special small">
+          <a href="desk.php?action=campaign&reports=1"><img  class="va" src="images/chart_pie2-32-32.png" width="16" height="16" /> 
+              {"Campaign Reports"|alang}
+          </a>
+        </li> 
+        {/if}
+
+        <li class="special small">
+            <a href="/builder" class="glc_button" style="color: #fff !important;">{"Back to Builder"|alang}</a> 
+        </li>
+        <li class="special small">
+            <a href="/myhub" class="glc_button" style="color: #fff !important;">{"My Hub"|alang}</a> 
+        </li>      
+      </ul>
+
+    </div> <!-- sub_submenu -->
+
+
+    {if adesk_admin_ismain()}
+    <div class="yui-g" id="sub_submenu">
+      {if $processesCnt or $pausedProcessesCnt}
+      <h2>{"Ongoing Processes"|alang}</h2>
+      <ul>
+        {if $processesCnt}
+            <li>
+              <a href="desk.php?action=processes#list-01-0-0"><img class="va" src="css/images/currentprocesses.png" /> {"Current Processes (%s)"|alang:$processesCnt}</a>
+            </li>
+        {/if}
+        {if $pausedProcessesCnt}
+            <li>
+              <a href="desk.php?action=processes&status=paused#list-01-0-0"><img class="va" src="css/images/pausedprocesses.png" /> {"Paused Processes (%s)"|alang:$pausedProcessesCnt}</a>
+            </li>
+        {/if}
+      </ul>
+    
+      {else if}
+
+      <h2>{"Ongoing Processes"|alang}</h2>
+      <ul>
+        <li style="color:red; font-weight:bolder;">No Active process Now</li>
+      </ul>
+    </div>
+    {/if}
+  
+  {/if}
+  </div>
+  </div>
+{/if}
+
+
+  <!-- Body Content -->
+  <div id="" class="col-md-10">
+    <!-- <div class=""> -->
+      <div id="content" class="panel">
+        <div id="admin_content">
+          <div id="admin_side" style="width:100%;">
+            { include file=$content_template }
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <!-- End Body Content -->
+    
+    
+
+
+</div> 
+</div>
  
+    
+</div>
+ 
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-md-12">
+        {if isset($site.templates)}
+          {$site.templates.postcontent}
+        {/if}
+      </div>
+    </div>
+  </div><!-- container-fluid -->
+
+
 
 <script type="text/javascript">
 adesk_tooltip_init();
@@ -267,7 +256,9 @@ adesk_tooltip_init();
 var printAPIerrors = adesk_error_show;
 </script>
 
-{if $demoMode == 1}<h1 style="color:#FF0000"><strong>{"This is a demo"|alang}</strong> - {"Certain features such as sending email are disabled."|alang}</h1>{/if}
+{if $demoMode == 1}
+<h1 style="color:#FF0000"><strong>{"This is a demo"|alang}</strong> - {"Certain features such as sending email are disabled."|alang}</h1>
+{/if}
 
 </body>
 </html>

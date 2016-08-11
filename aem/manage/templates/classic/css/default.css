@@ -10,7 +10,7 @@ body{ font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#333333; 
 
 .glc_btn_large {
 	font-size: 15px !important;
-	width: 15% !important;
+	width: 48.5% !important;
 }
 
 .glc_button_back {
@@ -73,14 +73,14 @@ input[type=submit]:disabled {
     text-shadow: none;
 }
 
-select,
+/*select,
 textarea,
 input[type=text],
 input[type=password]{
     padding: 0.4em;
     border: 1px solid #c2c2c2;
     
-}
+}*/
 
 textarea:focus,
 input[type=text]:focus,
@@ -128,7 +128,7 @@ label {
   margin-bottom: 5px;
 }
 
-select,
+/*select,
 textarea,
 input[type="text"],
 input[type="password"],
@@ -155,7 +155,7 @@ input[type="color"],
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-}
+}*/
 
 input,
 textarea,
@@ -167,7 +167,7 @@ textarea {
   height: auto;
 }
 
-textarea,
+/*textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -193,7 +193,7 @@ input[type="color"],
        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
           transition: border linear 0.2s, box-shadow linear 0.2s;
 		  width:auto;
-}
+}*/
 
 textarea:focus,
 input[type="text"]:focus,
@@ -272,7 +272,7 @@ input[type=button]:active,
 input[type=reset]:active,
 input[type=submit]:active {position:relative; top:1px;}
 
-input[type="text"],
+/*input[type="text"],
 input[type="password"] {
 	padding:6px 4px;
 	background-color:#fefefe!important;
@@ -292,7 +292,7 @@ input[type="password"] {
 	-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);
 	box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+}*/
 input:focus,
 textarea:focus {
 	outline:0;
@@ -2002,7 +2002,7 @@ calendar_month_view table
 	overflow: auto;
 }
 
-div.adesk_checkboxlist { max-height: 100px; overflow: auto; }
+div.adesk_checkboxlist { max-height: 100px; overflow: auto; margin-bottom: 5px; }
 
 #adesk_admin_content #subscriber_import h2{ background:none; background-color:#FFF; color: #A7A6A0; font-size:14px; margin:0px; padding:5px; margin-top: 10px; cursor: default; }
 
@@ -2685,8 +2685,7 @@ height:14px;
 	padding-bottom:2px;
 	overflow:scroll;
 	font-size:12px;
-	width:300px;
-
+	/*width:300px;*/
 }
 .adesk_checkboxlist label{
 	display:block;

@@ -40,6 +40,7 @@ function adesk_custom_fields_cons(field, showhidden) {
             props.type = "text";
             props.name = f_name;
             props.value = field.val;
+            
 			props.onKeyUp = "if (typeof custom_field_text_onkeyup == 'function' && window.event && window.event.keyCode) custom_field_text_onkeyup(window.event.keyCode)";
             return adesk_custom_fields_bubble(Builder.node("input", props), field);
 

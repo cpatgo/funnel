@@ -1,24 +1,37 @@
 <div id="form" class="adesk_hidden">
-  <form method="POST" onsubmit="list_form_save(list_form_id); return false">
-    <input type="hidden" name="id" id="form_id" />
-
-  <h1 id="list_title_add">{"Add new list for your campaign"|alang}</h1>
-  <h1 id="list_title_edit">{"Edit This List"|alang}</h1>
-
-    {include file="list.form.settings.inc.htm"}
-    {include file="list.form.optinoptout.inc.htm"}
-	{if $admin.pg_list_bounce}
-    {include file="list.form.bounce.inc.htm"}
-	{/if}
-    {include file="list.form.external.inc.htm"}
-
-    <br />
-    <div>
-      <input type="button" id="form_back" class="adesk_button_back glc_button_back glc_btn_large" value="{"Back"|alang}" onclick="window.history.go(-1)" />
-      <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="list_form_save(list_form_id)" />
+  <div class="row">
+    <div class="col-sm-12">
+      <form method="POST" onsubmit="list_form_save(list_form_id); return false">
+        <input type="hidden" name="id" id="form_id" />
+  
+      <h1 id="list_title_add">{"Add new list for your campaign"|alang}</h1>
+      <h1 id="list_title_edit">{"Edit This List"|alang}</h1>
+  
+        {include file="list.form.settings.inc.htm"}
+        {include file="list.form.optinoptout.inc.htm"}
+      {if $admin.pg_list_bounce}
+        {include file="list.form.bounce.inc.htm"}
+      {/if}
+        {include file="list.form.external.inc.htm"}
+  
+	<div class="h2_wrap_static">
+	  <div class="adesk_blockquote">
+	    <table border="0" cellspacing="0" cellpadding="5" class="table-width">
+	      <tbody>
+	        <tr>
+	          <td colspan="2">
+	            <input type="button" id="form_back" class="adesk_button_back glc_button_back glc_btn_large" value="{"Back"|alang}" onclick="window.history.go(-1)" />
+	            <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="list_form_save(list_form_id)" />
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+        <input type="submit" style="display:none"/>
+      </form>
     </div>
-    <input type="submit" style="display:none"/>
-  </form>
+  </div>
 </div>
 
 <div id="added" class="adesk_modal" align="center" style="display: none">
