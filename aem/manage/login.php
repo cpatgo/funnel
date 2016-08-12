@@ -1,4 +1,5 @@
 <?PHP
+if(!session_id()) session_start();
 define('AWEBVIEW', true);
 
 /*
@@ -132,9 +133,8 @@ if ( $authenticated ) {
 	unset($admin);
 	$admin = adesk_admin_get();
 	$localID = $admin['id'];
-
+	$_SESSION['aem_uid'] = $localID;
  
-
 	// Update database with current date/time for tracking of users last login
 	adesk_sql_update_one("#user", "=last_login", "NOW()", "id = '$localID'");
 	adesk_sql_update("#user", array("=ldate" => "NOW()", "=ltime" => "NOW()"), "id = '$localID'");
