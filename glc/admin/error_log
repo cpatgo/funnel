@@ -211,3 +211,12 @@
 [05-Aug-2016 10:20:13 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
 [09-Aug-2016 11:36:15 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
 [10-Aug-2016 11:51:44 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:09:54 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:10:05 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/login_check.php on line 3
+[12-Aug-2016 17:10:05 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:10:16 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:10:16 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[12-Aug-2016 17:10:22 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:10:25 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
+[12-Aug-2016 17:10:25 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[12-Aug-2016 17:10:39 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
