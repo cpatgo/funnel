@@ -1,8 +1,6 @@
 <?php
 
-// require_once adesk_admin("functions/campaign.php");
-//require_once adesk_admin("functions/filter.php");
-//require_once adesk_admin("functions/message.php");
+// require_once adesk_admin("functions/funnel_campaign.php");
 require_once adesk_admin("functions/template.php");
 require_once awebdesk_classes("select.php");
 require_once awebdesk_classes("pagination.php");

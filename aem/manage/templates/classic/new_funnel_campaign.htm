@@ -5,6 +5,7 @@
 
 <h2>Create Landing Page</h2>
 
+<form method="POST" action="/aem/manage/functions/funnel_campaign.php">
 <div id="example-vertical">
     <h3>Select Funnel Type</h3>
     <section>
@@ -155,16 +156,9 @@
 				<p style="text-align:center;">http://glchub.com/examplelink/tolandingpage/</p>
 	        </div>
         </div>
+        <button>FINISH</button>
     </section>
 </div>
-<form method="POST" action="/aem/manage/functions/funnel_campaign.php">
-	<input type="hidden" name="action" value="list_insert_post">
-	<input type="text" name="title" value="ABC">
-	<input type="text" name="type" value="Acquisition">
-	<input type="text" name="description" value="Acquisition Landing Page">
-	<input type="text" name="list_id" value="1">
-	<input type="text" name="page_link" value="http://identifz.com/builder/template/">
-	<button>SUBMIT</button>
 </form>
 
 <!-- {/if} -->

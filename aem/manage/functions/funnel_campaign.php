@@ -10,7 +10,7 @@ function list_insert_post() {
 
 	$user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 	$query = sprintf("INSERT INTO awebdesk_funnel_campaign (title, type, description, user_id, list_id, page_link, date_created) VALUES ( '%s', '%s', '%s', '%d', '%d', '%s', '%s')", 
-		$_POST['title'], $_POST['type'], $_POST['description'], $user_id, $_POST['list_id'], $_POST['page_link'], date('Y-m-d H:i:s'));
+		$_POST['landing-page-name'], $_POST['landing-page-type'], $_POST['landing-page-description'], $user_id, $_POST['landing-page-list-id'], $_POST['landing-page-url'], date('Y-m-d H:i:s'));
 
 	mysqli_query($GLOBALS["aem_con"], $query);
 
