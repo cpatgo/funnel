@@ -1,5 +1,4 @@
 <?php
-if(!session_id()) session_start();
 // singlesignon.php
 
 // single sign on functions
@@ -144,7 +143,6 @@ function adesk_sso_token_eval($token) {
 	unset($GLOBALS['admin']);
 	$GLOBALS['admin'] = adesk_admin_get();
 	$localID = $GLOBALS['admin']['id'];
-	$_SESSION['aem_uid'] = $localID;
 
 	// application specific stuff
 	require_once awebdesk_functions("tz.php");
