@@ -214,3 +214,5 @@
 [11-Aug-2016 20:55:45 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/identifz/public_html/glcv2/aem/manage/functions/landingpage.php on line 17
 [11-Aug-2016 20:57:04 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/identifz/public_html/glcv2/aem/manage/functions/landingpage.php on line 17
 [11-Aug-2016 20:58:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/identifz/public_html/glcv2/aem/manage/functions/landingpage.php on line 20
+[12-Aug-2016 16:03:03 America/New_York] PHP Fatal error:  Cannot redeclare list_insert_post() (previously declared in /home/identifz/public_html/glcv2/aem/manage/functions/landingpage.php:13) in /home/identifz/public_html/glcv2/aem/manage/functions/list.php on line 501
+[12-Aug-2016 16:03:50 America/New_York] PHP Fatal error:  Call to undefined function adesk_admin() in /home/identifz/public_html/glcv2/aem/awebdesk/functions/manage.php on line 10
