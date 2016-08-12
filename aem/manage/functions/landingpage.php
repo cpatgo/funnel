@@ -11,5 +11,7 @@ function list_insert_post() {
 		$_POST['title'], $_POST['type'], $_POST['description'], $_POST['user_id'], $_POST['list_id'], $_POST['page_link'], date('Y-m-d H:i:s'));
 
 	mysqli_query($GLOBALS["aem_con"], $query);
+
+	echo "Campaign successfully created.";
 }
 ?>
