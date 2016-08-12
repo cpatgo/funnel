@@ -7,10 +7,10 @@ require_once adesk_admin("functions/template.php");
 require_once awebdesk_classes("select.php");
 require_once awebdesk_classes("pagination.php");
 
-class landingpage_new_assets extends AWEBP_Page {
+class new_funnel_campaign_assets extends AWEBP_Page {
 
-	function campaign_new_assets() {
-		$this->pageTitle = _a("Create a New Landing Page");
+	function new_funnel_campaign_assets() {
+		$this->pageTitle = _a("Create a New Funnel Campaign");
 		//$this->sideTemplate = "side.message.htm";
 		$this->AWEBP_Page();
 	}
@@ -28,7 +28,7 @@ class landingpage_new_assets extends AWEBP_Page {
 			return;
 		}
 
-		$smarty->assign("content_template", "landingpage_new.htm");
+		$smarty->assign("content_template", "new_funnel_campaign.htm");
 	}
 }
 
