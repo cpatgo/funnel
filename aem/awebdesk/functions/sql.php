@@ -150,6 +150,7 @@ function adesk_sql_insert($table, $array, $datecols = array()) {
 	}
 
 	if ( is_array($array) and isset($array[0]) ) {
+
 		$first = true;
 		foreach ( $array as $k => $v ) {
 			$array[$k] = adesk_sql_insert_str($v, $first);
@@ -159,6 +160,7 @@ function adesk_sql_insert($table, $array, $datecols = array()) {
 	} else {
 		$query = adesk_sql_insert_str($array);
 	}
+
 	return adesk_sql_query("INSERT INTO $table $query");
 }
 

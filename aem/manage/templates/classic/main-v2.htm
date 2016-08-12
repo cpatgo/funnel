@@ -22,14 +22,12 @@
     {foreach from=$header_lines item=line}
     {$line}
     {/foreach}
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <link href="templates/classic/css/steps.css" type="text/css" rel="stylesheet" />
-    <link href="templates/classic/css/default.css" rel="stylesheet" type="text/css" />
-    <link media="screen" href="templates/classic/css/grids-min.css" type="text/css" rel="stylesheet" />
-    <link media="screen" href="templates/classic/css/awebdeskstyle.css" type="text/css" rel="stylesheet" />
-    <link media="print" href="templates/classic/css/print.css" type="text/css" rel="stylesheet" />
-
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link href="templates/classic/css/default.css" rel="stylesheet" type="text/css" />
+      <link media="screen" href="templates/classic/css/grids-min.css" type="text/css" rel="stylesheet" />
+  <link media="screen" href="templates/classic/css/awebdeskstyle.css" type="text/css" rel="stylesheet" />
+  <link media="print" href="templates/classic/css/print.css" type="text/css" rel="stylesheet" />
 
 {if isset($site.template_css) and $site.template_css}
 <style>
@@ -75,11 +73,11 @@
       -->
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     
   </head>
   {php} flush(); {/php}
 <body class="yui-skin-sam">
+Alain
     <script language="JavaScript" type="text/javascript" src="../awebdesk/editor_tiny/tiny_mce.js?_v=3.4.3.2"></script>
 <div class="container-fluid">
 <div class="row">
@@ -256,15 +254,12 @@
 adesk_tooltip_init();
 // set error bar for dropped api calls
 var printAPIerrors = adesk_error_show;
+window.alert('testing');
 </script>
-
-
 
 {if $demoMode == 1}
 <h1 style="color:#FF0000"><strong>{"This is a demo"|alang}</strong> - {"Certain features such as sending email are disabled."|alang}</h1>
 {/if}
-<script type="text/javascript" src="templates/classic/js/jquery.steps.min.js"></script>
-<script type="text/javascript" src="templates/classic/js/custom.js"></script>
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
 </body>
 </html>

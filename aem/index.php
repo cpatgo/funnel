@@ -195,7 +195,7 @@ $processor->process($smarty);
 $smarty->assign('action', $action);
 $smarty->assign('demoMode', isset($demoMode));
 
-$template = 'main.htm';
+$template = 'main-v2.htm';
 if ( in_array($action, array('approve', 'complaint', 'social')) ) $template = 'iframe.main.htm';
 if ( isset($_GET['lists']) and isset($_GET['codes']) ) $template = 'iframe.main.htm';
 $smarty->display($template);
