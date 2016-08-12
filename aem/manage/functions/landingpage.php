@@ -1,57 +1,15 @@
 <?php
-
-require_once awebdesk_classes("select.php");
-require_once awebdesk_functions("process.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/aem/manage/config.inc.php');
+$GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWEBP_AUTHDB_PASS, AWEBP_AUTHDB_DB);
 
 $action = $_POST['action'];
 if($action === 'list_insert_post') list_insert_post();
 
 function list_insert_post() {
-	// user access
-	$admin = adesk_admin_get();
 
-	$id = 0;
-	$ary = landingpage_post_prepare($id);
+	$query = sprintf("INSERT INTO awebdesk_landingpage (title, type, description, user_id, list_id, page_link, date_created) VALUES ( '%s', '%s', '%s', '%d', '%d', '%s', '%s')", 
+		$_POST['title'], $_POST['type'], $_POST['description'], $_POST['user_id'], $_POST['list_id'], $_POST['page_link'], date('Y-m-d H:i:s'));
 
-	// validation
-	if ( $ary['title'] == '' ) {
-		return adesk_ajax_api_result(false, _a("Landing Page Title can not be empty."));
-	}
-
-	$sql = adesk_sql_insert("#landingpage", $ary);
-	if ( !$sql ) {
-		return adesk_ajax_api_result(false, _a("Landing page could not be added.") . adesk_sql_error());
-	}
-	// collect id
-	$id = adesk_sql_insert_id();
-
-	// rebuild admin's permissions
-	adesk_session_drop_cache();
-	$GLOBALS['admin'] = adesk_admin_get();
-	$lists = list_get_all(true);
-	return adesk_ajax_api_added(_a("Landing Page"), array("id" => $id));
+	mysqli_query($GLOBALS["aem_con"], $query);
 }
-
-function landingpage_post_prepare($id) {
-
-	$admin = adesk_admin_get();
-	$r = array();
-
-	// general list settings
-	$r['title'] = (string)adesk_http_param('title');
-	$r['type'] = (string)adesk_http_param('type');
-	$r['description'] = (string)adesk_http_param('description');
-
-	if ( $id == 0 ) $r['user_id'] = (int)$admin['id'];
-	if ( adesk_admin_ismaingroup() and (int)adesk_http_param('userid') ) {
-		$r['user_id'] = (int)adesk_http_param('userid');
-	}
-
-	$r['list_id'] = (int)adesk_http_param('list_id');
-	$r['page_link'] = (string)adesk_http_param('page_link');
-	$r['date_created'] = date('Y-m-d H:i:s');
-
-	return $r;
-}
-
 ?>
