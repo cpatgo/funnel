@@ -7,21 +7,21 @@ function __check_blank($str) {
 }
 
 function smarty_function_adesk_field_html($params, &$smarty) {
-	require_once awebdesk("smarty/plugins/modifier.escape.php");
+    require_once awebdesk("smarty/plugins/modifier.escape.php");
     if (!isset($params['field']) || !is_array($params['field']))
         return "";
 
-	$brackets = "[]";
+    $brackets = "[]";
 
-	# If this is true, then we intend to post the fields back via ajax.  In those cases, we may
-	# want to avoid the double-brackets on multi-select fields.
-	if (isset($params["ajax"]))
-		$brackets = "";
+    # If this is true, then we intend to post the fields back via ajax.  In those cases, we may
+    # want to avoid the double-brackets on multi-select fields.
+    if (isset($params["ajax"]))
+        $brackets = "";
 
-	$isadmin = false;
+    $isadmin = false;
 
-	if (isset($params['isadmin']))
-		$isadmin = true;
+    if (isset($params['isadmin']))
+        $isadmin = true;
 
     $post = "";
 
@@ -31,13 +31,13 @@ function smarty_function_adesk_field_html($params, &$smarty) {
 
     if (isset($params['post'])) {
         $pkey = "$field[id],$field[dataid]";
-		if (isset($params['post'][$pkey])) {
-		   	if (is_string($params['post'][$pkey]))
-				$post = htmlspecialchars($params['post'][$pkey], ENT_QUOTES);
-			elseif (is_array($params['post'][$pkey]))
-				foreach ($params['post'][$pkey] as $_key => $_val)
-					$params['post'][$pkey][$_key] = htmlspecialchars($_val);
-		}
+        if (isset($params['post'][$pkey])) {
+            if (is_string($params['post'][$pkey]))
+                $post = htmlspecialchars($params['post'][$pkey], ENT_QUOTES);
+            elseif (is_array($params['post'][$pkey]))
+                foreach ($params['post'][$pkey] as $_key => $_val)
+                    $params['post'][$pkey][$_key] = htmlspecialchars($_val);
+        }
     }
 
     if (!isset($field['val'])) {
@@ -60,8 +60,8 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ($field['val'] == "")
                 $field['val'] = $field['onfocus'];
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
-            $rval = "<input type='text' name='field[$field[id],$field[dataid]]' value='$field[val]'$bubble1 />$bubble2";
+            $field['val'] = smarty_modifier_escape($field['val']);
+            $rval = "<input class='form-control' type='text' name='field[$field[id],$field[dataid]]' placeholder='' value='$field[val]'$bubble1 />$bubble2";
             break;
         case 2:     // Text box
             if ($field['onfocus'] != "")
@@ -72,8 +72,8 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ($field['val'] == '')
                 $field['val'] = $field['expl'];
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
-            $rval = "<textarea rows='$rows' cols='$cols' name='field[$field[id],$field[dataid]]' $bubble1>$field[val]</textarea>$bubble2";
+            $field['val'] = smarty_modifier_escape($field['val']);
+            $rval = "<textarea class='form-control' rows='$rows' cols='$cols' name='field[$field[id],$field[dataid]]' $bubble1>$field[val]</textarea>$bubble2";
             break;
         case 3:     // Checkbox
             $field['val'] = __check_blank($field['val']);
@@ -81,10 +81,10 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ($field['val'] == '')
                 $field['val'] = $field['onfocus'];
 
-			$field['val'] = smarty_modifier_escape($field['val']);
+            $field['val'] = smarty_modifier_escape($field['val']);
             $rval =
                 "<input type='hidden' name='field[$field[id],$field[dataid]]' value='unchecked' />" .
-                "<input type='checkbox' name='field[$field[id],$field[dataid]]' value='checked' $bubble1 " .
+                "<input type='checkbox' class='form-control' name='field[$field[id],$field[dataid]]' value='checked' $bubble1 " .
                     ($field["val"] == "checked" || $field["val"] == "yes" || $field["val"] == "on" ? "checked" : "") .
                 " />$bubble2";
             break;
@@ -92,12 +92,12 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ($field['val'] == '')
                 $field['val'] = $field['onfocus'];
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
+            $field['val'] = smarty_modifier_escape($field['val']);
             $html = "<input type='hidden' name='field[$field[id],$field[dataid]]' value='~|' />";
             $ary  = array_map('trim', explode("||", str_replace("\n", "||", $field['expl'])));
 
             for ($i = 0; $i < count($ary); $i += 2) {
-				$ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
+                $ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
                 $html .= "<label class='cFieldRadio' $bubble1><input type='radio' name='field[$field[id],$field[dataid]]' value='{$ary[$i+1]}' ".
                     ($ary[$i+1] == $field['val'] ? "checked" : "") . " /> {$ary[$i+0]}</label>$bubble2<br />";
             }
@@ -105,7 +105,7 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             $rval = $html;
             break;
         case 5:     // Dropdown
-            $html = "<select name='field[$field[id],$field[dataid]]' $bubble1>";
+            $html = "<select class='form-control' name='field[$field[id],$field[dataid]]' $bubble1>";
             $ary  = array_map('trim', explode("||", str_replace("\n", "||", $field['expl'])));
             if ( count($ary) % 2 ) $ary[] = '';
 
@@ -113,7 +113,7 @@ function smarty_function_adesk_field_html($params, &$smarty) {
                 $field['val'] = $field['onfocus'];
 
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
+            $field['val'] = smarty_modifier_escape($field['val']);
             for ($i = 0; $i < count($ary); $i += 2) {
                 $html .= "<option value='{$ary[$i+1]}' " .
                     ($ary[$i+1] == $field['val'] ? "selected" : "") . ">{$ary[$i+0]}</option>";
@@ -125,35 +125,35 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ($field['val'] == "")
                 $field['val'] = $field['onfocus'];
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
-			if (!$isadmin)
-				$rval = "<input type='hidden' name='field[$field[id],$field[dataid]]' value='$field[val]' />";
-			else
-				$rval = "<input type='text' name='field[$field[id],$field[dataid]]' value='$field[val]' />";
+            $field['val'] = smarty_modifier_escape($field['val']);
+            if (!$isadmin)
+                $rval = "<input type='hidden' name='field[$field[id],$field[dataid]]' value='$field[val]' />";
+            else
+                $rval = "<input type='text' name='field[$field[id],$field[dataid]]' value='$field[val]' />";
             break;
         case 7:     // List box (select with multiple)
 
             $html = "<input type='hidden' name='field[$field[id],$field[dataid]]$brackets' value='~|' />";
-            $html .= "<select name='field[$field[id],$field[dataid]]$brackets' multiple $bubble1>";
+            $html .= "<select class='form-control' name='field[$field[id],$field[dataid]]$brackets' multiple $bubble1>";
             $ary  = array_map('trim', explode("||", str_replace("\n", "||", $field['expl'])));
             $sel  = array();
 
-			if (is_array($field['val']))
-				$field['val'] = implode("||", $field['val']);
+            if (is_array($field['val']))
+                $field['val'] = implode("||", $field['val']);
 
             if ($field['val'] != "") {
                 $field['val'] = __check_blank($field['val']);
                 # If it's still not blank, then break it up.
-				$field['val'] = smarty_modifier_escape($field['val']);
+                $field['val'] = smarty_modifier_escape($field['val']);
                 if ($field['val'] != "")
                     $sel = explode("||", $field['val']);
             } else {
-				$field['onfocus'] = smarty_modifier_escape($field['onfocus']);
+                $field['onfocus'] = smarty_modifier_escape($field['onfocus']);
                 $sel = explode("||", $field['onfocus']);
             }
 
             for ($i = 0; $i < count($ary); $i += 2) {
-				$ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
+                $ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
                 $html .= "<option value='{$ary[$i+1]}' " .
                     (in_array($ary[$i+1], $sel) ? "selected" : "") . ">{$ary[$i+0]}</option>";
             }
@@ -165,22 +165,22 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             $ary  = array_map('trim', explode("||", str_replace("\n", "||", $field['expl'])));
             $sel  = array();
 
-			if (is_array($field['val']))
-				$field['val'] = implode("||", $field['val']);
+            if (is_array($field['val']))
+                $field['val'] = implode("||", $field['val']);
 
             if ($field['val'] != "") {
                 $field['val'] = __check_blank($field['val']);
                 # If it's still not blank, then break it up.
-				$field['val'] = smarty_modifier_escape($field['val']);
+                $field['val'] = smarty_modifier_escape($field['val']);
                 if ($field['val'] != "")
                     $sel = explode("||", $field['val']);
             } else {
-				$field['onfocus'] = smarty_modifier_escape($field['onfocus']);
+                $field['onfocus'] = smarty_modifier_escape($field['onfocus']);
                 $sel = explode("||", $field['onfocus']);
             }
 
             for ($i = 0; $i < count($ary); $i += 2) {
-				$ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
+                $ary[$i+1] = smarty_modifier_escape($ary[$i+1]);
                 $html .= "<label class='cFieldCheckboxGroup' $bubble1><input type='checkbox' value='{$ary[$i+1]}' name='field[$field[id],$field[dataid]]$brackets' "
                     . (in_array($ary[$i+1], $sel) ? "checked" : "") . " />";
                 $html .= $ary[$i+0] . "</label>$bubble2<br />";
@@ -194,34 +194,34 @@ function smarty_function_adesk_field_html($params, &$smarty) {
             if ( $field['val'] == 'now' ) $field['val'] = adesk_CURRENTDATE;
 
             $field['val'] = __check_blank($field['val']);
-			$field['val'] = smarty_modifier_escape($field['val']);
+            $field['val'] = smarty_modifier_escape($field['val']);
 
-			$prefixurl = $GLOBALS['adesk_library_url'];
-			if ( !preg_match('/^http/i', $prefixurl) ) {
-				// protocol
-				$prefixurl = ( adesk_http_is_ssl() ? 'https' : 'http' ) . '://';
-				// host
-				$prefixurl .= ( isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost' );
-				// port
-				$default_port = ( adesk_http_is_ssl() ? 443 : 80 );
-				if ( isset($_SERVER['SERVER_PORT']) and $default_port != $_SERVER['SERVER_PORT'] ) $prefixurl .= ':' . $_SERVER['SERVER_PORT'];
-				// base uri
-				$prefixurl .= $GLOBALS['adesk_library_url'];
-			}
+            $prefixurl = $GLOBALS['adesk_library_url'];
+            if ( !preg_match('/^http/i', $prefixurl) ) {
+                // protocol
+                $prefixurl = ( adesk_http_is_ssl() ? 'https' : 'http' ) . '://';
+                // host
+                $prefixurl .= ( isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost' );
+                // port
+                $default_port = ( adesk_http_is_ssl() ? 443 : 80 );
+                if ( isset($_SERVER['SERVER_PORT']) and $default_port != $_SERVER['SERVER_PORT'] ) $prefixurl .= ':' . $_SERVER['SERVER_PORT'];
+                // base uri
+                $prefixurl .= $GLOBALS['adesk_library_url'];
+            }
 
-			$calendar = '';
-			if ( !isset($GLOBALS['adesk_custom_field_calendar_index']) ) $GLOBALS['adesk_custom_field_calendar_index'] = 0;
-			if ( !$GLOBALS['adesk_custom_field_calendar_index'] ) {
-				// load up the calendar
-				require_once(awebdesk_smarty_plugins('function.adesk_calendar.php'));
-				$calendar = smarty_function_adesk_calendar(array('acglobal' => $prefixurl, 'lang' => _i18n("en")), $smarty);
-			}
-			$GLOBALS['adesk_custom_field_calendar_index']++;
-			$field_dom_id = $GLOBALS['adesk_custom_field_calendar_index'];
-			$calendar .= "<a href='#' onclick='return false;' id='datecbutton$field_dom_id'><img src='$prefixurl/media/calendar.png' border='0' /></a>";
-			$calendar .= "<script type='text/javascript'>Calendar.setup({inputField: 'datecfield$field_dom_id', ifFormat: '%Y-%m-%d', button: 'datecbutton$field_dom_id', showsTime: false, timeFormat: '24'});</script>";
+            $calendar = '';
+            if ( !isset($GLOBALS['adesk_custom_field_calendar_index']) ) $GLOBALS['adesk_custom_field_calendar_index'] = 0;
+            if ( !$GLOBALS['adesk_custom_field_calendar_index'] ) {
+                // load up the calendar
+                require_once(awebdesk_smarty_plugins('function.adesk_calendar.php'));
+                $calendar = smarty_function_adesk_calendar(array('acglobal' => $prefixurl, 'lang' => _i18n("en")), $smarty);
+            }
+            $GLOBALS['adesk_custom_field_calendar_index']++;
+            $field_dom_id = $GLOBALS['adesk_custom_field_calendar_index'];
+            $calendar .= "<a href='#' onclick='return false;' id='datecbutton$field_dom_id'><img src='$prefixurl/media/calendar.png' border='0' /></a>";
+            $calendar .= "<script type='text/javascript'>Calendar.setup({inputField: 'datecfield$field_dom_id', ifFormat: '%Y-%m-%d', button: 'datecbutton$field_dom_id', showsTime: false, timeFormat: '24'});</script>";
 
-            $rval = "<input id='datecfield$field_dom_id' type='text' name='field[$field[id],$field[dataid]]' value='$field[val]'$bubble1 />$bubble2$calendar";
+            $rval = "<input class='form-control' id='datecfield$field_dom_id' type='text' name='field[$field[id],$field[dataid]]' value='$field[val]'$bubble1 />$bubble2$calendar";
             break;
     }
 
