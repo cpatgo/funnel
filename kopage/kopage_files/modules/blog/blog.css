@@ -1,0 +1,73 @@
+#BlogArea .itemTitle {
+	background-image: url(./../../editor_images/dot.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	line-height:40px;
+	
+}
+#BlogArea .itemDescription, #BlogArea .itemBody {
+	/*font-size:13px;*/
+	text-align: justify;
+	padding: 0 0 16px 0;
+}
+#BlogArea .itemStatus {
+	font-size:13px;
+	padding: 0 0 16px 0;
+}
+#BlogArea h1,#BlogArea h2,#BlogArea h3,#BlogArea h4,#BlogArea h5,#BlogArea h6
+{
+    /*font-family: "Georgia", "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Trebuchet, Arial, sans-serif;
+	font-weight: normal;*/
+	margin: 0;
+}
+#BlogArea hr {
+	border: 0; 
+	border-top: 1px solid #999999;
+}
+/*
+#BlogArea #commentItemDiv {
+	background-color:#FFFFFF;
+	background-image: url(./../../editor_images/admin_14.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	border: 1px solid #999999;
+
+}
+#BlogArea #commentItemSubmit {
+	
+	border-top: 1px solid #999999;
+	margin-top:10px;
+	padding-top:5px;
+	width: 220px;
+	text-align:center;
+
+}*/
+#BlogArea .itemDescription {
+	padding-top:5px;
+}
+#BlogArea .itemStatus {
+	padding-top:5px;
+	color:#666666;
+}
+#catNavBar { clear:both; }
+#catNavBar .cnavleft a {
+float:left;
+margin-right: 10px;
+display:block;
+border: 1px solid #000;
+background:#F5F5F5;
+padding:3px;
+text-decoration:none;
+}
+#catNavBar .cnavright a {
+float:left;
+display:block;
+border: 1px solid #000;
+background:#F5F5F5;
+padding:3px;
+text-decoration:none;
+}
+#catNavBar .cnavright a:hover, #catNavBar .cnavleft a:hover {
+background:#FFFFFF;
+
+}

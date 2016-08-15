@@ -1,0 +1,10 @@
+
+
+define("_Site_infoInUse","1");
+define("_Site_info_Phone","555-555-5555");
+define("_Site_info_Address","123 Main Street");
+define("_Site_info_City","New York City");
+define("_Site_info_State","NY");
+define("_Site_info_ZipCode","12345");
+define("_Site_info_Country","USA");
+define("_Site_info_Hours","<p><strong>Hours</strong> <br />Monday - Friday, 10 AM - 9 PM<br />Saturday - Sunday, Closed</p>");

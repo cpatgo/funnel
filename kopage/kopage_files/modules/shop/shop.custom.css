@@ -1,0 +1,4 @@
+.qkPrice,.qkNewPrice,.qkPriority{ display:none;}
+#prtr_16,#prtr_17{ display: inline;}
+#prtr_16 #tRowLeft,#prtr_17 #tRowLeft{ width: 200px;}
+

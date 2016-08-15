@@ -1,0 +1,9 @@
+body {
+	padding:30px;
+}
+/*div.row-fluid:before,
+div.row-fluid:after{content:attr(class);border:1px solid red; display:block;overflow:auto;}
+
+*/
+div.row-fluid {margin-top:10px;border:1px dashed #CCCCCC} 
+hr {margin-top:20px;margin-bottom:20px;border:1px dashed #CCCCCC} 

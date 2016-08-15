@@ -1,0 +1,79 @@
+
+.jGM_helper {display:block;}
+
+.jGM_box * {width: auto;height: auto; position: static   }
+
+.jGM_box {font-family:Arial,sans-serif;font-size:13px;margin:0;}
+
+.jGM_wrapper{position:absolute;top:0;left:0;/*height:416px;*/margin:0;padding:0;border:0;}
+
+
+.jGM_content{position:absolute;top:80px;left:0;right:0;bottom:0;;margin:1px 0;padding:0;border:0;overflow:hidden;overflow-x:hidden;text-align:left;}
+
+.jGM_content a{outline:none;border:1px solid white;text-decoration:none;color:#444;display:block;padding:5px 30px 5px 10px;margin:0 5px 0 0}
+.jGM_content a:hover{
+	
+color:#333333;text-shadow:0 1px 1px rgba(255,255,255,0.75);background-color:#fafafa;background-image:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),color-stop(25%,#ffffff),to(#e6e6e6));background-image:-webkit-linear-gradient(#ffffff,#ffffff 25%,#e6e6e6);background-image:-moz-linear-gradient(top,#ffffff,#ffffff 25%,#e6e6e6);background-image:-ms-linear-gradient(#ffffff,#ffffff 25%,#e6e6e6);background-image:-o-linear-gradient(#ffffff,#ffffff 25%,#e6e6e6);background-image:linear-gradient(#ffffff,#ffffff 25%,#e6e6e6);background-repeat:no-repeat;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);border:1px solid #ccc;border-bottom-color:#bbb;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);cursor:pointer;
+
+}
+
+.jGM_cats_header a {font:normal 16px Arial, sans-serif;line-height:25px; text-indent:0; margin:10px; color: #555;padding:10px;border-radius:4px;display:block;text-shadow:1px 1px 0 #fff;box-shadow:0 0 7px rgba(0,0,0,0.2)}
+.jGM_cats_header a:hover { color: #000; text-decoration:none;
+
+ background-color:#E3E3E3;
+ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#E3E3E3, endColorstr=#fff);
+ background-image:-moz-linear-gradient(left, #E3E3E3 0%, #fff 100%);
+ background-image:-webkit-linear-gradient(left, #E3E3E3 0%, #fff 100%);
+ background-image:-ms-linear-gradient(left, #E3E3E3 0%, #fff 100%);
+ background-image:linear-gradient(left, #E3E3E3 0%, #fff 100%);
+ background-image:-o-linear-gradient(left, #E3E3E3 0%, #fff 100%);
+ background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#E3E3E3), color-stop(100%,#fff));
+
+box-shadow:0 0 10px rgba(0,0,0,0.7);transition:all 0.2s;
+ }
+
+.jGM_cats_header span{ margin:5px 15px 10px 0 ;background:url(../../editor_images/sprite.png) -383px -127px no-repeat; width:32px; height:32px; display:block; float: left}
+.jGM_cats_header p {font:normal 12px/12px arial,sans-serif;margin:0;padding:0;color:#858585;}
+
+/*.jGM_pager{height:18px;line-height:18px;margin:0;border:0;padding:0;background:#f6f6f6;color:#fff;text-align:center;vertical-align:middle;display:none; background:#000;border:1px solid yellow;}
+.jGM_pager a{text-decoration:none;color:#fff;font-weight:bold;text-decoration:none;color:#fff;display:block;}
+.jGM_pager a:hover{background:#d1d1d1;}
+.jGM_pager img{border:0;margin:6px 0;}*/
+
+.jGM_back{position:absolute;top:0px;right:10px;margin:10px 0 0 0;padding:0;border:0;z-index:99;}
+.jGM_reset{display:none;}
+
+.hiddenTile {display:none;}
+
+.jGM_tile {
+	
+	top: 5px;
+	bottom:0;right:0;
+	width: 380px;
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display:block;
+	 
+}
+
+.jGM_back{ position:fixed; top:8px;right:8px;padding:0;margin:0}
+
+#kopageBarFAQ{position:fixed;top:50px;bottom:0;right:0;width:400px;background:#fff;}
+#kopageBarFAQ_Title{
+	
+	padding:15px 60px 15px 15px;right:0;width:400px;color:#fff;font-size:15px;line-height:18px;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+	
+}
+#kopageBarFAQ_Close{position:absolute;top:3px;right:3px;width:42px;text-align:center;height:42px;line-height:42px;background:#000;color:#fff;opacity:0.7}
+#kopageBarFAQ_Close:hover{opacity:1}
+#kopageBarFAQ_Content{padding:20px;overflow:auto;}
+
+#kopageBarFAQ_Content img {max-width:100%;height:auto}
+#kopageBarFAQ_Content ul {margin:0;padding:0;}
+#kopageBarFAQ_Content ol {margin:0 10px 0 10px;padding:0;}
+#kopageBarFAQ_Content li {margin:0 0 20px;padding:0;}
+#kopageBarFAQ_Content li img {margin:10px 0}
