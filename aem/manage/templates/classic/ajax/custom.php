@@ -39,7 +39,7 @@ function aem_delete($query){
     return aem_response(true, true);
 }
 
-function aem_aem_response($type, $message)
+function aem_response($type, $message)
 {
     $type = (!$type) ? false : true;
     return array('type' => $type, 'message' => $message);
