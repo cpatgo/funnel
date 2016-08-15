@@ -49,13 +49,30 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            console.log(result);
-		            jQuery('body').find('#list_block').append(result);
 		            var select_list = jQuery("body").find("#landing-page-list-id");
-		            
 					select_list.html('');
 					jQuery.each(result.data, function(key, value) {
 					    select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+					});
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
+		get_forms	: 	function() {
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/custom.php",
+		        data: {
+		            'action':'get_forms'
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		            var select_form = jQuery("body").find("#landing-page-form-id");
+					select_form.html('');
+					jQuery.each(result.data, function(key, value) {
+					    select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
 					});
 		        },
 		        error: function(errorThrown){
@@ -68,9 +85,17 @@ jQuery(document).ready(function(){
 	//GET LISTS
 	aem_functions.get_lists();
 
+	//GET FORMS
+	aem_functions.get_forms();
+
     //REFRESH LIST
-    jQuery('body').on('click', '#refresh_list', function(e){
+    jQuery('body').on('click', '#refresh_list_list', function(e){
     	e.preventDefault();
     	aem_functions.get_lists();
+    });
+
+    jQuery('body').on('click', '#refresh_form_list', function(e){
+    	e.preventDefault();
+    	aem_functions.get_forms();
     });
 });

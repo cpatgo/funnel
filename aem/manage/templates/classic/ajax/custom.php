@@ -8,7 +8,19 @@ $action = $_POST['action'];
 if($action === 'get_lists') get_lists($user_id);
 
 function get_lists($user_id) {
-	$query = sprintf("SELECT * FROM awebdesk_list WHERE userid = %d", $user_id);
+	$query = sprintf("SELECT * FROM awebdesk_list WHERE userid = %d ORDER BY name", $user_id);
+	$lists = aem_select($query);
+	die(json_encode(array('type' => 'success', 'data' => $lists)));
+}
+
+function get_forms($user_id) {
+	$query = sprintf("SELECT af.*
+						FROM awebdesk_form af 
+						INNER JOIN awebdesk_form_list afl 
+						ON af.id = afl.formid 
+						INNER JOIN awebdesk_list al 
+						ON afl.listid = al.id
+						WHERE al.userid = %d ORDER BY af.name", $user_id);
 	$lists = aem_select($query);
 	die(json_encode(array('type' => 'success', 'data' => $lists)));
 }
