@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
 	//GET LISTS
 	jQuery.ajax({
         method: "post",
-        url: "../ajax/custom.php",
+        url: "../manage/templates/classic/ajax/custom.php",
         data: {
             'action':'get_lists'
         },
