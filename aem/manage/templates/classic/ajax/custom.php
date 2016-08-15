@@ -6,21 +6,22 @@ $GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWE
 $user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 $action = $_POST['action'];
 if($action === 'get_lists') get_lists($user_id);
+if($action === 'get_forms') get_forms($user_id);
 
 function get_lists($user_id) {
-	$query = sprintf("SELECT * FROM awebdesk_list WHERE userid = %d ORDER BY name", $user_id);
+	$query = sprintf("SELECT id, name FROM awebdesk_list WHERE userid = %d ORDER BY name", $user_id);
 	$lists = aem_select($query);
 	die(json_encode(array('type' => 'success', 'data' => $lists)));
 }
 
 function get_forms($user_id) {
-	$query = sprintf("SELECT af.*
-						FROM awebdesk_form af 
-						INNER JOIN awebdesk_form_list afl 
-						ON af.id = afl.formid 
-						INNER JOIN awebdesk_list al 
-						ON afl.listid = al.id
-						WHERE al.userid = %d ORDER BY af.name", $user_id);
+	$query = sprintf("SELECT DISTINCT(af.id), af.name
+				FROM awebdesk_form af 
+				INNER JOIN awebdesk_form_list afl 
+				ON af.id = afl.formid 
+				INNER JOIN awebdesk_list al 
+				ON afl.listid = al.id
+				WHERE al.userid = %d ORDER BY af.name", $user_id);
 	$lists = aem_select($query);
 	die(json_encode(array('type' => 'success', 'data' => $lists)));
 }
