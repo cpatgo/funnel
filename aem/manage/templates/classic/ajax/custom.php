@@ -16,7 +16,7 @@ function get_lists() {
 function aem_select($query){
     $data = array();
     $result = $GLOBALS["aem_con"]->query($query);
-    if(!$result) return response(false, $GLOBALS["aem_con"]->error);
+    if(!$result) return aem_response(false, $GLOBALS["aem_con"]->error);
     if($result->num_rows < 1) return array();
     while($row = $result->fetch_assoc()) {
         $data[] = $row;
@@ -25,21 +25,21 @@ function aem_select($query){
 }
 
 function aem_insert($query){
-    if(!$GLOBALS["aem_con"]->query($query)) return response(false, $GLOBALS["aem_con"]->error);
-    return response(true, $GLOBALS["aem_con"]->insert_id);
+    if(!$GLOBALS["aem_con"]->query($query)) return aem_response(false, $GLOBALS["aem_con"]->error);
+    return aem_response(true, $GLOBALS["aem_con"]->insert_id);
 }
 
 function aem_update($query){
-    if(!$GLOBALS["aem_con"]->query($query)) return response(false, $GLOBALS["aem_con"]->error);
-    return response(true, true);
+    if(!$GLOBALS["aem_con"]->query($query)) return aem_response(false, $GLOBALS["aem_con"]->error);
+    return aem_response(true, true);
 }
 
 function aem_delete($query){
-    if(!$GLOBALS["aem_con"]->query($query)) return response(false, $GLOBALS["aem_con"]->error);
-    return response(true, true);
+    if(!$GLOBALS["aem_con"]->query($query)) return aem_response(false, $GLOBALS["aem_con"]->error);
+    return aem_response(true, true);
 }
 
-function aem_response($type, $message)
+function aem_aem_response($type, $message)
 {
     $type = (!$type) ? false : true;
     return array('type' => $type, 'message' => $message);
