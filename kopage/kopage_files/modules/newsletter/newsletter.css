@@ -1,0 +1,134 @@
+.sidebar #newsletterForm .thumbTitle { padding: 15px;}
+.sidebar #newsletterForm .control-group { display:block; clear:both; margin-left:15px;}
+.sidebar #newsletterForm .control-label { display:block; clear:both; margin-left:0;text-align:left;}
+.sidebar #newsletterForm .controls { display:block; clear:both; margin-left:0;}
+.sidebar #newsletterForm #label-naction { display:none }
+.sidebar #newsletterForm .form-actions { display:block; clear:both; margin-left:0;padding-left:15px}
+
+
+#NltListHeader {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight:bold;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+}
+
+
+#NltListingTable {
+
+width:100%;
+border-collapse:collapse;
+border: 1px solid #000000;
+
+}
+
+#NltListingTableHeaderTd  {
+	font-weight: bold;
+	background-color: #FFFFCC;
+	padding: 5px;
+	border: 1px solid #FF9900;
+}
+
+
+#NltArchiveHeader {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight:bold;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #999999;
+}
+#NltArchiveSubHeader {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:right;
+}
+#NltListSubHeader {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:right;
+}
+
+#NltUnconfirmed{
+	margin-top: -15px;
+	margin-bottom: 15px;
+	width:550px;
+	text-align:right;
+}
+#NltMessage {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #FFFFCC;
+	color:#000000;
+	padding: 10px;
+	margin-bottom:25px;
+	border: 1px solid #FF9900;
+}
+#NltTips {
+/*	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;*/
+	background-color: #FFFFCC;
+	color:#000000;
+	padding: 10px;
+	margin-bottom:5px;
+	margin-top:5px;
+	border: 1px solid #FF9900;
+	width: 350px;
+}
+#NltAdminMenu {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#NltAdminMenu a:link,#NltAdminMenu a:visited {
+	padding: 10px;
+	background-color: #F5F5F5;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+#NltAdminMenu a:hover {
+	background-color: #FFCC00;
+	color: #000000;
+	text-decoration: underline;
+}
+.NltHover,.NltHover a:link,.NltHover a:visited {
+	background-color: #FFCC00;
+	background-image: url(./../../editor_images/admin_06.jpg);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	}
+.NltList1,.NltList1 a:link,.NltList1 a:visited {
+	background-color: #F5F5F5;
+	color:#000000;
+	text-decoration:none;
+}
+
+.NltList2,.NltList2 a:link,.NltList2 a:visited {
+	background-color: #E0E0E0;
+	color:#000000;
+	text-decoration:none;
+}

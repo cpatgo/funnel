@@ -1,0 +1,23 @@
+/* DG - 29/11/12 - Align single item with results. General UI Imrpovement */
+.chzn-container-single .chzn-single {
+  padding: 0;
+  height:38px;
+}
+
+/* DG - 03/12/12 -chosenImage - position, size and indent text */
+.chznImage-container .chzn-results li,
+.chznImage-container .chzn-single span {
+  background-position: 0 0;
+ 
+  text-indent:-9999px;margin-right:20px;
+}
+
+.chznImage-container .chzn-single span {
+  height:38px;
+  
+}
+.chzn-container-single .chzn-single div{padding:0;}
+.chzn-container-single ul.chzn-results  {}
+.chzn-container-single .chzn-results li  {border:1px solid #eee}
+.chzn-container-single .chzn-results li:hover  {padding:0;border:1px solid #333;box-shadow:0 0 5px #3399FF}
+.chzn-container-single .chzn-single div b {background-position:0px 8px;}

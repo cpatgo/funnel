@@ -1,0 +1,7 @@
+
+.shopProductMoreImages { width: 180px; float:left; display:inline; }
+.shopProductMoreName h1,.shopProductListName h1,.shopProductPromoName h1 { border-bottom: 1px solid #999; margin-bottom: 10px; padding:5px; }
+.shopProductMoreBuy,.shopProductListBuy,.shopProductPromoBuy { border-top: 1px solid #999; margin-top: 10px; padding:5px; text-align:right; float:right; }
+.shopProductMorePrice,.shopProductListPrice,.shopProductPromoPrice { display:inline;padding:0 5px; }
+.shopProductListOverview,.shopProductPromoOverview { text-decoration:none; }
+.shopProductListImages,.shopProductPromoImages { width: 90px; float:left; }

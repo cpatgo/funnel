@@ -1,0 +1,1624 @@
+=== main content: === 100 ===
+
+
+<p>[DESC1] [DESC1] [DESC1]</p>
+
+
+=== main content: === 101 ===
+
+
+<div class="row-fluid">
+
+  <div class="span5 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+  <div class="span7"><h3>[TITLE1]</h3>[DESC1]</div>
+
+</div><hr class="soften" />
+
+
+=== another content: === 102 ===
+
+
+<div class="row-fluid">
+
+  <div class="span4 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+  <div class="span8"><h3>[TITLE1]</h3>[DESC1]</div>
+
+</div><hr class="soften" />
+
+
+=== one more content: === 103 ===
+
+
+<div class="row-fluid">
+
+  <div class="span7"><h3>[TITLE1]</h3>[DESC1]</div>
+  <div class="span5 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+
+</div><hr class="soften" />
+
+
+=== one more content: === 104 ===
+
+
+<div class="row-fluid">
+
+  <div class="span8"><h3>[TITLE1]</h3>[DESC1]</div>
+  <div class="span4 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+
+</div><hr class="soften" />
+
+
+
+=== one more content: === 105 ===
+
+<img class="thumbnail" src="http://lorempixel.com/1200/400/nature/" alt="" style="display: block; margin-left: auto; margin-right: auto;" />
+
+
+=== 2cols === 201 ===<div class="row-fluid">
+
+
+
+  <div class="span3 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+  <div class="span3"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+
+
+  <div class="span3 pagination-centered"><img src="[IMAGE2]" alt="" class="thumbnail" /></div>
+  <div class="span3"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+</div><hr class="soften" />
+=== 2cols === 202 ===<div class="row-fluid">
+
+
+
+  <div class="span2 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+  <div class="span4"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+
+
+  <div class="span2 pagination-centered"><img src="[IMAGE2]" alt="" class="thumbnail" /></div>
+  <div class="span4"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+</div><hr class="soften" />
+=== 2cols === 203 ===<div class="row-fluid">
+
+
+
+  <div class="span1 pagination-centered"><img src="[IMAGE1]" alt="" class="thumbnail" /></div>
+  <div class="span5"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+
+
+  <div class="span1 pagination-centered"><img src="[IMAGE2]" alt="" class="thumbnail" /></div>
+  <div class="span5"><h3>[TITLE1]</h3>[DESC1]</div>
+
+
+</div><hr class="soften" />
+=== 2cols === 204 ===<div class="row-fluid centerFullSizeImages itemListTypeC">
+    <div class="span6">
+      <a href="#" class="thumbnail">
+        <img src="[IMAGE3]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span6">
+      <a href="#" class="thumbnail">
+        <img src="[IMAGE2]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    
+    
+  </div><hr class="soften" />
+=== 2cols === 205 ===<div class="row-fluid">
+    <div class="span6">
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span6">
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    
+    
+  </div><hr class="soften" />
+=== 2cols === 206 ===<hr class="soften" />
+=== 2cols === 207 ===<hr class="soften" />
+=== 2cols === 208 ===<hr class="soften" />
+=== 2cols === 209 ===<hr class="soften" />
+=== 3cols === 301 ===<div class="row-fluid">
+<div class="span4">
+<div class="row-fluid">
+
+  <div class="span3 pagination-centered "><img src="[IMAGE1]" alt="" /></div>
+  <div class="span8 spacerLeft"><h4>[TITLE1]</h4>[DESC1]</div>
+
+</div>
+</div>
+<div class="span4">
+<div class="row-fluid">
+
+  <div class="span3 pagination-centered"><img src="[IMAGE2]" alt="" /></div>
+  <div class="span8 spacerLeft"><h4>[TITLE1]</h4>[DESC1]</div>
+
+</div>
+</div>
+<div class="span4">
+<div class="row-fluid">
+
+  <div class="span3 pagination-centered"><img src="[IMAGE3]" alt="" /></div>
+  <div class="span8 spacerLeft"><h4>[TITLE1]</h4>[DESC1]</div>
+
+</div>
+</div>
+</div><hr class="soften" />
+=== 3cols === 302 ===<div class="row-fluid">
+<div class="span4 itemListTypeA">
+    <h3><img src="[ICON1]" alt="" />[TITLE1]</h3>
+    <hr>
+    <p>[DESC1]</p>
+</div>
+<div class="span4 itemListTypeA">
+    <h3><img src="[ICON1]" alt="" />[TITLE1]</h3>
+    <hr>
+    <p>[DESC1]</p>
+</div>
+<div class="span4 itemListTypeA">
+    <h3><img src="[ICON1]" alt="" />[TITLE1]</h3>
+    <hr>
+    <p>[DESC1]</p>
+</div>
+</div><hr class="soften" />
+=== 3cols === 303 ===<div class="row-fluid centerFullSizeImages itemListTypeC">
+    <div class="span4">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE1]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span4">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE2]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span4">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE3]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    
+  </div><hr class="soften" />
+=== 3cols === 304 ===<hr class="soften" />
+=== 3cols === 305 ===<hr class="soften" />
+=== 3cols === 306 ===<hr class="soften" />
+=== 3cols === 307 ===<hr class="soften" />
+=== 3cols === 308 ===<hr class="soften" />
+=== 3cols === 309 ===<hr class="soften" />
+=== 4cols === 401 ===<div class="row-fluid centerFullSizeImages itemListTypeC">
+    <div class="span3">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE1]" alt="">
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span3">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE2]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span3">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE3]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+    <div class="span3">
+      <a class="thumbnail" href="#">
+        <img src="[IMAGE1]" alt="" />
+      </a>
+    <h3>[TITLE1]</h3>
+    [DESC1]
+    </div>
+  </div><hr class="soften" />
+=== 4cols === 402 ===<hr class="soften" />
+=== 4cols === 403 ===<hr class="soften" />
+=== 4cols === 404 ===<hr class="soften" />
+=== 4cols === 405 ===<hr class="soften" />
+=== 4cols === 406 ===<hr class="soften" />
+=== 4cols === 407 ===<hr class="soften" />
+=== 4cols === 408 ===<hr class="soften" />
+=== 4cols === 409 ===<hr class="soften" />
+=== Headers, etc === 501 ===<div class="jumbotron masthead">
+
+    <h1>[TITLE1]</h1>
+    <p>[DESC1]</p>
+    <p class="download-info">
+      <a href="#" class="btn btn-primary btn-large">[ACTION1]</a>
+      <a href="#" class="btn btn-large">[ACTION2] <small>[ACTION3]</small></a>
+    </p>
+    
+</div><hr class="soften" />
+=== Headers, etc === 502 ===<div class="hero-unit">
+<h1>[TITLE1]</h1>
+<p>[DESC1]</p>
+</div><hr class="soften" />
+=== Headers, etc === 503 ===<div class="well">
+<div class="row-fluid itemListTypeB">
+
+  <div class="span6 pagination-centered">
+    
+    <div class="marketing">
+      <h2>[TITLE1]</h2>
+      <h4>[DESC1]</h4>
+    </div>
+
+    </div>
+  <div class="span3 pagination-centered">
+    
+    <br /><br />
+    
+    <a href="#" class="btn btn-large">[ACTION1]</a>
+    <a href="#" class="btn btn-large btn-primary">[ACTION2]</a>
+    
+    <p><small>[ACTION3]</small></p>
+    </div>
+    
+  <div class="span3 pagination-centered"><img src="[IMAGE1]" alt="" /></div>
+
+</div></div><hr class="soften" />
+=== Headers, etc === 504 ===<div class="well">
+<div class="row-fluid itemListTypeB">
+
+  <div class="span7 pagination-centered">
+    
+    <div class="marketing">
+      <h2>[TITLE1]</h2>
+      <h4>[DESC1]</h4>
+    </div>
+
+    </div>
+  <div class="span5 pagination-centered">
+    
+    <br /><br />
+    
+    <a href="#" class="btn btn-large">[ACTION1]</a>
+    <a href="#" class="btn btn-large btn-primary">[ACTION2]</a>
+    
+    <p><small>[ACTION3]</small></p>
+    </div>
+
+</div></div><hr class="soften" />
+=== Headers, etc === 505 ===<hr class="soften" />
+=== Headers, etc === 506 ===<h2>[TITLE1] <small>[TITLE1]</small></h2><hr class="soften" />
+=== Headers, etc === 507 ===<div class="headerStyle1"><hr class="pull-left visible-desktop" />
+<h3><span>Header Style<br /><small>With Small Description</small></span></h3>
+<hr class="pull-right visible-desktop" /></div><hr class="soften" />
+=== Headers, etc === 508 ===<hr class="headerStyle1" />
+=== Headers, etc === 509 ===<h3 class="pagination-centered">[TITLE1], [DESC1]</h3><hr class="soften" />
+=== Others === 601 ===<div class="row-fluid">
+<div class="span6">{%contact%}</div>
+<div class="span6">
+<h2 style="padding: 15px 0;">Address</h2>
+<address>Street 123.<br />Unites States, Zip Code, NY 123456<br /> 1 234 567 89<br /> your@email.com</address><hr />{%bookmark%}</div>
+</div><hr class="soften" />
+=== Others === 602 ===<div class="row-fluid">
+<div class="span6 ">
+<div class="thumbnail pagination-centered">
+<h2 style="padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>Standard</small><br /> $50/month</h2>
+<strong>[DESC1]</strong><hr />
+<ul>
+<li>Ullamcorper amet ullamcorper primis</li>
+<li>nam pretium suspendisse neque</li>
+<li>phasellus sit pulvinar vel integer</li>
+</ul>
+<hr /><a class="btn" href="#">Buy Now</a><br /><br /></div>
+</div>
+<div class="span6 ">
+<div class="thumbnail pagination-centered">
+<h2 style="padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>Pro</small><br /> $100/month</h2>
+<strong>[DESC1]</strong><hr />
+<ul>
+<li>Ullamcorper amet ullamcorper primis</li>
+<li>nam pretium suspendisse neque</li>
+<li>phasellus sit pulvinar vel integer</li>
+</ul>
+<hr /><a class="btn" href="#">Buy Now</a><br /><br /></div>
+</div>
+</div><hr class="soften" />
+=== Others === 603 ===<div class="row-fluid">
+<div class="span4 ">
+<div class="thumbnail pagination-centered">
+<h2 style="padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>Free</small><br /> $0/month</h2>
+<strong>[DESC1]</strong><hr />
+<ul>
+<li>Ullamcorper amet ullamcorper primis</li>
+<li>nam pretium suspendisse neque</li>
+<li>phasellus sit pulvinar vel integer</li>
+</ul>
+<hr /><a class="btn" href="#">Buy Now</a><br /><br /></div>
+</div>
+<div class="span4 ">
+<div class="thumbnail pagination-centered">
+<h2 style="padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>Standard</small><br /> $100/month</h2>
+<strong>[DESC1]</strong><hr />
+<ul>
+<li>Ullamcorper amet ullamcorper primis</li>
+<li>nam pretium suspendisse neque</li>
+<li>phasellus sit pulvinar vel integer</li>
+</ul>
+<hr /><a class="btn" href="#">Buy Now</a><br /><br /></div>
+</div>
+<div class="span4 ">
+<div class="thumbnail pagination-centered">
+<h2 style="padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>Pro</small><br /> $100/month</h2>
+<strong>[DESC1]</strong><hr />
+<ul>
+<li>Ullamcorper amet ullamcorper primis</li>
+<li>nam pretium suspendisse neque</li>
+<li>phasellus sit pulvinar vel integer</li>
+</ul>
+<hr /><a class="btn" href="#">Buy Now</a><br /><br /></div>
+</div>
+</div><hr class="soften" />
+=== Others === 604 ===<div>
+<div class="row-fluid ">
+<div class="span4 ">
+<div class="thumbnail"><a href="#"><img src="[IMAGE1]" alt="" /></a>
+<h2 style="text-align: center; padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>[TITLE1]</small></h2>
+<div class="caption">
+<p>[DESC1]</p>
+</div>
+</div>
+</div>
+<div class="span4 ">
+<div class="thumbnail"><a href="#"><img src="[IMAGE2]" alt="" /></a>
+<h2 style="text-align: center; padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>[TITLE1]</small></h2>
+<div class="caption">
+<p>[DESC1]</p>
+</div>
+</div>
+</div>
+<div class="span4 ">
+<div class="thumbnail"><a href="#"><img src="[IMAGE3]" alt="" /></a>
+<h2 style="text-align: center; padding: 15px 0; margin-bottom: 20px; background: #eee;"><small>[TITLE1]</small></h2>
+<div class="caption">
+<p>[DESC1]</p>
+</div>
+</div>
+</div>
+</div>
+</div><hr class="soften" />
+=== Others === 605 ===
+[TABLE_TITLE]
+<br><br>
+
+<table class="table table-bordered">
+<caption>[TABLE_TITLE2]</caption>
+<thead>
+<tr style="border-color: #ccc; background-color: #eee;">
+<th>[TABLE_TITLE3] #1</th>
+<th>[TABLE_TITLE4]</th>
+<th>[TABLE_TITLE5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TABLE_TITLE3] #2</td>
+<td>[TABLE_TITLE4]</td>
+<td>[TABLE_TITLE5]</td>
+</tr>
+<tr>
+<td>[TABLE_TITLE3] #3</td>
+<td>[TABLE_TITLE4]</td>
+<td>[TABLE_TITLE5]</td>
+</tr>
+</tbody>
+</table>
+=== Others === 606 ===<hr class="soften" />
+=== Others === 607 ===<hr class="soften" />
+=== Others === 608 ===<hr class="soften" />
+=== Others === 609 ===<hr class="soften" />
+
+
+
+
+
+=== Kopage 3.0 contents: === 1001 ===
+
+<div id="newKeditItem" class="kedit container-fluid">
+		<div class="row">
+		<div class="col-md-5 text-center"><img class="img-responsive center-block" src="[IMAGE1]"></div>
+		<div class="col-md-7">
+			<h2>[TITLE1]</h2>
+			<div>[DESC1]</div>
+		</div>
+		</div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1002 ===
+
+<div id="newKeditItem" class="kedit container-fluid">
+		
+		<h2>[TITLE1]</h2>
+		<div>[DESC1]</div>
+			
+</div>
+ 
+=== Kopage 3.0 contents: === 1003 ===
+
+<div id="newKeditItem" class="kedit">
+      <hr>
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1004 ===
+ 
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+	<div class="row">
+		<div class="col-md-4">
+			<img class="img-circle" src="[IMAGE1]" height="140" width="140">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+			<div class="koButtons"><a class="btn btn-primary" href="#">[ACTION4]</a></div>
+		</div>  
+		<div class="col-md-4">
+			<img class="img-circle" src="[IMAGE2]" height="140" width="140">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+			<div class="koButtons"><a class="btn btn-primary" href="#">[ACTION4]</a></div>
+		</div>  
+		<div class="col-md-4">
+			<img class="img-circle" src="[IMAGE3]" height="140" width="140">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+			<div class="koButtons"><a class="btn btn-primary" href="#">[ACTION4]</a></div>
+		</div>
+	</div>
+</div>
+ 
+=== Kopage 3.0 contents: === 1005 ===
+
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+
+<h1>[PAGENAME]</h1>
+<p>[DESC1]</p>
+<div class="koButtons"><a class="btn btn-primary btn-large btn-xl" href="#">[ACTION1]</a> <a class="btn btn-default btn-large btn-xl" href="#">[ACTION4]</a></div>
+</div>
+
+</div>
+
+
+
+=== Kopage 3.0 contents: === 1006 ===
+
+<div id="newKeditItem" class="kedit container-fluid">
+		<div class="row">
+		<div class="col-md-7">
+			<h2>[TITLE1]</h2>
+			<div>[DESC1]</div>
+		</div>
+		<div class="col-md-5 text-center"><img class="img-responsive center-block" src="[IMAGE1]"></div>
+		</div>
+</div>
+
+=== Kopage 3.0 contents: === 1007 ===
+
+<div id="newKeditItem" class="kedit container-fluid" [HEADERDATA]>
+    
+    <h1>[PAGENAME]</h1>   
+	[BREADCRUMBS]
+
+
+</div>
+
+=== Kopage 3.0 contents: === 1008 ===
+
+<div id="newKeditItem" class="kedit keditRight koBlock1 container-fluid" style="background:url([IMAGE1]) no-repeat center center;background-size:cover" data-background="[IMAGE1]">
+    
+	<div class="row">
+    <h2>[TITLE1]</h2>  
+	<div>[DESC1]</div>
+	</div>
+
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1009 ===
+ 
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-3">
+			<img src="[IMAGE1]">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-3">
+			<img src="[IMAGE2]">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-3">
+			<img src="[IMAGE3]">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>
+		<div class="col-sm-3">
+			<img src="[IMAGE4]">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+		</div>
+	</div>
+</div>
+
+=== Kopage 3.0 contents: === 1010 ===
+
+<div id="newKeditItem" class="kedit koBlock1 text-center container-fluid" style="background:#f5f5f5" data-bgcolor="#f5f5f5">
+    
+	<img class="center-block" src="[IMAGE3]">
+    <h2>[TITLE1]</h2>  
+	<div>[DESC1]</div>
+	
+	<div class="koButtons"><a class="btn btn-primary btn-large btn-xl" href="#">[ACTION1]</a> <a class="btn btn-large btn-xl btn-link" href="#">[ACTION4]</a></div>
+
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1011 ===
+ 
+
+
+<div id="newKeditItem" class="kedit container-fluid">
+	<div class="row">
+		<div class="col-sm-2 text-right">
+			<img src="[IMAGE1]">
+		</div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-2 text-right">
+			<img src="[IMAGE2]">
+		</div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+	</div>
+</div>
+<div id="newKeditItem2" class="kedit container-fluid">
+	<div class="row">
+    <div class="col-sm-2 text-right">
+      <img src="[IMAGE2]">
+    </div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+    <div class="col-sm-2 text-right">
+      <img src="[IMAGE2]">
+    </div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+	</div>
+</div>
+<div id="newKeditItem3" class="kedit container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+			<img class="pull-left" src="[IMAGE2]">
+		</div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-2">
+			<img class="pull-left" src="[IMAGE3]">
+		</div>  
+		<div class="col-sm-4">
+			<h3>[TITLE1]</h3>
+			<p>[DESC1]</p>
+		</div>  
+	</div>
+</div>
+
+=== Kopage 3.0 contents: === 1012 ===
+
+<div id="newKeditItem" class="kedit text-center">
+    
+    <h2 class="koHeader1">[TITLE1]</h2>  
+	<div>[DESC1]</div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1013 ===
+
+<div id="newKeditItem" class="kedit text-center">
+    
+    <h2 class="koHeader1">Follow Us</h2>  
+    <div class="koButtons">
+
+    <a class="btn btn-large btn-facebook" href="[SOCIAL_FACEBOOK]">Facebook</a>
+    <a class="btn btn-large btn-twitter" href="[SOCIAL_TWITTER]">Twitter</a>
+    <a class="btn btn-large btn-google" href="[SOCIAL_GOOGLE]">Google+</a>
+    <a class="btn btn-large btn-linkedin" href="[SOCIAL_LINKEDIN]">LinkedIn</a>
+    <a class="btn btn-large btn-youtube" href="[SOCIAL_YOUTUBE]">YouTube</a>
+
+    </div>
+
+
+</div>
+
+=== Kopage 3.0 contents: === 1020 ===
+
+<div id="newKeditItem" class="kedit text-center">
+    
+    
+    <h2 class="koHeader1">Share</h2>  
+    <div class="koButtons koSocialButtons">
+
+    <a class="btn btn-large btn-facebook" href="[SOCIAL_SHARE_FACEBOOK]">Facebook</a>
+    <a class="btn btn-large btn-twitter" href="[SOCIAL_SHARE_TWITTER]">Twitter</a>
+    <a class="btn btn-large btn-google" href="[SOCIAL_SHARE_GOOGLE]">Google+</a>
+    <a class="btn btn-large btn-linkedin" href="[SOCIAL_SHARE_LINKEDIN]">LinkedIn</a>
+    <a class="btn btn-large btn-email" href="[SOCIAL_SHARE_EMAIL]">Email</a>
+    <a class="btn btn-large btn-addtoany" href="[SOCIAL_SHARE_ANY]"> </a>
+
+    </div>
+
+
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1014 ===
+ 
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-3">
+			<i class="fa fa-cog"></i>
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-3">
+			<img src="[IMAGE2]">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-3">
+			<img src="[IMAGE3]">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>
+		<div class="col-sm-3">
+			<img src="[IMAGE4]">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+		</div>
+	</div>
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1015 ===
+ 
+
+
+<div id="newKeditItem" class="kedit koBlock2 koBlock2_A container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-4">
+			<img class="img-bw" src="[IMAGE1]">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-4">
+			<img class="img-bw" src="[IMAGE2]">
+			<h2>[PAGENAME]</h2>
+			<p>[DESC1]</p>
+		</div>  
+		<div class="col-sm-4">
+			<img class="img-bw" src="[IMAGE3]">
+			<h2>[TITLE1]</h2>
+			<p>[DESC1]</p>
+		</div>
+	</div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1016 ===
+
+<div id="newKeditItem" class="kedit">
+<img class="img-responsive center-block" src="[IMAGE1]"></div>
+</div>
+
+
+
+=== Kopage 3.0 contents: === 1017 ===
+
+<div id="newKeditItem" class="kedit container-fluid">
+		
+		<h2>[TITLE1]</h2>
+			
+</div>
+
+
+
+=== Kopage 3.0 contents: === 1018 ===
+
+<div id="newKeditItem" class="kedit container-fluid">
+		
+		<div>[DESC1]</div>
+			
+</div>
+ 
+
+
+=== Kopage 3.0 contents: === 1019 ===
+
+<div id="newKeditItem" class="kedit koZeroPadding keditPullLeft keditPullRight">
+    <div class="row keditPullLeft keditPullRight">
+    <div class="col-md-4 col-md-offset-1">
+      <br><br><h2>[TITLE1]</h2>
+      <div>[DESC1]</div>
+    </div>
+    <div class="col-md-7 text-right keditPullRight"><img src="[IMAGE1]"></div>
+    </div>
+
+</div>
+<div id="newKeditItem2" class="kedit koZeroPadding keditPullLeft keditPullRight">
+
+    <div class="row keditPullLeft keditPullRight">
+    <div class="col-md-7 text-left keditPullLeft"><img src="[IMAGE2]"></div>
+    
+
+    <div class="col-md-4">
+      <br><br><h2>[PAGENAME]</h2>
+      <div>[DESC1]</div>
+    </div>
+
+    </div>
+
+</div>
+
+
+ 
+
+
+=== Kopage 3.0 contents: === 1021 ===
+
+<div id="newKeditItem" class="kedit ">
+
+  <div class="text-center">
+      <h2>[PAGENAME]</h2>
+      <div><strong>[DESC1]</strong><br><br></div>
+      </div>
+
+    <div class="row">
+    <div class="col-md-5">
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]</div>
+    </div>
+    <div class="col-md-7 text-right"><img src="[IMAGE1]"></div>
+    </div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1022 ===
+
+<div id="newKeditItem" class="kedit ">
+
+  <div class="text-center">
+      <h2>[PAGENAME]</h2>
+      <div><strong>[DESC1]</strong><br><br></div>
+      </div>
+
+    <div class="row">
+    <div class="col-md-7 text-right"><img src="[IMAGE1]"></div>
+    <div class="col-md-5">
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]</div>
+    </div>
+    </div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1023 ===
+
+<div id="newKeditItem" class="kedit ">
+
+    <div class="text-center">
+      <h2>[PAGENAME]</h2>
+      <div><strong>[DESC1]</strong><br><br></div>
+    </div>
+
+    <div class="row">
+
+    <div class="col-md-8 col-md-offset-2 text-center">
+      
+      <img src="[IMAGE1]">
+      <br><br>
+
+    </div>
+
+    <div class="col-md-4 col-md-offset-2">
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+    </div>
+    <div class="col-md-4">
+      <h3>[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+    </div>
+
+    </div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1024 ===
+
+<div id="newKeditItem" class="kedit ">
+
+
+    <div class="row">
+
+    <div class="col-md-4 text-right">
+      <h3 class="koColor">[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+
+
+      <h3 class="koColor">[PAGENAME]</h3>
+      <div>[DESC1]<br><br></div>
+
+
+      <h3 class="koColor">[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      
+      <img src="[IMAGE1]">
+      <br><br>
+
+    </div>
+
+    <div class="col-md-4 text-left">
+      <h3 class="koColor">[PAGENAME]</h3>
+      <div>[DESC1]<br><br></div>
+
+
+      <h3 class="koColor">[TITLE1]</h3>
+      <div>[DESC1]<br><br></div>
+
+
+      <h3 class="koColor">[PAGENAME]</h3>
+      <div>[DESC1]<br><br></div>
+    </div>
+
+    </div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1025 ===
+
+<div id="newKeditItem" class="kedit ">
+
+
+    <div class="row">
+    
+        <div class="col-md-6">
+          <h4 class="koColor">[PAGENAME]</h4>
+          <h2>[TITLE1]</h2>
+          <div>[DESC1]<br><br></div>
+    
+    
+          <ul class="koCheckList">
+          
+            <li>[TITLE1]</li>
+            <li>[PAGENAME]</li>
+            <li>[TITLE1]</li>
+            <li>[PAGENAME]</li>
+    
+          </ul>
+    
+    
+        </div>
+    
+        <div class="col-md-6 text-left">
+          
+          <img src="[IMAGE1]">
+    
+        </div>
+    
+    
+    </div>
+
+</div>
+
+=== Kopage 3.0 contents: === 1026 ===
+
+<div id="newKeditItem" class="kedit ">
+
+
+  <div class="row">
+    
+        <div class="col-md-6 text-left">
+          
+          <img src="[IMAGE1]">
+    
+        </div>
+    
+        <div class="col-md-6">
+          <h4 class="koColor">[PAGENAME]</h4>
+          <h2>[TITLE1]</h2>
+          <div>[DESC1]<br><br></div>
+    
+    
+          <ul class="koCheckList">
+          
+            <li>[TITLE1]</li>
+            <li>[PAGENAME]</li>
+            <li>[TITLE1]</li>
+            <li>[PAGENAME]</li>
+    
+          </ul>
+    
+    
+        </div>
+    
+    
+    </div>
+</div>
+ 
+
+=== Kopage 3.0 contents: === 1027 ===
+
+<div id="newKeditItem" class="kedit">
+
+<div class="row text-center koGrid koColorIcon">
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-area-chart"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1]</p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-camera"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1]</p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-bell"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1]</p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-coffee"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1]</p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-paper-plane"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1] </p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+            <i class="fa fa-power-off"></i>
+            <h2>[TITLE1]</h2>
+            <p>[DESC1]</p>
+        </div>
+</div>
+            
+</div>
+
+ 
+
+=== Kopage 3.0 contents: === 1028 ===
+
+
+<div id="newKeditItem" class="kedit koZeroPaddingBottom keditPullRight">
+
+    <div class="row keditPullRight">
+    
+        <div class="col-sm-6">
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE1]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE2]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE3]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+    
+        </div>
+    
+        <div class="col-sm-6 keditPullRight">
+            <h2>[PAGENAME]</h2>
+            <br><br>
+            <img src="[IMAGE4]" class="boxShadow50">
+        </div>
+    
+    </div>
+    
+</div>
+
+ 
+
+=== Kopage 3.0 contents: === 1029 ===
+
+
+<div id="newKeditItem" class="kedit koZeroPaddingBottom keditPullLeft">
+
+    <div class="row keditPullLeft">
+    
+        <div class="col-sm-6 text-right keditPullLeft">
+            <h2>[PAGENAME]</h2>
+            <br><br>
+            <img src="[IMAGE4]" class="boxShadow50">
+        </div>
+    
+        <div class="col-sm-6">
+    
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE1]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE2]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+          <div class="row">
+          <div class="col-sm-3 text-right"><br><img src="[IMAGE3]"></div>
+          <div class="col-sm-9">
+          <h4 class="koColor">[TITLE1]</h4>
+          <div>[DESC1]<br><br></div>
+          </div>
+          </div>
+    
+    
+        </div>
+    
+    </div>
+</div>
+
+ 
+
+=== Kopage 3.0 contents: === 1030 ===
+
+<div id="newKeditItem" class="kedit" style="background:#eeeeee" data-bgcolor="#eeeeee">
+
+<div class="text-center">
+
+    <div>
+        <h2>[TITLE1]</h2>
+        <p style="font-size:140%">[DESC1]</p>
+        <br><br>
+    </div>
+
+    <div class="koGreyLogos"><img src="[BLOGO1]" alt=""><img src="[BLOGO2]" alt=""><img src="[BLOGO3]" alt=""><img src="[BLOGO4]" alt=""></div>
+
+
+</div>
+
+</div>
+ 
+
+=== Kopage 3.0 contents: === 1031 ===
+
+<div id="newKeditItem" class="kedit">
+
+    <div class="row">
+    
+        <div class="col-sm-10 col-sm-offset-1">
+    
+          <h2>[DESC1]</h2>
+          <br>
+    
+          <div class="row koCount">
+                <div class="col-sm-9">
+                  <ol>
+        
+                    <li><strong>[TITLE1]</strong><br>[DESC1]</li>
+                    <li><strong>[TITLE1]</strong><br>[DESC1]</li>
+                    <li><strong>[TITLE1]</strong><br>[DESC1]</li>
+        
+                  </ol>
+                </div>
+                <div class="col-sm-3">
+                  <img src="[IMAGE3]">
+                </div>
+    
+          </div>
+    
+      </div> 
+    </div> 
+
+</div>
+
+ 
+=== Kopage 3.0 contents, from 1050 it's text blocks: === 1051 ===
+ 
+
+
+<div id="newKeditItem" class="kedit container-fluid">
+  <h3 class="page-header">[TITLE1]</h3>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+    </div>  
+    <div class="col-sm-6">
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+    </div>  
+    <div class="col-sm-6">
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+=== Kopage 3.0 contents: === 1052 ===
+ 
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 class="koColor">[PAGENAME]</h2>
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+      <div class="koButtons"><a class="btn btn-large btn-ghost" href="#">[ACTION4]</a></div>
+    </div>  
+    <div class="col-sm-4">
+      <h2 class="koColor">[PAGENAME]</h2>
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+      <div class="koButtons"><a class="btn btn-large btn-ghost" href="#">[ACTION4]</a></div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="koColor">[PAGENAME]</h2>
+      <h4>[TITLE1]</h4>
+      <p>[DESC1]</p>
+      <div class="koButtons"><a class="btn btn-large btn-ghost" href="#">[ACTION4]</a></div>
+
+    </div>  
+  </div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1053 ===
+
+
+
+<div id="newKeditItem" class="kedit">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class="koOpacity">[TITLE1]</h3>
+      <h2 class="koColor">[PAGENAME]</h2>
+      <div>[DESC1]</div>
+    </div>  
+    <div class="col-sm-6">
+      <h3 class="koOpacity">[PAGENAME]</h3>
+      <h2 class="koColor">[TITLE1]</h2>
+      <div>[DESC1]</div>
+    </div>
+  </div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1054 ===
+
+
+<div id="newKeditItem" class="kedit koPricingTable koPricingTableClean">
+
+
+  <div class="row-fluid">
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Simple</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>9<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>1 Email Account</li>
+        <li>1 Domain Name</li>
+        <li>1GB Space</li>
+        <li>5GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Professional</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>19<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>5 Email Accounts</li>
+        <li>3 Domain Names</li>
+        <li>10GB Space</li>
+        <li>50GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Advanced</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>29<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>10 Email Accounts</li>
+        <li>10 Domain Names</li>
+        <li>100GB Space</li>
+        <li>500GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+    </div>
+    
+    
+
+
+</div>
+
+
+=== Kopage 3.0 contents: === 1055 ===
+
+
+<div id="newKeditItem" class="kedit koPricingTable">
+
+
+  <div class="row-fluid">
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Simple</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>9<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>1 Email Account</li>
+        <li>1 Domain Name</li>
+        <li>1GB Space</li>
+        <li>5GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Professional</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>19<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>5 Email Accounts</li>
+        <li>3 Domain Names</li>
+        <li>10GB Space</li>
+        <li>50GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+
+  <div class="col-md-4 col-sm-6">
+  <span class="kopt_type">Advanced</span>
+  <div class="kopt_plan">
+
+    <div class="kopt_header">
+      <sub>$</sub>29<sup>95</sup>
+      <small>per month</small>
+    </div>
+      <ul>
+        <li>10 Email Accounts</li>
+        <li>10 Domain Names</li>
+        <li>100GB Space</li>
+        <li>500GB Bandwidth</li>
+      </ul>
+    <div class="kopt_price">
+      <a href="#" class="btn btn-block btn-default">Add to cart</a>
+    </div>
+  </div>
+</div>
+    </div>
+    
+    
+
+
+</div>
+
+ 
+=== Kopage 3.0 contents: === 1061 ===
+
+
+
+<div id="newKeditItem" class="kedit container-fluid" style="background:#f5f5f5" data-bgcolor="#f5f5f5">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <h2 class="koColor">[PAGENAME]</h2>
+      <h4>[DESC1]</h4>
+    </div>  
+    <div class="col-sm-4 text-center">
+
+      <div class="koButtons"><a class="btn btn-link btn-lg" href="#">[ACTION4]</a> <a class="btn btn-primary btn-lg" href="#">[ACTION1]</a></div>
+
+    </div>
+  </div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1062 ===
+
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h2 class="koColor">[TITLE1]</h2>
+      <h4>[DESC1]</h4>
+    </div>  
+    <div class="col-sm-8 col-sm-offset-2">
+    <br>
+
+      <div class="koButtons">
+      <div class="row">
+      <div class="col-xs-6">
+      <a class="btn btn-default btn-lg btn-block" href="#">[ACTION4]</a>
+      </div>
+      <div class="col-xs-6">
+      <a class="btn btn-primary btn-lg btn-block col-xs-6" href="#">[ACTION1]</a>
+      </div>
+      </div></div>
+
+    </div>
+  </div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1063 ===
+
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h2>[PAGENAME]</h2>
+      <h3 class="koColor">[TITLE1]</h3>
+      <h4 class="koOpacity">[DESC1]</h4>
+    </div>  
+    <div class="col-sm-6 col-sm-offset-3">
+    <br>
+
+      <div class="koButtons">
+      <a class="btn btn-primary btn-lg btn-block" href="#">[ACTION1]</a>
+      <a class="btn btn-default btn-lg btn-block" href="#">[ACTION4]</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+=== Kopage 3.0 contents: === 1071 ===
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center keditDark" style="background:#222" data-bgcolor="#222">
+
+    <h1>[PAGENAME]</h1>   
+    <div>[DESC1]</div>
+
+</div>
+
+
+=== Kopage 3.0 contents: === 1072 ===
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center" style="background:#F4F4F4" data-bgcolor="#F4F4F4">
+
+    <h1 class="koColor">[TITLE1]</h1>   
+    <h3 class="koOpacity">[DESC1]</h3>
+
+</div>
+
+
+=== Kopage 3.0 contents: === 1073 ===
+
+
+
+<div id="newKeditItem" class="kedit container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-8">
+      <h3 class="koOpacity">[TITLE1]</h3>
+      <h2 class="koColor">[PAGENAME]</h2>
+      <div>[DESC1]</div>
+    </div>  
+    <div class="col-sm-4">
+
+      <img src="[IMAGE1]" />
+
+    </div>
+  </div>
+</div>
+    
+
+
+=== Kopage 3.0 contents: === 1101 ===
+
+
+<div id="newKeditItem" class="kedit keditRow container-fluid">
+
+<div class="row">
+<div class="col-sm-6 keditColumn ui-sortable">
+
+<div id="newKeditItem2" class="kedit">[DESC1]</div>
+
+</div>
+<div class="col-sm-6 keditColumn ui-sortable">
+
+<div id="newKeditItem3" class="kedit">[DESC1]</div>
+	
+</div>
+</div>
+
+</div>
+
+
+
+=== Kopage 3.0 contents: === 1102 ===
+
+
+<div id="newKeditItem2" class="kedit keditRow container-fluid">
+
+<div class="row">
+<div class="col-sm-6 keditColumn ui-sortable">{%contact%}</div>
+<div class="col-sm-6 keditColumn ui-sortable">
+
+	
+	<div id="newKeditItem" class="kedit">
+	
+	<h2>[PAGENAME]</h2>
+	<p>[DESC1]</p>
+	</div>
+	
+	</div>
+
+</div>
+</div>
+
+</div>
+
+
+=== Kopage 3.0 contents: === 1103 ===
+
+
+<div id="newKeditItem" class="kedit keditRow container-fluid">
+
+<div class="row">
+<div class="col-sm-4 keditColumn ui-sortable">
+
+<div id="newKeditItem2" class="kedit">[DESC1]</div>
+
+</div>
+<div class="col-sm-8 keditColumn ui-sortable">
+
+<div id="newKeditItem3" class="kedit">[DESC1]</div>
+  
+</div>
+</div>
+
+</div>
+
+
+=== Kopage 3.0 contents: === 1104 ===
+
+
+<div id="newKeditItem" class="kedit keditRow container-fluid">
+
+<div class="row">
+<div class="col-sm-8 keditColumn ui-sortable">
+
+<div id="newKeditItem2" class="kedit">[DESC1]</div>
+
+</div>
+<div class="col-sm-4 keditColumn ui-sortable">
+
+<div id="newKeditItem3" class="kedit">[DESC1]</div>
+  
+</div>
+</div>
+
+</div>
+
+=== Kopage 3.0 contents: === 100999 ===
+

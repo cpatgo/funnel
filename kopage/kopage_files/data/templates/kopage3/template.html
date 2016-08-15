@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="{%TemplateConfig[htmlClass]%}">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{%MetaDescription%}" />
+	<meta name="keywords" content="{%MetaKeywords%}" />
+	<title>{%MetaTitle%}</title>
+
+</head>
+<body class="{%TemplateConfig[bodyClass]%}" {%TemplateConfig[bodyData]%} id="body">  
+<div id="website" class="{%TemplateConfig[headerClass]%}">
+
+    <!-- Header with top menu and splash -->
+    <div id="header">
+    
+   	 	<!-- Header/Menu -->
+        <div id="headerMenu" class="{%TemplateConfig[menuClass]%}">
+            <div class="logoHolder adminTipHolder">
+                <a href="index.php" class="logo">{%WebsiteLogo%}</a>
+            </div>
+            <ul class="menuHolder topmenu">{%menu_start=1%}<li {%menu_ActiveClass%} ><a href="{%menu_href%}"><span>{%menu_display%}</span></a></li>{%menu_end=1%}{%header%}</ul>
+        </div>
+    
+        <!-- Header/Splash -->
+        {%menu_start=IF_HOME%}
+        <div id="headerBanner" {%TemplateConfig[headerData]%}>
+            <div class="kedit keditHeader" data-kedit="headerContent">
+            {%TemplateConfig[headerContent]%}
+            </div>
+        </div>
+        {%menu_end=IF_HOME%}
+        {%menu_start=IF_NOT_HOME%}
+        <div id="subpageHeaderBanner" {%TemplateConfig[headerData]%}>
+        </div>
+        {%menu_end=IF_NOT_HOME%}
+    </div>
+
+    <!-- Content -->
+    <div class="WxEditableArea" id="contentArea">{%content%}</div>
+    
+    <!-- Footer -->
+    <div id="footerContent" {%TemplateConfig[footerData]%}>
+        <div class="kedit keditFooter">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="keditFooterEditable" data-kedit="footerContent">{%TemplateConfig[footerContent]%}</div>
+                </div>
+                <div class="col-sm-5 footerHolder">
+                    <div id="keditFooterModule">{%footer%}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
