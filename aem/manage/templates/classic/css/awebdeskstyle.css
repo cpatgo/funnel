@@ -835,3 +835,17 @@ input[type=checkbox] { margin: 5px 0px; }
   #sub_submenu ul li.special a{  }
   #sub_submenu ul li.special { width: 30%; display: inline-block; }
 }
+
+label.acquisition, label.monetization, label.activation {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  border: 1px solid grey;
+  min-height: 48px;
+  padding: 50px;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+  background: beige;
+}
+
+
