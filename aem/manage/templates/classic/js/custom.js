@@ -49,6 +49,12 @@ jQuery(document).ready(function(){
         success:function(result) {
             console.log(result);
             jQuery('body').find('#list_block').append(result);
+            var select_list = jQuery("body").find("#landing-page-list-id");
+            
+			select_list.html('');
+			jQuery.each(result.data, function(key, value) {
+			    select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+			});
         },
         error: function(errorThrown){
             console.log(errorThrown);
