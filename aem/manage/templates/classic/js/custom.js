@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 	});
 
 	//GET LISTS
-	$.ajax({
+	jQuery.ajax({
         method: "post",
         url: "../ajax/custom.php",
         data: {
@@ -48,7 +48,7 @@ jQuery(document).ready(function(){
         dataType: 'json',
         success:function(result) {
             console.log(result);
-            $('body').find('#list_block').append(result);
+            jQuery('body').find('#list_block').append(result);
         },
         error: function(errorThrown){
             console.log(errorThrown);
