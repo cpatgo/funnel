@@ -32,9 +32,9 @@ define('kopageAllowedServers','1.1.1.1,2.2.2.2,3.3.3.3,etc');
 // Look for database structure in kopage.sql file.
 
 define('kopageMySQL_hostname','localhost');
-define('kopageMySQL_username','sql_USERNAME');
-define('kopageMySQL_password','sql_PASSWORD');
-define('kopageMySQL_database','sql_DATABASE');
+define('kopageMySQL_username','identifz_glc');
+define('kopageMySQL_password','1EAOGi~KUCsb');
+define('kopageMySQL_database','identifz_kopage');
 
 //define('kopageDemoWebsite','http://demo-website.YOUR-COMPANY.com');
 
