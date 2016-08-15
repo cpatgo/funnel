@@ -70,7 +70,7 @@ jQuery(document).ready(function(){
 
     //REFRESH LIST
     jQuery('body').on('click', '#refresh_list', function(e){
-    	e.preventDefaults();
+    	e.preventDefault();
     	aem_functions.get_lists();
     });
 });
