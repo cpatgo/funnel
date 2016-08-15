@@ -9,8 +9,6 @@ jQuery(document).ready(function(){
 // 	    // stepsOrientation: "vertical"
 // 	});
 
-
-
 	var form = jQuery("#create-funnel-campaign").show();
 	form.validate({
 	    errorPlacement: function errorPlacement(error, element) { element.before(error); },
@@ -40,4 +38,20 @@ jQuery(document).ready(function(){
 	    }
 	});
 
+	//GET LISTS
+	$.ajax({
+        method: "post",
+        url: "../ajax/custom.php",
+        data: {
+            'action':'get_lists'
+        },
+        dataType: 'json',
+        success:function(result) {
+            console.log(result);
+            $('body').find('#list_block').append(result);
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
 });
