@@ -85,17 +85,17 @@ jQuery(document).ready(function(){
 	//GET LISTS
 	aem_functions.get_lists();
 
-	//GET FORMS
-	aem_functions.get_forms();
-
-    //REFRESH LIST
+	//REFRESH LIST
     jQuery('body').on('click', '#refresh_list_list', function(e){
     	e.preventDefault();
     	aem_functions.get_lists();
     });
 
-    jQuery('body').on('click', '#refresh_form_list', function(e){
-    	e.preventDefault();
-    	aem_functions.get_forms();
-    });
+	//GET FORMS
+	// aem_functions.get_forms();
+
+    // jQuery('body').on('click', '#refresh_form_list', function(e){
+    // 	e.preventDefault();
+    // 	aem_functions.get_forms();
+    // });
 });
