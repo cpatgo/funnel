@@ -5,10 +5,10 @@ $GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWE
 
 $user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 $action = $_POST['action'];
-if($action === 'get_lists') get_lists();
+if($action === 'get_lists') get_lists($user_id);
 
 function get_lists() {
-	$query = sprintf("SELECT FROM awebdesk_list WHERE userid = %d", $user_id);
+	$query = sprintf("SELECT * FROM awebdesk_list WHERE userid = %d", $user_id);
 	$lists = aem_select($query);
 	die(json_encode(array('type' => 'success', 'data' => $lists)));
 }
