@@ -1,0 +1,2 @@
+[15-Aug-2016 14:28:10 America/New_York] PHP Fatal error:  Call to undefined function response() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/custom.php on line 19
+[15-Aug-2016 14:30:02 America/New_York] PHP Fatal error:  Call to undefined function aem_response() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/custom.php on line 19
