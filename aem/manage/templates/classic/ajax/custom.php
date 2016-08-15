@@ -8,7 +8,7 @@ $action = $_POST['action'];
 if($action === 'get_lists') get_lists($user_id);
 
 function get_lists($user_id) {
-	$query = sprintf("SELECT FROM awebdesk_list WHERE userid = %d", $user_id);
+	$query = sprintf("SELECT * FROM awebdesk_list WHERE userid = %d", $user_id);
 	$lists = aem_select($query);
 	die(json_encode(array('type' => 'success', 'data' => $lists)));
 }
