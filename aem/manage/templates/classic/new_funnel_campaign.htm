@@ -3,7 +3,7 @@
 <a href="desk.php">{"Return to the Dashboard."|alang}</a>
 {else} -->
 
-<h2>Create Landing Page</h2>
+<h1>Create Landing Page</h1>
 
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
 <input type="hidden" name="action" value="list_insert_post">
@@ -11,32 +11,38 @@
     <h3>Select Funnel Type</h3>
     <section>
         <div class="col-md-12">
-			<h2>
+			<h1>
 				{"Name Your Landing Page"|alang}
-			</h2>
+			</h1>
 			<div class="campaign_help">
+				<p class="lead">
 				{"Enter a name to help you remember what this campaign is all about.  Only you will see the campaign name.  Your subscribers will not see this."|alang}
+				</p>
 			</div>
 			<div class="campaign_input form-group">
 				<input type="text" class="form-control" value="" id="landing-page-name" name="landing-page-name"  />
 				<div id="landing-page-name-error"></div>
 			</div>
 			
-			<h2>
+			<h1>
 				{"Describe Your Landing Page"|alang}
-			</h2>
+			</h1>
 			<div class="campaign_help">
+				<p class="lead">
 				{"Short description for your landing page.  Only you will see the landing page description.  Your subscribers will not see this."|alang}
+				</p>
 			</div>
 			<div class="campaign_input form-group">
 				<textarea class="form-control" value="" id="landing-page-description" name="landing-page-description"></textarea>
 			</div>
 
-			<h2>
+			<h1>
 				{"Select Funnel Type"|alang}
-			</h2>
+			</h1>
 			<div class="campaign_help">
+				<p>
 				{"Select the funnel type below to help you determine the correct funnel type this is all about."|alang}
+				</p>
 			</div>
         	<div class="radio form-group">
 	        	<label class="radio-inline acquisition">
@@ -63,11 +69,10 @@
         <div class="row">
 	        <div class="col-md-12">
 		        <div class="campaign_help">
-		        	<p>You need to create a list for your funnel. Click the button below to create a new list or select an existing list below. If you create a new list, refresh the list below by clicking the "Refresh List" button to select your newly created list. <!-- We will record the list ID and save it in our database table for tracking purposes. --></p>
+		        	<p class="lead">You need to create a list for your funnel. Click the button below to create a new list or select an existing list below. If you create a new list, refresh the list below by clicking the "Refresh List" button to select your newly created list. <!-- We will record the list ID and save it in our database table for tracking purposes. --></p>
 	        	</div>
         	</div>
         </div>
-        <br />
         <div class="row">
         	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
 		        <a href="/aem/manage/desk.php?action=list#form-0" class="btn btn-primary btn-lg steps-btn" target="_blank">Create a List</a>
@@ -90,7 +95,7 @@
  		<div class="row">
 	        <div class="col-md-12">
 	        	<div class="campaign_help">
-	        		<p>You need to generate a form for your campaign. Click the button below to generate a new form snippet or select an existing form below.</p>
+	        		<p class="lead">You need to generate a form for your campaign. Click the button below to generate a new form snippet or select an existing form below.</p>
 	        	</div>
         	</div>
         </div>
@@ -118,14 +123,13 @@
     <h3>Create Your Landing Page</h3>
     <section>
         <div class="row">
-        	<div class="row">
-				<div class="col-md-12">
-					<!-- Insert Description -->
-					
-					<p>Click the link below to open our GLC Page Builder and create your awesome landing page. Specify instructions here.</p>
+			<div class="col-md-12">
+				<div class="campaign_help">
+					<p class="lead">Click the link below to open our GLC Page Builder and create your awesome landing page. Specify instructions here.</p>
 				</div>
-        	</div>
-        	<br />
+			</div>
+		</div>
+		<div class="row">
         	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
 		        <a href="/builder" class="btn btn-primary btn-lg steps-btn" target="_blank">Open Page Builder!</a>
         	</div>
@@ -136,7 +140,6 @@
 					<div id="landing-page-url-error"></div>
 				</div>
 			</div>
-
         </div>
     </section>
     <!-- Step 5 -->
@@ -154,10 +157,11 @@
 	<h3>Start Your Promotion</h3>
     <section>
         <div class="row">
-        	
 			<div class="col-md-12">
 				<!-- Insert Description -->
-				<p>Share your landing page via our social media sharer tools.</p>
+				<div class="campaign_help">
+					<p class="lead">Share your landing page via our social media sharer tools.</p>
+				</div>
 			</div>
         	
         	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
