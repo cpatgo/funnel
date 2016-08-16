@@ -19,8 +19,9 @@
 			</div>
 			<div class="campaign_input form-group">
 				<input type="text" class="form-control" value="" id="landing-page-name" name="landing-page-name"  />
+				<div id="landing-page-name-error"></div>
 			</div>
-
+			
 			<h2>
 				{"Describe Your Landing Page"|alang}
 			</h2>
@@ -55,6 +56,7 @@
 				</label>
 			</div>
         </div>
+        <div class="col-md-12" id="landing-page-type-error"></div>
     </section>
     <h3>Create Your List</h3>
     <section>
@@ -77,6 +79,7 @@
 				<div class="form-group">
 					<label for="">Select List: </label>
 					<select class="form-control" id="landing-page-list-id" name="landing-page-list-id"></select>
+					<div id="landing-page-list-id-error"></div>
 					<button id="refresh_list_list">Refresh List</button>
 				</div>
 			</div>
@@ -130,6 +133,7 @@
 				<div class="form-group">
 					<label for="">Page URL: </label>
 					<input type="text" class="form-control" id="landing-page-url" name="landing-page-url">	
+					<div id="landing-page-url-error"></div>
 				</div>
 			</div>
 
