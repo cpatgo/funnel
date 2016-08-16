@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 	        "landing-page-url": {
 	        	required: true
 	        }
-	    }
+	    }	
 	});
 	form.steps({
 	    headerTag: "h3",
@@ -47,6 +47,15 @@ jQuery(document).ready(function(){
 	    transitionEffect: "slideLeft",
 	    onStepChanging: function (event, currentIndex, newIndex)
 	    {
+	    	var step4 = jQuery('#landing-page-url').val();
+	    	if(step4.trim() && newIndex == 4) {
+	    		//Save campaign
+	    		aem_functions.save_funnel_campaign();
+	    		//Disable fields
+	    		jQuery('body').find('select').attr('disabled', true);
+	    		jQuery('body').find('input').attr('disabled', true);
+	    		jQuery('body').find('textarea').attr('disabled', true);
+	    	}
 	        form.validate().settings.ignore = ":disabled,:hidden";
 	        return form.valid();
 	    },
@@ -97,6 +106,24 @@ jQuery(document).ready(function(){
 					jQuery.each(result.data, function(key, value) {
 					    select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
 					});
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
+		save_funnel_campaign 	: 	function() {
+			var fields = jQuery('#create-funnel-campaign').serialize();
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/functions/funnel_campaign.php",
+		        data: {
+		            'action': 'list_insert_post',
+		            'fields': fields
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		            jQuery('body').find('#funnel_link').text(result.link)
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
