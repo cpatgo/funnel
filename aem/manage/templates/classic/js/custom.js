@@ -15,6 +15,18 @@ jQuery(document).ready(function(){
 	    rules: {
 	        confirm: {
 	            equalTo: "#password"
+	        },
+	        "landing-page-name": {
+	        	required: true
+	        },
+	        "landing-page-type": {
+	        	required: true
+	        },
+	        "landing-page-list-id": {
+	        	required: true
+	        },
+	        "landing-page-url": {
+	        	required: true
 	        }
 	    }
 	});
