@@ -548,6 +548,7 @@ li.li {
     margin: 0 auto !important;
     text-align: center !important;
     border-top-color: #888 !important;
+    padding-top: 0 !important;
 }
 
 button.glc_logout {
