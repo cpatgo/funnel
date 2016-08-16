@@ -1,7 +1,8 @@
 
 <div class="yui-g" id="top_bar">
     <div class="yui-u first">
-      <span class="company"><strong><a href="desk.php">%SITENAME%</a></strong></span>
+      <!-- <span class="company"><strong><a href="desk.php">%SITENAME%</a></strong></span> -->
+      <span class="company"><img src="css/images/emarketer.png"></span>
     </div>
 
     <div class="yui-u ar">
