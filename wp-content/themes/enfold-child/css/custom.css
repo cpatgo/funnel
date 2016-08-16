@@ -144,7 +144,11 @@ aside.sidebar > section.widget{
 }
 
 #footer .btn-secondary{
-	background: #2895f1;
+	background: #cd263a;
+}
+
+#footer .btn-secondary:hover{
+    opacity: .8;
 }
 
 #footer .btn-secondary, #footer .btn-plans-and-pricing{
@@ -233,9 +237,16 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 .btn-logout a { 
     /*background-color: #2895f1 !important;*/
-    background-color: #2895f1 !important;
+    background-color: #cd263a !important;
     color: white !important;
 }
+
+.btn-logout a:hover { 
+    /*background-color: #2895f1 !important;*/
+    opacity: .8;
+}
+
+
 
 .sub_menu li a { color: #fff; }
 .sub_menu li { padding: 0px; }
@@ -366,9 +377,57 @@ h3.widgettitle{
     padding-bottom: 4px;
 }
 
+#top .title_container .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 76px;
+}
+
 .breadcrumb.breadcrumbs.avia-breadcrumbs {
     font-size: 14px;
-    padding-top: 20px;
+    padding-top: 24px;
+}
+
+#top .social_bookmarks li {
+    height: 100%;
+    float: none; 
+    padding: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-right-style: solid;
+    border-right-width: 1px;
+    display: inline-block;
+    width: 30px;
+}
+
+#top .social_bookmarks li a { border-radius: 50px; }
+
+.social_footer_wrapper { margin: 20px 0px; }
+
+footer .social_bookmarks {display:  none;}
+
+@media only screen and (max-width: 767px) {
+    #top .title_container .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 76px;
+    }
+
+    .title_container .main-title {
+        margin: 0;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+        min-height: 0px !important; 
+        line-height: 2.3em; 
+        top: 0;
+        font-weight: 400;
+    }
+
+    .breadcrumb.breadcrumbs.avia-breadcrumbs {
+        font-size: 14px;
+        padding-top: 20px; 
+    }
 }
 
 span.sep {
