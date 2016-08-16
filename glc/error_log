@@ -607,3 +607,7 @@ wpMandrill::wp_mail_native:  (Reset Your Global Learning Center Account Password
 [15-Aug-2016 14:45:21 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
 [15-Aug-2016 18:45:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/index.php:15) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
 [15-Aug-2016 14:45:44 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/index.php on line 2
+[15-Aug-2016 16:07:59 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[15-Aug-2016 16:52:44 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[15-Aug-2016 17:56:56 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[15-Aug-2016 17:57:38 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
