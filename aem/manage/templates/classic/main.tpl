@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="yui-g" id="top_bar">
+<div class="yui-g no_padding" id="top_bar">
     <div>
           %HEADERNAV%
     </div>
