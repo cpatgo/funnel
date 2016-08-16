@@ -547,7 +547,7 @@ li.li {
 .header_middle {
     margin: 0 auto !important;
     text-align: center !important;
-    background: #888 !important;
+    border-top-color: #888 !important;
 }
 
 button.glc_logout {
