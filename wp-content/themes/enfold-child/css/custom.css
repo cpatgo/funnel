@@ -291,6 +291,8 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 .join_nav_link { margin-top: -9px; }
 
+#header.header_color.av_header_transparency .av-main-nav > li.join_nav_link > a .avia-menu-text{ color:#fff !important; }
+
 #header_main .container  {
     height: 90px !important;
     line-height: initial !important;
