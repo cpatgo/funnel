@@ -7,13 +7,13 @@ $action = $_POST['action'];
 if($action === 'list_insert_post') list_insert_post();
 
 function list_insert_post() {
-
+	parse_str($_POST['fields'], $fields);
 	$user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 	$query = sprintf("INSERT INTO awebdesk_funnel_campaign (title, type, description, user_id, list_id, page_link, date_created) VALUES ( '%s', '%s', '%s', '%d', '%d', '%s', '%s')", 
-		$_POST['landing-page-name'], $_POST['landing-page-type'], $_POST['landing-page-description'], $user_id, $_POST['landing-page-list-id'], $_POST['landing-page-url'], date('Y-m-d H:i:s'));
+		$fields['landing-page-name'], $fields['landing-page-type'], $fields['landing-page-description'], $user_id, $fields['landing-page-list-id'], $fields['landing-page-url'], date('Y-m-d H:i:s'));
 
 	mysqli_query($GLOBALS["aem_con"], $query);
 
-	echo "Campaign successfully created.";
+	die(json_encode(array('type' => 'success', 'link' => $fields['landing-page-url'])));
 }
 ?>
