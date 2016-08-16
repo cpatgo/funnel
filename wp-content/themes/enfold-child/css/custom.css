@@ -370,7 +370,15 @@ span.breadcrumb-title {
     color: #333;
 }
 
-.sidebar .widget:first-child { padding-top:20px !important; }
+/*.sidebar .widget:first-child { padding-top:20px !important; }*/
+
+.llms-course-list {
+    padding: 0;
+}
+
+.llms-course-list .courses {
+    text-align: left;
+}
 
 h3.widgettitle{
     order-bottom: 1px solid #999;
