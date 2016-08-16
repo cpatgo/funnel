@@ -4,20 +4,13 @@
       <span class="company"><img src="css/images/emarketer.png" class="emarketer_logo"></span>
     </div>
     <div class="yui-u ar">
-          <div class="row">
-            <ul class="header_ul">
-                <li><span class="glc_gray">Welcome: </span>{$glc_username}</li>
-                <li><span class="glc_gray">Membership: </span>{$glc_membership}</li>
-                <li><a href="/glc/logout.php"><button class="glc_button glc_logout">LOG OUT</button></a></li>
-            </ul>
-          </div>
+          %WELCOMEHEADER%
     </div>
 </div>
 
-<div class="yui-g" id="top_bar" class="header_middle">
-    <div class="yui-u ar">
-          %HEADERNAV%
-    </div>
+<div class="yui-g header_middle" id="top_bar">
+    
+    %HEADERNAV%
 
     <div class="yui-u ar">
       <div id="search">

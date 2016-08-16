@@ -545,9 +545,9 @@ li.li {
 }
 
 .header_middle {
-    margin: 0 auto;
-    text-align: center;
-    background: #888;
+    margin: 0 auto !important;
+    text-align: center !important;
+    background: #888 !important;
 }
 
 button.glc_logout {
