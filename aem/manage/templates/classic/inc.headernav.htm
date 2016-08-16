@@ -4,37 +4,37 @@
                     <li><span>Welcome: </span>{$glc_username}</li>
                     <li><span>Membership: </span>{$glc_membership}</li>
                     <li><a href="/glc/logout.php"><button class="glc_button glc_logout">LOG OUT</button></a></li>
+                
+                    {if adesk_admin_ismain()}
+                        {if $style_integration != ''}
+                            <li><a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Integration"|alang}</a></li>
+                        {else}
+                            <li><a href="desk.php?action=form#list-01-0-0"><img class="va" alt="Menu_dashboard" src="css/images/integration2.png" />{"Integration"|alang}</a></li>
+                        {/if}
+                    {/if}
+                    {if adesk_admin_ismaingroup()}   
+                        <li><a href="desk.php?action=design#list-01-0-0"><img class="va" src="css/images/designsettiings.png" width="10" height="10"/> {"Branding"|alang}</a></li>
+                    {/if}
+                    {if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
+                        <li><a href="desk.php?action=user#list-01-0-0"><img class="va" src="css/images/users.png" width="10" height="10"/> {"Users"|alang}</a></li>
+                    {/if}
+                    {if adesk_admin_ismaingroup() and !$__ishosted}
+                        <li><a href="desk.php?action=cron#list-01-0-0"><img class="va" src="css/images/scheduledtasks.png" width="10" height="10"/> {"Cron Settings"|alang}</a></li>
+                    {/if}
+                    {if adesk_admin_ismain()}
+                        <li><a href="desk.php?action=settings#settings_mailsending" title="{"Settings"|alang}"><img class="va" src="css/images/smtp.png" /> {"SMTP Connections"|alang}</a></li>
+                    {/if}
+                    {if adesk_admin_ismain()}
+                        <li><a href="desk.php?action=settings" title="{"Settings"|alang}"><img class="va" src="css/images/settings2.png" /> {"Settings"|alang}</a></li>
+                    {else}
+                        <!--<li><a href="desk.php?action=account" title="{"Settings"|alang}"><img class="va" src="css/images/settings.png" /> {"Settings"|alang}</a></li>-->
+                    {/if}
+                    
+                    {if adesk_admin_ismaingroup()} 
+                        <li><a href="index.php?action=logout"><img alt="Preferences" class="va" src="css/images/logout.png" /> Logout</a></li>
+                    {/if}
                 </ul>
             </div>
-
-            {if adesk_admin_ismain()}
-                {if $style_integration != ''}
-                    <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Integration"|alang}</a> 
-                {else}
-                    <a href="desk.php?action=form#list-01-0-0"><img class="va" alt="Menu_dashboard" src="css/images/integration2.png" />{"Integration"|alang}</a> 
-                {/if}
-            {/if}
-            {if adesk_admin_ismaingroup()}   
-                <a href="desk.php?action=design#list-01-0-0"><img class="va" src="css/images/designsettiings.png" width="10" height="10"/> {"Branding"|alang}</a>
-            {/if}
-            {if $admin.pg_user_add || $admin.pg_user_edit || $admin.pg_user_delete}
-                <a href="desk.php?action=user#list-01-0-0"><img class="va" src="css/images/users.png" width="10" height="10"/> {"Users"|alang}</a> 
-            {/if}
-            {if adesk_admin_ismaingroup() and !$__ishosted}
-                <a href="desk.php?action=cron#list-01-0-0"><img class="va" src="css/images/scheduledtasks.png" width="10" height="10"/> {"Cron Settings"|alang}</a> 
-            {/if}
-            {if adesk_admin_ismain()}
-                <a href="desk.php?action=settings#settings_mailsending" title="{"Settings"|alang}"><img class="va" src="css/images/smtp.png" /> {"SMTP Connections"|alang}</a>
-            {/if}
-            {if adesk_admin_ismain()}
-                <a href="desk.php?action=settings" title="{"Settings"|alang}"><img class="va" src="css/images/settings2.png" /> {"Settings"|alang}</a>
-            {else}
-                <!--<a href="desk.php?action=account" title="{"Settings"|alang}"><img class="va" src="css/images/settings.png" /> {"Settings"|alang}</a>-->
-            {/if}
-            
-            {if adesk_admin_ismaingroup()} 
-                <a href="index.php?action=logout"><img alt="Preferences" class="va" src="css/images/logout.png" /> Logout</a>
-            {/if}
         </span>
     </div>
 </div>
