@@ -622,3 +622,20 @@ wpMandrill::wp_mail_native:  (Reset Your Global Learning Center Account Password
 [16-Aug-2016 10:43:30 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
 [16-Aug-2016 10:43:39 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
 [16-Aug-2016 10:49:23 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 11:30:51 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 11:39:31 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 11:50:27 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 12:08:39 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 12:33:21 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 16:33:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/condition.php:15) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
+[16-Aug-2016 13:53:47 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 17:53:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/condition.php:15) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
+[16-Aug-2016 13:54:27 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 14:03:55 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 14:10:54 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 15:17:45 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 19:17:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/condition.php:15) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
+[16-Aug-2016 15:48:03 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 17:03:11 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[16-Aug-2016 17:15:18 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/logout.php on line 3
+[16-Aug-2016 21:15:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/identifz/public_html/glcv2/glc/condition.php:15) in /home/identifz/public_html/glcv2/wp-content/plugins/awesome-support/vendor/ericmann/wp-session-manager/includes/class-wp-session.php on line 128
