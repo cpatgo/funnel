@@ -528,9 +528,32 @@ li.li {
   padding: 0;
 }
 #top_bar .ar {
-  padding: 2px 0 0;
+  padding: 0 50px 0;
+  text-align: right;
+  transform: translateY(25%);
 }
 
+.header_ul {
+    list-style-type: none;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.header_ul li {
+    display: inline;
+}
+
+button.glc_logout {
+    margin: 0 !important;
+    background-color: #cd263a !important;
+    border-color: #cd263a !important;
+    font-size: 16px !important;
+}
+
+span.glc_gray {
+    color: #888;
+}
 
 /* Project menu */
 .yui-g .yui-gc div.first, .yui-gc div.first, .yui-gd .yui-g, .yui-gd .yui-u{
