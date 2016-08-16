@@ -544,6 +544,12 @@ li.li {
     display: inline;
 }
 
+.header_middle {
+    margin: 0 auto;
+    text-align: center;
+    background: #888;
+}
+
 button.glc_logout {
     margin: 0 !important;
     background-color: #cd263a !important;
