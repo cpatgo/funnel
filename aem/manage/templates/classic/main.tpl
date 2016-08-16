@@ -15,8 +15,9 @@
 </div>
 
 <div class="yui-g header_middle" id="top_bar">
-    
-    %HEADERNAV%
+    <div class="yui-u ar">
+          %HEADERNAV%
+    </div>
 
     <div class="yui-u ar">
       <div id="search">
