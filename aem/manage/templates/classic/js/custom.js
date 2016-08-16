@@ -11,7 +11,18 @@ jQuery(document).ready(function(){
 
 	var form = jQuery("#create-funnel-campaign").show();
 	form.validate({
-	    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+	    errorPlacement: function errorPlacement(error, element) { 
+	    	if (element.attr("name") == "landing-page-name" )
+		        error.appendTo('#landing-page-name-error');
+		    else if  (element.attr("name") == "landing-page-type" )
+		        error.appendTo('#landing-page-type-error');
+		    else if  (element.attr("name") == "landing-page-list-id" )
+		        error.appendTo('#landing-page-list-id-error');
+		    else if  (element.attr("name") == "landing-page-url" )
+		        error.appendTo('#landing-page-url-error');
+		    else
+	    	element.before(error); 
+	    },
 	    rules: {
 	        confirm: {
 	            equalTo: "#password"
