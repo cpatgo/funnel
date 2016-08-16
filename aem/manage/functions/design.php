@@ -338,7 +338,7 @@ function design_template_personalize(&$smarty, $admin, $panel = 'public') {
 		$smarty->assign('glc_username', $glc_fields['glc_username']);
 		$smarty->assign('glc_membership', $glc_fields['glc_membership']);
 	endif;
-	
+
 	// apply basic vars
 	$siteurl = $smarty->get_template_vars('__');
 	$admin['template_htm'] = str_replace('%SITEURL%', $siteurl, $admin['template_htm']);
@@ -347,6 +347,8 @@ function design_template_personalize(&$smarty, $admin, $panel = 'public') {
 
 	// fetch includes
 	if ( adesk_str_instr('%HEADERNAV%', $admin['template_htm']) ) {
+		$welcomeheader = $smarty->fetch('inc.welcomeheader.htm');
+		$admin['template_htm'] = str_replace('%WELCOMEHEADER%', $welcomeheader, $admin['template_htm']);
 		$headernav = $smarty->fetch('inc.headernav.htm');
 		$admin['template_htm'] = str_replace('%HEADERNAV%', $headernav, $admin['template_htm']);
 	}
