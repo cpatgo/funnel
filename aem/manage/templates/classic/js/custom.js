@@ -123,7 +123,7 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            jQuery('body').find('#funnel_link').text(result.link)
+		            jQuery('body').find('#funnel_link').append(result.link)
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
