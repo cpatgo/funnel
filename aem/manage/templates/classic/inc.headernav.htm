@@ -1,10 +1,11 @@
-        <span class="rounded">
-            <div class="row">
-                <ul class="header_ul">
-                    <li><span>Welcome: </span>{$glc_username}</li>
-                    <li><span>Membership: </span>{$glc_membership}</li>
-                    <li><a href="/glc/logout.php"><button class="glc_button glc_logout">LOG OUT</button></a></li>
+        
+        <div class="row">
+            <ul class="header_ul">
+                <li><span class="glc_gray">Welcome: </span>{$glc_username}</li>
+                <li><span class="glc_gray">Membership: </span>{$glc_membership}</li>
+                <li><a href="/glc/logout.php"><button class="glc_button glc_logout">LOG OUT</button></a></li>
                 
+                <span class="rounded">
                     {if adesk_admin_ismain()}
                         {if $style_integration != ''}
                             <li><a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Integration"|alang}</a></li>
@@ -33,9 +34,9 @@
                     {if adesk_admin_ismaingroup()} 
                         <li><a href="index.php?action=logout"><img alt="Preferences" class="va" src="css/images/logout.png" /> Logout</a></li>
                     {/if}
-                </ul>
-            </div>
-        </span>
+                </span>
+            </ul>
+        </div>
     </div>
 </div>
 
