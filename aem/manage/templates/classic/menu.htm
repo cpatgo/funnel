@@ -6,6 +6,20 @@
         </a>
     </li> 
 
+    {if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
+        <li id="menu_campaign">
+            <a href="desk.php?action=campaign_dashboard"><img class="va" src="css/images/campaign.png" />
+            {"Campaigns"|alang}
+            </a>
+        </li> 
+    {/if}
+
+    <li id="menu_templates">
+        <a href="desk.php?action=templates#list-01D-0-0"><img class="va" src="css/images/campaign.png" />
+        {"Templates"|alang}
+        </a>
+    </li> 
+
     {if $admin.pg_subscriber_add || $admin.pg_subscriber_edit || $admin.pg_subscriber_delete}
         <li id="menu_subscriber">
             <a href="desk.php?action=subscriber#list-01-0-0"><img class="va" src="css/images/subscribers.png" />
@@ -14,16 +28,8 @@
         </li>    
     {/if}
 
-    {if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
-        <li id="menu_campaign">
-            <a href="desk.php?action=campaign#list-01D-0-0"><img class="va" src="css/images/campaign.png" />
-            {"Campaigns"|alang}
-            </a>
-        </li> 
-    {/if}
-
-    {if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete || $admin.pg_subscriber_filters || $admin.pg_subscriber_fields || $admin.pg_subscriber_actions || $admin.pg_list_headers || $admin.pg_list_emailaccount || $admin.pg_list_opt || $admin.pg_list_bounce}
-
+    <!-- {if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete || $admin.pg_subscriber_filters || $admin.pg_subscriber_fields || $admin.pg_subscriber_actions || $admin.pg_list_headers || $admin.pg_list_emailaccount || $admin.pg_list_opt || $admin.pg_list_bounce} -->
+    {if adesk_admin_ismaingroup()}
         <li id="menu_list">
             <a href="desk.php?action=list#list-01-0-0"><img class="va" src="css/images/lists.png" />
             {"Lists"|alang}
@@ -62,11 +68,16 @@
         </li> 
     {/if}
     
+    <!-- <li id="menu_landingpages">
+	   <a href="desk.php?action=landingpages#list-01-0-0"><img class="va" src="css/images/integration2.png" /> 
+	   {"Landing Pages"|alang}
+	   </a>
+    </li>  --> 
     <li id="menu_landingpages">
-	<a href="desk.php?action=landingpages#list-01-0-0"><img class="va" src="css/images/integration2.png" /> 
-	{"Landing Pages"|alang}
-	</a>
-    </li>  
+       <a href="/hub-training"><img class="va" src="css/images/integration2.png" /> 
+       {"HUB Training"|alang}
+       </a>
+    </li>
 
 {else}
     <li id="menu_dashboard">
