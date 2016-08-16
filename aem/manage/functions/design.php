@@ -332,6 +332,13 @@ function design_template_personalize(&$smarty, $admin, $panel = 'public') {
 	if ( !$admin['template_htm'] ) $admin['template_htm'] = adesk_file_get($tplpath);
 	if ( !adesk_str_instr('%PAGECONTENT%', $admin['template_htm']) ) $admin['template_htm'] = adesk_file_get($tplpath);
 
+	// pass glc data
+	$glc_fields = glc_fields();
+	if(!empty($glc_fields)):
+		$smarty->assign('glc_username', $glc_fields['glc_username']);
+		$smarty->assign('glc_membership', $glc_fields['glc_membership']);
+	endif;
+	
 	// apply basic vars
 	$siteurl = $smarty->get_template_vars('__');
 	$admin['template_htm'] = str_replace('%SITEURL%', $siteurl, $admin['template_htm']);
@@ -382,6 +389,27 @@ function design_template_personalize(&$smarty, $admin, $panel = 'public') {
 	$site['template_css'] = $admin['brand_' . $prfx . 'template_css'];
 
 	return $admin;
+}
+
+function glc_fields()
+{
+	include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
+	$glc_data = array();
+
+	if(is_user_logged_in()):
+        $current_user = wp_get_current_user();
+        $role = $wpdb->prefix . 'capabilities';
+        $current_user->role = array_keys($current_user->$role);
+        $role = $current_user->role[0];
+        
+        $r = (!empty(get_user_meta(get_current_user_id(), 'membership', true))) ? get_user_meta(get_current_user_id(), 'membership', true) : ucfirst($role);
+
+        $glc_data = array(
+        	'glc_username' 		=> $current_user->user_login,
+        	'glc_membership' 	=> $r
+        );
+    endif;
+    return $glc_data;
 }
 
 ?>

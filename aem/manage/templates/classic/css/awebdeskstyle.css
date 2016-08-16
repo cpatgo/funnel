@@ -489,7 +489,7 @@ li.li {
 
   /* top padding fix */
 }
-#top_bar img {
+#top_bar .emarketer_logo {
     height: 45px;
 }
 .panel{
