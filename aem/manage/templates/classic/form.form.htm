@@ -259,7 +259,7 @@
                     {foreach from=$listsList item=p}
                       <div>
                         <label>
-                          <input type="checkbox" id="p_{$p.id}" class="parentsList" name="p[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" {if count($listsList) == 1}checked="checked"{/if} />
+                          <input type="checkbox" id="p_{$p.id}" class="parentsList" name="p[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" />
                           {$p.name|truncate:50}
                         </label>
                       </div>
@@ -402,7 +402,7 @@
                 <td>
                 {if $site.gd}
                   <label>
-                    <input name="captcha" id="captchaField" type="checkbox" value="1" />
+                    <input name="captcha" id="captchaField" type="checkbox" value="0" />
                     {"Use Captcha Image"|alang}
                   </label>
                 {else}
