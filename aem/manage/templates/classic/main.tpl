@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-2">
-      <span class="top_logo"><img src="css/images/emarketer.png" class="emarketer_logo"></span>
+      <span class="top_logo"><img src="css/images/emarketer.png"></span>
   </div>
   <div class="col-md-10">
       %WELCOMEHEADER%
