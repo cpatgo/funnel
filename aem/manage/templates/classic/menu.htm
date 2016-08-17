@@ -13,12 +13,14 @@
             </a>
         </li> 
     {/if}
-
-    <li id="menu_templates">
-        <a href="desk.php?action=templates#list-01D-0-0"><img class="va" src="css/images/campaign.png" />
-        {"Templates"|alang}
-        </a>
-    </li> 
+    
+    {if adesk_admin_ismain()}
+        <li id="menu_templates">
+            <a href="desk.php?action=templates#list-01D-0-0"><img class="va" src="css/images/campaign.png" />
+            {"Templates"|alang}
+            </a>
+        </li> 
+    {/if}
 
     {if $admin.pg_subscriber_add || $admin.pg_subscriber_edit || $admin.pg_subscriber_delete}
         <li id="menu_subscriber">
@@ -27,19 +29,21 @@
             </a>
         </li>    
     {/if}
-
-    <!-- {if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete || $admin.pg_subscriber_filters || $admin.pg_subscriber_fields || $admin.pg_subscriber_actions || $admin.pg_list_headers || $admin.pg_list_emailaccount || $admin.pg_list_opt || $admin.pg_list_bounce}
-        <li id="menu_list">
-            <a href="desk.php?action=list#list-01-0-0"><img class="va" src="css/images/lists.png" />
-            {"Lists"|alang}
-            </a>
-        </li>
-        <li id="menu_form">
-            <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> 
-            {"Forms"|alang}
-            </a>
-        </li>  
-    {/if} -->
+    
+    {if adesk_admin_ismain()}
+        {if $admin.pg_list_add || $admin.pg_list_edit || $admin.pg_list_delete || $admin.pg_subscriber_filters || $admin.pg_subscriber_fields || $admin.pg_subscriber_actions || $admin.pg_list_headers || $admin.pg_list_emailaccount || $admin.pg_list_opt || $admin.pg_list_bounce}
+            <li id="menu_list">
+                <a href="desk.php?action=list#list-01-0-0"><img class="va" src="css/images/lists.png" />
+                {"Lists"|alang}
+                </a>
+            </li>
+            <li id="menu_form">
+                <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> 
+                {"Forms"|alang}
+                </a>
+            </li>  
+        {/if}
+    {/if}
     
     {if $admin.pg_reports}
         <li id="menu_reports">
