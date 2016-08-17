@@ -255,12 +255,23 @@
               <tr valign="top" style="display:none;">
                 <td>{"Campaign List Name"|alang}</td>
                 <td>
-                  <div>
-                  {"Select:"|alang}
-                  <a href="#" onclick="parents_box_select(1, 0); return false;">{"All"|alang}</a>
-                  &middot;
-                  <a href="#" onclick="parents_box_select(0, 0); return false;">{"None"|alang}</a>
+                  <div id="parentsList_div" class="adesk_checkboxlist">
+                    {foreach from=$listsList item=p}
+                      <div>
+                        <label>
+                          <input type="checkbox" id="p_{$p.id}" class="parentsList" name="p[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" {if count($listsList) == 1}checked="checked"{/if} />
+                          {$p.name|truncate:50}
+                        </label>
+                      </div>
+                    {/foreach}
                   </div>
+                <div>
+                {"Select:"|alang}
+                <a href="#" onclick="parents_box_select(1, 0); return false;">{"All"|alang}</a>
+                &middot;
+                <a href="#" onclick="parents_box_select(0, 0); return false;">{"None"|alang}</a>
+                </div>
+
                  </td>
               </tr>
               <tr id="list_options_tr" valign="top">
@@ -391,7 +402,7 @@
                 <td>
                 {if $site.gd}
                   <label>
-                    <input name="captcha" id="captchaField" type="checkbox" value="0" />
+                    <input name="captcha" id="captchaField" type="checkbox" value="1" />
                     {"Use Captcha Image"|alang}
                   </label>
                 {else}
