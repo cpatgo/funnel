@@ -1,5 +1,5 @@
 <?php
-
+if(!session_id()) session_start();
 require_once adesk_admin("functions/form.php");
 require_once awebdesk_classes("select.php");
 require_once awebdesk_classes("pagination.php");
@@ -128,6 +128,8 @@ class form_assets extends AWEBP_Page {
 
 		$lists = list_get_all(true, true);
 		$smarty->assign("lists", $lists);
+
+		$smarty->assign("selected_list_id", $_SESSION['selected_list_id']);
 
 	}
 }
