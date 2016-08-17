@@ -16,4 +16,8 @@ function list_insert_post() {
 
 	die(json_encode(array('type' => 'success', 'link' => sprintf('<a href="%1$s" target="_blank">%1$s</a>',$fields['landing-page-url']))));
 }
+
+function save_list_to_session() {
+	$_SESSION['selected_list_id'] = $_POST['list_id'];
+}
 ?>

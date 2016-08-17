@@ -56,6 +56,10 @@ jQuery(document).ready(function(){
 	    		jQuery('body').find('input').attr('disabled', true);
 	    		jQuery('body').find('textarea').attr('disabled', true);
 	    	}
+	    	if(currentIndex == 1 && newIndex == 2) {
+	    		aem_functions.save_list_to_session();
+	    	}
+
 	        form.validate().settings.ignore = ":disabled,:hidden";
 	        return form.valid();
 	    },
@@ -123,7 +127,26 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            jQuery('body').find('#funnel_link').append(result.link)
+		            jQuery('body').find('#funnel_link').append(result.link);
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
+		save_list_to_session 	: 	function() {
+			var field_id = jQuery('#landing-page-list-id').val();
+			console.log(field_id);
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/functions/funnel_campaign.php",
+		        data: {
+		            'action': 'save_list_to_session',
+		            'field_id': field_id
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		            
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
