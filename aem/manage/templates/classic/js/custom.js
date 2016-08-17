@@ -65,6 +65,7 @@ jQuery(document).ready(function(){
 	    },
 	    onFinishing: function (event, currentIndex)
 	    {
+	    	aem_functions.destroy_list_session();
 	        form.validate().settings.ignore = ":disabled";
 	        return form.valid();
 	    },
@@ -145,6 +146,22 @@ jQuery(document).ready(function(){
 		        data: {
 		            'action': 'save_list_to_session',
 		            'list_id': list_id
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		            
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
+		destroy_list_session 	: 	function() {
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/functions/funnel_campaign.php",
+		        data: {
+		            'action': 'destroy_list_session'
 		        },
 		        dataType: 'json',
 		        success:function(result) {
