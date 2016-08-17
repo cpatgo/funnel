@@ -6,6 +6,7 @@ $GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWE
 $action = $_POST['action'];
 if($action === 'list_insert_post') list_insert_post();
 if($action === 'save_list_to_session') save_list_to_session();
+if($action === 'destroy_list_session') destroy_list_session();
 
 function list_insert_post() {
 	parse_str($_POST['fields'], $fields);
@@ -20,5 +21,9 @@ function list_insert_post() {
 
 function save_list_to_session() {
 	$_SESSION['selected_list_id'] = $_POST['list_id'];
+}
+
+function destroy_list_session() {
+	unset($_SESSION['selected_list_id']);
 }
 ?>
