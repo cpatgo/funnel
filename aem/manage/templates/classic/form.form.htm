@@ -259,7 +259,7 @@
                     {foreach from=$listsList item=p}
                       <div>
                         <label>
-                          <input type="checkbox" id="p_{$p.id}" class="parentsList" name="p[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" />
+                          <input type="checkbox" id="p_{$p.id}" class="parentsList" name="mp[]" value="{$p.id}" onclick="customFieldsObj.fetch(0);" />
                           {$p.name|truncate:50}
                         </label>
                       </div>

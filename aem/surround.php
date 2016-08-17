@@ -197,18 +197,20 @@ switch ( $funcml ) {
 	case 'subscribe':
 		$continue = true;
 		// use captcha
-		if ($usecaptcha) {
-			if ( isset($_SESSION["image_random_value"]) ) {
-				if ( !isset($_SESSION["image_random_value"][$captcha]) ) {
+		if(isset($_POST['captcha'])):
+			if ($usecaptcha) {
+				if ( isset($_SESSION["image_random_value"]) ) {
+					if ( !isset($_SESSION["image_random_value"][$captcha]) ) {
+						$continue = false;
+						$lists = '0';$codes = '18';
+					}
+				}
+				else {
 					$continue = false;
-					$lists = '0';$codes = '18';
+					$lists = '0';$codes = '25';
 				}
 			}
-			else {
-				$continue = false;
-				$lists = '0';$codes = '25';
-			}
-		}
+		endif;
 
 		if ($continue) {
 			$fullname  = trim((string)adesk_http_param('name')); // AEM4
