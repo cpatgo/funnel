@@ -128,6 +128,9 @@ jQuery(document).ready(function(){
 		        dataType: 'json',
 		        success:function(result) {
 		            jQuery('body').find('#funnel_link').append(result.link);
+		            jQuery('body').find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
+		            jQuery('body').find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
+		            jQuery('body').find('#email_share').attr('href', "mailto:?body="+result.link);
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
