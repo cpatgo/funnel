@@ -240,13 +240,13 @@
                   <label for="type">{"Form Option"|alang}</label>
                 </td>
                 <td>
-                  Subscribe Only
                   <select name="type" id="type" onchange="form_options_type_change(this.value);" class="form-control">
                     <!-- <option value="both">{"Subscribe &amp; Unsubscribe"|alang}</option> -->
                     <option value="subscribe">{"Subscribe Only"|alang}</option>
                     <!-- <option value="unsubscribe">{"Unsubscribe Only"|alang}</option> -->
                   </select>
                   <input type="hidden" id="p_{$selected_list_id}" name="p[]" id="type" value="{$selected_list_id}">
+                  <input name="captcha" id="captchaField" type="checkbox" value="1" />
                 </td>
               </tr>
               <tr valign="top" style="display:none;">
@@ -393,11 +393,11 @@
 
               <tbody id="custom_fields_table"></tbody>
 
-              <tr>
+              <tr style="display:none">
                 <td>&nbsp;</td>
                 <td><hr width="100%" size="1" noshade /></td>
               </tr>
-              <tr>
+              <tr style="display:none">
                 <td>&nbsp;</td>
                 <td>
                 {if $site.gd}
