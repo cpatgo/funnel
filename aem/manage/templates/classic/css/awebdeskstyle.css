@@ -544,6 +544,49 @@ li.li {
     display: inline;
 }
 
+.top_ul_menu {
+    list-style-type: none !important;
+    font-size: 17px !important;
+    float: right !important;
+    padding: 17px 35px !important;
+}
+
+.top_ul_menu li {
+    display: inline !important;
+    margin-left: 15px !important;
+}
+
+.top_logo {
+    float: left !important;
+    padding: 10px 35px !important;
+}
+
+.top_log img {
+    height: 45px !important;
+}
+
+.top_admin_ul {
+    list-style-type: none !important;
+    font-size: 17px !important;
+    margin: 0 !important;
+}
+
+.top_admin_ul li {
+    display: inline;
+}
+
+.top_admin_ul li a {
+    font-size: 11px;
+    font-weight: normal;
+    color: #ddd;
+    background: #222;
+    padding: 6px 8px;
+    border: 1px solid #444;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
 .header_middle {
     margin: 0 auto !important;
     text-align: center !important;
