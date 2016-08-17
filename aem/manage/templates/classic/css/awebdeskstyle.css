@@ -562,13 +562,14 @@ li.li {
 }
 
 .top_log img {
-    height: 45px !important;
+    height: 45px;
 }
 
 .top_admin_ul {
     list-style-type: none !important;
     font-size: 17px !important;
     margin: 0 !important;
+    padding: 15px 0;
 }
 
 .top_admin_ul li {
