@@ -70,7 +70,7 @@ jQuery(document).ready(function(){
 	    },
 	    onFinished: function (event, currentIndex)
 	    {
-	        alert("Submitted!");
+	        window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
 	    }
 	});
 
