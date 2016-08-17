@@ -15,7 +15,7 @@ function list_insert_post() {
 
 	mysqli_query($GLOBALS["aem_con"], $query);
 
-	die(json_encode(array('type' => 'success', 'link' => sprintf('<a href="%1$s" target="_blank">%1$s</a>',$fields['landing-page-url']))));
+	die(json_encode(array('type' => 'success', 'link' => sprintf('%s',$fields['landing-page-url']))));
 }
 
 function save_list_to_session() {
