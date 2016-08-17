@@ -561,8 +561,9 @@ li.li {
     padding: 10px 35px !important;
 }
 
-.top_log img {
+.top_logo img {
     height: 45px;
+    width: auto;
 }
 
 .top_admin_ul {
