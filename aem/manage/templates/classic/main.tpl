@@ -9,29 +9,14 @@
 
 <div class="row">
   <div class="col-md-12">
-    <div>
       %HEADERNAV%
-    </div>
-    <div class="yui-u ar">
-      <div id="search">
-        %SEARCHBAR%
-      </div>
+  </div>
+  <div class="yui-u ar">
+    <div id="search">
+      %SEARCHBAR%
     </div>
   </div>
 </div>
-
-<div class="yui-g no_padding" id="top_bar">
-    <div>
-          %HEADERNAV%
-    </div>
-
-    <div class="yui-u ar">
-      <div id="search">
-        %SEARCHBAR%
-      </div>
-    </div>
-</div>
-
 
       %PAGECONTENT%
  
