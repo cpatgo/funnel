@@ -135,14 +135,13 @@ jQuery(document).ready(function(){
 		    });
 		},
 		save_list_to_session 	: 	function() {
-			var field_id = jQuery('#landing-page-list-id').val();
-			console.log(field_id);
+			var list_id = jQuery('#landing-page-list-id').val();
 			jQuery.ajax({
 		        method: "post",
 		        url: "../manage/functions/funnel_campaign.php",
 		        data: {
 		            'action': 'save_list_to_session',
-		            'field_id': field_id
+		            'list_id': list_id
 		        },
 		        dataType: 'json',
 		        success:function(result) {
