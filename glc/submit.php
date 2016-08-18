@@ -1712,7 +1712,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
 
                                     //Insert payment details to payments table
                                     $payment_data = array(
-                                        'user_id'           => $response['message'],
+                                        'user_id'           => $user_id,
                                         'payment_method'    => $reg_by,
                                         'payment_type'      => 'creditcard',
                                         'amount'            => $membership_amount,
@@ -2087,7 +2087,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
 
                                     //Insert payment details to payments table
                                     $payment_data = array(
-                                        'user_id'           => $response['message'],
+                                        'user_id'           => $user_id,
                                         'payment_method'    => $reg_by,
                                         'payment_type'      => 'creditcard',
                                         'amount'            => $membership_amount,
@@ -2461,7 +2461,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
 
                                     //Insert payment details to payments table
                                     $payment_data = array(
-                                        'user_id'           => $response['message'],
+                                        'user_id'           => $user_id,
                                         'payment_method'    => $reg_by,
                                         'payment_type'      => 'creditcard',
                                         'amount'            => $membership_amount,
