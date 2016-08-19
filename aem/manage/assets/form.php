@@ -130,7 +130,6 @@ class form_assets extends AWEBP_Page {
 		$smarty->assign("lists", $lists);
 
 		$smarty->assign("selected_list_id", $_SESSION['selected_list_id']);
-
 	}
 }
 

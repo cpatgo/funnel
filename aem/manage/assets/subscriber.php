@@ -132,7 +132,7 @@ class subscriber_assets extends AWEBP_Page {
 		$smarty->assign('subscriberLists', $lists);
 		$smarty->assign('subscriberListsCnt', $listsCnt);
 
-		$smarty->assign("selected_list_id", $_SESSION['selected_list_id']);
+		$smarty->assign("selected_list_id", (isset($_SESSION['selected_list_id'])) ? $_SESSION['selected_list_id'] : '');
 
 	}
 }
