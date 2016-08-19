@@ -21,11 +21,6 @@ class new_funnel_campaign_assets extends AWEBP_Page {
 			return;
 		}
 
-		if ( list_get_cnt() == 0 ) {
-			$smarty->assign('content_template', 'nolists.htm');
-			return;
-		}
-
 		$smarty->assign("content_template", "new_funnel_campaign.htm");
 	}
 }
