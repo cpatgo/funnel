@@ -429,6 +429,9 @@ function list_insert_post() {
 	// collect id
 	$id = adesk_sql_insert_id();
 
+	//Save list id to session
+	$_SESSION['selected_list_id'] = $id;
+
 	// email confirmation set
 	$ins = array(
 		"listid" => $id,
