@@ -1,5 +1,5 @@
 <?php
-
+if(!session_id()) session_start();
 require_once adesk_admin("functions/subscriber.php");
 require_once adesk_admin("functions/optinoptout.php");
 require_once awebdesk_classes("select.php");

@@ -2,7 +2,7 @@
   <form method="POST" onsubmit="subscriber_form_save(subscriber_form_id); return false">
 	<input type="hidden" name="id" id="form_id" />
 	<table border="0" cellspacing="0" cellpadding="5" class="table-width">
-	  <tr>
+	  <!-- <tr>
 		<td valign="top">{"Subscribed to Lists"|alang}</td>
 		<td>
 		  <div id="listDiv" class="adesk_checkboxlist">
@@ -22,8 +22,8 @@
 			  </div>
 		  {/if}
 		</td>
-	  </tr>
-	  <tr>
+	  </tr> -->
+	  <tr style="display:none;">
 		<td valign="top"></td>
 		<td>
 			<div id="liststatus1Stuff">
@@ -71,8 +71,13 @@
 	  </tr>
 	  <tr>
 		<td valign="top">{"Email"|alang}</td>
-		<td><input type="text" value="" name="email" id="emailField" class="form-control" /></td>
+		<td>
+			<input type="text" value="" name="email" id="emailField" class="form-control" />
+			<p>Add 1 Subcriber min - This can be any real or fake email address you choose.</p>
+			<input type="hidden" name="p[]" value="{$selected_list_id}" />
+		</td>
 	  </tr>
+	  {if adesk_admin_ismain()}
 	  <tr>
 		<td valign="top">{"First Name"|alang}</td>
 		<td><input type="text" value="" name="first_name" id="firstnameField" class="form-control"/></td>
@@ -81,9 +86,9 @@
 		<td valign="top">{"Last Name"|alang}</td>
 		<td><input type="text" value="" name="last_name" id="lastnameField" class="form-control" /></td>
 	  </tr>
-
+	  
 	  <tbody id="custom_fields_table"></tbody>
-
+	  {/if}
 	</table>
 
 	<br />
@@ -96,7 +101,7 @@
 	            <input type="button" id="form_back" class="adesk_button_back glc_button_back glc_btn_large" value="{"Back"|alang}" onclick="window.history.go(-1)" />
 	            <input type="button" id="form_submit" class="adesk_button_submit" value="{"Submit"|alang}" onclick="subscriber_form_save(subscriber_form_id)" />
 	            <br>
-	            <input type="button" id="form_view" class="adesk_button_view" value="{"View this Subscriber"|alang}" onclick="window.location = 'desk.php?action=subscriber_view&id=' + subscriber_form_id;" />
+	            <!-- <input type="button" id="form_view" class="adesk_button_view" value="{"View this Subscriber"|alang}" onclick="window.location = 'desk.php?action=subscriber_view&id=' + subscriber_form_id;" /> -->
 	          </td>
 	        </tr>
 	      </tbody>
