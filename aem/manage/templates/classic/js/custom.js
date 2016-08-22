@@ -218,7 +218,6 @@ jQuery(document).ready(function(){
 		        	if(result.type == 'error') {
 		        		alert(result.message);
 		        	} else {
-		        		aem_functions.get_lists();
 		        		$body.find('#new_subscriber_div').hide();
 		        		alert('Subscriber successfully added.');
 		        	}
