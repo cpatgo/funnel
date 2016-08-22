@@ -185,7 +185,6 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		        	console.log(result);
 		        	if(result.type == 'error') {
 		        		alert(result.message);
 		        	} else {
@@ -214,7 +213,6 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		        	console.log(result);
 		        	if(result.type == 'error') {
 		        		alert(result.message);
 		        	} else {
