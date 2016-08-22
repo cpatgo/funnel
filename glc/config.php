@@ -478,6 +478,8 @@ function glc_auto_login($user_id, $data)
     $_SESSION['dennisn_user_full_name'] = $data['f_name']." ".$data['l_name'];
     $_SESSION['dennisn_user_reg_date']=$data['activate_date'];
     $_SESSION['dennisn_username'] = $data['username'];
+    $token = base64_encode(sprintf('%s-%s', base64_encode($user_id), base64_encode($data['password'])));
+    $_SESSION['dennisn_usertoken'] = $token;
 
     include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
     $creds = array();

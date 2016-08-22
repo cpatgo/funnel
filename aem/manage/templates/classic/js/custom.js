@@ -173,6 +173,30 @@ jQuery(document).ready(function(){
 		            console.log(errorThrown);
 		        }
 		    });
+		},
+		add_new_list 	: 	function() {
+			var fields = $body.find('#new_list_div :input').serialize();
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/custom.php",
+		        data: {
+		            'action':'add_list',
+		            fields : fields
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		        	console.log(result);
+		        	if(result.type == 'error') {
+		        		alert(result.message);
+		        	} else {
+		        		aem_functions.get_lists();
+		        		alert('List successfully added.');
+		        	}
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
 		}
 	};
 
@@ -184,6 +208,16 @@ jQuery(document).ready(function(){
     	e.preventDefault();
     	aem_functions.get_lists();
     });
+
+    $body.on('click', '.newlist_btn', function(e){
+    	e.preventDefault();
+    	aem_functions.add_new_list();
+    });
+
+    $body.on('click', '#add_new_list_cancel', function(e){
+    	e.preventDefault();
+    	$body.find('#new_list_div').hide();
+    })
 
 	//GET FORMS
 	// aem_functions.get_forms();
