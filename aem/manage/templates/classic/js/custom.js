@@ -190,8 +190,8 @@ jQuery(document).ready(function(){
 		        		alert(result.message);
 		        	} else {
 		        		aem_functions.get_lists();
-		        		$body.find('#landing-page-list-id').val("'"+result.message.id+"'");
 		        		$body.find('#new_list_div').hide();
+		        		$body.find('#landing-page-list-id').val("'"+result.message.id+"'");
 		        		alert('List successfully added.');
 		        	}
 		        },
