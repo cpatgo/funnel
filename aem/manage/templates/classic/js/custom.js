@@ -185,14 +185,6 @@ jQuery(document).ready(function(){
     	aem_functions.get_lists();
     });
 
-    $body.on('click', '.selectlist', function(e){
-    	e.preventDefault();
-    	$body.find('#list_iframe_div').show();
-    	$body.find('#list_iframe').contents().find('.divrow').hide();
-    	$body.find('#list_iframe').contents().find('#bodydiv').removeClass();
-    	$body.find('#list_iframe').contents().find('#bodydiv').addClass('col-md-12');
-    });
-
 	//GET FORMS
 	// aem_functions.get_forms();
 
