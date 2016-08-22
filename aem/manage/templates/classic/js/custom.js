@@ -178,7 +178,7 @@ jQuery(document).ready(function(){
 			var fields = $body.find('#new_list_div :input').serialize();
 			jQuery.ajax({
 		        method: "post",
-		        url: "../manage/templates/classic/ajax/custom.php",
+		        url: "../manage/templates/classic/ajax/api.php",
 		        data: {
 		            'action':'add_list',
 		            fields : fields
