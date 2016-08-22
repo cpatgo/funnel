@@ -211,6 +211,11 @@ jQuery(document).ready(function(){
 
     $body.on('click', '.newlist_btn', function(e){
     	e.preventDefault();
+    	$body.find('#new_list_div').show();
+    });
+
+    $body.on('click', '#add_new_list_go', function(e){
+    	e.preventDefault();
     	aem_functions.add_new_list();
     });
 
