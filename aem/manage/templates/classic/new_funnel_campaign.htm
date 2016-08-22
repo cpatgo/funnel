@@ -76,8 +76,95 @@
         <div class="row">
         	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
         		<p>Creating a New List will open a new window.</p><br>
-		        <a href="/aem/manage/desk.php?action=list#form-0" class="btn btn-primary btn-lg steps-btn" target="_blank">Create New List</a>
+		        <a href="/aem/manage/desk.php?action=list#form-0" class="btn btn-primary btn-lg steps-btn newlist_btn" target="_blank">Create New List</a>
         	</div>
+        </div>
+        <br>
+        <div id="new_list_div" style="display:none;">
+        	<br><hr>
+        	<div class="row" >
+        		<div class="col-md-12" style="text-align:center">
+					<div class="col-md-8 col-md-offset-2">
+						<h1>Add new list for your campaign</h1>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>List Info</h2>
+					</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for="">Name of List: </label>
+							<input type="text" class="form-control" id="list_name" name="list_name">	
+							<div id="list_name-error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>Your Contact Information</h2>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="adesk_help_inline" style="font-size:12px;">This information is what your contacts will see specific to each campaign.</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for="">Company (or Organization): </label>
+							<input type="text" class="form-control" id="list_company" name="list_company">	
+							<div id="list_company-error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for="">Address: </label>
+							<input type="text" class="form-control" id="list_address" name="list_address"><br>	
+							<input type="text" class="form-control" id="list_address2" name="list_address2">
+							<div id="list_address-error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+				    <div class="col-md-4 col-md-offset-2">
+				 		<label for="">City: </label>
+							<input type="text" class="form-control" id="list_city" name="list_city">	
+							<div id="list_city-error"></div>
+					</div>
+					<div class="col-md-4">
+				 		<label for="">State, Province, or Region: </label>
+							<input type="text" class="form-control" id="list_state" name="list_state">	
+							<div id="list_state-error"></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+				    <div class="col-md-4 col-md-offset-2">
+				 		<label for="">Zip or Postal Code: </label>
+							<input type="text" class="form-control" id="list_postal" name="list_postal">	
+							<div id="list_postal-error"></div>
+					</div>
+					<div class="col-md-4">
+				 		<label for="">Country: </label>
+							<input type="text" class="form-control" id="list_country" name="list_country">	
+							<div id="list_country-error"></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<br><br>
+				    <div class="col-md-4 col-md-offset-2">
+				    	<button id="add_new_list_cancel" class="btn glc_button" style="width:100%">Cancel</button>
+				    </div>
+					<div class="col-md-4">
+				 		<button id="add_new_list_go" class="btn glc_button" style="width:100%">Add new list</button>
+					</div>
+				</div>
+			</div>
         </div>
         <hr />
         <div class="row">

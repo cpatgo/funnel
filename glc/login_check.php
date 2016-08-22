@@ -23,6 +23,9 @@ if(!empty($user))
     $_SESSION['dennisn_user_full_name'] = $user['f_name']." ".$user['l_name'];
     $_SESSION['dennisn_user_reg_date']=$user['date'];
     $_SESSION['dennisn_username'] = $user['username'];
+
+    $token = base64_encode(sprintf('%s-%s', base64_encode($data['id_user']), base64_encode($_REQUEST['password'])));
+    $_SESSION['dennisn_usertoken'] = $token;
     
     include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
     $creds = array();
