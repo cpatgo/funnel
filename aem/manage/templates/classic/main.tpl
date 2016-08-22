@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row divrow">
   <div class="col-md-2">
       <span class="top_logo"><img src="css/images/emarketer.png"></span>
   </div>
@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row divrow">
   <div class="col-md-12">
       %HEADERNAV%
   </div>
@@ -21,7 +21,7 @@
       %PAGECONTENT%
  
 
-<div align="center">
+<div align="center" class="divrow">
   <div class="theme_container" align="left">
     <div class="theme_footer">
 	  %FOOTER%

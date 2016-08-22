@@ -9,6 +9,8 @@ jQuery(document).ready(function(){
 // 	    // stepsOrientation: "vertical"
 // 	});
 
+	var $body = jQuery('body');
+
 	var form = jQuery("#create-funnel-campaign").show();
 	form.validate({
 	    errorPlacement: function errorPlacement(error, element) { 
@@ -52,9 +54,9 @@ jQuery(document).ready(function(){
 	    		//Save campaign
 	    		aem_functions.save_funnel_campaign();
 	    		//Disable fields
-	    		jQuery('body').find('select').attr('disabled', true);
-	    		jQuery('body').find('input').attr('disabled', true);
-	    		jQuery('body').find('textarea').attr('disabled', true);
+	    		$body.find('select').attr('disabled', true);
+	    		$body.find('input').attr('disabled', true);
+	    		$body.find('textarea').attr('disabled', true);
 	    	}
 	    	if(currentIndex == 1 && newIndex == 2) {
 	    		aem_functions.save_list_to_session();
@@ -128,10 +130,10 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            jQuery('body').find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
-		            jQuery('body').find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
-		            jQuery('body').find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
-		            jQuery('body').find('#email_share').attr('href', "mailto:?body="+result.link);
+		            $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+		            $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
+		            $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
+		            $body.find('#email_share').attr('href', "mailto:?body="+result.link);
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
@@ -178,15 +180,23 @@ jQuery(document).ready(function(){
 	aem_functions.get_lists();
 
 	//REFRESH LIST
-    jQuery('body').on('click', '#refresh_list_list', function(e){
+    $body.on('click', '#refresh_list_list', function(e){
     	e.preventDefault();
     	aem_functions.get_lists();
+    });
+
+    $body.on('click', '.selectlist', function(e){
+    	e.preventDefault();
+    	$body.find('#list_iframe_div').show();
+    	$body.find('#list_iframe .divrow').hide();
+    	$body.find('#list_iframe #bodydiv').removeClass();
+    	$body.find('#list_iframe #bodydiv').addClass('col-md-12');
     });
 
 	//GET FORMS
 	// aem_functions.get_forms();
 
-    // jQuery('body').on('click', '#refresh_form_list', function(e){
+    // $body.on('click', '#refresh_form_list', function(e){
     // 	e.preventDefault();
     // 	aem_functions.get_forms();
     // });
