@@ -188,9 +188,9 @@ jQuery(document).ready(function(){
     $body.on('click', '.selectlist', function(e){
     	e.preventDefault();
     	$body.find('#list_iframe_div').show();
-    	$body.find('#list_iframe .divrow').hide();
-    	$body.find('#list_iframe #bodydiv').removeClass();
-    	$body.find('#list_iframe #bodydiv').addClass('col-md-12');
+    	$body.find('#list_iframe').contents().find('.divrow').hide();
+    	$body.find('#list_iframe').contents().find('#bodydiv').removeClass();
+    	$body.find('#list_iframe').contents().find('#bodydiv').addClass('col-md-12');
     });
 
 	//GET FORMS
