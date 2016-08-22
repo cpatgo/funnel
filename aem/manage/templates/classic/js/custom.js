@@ -191,8 +191,35 @@ jQuery(document).ready(function(){
 		        	} else {
 		        		aem_functions.get_lists();
 		        		$body.find('#new_list_div').hide();
-		        		$body.find('#landing-page-list-id').val("'"+result.message.id+"'");
+		        		setTimeout(function() {
+		        			$body.find('#landing-page-list-id').val(result.message.id);
+		        		}, 500);
+		        		$body.find('#new_subscriber_div').show();
 		        		alert('List successfully added.');
+		        	}
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
+		add_new_subscriber 	: 	function() {
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/api.php",
+		        data: {
+		            'action':'add_subscriber',
+		            'email' : $body.find('#subscriber_email').val()
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		        	console.log(result);
+		        	if(result.type == 'error') {
+		        		alert(result.message);
+		        	} else {
+		        		aem_functions.get_lists();
+		        		$body.find('#new_subscriber_div').hide();
+		        		alert('Subscriber successfully added.');
 		        	}
 		        },
 		        error: function(errorThrown){
@@ -225,6 +252,11 @@ jQuery(document).ready(function(){
     	e.preventDefault();
     	$body.find('#new_list_div').hide();
     })
+
+    $body.on('click', '#add_new_subscriber', function(e){
+    	e.preventDefault();
+    	aem_functions.add_new_subscriber();
+    });
 
 	//GET FORMS
 	// aem_functions.get_forms();

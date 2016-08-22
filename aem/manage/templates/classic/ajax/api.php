@@ -5,23 +5,27 @@ $GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWE
 
 $action = $_POST['action'];
 if($action === 'add_list') add_list();
+if($action === 'add_subscriber') add_subscriber();
+
+function add_subscriber() {
+	$email = $_POST['email'];
+	$list_id = $_SESSION['selected_list_id'];
+	$post = array(
+		'email'                    => $email,
+		'p['.$list_id.']'          => $list_id, // example list ID
+		'status['.$list_id.']'     => 1, // 0: unconfirmed (Downloaded users only), 1: active, 2: unsubscribed
+	);
+	$add_subscriber = curl_request($post, 'subscriber_add');
+
+	if((int)$add_subscriber['result_code'] == 1): 
+		die(json_encode(array('type' => 'success', 'message' => $add_subscriber)));
+	else:
+		die(json_encode(array('type' => 'error', 'message' => 'Failed to add new subscriber.')));
+	endif;
+}
 
 function add_list() {
 	parse_str($_POST['fields'], $fields);
-	$pw = $_SESSION['dennisn_usertoken'];
-	$decode = base64_decode($pw);
-	$chunk = explode('-', $decode);
-	$password = base64_decode($chunk[1]);
-
-	$username = $_SESSION['dennisn_username'];
-	$password = $password;
-
-	$params = array(
-		'api_user'     => $username,
-		'api_pass'     => $password,
-		'api_action'   => 'list_add',
-		'api_output'   => 'serialize',
-	);
 	$post = array(
 		'name'                     => $fields['list_name'], // list name
 		'subscription_notify'      => '', // comma-separated list of email addresses to notify on new subscriptions to this list
@@ -40,7 +44,7 @@ function add_list() {
 		'sender_state' 				=> $fields['list_state'],
 		'sender_country'			=> $fields['list_country'], // Country
 	);
-	$add_list = curl_request($params, $post);
+	$add_list = curl_request($post, 'list_add');
 
 	if((int)$add_list['result_code'] == 1): 
 		$_SESSION['selected_list_id'] = $add_list['id'];
@@ -52,8 +56,23 @@ function add_list() {
 
 
 
-function curl_request($params, $post)
+function curl_request($post, $method)
 {
+	$pw = $_SESSION['dennisn_usertoken'];
+	$decode = base64_decode($pw);
+	$chunk = explode('-', $decode);
+	$password = base64_decode($chunk[1]);
+
+	$username = $_SESSION['dennisn_username'];
+	$password = $password;
+
+	$params = array(
+		'api_user'     => $username,
+		'api_pass'     => $password,
+		'api_action'   => $method,
+		'api_output'   => 'serialize',
+	);
+
     include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
     $url = sprintf('%s/aem', GLC_URL);
 
