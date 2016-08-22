@@ -48,6 +48,7 @@ function add_list() {
 
 	if((int)$add_list['result_code'] == 1): 
 		$_SESSION['selected_list_id'] = $add_list['id'];
+		$add_list['list_name'] = $fields['list_name'];
 		die(json_encode(array('type' => 'success', 'message' => $add_list)));
 	else:
 		die(json_encode(array('type' => 'error', 'message' => 'Failed to add new list.')));
