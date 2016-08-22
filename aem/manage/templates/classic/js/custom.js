@@ -194,6 +194,7 @@ jQuery(document).ready(function(){
 		        		setTimeout(function() {
 		        			$body.find('#landing-page-list-id').val(result.message.id);
 		        		}, 500);
+		        		$body.find('#list_ajax_name').text(result.message.list_name);
 		        		$body.find('#new_subscriber_div').show();
 		        		alert('List successfully added.');
 		        	}
