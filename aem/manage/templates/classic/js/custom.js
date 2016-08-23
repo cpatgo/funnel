@@ -13,6 +13,7 @@ jQuery(document).ready(function(){
 
 	var form = jQuery("#create-funnel-campaign").show();
 	form.validate({
+		ignore: ':hidden:not("#select_list_method")',
 	    errorPlacement: function errorPlacement(error, element) { 
 	    	if (element.attr("name") == "landing-page-name" )
 		        error.appendTo('#landing-page-name-error');
@@ -37,7 +38,6 @@ jQuery(document).ready(function(){
 		    else
 	    	element.before(error); 
 	    },
-	    ignore: "input[name='select_list_method']:hidden",
 	    rules: {
 	        confirm: {
 	            equalTo: "#password"
