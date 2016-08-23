@@ -289,7 +289,7 @@ jQuery(document).ready(function(){
 		            console.log(errorThrown);
 		        }
 		    });
-		}
+		},
 		focus_on_element 	: 	function(element_name) {
 			var elementOffset = $body.find(element_name).offset().top;
     		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
