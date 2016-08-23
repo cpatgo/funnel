@@ -227,7 +227,7 @@ jQuery(document).ready(function(){
 		    });
 		},
 		focus_on_element 	: 	function(element_name) {
-			var elementOffset = $(element_name).offset().top;
+			var elementOffset = $body.find(element_name).offset().top;
     		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
 		}
 	};
