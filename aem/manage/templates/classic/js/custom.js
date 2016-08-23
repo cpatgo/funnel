@@ -86,7 +86,9 @@ jQuery(document).ready(function(){
 	    	if(currentIndex == 1 && newIndex == 2) {
 	    		var method = $body.find('#select_list_method').val();
 	    		if(method == 'select_existing_list') {
-	    			aem_functions.save_list_to_session();
+	    			if($body.find('#list_name').val() != "" && $body.find('#subscriber_email').val() !== ""){
+	    				aem_functions.save_list_to_session();
+	    			}
 	    		} else if(method == 'create_new_list') {
 	    			aem_functions.add_new_list();
 	    		}
