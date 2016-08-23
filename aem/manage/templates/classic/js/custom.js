@@ -251,6 +251,9 @@ jQuery(document).ready(function(){
 		focus_on_element 	: 	function(element_name) {
 			var elementOffset = $body.find(element_name).offset().top;
     		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
+		},
+		reset_values 		: 	function(element_name) {
+			jQuery(element_name).find('input:text').val('');
 		}
 	};
 
@@ -266,16 +269,20 @@ jQuery(document).ready(function(){
     $body.on('click', '.newlist_btn', function(e){
     	e.preventDefault();
     	$body.find('#new_list_div').show();
+    	$body.find('#new_subscriber_div').show();
+    	$body.find('#select_existing_list_div').hide();
     	aem_functions.focus_on_element('#new_list_div');
     });
 
     $body.on('click', '.select_existing_list', function(e){
     	e.preventDefault();
     	$body.find('#select_existing_list_div').show();
+    	$body.find('#new_list_div').hide();
+    	$body.find('#new_subscriber_div').hide();
+    	aem_functions.reset_values('#new_list_div');
+    	aem_functions.reset_values('#new_subscriber_div');
     	aem_functions.focus_on_element('#select_existing_list_div');
     });
-
-    
 
     $body.on('click', '#add_new_list_go', function(e){
     	e.preventDefault();
