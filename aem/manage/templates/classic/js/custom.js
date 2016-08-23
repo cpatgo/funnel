@@ -37,6 +37,7 @@ jQuery(document).ready(function(){
 		    else
 	    	element.before(error); 
 	    },
+	    ignore: "input[name='select_list_method']:hidden",
 	    rules: {
 	        confirm: {
 	            equalTo: "#password"
