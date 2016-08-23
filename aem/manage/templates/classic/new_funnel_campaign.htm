@@ -172,7 +172,7 @@
 			<hr />
         </div>
         <div id="new_subscriber_div" style="display:none;">
-			<hr><br>
+			<br>
         	<div class="row" >
         		<div class="col-md-12" style="text-align:center">
 					<div class="col-md-8 col-md-offset-2">
@@ -210,10 +210,11 @@
 					<!-- <label for="">Add new campaign subcribers to an Existing List by clicking the dropdown arrow: </label> -->
 					<select class="form-control" id="landing-page-list-id" name="landing-page-list-id"></select>
 					<div id="landing-page-list-id-error"></div>
-					<button class="glc_button" id="refresh_list_list">Click here to refresh page to see list added</button>
+					<!-- <button class="glc_button" id="refresh_list_list">Click here to refresh page to see list added</button> -->
 				</div>
 			</div>
         </div>
+        <input type="hidden" id="select_list_method" name="select_list_method" value="">
     </section>
     <h3>Generate Form Code</h3>
     <section>
@@ -333,6 +334,7 @@
 							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
 							<img src="..." alt="..." class="img-thumbnail">	
 						</label>
+						<div id="sub2_redirect-error"></div>
 					</div>
 				</div>
 				<div class="col-md-12">
@@ -344,7 +346,6 @@
 				</div>
 				<div class="col-md-12">
 					<div class="col-md-8 col-md-offset-2">
-						<rio
 						<label>
 							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
 							<img src="..." alt="..." class="img-thumbnail">	
@@ -365,6 +366,7 @@
 							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
 							<img src="..." alt="..." class="img-thumbnail">	
 						</label>
+						<div id="sub3_redirect-error"></div>
 					</div>
 				</div>
 				<!-- <div class="col-md-12">

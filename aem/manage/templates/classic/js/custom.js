@@ -22,6 +22,16 @@ jQuery(document).ready(function(){
 		        error.appendTo('#landing-page-list-id-error');
 		    else if  (element.attr("name") == "landing-page-url" )
 		        error.appendTo('#landing-page-url-error');
+		    else if  (element.attr("name") == "list_name" )
+		        error.appendTo('#list_name-error');
+		    else if  (element.attr("name") == "subscriber_email" )
+		        error.appendTo('#subscriber_email-error');
+		    else if  (element.attr("name") == "form_name" )
+		        error.appendTo('#form_name-error');
+		    else if  (element.attr("name") == "sub2_redirect" )
+		        error.appendTo('#sub2_redirect-error');
+		    else if  (element.attr("name") == "sub3_redirect" )
+		        error.appendTo('#sub3_redirect-error');
 		    else
 	    	element.before(error); 
 	    },
@@ -39,6 +49,21 @@ jQuery(document).ready(function(){
 	        	required: true
 	        },
 	        "landing-page-url": {
+	        	required: true
+	        },
+	        "list_name": {
+	        	required: true
+	        },
+	        "subscriber_email": {
+	        	required: true
+	        },
+	        "form_name": {
+	        	required: true
+	        },
+	        "sub2_redirect" {
+	        	required: true
+	        },
+	        "sub3_redirect" {
 	        	required: true
 	        }
 	    }	
@@ -58,8 +83,18 @@ jQuery(document).ready(function(){
 	    		$body.find('input').attr('disabled', true);
 	    		$body.find('textarea').attr('disabled', true);
 	    	}
+	    	//Save List
 	    	if(currentIndex == 1 && newIndex == 2) {
-	    		aem_functions.save_list_to_session();
+	    		var method = $body.find('#select_list_method').val();
+	    		if(method == 'select_existing_list') {
+	    			aem_functions.save_list_to_session();
+	    		} else if(method == 'create_new_list') {
+	    			aem_functions.add_new_list();
+	    		}
+	    	}
+	    	//Save Form 
+	    	if(currentIndex == 2 && newIndex == 3) {
+	    		aem_functions.add_new_form();
 	    	}
 
 	        form.validate().settings.ignore = ":disabled,:hidden";
@@ -189,14 +224,6 @@ jQuery(document).ready(function(){
 		        		alert(result.message);
 		        	} else {
 		        		aem_functions.get_lists();
-		        		$body.find('#new_list_div').hide();
-		        		setTimeout(function() {
-		        			$body.find('#landing-page-list-id').val(result.message.id);
-		        		}, 500);
-		        		$body.find('#list_ajax_name').text(result.message.list_name);
-		        		$body.find('#new_subscriber_div').show();
-		        		alert('List successfully added.');
-		        		aem_functions.focus_on_element('#new_subscriber_div');
 		        	}
 		        },
 		        error: function(errorThrown){
@@ -216,9 +243,6 @@ jQuery(document).ready(function(){
 		        success:function(result) {
 		        	if(result.type == 'error') {
 		        		alert(result.message);
-		        	} else {
-		        		$body.find('#new_subscriber_div').hide();
-		        		alert('Subscriber successfully added.');
 		        	}
 		        },
 		        error: function(errorThrown){
@@ -239,8 +263,6 @@ jQuery(document).ready(function(){
 		        success:function(result) {
 		        	if(result.type == 'error') {
 		        		alert(result.message);
-		        	} else {
-		        		alert('Form successfully added.');
 		        	}
 		        },
 		        error: function(errorThrown){
@@ -271,6 +293,7 @@ jQuery(document).ready(function(){
     	$body.find('#new_list_div').show();
     	$body.find('#new_subscriber_div').show();
     	$body.find('#select_existing_list_div').hide();
+    	$body.find('#select_list_method').val('create_new_list');
     	aem_functions.focus_on_element('#new_list_div');
     });
 
@@ -281,6 +304,7 @@ jQuery(document).ready(function(){
     	$body.find('#new_subscriber_div').hide();
     	aem_functions.reset_values('#new_list_div');
     	aem_functions.reset_values('#new_subscriber_div');
+    	$body.find('#select_list_method').val('select_existing_list');
     	aem_functions.focus_on_element('#select_existing_list_div');
     });
 
