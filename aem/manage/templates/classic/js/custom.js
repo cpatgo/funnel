@@ -240,14 +240,7 @@ jQuery(document).ready(function(){
 		        	if(result.type == 'error') {
 		        		alert(result.message);
 		        	} else {
-		        		aem_functions.get_lists();
-		        		setTimeout(function() {
-		        			$body.find('#landing-page-list-id').val(result.message.id);
-		        		}, 500);
-		        		$body.find('#list_ajax_name').text(result.message.list_name);
-		        		$body.find('#new_subscriber_div').show();
-		        		alert('List successfully added.');
-		        		aem_functions.focus_on_element('#new_subscriber_div');
+		        		alert('Form successfully added.');
 		        	}
 		        },
 		        error: function(errorThrown){
