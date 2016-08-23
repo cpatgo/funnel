@@ -288,7 +288,7 @@
 				 		<label for="">Form Fields (Optional): </label>
 					</div>
 					<div class="col-md-4">
-				 		{foreach from=$fields item=field}
+				 		{foreach from=$optional_fields item=field}
 	                      <label>
 	                        <input type="checkbox" name="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
 	                      </label><br>
