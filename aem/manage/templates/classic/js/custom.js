@@ -32,6 +32,8 @@ jQuery(document).ready(function(){
 		        error.appendTo('#sub2_redirect-error');
 		    else if  (element.attr("name") == "sub3_redirect" )
 		        error.appendTo('#sub3_redirect-error');
+		    else if  (element.attr("name") == "select_list_method" )
+		        error.appendTo('#select_list_method-error');
 		    else
 	    	element.before(error); 
 	    },
@@ -64,6 +66,9 @@ jQuery(document).ready(function(){
 	        	required: true
 	        },
 	        "sub3_redirect": {
+	        	required: true
+	        },
+	        "select_list_method": {
 	        	required: true
 	        }
 	    }	
