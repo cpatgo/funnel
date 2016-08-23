@@ -60,10 +60,10 @@ jQuery(document).ready(function(){
 	        "form_name": {
 	        	required: true
 	        },
-	        "sub2_redirect" {
+	        "sub2_redirect": {
 	        	required: true
 	        },
-	        "sub3_redirect" {
+	        "sub3_redirect": {
 	        	required: true
 	        }
 	    }	
