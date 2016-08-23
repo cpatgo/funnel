@@ -10,9 +10,10 @@ if($action === 'destroy_list_session') destroy_list_session();
 
 function list_insert_post() {
 	parse_str($_POST['fields'], $fields);
+	$list_id = $_SESSION['selected_list_id'];
 	$user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 	$query = sprintf("INSERT INTO awebdesk_funnel_campaign (title, type, description, user_id, list_id, page_link, date_created) VALUES ( '%s', '%s', '%s', '%d', '%d', '%s', '%s')", 
-		$fields['landing-page-name'], $fields['landing-page-type'], $fields['landing-page-description'], $user_id, $fields['landing-page-list-id'], $fields['landing-page-url'], date('Y-m-d H:i:s'));
+		$fields['landing-page-name'], $fields['landing-page-type'], $fields['landing-page-description'], $user_id, $fields['list_id'], $fields['landing-page-url'], date('Y-m-d H:i:s'));
 
 	mysqli_query($GLOBALS["aem_con"], $query);
 
