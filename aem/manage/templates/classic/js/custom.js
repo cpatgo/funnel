@@ -269,6 +269,14 @@ jQuery(document).ready(function(){
     	aem_functions.focus_on_element('#new_list_div');
     });
 
+    $body.on('click', '.select_existing_list', function(e){
+    	e.preventDefault();
+    	$body.find('#select_existing_list_div').show();
+    	aem_functions.focus_on_element('#select_existing_list_div');
+    });
+
+    
+
     $body.on('click', '#add_new_list_go', function(e){
     	e.preventDefault();
     	aem_functions.add_new_list();
