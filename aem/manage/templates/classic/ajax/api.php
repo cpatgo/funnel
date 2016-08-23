@@ -49,7 +49,13 @@ function get_form() {
         return array('result_code' => 0, 'result_message' => 'Nothing was returned. Do you have a connection to Email Marketing server?');
     }
 
-	return unserialize($response);
+    $form = unserialize($response);
+
+    if((int)$form['result_code'] == 1): 
+		die(json_encode(array('type' => 'success', 'message' => $form)));
+	else:
+		die(json_encode(array('type' => 'error', 'message' => 'Failed to get the form.', 'data' => $form)));
+	endif;
 }
 
 function add_form() {

@@ -137,18 +137,20 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
-		get_form	: 	function() {
+		get_forms	: 	function() {
 			jQuery.ajax({
 		        method: "post",
 		        url: "../manage/templates/classic/ajax/custom.php",
 		        data: {
-		            'action':'get_form'
+		            'action':'get_forms'
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            if(typeof result.message.html !== undefined){
-		            	$body.find('#formcode').text(result.message.html);
-		            }
+		            var select_form = jQuery("body").find("#landing-page-form-id");
+					select_form.html('');
+					jQuery.each(result.data, function(key, value) {
+					    select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+					});
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
@@ -270,7 +272,7 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
-		get_form 			function() {
+		get_form 		: 	function() {
 			jQuery.ajax({
 		        method: "post",
 		        url: "../manage/templates/classic/ajax/api.php",
@@ -280,7 +282,7 @@ jQuery(document).ready(function(){
 		        dataType: 'json',
 		        success:function(result) {
 		        	if(result.type == 'success') {
-		        		
+		        		$body.find('#formcode').text(result.message.html);
 		        	}
 		        },
 		        error: function(errorThrown){
