@@ -209,7 +209,7 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
-		add_new_list 	: 	function() {
+		add_new_list 	: 	function(callback) {
 			var fields = $body.find('#new_list_div :input').serialize();
 			jQuery.ajax({
 		        method: "post",
@@ -222,6 +222,7 @@ jQuery(document).ready(function(){
 		        success:function(result) {
 		        	if(result.type == 'success') {
 		        		aem_functions.get_lists();
+		        		aem_functions.add_new_subscriber();
 		        	}
 		        },
 		        error: function(errorThrown){

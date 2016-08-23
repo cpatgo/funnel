@@ -10,62 +10,67 @@ if($action === 'add_form') add_form();
 
 function add_form() {
 	parse_str($_POST['fields'], $fields);
-	$list_id = $_SESSION['selected_list_id'];
-	$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
-	$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
+	if(!empty($fields['form_name'])):
+		$list_id = $_SESSION['selected_list_id'];
+		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
+		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
 
-	$post = array(
-		'name'                     => $fields['form_name'], // the internal name of the subscription form
-		'type'                     => 'subscribe', // options: both, subscribe, unsubscribe
-		'sub1'                     => 'redirect', // options: default, custom, redirect
-		'sub1_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
-		'sub2'                     => 'redirect', // options: default, custom, redirect
-		'sub2_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
-		'sub3'                     => 'redirect', // options: default, custom, redirect
-		'sub3_redirect'            => $fields['sub3_redirect'], // URL (for redirect)
-		'sub4'                     => 'default', // options: default, custom, redirect
-		'unsub1'                   => 'default', // options: default, custom, redirect
-		'unsub2'                   => 'default', // options: default, custom, redirect
-		'unsub3'                   => 'default', // options: default, custom, redirect
-		'unsub4'                   => 'default', // options: default, custom, redirect
-		'up1'                      => 'default', // options: default, custom, redirect
-		'up2'                      => 'default', // options: default, custom, redirect
-		'allowselection'           => 0, // options: 1 or 0
-		'emailconfirmations'       => 1, // options: 1 or 0
-		'ask4fname'                => 1, // First Name - options: 1 or 0
-		'ask4lname'                => 1, // Last Name - options: 1 or 0
-		'optinoptout'              => 1, // ID of Opt-In/Out set
-		'captcha'                  => 0, // options: 1 or 0
-		'p[0]'                     => $list_id, // example list ID
-	);
+		$post = array(
+			'name'                     => $fields['form_name'], // the internal name of the subscription form
+			'type'                     => 'subscribe', // options: both, subscribe, unsubscribe
+			'sub1'                     => 'redirect', // options: default, custom, redirect
+			'sub1_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
+			'sub2'                     => 'redirect', // options: default, custom, redirect
+			'sub2_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
+			'sub3'                     => 'redirect', // options: default, custom, redirect
+			'sub3_redirect'            => $fields['sub3_redirect'], // URL (for redirect)
+			'sub4'                     => 'default', // options: default, custom, redirect
+			'unsub1'                   => 'default', // options: default, custom, redirect
+			'unsub2'                   => 'default', // options: default, custom, redirect
+			'unsub3'                   => 'default', // options: default, custom, redirect
+			'unsub4'                   => 'default', // options: default, custom, redirect
+			'up1'                      => 'default', // options: default, custom, redirect
+			'up2'                      => 'default', // options: default, custom, redirect
+			'allowselection'           => 0, // options: 1 or 0
+			'emailconfirmations'       => 1, // options: 1 or 0
+			'ask4fname'                => 1, // First Name - options: 1 or 0
+			'ask4lname'                => 1, // Last Name - options: 1 or 0
+			'optinoptout'              => 1, // ID of Opt-In/Out set
+			'captcha'                  => 0, // options: 1 or 0
+			'p[0]'                     => $list_id, // example list ID
+		);
 
-	foreach ($fields['fields'] as $key => $value) {
-		$post[sprintf('fields[%d]', $key)] = $value;
-	}
+		foreach ($fields['fields'] as $key => $value) {
+			$post[sprintf('fields[%d]', $key)] = $value;
+		}
 
-	$add_form = curl_request($post, 'form_add');
+		$add_form = curl_request($post, 'form_add');
 
-	if((int)$add_form['result_code'] == 1): 
-		die(json_encode(array('type' => 'success', 'message' => $add_form)));
-	else:
-		die(json_encode(array('type' => 'error', 'message' => 'Failed to add new form.', 'data' => $add_form)));
+		if((int)$add_form['result_code'] == 1): 
+			die(json_encode(array('type' => 'success', 'message' => $add_form)));
+		else:
+			die(json_encode(array('type' => 'error', 'message' => 'Failed to add new form.', 'data' => $add_form)));
+		endif;
 	endif;
 }
 
 function add_subscriber() {
 	$email = $_POST['email'];
 	$list_id = $_SESSION['selected_list_id'];
-	$post = array(
-		'email'                    => $email,
-		'p['.$list_id.']'          => $list_id, // example list ID
-		'status['.$list_id.']'     => 1, // 0: unconfirmed (Downloaded users only), 1: active, 2: unsubscribed
-	);
-	$add_subscriber = curl_request($post, 'subscriber_add');
 
-	if((int)$add_subscriber['result_code'] == 1): 
-		die(json_encode(array('type' => 'success', 'message' => $add_subscriber)));
-	else:
-		die(json_encode(array('type' => 'error', 'message' => 'Failed to add new subscriber.', 'data' => $add_subscriber)));
+	if(!empty($email)):
+		$post = array(
+			'email'                    => $email,
+			'p['.$list_id.']'          => $list_id, // example list ID
+			'status['.$list_id.']'     => 1, // 0: unconfirmed (Downloaded users only), 1: active, 2: unsubscribed
+		);
+		$add_subscriber = curl_request($post, 'subscriber_add');
+
+		if((int)$add_subscriber['result_code'] == 1): 
+			die(json_encode(array('type' => 'success', 'message' => $add_subscriber)));
+		else:
+			die(json_encode(array('type' => 'error', 'message' => 'Failed to add new subscriber.', 'data' => $add_subscriber)));
+		endif;
 	endif;
 }
 
