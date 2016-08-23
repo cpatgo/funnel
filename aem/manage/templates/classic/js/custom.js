@@ -97,9 +97,6 @@ jQuery(document).ready(function(){
 	    	if(currentIndex == 2 && newIndex == 3) {
 	    		aem_functions.add_new_form();
 	    	}
-	    	if(currentIndex == 3) {
-	    		aem_functions.get_form();
-	    	}
 
 	        form.validate().settings.ignore = ":disabled,:hidden";
 	        return form.valid();
@@ -267,6 +264,8 @@ jQuery(document).ready(function(){
 		        success:function(result) {
 		        	if(result.type == 'error') {
 		        		alert(result.message);
+		        	} else if(result.type == 'success') {
+		        		aem_functions.get_form();
 		        	}
 		        },
 		        error: function(errorThrown){
