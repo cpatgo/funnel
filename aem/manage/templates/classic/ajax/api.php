@@ -76,32 +76,34 @@ function add_subscriber() {
 
 function add_list() {
 	parse_str($_POST['fields'], $fields);
-	$post = array(
-		'name'                     => $fields['list_name'], // list name
-		'subscription_notify'      => '', // comma-separated list of email addresses to notify on new subscriptions to this list
-		'unsubscription_notify'    => '', // comma-separated list of email addresses to notify on any unsubscriptions from this list
-		'to_name'                  => "Subscriber", // if subscriber doesn't enter a name, use this
-		'carboncopy'               => '', // comma-separated list of email addresses to send a copy of all mailings to upon send
-		'stringid'                 => 'api-test', // URL-safe list name
-		'optid'                    => '1', // ID of a Email Confirmation Set to use
-		'bounceid[1]'              => 1, // use default bounce management account
+	if(!empty($fields['list_name'])):
+		$post = array(
+			'name'                     => $fields['list_name'], // list name
+			'subscription_notify'      => '', // comma-separated list of email addresses to notify on new subscriptions to this list
+			'unsubscription_notify'    => '', // comma-separated list of email addresses to notify on any unsubscriptions from this list
+			'to_name'                  => "Subscriber", // if subscriber doesn't enter a name, use this
+			'carboncopy'               => '', // comma-separated list of email addresses to send a copy of all mailings to upon send
+			'stringid'                 => 'api-test', // URL-safe list name
+			'optid'                    => '1', // ID of a Email Confirmation Set to use
+			'bounceid[1]'              => 1, // use default bounce management account
 
-		// HOSTED users only: sender information (all fields below) required
-		'sender_name'				=> $fields['list_company'], // Company (or Organization)
-		'sender_addr1'				=> sprintf('%s %s', $fields['list_address'], $fields['list_address2']), // Address
-		'sender_zip'				=> $fields['list_postal'], // Zip or Postal Code
-		'sender_city'				=> $fields['list_city'], // City
-		'sender_state' 				=> $fields['list_state'],
-		'sender_country'			=> $fields['list_country'], // Country
-	);
-	$add_list = curl_request($post, 'list_add');
+			// HOSTED users only: sender information (all fields below) required
+			'sender_name'				=> $fields['list_company'], // Company (or Organization)
+			'sender_addr1'				=> sprintf('%s %s', $fields['list_address'], $fields['list_address2']), // Address
+			'sender_zip'				=> $fields['list_postal'], // Zip or Postal Code
+			'sender_city'				=> $fields['list_city'], // City
+			'sender_state' 				=> $fields['list_state'],
+			'sender_country'			=> $fields['list_country'], // Country
+		);
+		$add_list = curl_request($post, 'list_add');
 
-	if((int)$add_list['result_code'] == 1): 
-		$_SESSION['selected_list_id'] = $add_list['id'];
-		$add_list['list_name'] = $fields['list_name'];
-		die(json_encode(array('type' => 'success', 'message' => $add_list)));
-	else:
-		die(json_encode(array('type' => 'error', 'message' => 'Failed to add new list.', 'data' => $add_list)));
+		if((int)$add_list['result_code'] == 1): 
+			$_SESSION['selected_list_id'] = $add_list['id'];
+			$add_list['list_name'] = $fields['list_name'];
+			die(json_encode(array('type' => 'success', 'message' => $add_list)));
+		else:
+			die(json_encode(array('type' => 'error', 'message' => 'Failed to add new list.', 'data' => $add_list)));
+		endif;
 	endif;
 }
 

@@ -10,59 +10,65 @@
 
     <h3>Select Funnel Type</h3>
     <section>
-        <div class="col-md-12">
-			<h1>
-				{"Name Your Landing Page"|alang}
-			</h1>
-			<div class="campaign_help">
-				<p class="lead">
-				{"Enter a name to help you remember what this campaign is all about.  Only you will see the campaign name.  Your subscribers will not see this."|alang}
-				</p>
-			</div>
-			<div class="campaign_input form-group">
-				<input type="text" class="form-control" value="" id="landing-page-name" name="landing-page-name"  />
-				<div id="landing-page-name-error"></div>
-			</div>
-			
-			<h1>
-				{"Describe Your Landing Page"|alang}
-			</h1>
-			<div class="campaign_help">
-				<p class="lead">
-				{"Short description for your landing page.  Only you will see the landing page description.  Your subscribers will not see this."|alang}
-				</p>
-			</div>
-			<div class="campaign_input form-group">
-				<textarea class="form-control" value="" id="landing-page-description" name="landing-page-description"></textarea>
-			</div>
+    	<div class="row">
+	        <div class="col-md-12">
+				<h1>
+					{"Name Your Landing Page"|alang}
+				</h1>
+				<div class="campaign_help">
+					<p class="lead">
+					{"Enter a name to help you remember what this campaign is all about.  Only you will see the campaign name.  Your subscribers will not see this."|alang}
+					</p>
+				</div>
+				<div class="campaign_input form-group">
+					<input type="text" class="form-control" value="" id="landing-page-name" name="landing-page-name"  />
+					<div id="landing-page-name-error"></div>
+				</div>
+				
+				<h1>
+					{"Describe Your Landing Page"|alang}
+				</h1>
+				<div class="campaign_help">
+					<p class="lead">
+					{"Short description for your landing page.  Only you will see the landing page description.  Your subscribers will not see this."|alang}
+					</p>
+				</div>
+				<div class="campaign_input form-group">
+					<textarea class="form-control" value="" id="landing-page-description" name="landing-page-description"></textarea>
+				</div>
 
-			<h1>
-				{"Select Funnel Type"|alang}
-			</h1>
-			<div class="campaign_help">
-				<p class="lead">
-				{"Select the funnel type below to help you determine the correct funnel type this is all about."|alang}
-				</p>
-			</div>
-        	<div class="radio form-group">
-	        	<label class="radio-inline acquisition">
-					<input type="radio" id="landing-page-type" name="landing-page-type" value="acquisition" class="radio" /> Acquisition
-				</label>
-			</div>
-			
-			<div class="radio">
-	        	<label class="radio-inline activation">
-					<input type="radio" id="landing-page-type" name="landing-page-type" value="activation"  class="radio" /> Activation
-				</label>
-			</div>
+				<h1>
+					{"Select Funnel Type"|alang}
+				</h1>
+				<div class="campaign_help">
+					<p class="lead">
+					{"Select the funnel type below to help you determine the correct funnel type this is all about."|alang}
+					</p>
+				</div>
+	        	<div class="radio form-group">
+		        	<label class="radio-inline acquisition">
+						<input type="radio" id="landing-page-type" name="landing-page-type" value="acquisition" class="radio" /> Acquisition
+					</label>
+				</div>
+				
+				<div class="radio">
+		        	<label class="radio-inline activation">
+						<input type="radio" id="landing-page-type" name="landing-page-type" value="activation"  class="radio" /> Activation
+					</label>
+				</div>
 
-			<div class="radio">
-	        	<label class="radio-inline monetization">
-					<input type="radio" id="landing-page-type" name="landing-page-type" value="monetization"  class="radio" /> Monetization
-				</label>
-			</div>
+				<div class="radio">
+		        	<label class="radio-inline monetization">
+						<input type="radio" id="landing-page-type" name="landing-page-type" value="monetization"  class="radio" /> Monetization
+					</label>
+				</div>
+	        </div>
+	    </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<div id="landing-page-type-error"></div>
+        	</div>
         </div>
-        <div class="col-md-12" id="landing-page-type-error"></div>
     </section>
     <h3>Create New or Select Existing List</h3>
     <section>
@@ -80,11 +86,6 @@
 				</div>
 			    <div class="col-md-4">
 			 		<a href="#" class="btn btn-primary btn-lg steps-btn select_existing_list" style="width:100%">Select From Existing List</a>
-				</div>
-			</div>
-    		<div class="col-md-12" style="text-align:center">
-				<div class="col-md-8 col-md-offset-2">
-					<div id="select_list_method-error"></div>
 				</div>
 			</div>
         </div>
