@@ -95,6 +95,9 @@ jQuery(document).ready(function(){
 	    	if(currentIndex == 2 && newIndex == 3) {
 	    		aem_functions.add_new_form();
 	    	}
+	    	if(currentIndex == 3) {
+	    		aem_functions.get_form();
+	    	}
 
 	        form.validate().settings.ignore = ":disabled,:hidden";
 	        return form.valid();
@@ -134,20 +137,18 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
-		get_forms	: 	function() {
+		get_form	: 	function() {
 			jQuery.ajax({
 		        method: "post",
 		        url: "../manage/templates/classic/ajax/custom.php",
 		        data: {
-		            'action':'get_forms'
+		            'action':'get_form'
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		            var select_form = jQuery("body").find("#landing-page-form-id");
-					select_form.html('');
-					jQuery.each(result.data, function(key, value) {
-					    select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-					});
+		            if(typeof result.message.html !== undefined){
+		            	$body.find('#formcode').text(result.message.html);
+		            }
 		        },
 		        error: function(errorThrown){
 		            console.log(errorThrown);
@@ -269,6 +270,24 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
+		get_form 			function() {
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/api.php",
+		        data: {
+		            'action':'get_form'
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		        	if(result.type == 'success') {
+		        		
+		        	}
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		}
 		focus_on_element 	: 	function(element_name) {
 			var elementOffset = $body.find(element_name).offset().top;
     		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
