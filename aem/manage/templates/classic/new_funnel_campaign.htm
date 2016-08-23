@@ -220,14 +220,14 @@
 	        	</div>
         	</div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
         	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
 		        <a href="/aem/manage/desk.php?action=form#form-0" class="btn btn-primary btn-lg steps-btn" target="_blank">Generate New Form</a>
-		        <!-- <br />
 		        <br />
-		        <a href="/aem/manage/desk.php?action=form#list-01-0-0" class="btn btn-primary btn-lg steps-btn" target="_blank">Select an Existing Form</a> -->
+		        <br />
+		        <a href="/aem/manage/desk.php?action=form#list-01-0-0" class="btn btn-primary btn-lg steps-btn" target="_blank">Select an Existing Form</a>
         	</div>
-        </div>
+        </div> -->
         <!-- <hr />
         <div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -238,6 +238,141 @@
 				</div>
 			</div>
         </div> -->
+        <div id="new_form_div" style="display:none;background:#f8f8f8;">
+			<hr><br>
+        	<div class="row" >
+        		<div class="col-md-12" style="text-align:center">
+					<div class="col-md-8 col-md-offset-2">
+						<h1>Campaign Subscription / Optin Form</h1>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>Form Settings</h2>
+					</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for="">Form Name: </label>
+							<input type="text" class="form-control" id="form_name" name="form_name">	
+							<div id="form_name-error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for=""><i>Check the box to require a subscriber information</i></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-4 col-md-offset-2">
+				 		<label for="">Form Fields (Required): </label>
+					</div>
+			  		<div class="col-md-4">
+						<label>
+					      <input type="checkbox" name="ask4emailField" value="1" disabled="disabled"/> Email Address
+					    </label><br>
+					    <label>
+					      <input type="checkbox" name="ask4fname" value="1" /> First Name
+					    </label><br>
+					    <label>
+					      <input type="checkbox" name="ask4lname" value="1" /> Last Name
+					    </label>
+					</div>
+				</div>
+				<div class="col-md-12">
+				    <div class="col-md-4 col-md-offset-2">
+				 		<label for="">Form Fields (Optional): </label>
+					</div>
+					<div class="col-md-4">
+				 		{foreach from=$fields item=field}
+	                      <label>
+	                        <input type="checkbox" name="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+	                      </label><br>
+		                {/foreach}
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>Form Completion Options</h2>
+					</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for=""><i>Select the page where the subscriber will be redirected after they submit the form.</i></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<label>
+							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub2_redirect" value="https://www.google.com.ph" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+					</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<label for=""><i>Select the page where the subscriber will be redirected after they confirm the subscription in their email.</i></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-8 col-md-offset-2">
+						<rio
+						<label>
+							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+						<label>
+							<input type="radio" name="sub3_redirect" value="https://sg.yahoo.com/" />
+							<img src="..." alt="..." class="img-thumbnail">	
+						</label>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<br><br>
+				    <div class="col-md-4 col-md-offset-2"></div>
+					<div class="col-md-4">
+				 		<button id="add_new_form" class="btn glc_button" style="width:100%">Create New Form & Continue</button>
+					</div>
+				</div>
+			</div>
+			<hr />
+        </div>
     </section>
     
     <!-- Step 4 -->
