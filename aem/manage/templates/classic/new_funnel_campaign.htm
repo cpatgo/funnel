@@ -394,36 +394,34 @@
 			<div class="col-md-12">
 				<div class="campaign_help">
 					<p class="lead">
-						Click the link below to open our GLC Page Builder and create your awesome landing page.
+						Click the 'Copy Form' to copy the Subscription form and paste it to your landing page in GLC Page Builder.<br>
 						After Generating your page, copy the URL and paste in the box below.
 					</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-        	<div class="col-md-8 col-md-offset-2" style="text-align:center;">
-		        <a href="/builder" class="btn btn-primary btn-lg steps-btn" target="_blank">Open Page Builder!</a>
-        	</div>
-	
-			<div class="col-md-8 col-md-offset-2">
-				<div class="form-group">
-					<textarea class="form-control" id="formcode"></textarea>
-				</div>
-			</div>
-
 			<div class="col-md-12">
-			    <div class="col-md-4 col-md-offset-2">
-				</div>
-				<div class="col-md-4">
-			 		<button data-clipboard-target="#formcode" class="glc_button btnCopy" style="height:52px; width:250px;">
+        		<div class="col-md-4 col-md-offset-2">
+			 		<button data-clipboard-target="#formcode" class="glc_button btnCopy" style="height:52px; width:100%;">
 			 			<strong>Copy Form</strong><br>To past in your website
 			 		</button>
 				</div>
+			    <div class="col-md-4">
+			 		<a href="/builder" target="_blank" class="btn glc_button btnCopy" style="height:52px; width:100%;">
+				 		<strong>Open Page Builder!</strong><br>To create your landing page
+			 		</a>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					<textarea class="form-control" id="formcode" style="height:387px" readonly="readonly"></textarea>
+				</div>
 			</div>
 
 			<div class="col-md-8 col-md-offset-2">
 				<div class="form-group">
-					<label for="">Page URL: </label>
+					<label for="">After Generating your landing page in Builder, paste the URL here: </label>
 					<input type="text" class="form-control" id="landing-page-url" name="landing-page-url">	
 					<div id="landing-page-url-error"></div>
 				</div>
