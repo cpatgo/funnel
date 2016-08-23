@@ -196,6 +196,7 @@ jQuery(document).ready(function(){
 		        		$body.find('#list_ajax_name').text(result.message.list_name);
 		        		$body.find('#new_subscriber_div').show();
 		        		alert('List successfully added.');
+		        		aem_functions.focus_on_element('#new_subscriber_div');
 		        	}
 		        },
 		        error: function(errorThrown){
@@ -224,6 +225,10 @@ jQuery(document).ready(function(){
 		            console.log(errorThrown);
 		        }
 		    });
+		},
+		focus_on_element 	: 	function(element_name) {
+			var elementOffset = $(element_name).offset().top;
+    		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
 		}
 	};
 
@@ -239,6 +244,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.newlist_btn', function(e){
     	e.preventDefault();
     	$body.find('#new_list_div').show();
+    	aem_functions.focus_on_element('#new_list_div');
     });
 
     $body.on('click', '#add_new_list_go', function(e){
