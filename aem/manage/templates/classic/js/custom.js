@@ -220,9 +220,7 @@ jQuery(document).ready(function(){
 		        },
 		        dataType: 'json',
 		        success:function(result) {
-		        	if(result.type == 'error') {
-		        		alert(result.message);
-		        	} else {
+		        	if(result.type == 'success') {
 		        		aem_functions.get_lists();
 		        	}
 		        },
