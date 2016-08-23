@@ -13,7 +13,6 @@ jQuery(document).ready(function(){
 
 	var form = jQuery("#create-funnel-campaign").show();
 	form.validate({
-		ignore: ':hidden:not("#select_list_method")',
 	    errorPlacement: function errorPlacement(error, element) { 
 	    	if (element.attr("name") == "landing-page-name" )
 		        error.appendTo('#landing-page-name-error');
@@ -33,9 +32,6 @@ jQuery(document).ready(function(){
 		        error.appendTo('#sub2_redirect-error');
 		    else if  (element.attr("name") == "sub3_redirect" )
 		        error.appendTo('#sub3_redirect-error');
-		    else if  (element.attr("name") == "select_list_method" )
-		        error.appendTo('#select_list_method-error');
-		    else
 	    	element.before(error); 
 	    },
 	    rules: {
@@ -67,9 +63,6 @@ jQuery(document).ready(function(){
 	        	required: true
 	        },
 	        "sub3_redirect": {
-	        	required: true
-	        },
-	        "select_list_method": {
 	        	required: true
 	        }
 	    }	
@@ -131,6 +124,7 @@ jQuery(document).ready(function(){
 		        success:function(result) {
 		            var select_list = jQuery("body").find("#landing-page-list-id");
 					select_list.html('');
+					select_list.append(jQuery("<option></option>").attr("value", "").text("-- SELECT --"));
 					jQuery.each(result.data, function(key, value) {
 					    select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
 					});
