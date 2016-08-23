@@ -383,3 +383,7 @@
 {
     display: list-item;
 }
+
+#new_form_div input[type="checkbox"] {
+    margin-right: 5px;
+}

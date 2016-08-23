@@ -226,6 +226,35 @@ jQuery(document).ready(function(){
 		        }
 		    });
 		},
+		add_new_form	: 	function() {
+			var fields = $body.find('#new_form_div :input').serialize();
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/api.php",
+		        data: {
+		            'action':'add_form',
+		            fields : fields
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		        	if(result.type == 'error') {
+		        		alert(result.message);
+		        	} else {
+		        		aem_functions.get_lists();
+		        		setTimeout(function() {
+		        			$body.find('#landing-page-list-id').val(result.message.id);
+		        		}, 500);
+		        		$body.find('#list_ajax_name').text(result.message.list_name);
+		        		$body.find('#new_subscriber_div').show();
+		        		alert('List successfully added.');
+		        		aem_functions.focus_on_element('#new_subscriber_div');
+		        	}
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
 		focus_on_element 	: 	function(element_name) {
 			var elementOffset = $body.find(element_name).offset().top;
     		jQuery('html, body').animate({scrollTop: elementOffset}, 600);
@@ -260,6 +289,11 @@ jQuery(document).ready(function(){
     $body.on('click', '#add_new_subscriber', function(e){
     	e.preventDefault();
     	aem_functions.add_new_subscriber();
+    });
+
+    $body.on('click', '#add_new_form', function(e){
+    	e.preventDefault();
+    	aem_functions.add_new_form();
     });
 
 	//GET FORMS

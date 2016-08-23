@@ -21,6 +21,10 @@ class new_funnel_campaign_assets extends AWEBP_Page {
 			return;
 		}
 
+		// get global custom fields
+		$fields = list_get_fields(array(), true); // no list id's, but global
+		$smarty->assign("optional_fields", $fields);
+
 		$smarty->assign("content_template", "new_funnel_campaign.htm");
 	}
 }
