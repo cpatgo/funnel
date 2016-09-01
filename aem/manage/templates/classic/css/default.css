@@ -8,6 +8,11 @@ body{ font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#333333; 
 /*Forms New styles */
 /*modified on Oct 11 Amitabh Bachhan Birthday Special Patch :) by Sandeep */
 
+
+.required_field {
+	color: red;
+}
+
 img.img-thumbnail {
     width: 194px;
 }
