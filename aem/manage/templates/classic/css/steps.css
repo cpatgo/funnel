@@ -384,11 +384,11 @@
     display: list-item;
 }
 
-#new_form_div input[type="checkbox"] {
+#create-funnel-campaign input[type="checkbox"] {
     margin-right: 10px;
     transform: scale(1.6);
 }
 
-#new_form_div input[type="radio"] {
+#create-funnel-campaign input[type="radio"] {
     transform: scale(1.6);
 }
