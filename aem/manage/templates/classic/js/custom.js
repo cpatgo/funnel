@@ -381,13 +381,13 @@ jQuery(document).ready(function(){
 
     $body.on('input', '#sub2_redirect_input', function(e){
     	e.preventDefault();
-    	jQuery('input[name=sub2_redirect]').attr('checked', true);
+		jQuery(this).closest('label').find('input[name=sub2_redirect]').attr('checked', true);
     	jQuery(this).closest('label').find('input[name=sub2_redirect]').val(jQuery(this).val());
     });
 
     $body.on('input', '#sub3_redirect_input', function(e){
     	e.preventDefault();
-    	jQuery('input[name=sub3_redirect]').attr('checked', true);
+    	jQuery(this).closest('label').find('input[name=sub3_redirect]').attr('checked', true);
     	jQuery(this).closest('label').find('input[name=sub3_redirect]').val(jQuery(this).val());
     });
 
