@@ -30,8 +30,8 @@ jQuery(document).ready(function(){
 		        error.appendTo('#form_name-error');
 		    else if  (element.attr("name") == "sub2_redirect" )
 		        error.appendTo('#sub2_redirect-error');
-		    else if  (element.attr("name") == "sub3_redirect" )
-		        error.appendTo('#sub3_redirect-error');
+		    // else if  (element.attr("name") == "sub3_redirect" )
+		    //     error.appendTo('#sub3_redirect-error');
 		    else if  (element.attr("name") == "list_company" )
 		        error.appendTo('#list_company-error');
 		    else if  (element.attr("name") == "list_address" )
@@ -74,9 +74,9 @@ jQuery(document).ready(function(){
 	        "sub2_redirect": {
 	        	required: true
 	        },
-	        "sub3_redirect": {
-	        	required: true
-	        },
+	        // "sub3_redirect": {
+	        // 	required: true
+	        // },
 	        "list_company": {
 	        	required: true
 	        },
