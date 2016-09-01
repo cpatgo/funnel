@@ -379,6 +379,14 @@ jQuery(document).ready(function(){
     	aem_functions.add_new_form();
     });
 
+    $body.on('keyup', '#sub2_redirect_input', function(e){
+    	jQuery(this).closest('input[name=sub2_redirect]').val(jQuery(this).val());
+    });
+
+    $body.on('keyup', '#sub3_redirect_input', function(e){
+    	jQuery(this).closest('input[name=sub3_redirect]').val(jQuery(this).val());
+    });
+
 	//GET FORMS
 	// aem_functions.get_forms();
 
