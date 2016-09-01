@@ -385,5 +385,10 @@
 }
 
 #new_form_div input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 10px;
+    transform: scale(1.6);
+}
+
+#new_form_div input[type="radio"] {
+    transform: scale(1.6);
 }
