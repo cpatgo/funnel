@@ -393,6 +393,13 @@ jQuery(document).ready(function(){
     	jQuery(this).closest('label').find('input[name=sub3_redirect]').val(jQuery(this).val());
     });
 
+    $body.on('input', '#landing-page-url-link', function(e){
+    	e.preventDefault();
+    	jQuery("input[name=landing_page_url]").removeAttr("checked");
+    	jQuery(this).closest('label').find('input[name=landing_page_url]').attr('checked', true);
+    	jQuery(this).closest('label').find('input[name=landing_page_url]').val(jQuery(this).val());
+    });
+
 	//GET FORMS
 	// aem_functions.get_forms();
 
