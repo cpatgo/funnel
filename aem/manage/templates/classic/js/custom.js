@@ -32,6 +32,18 @@ jQuery(document).ready(function(){
 		        error.appendTo('#sub2_redirect-error');
 		    else if  (element.attr("name") == "sub3_redirect" )
 		        error.appendTo('#sub3_redirect-error');
+		    else if  (element.attr("name") == "list_company" )
+		        error.appendTo('#list_company-error');
+		    else if  (element.attr("name") == "list_address" )
+		        error.appendTo('#list_address-error');
+		    else if  (element.attr("name") == "list_city" )
+		        error.appendTo('#list_city-error');
+		    else if  (element.attr("name") == "list_state" )
+		        error.appendTo('#list_state-error');
+		    else if  (element.attr("name") == "list_postal" )
+		        error.appendTo('#list_postal-error');
+		    else if  (element.attr("name") == "list_country" )
+		        error.appendTo('#list_country-error');
 	    	element.before(error); 
 	    },
 	    rules: {
@@ -63,6 +75,24 @@ jQuery(document).ready(function(){
 	        	required: true
 	        },
 	        "sub3_redirect": {
+	        	required: true
+	        },
+	        "list_company": {
+	        	required: true
+	        },
+	        "list_address": {
+	        	required: true
+	        },
+	        "list_city": {
+	        	required: true
+	        },
+	        "list_state": {
+	        	required: true
+	        },
+	        "list_postal": {
+	        	required: true
+	        },
+	        "list_country": {
 	        	required: true
 	        }
 	    }	
