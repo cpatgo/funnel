@@ -103,7 +103,7 @@ jQuery(document).ready(function(){
 	    transitionEffect: "slideLeft",
 	    onStepChanging: function (event, currentIndex, newIndex)
 	    {
-	    	var step4 = jQuery('#landing-page-url').val();
+	    	var step4 = jQuery('input[name=landing-page-url]').val();
 	    	if(step4.trim() && newIndex == 4) {
 	    		//Save campaign
 	    		aem_functions.save_funnel_campaign();
