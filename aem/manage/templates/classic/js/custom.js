@@ -339,6 +339,11 @@ jQuery(document).ready(function(){
     	aem_functions.get_lists();
     });
 
+    $body.on('change', '#landing-page-list-id', function(e){
+    	e.preventDefault();
+    	$body.find('#select_list_method').val('select_existing_list');
+    });
+
     $body.on('click', '.newlist_btn', function(e){
     	e.preventDefault();
     	$body.find('#new_list_div').show();
