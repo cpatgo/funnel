@@ -109,7 +109,7 @@ jQuery(document).ready(function(){
         labels: {
             finish: "Finish",
             next: "Next Step",
-            previous: "Previous Step",
+            previous: "Previous",
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
