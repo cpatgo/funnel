@@ -1796,7 +1796,7 @@ $(function () {
 
     //main rmenu hide/show
 
-    $('#menu').mouseenter(function () {
+    $('#rmenu').mouseenter(function () {
 
         $(this).stop().animate({'right': '0px'}, 500);
 
