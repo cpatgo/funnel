@@ -79,6 +79,10 @@ $(window).load(function () {
 
         $('#menu').animate({'left': '-190px'}, 1000);
 
+        $('#rmenu').animate({'right': '-210px'}, 1000);
+
+        $('#botmenu').animate({'bottom': '-84px'}, 1000);
+
     });
 
 
@@ -1784,8 +1788,6 @@ $(function () {
 
     //main menu hide/show
 
-
-
     $('#menu').mouseenter(function () {
 
         $(this).stop().animate({'left': '0px'}, 500);
@@ -1795,6 +1797,31 @@ $(function () {
         $(this).stop().animate({'left': '-190px'}, 500);
 
     })
+
+    //main rmenu hide/show
+
+    $('#rmenu').mouseenter(function () {
+
+        $(this).stop().animate({'right': '0px'}, 500);
+
+    }).mouseleave(function () {
+
+        $(this).stop().animate({'right': '-210px'}, 500);
+
+    })
+
+    // main botmenu hide/show
+
+    $('#botmenu').mouseenter(function () {
+
+        $(this).stop().animate({'bottom': '0px'}, 500);
+
+    }).mouseleave(function () {
+
+        $(this).stop().animate({'bottom': '-84px'}, 500);
+
+    })
+
 
     //use function call to make the ULs sortable
     makeSortable($('#pageList ul#page1'));

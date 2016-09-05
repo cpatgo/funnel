@@ -391,6 +391,22 @@ body .sp-input {
 	height: 100%;
 	z-index: 1000;
 }
+.rmenu {
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	height: 100%;
+	z-index: 1000;	
+}
+
+.botmenu {
+	position: fixed;
+	/*bottom: 0px;*/
+	left: 100px;
+	/*height: 100%;*/
+	z-index: 1000;	
+}
+
 
 .menu .toggle {
 	background: #34495E;
@@ -414,6 +430,57 @@ body .sp-input {
     height: 100%;
     float: left;
     box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
+}
+
+.rmenu .main {
+	background: none repeat scroll 0 0 #FFF6F6; 
+    height: 80% !important;
+    overflow-y: auto;
+    padding-top: 20px;
+    width: 210px;
+    height: 100%;
+    float: left;
+    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
+}
+
+.botmenu .main {
+	background: none repeat scroll 0 0 #333; 
+    /*height: 100% !important;*/
+    overflow-y: auto;
+    /*padding-top: 20px;*/
+    width: 700px;
+    /*height: 100%;*/
+    /*float: left;
+    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;*/
+}
+
+.rmenu .toggle {
+	background: #1abc9c;
+	color: #eee;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	left: -50px;
+	top: 20%;
+	/*box-shadow: 5px 0px 0px rgba(0,0,0,0.1);*/
+	border-left: 3px solid #e74c3c;
+}
+
+
+.botmenu .toggle {
+	background: #1abc9c;
+	color: #eee;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	left: 100px;
+	bottom: 100%;
+	/*box-shadow: 5px 0px 0px rgba(0,0,0,0.1);*/
+	border-top: 3px solid #444;
 }
 
 .menu .main h3 {
