@@ -425,6 +425,17 @@ body .sp-input {
     box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
 }
 
+.rmenu .main {
+	background: none repeat scroll 0 0 #7b838b; 
+    height: 100% !important;
+    overflow-y: auto;
+    padding-top: 20px;
+    width: 210px;
+    height: 100%;
+    float: left;
+    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
+}
+
 .menu .main h3 {
 	font-size: 17px;
 	color: #fff;
