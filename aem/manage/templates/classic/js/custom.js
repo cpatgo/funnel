@@ -108,12 +108,15 @@ jQuery(document).ready(function(){
 	    transitionEffect: "slideLeft",
 	    onStepChanging: function (event, currentIndex, newIndex)
 	    {
-	    	var step4 = jQuery('input[name=landing-page-url]').val();
+	    	var step4 = jQuery('input[name=landing-page-url]:checked').val();
 	    	if(step4.trim() && newIndex == 4) {
-	    		if(typeof jQuery('input[name=landing-page-url]').data('customlandingpage') == 'undefined'){
+	    		if(typeof jQuery('input[name=landing-page-url]:checked').data('customlandingpage') == 'undefined')
+	    		{
+	    			// Use pre-made landing page
 	    			var url_link = jQuery(this).val();
 	    			var form_html = aem_functions.get_form();
 
+	    			// Get form
 	    			jQuery.ajax({
 				        method: "post",
 				        url: "../manage/templates/classic/ajax/api.php",
@@ -128,10 +131,10 @@ jQuery(document).ready(function(){
 				        		//Insert the form in the landing page
 				        		jQuery.get(url_link, function(page_html){
 				    				jQuery(page_html).find('#user_form_div').append(form_html);
+				    				
+				    				//Create new file for the user's landing page
+				    				aem_functions.create_landing_page(jQuery(page_html));
 				    			});
-
-				    			//Create new file for the user's landing page
-				    			aem_functions.create_landing_page(jQuery(page_html));
 				        	}
 				        },
 				        error: function(errorThrown){
