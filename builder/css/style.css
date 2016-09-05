@@ -384,7 +384,7 @@ body .sp-input {
     border-color: #258dcd;
 }
 
-.menu {
+.menu, .rmenu {
 	position: fixed;
 	top: 0px;
 	left: 0px;
