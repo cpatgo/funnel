@@ -120,7 +120,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <li><a href="#" id="all">All Blocks</a></li>
         </ul>
         
-      <a href="#" class="toggle"><span class="fui-question-circle"></span></a>
+      <a href="#" class="toggle"><span class="fui-question"></span></a>
       
         <hr>        
         Some Content Here
