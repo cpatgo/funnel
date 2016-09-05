@@ -81,7 +81,7 @@ $(window).load(function () {
 
         $('#rmenu').animate({'right': '-210px'}, 1000);
 
-        $('#botmenu').animate({'bottom': '-190px'}, 1000);
+        $('#botmenu').animate({'bottom': '-115px'}, 1000);
 
     });
 
@@ -1810,13 +1810,15 @@ $(function () {
 
     })
 
+    // main botmenu hide/show
+
     $('#botmenu').mouseenter(function () {
 
         $(this).stop().animate({'bottom': '0px'}, 500);
 
     }).mouseleave(function () {
 
-        $(this).stop().animate({'bottom': '-210px'}, 500);
+        $(this).stop().animate({'bottom': '-115px'}, 500);
 
     })
 
