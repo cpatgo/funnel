@@ -43,7 +43,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 		
   		<div class="main" id="main">
         <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">> eMarketer</a>
+          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">eMarketer</a>
         </div>
         <hr>
 			  		  			
@@ -103,7 +103,19 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   		</div><!-- /.secondSide -->
   	
   	</div><!-- /.menu -->
-  
+    
+
+    <!-- Right Menu Slider -->
+    <div class="right_menu" id="right_menu">
+      <div class="right_menu_wrapper">
+        <div class="right_menu_content">
+          <div class="right_menu_toggle">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
     	
     	<header class="clearfix" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
