@@ -1,2 +1,27 @@
 [15-Aug-2016 14:28:10 America/New_York] PHP Fatal error:  Call to undefined function response() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/custom.php on line 19
 [15-Aug-2016 14:30:02 America/New_York] PHP Fatal error:  Call to undefined function aem_response() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/custom.php on line 19
+[23-Aug-2016 16:35:31 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[23-Aug-2016 16:38:33 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[23-Aug-2016 17:03:40 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[23-Aug-2016 17:26:10 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[23-Aug-2016 17:28:08 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[01-Sep-2016 13:59:49 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[01-Sep-2016 15:18:25 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 93
+[01-Sep-2016 17:30:28 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[01-Sep-2016 17:42:13 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[01-Sep-2016 17:51:33 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[01-Sep-2016 17:55:24 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[01-Sep-2016 17:56:13 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[01-Sep-2016 18:06:30 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 10:50:22 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 10:50:50 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 10:51:00 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 11:00:10 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 11:04:49 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 11:28:26 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 97
+[02-Sep-2016 11:48:36 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 97
+[02-Sep-2016 11:53:32 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 14:27:02 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 14:28:05 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[02-Sep-2016 15:49:05 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
+[05-Sep-2016 10:40:23 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/identifz/public_html/glcv2/aem/manage/templates/classic/ajax/api.php on line 96
