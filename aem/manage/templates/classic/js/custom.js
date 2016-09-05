@@ -44,6 +44,8 @@ jQuery(document).ready(function(){
 		        error.appendTo('#list_postal-error');
 		    else if  (element.attr("name") == "list_country" )
 		        error.appendTo('#list_country-error');
+		    else if  (element.attr("name") == "landing-page-url-link" )
+		        error.appendTo('#landing-page-url-link-error');
 	    	element.before(error); 
 	    },
 	    rules: {
@@ -94,6 +96,9 @@ jQuery(document).ready(function(){
 	        },
 	        "list_country": {
 	        	required: true
+	        },
+	        "landing-page-url-link": {
+	        	required: true
 	        }
 	    }	
 	});
@@ -105,6 +110,36 @@ jQuery(document).ready(function(){
 	    {
 	    	var step4 = jQuery('input[name=landing-page-url]').val();
 	    	if(step4.trim() && newIndex == 4) {
+	    		if(typeof jQuery('input[name=landing-page-url]').data('customlandingpage') == 'undefined'){
+	    			var url_link = jQuery(this).val();
+	    			var form_html = aem_functions.get_form();
+
+	    			jQuery.ajax({
+				        method: "post",
+				        url: "../manage/templates/classic/ajax/api.php",
+				        data: {
+				            'action':'get_form'
+				        },
+				        dataType: 'json',
+				        success:function(result) {
+				        	if(result.type == 'success') {
+				        		$body.find('#formcode').text(result.message.html);
+
+				        		//Insert the form in the landing page
+				        		jQuery.get(url_link, function(page_html){
+				    				jQuery(page_html).find('#user_form_div').append(form_html);
+				    			});
+
+				    			//Create new file for the user's landing page
+				    			aem_functions.create_landing_page(jQuery(page_html));
+				        	}
+				        },
+				        error: function(errorThrown){
+				            console.log(errorThrown);
+				        }
+				    });
+	    		}
+
 	    		//Save campaign
 	    		aem_functions.save_funnel_campaign();
 	    		//Disable fields
@@ -145,6 +180,27 @@ jQuery(document).ready(function(){
 
 	//COLLECTION OF FUNCTIONS
 	var aem_functions = {
+		create_landing_page 	: 	function(landing_page_html) {
+			jQuery.ajax({
+		        method: "post",
+		        url: "../manage/templates/classic/ajax/custom.php",
+		        data: {
+		            'action':'create_landing_page',
+		            'landing_page_html': landing_page_html
+		        },
+		        dataType: 'json',
+		        success:function(result) {
+		        	if(result.type == 'success'){
+		        		$body.find('input[name=landing-page-url]').val(result.message);
+		        	} else {
+		        		alert(result.message);
+		        	}
+		        },
+		        error: function(errorThrown){
+		            console.log(errorThrown);
+		        }
+		    });
+		},
 		get_lists 	: 	function() {
 			jQuery.ajax({
 		        method: "post",
