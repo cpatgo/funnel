@@ -7,6 +7,21 @@ $user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 $action = $_POST['action'];
 if($action === 'get_lists') get_lists($user_id);
 if($action === 'get_forms') get_forms($user_id);
+if($action === 'create_landing_page') create_landing_page($user_id);
+
+function create_landing_page($user_id) {
+    include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
+    $content = $_POST['landing_page_html'];
+    $path = $_SERVER['DOCUMENT_ROOT'].'/builder/elements';
+    $filename = "preview_".generateRandomString(20).".html";
+    file_put_contents(sprintf('%s/%s', $path, $filename), $content);
+
+    if(file_put_contents(sprintf('%s/%s', $path, $filename), $content) != false):
+        die(json_encode(array('type' => 'success', 'message' => sprintf('%s/builder/elements/%s', GLC_URL, $filename))));
+    else:
+        die(json_encode(array('type' => 'success', 'message' => 'Cannot create landing page file.')));
+    endif;
+}
 
 function get_lists($user_id) {
 	$query = sprintf("SELECT id, name FROM awebdesk_list WHERE userid = %d ORDER BY name", $user_id);
@@ -56,5 +71,15 @@ function aem_response($type, $message)
 {
     $type = (!$type) ? false : true;
     return array('type' => $type, 'message' => $message);
+}
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }
 ?>
