@@ -426,7 +426,7 @@ body .sp-input {
 }
 
 .rmenu .main {
-	background: none repeat scroll 0 0 #7b838b; 
+	background: none repeat scroll 0 0 #fff; 
     height: 80% !important;
     overflow-y: auto;
     padding-top: 20px;
@@ -437,8 +437,7 @@ body .sp-input {
 }
 
 .rmenu .toggle {
-	/*background: #1abc9c;*/
-	background: #fff;
+	background: #1abc9c;
 	color: #eee;
 	position: absolute;
 	width: 50px;
