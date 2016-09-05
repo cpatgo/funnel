@@ -79,7 +79,7 @@ $(window).load(function () {
 
         $('#menu').animate({'left': '-190px'}, 1000);
 
-        $('#rmenu').animate({'right': '-190px'}, 1000);
+        $('#rmenu').animate({'right': '-210px'}, 1000);
 
     });
 
@@ -1804,7 +1804,7 @@ $(function () {
 
     }).mouseleave(function () {
 
-        $(this).stop().animate({'right': '-200px'}, 500);
+        $(this).stop().animate({'right': '-210px'}, 500);
 
     })
 
