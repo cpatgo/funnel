@@ -401,9 +401,9 @@ body .sp-input {
 
 .botmenu {
 	position: fixed;
-	bottom: 0px;
+	/*bottom: 0px;*/
 	left: 100px;
-	height: 100%;
+	/*height: 100%;*/
 	z-index: 1000;	
 }
 
@@ -480,7 +480,7 @@ body .sp-input {
 	left: 100px;
 	bottom: 20%;
 	/*box-shadow: 5px 0px 0px rgba(0,0,0,0.1);*/
-	border-left: 3px solid #e74c3c;
+	border-top: 3px solid #444;
 }
 
 .menu .main h3 {
