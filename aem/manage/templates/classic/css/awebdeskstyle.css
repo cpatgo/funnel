@@ -944,7 +944,7 @@ label.acquisition, label.monetization, label.activation {
 
 /*.wizard > .steps > ul > li  > a:hover { color:#fff; }*/
 .wizard > .steps > ul > li  > a > .step_txt { font-size: 18px;}
-.wizard > .steps > ul > li.current > a { color:#004c7e; }
+.wizard > .steps > ul > li.current > a > .step_txt { color:#004c7e; }
 
 .step_txt { font-weight: bold; font-size:18px; }
 
