@@ -109,7 +109,7 @@ jQuery(document).ready(function(){
 	    onStepChanging: function (event, currentIndex, newIndex)
 	    {
 	    	var step4 = jQuery('input[name=landing-page-url]:checked').val();
-	    	if(step4.trim() && newIndex == 4) {
+	    	if(newIndex == 4 && typeof step4 !== 'undefined') {
 	    		if(typeof jQuery('input[name=landing-page-url]:checked').data('customlandingpage') == 'undefined')
 	    		{
 	    			// Use pre-made landing page
