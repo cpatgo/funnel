@@ -113,6 +113,11 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
+            // If user click on "Previous" button, we just normally let he/she goes
+            if (newIndex < currentIndex) {
+                return true;
+            }
+
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
             if(newIndex == 4 && typeof step4 !== 'undefined') {
                 var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
@@ -159,6 +164,7 @@ jQuery(document).ready(function(){
                     return false;
                 }
             }
+
             //Save List
             if(currentIndex == 1 && newIndex == 2) {
                 var method = $body.find('#select_list_method').val();
