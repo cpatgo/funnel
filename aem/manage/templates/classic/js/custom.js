@@ -106,6 +106,15 @@ jQuery(document).ready(function(){
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
+        labels: {
+            cancel: "Cancel",
+            current: "current step:",
+            pagination: "Pagination",
+            finish: "Finish",
+            next: "Next",
+            previous: "Previous",
+            loading: "Loading ..."
+        },
         onStepChanging: function (event, currentIndex, newIndex)
         {
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
