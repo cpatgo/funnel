@@ -942,8 +942,8 @@ label.acquisition, label.monetization, label.activation {
     display: none;
 }
 
-.wizard > .steps > ul > li  > a:hover { color:#fff; }
-.wizard > .steps > ul > li  > a { font-size: 1.429em;}
+/*.wizard > .steps > ul > li  > a:hover { color:#fff; }*/
+.wizard > .steps > ul > li  > a > .step_txt { font-size: 18px;}
 .wizard > .steps > ul > li.current > a { color:#004c7e; }
 
 .step_txt { font-weight: bold; font-size:18px; }
