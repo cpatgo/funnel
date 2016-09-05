@@ -19,12 +19,10 @@ function create_landing_page($user_id) {
     $content = str_replace('<div id="user_form_div"></div>', $form, $content);
     file_put_contents(sprintf('%s/%s', $path, $filename), $content);
 
-    $ddd = array($content, $path, $filename);
-
     if(file_put_contents(sprintf('%s/%s', $path, $filename), $content) != false):
         die(json_encode(array('type' => 'success', 'message' => sprintf('%s/builder/elements/%s', GLC_URL, $filename))));
     else:
-        die(json_encode(array('type' => 'success', 'message' => 'Cannot create landing page file.', 'ddd' => $ddd)));
+        die(json_encode(array('type' => 'success', 'message' => 'Cannot create landing page file.')));
     endif;
 }
 
