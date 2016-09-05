@@ -240,7 +240,7 @@ jQuery(document).ready(function(){
                 success:function(result) {
                     var select_list = jQuery("body").find("#landing-page-list-id");
                     select_list.html('');
-                    select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled"}).text("-- SELECT LIST --"));
+                    select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
                     jQuery.each(result.data, function(key, value) {
                         select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
                     });
