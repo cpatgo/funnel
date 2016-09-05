@@ -941,3 +941,14 @@ label.acquisition, label.monetization, label.activation {
     /*font-size: 1.429em;*/
     display: none;
 }
+
+.step_txt { font-weight: bold; font-size:18px; }
+
+#create-funnel-campaign input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.6);
+}
+
+#create-funnel-campaign input[type="radio"] {
+    transform: scale(1.6);
+}
