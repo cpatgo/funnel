@@ -140,7 +140,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
     <!-- Right Side Menu -->
     <div class="botmenu" id="botmenu">
-    
+      <a href="#" class="toggle"><span class="fui-new"></span></a>
       <div class="main" id="main">
         <div class="sideButtons clearfix">
           <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; Help Topics</a>
@@ -149,7 +149,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
             
         
         
-      <a href="#" class="toggle"><span class="fui-question"></span></a>
+      
       
      
     
