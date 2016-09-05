@@ -437,7 +437,8 @@ body .sp-input {
 }
 
 .rmenu .toggle {
-	background: #34495E;
+	/*background: #1abc9c;*/
+	background: #fff;
 	color: #eee;
 	position: absolute;
 	width: 50px;
@@ -446,7 +447,8 @@ body .sp-input {
 	text-align: center;
 	left: -50px;
 	top: 0px;
-	box-shadow: 5px 0px 0px rgba(0,0,0,0.1);
+	/*box-shadow: 5px 0px 0px rgba(0,0,0,0.1);*/
+	border-left: 3px solid #e74c3c;
 }
 
 .menu .main h3 {
