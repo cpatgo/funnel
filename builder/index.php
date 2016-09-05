@@ -147,28 +147,13 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>
         <hr>
             
-        <h3><span class="fui-list"></span> Blocks</h3>
         
-        <ul id="elements">
-          <li><a href="#" id="all">All Blocks</a></li>
-        </ul>
         
       <a href="#" class="toggle"><span class="fui-question"></span></a>
       
-        <hr>        
-        Some Content Here
+     
     
       </div><!-- /.main -->
-    
-      <div class="second" id="second">
-      
-      <a href="#" class="hideSecond" id="hideSecond"><span class="fui-arrow-left"></span> hide</a>
-      
-        <ul id="elements">
-        
-        </ul>
-  
-      </div><!-- /.secondSide -->    
     </div><!-- /.rmenu .menu -->
     <!-- End Right Side Menu -->
 
