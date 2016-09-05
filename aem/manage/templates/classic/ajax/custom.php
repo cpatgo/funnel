@@ -12,14 +12,19 @@ if($action === 'create_landing_page') create_landing_page($user_id);
 function create_landing_page($user_id) {
     include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
     $content = $_POST['landing_page_html'];
+    $form = $_POST['form'];
     $path = $_SERVER['DOCUMENT_ROOT'].'/builder/elements';
     $filename = "preview_".generateRandomString(20).".html";
+
+    $content = str_replace('<div id="user_form_div"></div>', $form, $content);
     file_put_contents(sprintf('%s/%s', $path, $filename), $content);
+
+    $ddd = array($content, $path, $filename);
 
     if(file_put_contents(sprintf('%s/%s', $path, $filename), $content) != false):
         die(json_encode(array('type' => 'success', 'message' => sprintf('%s/builder/elements/%s', GLC_URL, $filename))));
     else:
-        die(json_encode(array('type' => 'success', 'message' => 'Cannot create landing page file.')));
+        die(json_encode(array('type' => 'success', 'message' => 'Cannot create landing page file.', 'ddd' => $ddd)));
     endif;
 }
 
