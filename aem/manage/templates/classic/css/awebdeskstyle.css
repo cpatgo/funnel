@@ -957,6 +957,6 @@ label.acquisition, label.monetization, label.activation {
     transform: scale(1.6);
 }
 
-.wizard > .actions a, .wizard > .actions a:hover { padding: 1.4em 4.0em; font-weight:bold; font-size:14px;}
+.wizard > .actions a, .wizard > .actions a:hover { padding: 1.4em 4.0em; font-weight:bold; font-size:16px;}
 
 .wizard > .actions a:hover { opacity:0.7; }
