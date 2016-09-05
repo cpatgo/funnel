@@ -956,3 +956,5 @@ label.acquisition, label.monetization, label.activation {
 #create-funnel-campaign input[type="radio"] {
     transform: scale(1.6);
 }
+
+.wizard > .actions a { padding: 1.4em 2.0em; }
