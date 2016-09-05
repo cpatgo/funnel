@@ -936,3 +936,8 @@ label.acquisition, label.monetization, label.activation {
       font-size: 16px;
   }
 }
+
+.wizard > .steps .number {
+    /*font-size: 1.429em;*/
+    display: none;
+}
