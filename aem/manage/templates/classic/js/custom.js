@@ -107,13 +107,9 @@ jQuery(document).ready(function(){
         bodyTag: "section",
         transitionEffect: "slideLeft",
         labels: {
-            cancel: "Cancel",
-            current: "current step:",
-            pagination: "Pagination",
             finish: "Finish",
-            next: "Next",
-            previous: "Previous",
-            loading: "Loading ..."
+            next: "Next Step",
+            previous: "Previous Step",
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
