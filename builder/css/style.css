@@ -384,13 +384,22 @@ body .sp-input {
     border-color: #258dcd;
 }
 
-.menu, .rmenu {
+.menu {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	height: 100%;
 	z-index: 1000;
 }
+.rmenu {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	z-index: 1000;	
+}
+
+
 
 .menu .toggle {
 	background: #34495E;
