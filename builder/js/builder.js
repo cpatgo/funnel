@@ -1784,8 +1784,6 @@ $(function () {
 
     //main menu hide/show
 
-
-
     $('#menu').mouseenter(function () {
 
         $(this).stop().animate({'left': '0px'}, 500);
@@ -1795,6 +1793,19 @@ $(function () {
         $(this).stop().animate({'left': '-190px'}, 500);
 
     })
+
+    //main rmenu hide/show
+
+    $('#menu').mouseenter(function () {
+
+        $(this).stop().animate({'right': '0px'}, 500);
+
+    }).mouseleave(function () {
+
+        $(this).stop().animate({'right': '-190px'}, 500);
+
+    })
+
 
     //use function call to make the ULs sortable
     makeSortable($('#pageList ul#page1'));
