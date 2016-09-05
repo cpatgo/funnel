@@ -62,8 +62,8 @@ function add_form() {
 	parse_str($_POST['fields'], $fields);
 	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
 		$list_id = $_SESSION['selected_list_id'];
-		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
-		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
+		$ask4fname = (array_key_exists('ask4fname', $fields) && (int)$fields['ask4fname'] == 1) ? 1 : 0;
+		$ask4lname = (array_key_exists('ask4lname', $fields) && (int)$fields['ask4lname'] == 1) ? 1 : 0;
 
 		//If sub3_redirect is not set or is empty, use sub2_redirect instead
 		if(!array_key_exists('sub3_redirect', $fields) || !isset($fields['sub3_redirect']) || empty($fields['sub3_redirect'])) $fields['sub3_redirect'] = $fields['sub2_redirect'];
