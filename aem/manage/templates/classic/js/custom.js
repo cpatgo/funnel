@@ -110,42 +110,45 @@ jQuery(document).ready(function(){
         {
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
             if(newIndex == 4 && typeof step4 !== 'undefined') {
-                if(typeof jQuery('input[name=landing-page-url]:checked').data('customlandingpage') == 'undefined')
-                {
-                    // Use pre-made landing page
-                    var url_link = jQuery('input[name=landing-page-url]:checked').val();
-                    console.log(url_link);
+                var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
+                if(ans) {
+                    if(typeof jQuery('input[name=landing-page-url]:checked').data('customlandingpage') == 'undefined')
+                    {
+                        // Use pre-made landing page
+                        var url_link = jQuery('input[name=landing-page-url]:checked').val();
+                        console.log(url_link);
 
-                    // Get form
-                    jQuery.ajax({
-                        method: "post",
-                        url: "../manage/templates/classic/ajax/api.php",
-                        data: {
-                            'action':'get_form'
-                        },
-                        dataType: 'json',
-                        success:function(result) {
-                            console.log(result);
-                            if(result.type == 'success') {
-                                //Insert the form in the landing page
-                                jQuery.get(url_link, function(page_html){
-                                    //Create new file for the user's landing page
-                                    aem_functions.create_landing_page(page_html, result.message.html);
-                                });
+                        // Get form
+                        jQuery.ajax({
+                            method: "post",
+                            url: "../manage/templates/classic/ajax/api.php",
+                            data: {
+                                'action':'get_form'
+                            },
+                            dataType: 'json',
+                            success:function(result) {
+                                console.log(result);
+                                if(result.type == 'success') {
+                                    //Insert the form in the landing page
+                                    jQuery.get(url_link, function(page_html){
+                                        //Create new file for the user's landing page
+                                        aem_functions.create_landing_page(page_html, result.message.html);
+                                    });
+                                }
+                            },
+                            error: function(errorThrown){
+                                console.log(errorThrown);
                             }
-                        },
-                        error: function(errorThrown){
-                            console.log(errorThrown);
+                        });
+                    } else {
+                        if(jQuery('input[name=landing-page-url]:checked').val() !== "") {
+                            //Save campaign
+                            aem_functions.save_funnel_campaign();
+                            //Disable fields
+                            $body.find('select').attr('disabled', true);
+                            $body.find('input').attr('disabled', true);
+                            $body.find('textarea').attr('disabled', true);
                         }
-                    });
-                } else {
-                    if(jQuery('input[name=landing-page-url]:checked').val() !== "") {
-                        //Save campaign
-                        aem_functions.save_funnel_campaign();
-                        //Disable fields
-                        $body.find('select').attr('disabled', true);
-                        $body.find('input').attr('disabled', true);
-                        $body.find('textarea').attr('disabled', true);
                     }
                 }
             }
