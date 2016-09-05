@@ -538,6 +538,11 @@ span.trail-end {
 	    text-align: center;
 	}   
 
+    .av_minimal_header #header_main, .av_minimal_header #header_meta {
+        /*border: none;*/
+        box-shadow: none;
+    }
+
     .logo_container a#advanced_menu_toggle { 
         /*display: none !important; */
 
@@ -569,6 +574,13 @@ span.trail-end {
 	    /* vertical-align: middle; */
 	}
 
+
+    .responsive .logo img {
+        
+        margin: 0 auto !important;
+        text-align: center;
+    }
+
 	/*.logo_container{ display: none; }*/
 
 	#header_main .logo a { vertical-align: initial;  }
@@ -580,9 +592,9 @@ span.trail-end {
 	}
 
 	#top #wrap_all .av_header_transparency, .av_header_transparency #advanced_menu_toggle {
-        background-color: #ffffff;
+        /*background-color: #ffffff;
         color: #4c515d;
-        border-color: transparent;
+        border-color: transparent;*/
     }
 }
 

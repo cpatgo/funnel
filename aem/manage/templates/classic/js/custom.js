@@ -384,6 +384,14 @@ jQuery(document).ready(function(){
     	aem_functions.add_new_form();
     });
 
+    $body.on('click', 'input[name=landing-page-url]', function(e){
+    	if(jQuery(this).data('customlandingpage') == 'yes') {
+    		$body.find('#custom_landing_page_div').show();
+    	} else {
+    		$body.find('#custom_landing_page_div').hide();
+    	}
+    });
+
     $body.on('input', '#sub2_redirect_input', function(e){
     	e.preventDefault();
     	jQuery("input[name=sub2_redirect]").removeAttr("checked");
