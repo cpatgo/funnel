@@ -3,21 +3,21 @@
 <a href="desk.php">{"Return to the Dashboard."|alang}</a>
 {else} -->
 
-<h1>Create Landing Page</h1>
+<h1>Create New Campaign</h1>
 
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
 <input type="hidden" name="action" value="list_insert_post">
 
-    <h3>Select Funnel Type</h3>
+    <h3>Step 1.</h3>
     <section>
     	<div class="row">
 	        <div class="col-md-12">
 				<h1>
-					{"Name Your Landing Page"|alang}
+					{"Name Your Campaign"|alang}
 				</h1>
 				<div class="campaign_help">
 					<p class="lead">
-					{"Enter a name to help you remember what this campaign is all about.  Only you will see the campaign name.  Your subscribers will not see this."|alang}
+					{"Use these Steps to create a Campaign, you'll select a campaign name, create new Subscriber list or select from existing Subscriber list, create new campaign form, choose    thank you or redirect page, create a download page &#40;optional&#41; create your campaign landing&#47;site page, edit or add your own content. Only you will see the campaign name.  Your subscribers will not see this."|alang}
 					</p>
 				</div>
 				<div class="campaign_input form-group">
@@ -26,17 +26,18 @@
 				</div>
 				
 				<h1>
-					{"Describe Your Landing Page"|alang}
+					{"Campaign Description"|alang}
 				</h1>
 				<div class="campaign_help">
 					<p class="lead">
-					{"Short description for your landing page.  Only you will see the landing page description.  Your subscribers will not see this."|alang}
+					{"Short description for this Campaign.  For example, you may want to run and an A/B test to see which campaign performs best.  Your subscribers will not see this."|alang}
 					</p>
 				</div>
 				<div class="campaign_input form-group">
 					<textarea class="form-control" value="" id="landing-page-description" name="landing-page-description"></textarea>
 				</div>
 
+				<!--
 				<h1>
 					{"Select Funnel Type"|alang}
 				</h1>
@@ -61,7 +62,7 @@
 		        	<label class="radio-inline monetization">
 						<input type="radio" id="landing-page-type" name="landing-page-type" value="monetization"  class="radio" /> Monetization
 					</label>
-				</div>
+				</div> -->
 	        </div>
 	    </div>
         <div class="row">
@@ -75,7 +76,7 @@
         <div class="row">
 	        <div class="col-md-12">
 		        <div class="campaign_help">
-		        	<p class="lead">You need a list for your funnel. Click the "Create New List" button below to create a new list or the "Select From Existing List" to select from your existing list. <!-- If you create a new list, refresh the list below by clicking the "Refresh List" button to select your newly created list. We will record the list ID and save it in our database table for tracking purposes. --></p>
+		        	<p class="lead">Click the "Create New List" button below to create a new list or click the "Existing List" button to select from an existing list. <!-- If you create a new list, refresh the list below by clicking the "Refresh List" button to select your newly created list. We will record the list ID and save it in our database table for tracking purposes. --></p>
 	        	</div>
         	</div>
         </div>
@@ -95,23 +96,20 @@
         	<div class="row" >
         		<div class="col-md-12" style="text-align:center">
 					<div class="col-md-8 col-md-offset-2">
-						<h1>Add new list for your campaign</h1>
+						<h1>Create new list</h1>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>List Info</h2>
-					</div>
-				</div>
+				
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<label for=""><span class="required_field">*</span> Name of List: </label>
+							<label for=""><span class="required_field">*</span> Name your List. &#40;Your subscribers will not see this.&#41; </label>
 							<input type="text" class="form-control" id="list_name" name="list_name" required>	
 							<div id="list_name-error"></div>
 						</div>
 					</div>
 				</div>
+								
 				<div class="col-md-12">
 					<div class="col-md-8 col-md-offset-2">
 						<h2>Your Contact Information</h2>
@@ -119,9 +117,10 @@
 				</div>
 				<div class="col-md-12">
 					<div class="col-md-8 col-md-offset-2">
-						<div class="adesk_help_inline" style="font-size:12px;">This information is what is your leads will see when a follow-up email auto responder is sent.</div>
-					</div>
+						<div class="adesk_help_inline" style="font-size:12px;">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div>
+					</div> 
 				</div>
+				<br>
 				<div class="col-md-12">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
@@ -165,6 +164,20 @@
 							<div id="list_country-error"></div>
 					</div>
 				</div>
+				
+				<div class="col-md-12">
+				    <div class="col-md-4 col-md-offset-2">
+				 		<label for="">Your email </label>
+							<input type="text" class="form-control" id="list_postal" name="list_postal" optional>	
+							<div id="list_postal-error"></div>
+					</div>
+					<div class="col-md-4">
+				 		<label for="">Your Website</label>
+							<input type="text" class="form-control" id="list_country" name="list_country" optional>	
+							<div id="list_country-error"></div>
+					</div>
+				</div>
+				
 				<!-- <div class="col-md-12">
 					<br><br>
 				    <div class="col-md-4 col-md-offset-2">
@@ -182,12 +195,7 @@
         	<div class="row" >
         		<div class="col-md-12" style="text-align:center">
 					<div class="col-md-8 col-md-offset-2">
-						<h1>In order to create your new campaign list, you MUST add a single email address.</h1>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="adesk_help_inline" style="font-size:12px;">You can use your personal email address as your 1st subscriber for all new campaign list.</div>
+						<h1>You MUST ADD at least ONE email address to start your new list. You can use any email address. </h1>
 					</div>
 				</div>
 				<div class="col-md-12">
@@ -222,12 +230,12 @@
         </div>
         <input type="hidden" id="select_list_method" name="select_list_method" value="">
     </section>
-    <h3>Generate Form Code</h3>
+    <h3>Generate Opt&#45;in Page Form</h3>
     <section>
  		<div class="row">
 	        <div class="col-md-12">
 	        	<div class="campaign_help">
-	        		<p class="lead">You need to generate a form for your campaign. Click the button below to generate a new form snippet or select an existing form below.</p>
+	        		<p class="lead">Generate a Opt&#45;in form for your Campaign page. You will be prompted to create your Campaign page on the next step.</p>
 	        	</div>
         	</div>
         </div>
@@ -254,14 +262,10 @@
         	<div class="row" >
         		<div class="col-md-12" style="text-align:center">
 					<div class="col-md-8 col-md-offset-2">
-						<h1>Campaign Subscription / Optin Form</h1>
+						<h1>Opt&#45;in Page Form</h1>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-8 col-md-offset-2">
-						<h2>Form Settings</h2>
-					</div>
-				</div>
+				
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
@@ -274,7 +278,7 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<label for=""><i>Check the box to require a subscriber information</i></label>
+							<label for=""><i>Check the Subcriber field options you want to collect. </i></label>
 						</div>
 					</div>
 				</div>
@@ -306,15 +310,17 @@
 		                {/foreach}
 					</div>
 				</div>
+				
+								
 				<div class="col-md-12">
 					<div class="col-md-8 col-md-offset-2">
-						<h2>Create Thank You Redirect Page</h2>
+						<h2>Choose, Create or insert a custom URL as your Subcriber Thank You Page. </h2>
 					</div>
 				</div>
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<label for=""><i>A "Thank you page" is the page your visitors see after submitting their information from your form. You can also use it as a tool to redirect your leads to a certain page after completing the form.<br><br>You can select from our pre-made Thank you Pages by clicking the Thumbnail image.</i></label>
+							<label for=""><i>A "Thank you page" is the page your visitors see after submitting their information on a form. You can select from any our pre-made Subcriber Thank you Pages, by clicking on a Thumbnail image below, or...</i></label>
 						</div>
 					</div>
 				</div>
@@ -346,7 +352,7 @@
 						</label>
 						<label style="width:100%">
 							<input type="radio" name="sub2_redirect" value="" />
-							Or you can design you own using the Site Builder.
+							Design your own using the Site Builder.
 
 							<!-- or as an example, you can add a custom URL link to redirect your leads to any web page or site. Example: www.glchub.com/ref/username
 							<br>
@@ -357,10 +363,9 @@
 							<a href="/builder" target="_blank" class="btn glc_button">Access Site Builder</a>
 							<br><br>
 							<p>
-								or you can add a custom URL link to redirect your leads to any web page or site. Example: www.glchub.com/ref/username
+								or you can add a custom URL link as your redirect page. Example: www.glchub.com/ref/username
 
-								<br><br>
-								once you've chosen your redirect method, insert your page redirect link in this box
+								<br> Once you've chosen your redirect method, insert your redirect URL link here:
 							</p>
 							<input type="text" class="form-control" name="sub2_redirect_input" id="sub2_redirect_input" placeholder="i.e. http://glcv2.identifz.com/builder/elements/preview_yfbO1MuttWyk4I0RDdxl.html">
 						</label>
@@ -376,7 +381,7 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<label for=""><i>A "Download page" is the page your Leads will see after confirming their subscription, from the email autoresponder sent to them from our system. This page will have your leads Free E-book giveaway.</i></label>
+							<label for=""><i>A "Download page" is the page your Subcribers will be redirected to after confirming their subscription. This page will have your Free E-book giveaway.</i></label>
 						</div>
 					</div>
 				</div>
@@ -415,13 +420,13 @@
     </section>
     
     <!-- Step 4 -->
-    <h3>Create Your Landing Page</h3>
+    <h3>Create Your Campaign Opt&#45;in Page</h3>
     <section>
         <div class="row">
 			<div class="col-md-12">
 				<div class="campaign_help">
 					<p class="lead">
-						Select from our pre-made Landing Pages by clicking the Thumbnail image.
+						Select from any one of our pre-made Opt-in Pages by clicking the Thumbnail image below.
 					</p>
 				</div>
 			</div>
