@@ -150,6 +150,8 @@ jQuery(document).ready(function(){
                             $body.find('textarea').attr('disabled', true);
                         }
                     }
+                } else {
+                    return false;
                 }
             }
             //Save List
