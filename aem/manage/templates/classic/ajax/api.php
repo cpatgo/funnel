@@ -86,8 +86,8 @@ function add_form() {
 			'up2'                      => 'default', // options: default, custom, redirect
 			'allowselection'           => 0, // options: 1 or 0
 			'emailconfirmations'       => 1, // options: 1 or 0
-			'ask4fname'                => 1, // First Name - options: 1 or 0
-			'ask4lname'                => 1, // Last Name - options: 1 or 0
+			'ask4fname'                => $ask4fname, // First Name - options: 1 or 0
+			'ask4lname'                => $ask4lname, // Last Name - options: 1 or 0
 			'optinoptout'              => 1, // ID of Opt-In/Out set
 			'captcha'                  => 0, // options: 1 or 0
 			'p[0]'                     => $list_id, // example list ID
