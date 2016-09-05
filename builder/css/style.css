@@ -402,7 +402,7 @@ body .sp-input {
 .botmenu {
 	position: fixed;
 	bottom: 0px;
-	left: 0px;
+	left: 100px;
 	height: 100%;
 	z-index: 1000;	
 }
@@ -444,14 +444,14 @@ body .sp-input {
 }
 
 .botmenu .main {
-	background: none repeat scroll 0 0 #FFF6F6; 
-    height: 80% !important;
+	background: none repeat scroll 0 0 #333; 
+    height: 100% !important;
     overflow-y: auto;
-    padding-top: 20px;
-    width: 210px;
+    /*padding-top: 20px;*/
+    width: 700px;
     height: 100%;
-    float: left;
-    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;
+    /*float: left;
+    box-shadow: -10px 0 2px rgba(0, 0, 0, 0.08) inset;*/
 }
 
 .rmenu .toggle {
