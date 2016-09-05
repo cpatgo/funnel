@@ -476,9 +476,7 @@ jQuery(document).ready(function(){
 
     $body.on('input', '#landing-page-url-link', function(e){
         e.preventDefault();
-        jQuery("input[name=landing_page_url]").removeAttr("checked");
-        jQuery(this).closest('label').find('input[name=landing_page_url]').attr('checked', true);
-        jQuery(this).closest('label').find('input[name=landing_page_url]').val(jQuery(this).val());
+        jQuery('input[name=landing-page-url]:checked').val(jQuery(this).val());
     });
 
     //GET FORMS
