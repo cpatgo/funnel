@@ -114,48 +114,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>
         <hr>
                     
-        <h3><span class="fui-list"></span> Blocks</h3>
-        
-        <ul id="elements">
-          <li><a href="#" id="all">All Blocks</a></li>
-        </ul>
-        
-      <a href="#" class="toggle"><span class="fui-gear"></span></a>
-      
-        <hr>
-        
-        <h3><span class="fui-windows"></span> Pages</h3>
-        
-        <ul id="pages">
-          <li style="display: none;" id="newPageLI">
-            <input type="text" value="index" name="page">
-            <span class="pageButtons">
-              <a href="" class="fileEdit"><span class="fui-new"></span></a>
-              <a href="" class="fileDel"><span class="fui-cross"></span></a>
-              <a class="btn btn-xs btn-primary btn-embossed fileSave" href="#"><span class="fui-check"></span></a>
-            </span>
-          </li>
-          <li class="active">
-            <a href="#page1">index</a>
-            <span class="pageButtons">
-              <a href="" class="fileEdit"><span class="fui-new"></span></a>
-              <a class="btn btn-xs btn-primary btn-embossed fileSave" href="#"><span class="fui-check"></span></a>
-            </span>
-          </li>
-        </ul>
-    
-        <div class="sideButtons clearfix">
-          <a href="#" class="btn btn-primary btn-sm btn-embossed" id="addPage"><span class="fui-plus"></span> Add</a>
-          <a href="#exportModal" data-toggle="modal" class="btn btn-info btn-sm btn-embossed disabled actionButtons"><span class="fui-export"></span> Export</a>
-        </div>
-        <hr>
-        <div class="text-center xsProjectLInk" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
-          <a href="#xsImpModal" id="projectModal" class="btn btn-warning btn-block" data-toggle="modal">Export/ Import Project</a>
-        </div>        
-        <hr>
-        <div class="sideButtons clearfix">
-          <a href="/myhub" class="btn btn-info menu_dashboard glchub">> My Hub</a>
-        </div>
+        Some Content Here
     
       </div><!-- /.main -->
     
