@@ -95,7 +95,7 @@
 {
     display: block;
     width: auto;
-    margin: 0 0.5em 0.5em;
+    margin: 0 0.7em 0.7em;
     padding: 1.1em 1.1em;
     text-decoration: none;
     font-size: 16px;
@@ -385,11 +385,5 @@
     display: list-item;
 }
 
-#create-funnel-campaign input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.6);
-}
 
-#create-funnel-campaign input[type="radio"] {
-    transform: scale(1.6);
-}
+
