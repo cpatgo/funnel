@@ -108,7 +108,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     <div class="rmenu" id="rmenu">
     
       <div class="main" id="main">
-        <div class="sideButtons clearfix">
+        <!-- <div class="sideButtons clearfix">
           <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; Help Topics</a>
         </div>
         <hr>
@@ -117,16 +117,17 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         
         <ul id="elements">
           <li><a href="#" id="all">All Blocks</a></li>
-        </ul>
+        </ul> -->
         
-      <a href="#" class="toggle"><span class="fui-question"></span></a>
+      <!-- <a href="#" class="toggle"><span class="fui-question"></span></a>
       
         <hr>        
         Some Content Here
     
-      </div><!-- /.main -->
+      </div> -->
+      <!-- /.main -->
     
-      <div class="second" id="second">
+      <!-- <div class="second" id="second">
       
       <a href="#" class="hideSecond" id="hideSecond"><span class="fui-arrow-left"></span> hide</a>
       
@@ -134,7 +135,8 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         
         </ul>
   
-      </div><!-- /.secondSide -->    
+      </div> -->
+      <!-- /.secondSide -->    
     </div><!-- /.rmenu .menu -->
     <!-- End Right Side Menu -->
 
@@ -142,10 +144,10 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     <div class="botmenu" id="botmenu">
       <a href="#" class="toggle"><span class="fui-new"></span></a>
       <div class="main" id="main">
-        <div class="sideButtons clearfix">
+        <!-- <div class="sideButtons clearfix">
           <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; Help Topics</a>
         </div>
-        <hr>
+        <hr> -->
             
         
         
