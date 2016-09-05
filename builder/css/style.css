@@ -393,7 +393,7 @@ body .sp-input {
 }
 .rmenu {
 	position: fixed;
-	top: 0px;
+	top: 100px;
 	right: 0px;
 	height: 100%;
 	z-index: 1000;	
@@ -427,7 +427,7 @@ body .sp-input {
 
 .rmenu .main {
 	background: none repeat scroll 0 0 #7b838b; 
-    height: 100% !important;
+    height: 80% !important;
     overflow-y: auto;
     padding-top: 20px;
     width: 210px;
