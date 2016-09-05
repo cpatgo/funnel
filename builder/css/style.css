@@ -426,7 +426,7 @@ body .sp-input {
 }
 
 .rmenu .main {
-	background: none repeat scroll 0 0 #fff; 
+	background: none repeat scroll 0 0 #FFF6F6; 
     height: 80% !important;
     overflow-y: auto;
     padding-top: 20px;
@@ -445,7 +445,7 @@ body .sp-input {
 	line-height: 50px;
 	text-align: center;
 	left: -50px;
-	top: 0px;
+	top: 20%;
 	/*box-shadow: 5px 0px 0px rgba(0,0,0,0.1);*/
 	border-left: 3px solid #e74c3c;
 }
