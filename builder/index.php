@@ -46,6 +46,10 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; eMarketer</a>
         </div>
         <hr>
+        <div class="sideButtons clearfix">
+          <a href="/myhub" class="btn btn-info menu_dashboard glchub">> My Hub</a>
+        </div>
+        <hr>
 			  		  			
   			<h3><span class="fui-list"></span> Blocks</h3>
   			
@@ -85,10 +89,6 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="text-center xsProjectLInk" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
           <a href="#xsImpModal" id="projectModal" class="btn btn-warning btn-block" data-toggle="modal">Export/ Import Project</a>
         </div>        
-        <hr>
-        <div class="sideButtons clearfix">
-          <a href="/myhub" class="btn btn-info menu_dashboard glchub">> My Hub</a>
-        </div>
   	
   		</div><!-- /.main -->
   	
@@ -152,24 +152,24 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     	
 			<a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
 		
-    		<a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> Export</a>
+    		<a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
 			
 			<a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
     	
     		<div class="modes">
     		
-    			<b>Building mode:</b>
+    			<b>PICK DESIGN MODE:</b>
     			<label class="radio primary first">
     				<input type="radio" name="mode" id="modeBlock" value="block" data-toggle="radio" disabled="" checked="">
     			  	Elements
     			</label>
     			<label class="radio primary first">
     				<input type="radio" name="mode" id="modeContent" value="content" data-toggle="radio" disabled="">
-    			  	Content
+    			  	Add or Edit Text
     			</label>
     			<label class="radio primary first">
     				<input type="radio" name="mode" id="modeStyle" value="styling" data-toggle="radio" disabled="">
-    			  	Details
+    			  	Edit Images & Style
     			</label>
     		
     		</div>
