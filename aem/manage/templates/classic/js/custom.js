@@ -106,6 +106,7 @@ jQuery(document).ready(function(){
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
+        // customize Labels on action buttons
         labels: {
             finish: "Finish",
             next: "Next Step",
@@ -113,9 +114,9 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            // If user click on "Previous" button, we just normally let he/she goes
+            
             if (newIndex < currentIndex) {
-                return true;
+                return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
 
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
