@@ -968,3 +968,5 @@ label.acquisition, label.monetization, label.activation {
 #landing-page-list-id { display: none; }
 
 #create_new_list_title { margin-bottom:20px; }
+
+.create-new-list-warning { font-size:16px; }
