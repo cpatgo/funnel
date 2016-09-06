@@ -297,14 +297,14 @@
 					</div>
 			  		<div class="col-md-4">
 						<label>
-					      <input type="checkbox" name="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
+					      <input type="checkbox" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
 					    </label><br>
 					    <label>
-					      <input type="checkbox" name="ask4fname" value="1" /> First Name
+					      <input type="checkbox" name="ask4fname" id="ask4fname" value="1" /> First Name
 					    </label><br>
-					    <label>
-					      <input type="checkbox" name="ask4lname" value="1" /> Last Name
-					    </label>
+					    
+					      <input type="checkbox" name="ask4lname" id="ask4lname" value="1" /><label>Last Name</label>
+					    
 					</div>
 				</div>
 				<div class="col-md-12">
@@ -314,7 +314,7 @@
 					<div class="col-md-4">
 				 		{foreach from=$optional_fields item=field}
 	                      <label>
-	                        <input type="checkbox" name="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+	                        <input type="checkbox" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
 	                      </label><br>
 		                {/foreach}
 					</div>
