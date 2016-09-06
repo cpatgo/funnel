@@ -220,6 +220,7 @@ function tableBreak($date,$btndate) {
 			<th class="text-center">Username</th>
 			<th class="text-center">Date</th>
 			<th class="text-center">Level</th>
+			<th class="text-center">Position</th>
 			<th class="text-center">Status</th>
 			<th class="text-center">Member C.</th>
 			<th class="text-center">Re Enter</th>
