@@ -440,6 +440,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.select_existing_list', function(e){
         e.preventDefault();
         $body.find('#select_existing_list_div').show();
+        $body.find('#landing-page-list-id').show();
         $body.find('#new_list_div').hide();
         $body.find('#new_subscriber_div').hide();
         aem_functions.reset_values('#new_list_div');
