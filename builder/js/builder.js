@@ -2287,7 +2287,6 @@ $(function () {
         $(this).closest('li').append(buttonWrapper);
 
         aceEditors[ theId ] = editor;
-
     });
 
 
