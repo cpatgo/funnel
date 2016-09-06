@@ -1,16 +1,16 @@
 <ul class="nav nav-tabs">
 {if !$is_campaign_new}
-    <li id="menu_home">
+    <!-- <li id="menu_home">
         <a href="desk.php?action=home""><img class="va" src="css/images/Dashboard.png" /> 
         {"Home"|alang}
         </a>
-    </li> 
-
-    <!-- <li id="menu_dashboard">
-        <a href="desk.php"><img class="va" src="css/images/Dashboard.png" /> 
-        {"Dashboard"|alang}
-        </a>
     </li>  -->
+
+    <li id="menu_dashboard">
+        <a href="desk.php"><img class="va" src="css/images/Dashboard.png" /> 
+        {"Home"|alang}
+        </a>
+    </li> 
 
     {if $admin.pg_message_add || $admin.pg_message_edit || $admin.pg_message_delete || $admin.pg_message_send}
         <li id="menu_campaign">
