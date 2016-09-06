@@ -98,7 +98,7 @@
 				<div id="create_new_list_title">
 	        		<div class="col-md-12" style="text-align:center">
 						<div class="col-md-8 col-md-offset-2">
-							<h1>Create New list</h1>
+							<h2>Name New list</h2>
 						</div>
 					</div>
 					
@@ -111,11 +111,25 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-md-12">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="alert alert-warning create-new-list-warning">You MUST ADD at least ONE email address to start your new list. You can use any email address.</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+				  		<div class="col-md-8 col-md-offset-2">
+							<div class="form-group">
+								<label for=""><span class="required_field">*</span> Add Your First Email: </label>
+								<input type="text" class="form-control input-lg" id="subscriber_email" name="subscriber_email" required>	
+								<div id="subscriber_email-error"></div>
+							</div>
+						</div>
+					</div>
 				</div>
-
+				<hr />
 				<div class="col-md-12" style="margin-top:20px;">
 					<div class="col-md-8 col-md-offset-2">
-						<h2>Your Contact Information</h2>
+						<h2>Email Signature Information</h2>
 					</div>
 				</div>
 				<div class="col-md-12">
@@ -168,7 +182,7 @@
 							<div id="list_country-error"></div>
 					</div>
 				</div>
-				
+				<!-- 
 				<div class="col-md-12">
 				    <div class="col-md-4 col-md-offset-2">
 				 		<label for="">Your email </label>
@@ -180,7 +194,8 @@
 							<input type="text" class="form-control input-lg" id="list_country" name="list_country" optional>	
 							<div id="list_country-error"></div>
 					</div>
-				</div>
+				</div> 
+				-->
 				
 				<!-- <div class="col-md-12">
 					<br><br>
@@ -197,20 +212,7 @@
         <div id="new_subscriber_div" style="display:none;">
 			<br>
         	<div class="row" >
-        		<div class="col-md-12" style="text-align:center">
-					<div class="col-md-8 col-md-offset-2">
-						<h1>You MUST ADD at least ONE email address to start your new list. You can use any email address. </h1>
-					</div>
-				</div>
-				<div class="col-md-12">
-			  		<div class="col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<label for=""><span class="required_field">*</span> Email: </label>
-							<input type="text" class="form-control input-lg" id="subscriber_email" name="subscriber_email" required>	
-							<div id="subscriber_email-error"></div>
-						</div>
-					</div>
-				</div>
+        		
 				<!-- <div class="col-md-12">
 					<br><br>
 				    <div class="col-md-4 col-md-offset-2"></div>
