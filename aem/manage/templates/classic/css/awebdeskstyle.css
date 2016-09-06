@@ -966,3 +966,5 @@ label.acquisition, label.monetization, label.activation {
 .wizard > .actions > ul > li:first-child > a { background: #eee; color: #aaa; }
 
 #landing-page-list-id { display: none; }
+
+#create_new_list_title { margin-bottom:20px; }
