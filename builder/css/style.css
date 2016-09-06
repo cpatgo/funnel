@@ -876,3 +876,11 @@ li.element {
 	font-size: 14px !important;
 	font-family: Lucida Console !important;
 }
+
+.ace_editor .highlight_area {
+	color: red !important;
+}
+
+.largefont {
+	font-size: 16px;
+}
