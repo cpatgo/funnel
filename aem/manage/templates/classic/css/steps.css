@@ -73,7 +73,8 @@
 
 .wizard > .steps > ul > li
 {
-    width: 25%;
+    width: 30%;
+    margin:0px;
 }
 
 .wizard > .steps > ul > li,
@@ -94,10 +95,10 @@
 {
     display: block;
     width: auto;
-    margin: 0 0.5em 0.5em;
-    padding: 1em 1em;
+    margin: 0 0.7em 0.7em;
+    padding: 1.1em 1.1em;
     text-decoration: none;
-
+    font-size: 16px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -384,11 +385,5 @@
     display: list-item;
 }
 
-#create-funnel-campaign input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.6);
-}
 
-#create-funnel-campaign input[type="radio"] {
-    transform: scale(1.6);
-}
+

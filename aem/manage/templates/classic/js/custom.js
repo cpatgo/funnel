@@ -106,8 +106,19 @@ jQuery(document).ready(function(){
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
+        // customize Labels on action buttons
+        labels: {
+            finish: "Finish",
+            next: "Next Step",
+            previous: "Previous",
+        },
         onStepChanging: function (event, currentIndex, newIndex)
         {
+            
+            if (newIndex < currentIndex) {
+                return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
+            }
+
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
             if(newIndex == 4 && typeof step4 !== 'undefined') {
                 var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
@@ -154,6 +165,7 @@ jQuery(document).ready(function(){
                     return false;
                 }
             }
+
             //Save List
             if(currentIndex == 1 && newIndex == 2) {
                 var method = $body.find('#select_list_method').val();
@@ -229,7 +241,7 @@ jQuery(document).ready(function(){
                 success:function(result) {
                     var select_list = jQuery("body").find("#landing-page-list-id");
                     select_list.html('');
-                    select_list.append(jQuery("<option></option>").attr("value", "").text("-- SELECT --"));
+                    select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
                     jQuery.each(result.data, function(key, value) {
                         select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
                     });
@@ -429,6 +441,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.select_existing_list', function(e){
         e.preventDefault();
         $body.find('#select_existing_list_div').show();
+        $body.find('#landing-page-list-id').show();
         $body.find('#new_list_div').hide();
         $body.find('#new_subscriber_div').hide();
         aem_functions.reset_values('#new_list_div');
