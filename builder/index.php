@@ -2282,6 +2282,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 	
 	<div id="loader">
 		<img src="images/logo-black.png" alt="Loading...">
+    <img src="images/loader.gif" alt="Loading..." class="loader_gif">
 		Loading elements...
 	</div>
 	
