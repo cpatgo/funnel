@@ -1,5 +1,10 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
+
+    $("[name='ask4fname']").bootstrapSwitch();
+    $("[name='ask4lname']").bootstrapSwitch();
+    $("[name='fields[1]']").bootstrapSwitch();
+    
 //  // var form = $("#example-advanced-form").show();
 
 //  jQuery("#create-campaign-landingpage").steps({
