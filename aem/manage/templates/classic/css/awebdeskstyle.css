@@ -453,7 +453,7 @@ li.li {
   text-align: center;
   border-radius: 0;
   box-shadow: 0px 4px 20px 0 rgba(0,0,0,0.2);
-  padding: 5px;
+  /*padding: 5px;*/
 }
 #sidebar .block {
   font-size: 11px;
@@ -784,7 +784,7 @@ input[type=checkbox] { margin: 5px 0px; }
 #sub_submenu ul li.special a {
  margin:0 0 10px;
 	padding:12px 18px;
-	width:85%!important;
+	/*width:85%!important;*/
 	height:auto;
 	display:inline-block;
   	/*background-color:#d5d5d5;
