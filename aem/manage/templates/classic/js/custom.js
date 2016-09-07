@@ -128,7 +128,8 @@ jQuery(document).ready(function(){
     form.steps({
         headerTag: "h3",
         bodyTag: "section",
-        transitionEffect: "slideLeft",
+        transitionEffect: "slideLeft", 
+        transitionEffectSpeed: "500",
         // customize Labels on action buttons
         labels: {
             finish: "Finish",
@@ -136,12 +137,12 @@ jQuery(document).ready(function(){
             previous: "Previous",
         },
         autoFocus: true,
+        // initialize
         onInit: function(event, current){
-            jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
+            jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
