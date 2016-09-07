@@ -985,3 +985,8 @@ label.acquisition, label.monetization, label.activation {
 .startup .section { margin: 20px 0px 20px 0px; padding: 40px 40px; border: 1px solid #ddd; border-radius: 10px; }
 
 .startup .section h1 { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 30px; }
+
+#sub_submenu ul li :hover {
+    background: #676a6d;
+    text-decoration: underline;
+}
