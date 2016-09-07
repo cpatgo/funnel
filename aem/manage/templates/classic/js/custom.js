@@ -1,7 +1,7 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    $("[type='checkbox']").bootstrapSwitch();
+    jQuery("[type='checkbox']").bootstrapSwitch();
 
     // jQuery("[name='ask4emailField']").bootstrapSwitch();
     // jQuery("[name='ask4fname']").bootstrapSwitch();
