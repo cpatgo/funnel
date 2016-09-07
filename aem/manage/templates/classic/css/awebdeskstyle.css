@@ -8,6 +8,8 @@ Email Marketer Enterprise Edition Styling
 	-------------------------------------------------- */
 a, a:hover { text-decoration: none; }
 
+body { font: 16px/1.22 arial,helvetica,clean,sans-serif; }
+
 .clearfix {
   zoom: 1;
 }
@@ -605,9 +607,13 @@ div.no_padding {
 
 button.glc_logout {
     margin: 0 !important;
-    background-color: #cd263a !important;
-    border-color: #cd263a !important;
+    background-color: #858587 !important;
+    border-color: #888 !important;
     font-size: 16px !important;
+}
+
+button.glc_logout:hover {
+    opacity:0.7;
 }
 
 span.glc_gray {
@@ -970,3 +976,9 @@ label.acquisition, label.monetization, label.activation {
 #create_new_list_title { margin-bottom:20px; }
 
 .create-new-list-warning { font-size:16px; }
+
+.step_header_text, .text_center { text-align:center; }
+
+.hint { text-align: center; font-size:14px; margin-top: 10px; }
+
+.startup .section { margin: 20px 0px; }
