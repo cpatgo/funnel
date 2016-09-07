@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 //      // stepsOrientation: "vertical"
 //  });
 //  
-    jQuery('#my-checkbox').on('switchChange.bootstrapSwitch', function (e, state) {
+    jQuery('#my-checkbox2').on('switchChange.bootstrapSwitch', function (e, state) {
 
             if(state){
                         alert("Checked");
