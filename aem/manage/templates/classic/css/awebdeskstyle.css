@@ -165,7 +165,7 @@ h4 em {
   font-weight: normal;
 }
 #sidebar h2 {
-  font-size: 13px;
+  /*font-size: 13px;*/
   padding: 10px 3px;
   border-bottom: 1px solid #ccc;
   width: 80%;
@@ -781,6 +781,7 @@ input[type=checkbox] { margin: 5px 0px; }
   margin: 0 auto;
   width: 80%;
   color:#258DCD;
+  font-size:14px;
 }
 #sub_submenu ul li.special a {
  margin:0 0 10px;
@@ -825,6 +826,7 @@ input[type=checkbox] { margin: 5px 0px; }
 	/*padding:7px 10px;*/
 	font-size:16px !important;
 	color:#444 !important;
+  font-weight:300;
 }
 #sub_submenu ul li img {
   margin-right: 5px;
