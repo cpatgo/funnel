@@ -2,7 +2,7 @@
 {"Due to your account status, you are unable to create any landing pages."|alang}
 <a href="desk.php">{"Return to the Dashboard."|alang}</a>
 {else} -->
-<input type="checkbox" id="my-checkbox2" name="my-checkbox2" /><label for="my-checkbox">Sample Checkbox 2</label>
+<input type="checkbox" id="my-checkbox2" name="my-checkbox2" data-toggle="toggle" /><label for="my-checkbox">Sample Checkbox 2</label>
 <h1>Create New Campaign</h1>
 
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
@@ -298,13 +298,13 @@
 					</div>
 			  		<div class="col-md-4">
 						<label>
-					      <input type="checkbox" name="ask4emailField" id="ask4emailField" value="1" data-toggle="switch" checked="checked" disabled="disabled"/> Email Address
+					      <input type="checkbox" name="ask4emailField" id="ask4emailField" value="1" data-toggle="toggle" checked="checked" disabled="disabled"/> Email Address
 					    </label><br>
 					    <label>
-					      <input type="checkbox" name="ask4fname" id="ask4fname" value="1" data-toggle="switch" /> First Name
+					      <input type="checkbox" name="ask4fname" id="ask4fname" value="1" data-toggle="toggle" /> First Name
 					    </label><br>
 					    
-					      <input type="checkbox" name="ask4lname" id="ask4lname" value="1" data-toggle="switch" /><label>Last Name</label>
+					      <input type="checkbox" name="ask4lname" id="ask4lname" value="1" data-toggle="toggle" /><label>Last Name</label>
 					    	
 					</div>
 				</div>
@@ -315,7 +315,7 @@
 					<div class="col-md-4">
 				 		{foreach from=$optional_fields item=field}
 	                      <label>
-	                        <input type="checkbox" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+	                        <input type="checkbox" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" data-toggle="toggle" /> {$field.title}
 	                      </label><br>
 		                {/foreach}
 					</div>
