@@ -970,3 +970,5 @@ label.acquisition, label.monetization, label.activation {
 #create_new_list_title { margin-bottom:20px; }
 
 .create-new-list-warning { font-size:16px; }
+
+.step_header_text { text-align:center; }
