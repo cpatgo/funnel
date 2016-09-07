@@ -10,6 +10,7 @@
     {* Don't escape site_name here, since the title element is CDATA *}
     <title>{$site.site_name} - {$pageTitle}</title>
     <!-- <script type="text/javascript" src="../awebdesk/js/jquery-1.2.6.min.js"></script> -->
+    
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     {adesk_js lib="scriptaculous/prototype.js"}
     {adesk_js lib="scriptaculous/scriptaculous.js"}
@@ -274,10 +275,12 @@ var printAPIerrors = adesk_error_show;
 {if $demoMode == 1}
 <h1 style="color:#FF0000"><strong>{"This is a demo"|alang}</strong> - {"Certain features such as sending email are disabled."|alang}</h1>
 {/if}
+<script>jQuery.noConflict();</script>
 <script type="text/javascript" src="templates/classic/js/jquery.steps.min.js"></script>
 
 <script type="text/javascript" src="templates/classic/js/custom.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="templates/classic/js/bootstrap-switch.min.js"></script>
+
 </body>
 </html>
