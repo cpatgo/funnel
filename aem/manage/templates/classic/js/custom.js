@@ -16,6 +16,20 @@ jQuery(document).ready(function(){
 //      transitionEffect: "slideLeft",
 //      // stepsOrientation: "vertical"
 //  });
+//  
+    jQuery('#my-checkbox').on('switchChange.bootstrapSwitch', function (e, state) {
+
+            if(state){
+                        alert("Checked");
+                        // Your Code Here
+
+            }else{
+                        alert("Not Checked");
+                        // Your Code Here
+
+            }
+
+        });
 
     var $body = jQuery('body');
 
