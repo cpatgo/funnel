@@ -605,9 +605,13 @@ div.no_padding {
 
 button.glc_logout {
     margin: 0 !important;
-    background-color: #cd263a !important;
+    background-color: #858587 !important;
     border-color: #cd263a !important;
     font-size: 16px !important;
+}
+
+button.glc_logout:hover {
+    opacity:0.7;
 }
 
 span.glc_gray {
