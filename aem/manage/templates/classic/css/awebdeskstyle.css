@@ -8,6 +8,8 @@ Email Marketer Enterprise Edition Styling
 	-------------------------------------------------- */
 a, a:hover { text-decoration: none; }
 
+body { font: 16px/1.22 arial,helvetica,clean,sans-serif; }
+
 .clearfix {
   zoom: 1;
 }
