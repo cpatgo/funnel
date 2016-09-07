@@ -971,4 +971,4 @@ label.acquisition, label.monetization, label.activation {
 
 .create-new-list-warning { font-size:16px; }
 
-.step_header_text { text-align:center; }
+.step_header_text, .text_center { text-align:center; }
