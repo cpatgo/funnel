@@ -685,8 +685,8 @@ span.glc_gray {
 }
 /* Sidebar menus */
 #sub_submenu {
-  padding: 8px 0;
-  font-size: 12px;
+  /*padding: 8px 0;*/
+  font-size: 14px;
 }
 #sub_submenu ul {
   margin: 0;
