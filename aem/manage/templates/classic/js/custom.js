@@ -1,7 +1,7 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    jQuery("[type='checkbox']").bootstrapSwitch();
+    // jQuery("[type='checkbox']").bootstrapSwitch();
 
     // jQuery("[name='ask4emailField']").bootstrapSwitch();
     // jQuery("[name='ask4fname']").bootstrapSwitch();
@@ -18,19 +18,19 @@ jQuery(document).ready(function(){
 //      // stepsOrientation: "vertical"
 //  });
 //  
-    jQuery('#my-checkbox2').on('switchChange.bootstrapSwitch', function (e, state) {
+    // jQuery('#my-checkbox2').on('switchChange.bootstrapSwitch', function (e, state) {
 
-            if(state){
-                        alert("Checked");
-                        // Your Code Here
+    //         if(state){
+    //                     alert("Checked");
+    //                     // Your Code Here
 
-            }else{
-                        alert("Not Checked");
-                        // Your Code Here
+    //         }else{
+    //                     alert("Not Checked");
+    //                     // Your Code Here
 
-            }
+    //         }
 
-        });
+    //     });
 
     var $body = jQuery('body');
 
