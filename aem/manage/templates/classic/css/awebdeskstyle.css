@@ -7,7 +7,7 @@ Email Marketer Enterprise Edition Styling
   Mixins
 	-------------------------------------------------- */
 a, a:hover { text-decoration: none; }
-body .campaign_help, .campaign_types_desc, .campaign_types_head {
+body, .campaign_help, .campaign_types_desc, .campaign_types_head {
     font: 16px/1.22 arial,helvetica,clean,sans-serif; 
 }
  
