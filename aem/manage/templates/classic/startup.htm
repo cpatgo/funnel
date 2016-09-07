@@ -2,8 +2,8 @@
   {include file='startup.js'}
 </script>
 
-<h1>{"Welcome"|alang}, {$admin.first_name}!</h1>
-<hr />
+<!-- <h1>{"Welcome"|alang}, {$admin.first_name}!</h1>
+<hr /> -->
 {if isset($newversionavailable) and $admin.id == 1}
 <div class="resultMessage" style="border-color:#109309;">
   <strong>New version available - v {$latestversion}. {$moreinfo}</strong>
