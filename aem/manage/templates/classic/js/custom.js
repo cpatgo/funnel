@@ -1,11 +1,12 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    
+
     jQuery("[name='ask4emailField']").bootstrapSwitch();
     jQuery("[name='ask4fname']").bootstrapSwitch();
     jQuery("[name='ask4lname']").bootstrapSwitch();
     jQuery("[name='fields[1]']").bootstrapSwitch();
+    jQuery("[name='my-checkbox']").bootstrapSwitch();
     
 //  // var form = $("#example-advanced-form").show();
 
