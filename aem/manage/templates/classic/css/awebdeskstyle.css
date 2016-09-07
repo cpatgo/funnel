@@ -454,6 +454,7 @@ li.li {
   border-radius: 0;
   box-shadow: 0px 4px 20px 0 rgba(0,0,0,0.2);
   /*padding: 5px;*/
+  border:0px;
 }
 #sidebar .block {
   font-size: 11px;
