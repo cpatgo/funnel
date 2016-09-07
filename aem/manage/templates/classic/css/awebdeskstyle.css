@@ -983,4 +983,6 @@ label.acquisition, label.monetization, label.activation {
 
 .hint { text-align: center; font-size:14px; margin-top: 10px; }
 
-.startup .section { margin: 20px 0px; }
+.startup .section { margin: 20px 0px 20px 0px; padding: 40px 40px; border: 1px solid #ddd; border-radius: 10px; }
+
+.startup .section h1 { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 30px; }
