@@ -783,8 +783,8 @@ input[type=checkbox] { margin: 5px 0px; }
 }
 #sub_submenu ul li.special a {
  margin:0 0 10px;
-	padding:12px 18px;
-	/*width:85%!important;*/
+	padding:20px 0px;
+	width:100%;
 	height:auto;
 	display:inline-block;
   	/*background-color:#d5d5d5;
