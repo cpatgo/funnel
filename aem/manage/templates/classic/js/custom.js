@@ -135,6 +135,10 @@ jQuery(document).ready(function(){
             next: "Next Step",
             previous: "Previous",
         },
+        autoFocus: true,
+        onInit: function(event, current){
+            jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
+        },
         onStepChanging: function (event, currentIndex, newIndex)
         {
             
@@ -207,6 +211,13 @@ jQuery(document).ready(function(){
 
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
+        },
+        onStepChanged: function (event, current, next) {
+            if (current > 0) {
+                jQuery('.actions > ul > li:first-child').attr('style', '');
+            } else {
+                jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
+            }
         },
         onFinishing: function (event, currentIndex)
         {
