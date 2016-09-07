@@ -125,8 +125,8 @@ aside.sidebar > section.widget{
 .main_color h3 { color: #1f2329; font-weight: 600; }
 
 .avia_button_box .avia-color-blue {
-    background-color: #2895f1 !important;
-    border-color: #2895f1 !important;
+    background-color: #268dcd !important;
+    border-color: #268dcd !important;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     color: #fff;
 }
@@ -138,7 +138,7 @@ aside.sidebar > section.widget{
 .sub_menu > ul > li.btn-plans-and-pricing > a, .sub_menu > ul > li.btn-logout > a, .sub_menu > ul > li.btn-login > a { color: #fff; }
 
 .single_toggle {color: #4c515d;}
-.main_color .toggler{color: #2895f1;}
+.main_color .toggler{color: #268dcd;}
 .main_color .toggler:hover {text-decoration: underline;}
 
 #footer .btn-plans-and-pricing {
@@ -150,10 +150,10 @@ aside.sidebar > section.widget{
 }
 
 #footer .btn-login{
-    background: #2895f1;
+    background: #268dcd;
 }
 
-#mobile-advanced li a span.avia-menu-text { color:#2895f1; margin-left: 10px; }
+#mobile-advanced li a span.avia-menu-text { color:#268dcd; margin-left: 10px; }
 #mobile-advanced li a:hover span.avia-menu-text,#mobile-advanced li a span.avia-menu-text:hover { color:#fff; }
 #mobile-advanced li > a:hover, .html_header_mobile_behavior #mobile-advanced span:hover, .html_header_mobile_behavior #mobile-advanced span:hover a {
     background-color: #268dcd;
@@ -239,10 +239,14 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 
 .btn-login a { 
-    background-color: #2895f1 !important;
+    background-color: #268dcd !important;
 
     /*background-color: #e97e00 !important;*/
     color: white !important;
+}
+
+.btn-login a:hover { 
+    opacity: .8;
 }
 
 .btn-glc-upgrade a { 
@@ -253,7 +257,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 
 .btn-logout a { 
-    /*background-color: #2895f1 !important;*/
+    /*background-color: #268dcd !important;*/
     background-color: #858585 !important;
     color: white !important;
 }
