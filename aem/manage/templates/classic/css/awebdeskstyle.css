@@ -777,11 +777,11 @@ input[type=checkbox] { margin: 5px 0px; }
   color: #258DCD;
   display: block;
   padding: 7px 7px;
-  font-weight: bold;
+  font-weight: 300;
   margin: 0 auto;
   width: 80%;
   color:#258DCD;
-  font-size:14px;
+  font-size:16px;
 }
 #sub_submenu ul li.special a {
  margin:0 0 10px;
