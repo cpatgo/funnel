@@ -3,7 +3,7 @@
 <a href="desk.php">{"Return to the Dashboard."|alang}</a>
 {else} -->
 
-<h1>Create New Campaign</h1>
+<h1 class="step_header_text text_center">Create New Campaign</h1>
 
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
 <input type="hidden" name="action" value="list_insert_post">
@@ -12,20 +12,29 @@
     <section>
     	<div class="row">
 	        <div class="col-md-12">
-				<h1>
-					{"Name Your Campaign"|alang}
+				<h1 class="step_header_text">
+					{"Name Campaign"|alang}
 				</h1>
+			
 				<div class="campaign_help">
-					<p class="lead">
-					{"Use these Steps to create a Campaign, you'll select a campaign name, create new Subscriber list or select from existing Subscriber list, create new campaign form, choose    thank you or redirect page, create a download page &#40;optional&#41; create your campaign landing&#47;site page, edit or add your own content. Only you will see the campaign name.  Your subscribers will not see this."|alang}
+					<p class="lead text_center">
+					{"No stress. You can change this later. "|alang} <i class="fa fa-smile-o" aria-hidden="true"></i>
 					</p>
 				</div>
 				<div class="campaign_input form-group">
-					<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name"  />
-					<div id="landing-page-name-error"></div>
+					<div class="col-md-6 col-md-offset-3">
+						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="Campaign Name"  />
+						<div id="landing-page-name-error"></div>
+					</div>
+					<br /><br />
+					<div class="col-md-6 col-md-offset-3">
+						<div class="text_center hint">
+							<span class="text_center">Hint: You could name your campaign after your company or current marketing effort like "ABC Inc." or "My New App".</span>
+  						</div>
+  					</div>
 				</div>
 				
-				<h1>
+				<!-- <h1>
 					{"Campaign Description"|alang}
 				</h1>
 				<div class="campaign_help">
@@ -35,7 +44,7 @@
 				</div>
 				<div class="campaign_input form-group">
 					<textarea class="form-control input-lg" value="" id="landing-page-description" name="landing-page-description" rows="5" style="resize:none; width:100%;"></textarea>
-				</div>
+				</div> -->
 
 				<!--
 				<h1>
@@ -304,7 +313,7 @@
 					    </label><br>
 					    
 					      <input type="checkbox" name="ask4lname" id="ask4lname" value="1" /><label>Last Name</label>
-					    
+					    	
 					</div>
 				</div>
 				<div class="col-md-12">

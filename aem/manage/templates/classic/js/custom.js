@@ -1,11 +1,13 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    
-    jQuery("[name='ask4emailField']").bootstrapSwitch();
-    jQuery("[name='ask4fname']").bootstrapSwitch();
-    jQuery("[name='ask4lname']").bootstrapSwitch();
-    jQuery("[name='fields[1]']").bootstrapSwitch();
+    // jQuery("[type='checkbox']").bootstrapSwitch();
+
+    // jQuery("[name='ask4emailField']").bootstrapSwitch();
+    // jQuery("[name='ask4fname']").bootstrapSwitch();
+    // jQuery("[name='ask4lname']").bootstrapSwitch();
+    // jQuery("[name='fields[1]']").bootstrapSwitch();
+    // jQuery("[name='my-checkbox']").bootstrapSwitch();
     
 //  // var form = $("#example-advanced-form").show();
 
@@ -15,6 +17,20 @@ jQuery(document).ready(function(){
 //      transitionEffect: "slideLeft",
 //      // stepsOrientation: "vertical"
 //  });
+//  
+    // jQuery('#my-checkbox2').on('switchChange.bootstrapSwitch', function (e, state) {
+
+    //         if(state){
+    //                     alert("Checked");
+    //                     // Your Code Here
+
+    //         }else{
+    //                     alert("Not Checked");
+    //                     // Your Code Here
+
+    //         }
+
+    //     });
 
     var $body = jQuery('body');
 
@@ -112,16 +128,21 @@ jQuery(document).ready(function(){
     form.steps({
         headerTag: "h3",
         bodyTag: "section",
-        transitionEffect: "slideLeft",
+        transitionEffect: "slideLeft", 
+        transitionEffectSpeed: "500",
         // customize Labels on action buttons
         labels: {
             finish: "Finish",
             next: "Next Step",
             previous: "Previous",
         },
+        autoFocus: true,
+        // initialize
+        onInit: function(event, current){
+            jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+        },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -191,6 +212,13 @@ jQuery(document).ready(function(){
 
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
+        },
+        onStepChanged: function (event, current, next) {
+            if (current > 0) {
+                jQuery('.actions > ul > li:first-child').attr('style', '');
+            } else {
+                jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
+            }
         },
         onFinishing: function (event, currentIndex)
         {

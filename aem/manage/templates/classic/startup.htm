@@ -3,7 +3,7 @@
 </script>
 
 <h1>{"Welcome"|alang}, {$admin.first_name}!</h1>
-
+<hr />
 {if isset($newversionavailable) and $admin.id == 1}
 <div class="resultMessage" style="border-color:#109309;">
   <strong>New version available - v {$latestversion}. {$moreinfo}</strong>
@@ -199,208 +199,76 @@
 		<div class="row-fluid" style=" padding: 5px 0 0px 0px; 	{if $admin.limit_mail > 0} margin-top:15px; {/if}">  
 
 
+<div class="span12 tac startup">
+	<div class="col-md-12 section">
+		<div class="row">
+			<section>  
+			  <div class="">
+			    <h2>Getting Started</h2>
+			    <p>Let's get show you how the system works to help you get traffic, leads, sales and branding...</p>
+			  </div>
+			</section>
+		</div>
+	</div>
+	
+	<div class="col-md-12 section">
+		<div class="row">
+			<section>
+			  <h2>Choose Campaign Type</h2>
+			  <div class="">
+			      <div class="col-md-4">
+			          <a href="/aem/manage/desk.php?action=new_funnel_campaign" class="btn glc_button glc_button_large btn-lg">Create New Campaign</a>
+			      </div>
+			      <div class="col-md-4">
+			          <a href="/aem/manage/desk.php?action=campaign_new" class="btn glc_button glc_button_large btn-lg">Create Advanced Campaigns</a>
+			      </div>
+			      <div class="col-md-4">
+			          <a href="/aem/manage/desk.php?action=campaign#list-01D-0-0" class="btn glc_button glc_button_large btn-lg">Existing Campaigns</a>
+			      </div>
+			  </div>
+			</section>
+		</div>
+	</div>
 
-<section>  
-  <div class="row">
-    <h2>Getting Started</h2>
-    <p>Let's get show you how the system works to help you get traffic, leads, sales and branding...</p>
-  </div>
-</section>
-
-<section>
-  <h2>Choose Campaign Type</h2>
-  <div class="row">
-      <div class="col-md-6">
-          <a href="/aem/manage/desk.php?action=new_funnel_campaign" class="btn glc_button glc_button_large btn-lg">Create New Campaign</a>
-      </div>
-      <div class="col-md-6">
-          <a href="/aem/manage/desk.php?action=campaign#list-01D-0-0" class="btn glc_button glc_button_large btn-lg">Existing Campaigns</a>
-      </div>
-  </div>
-</section>
-
-
-<section>
-  <h2>Quick-Start Video Training</h2>
-  <div class="row">
-      <div class="col-md-12">
-      
-          <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a data-toggle="tab" href="#step1">Step 1</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#step2">Step 2</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#step3">Step 3</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#step4">Step 4</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#step5">Step 5</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#step6">Step 6</a></li>
-          </ul>
-          
-          <div class="tab-content">
-        <div id="step1" class="tab-pane fade in active">
-          <br>
-          <h2>VIDEO 1 GOES HERE</h2>
-          <h1>Quick Links & Downloads</h1>
-        </div>
-        <div id="step2" class="tab-pane fade">
-          <br>
-          <h2>VIDEO 2 GOES HERE</h2>
-          <h1>Quick Links & Downloads</h1>
-        </div>
-      </div>
-      </div>
-  </div>
-</section>
-
-
-
+	<div class="col-md-12 section">
+		<div class="row">
+			<section>
+				<h2>Quick-Start Video Training</h2>
+				<div class="">
+				  <div class="col-md-12">
+				  
+				      <ul class="nav nav-tabs">
+				        <li role="presentation" class="active"><a data-toggle="tab" href="#step1">Step 1</a></li>
+				        <li role="presentation"><a data-toggle="tab" href="#step2">Step 2</a></li>
+				        <li role="presentation"><a data-toggle="tab" href="#step3">Step 3</a></li>
+				        <li role="presentation"><a data-toggle="tab" href="#step4">Step 4</a></li>
+				        <li role="presentation"><a data-toggle="tab" href="#step5">Step 5</a></li>
+				        <li role="presentation"><a data-toggle="tab" href="#step6">Step 6</a></li>
+				      </ul>
+				      
+				      <div class="tab-content">
+				    <div id="step1" class="tab-pane fade in active">
+				      <br>
+				      <h2>VIDEO 1 GOES HERE</h2>
+				      <h1>Quick Links & Downloads</h1>
+				    </div>
+				    <div id="step2" class="tab-pane fade">
+				      <br>
+				      <h2>VIDEO 2 GOES HERE</h2>
+				      <h1>Quick Links & Downloads</h1>
+				    </div>
+				  </div>
+				  </div>
+				</div>
+				</section>
+		</div>
+	</div>
+	
+</div>
 
 
 
 		
-						<div class="span12 tac">
-							<ul class="ov_boxes">
-						
-                        {if $admin.limit_subscriber > 0}		<li > 
-									<div class="p_bar_up p_canvas"><img src="images/dashboard/subs.png"></div>
-									<div class="ov_text" style="width:135px;">
-										<strong>{"%s"|alang:$availLeftSub:$admin.limit_subscriber}</strong>
-                                        {"Subscribers left of %s"|alang:$admin.limit_subscriber}<br />
-										 
-									</div>
-								</li>
-								{/if}
-				
-	
-								<li>
-									<div class="p_bar_down p_canvas"><img src="images/dashboard/lists.png"></div>
-									<div class="ov_text" style="width:40px;">
-										<strong>{$listcounts}</strong>
-										 {"Lists"|alang}
-									</div>
-								</li>
-								
-								 
-								<li>
-									<div class="p_line_up p_canvas"><img src="images/dashboard/actives.png"></div>
-									<div class="ov_text">
-										<strong>{$subscriberscount}</strong>
-									<!-- {"Active"|alang} -->
-									{"Subscribers"|alang}
-									</div>
-								</li>
-								
-								 
-								<li>
-									<div class="p_line_down p_canvas"><img src="images/dashboard/sentemails.png"></div>
-									<div class="ov_text">
-										<strong>{$totalemailc}</strong>
-										<!-- {"Total emails sent"|alang}  -->
-										{"Emails sent"|alang} 
-									</div>
-								</li>
-								
-								  
-						 	<li>
-									<div class="p_line_down p_canvas" ><img src="images/dashboard/campaigns_report.png"></div>
-									<div class="ov_text" style="width:125px;">
-										<strong>{$campcount}</strong>
-										<!-- {"Total campaigns sent"|alang} -->
-										{"campaigns sent"|alang}
-									</div>
-								</li>
-								
-								  
-								
-					 	
-						 
-								
-							</ul>
-						</div>
-					</div>
-
- 
- 
- {if $admin.pg_reports_campaign}
-	  <div class="startup_box_container_shadow">
-	  <div id="startup_box_container_trend" class="startup_box_container">
-		<div class="startup_box_title">
-		  <span id="startup_box_span_subscribe" class="startup_selected"><a href="#" onclick="startup_toggle_tab('startup_box_container_trend', 'subscribe');return false;">{"Subscribe Trend"|alang}</a></span>
-		  <span id="startup_box_span_unsubscribe"><a href="#" onclick="startup_toggle_tab('startup_box_container_trend', 'unsubscribe');return false;">{"Unsubscribe Trend"|alang}</a></span>
-		</div>
-		<script type="text/javascript" src="../awebdesk/amline/swfobject.js"></script>
-		<div id="startup_box_div_subscribe" class="startup_box_container_inner">
-		  {adesk_amchart type="line" divid="chart_subscribed_bydate" location="admin" url="graph.php?g=subscribed_bydate" width="100%" height="250" bgcolor="#FFFFFF"}
-		</div>
-		<div id="startup_box_div_unsubscribe" class="startup_box_container_inner adesk_hidden">
-		  {adesk_amchart type="line" divid="chart_unsubscribed_bydate" location="admin" url="graph.php?g=unsubscribed_bydate" width="100%" height="250" bgcolor="#FFFFFF"}
-		</div>
-	  </div>
-	  </div>
-	  {/if}
-
-	  <br />
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-<!--	<td width="45%" valign="top">
-   Future space
-    </td>
-	<td width="1%" valign="top">&nbsp;</td>-->
-	<td width="100%" valign="top">
-
-	  {if $admin.pg_subscriber_add || $admin.pg_subscriber_edit || $admin.pg_subscriber_delete}
-	  <div class="startup_box_container_shadow">
-	  <div id="startup_box_container_recent" class="startup_box_container">
-		<div class="startup_box_title">
-		  <span id="startup_box_span_recentsubscribers" class="startup_selected"><a href="#" onclick="startup_toggle_tab('startup_box_container_recent', 'recentsubscribers');return false;">{"Recent Subscribers"|alang}</a></span>
-		  <span id="startup_box_span_recentcampaigns"><a href="#" onclick="startup_toggle_tab('startup_box_container_recent', 'recentcampaigns');return false;">{"Recent Campaigns"|alang}</a></span>
-		</div>
-
-		<div id="startup_box_div_recentsubscribers" class="startup_box_container_inner">
-		  <table width="100%">
-			<tbody>
-			  <tr>
-				<th style="color:#999999;">{"List"|alang}</th>
-				<th style="color:#999999;">{"Email"|alang}</th>
-				<th style="color:#999999;">{"Name"|alang}</th>
-				<th style="color:#999999;" width="100">{"Date/Time"|alang}</th>
-			  </tr>
-			</tbody>
-			<tbody id="subTable">
-			</tbody>
-		  </table>
-		</div>
-		<div id="subLoadingBar" class="adesk_block" style="color: #999999; font-size: 10px; margin-bottom:10px; margin-top:0px; margin-left:12px; ">
-		  {"Loading. Please wait..."|alang}
-		</div>
-		{/if}
-
-		<div id="startup_box_div_recentcampaigns" class="startup_box_container_inner adesk_hidden">
-		  <table width="100%">
-			<tbody>
-			  <tr>
-				<th style="color:#999999;">{"Campaign"|alang}</th>
-				<th style="color:#999999;">{"List(s)"|alang}</th>
-				<th style="color:#999999;">{"Status"|alang}</th>
-				<th style="color:#999999;">{"Date/Time"|alang}</th>
-				<th style="color:#999999;">{"View Reports"|alang}</th>
-			  </tr>
-			</tbody>
-			<tbody id="campTable">
-			</tbody>
-		  </table>
-		</div>
-		<div id="campLoadingBar" class="adesk_hidden" style="color: #999999; font-size: 10px; margin-bottom:10px; margin-top:0px; margin-left:12px; ">
-		  {"Loading. Please wait..."|alang}
-		</div>
-	  </div>
-	  </div>
-	  
-	  
-	  
-
-	  </td>
-  </tr>
-</table>
 
 <div id="badhttp" class="adesk_hidden">
   <div class="adesk_modal" align="center">
@@ -471,18 +339,18 @@
 </div>
 
 <script type="text/javascript">
-startup_recent_subscribers(10);
-startup_recent_campaigns(10);
-{if !$__ishosted}
-	{literal}
-	window.setTimeout(function() {
-	{/literal}
-		startup_viable();
-		{if !$site.general_maint}
-		startup_rewrite();
-		{/if}
-	{literal}
-	}, 7 * 1000);
-	{/literal}
-{/if}
+// startup_recent_subscribers(10);
+// startup_recent_campaigns(10);
+// {if !$__ishosted}
+// 	{literal}
+// 	window.setTimeout(function() {
+// 	{/literal}
+// 		startup_viable();
+// 		{if !$site.general_maint}
+// 		startup_rewrite();
+// 		{/if}
+// 	{literal}
+// 	}, 7 * 1000);
+// 	{/literal}
+// {/if}
 </script>
