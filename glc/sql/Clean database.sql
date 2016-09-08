@@ -196,7 +196,8 @@ INSERT INTO `admin_menu` (`id`, `menu`, `parent_menu`, `menu_file`, `active`) VA
 (118, 'Payment Transactions (Credit Card)', 'accounting', 'payment_transactions', 0),
 (119, 'Payment Transactions (Upgrade Membership)',  'accounting', 'upgrade_transactions', 0),
 (120, 'Upgrade Member', 'network',  'upgrade_member', 1),
-(121, 'Pending Member Upgrade', 'accounting', 'pending_upgrade',  1);
+(121, 'Pending Member Upgrade', 'accounting', 'pending_upgrade',  1),
+(122, 'Membership Upgrades',  'accounting', 'membership_upgrades',  1);
 
 -- --------------------------------------------------------
 
@@ -1896,6 +1897,8 @@ CREATE TABLE `membership_upgrade` (
   `upgrade_membership` tinyint(2) NOT NULL,
   `requested_date` datetime NOT NULL,
   `upgraded_date` datetime DEFAULT '0000-00-00 00:00:00',
+  `payment_method` varchar(100) DEFAULT NULL,
+  `transaction_id` varchar(100) DEFAULT NULL,
   `status` tinyint(2) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
