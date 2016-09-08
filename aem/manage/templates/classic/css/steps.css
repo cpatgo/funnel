@@ -73,7 +73,7 @@
 
 .wizard > .steps > ul > li
 {
-    width: 30%;
+    width: 33.33%;
     margin:0px;
 }
 
@@ -102,6 +102,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    text-align:center;
 }
 
 .wizard > .steps .disabled a,
@@ -117,7 +118,7 @@
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active
 {
-    background: #2184be;
+    background: #666;
     color: #fff;
     cursor: default;
 }
