@@ -1037,8 +1037,8 @@ label.acquisition, label.monetization, label.activation {
   color: #258DCD;
 }
 
-.list_selection_active span, .list_selection_active i, {
-  color: #258DCD !important;
+.list_selection_active, .list_selection_active > span, .list_selection_active > i, {
+  color: #258DCD;
 }
 .list_selection_active{
   border: 1px solid #258DCD;
