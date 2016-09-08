@@ -1036,3 +1036,11 @@ label.acquisition, label.monetization, label.activation {
 .select_existing_list:hover span, .newlist_btn:hover span, .select_existing_list:hover i, .newlist_btn:hover i{
   color: #258DCD;
 }
+
+.list_selection_active, .list_selection_active span, .list_selection_active i, {
+  color: #258DCD;
+}
+.list_selection_active{
+  border: 1px solid #258DCD;
+}
+
