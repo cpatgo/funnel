@@ -1029,7 +1029,10 @@ label.acquisition, label.monetization, label.activation {
 
 
 
-.select_existing_list span:hover, .newlist_btn span:hover {
+.select_existing_list:hover, .newlist_btn:hover {
   border: 1px solid #258DCD;
-  color:#258DCD;
+}
+
+.select_existing_list:hover span, .newlist_btn:hover span, .select_existing_list:hover i, .newlist_btn:hover i{
+  color: #258DCD;
 }
