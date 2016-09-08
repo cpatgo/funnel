@@ -118,7 +118,7 @@
     <div class="panel" id="sidebar" >
 
     <div class="yui-g" id="sub_submenu">
-      <h1 class="text_center">{"Quick Links"|alang}</h1>     
+      <h1 class="text_center sidebar_heading" style="padding: 20px 0px; margin: 0px;">{"Quick Links"|alang}</h1>     
       <ul> 
         {if adesk_admin_ismain()}
           {if $admin.pg_list_add}
@@ -142,7 +142,8 @@
           {/if}
 
           {if $admin.pg_message_add}
-          <li class="special small">
+          <li class="special">
+            <i class="fa fa-plus-circle"></i>
             <a href="desk.php?action=campaign_new"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
                   {"Create Campaign"|alang}</a>
           </li>
@@ -152,6 +153,7 @@
             {if $style_integration != ''}
     
           <li class="special small">
+
               <a href="desk.php?action=form#list-01-0-0"><img class="va" src="css/images/integration2.png" /> {"Forms"|alang}</a> 
           </li>
         
@@ -180,17 +182,26 @@
         {/if}
         
         {if $admin.pg_message_add}
-          <li class="special small">
+          <li class="special">
             <a href="desk.php?action=new_funnel_campaign"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
                   {"Create Campaign"|alang}</a>
           </li>
         {/if}
 
-        <li class="special small">
-            <a href="/builder" class="glc_button" style="color: #fff !important;">{"Site Builder"|alang}</a> 
+        <li class="special">
+            <a href="desk.php?action=funnel_campaign"><i class="fa fa-plus-circle"></i> {"Existing Campaigns"|alang}</a>
         </li>
-        <li class="special small">
-            <a href="/myhub" class="glc_button" style="color: #fff !important;">{"My Hub"|alang}</a> 
+
+        <li class="special">
+            <a href="desk.php?action=campaign_new"><i class="fa fa-plus-circle"></i> {"Advanced Campaign"|alang}</a>
+        </li>
+
+        <li class="special">
+            <a href="/builder"><i class="fa fa-plus-circle"></i> {"Site Builder"|alang}</a> 
+        </li>
+
+        <li class="special">
+          <a href="/myhub"><i class="fa fa-plus-circle"></i> {"My Hub"|alang}</a> 
         </li>      
       </ul>
 

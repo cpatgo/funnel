@@ -357,6 +357,7 @@ overflow: hidden;
 position: relative;
 display: block;
 height: 100%;
+padding-top: 5px;
 }
 
 .logo img{
