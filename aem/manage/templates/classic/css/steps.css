@@ -194,7 +194,9 @@
     border: 1px solid #ccc;
 }
 
-.wizard > .content > .body > textarea, .wizard > .content > .body > select {
+.wizard > .content > .body input, 
+.wizard > .content > .body > textarea, 
+.wizard > .content > .body > select {
     background: whitesmoke;
 }
 
