@@ -141,7 +141,7 @@
 
 .wizard > .content
 {
-    background: #eee;
+    /*background: #eee;*/
     display: block;
     margin: 0.5em;
     min-height: 35em;
@@ -223,8 +223,9 @@
 {
     position: relative;
     display: block;
-    text-align: right;
+    text-align: center;
     width: 100%;
+    margin-top: 50px;
 }
 
 .wizard.vertical > .actions
