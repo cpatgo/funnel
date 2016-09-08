@@ -1027,8 +1027,6 @@ label.acquisition, label.monetization, label.activation {
     padding: 0px;
 }
 
-
-
 .select_existing_list:hover, .newlist_btn:hover {
   border: 1px solid #258DCD;
 }
