@@ -471,6 +471,8 @@ jQuery(document).ready(function(){
         $body.find('#select_existing_list_div').hide();
         $body.find('#select_list_method').val('create_new_list');
         aem_functions.focus_on_element('#new_list_div');
+        jQuery('.select_existing_list').addClass('active');
+        jQuery('.newlist_btn').removeClass('active');
     });
 
     $body.on('click', '.select_existing_list', function(e){
@@ -483,6 +485,11 @@ jQuery(document).ready(function(){
         aem_functions.reset_values('#new_subscriber_div');
         $body.find('#select_list_method').val('select_existing_list');
         aem_functions.focus_on_element('#select_existing_list_div');
+
+        // css update 
+        // set to active 
+        jQuery('.select_existing_list').addClass('active');
+        jQuery('.newlist_btn').removeClass('active');
     });
 
     $body.on('click', '#add_new_list_go', function(e){
