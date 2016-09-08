@@ -17,7 +17,7 @@ switch ($err) {
 $msg = isset($_REQUEST['msg'])?$_REQUEST['msg']:"";
 switch ($msg) {
     case 2:
-        $msg = "<p>A password reset Email has been sent to the email address you signed up with.</p><br /><p>Please kindly check your Spam or Junk folder as it may have ended up there.</p>";
+        $msg = "<p>A password reset Email has been sent to the email address you signed up with.</p><br /><p>Please check your Spam or Junk folder as it may have ended up there.</p>";
         break;
 	default:
 		$msg = "";
