@@ -471,8 +471,8 @@ jQuery(document).ready(function(){
         $body.find('#select_existing_list_div').hide();
         $body.find('#select_list_method').val('create_new_list');
         aem_functions.focus_on_element('#new_list_div');
-        jQuery('.select_existing_list').addClass('active');
-        jQuery('.newlist_btn').removeClass('active');
+        jQuery('.select_existing_list').removeClass('active');
+        jQuery('.newlist_btn').addClass('active');
     });
 
     $body.on('click', '.select_existing_list', function(e){
