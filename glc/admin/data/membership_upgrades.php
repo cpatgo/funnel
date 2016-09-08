@@ -36,6 +36,8 @@
                                 <th>Username</th>
                                 <th>Original Membership</th>
                                 <th>Membership Upgrade To</th>
+                                <th>Payment Method</th>
+                                <th>Transaction ID</th>
                                 <th>Date requested</th>
                                 <th>Date approved</th>
                             </tr>
@@ -51,6 +53,8 @@
                                     printf('<td>%s</td>', $user['username']);
                                     printf('<td>%s</td>', $old_membership[0]['membership']);
                                     printf('<td>%s</td>', $new_membership[0]['membership']);
+                                    printf('<td>%s</td>', $value['payment_method']);
+                                    printf('<td>%s</td>', $value['transaction_id']);
                                     printf('<td>%s</td>', $value['requested_date']);
                                     printf('<td>%s</td>', $value['upgraded_date']);
                                 printf('</tr>');
@@ -75,34 +79,6 @@
             "tableTools": {
                 "sSwfPath": "js/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
             }
-        });
-
-        $('body').on('click', '.upgrade_membership', function(e){
-            e.preventDefault();
-            $(this).prop('disabled', true);
-            var fields = '<input type="hidden" name="upgrade_id" value="'+$(this).data('upgrade_id')+'" />';
-            fields += '<input type="hidden" name="user_id" value="'+$(this).data('user_id')+'" />';
-            fields += '<input type="hidden" name="level" value="'+$(this).data('level')+'" />';
-            $.ajax({
-                method: "post",
-                url: ajax_url+"admin_upgrade_user.php",
-                data: {
-                    'fields': $(fields).serialize()
-                },
-                dataType: 'json',
-                success:function(result) {
-                    if(result.type == 'error'){
-                        alert(result.message);
-                        $(this).prop('disabled', false);
-                    } else {
-                        window.location.href = upgrade_user_url+'&msg='+result.message;
-                    }
-                },
-                error: function(errorThrown){
-                    $(this).prop('disabled', false);
-                    console.log(errorThrown);
-                }
-            });
         });
     });
 </script>

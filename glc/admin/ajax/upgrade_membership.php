@@ -24,6 +24,7 @@ $user_membership = $user_membership[0];
 $membership_details = $membership_class->get_membership($fields['upgrade_membership']);
 $membership_details = $membership_details[0];
 $amount = $membership_details['amount'] - $user_membership['amount'];
+$transaction_id = "";
 
 // Required variables for payment
 if($payment_method === 'creditcard'):
@@ -125,6 +126,7 @@ if($payment_method === 'creditcard'):
                   'date_created' => date('Y-m-d H:i:s')
                 );
                 $payment_id = $payment_class->authorize_ipn($payment_data);
+                $transaction_id = $payment_data['transactionid'];
 
                 //Insert payment details to payments table
                 $payment_data = array(
@@ -208,6 +210,7 @@ elseif($payment_method === 'echeck'):
             'date_created'      => date('Y-m-d H:i:s')
         );
         $save_echeck_payment = $payment_class->echeck_ipn($data);
+        $transaction_id = $data['transactionid'];
 
         //Insert payment details to payments table
         $payment_data = array(
@@ -284,6 +287,8 @@ if((int)$payment_error !== 1):
 		'upgrade_membership' 	=> $fields['upgrade_membership'],
 		'requested_date' 		=> $requested_date,
 		'upgraded_date' 		=> $upgraded_date,
+        'payment_method'        => $payment_data['payment_method'],
+        'transaction_id'        => $transaction_id,
 		'status'				=> $status
 	);
 	$membership_class->insert_upgrade_membership($data);

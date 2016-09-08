@@ -197,6 +197,11 @@ class Class_Membership extends Class_Database
         return $this->select($sql);
     }
 
+    function get_membership_upgrades() {
+        $sql = sprintf('SELECT * FROM membership_upgrade WHERE status = 1');
+        return $this->select($sql);
+    }
+
     function update_upgrade_membership($upgrade_id)
     {
         $sql = sprintf("UPDATE membership_upgrade SET status = 1, upgraded_date = '%s' WHERE id = %d", date('Y-m-d H:i:s'), $upgrade_id);
