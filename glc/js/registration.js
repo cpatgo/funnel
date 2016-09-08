@@ -264,7 +264,7 @@ $(function(){
 		}
 		else{ 
 			$('#error-form-message').show();
-			$('#error-form-message').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Please kindly check fields that are marked (<span class="required"> * </span>)');
+			$('#error-form-message').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Please check fields that are marked (<span class="required"> * </span>)');
 			$('.loader_processing').hide();
 			$('#submit_order_btn').prop('disabled', false);
 		}
