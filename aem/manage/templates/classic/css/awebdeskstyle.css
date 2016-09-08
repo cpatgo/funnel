@@ -1002,3 +1002,7 @@ label.acquisition, label.monetization, label.activation {
   color: #fff !important;
   text-shadow: none !important;
 }
+
+.select_existing_list, .newlist_btn { width:100%; }
+.select_existing_list i, .newlist_btn i { text-align: center; font-size: 100px; padding: 30px 30px; }
+.select_existing_list span, .newlist_btn span { display:block; font-size:30px; }
