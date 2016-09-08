@@ -130,6 +130,8 @@ function add_subscriber() {
 
 function add_list() {
 	parse_str($_POST['fields'], $fields);
+	$user_id = $_SESSION['awebdesk_aweb_admin']['id'];
+
 	if(!empty($fields['list_name'])):
 		$post = array(
 			'name'                     => $fields['list_name'], // list name
@@ -138,7 +140,7 @@ function add_list() {
 			'to_name'                  => "Subscriber", // if subscriber doesn't enter a name, use this
 			'carboncopy'               => '', // comma-separated list of email addresses to send a copy of all mailings to upon send
 			'stringid'                 => 'api-test', // URL-safe list name
-			'optid'                    => '1', // ID of a Email Confirmation Set to use
+			'optid'                    => $user_id, // ID of a Email Confirmation Set to use
 			'bounceid[1]'              => 1, // use default bounce management account
 
 			// HOSTED users only: sender information (all fields below) required
