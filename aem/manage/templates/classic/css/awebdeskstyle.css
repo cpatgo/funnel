@@ -8,7 +8,7 @@ Email Marketer Enterprise Edition Styling
 	-------------------------------------------------- */
 a, a:hover { text-decoration: none; }
 body, .campaign_help, .campaign_types_desc, .campaign_types_head {
-    font: 16px/1.22 arial,helvetica,clean,sans-serif; 
+    font: 16px arial,helvetica,clean,sans-serif; 
 }
  
 
@@ -1002,3 +1002,45 @@ label.acquisition, label.monetization, label.activation {
   color: #fff !important;
   text-shadow: none !important;
 }
+
+.select_existing_list, .newlist_btn {
+    width: 100%;
+    /*border: 4px solid #258DCD;*/
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+.select_existing_list i, .newlist_btn i {
+    text-align: center;
+    font-size: 60px;
+    /*color: #258DCD;*/
+    color:#666;
+    display: block;
+    margin-bottom: 20px;
+}
+.select_existing_list span, .newlist_btn span {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    padding: 0px;
+}
+
+
+
+.select_existing_list:hover, .newlist_btn:hover {
+  border: 1px solid #258DCD;
+}
+
+.select_existing_list:hover span, .newlist_btn:hover span, .select_existing_list:hover i, .newlist_btn:hover i{
+  color: #258DCD;
+}
+
+.list_selection_active span, .list_selection_active span, .list_selection_active i, .list_selection_active i {
+  color: #258DCD;
+}
+.list_selection_active{
+  border: 1px solid #258DCD;
+}
+
