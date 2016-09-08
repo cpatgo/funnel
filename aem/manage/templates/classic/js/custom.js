@@ -133,7 +133,7 @@ jQuery(document).ready(function(){
         // customize Labels on action buttons
         labels: {
             finish: "Finish",
-            next: "Next Step",
+            next: "Continue",
             previous: "Previous",
         },
         autoFocus: true,
