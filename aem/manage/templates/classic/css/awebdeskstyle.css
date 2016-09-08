@@ -1003,6 +1003,32 @@ label.acquisition, label.monetization, label.activation {
   text-shadow: none !important;
 }
 
-.select_existing_list, .newlist_btn { width:100%; }
-.select_existing_list i, .newlist_btn i { text-align: center; font-size: 100px; padding: 30px 30px; }
-.select_existing_list span, .newlist_btn span { display:block; font-size:30px; }
+.select_existing_list, .newlist_btn {
+    width: 100%;
+    /*border: 4px solid #258DCD;*/
+    border: 4px solid #666;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+.select_existing_list i, .newlist_btn i {
+    text-align: center;
+    font-size: 60px;
+    /*color: #258DCD;*/
+    color:#666;
+    display: block;
+    margin-bottom: 20px;
+}
+.select_existing_list span, .newlist_btn span {
+    display: block;
+    font-size: 18px;
+    color: #258DCD;
+    text-align: center;
+    padding: 0px;
+}
+.select_existing_list span:hover, .newlist_btn span:hover, 
+.select_existing_list i:hover, .newlist_btn i:hover,
+.select_existing_list:hover, .newlist_btn:hover{
+color: #258DCD;
+border: 4px solid #258DCD;
+}
