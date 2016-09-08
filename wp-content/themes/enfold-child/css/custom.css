@@ -246,7 +246,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 }
 
 .btn-login a:hover { 
-    opacity: 0.9;
+    background-color: #63addb !important;
 }
 
 .btn-glc-upgrade a { 
@@ -264,7 +264,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 .btn-logout a:hover { 
     /*background-color: #2895f1 !important;*/
-    opacity: 0.9;
+    background-color: #63addb !important;
 }
 
 
