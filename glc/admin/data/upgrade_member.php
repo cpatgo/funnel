@@ -68,6 +68,7 @@ $membership = $membership_class->get_memberships();
                     	userdetails += '</td>';
                     	userdetails += '</tr>';
 
+                        userdetails += '<tr class="userdetails">';
                         userdetails += '<td>Payment Method</td>';
                         userdetails += '<td>';
                         userdetails += '<select name="payment_method" id="payment_method">';
@@ -80,6 +81,7 @@ $membership = $membership_class->get_memberships();
                         userdetails += '</td>';
                         userdetails += '</tr>';
 
+                        userdetails += '<tr class="userdetails">';
                         userdetails += '<td>Transaction ID</td>';
                         userdetails += '<td>';
                         userdetails += '<input type="text" name="transaction_id" id="transaction_id">';
