@@ -292,17 +292,17 @@
 					</div>
 				</div>
 				<div class="col-md-8 col-md-offset-2">	
-					<label>
+					<label class="form-check-inline">
 						<input type="checkbox" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
 					</label>
-					<label>
+					<label class="form-check-inline">
 						<input type="checkbox" name="ask4fname" id="ask4fname" value="1" /> First Name
 					</label>
-					<label>
+					<label class="form-check-inline">
 						<input type="checkbox" name="ask4lname" id="ask4lname" value="1" /> Last Name
 					</label>
 					{foreach from=$optional_fields item=field}
-					<label>
+					<label class="form-check-inline">
 						<input type="checkbox" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
 					</label>
 					{/foreach}
