@@ -1049,6 +1049,5 @@ label, input, button, select, textarea { font-size: 16px; }
 #radiobutton_container input[type="radio"]:checked + img{
   border: 1px solid #444;
   background: #ccc;
-
 }
 
