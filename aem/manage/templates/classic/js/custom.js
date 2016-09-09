@@ -547,7 +547,7 @@ jQuery(document).ready(function(){
     //  aem_functions.get_forms();
     // });
     
-    jQuery('#landingpage_01 img').tooptip({
+    jQuery('#landingpage_01 img').tooltip({
         show: {
             effect: "slidedown",
             delay: 250
