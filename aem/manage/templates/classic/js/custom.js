@@ -563,4 +563,7 @@ jQuery(document).ready(function(){
             }
         }
     });
+
+    // tabs
+    jQuery("#tabs").tabs();
 });
