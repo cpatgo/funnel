@@ -1045,7 +1045,8 @@ label, input, button, select, textarea { font-size: 16px; }
 
 #radiobutton_container input[type="radio"] {display:none;}
 #radiobutton_container label{display:inline-block; padding: 4px 11px;}
-#radiobutton_container input[type="radio"]:checked + label{
+#radiobutton_container input[type="radio"]:checked + label,
+#radiobutton_container input[type="radio"]:checked + img{
   background-color:#bbb;
 }
 
