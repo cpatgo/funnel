@@ -2395,7 +2395,6 @@ $(function () {
         $('#previewModal > form #previewCancel').text('Cancel & Close');
 
         closeStyleEditor();
-
     });
 
     $('#previewModal').on('shown.bs.modal', function (e) {
@@ -2595,12 +2594,28 @@ $(function () {
         });
     };
 
+    auto_generate_page = function() {
+        var page = $('input[name="page"]').val();
+        jQuery.ajax({
+            method: "post",
+            url: "../builder/save_template.php",
+            data: {
+                'page':page
+            },
+            dataType: 'json',
+            success:function(result) {
+                $("#templateModalResult").find('#url_link').text(result.link);
+                $("#templateModalResult").modal('show');
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        });
+    }
+
     $('#saveTemplate').on('click', function(e){
         e.preventDefault();
-        $('#saveTemplateModal > form #showTemplate').show('');
-
-        $('#saveTemplateModal > form #previewCancel').text('Cancel & Close');
-
+        auto_generate_page();
         closeStyleEditor();
     });
 
@@ -2718,19 +2733,9 @@ $(function () {
             $('#saveTemplateModal form').prepend(newInput);
 
             newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
-
         });
 
     });
-
-    $('#saveTemplateModal > form').submit(function () {
-
-        $('#saveTemplateModal > form #showPreview').hide('');
-
-        $('#saveTemplateModal > form #previewCancel').text('Close Window');
-
-    });
-
 
     $("#xsExport").on('click', function (e) {
         var xsExpFile = new Object(),
