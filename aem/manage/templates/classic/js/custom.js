@@ -495,7 +495,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.btn_landing_page_select_template', function(e){
         e.preventDefault();
         $body.find('.select_landing_page_template').show();
-        $body.find('.btn_landing_page_builder').hide();
+        $body.find('.select_landing_page_builder').hide();
 
         // $body.find('#select_list_method').val('create_new_list');
         // aem_functions.focus_on_element('#new_list_div');
@@ -505,9 +505,9 @@ jQuery(document).ready(function(){
 
     $body.on('click', '.btn_landing_page_builder', function(e){
         e.preventDefault();
-        $body.find('#btn_landing_page_builder').show();
+        $body.find('.select_landing_page_builder').show();
         
-        $body.find('#select_landing_page_template').hide();
+        $body.find('.select_landing_page_template').hide();
         
         // aem_functions.reset_values('#new_list_div');
         // aem_functions.reset_values('#new_subscriber_div');
