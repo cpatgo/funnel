@@ -1048,9 +1048,6 @@ label, input, button, select, textarea { font-size: 16px; }
 #radiobutton_container input[type="radio"] + img { opacity:0.8; }
 #radiobutton_container label{display:inline-block; padding: 4px 11px; width:30%;}
 #radiobutton_container input[type="radio"]:checked + label,
-#radiobutton_container .img-thumbnail {
-    width: 100%;
-}
 #radiobutton_container input[type="radio"]:checked + img{
   /*border: 3px solid #ccc;*/
   border-radius: 10px;
@@ -1058,5 +1055,6 @@ label, input, button, select, textarea { font-size: 16px; }
   opacity: 1.0;
   background: #258DCD;
 }
+#radiobutton_container .img-thumbnail {width: 100%;}
 
 hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
