@@ -546,4 +546,11 @@ jQuery(document).ready(function(){
     //  e.preventDefault();
     //  aem_functions.get_forms();
     // });
+    
+    jQuery('#landingpage_01').tooptip({
+        show: {
+            effect: "slidedown",
+            delay: 250
+        }
+    });
 });
