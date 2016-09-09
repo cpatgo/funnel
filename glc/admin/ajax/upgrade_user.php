@@ -17,6 +17,20 @@ $new_membership = $membership_class->get_membership($fields['level']);
 $upgrade_user = $user_class->upgrade_user($user[0], $membership[0], $fields['level']);
 $update_membership = $user_class->update_membership($fields['user_id'], $fields['level']);
 
+//Save upgrade details
+$data = array(
+    'user_id' 				=> $fields['user_id'],
+    'current_membership'    => $membership[0]['initial'],
+    'upgrade_membership'    => $new_membership[0]['id'],
+    'requested_date'        => date('Y-m-d H:i'),
+    'upgraded_date'         => date('Y-m-d H:i'),
+    'payment_method'        => $fields['payment_method'],
+    'transaction_id'        => $fields['transaction_id'],
+    'status'                => 1
+);
+$upgrade_id = $membership_class->insert_upgrade_membership($data);
+
+
 //Update wordpress membership
 $upgrade_wp_membership = $user_class->wp_update_membership($membership[0]['membership']);
 $upgrade_wp_membership = $user_class->wp_update_membership($new_membership[0]['membership'], $membership[0]['membership'], $user[0]['email']);
