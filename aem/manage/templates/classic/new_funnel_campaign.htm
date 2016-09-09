@@ -292,19 +292,27 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-md-offset-3">	
-					<label class="form-check-inline">
-						<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
-					</label>
-					<label class="form-check-inline">
-						<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
-					</label>
-					<label class="form-check-inline">
-						<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
-					</label>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
+						</label>
+					</div>
 					{foreach from=$optional_fields item=field}
-					<label class="form-check-inline">
-						<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
-					</label>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+						</label>
+					</div>
 					{/foreach}
 				</div>
 			</div>
@@ -324,24 +332,26 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-8 col-md-offset-2">
-					<label>
-						<input type="radio" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
-						<img src="images/freeebook.png" alt="..." class="img-thumbnail">	
-						<br>
-						<p>Travel</p>
-						<a>Preview Landing Page</a>
-					</label>
-					<label>
-						<input type="radio" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
-						<img src="images/freeebook.png" alt="..." class="img-thumbnail">	
-						<br>
-						<p>Travel</p>
-						<a>Preview Landing Page</a>
-					</label>
-					<label style="width:100%">
-						<input type="radio" name="landing-page-url" data-customlandingpage="yes" value="" />
-						Or you can design you own using the Site Builder. 
-					</label>
+					<div class="radiobutton_container">
+						
+							<input type="radio" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+							<label><img src="images/freeebook.png" alt="..." class="img-thumbnail"></label>
+							<!-- <br>
+							<p>Travel</p>
+							<a>Preview Landing Page</a>
+						 -->
+						
+							<input type="radio" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+							<label><img src="images/freeebook.png" alt="..." class="img-thumbnail"></label>
+						<!-- 	<br>
+							<p>Travel</p>
+							<a>Preview Landing Page</a> -->
+						
+						<label style="width:100%">
+							<input type="radio" name="landing-page-url" data-customlandingpage="yes" value="" />
+							Or you can design you own using the Site Builder. 
+						</label>
+					</div>
 					<div id="landing-page-url-error"></div>
 					<br><br>
 				</div>
