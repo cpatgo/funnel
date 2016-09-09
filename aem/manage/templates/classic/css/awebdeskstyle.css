@@ -1055,4 +1055,4 @@ label, input, button, select, textarea { font-size: 16px; }
   background: #ccc;
 }
 
-hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 40px auto; }
+hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
