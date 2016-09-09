@@ -8,7 +8,7 @@
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
 <input type="hidden" name="action" value="list_insert_post">
 
-    <h3><!-- <span class="strong step_txt">Step 1:</span>  --><i class="fa fa-line-chart" aria-hidden="true"></i> Name Your Campaign</h3>
+    <h3><i class="fa fa-line-chart" aria-hidden="true"></i> Name Campaign</h3>
     <section>
     	<div class="row">
 	        <div class="col-md-12">
@@ -81,7 +81,8 @@
         	</div>
         </div>
     </section>
-    <h3><!-- <span class="strong step_txt">Step 2:</span>  --><i class="fa fa-list-ol" aria-hidden="true"></i> Your List</h3>
+    
+    <h3><i class="fa fa-list-ol" aria-hidden="true"></i> Create List</h3>
     <section>
         <div class="row">
 	        <div class="col-md-12">
@@ -193,13 +194,14 @@
         </div>
         <input type="hidden" id="select_list_method" name="select_list_method" value="">
     </section>
-    <h3><i class="fa fa-envelope" aria-hidden="true"></i> Email Setup</h3>
+
+    <h3><i class="fa fa-envelope" aria-hidden="true"></i> {"Email Signature"|alang}</h3>
     <section>
     	<div class="row">
 			<div class="col-md-12">
 				<h1 class="step_header_text">
 					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Email Options"|alang}
+					{"Email Signature"|alang}
 				</h1>
 			</div>
 			<div class="col-md-12">
@@ -255,9 +257,7 @@
 		</div>
     </section>
 
-
-
-    <h3><!-- <span class="strong step_txt">Step 3:</span>  -->Generate Opt&#45;in Page Form</h3>
+    <h3><i class="fa fa-envelope" aria-hidden="true"></i> {"Generate Opt-in Form"|alang}</h3>
     <section>
         <div id="new_form_div">
 			<br>
@@ -265,13 +265,13 @@
 				<div class="col-md-12">
 					<h1 class="step_header_text">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Opt-in Page Form"|alang}
+						{"Opt-in Form"|alang}
 					</h1>
 				</div>
 				
 		        <div class="col-md-12">
 		        	<div class="campaign_help">
-		        		<p class="lead text_center">Generate a Opt&#45;in form for your page. You will be prompted to create your page on the next step.</p>
+		        		<p class="lead text_center">Generate a opt-in form for your site or page. You will be prompted to create your site/page next.</p>
 		        	</div>
 	        	</div>
 	        
@@ -281,6 +281,11 @@
 							<label for="">Form Name: </label>
 							<input type="text" class="form-control input-lg" id="form_name" name="form_name">	
 							<div id="form_name-error"></div>
+							
+							<div class="text_center hint">
+								<span class="text_center">This is how you will keep track of each form for your page/site.</span>
+							</div>
+  						</div>
 						</div>
 					</div>
 				</div>
