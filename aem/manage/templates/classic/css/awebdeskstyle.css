@@ -1011,7 +1011,12 @@ label.acquisition, label.monetization, label.activation {
     padding: 20px;
     cursor: pointer;
 }
-.select_existing_list i, .newlist_btn i {
+
+.select_landing_page_template, .select_landing_page_builder{
+  display: none;
+}
+
+.select_existing_list i, .newlist_btn i, .btn_landing_page_builder i, .btn_landing_page_select_template i {
     text-align: center;
     font-size: 60px;
     /*color: #258DCD;*/
@@ -1019,7 +1024,7 @@ label.acquisition, label.monetization, label.activation {
     display: block;
     margin-bottom: 20px;
 }
-.select_existing_list span, .newlist_btn span {
+.select_existing_list span, .newlist_btn span, .btn_landing_page_builder span, .btn_landing_page_select_template span{
     display: block;
     font-size: 18px;
     color: #666;
@@ -1027,15 +1032,26 @@ label.acquisition, label.monetization, label.activation {
     padding: 0px;
 }
 
-.select_existing_list:hover, .newlist_btn:hover {
+.select_existing_list:hover, .newlist_btn:hover, .btn_landing_page_builder, .btn_landing_page_select_template {
   border: 1px solid #258DCD;
 }
 
-.select_existing_list:hover span, .newlist_btn:hover span, .select_existing_list:hover i, .newlist_btn:hover i{
+.select_existing_list:hover span, 
+.newlist_btn:hover span, 
+.select_existing_list:hover i, 
+.newlist_btn:hover i
+.btn_landing_page_builder:hover span, 
+.btn_landing_page_select_template:hover span
+.btn_landing_page_builder:hover i, 
+.btn_landing_page_select_template:hover i {
+
   color: #258DCD;
 }
 
-.list_selection_active span, .list_selection_active span, .list_selection_active i, .list_selection_active i {
+.list_selection_active span, 
+.list_selection_active span, 
+.list_selection_active i, 
+.list_selection_active i {
   color: #258DCD;
 }
 .list_selection_active{
