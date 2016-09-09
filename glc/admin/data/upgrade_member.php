@@ -46,7 +46,7 @@ $membership = $membership_class->get_memberships();
 
         $('body').on('click', '#check_user', function(e){
             e.preventDefault();
-            $('body').find('#userdetails').remove();
+            $('body').find('.userdetails').remove();
             $.ajax({
                 method: "post",
                 url: ajax_url+"check_user.php",
@@ -59,7 +59,7 @@ $membership = $membership_class->get_memberships();
                     if(result.type == 'error'){
                         alert(result.message);
                     } else {
-                    	var userdetails = '<tr id="userdetails">';
+                    	var userdetails = '<tr class="userdetails">';
                     	userdetails += '<td>User Details</td>';
                     	userdetails += '<td>';
                     	userdetails += 'Name: '+result.message.user.f_name + ' ' + result.message.user.l_name;
@@ -67,6 +67,25 @@ $membership = $membership_class->get_memberships();
                     	userdetails += '<br>Current Membership: '+result.message.membership.membership;
                     	userdetails += '</td>';
                     	userdetails += '</tr>';
+
+                        userdetails += '<td>Payment Method</td>';
+                        userdetails += '<td>';
+                        userdetails += '<select name="payment_method" id="payment_method">';
+                        userdetails += '<option value="bank">Bank</option>';
+                        userdetails += '<option value="authorize_net_2">NetPay (Tom Pace)</option>';
+                        userdetails += '<option value="authorize_net">TrustPay (Alex)</option>';
+                        userdetails += '<option value="wire">Wire</option>';
+                        userdetails += '<option value="xpressdrafts">XpressDrafts</option>';
+                        userdetails += '</select>';
+                        userdetails += '</td>';
+                        userdetails += '</tr>';
+
+                        userdetails += '<td>Transaction ID</td>';
+                        userdetails += '<td>';
+                        userdetails += '<input type="text" name="transaction_id" id="transaction_id">';
+                        userdetails += '</td>';
+                        userdetails += '</tr>';
+
                     	$('body').find('.table').append(userdetails);
                     	$('body').find('#upgrade_user').show();
                     }
