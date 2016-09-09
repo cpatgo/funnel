@@ -2595,7 +2595,7 @@ $(function () {
     };
 
     auto_generate_page = function() {
-        var page = $('input[name="page"]').val();
+        var page = $('#saveTemplateModal').find('input[name="page"]').val();
         jQuery.ajax({
             method: "post",
             url: "../builder/save_template.php",
