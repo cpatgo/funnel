@@ -43,6 +43,8 @@ editableItemOptions['p : font-family'] = ['default', 'Lato', 'Helvetica', 'Arial
 
 var editableContent = ['.editContent', '.navbar a', 'a.edit', 'h1:not(.no-edit)', 'h2:not(.no-edit)', 'h3:not(.no-edit)', 'h4:not(.no-edit)', 'h5:not(.no-edit)', 'h6:not(.no-edit)', 'p:not(.no-edit)', '.nav-callus', '.text-edit', '.btn:not(.no-edit)', '.footer a:not(.fa)', '.tableWrapper'];
 
+var load_template = function(){};
+var load_form = function(){};
 
 /* FLAT UI PRO INITS */
 
@@ -2511,7 +2513,7 @@ $(function () {
 
             newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
 
-        })
+        });
 
     });
 
@@ -2551,6 +2553,184 @@ $(function () {
         });
         return false;
     });
+
+    load_template = function(response) {
+
+        var resp = response,
+              xsInc = 1;
+
+        var xsImportdata = JSON.parse(resp.data),
+              lengthBlocks = xsImportdata.length - 1;
+        window.localStorage.clear();
+        for (var i = 0; i < lengthBlocks; i = i + 2) {
+          window.localStorage['blocksElement' + xsInc] = JSON.stringify(xsImportdata[i]);
+          xsInc++;
+        }
+        xsInc = 1;
+
+        for (var i = 1; i < lengthBlocks; i = i + 2) {
+          window.localStorage['blocksFrame' + xsInc] = JSON.stringify(xsImportdata[i]);
+          xsInc++;
+        }
+        window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
+        window.location.href = "/builder?save_template=1&form_id="+resp.form;
+    };
+
+    load_form = function(response) {
+        jQuery.ajax({
+            method: "post",
+            url: "../../../aem/manage/templates/classic/ajax/api.php",
+            data: {
+                'action':'get_form'
+            },
+            dataType: 'json',
+            success:function(result) {
+                if(result.type == 'success') {
+                    $body.find('#user_form_div').html(result.message.html);
+                }
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        });
+    };
+
+    $('#saveTemplate').on('click', function(e){
+        e.preventDefault();
+        $('#saveTemplateModal > form #showTemplate').show('');
+
+        $('#saveTemplateModal > form #previewCancel').text('Cancel & Close');
+
+        closeStyleEditor();
+    });
+
+    $('#saveTemplateModal').on('shown.bs.modal', function (e) {
+
+        $('#saveTemplateModal form input[type="hidden"]').remove();
+
+        //grab visible page
+        $('#pageList > ul:visible').each(function () {
+
+            //grab the skeleton markup
+
+            newDocMainParent = $('iframe#skeleton').contents().find(pageContainer);
+
+            //empty out the skeleton
+            newDocMainParent.find('*').remove();
+
+            $(this).find('iframe').each(function () {
+
+
+                //sandbox or regular?
+
+                var attr = $(this).attr('data-sandbox');
+
+                if (typeof attr !== typeof undefined && attr !== false) {
+
+                    theContents = $('#sandboxes #' + attr).contents().find(pageContainer);
+
+                } else {
+
+                    theContents = $(this).contents().find(pageContainer);
+
+                }
+
+
+                //remove .frameCovers
+
+                theContents.find('.frameCover').each(function () {
+                    $(this).remove();
+                });
+
+
+                //remove inline styling leftovers
+
+                for (var key in editableItems) {
+
+                    //alert('Key :'+key)
+
+                    theContents.find(key).each(function () {
+
+                        //alert( "Data before: "+ $(this).attr('data-selector') );
+
+                        $(this).removeAttr('data-selector');
+
+                        //alert( "Data after: "+ $(this).attr('data-selector') );
+
+                        if ($(this).attr('style') == '') {
+                            $(this).removeAttr('style')
+                        }
+
+                    })
+
+                }
+                for (i = 0; i < editableContent.length; ++i) {
+
+                    $(this).contents().find(editableContent[i]).each(function () {
+
+                        $(this).removeAttr('data-selector');
+
+                    })
+
+                }
+
+
+                toAdd = theContents.html();
+
+                //grab scripts
+
+                scripts = $(this).contents().find(pageContainer).find('script');
+
+                if (scripts.size() > 0) {
+
+                    theIframe = document.getElementById("skeleton");
+
+                    scripts.each(function () {
+
+                        if ($(this).text() != '') {//script tags with content
+
+                            var script = theIframe.contentWindow.document.createElement("script");
+                            script.type = 'text/javascript';
+                            script.innerHTML = $(this).text();
+
+                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script);
+
+                        } else if ($(this).attr('src') != null) {
+
+                            var script = theIframe.contentWindow.document.createElement("script");
+                            script.type = 'text/javascript';
+                            script.src = $(this).attr('src');
+
+                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script)
+
+                        }
+
+                    })
+
+                }
+
+                newDocMainParent.append($(toAdd));
+
+            });
+
+            newInput = $('<input type="hidden" name="page" value="">');
+
+            $('#saveTemplateModal form').prepend(newInput);
+
+            newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
+
+        });
+
+    });
+
+    $('#saveTemplateModal > form').submit(function () {
+
+        $('#saveTemplateModal > form #showPreview').hide('');
+
+        $('#saveTemplateModal > form #previewCancel').text('Close Window');
+
+    });
+
 
     $("#xsExport").on('click', function (e) {
         var xsExpFile = new Object(),
