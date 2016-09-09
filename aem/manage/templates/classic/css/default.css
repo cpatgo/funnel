@@ -39,12 +39,11 @@ p#funnel_link a {
 .glc_button {
 	background-color: #258DCD !important;
 	background-image: none !important;
-	border-top: 1px solid #258DCD !important;
-	border-right: 1px solid #258DCD !important;
-	border-left: 1px solid #258DCD !important;
 	color: #fff !important;
 	text-shadow: none !important;
 }
+
+
 
 .glc_button:hover {
     opacity: 0.8;
