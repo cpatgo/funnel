@@ -2185,13 +2185,32 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
             </div><!-- /.modal-body -->
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
-              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="showTemplate">Generate Page</button>
+              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">Generate Page</button>
             </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
       
       </form>
       
+  </div><!-- /.modal -->
+
+  <!-- save Template HTML result popup -->
+  <div class="modal fade" id="templateModalResult" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">  
+              <div class="modal-header">
+                  <button type="button" class="close fo" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              
+              <div class="modal-body text-center">
+                  <p>
+                    Copy the link below and paste it in AEM...<br>
+                    <b id="url_link"></b>
+                  </p>
+              </div><!-- /.modal-body -->
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+
   </div><!-- /.modal -->
 	
 	
