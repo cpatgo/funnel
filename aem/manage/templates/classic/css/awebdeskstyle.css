@@ -1043,10 +1043,14 @@ label.acquisition, label.monetization, label.activation {
 }
 label, input, button, select, textarea { font-size: 16px; }
 
+#radiobutton_container{ text-align:center; }
 #radiobutton_container input[type="radio"] {display:none;}
 #radiobutton_container input[type="radio"] + img { opacity:0.8; }
 #radiobutton_container label{display:inline-block; padding: 4px 11px;}
 #radiobutton_container input[type="radio"]:checked + label,
+#radiobutton_container .img-thumbnail {
+    width: 100%;
+}
 #radiobutton_container input[type="radio"]:checked + img{
   /*border: 3px solid #ccc;*/
   border-radius: 10px;
