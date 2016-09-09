@@ -147,14 +147,15 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     <div class="container">
     	
     	<header class="clearfix" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-
-    		<a href="#" id="clearScreen" class="btn btn-danger btn-embossed pull-right disabled actionButtons"><span class="fui-trash"></span> Empty Page</a>
-    	
-			<a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
-		
-    		<a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
-			
-			<a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
+  
+        <?php if(!isset($_GET['save_template'])): ?>
+          <a href="#" id="clearScreen" class="btn btn-danger btn-embossed pull-right disabled actionButtons"><span class="fui-trash"></span> Empty Page</a>
+          <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
+          <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
+          <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
+        <?php else: ?>
+          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
+        <?php endif; ?>
     	
     		<div class="modes">
     		
@@ -2160,6 +2161,38 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
       </form>
       
   </div><!-- /.modal -->
+
+
+  <!-- save Template HTML popup -->
+  <div class="modal fade" id="saveTemplateModal" tabindex="-1" role="dialog" aria-hidden="true">
+  
+    <form action="preview.php" target="_blank" id="markupPreviewForm" method="post" class="form-horizontal">
+    
+    <input type="hidden" name="markup" value="" id="markupField">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Preview Page</h4>
+            </div>
+            <div class="modal-body">
+              
+              <p>
+            <b>Please note:</b> you can only preview a single page; links to other pages won't work. When you make changes to your page, reloading the preview won't work, instead you'll have to use the "Preview" button again.
+          </p>
+              
+            </div><!-- /.modal-body -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
+              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="showTemplate">Generate Page</button>
+            </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      
+      </form>
+      
+  </div><!-- /.modal -->
 	
 	
 	<!-- delete single block popup -->
@@ -2316,6 +2349,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     
     	var ua = window.navigator.userAgent;
    		var msie = ua.indexOf("MSIE ");
+      var once = 0;
     	
       $('body').on('click', '.glchub', function(){
           window.location.href = "/myhub";
@@ -2324,6 +2358,17 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
       $('body').on('click', '.emarketer', function(){
           window.location.href = "/aem/manage";
       });
+
+      <?php if(isset($_GET['load_template'])): ?>
+          //Load saved template
+            var response = <?php echo json_encode(array("data" => file_get_contents($_GET['load_template']), "form" => $_GET['form_id'])) ?>;
+            load_template(response);
+      <?php endif; ?>
+
+      <?php if(isset($_GET['save_template'])): ?>
+          //Load saved template
+            load_form();
+      <?php endif; ?>
 
     	/*if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
     			
