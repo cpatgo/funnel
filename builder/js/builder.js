@@ -2586,8 +2586,11 @@ $(function () {
             success:function(result) {
                 if(result.type == 'success') {
                     setTimeout(function(){
+                        var jheight = jQuery('#pageList iframe').contents().height();
+                        jheight += 100;
                         jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
-                    }, 3000);
+                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                    }, 4000);
                 }
             },
             error: function(errorThrown){
