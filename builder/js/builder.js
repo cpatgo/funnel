@@ -2585,7 +2585,9 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 if(result.type == 'success') {
-                    jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                    setTimeout(function(){
+                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                    }, 3000);
                 }
             },
             error: function(errorThrown){
