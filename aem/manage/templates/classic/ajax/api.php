@@ -58,6 +58,55 @@ function get_form() {
 	endif;
 }
 
+function get_form_by_id() {
+	include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
+    $url = sprintf('%s/aem', GLC_URL);
+
+    $pw = $_SESSION['dennisn_usertoken'];
+	$decode = base64_decode($pw);
+	$chunk = explode('-', $decode);
+	$password = base64_decode($chunk[1]);
+
+	$username = $_SESSION['dennisn_username'];
+	$password = $password;
+
+	$params = array(
+		'api_user'     => $username,
+		'api_pass'     => $password,
+		'api_action'   => 'form_view',
+		'api_output'   => 'serialize',
+		'id'           => $_POST['form_id'],
+		'generate'     => 1,
+	);
+
+	$query = "";
+	foreach( $params as $key => $value ) $query .= $key . '=' . urlencode($value) . '&';
+	$query = rtrim($query, '& ');
+	$url = rtrim($url, '/ ');
+
+	$api = $url . '/manage/awebdeskapi.php?' . $query;
+
+	$request = curl_init($api); // initiate curl object
+	curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+	curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+
+	$response = (string)curl_exec($request); // execute curl fetch and store results in $response
+
+	curl_close($request); // close curl object
+
+	if ( !$response ) {
+        return array('result_code' => 0, 'result_message' => 'Nothing was returned. Do you have a connection to Email Marketing server?');
+    }
+
+    $form = unserialize($response);
+
+    if((int)$form['result_code'] == 1): 
+		die(json_encode(array('type' => 'success', 'message' => $form)));
+	else:
+		die(json_encode(array('type' => 'error', 'message' => 'Failed to get the form.', 'data' => $form)));
+	endif;
+}
+
 function add_form() {
 	parse_str($_POST['fields'], $fields);
 	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
