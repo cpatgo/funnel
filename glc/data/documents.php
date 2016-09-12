@@ -192,7 +192,10 @@ $subject = 'GLC Document Requirement - User '.$user[0]['username']. ' has submit
 							</h3>
 						</div>
 			            <div class="ibox-content">
-							<p>Please submit your Corporate Tax Number.</p>
+							<p>
+								Please submit your Corporate Tax Number.<br>
+								<a target="_blank" href="/glc/forms/IRS_FormW-9.pdf">Download W-9 form</a>
+							</p>
 						</div>		
 					</div>
 				</div>	
