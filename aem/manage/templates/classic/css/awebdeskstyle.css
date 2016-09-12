@@ -1038,13 +1038,12 @@ label.acquisition, label.monetization, label.activation {
 
 .select_existing_list:hover span, 
 .newlist_btn:hover span, 
-.select_existing_list:hover i, 
 .newlist_btn:hover i
+.select_existing_list:hover i, 
 .btn_landing_page_builder:hover span, 
 .btn_landing_page_select_template:hover span
 .btn_landing_page_builder:hover i, 
 .btn_landing_page_select_template:hover i {
-
   color: #258DCD;
 }
 
