@@ -2410,7 +2410,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
               //Get saved template
               $template_content = file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template']));
               //Get form
-              $form = get_form_by_id($_GET['form_id']);
+              $form = addslashes(get_form_by_id($_GET['form_id']));
               //Replace form in saved template
               $template_content = replace_content_inside_delimiters('<div id=\"user_form_div\">', '</div>', $form, $template_content);
             ?>
