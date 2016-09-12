@@ -2571,7 +2571,7 @@ $(function () {
           xsInc++;
         }
         window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
-        window.location.href = "/builder?save_template=1&form_id="+resp.form;
+        window.location.href = "/builder?save_template=1";
     };
 
     load_form = function(form_id) {
