@@ -2586,7 +2586,7 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 if(result.type == 'success') {
-                    $body.find('#user_form_div').html(result.message.html);
+                    jQuery('body').find('#user_form_div').html(result.message.html);
                 }
             },
             error: function(errorThrown){
