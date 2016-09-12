@@ -1016,7 +1016,7 @@ label.acquisition, label.monetization, label.activation {
   display: none;
 }
 
-.select_existing_list .fa, .newlist_btn .fa, .btn_landing_page_builder .fai, .btn_landing_page_select_template i {
+.select_existing_list .fa, .newlist_btn .fa, .btn_landing_page_builder .fa, .btn_landing_page_select_template .fa {
     text-align: center;
     font-size: 60px;
     /*color: #258DCD;*/
@@ -1039,10 +1039,10 @@ label.acquisition, label.monetization, label.activation {
 
 .select_existing_list:hover span, 
 .newlist_btn:hover span, 
-.newlist_btn:hover > .fa
+.newlist_btn:hover > .fa,
 .select_existing_list:hover > .fa, 
 .btn_landing_page_builder:hover span, 
-.btn_landing_page_select_template:hover span
+.btn_landing_page_select_template:hover span,
 .btn_landing_page_builder:hover > .fa, 
 .btn_landing_page_select_template:hover > .fa {
   color: #258DCD;
