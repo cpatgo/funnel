@@ -563,7 +563,7 @@
 			</div>
         </div>
     </section>
-    
+
     <h3><i class="fa fa-envelope" aria-hidden="true"></i> {"Thank You / Redirect Page"|alang}</h3>
     <section>
     	<div class="row">
@@ -579,6 +579,151 @@
 	        		<p class="lead text_center">Choose, Create or insert a custom URL as your Subcriber Thank You Page.</p>
 	        	</div>
         	</div>
+
+			
+		<div class="row">
+        	<div class="col-md-12">
+        		<div class="col-md-3 col-md-offset-1">
+			 		<div class="steps-btn btn_redirect_page_select_template">
+			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			 			<span>Select Template</span>
+			 		</div>
+				</div>
+			    <div class="col-md-3">
+			 		<div class="steps-btn btn_redirect_page_builder">
+			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+			 			<span>Site Builder</span>
+			 		</div>
+				</div>
+				<div class="col-md-3">
+			 		<div class="steps-btn btn_redirect_page_builder">
+			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+			 			<span>Custom URL</span>
+			 		</div>
+				</div>
+			</div>
+        </div>
+
+        
+		<div class="col-md-10 col-md-offset-1" id="redirect_page_container">
+			<div class="row select_redirect_page_template">
+				<div class="col-md-12">
+					<div id="radiobutton_container">
+						<input type="radio" id="landingpage_01" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_01">
+							<img src="images/freeebook.png" class="img-thumbnail" alt="text">
+						</label>
+
+						<input type="radio" id="landingpage_02" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						
+						<label for="landingpage_02">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="landingpage_03" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_03">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="landingpage_04" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_04">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="landingpage_05" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_05">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="landingpage_06" name="landing-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_06">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+						</label>
+					
+						<!-- <label for="landingpage_custom" style="width:100%" class="btn btn-warning btn-lg">
+							<input type="radio" id="landingpage_custom" name="landing-page-url" data-customlandingpage="yes" value="" />
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> or you can design you own using the Site Builder. 
+						</label> -->
+					</div>
+					<div id="landing-page-url-error"></div>
+				</div>
+			</div>
+
+			<div class="row select_redirect_page_builder">
+				<div id="custom_landing_page_div">
+					<div class="col-md-12">
+
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="campaign_help">
+									<p class="text_center">
+										1. Click on the "Copy Form Code" button to automaticly copy and save this code.
+									</p>
+									<br />
+									<p class="text_center">
+										2. Click on the "Site Builder" button to build your custom Landing Page. 
+									</p>
+									<br />
+									<br />
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+				    		<div class="col-md-8 col-md-offset-2">
+						 		<a data-clipboard-target="#formcode" class="btn glc_button btnCopy btn-lg" style="width:100%;">
+						 			Click Here to Copy Form Code
+						 		</a>
+							</div>
+						</div>
+
+						<div class="row">
+							<hr class="divider" style="margin-top:40px;"  />
+							<div class="col-md-10 col-md-offset-1" style="margin-bottom: 20px;">
+								<div class="campaign_help">
+									<p class="text_center">
+										Note: you will be instructed to paste your copied "Form Code" into your Landing Page design within the Site Builder. Don't worry, we will guide you on how to do this. smily face.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						
+
+						<div class="row">
+						    <div class="col-md-8 col-md-offset-2">
+						 		<a href="/builder" target="_blank" class="btn glc_button btnCopy btn-lg" style="width:100%;">
+							 		Access Site Builder
+						 		</a>
+							</div>
+						</div>
+
+						<div class="row" style="display:none;">
+							<div class="col-md-8 col-md-offset-2">
+								<br>
+								<div class="form-group">
+									<textarea class="form-control" id="formcode" style="height:300px" readonly="readonly"></textarea>
+								</div>
+							</div>
+
+							<!-- <div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label for="">once you've created your landing page, insert your page redirect link in this box.</label>
+									<input type="text" class="form-control" id="landing-page-url-link" name="landing-page-url-link" placeholder="i.e. http://glcv2.identifz.com/builder/elements/preview_wtgtFmvIEIQVDV2RtfxP.html" required>	
+									<div id="landing-page-url-link-error"></div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+
+
+
+
 			<div class="col-md-12">
 		  		<div class="col-md-8 col-md-offset-2">
 					<div class="form-group">
