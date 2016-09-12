@@ -3,7 +3,7 @@ jQuery( document ).ready(function( $ ) {
 
     clipboard.on('success', function(e) {
         // alert('Form copied to clipboard.');
-        jQuery('body').find('copy_success').show();
+        jQuery('body').find('.copy_success').show();
     });
     
     var $_GET = {};
