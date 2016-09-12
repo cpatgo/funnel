@@ -1032,7 +1032,7 @@ label.acquisition, label.monetization, label.activation {
     padding: 0px;
 }
 
-.select_existing_list:hover + .fa, .newlist_btn:hover + .fa, .btn_landing_page_builder + .fa, .btn_landing_page_select_template + .fa {
+.select_existing_list:hover, .newlist_btn:hover, .btn_landing_page_builder, .btn_landing_page_select_template {
   border: 1px solid #258DCD;
   color: #258DCD;
 }
