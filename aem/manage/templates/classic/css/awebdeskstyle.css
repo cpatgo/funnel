@@ -1110,9 +1110,8 @@ label, input, button, select, textarea { font-size: 16px; }
 
 hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
-#landing_page_container{    display: block;
-    padding: 30px 10px;
-    /*border: 1px solid #ccc;*/
-    margin-top: 50px;
-    /*border-radius: 20px;*/
-}}
+#landing_page_container, #redirect_page_container{    
+  display: block;
+  padding: 30px 10px;
+  margin-top: 50px;
+}
