@@ -2134,7 +2134,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 	<!-- preview HTML popup -->
 	<div class="modal fade" id="previewModal" tabindex="-1" role="dialog" aria-hidden="true">
   
-    <form action="save_template.php" method="post" target="_blank" id="markupPreviewForm" class="form-horizontal">
+    <form action="preview.php" method="post" target="_blank" id="markupPreviewForm" class="form-horizontal">
     
     <input type="hidden" name="markup" value="" id="markupField">
     
