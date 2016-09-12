@@ -1114,3 +1114,5 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
   padding: 30px 10px;
   margin-top: 50px;
 }
+
+.copy_success { display: none; }
