@@ -2575,12 +2575,13 @@ $(function () {
         window.location.href = "/builder?save_template=1&form_id="+resp.form;
     };
 
-    load_form = function(response) {
+    load_form = function(form_id) {
         jQuery.ajax({
             method: "post",
             url: "../../../aem/manage/templates/classic/ajax/api.php",
             data: {
-                'action':'get_form'
+                'action':'get_form_by_id'
+                'form_id':form_id
             },
             dataType: 'json',
             success:function(result) {
