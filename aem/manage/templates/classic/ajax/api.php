@@ -59,7 +59,7 @@ function get_form() {
 	endif;
 }
 
-function get_form_by_id($form_id) {
+function get_form_by_id() {
 	include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
     $url = sprintf('%s/aem', GLC_URL);
 
@@ -76,7 +76,7 @@ function get_form_by_id($form_id) {
 		'api_pass'     => $password,
 		'api_action'   => 'form_view',
 		'api_output'   => 'serialize',
-		'id'           => $form_id,
+		'id'           => $_POST['form_id'],
 		'generate'     => 1,
 	);
 
@@ -102,9 +102,9 @@ function get_form_by_id($form_id) {
     $form = unserialize($response);
 
     if((int)$form['result_code'] == 1): 
-    	return $form['html'];
+		die(json_encode(array('type' => 'success', 'message' => $form)));
 	else:
-		return false;
+		die(json_encode(array('type' => 'error', 'message' => 'Failed to get the form.', 'data' => $form)));
 	endif;
 }
 
