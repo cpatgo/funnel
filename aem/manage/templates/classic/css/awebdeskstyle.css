@@ -1084,9 +1084,8 @@ label.acquisition, label.monetization, label.activation {
 
 
 .list_selection_active span, 
-.list_selection_active span, 
 .list_selection_active i, 
-.list_selection_active i {
+.list_selection_active .fa {
   color: #258DCD;
 }
 .list_selection_active{
