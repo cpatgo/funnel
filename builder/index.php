@@ -154,7 +154,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
           <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
         <?php else: ?>
-          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
+          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Save Changes</a>
         <?php endif; ?>
     	
     		<div class="modes">
@@ -2134,7 +2134,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 	<!-- preview HTML popup -->
 	<div class="modal fade" id="previewModal" tabindex="-1" role="dialog" aria-hidden="true">
   
-    <form action="preview.php" target="_blank" id="markupPreviewForm" method="post" class="form-horizontal">
+    <form action="save_template.php" method="post" target="_blank" id="markupPreviewForm" class="form-horizontal">
     
     <input type="hidden" name="markup" value="" id="markupField">
     
@@ -2162,7 +2162,6 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
       
   </div><!-- /.modal -->
 
-
   <!-- save Template HTML popup -->
   <div class="modal fade" id="saveTemplateModal" tabindex="-1" role="dialog" aria-hidden="true">
   
@@ -2174,18 +2173,18 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-              <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Preview Page</h4>
+              <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Update Template</h4>
             </div>
             <div class="modal-body">
               
               <p>
-            <b>Please note:</b> you can only preview a single page; links to other pages won't work. When you make changes to your page, reloading the preview won't work, instead you'll have to use the "Preview" button again.
-          </p>
+                By saving this, you will be given a new link to the updated template. Copy the link and paste it in AEM to redirect your user to your custom page.
+              </p>
               
             </div><!-- /.modal-body -->
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
-              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">Generate Page</button>
+              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">Get Link</button>
             </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -2204,8 +2203,27 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
               
               <div class="modal-body text-center">
                   <p>
-                    Copy the link below and paste it in AEM...<br>
+                    Click the 'Copy Link' button and this will save it so you can paste it to AEM.
+                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">Copy Link</button>
                     <b id="url_link"></b>
+                  </p>
+              </div><!-- /.modal-body -->
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+
+  </div><!-- /.modal -->
+
+  <!-- save Template HTML result popup -->
+  <div class="modal fade" id="linkCopied" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">  
+              <div class="modal-header">
+                  <button type="button" class="close fo" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              
+              <div class="modal-body text-center">
+                  <p>
+                    Link copied to clipboard. Close this Tab and paste the link to AEM.
                   </p>
               </div><!-- /.modal-body -->
           </div><!-- /.modal-content -->
@@ -2362,6 +2380,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     <script src="js/src-min-noconflict/ace.js"></script>
     <script src="elements.json"></script>
     <script src="js/builder.js"></script>
+    <script type="text/javascript" src="../aem/manage/js/clipboard.min.js"></script>
     <script>
     
     $(function(){
@@ -2386,7 +2405,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
       <?php if(isset($_GET['save_template'])): ?>
           //Load saved template
-            load_form();
+          // load_form();
       <?php endif; ?>
 
     	/*if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
