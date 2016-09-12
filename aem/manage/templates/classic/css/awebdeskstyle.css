@@ -1032,7 +1032,8 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder .fa, 
 .btn_landing_page_select_template .fa,
 .btn_redirect_page_select_template .fa,
-.btn_redirect_page_builder .fa{
+.btn_redirect_page_builder .fa,
+.btn_redirect_page_custom_url .fa{
     text-align: center;
     font-size: 60px;
     /*color: #258DCD;*/
@@ -1045,7 +1046,8 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder span, 
 .btn_landing_page_select_template span,
 .btn_redirect_page_select_template span,
-.btn_redirect_page_builder span{
+.btn_redirect_page_builder span,
+.btn_redirect_page_custom_url span{
     display: block;
     font-size: 18px;
     color: #666;
@@ -1058,7 +1060,8 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder:hover, 
 .btn_landing_page_select_template:hover,
 .btn_redirect_page_select_template:hover,
-.btn_redirect_page_builder:hover {
+.btn_redirect_page_builder:hover,
+.btn_redirect_page_custom_url:hover {
   border: 1px solid #258DCD;
   color: #258DCD;
 }
@@ -1074,7 +1077,8 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder:hover > .fa, 
 .btn_landing_page_select_template:hover > .fa, 
 .btn_redirect_page_select_template:hover > .fa,
-.btn_redirect_page_builder:hover > .fa{
+.btn_redirect_page_builder:hover > .fa
+.btn_redirect_page_custom_url:hover > .fa{
   color: #258DCD;
 }
 
