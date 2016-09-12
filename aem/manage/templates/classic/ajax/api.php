@@ -8,6 +8,7 @@ if($action === 'add_list') add_list();
 if($action === 'add_subscriber') add_subscriber();
 if($action === 'add_form') add_form();
 if($action === 'get_form') get_form();
+if($action === 'get_form_by_id') get_form_by_id();
 
 function get_form() {
 	include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
