@@ -1008,7 +1008,8 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder, 
 .btn_landing_page_select_template,
 .btn_redirect_page_select_template,
-.btn_redirect_page_builder{
+.btn_redirect_page_builder,
+.btn_redirect_page_custom_url{
     width: 100%;
     /*border: 4px solid #258DCD;*/
     border: 1px solid #ccc;
@@ -1020,7 +1021,9 @@ label.acquisition, label.monetization, label.activation {
 .select_landing_page_template, 
 .select_landing_page_builder, 
 .select_redirect_page_builder,
-.select_redirect_page_template {
+.select_redirect_page_template,
+.select_redirect_page_custom_url 
+{
   display: none;
 }
 
