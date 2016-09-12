@@ -2,7 +2,8 @@ jQuery( document ).ready(function( $ ) {
     var clipboard = new Clipboard('.btnCopy');
 
     clipboard.on('success', function(e) {
-        alert('Form copied to clipboard.');
+        // alert('Form copied to clipboard.');
+        jQuery('body').find('copy_success').show();
     });
     
     var $_GET = {};
