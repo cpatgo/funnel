@@ -2585,7 +2585,7 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 if(result.type == 'success') {
-                    jQuery('body').find('#user_form_div').html(result.message.html);
+                    jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
                 }
             },
             error: function(errorThrown){
