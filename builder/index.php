@@ -2399,7 +2399,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
       <?php if(isset($_GET['load_template'])): ?>
           //Load saved template
-            var response = <?php echo json_encode(array("data" => file_get_contents($_GET['load_template']), "form" => $_GET['form_id'])) ?>;
+            var response = <?php echo json_encode(array("data" => file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template'])), "form" => $_GET['form_id'])) ?>;
             load_template(response);
       <?php endif; ?>
 
