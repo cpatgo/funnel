@@ -2580,7 +2580,7 @@ $(function () {
             method: "post",
             url: "../../../aem/manage/templates/classic/ajax/api.php",
             data: {
-                'action':'get_form_by_id'
+                'action':'get_form_by_id',
                 'form_id':form_id
             },
             dataType: 'json',
