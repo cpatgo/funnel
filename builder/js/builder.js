@@ -2597,13 +2597,14 @@ $(function () {
     auto_generate_page = function() {
         var page = $('#saveTemplateModal').find('input[name="page"]').val();
         jQuery.ajax({
-            method: "post",
+            type: "post",
             url: "../builder/save_template.php",
             data: {
                 'page':page
             },
             dataType: 'json',
             success:function(result) {
+                $('#saveTemplateModal').modal('hide');
                 $("#templateModalResult").find('#url_link').text(result.link);
                 $("#templateModalResult").modal('show');
             },
@@ -2612,6 +2613,12 @@ $(function () {
             }
         });
     }
+
+    var clipboard = new Clipboard('.btnCopy');
+    clipboard.on('success', function(e) {
+        $('#templateModalResult').modal('hide');
+        $('#linkCopied').modal('show');
+    });
 
     $('#saveTemplate').on('click', function(e){
         e.preventDefault();
