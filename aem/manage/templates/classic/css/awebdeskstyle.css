@@ -1053,21 +1053,28 @@ label.acquisition, label.monetization, label.activation {
 .select_existing_list:hover, 
 .newlist_btn:hover, 
 .btn_landing_page_builder:hover, 
-.btn_landing_page_select_template:hover {
+.btn_landing_page_select_template:hover,
+.btn_redirect_page_select_template:hover,
+.btn_redirect_page_builder:hover {
   border: 1px solid #258DCD;
   color: #258DCD;
 }
 
 .select_existing_list:hover span, 
 .newlist_btn:hover span, 
-.newlist_btn:hover > .fa,
-.select_existing_list:hover > .fa, 
 .btn_landing_page_builder:hover span, 
 .btn_landing_page_select_template:hover span,
+.btn_redirect_page_select_template:hover span,
+.btn_redirect_page_builder:hover span,
+.newlist_btn:hover > .fa,
+.select_existing_list:hover > .fa, 
 .btn_landing_page_builder:hover > .fa, 
-.btn_landing_page_select_template:hover > .fa {
+.btn_landing_page_select_template:hover > .fa, 
+.btn_redirect_page_select_template > .fa,
+.btn_redirect_page_builder > .fa{
   color: #258DCD;
 }
+
 
 .list_selection_active span, 
 .list_selection_active span, 
