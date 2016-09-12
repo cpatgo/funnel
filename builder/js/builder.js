@@ -2554,7 +2554,6 @@ $(function () {
     });
 
     load_template = function(response) {
-        console.log(response);
         var resp = response,
               xsInc = 1;
 
