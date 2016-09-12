@@ -2382,13 +2382,6 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     <script src="js/builder.js"></script>
     <script type="text/javascript" src="../aem/manage/js/clipboard.min.js"></script>
     <script>
-
-    <?php 
-      include_once('../aem/manage/templates/classic/ajax/api.php');
-      function replace_content_inside_delimiters($start, $end, $new, $source) {
-        return preg_replace('#('.preg_quote($start).')(.*?)('.preg_quote($end).')#si', '$1'.$new.'$3', $source);
-      }
-    ?>
     
     $(function(){
     
@@ -2406,17 +2399,16 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
       <?php if(isset($_GET['load_template'])): ?>
           //Load saved template
-            <?php 
-              //Get saved template
-              $template_content = file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template']));
-              //Get form
-              $form = addslashes(get_form_by_id($_GET['form_id']));
-              //Replace form in saved template
-              $template_content = replace_content_inside_delimiters('<div id=\"user_form_div\">', '</div>', $form, $template_content);
-            ?>
-
-            var response = <?php echo json_encode(array("data" => $template_content, "form" => $_GET['form_id'])) ?>;
+            var response = <?php echo json_encode(array("data" => file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template'])), "form" => $_GET['form_id'])) ?>;
             load_template(response);
+      <?php endif; ?>
+
+      <?php if(isset($_GET['save_template'])): ?>
+          //Load saved template
+          $(window).load(function(){
+            var form_id = <?php echo $_GET['form_id'] ?>;
+            load_form(form_id);
+          });
       <?php endif; ?>
 
     	/*if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
