@@ -2405,8 +2405,10 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
       <?php if(isset($_GET['save_template'])): ?>
           //Load saved template
-          var form_id = <?php echo $_GET['form_id'] ?>;
-          load_form(form_id);
+          $(window).load(function(){
+            var form_id = <?php echo $_GET['form_id'] ?>;
+            load_form(form_id);
+          });
       <?php endif; ?>
 
     	/*if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
