@@ -29,6 +29,6 @@ fwrite($previewFile, stripslashes($_POST['page']));
 
 fclose($previewFile);
 
-echo json_encode(array('link' => $filename));
+echo json_encode(array('link' => sprintf('%s/builder/%s', GLC_URL, $filename)));
 die();
 ?>
