@@ -2577,7 +2577,7 @@ $(function () {
 
     load_form = function(form_id) {
         jQuery.ajax({
-            method: "post",
+            type: "post",
             url: "../../../aem/manage/templates/classic/ajax/api.php",
             data: {
                 'action':'get_form_by_id',
