@@ -1008,7 +1008,7 @@ label.acquisition, label.monetization, label.activation {
 .btn_landing_page_builder, 
 .btn_landing_page_select_template,
 .btn_redirect_page_select_template,
- .btn_redirect_page_builder{
+.btn_redirect_page_builder{
     width: 100%;
     /*border: 4px solid #258DCD;*/
     border: 1px solid #ccc;
@@ -1017,11 +1017,19 @@ label.acquisition, label.monetization, label.activation {
     cursor: pointer;
 }
 
-.select_landing_page_template, .select_landing_page_builder{
+.select_landing_page_template, 
+.select_landing_page_builder, 
+.select_redirect_page_builder,
+.select_redirect_page_template {
   display: none;
 }
 
-.select_existing_list .fa, .newlist_btn .fa, .btn_landing_page_builder .fa, .btn_landing_page_select_template .fa {
+.select_existing_list .fa, 
+.newlist_btn .fa, 
+.btn_landing_page_builder .fa, 
+.btn_landing_page_select_template .fa,
+.btn_redirect_page_select_template .fa,
+.btn_redirect_page_builder .fa{
     text-align: center;
     font-size: 60px;
     /*color: #258DCD;*/
@@ -1029,7 +1037,12 @@ label.acquisition, label.monetization, label.activation {
     display: block;
     margin-bottom: 20px;
 }
-.select_existing_list span, .newlist_btn span, .btn_landing_page_builder span, .btn_landing_page_select_template span{
+.select_existing_list span, 
+.newlist_btn span, 
+.btn_landing_page_builder span, 
+.btn_landing_page_select_template span,
+.btn_redirect_page_select_template span,
+.btn_redirect_page_builder span{
     display: block;
     font-size: 18px;
     color: #666;
@@ -1037,7 +1050,10 @@ label.acquisition, label.monetization, label.activation {
     padding: 0px;
 }
 
-.select_existing_list:hover, .newlist_btn:hover, .btn_landing_page_builder, .btn_landing_page_select_template {
+.select_existing_list:hover, 
+.newlist_btn:hover, 
+.btn_landing_page_builder:hover, 
+.btn_landing_page_select_template:hover {
   border: 1px solid #258DCD;
   color: #258DCD;
 }
