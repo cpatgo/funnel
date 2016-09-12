@@ -521,6 +521,35 @@ jQuery(document).ready(function(){
     });
 
 
+    $body.on('click', '.btn_redirect_page_select_template', function(e){
+        e.preventDefault();
+        $body.find('.select_redirect_page_template').show();
+        $body.find('.select_redirect_page_builder').hide();
+
+        // $body.find('#select_list_method').val('create_new_list');
+        // aem_functions.focus_on_element('#new_list_div');
+        jQuery('.btn_redirect_page_builder').removeClass('list_selection_active');
+        jQuery('.btn_redirect_page_select_template').addClass('list_selection_active');
+    });
+
+    $body.on('click', '.btn_redirect_page_builder', function(e){
+        e.preventDefault();
+        $body.find('.select_redirect_page_builder').show();
+        
+        $body.find('.select_redirect_page_template').hide();
+        
+        // aem_functions.reset_values('#new_list_div');
+        // aem_functions.reset_values('#new_subscriber_div');
+        // $body.find('#select_list_method').val('select_existing_list');
+        // aem_functions.focus_on_element('#select_existing_list_div');
+
+        // css update 
+        // set to active 
+        jQuery('.btn_redirect_page_builder').addClass('list_selection_active');
+        jQuery('.btn_redirect_page_select_template').removeClass('list_selection_active');
+    });    
+
+
 
     $body.on('click', '#add_new_list_go', function(e){
         e.preventDefault();
