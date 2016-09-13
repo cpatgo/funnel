@@ -5585,7 +5585,7 @@ fieldset[disabled] .navbar-inverse .navbar-btn.active {
   z-index: 1050;
 }
 .modal-content {
-  width: 624px;
+  width: 109%;
   background-color: #f9fafb;
   border: 2px solid #ebedef;
   border-radius: 7px;

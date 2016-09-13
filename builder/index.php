@@ -2226,6 +2226,9 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
                     Link copied to clipboard. Close this Tab and paste the link to AEM.
                   </p>
               </div><!-- /.modal-body -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+            </div>
           </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
 
