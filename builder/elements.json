@@ -8,9 +8,21 @@ var _Elements = {"elements": {
         // {"url":"elements/glc-freebook.html", "height":163, "thumbnail":"elements/thumbs/glc-freebook.jpg"}
     ],
 
-    "Sales Funnel": [
-        {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    "Optin": [
+        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
+
+    "Download": [
+        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    ],
+
+    "Thank You": [
+        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    ],
+
+    // "Sales Funnel": [
+    //     {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    // ],
     
     "Navigation":[
     	{"url":"elements/nav1-1.html","height":79, "thumbnail":"elements/thumbs/nav1-1.png"},
