@@ -631,6 +631,7 @@ jQuery(document).ready(function(){
 
     jQuery('#landing-page-name').tooltip();
     jQuery('#list_name').tooltip();
+    jQuery('#tooltip_name_campaign').tooltip();
     
 
     
