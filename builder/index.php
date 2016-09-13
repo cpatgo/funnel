@@ -2225,7 +2225,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
                   <p>
                     Link copied to clipboard. <br>
                     Click the 'Go Back to eMarketer' button below to close this window and go back to GLC eMarketer.<br><br>
-                    If you want to modify anything else in this page, you may do so by updating the content and clicking the Save Changes button again. 
+                    If you want to modify anything else in this page, you may do so by clicking the "Close" button below. After updating the content click the "Save Changes" button again to get your link.<br>
                     <button class="btn btn-primary glc_button close_tab" style="height:52px; width:250px;">Go Back to eMarketer</button>
                   </p>
               </div><!-- /.modal-body -->
