@@ -11,7 +11,7 @@ body, .campaign_help, .campaign_types_desc, .campaign_types_head {
     font: 16px arial,helvetica,clean,sans-serif; 
 }
 
-#template_buttons {
+.template_buttons {
   position: absolute;
   width: 26%;
   margin-top: -73px;
