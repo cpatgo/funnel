@@ -604,6 +604,11 @@ jQuery(document).ready(function(){
         jQuery('input[name=landing-page-url]:checked').val(jQuery(this).val());
     });
 
+    $body.on('input', '#landing-page-name', function(e){
+        e.preventDefault();
+        jQuery('input[name=list_name').val(jQuery(this).val());
+    });
+
     //GET FORMS
     // aem_functions.get_forms();
 
