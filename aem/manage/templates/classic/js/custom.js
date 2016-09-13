@@ -604,7 +604,7 @@ jQuery(document).ready(function(){
         jQuery('input[name=landing-page-url]:checked').val(jQuery(this).val());
     });
 
-    $body.on('click', 'name["landing-page-url"]', function(e){
+    $body.on('click', 'name[landing-page-url]', function(e){
         jQuery('.template_buttons').hide();
         e.preventDefault();
         jQuery(this).closest('label').find('.template_buttons').show();
