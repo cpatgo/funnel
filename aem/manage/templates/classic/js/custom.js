@@ -619,33 +619,36 @@ jQuery(document).ready(function(){
     //  aem_functions.get_forms();
     // });
     
-    jQuery("#landing-page-name #list_name").each(function(){
-        jQuery(this).tooltip({
-            show:{
-                effect: "slidedown",
-                delay: 250
+    // jQuery("#landing-page-name #list_name").each(function(){
+    //     jQuery(this).tooltip({
+    //         show:{
+    //             effect: "slidedown",
+    //             delay: 250
+    //         }
+    //     });
+    // });
+
+
+    jQuery('#landing-page-name').tooltip({
+        show: {
+            effect: "slidedown",
+            delay: 250
+        
+        },
+        content: function() {
+            var element = $( this );
+            
+            if ( element.is( "[title]" ) ) {
+                return element.attr( "title" );
             }
-        });
+            if ( element.is( "img" ) ) {
+                return element.attr( "alt" );
+            }
+        }
     });
 
-
-    // jQuery('#landing-page-name').tooltip({
-    //     show: {
-    //         effect: "slidedown",
-    //         delay: 250
-        
-    //     },
-    //     content: function() {
-    //         var element = $( this );
-            
-    //         if ( element.is( "[title]" ) ) {
-    //             return element.attr( "title" );
-    //         }
-    //         if ( element.is( "img" ) ) {
-    //             return element.attr( "alt" );
-    //         }
-    //     }
-    // });
+    jQuery('#list_name').tooltip();
+    
 
     
 });
