@@ -619,7 +619,7 @@ jQuery(document).ready(function(){
     //  aem_functions.get_forms();
     // });
     
-    jQuery("#landing-page-name", '#list_name').each(function(){
+    jQuery("#landing-page-name #list_name").each(function(){
         jQuery(this).tooltip({
             show:{
                 effect: "slidedown",
