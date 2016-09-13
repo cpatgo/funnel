@@ -1130,4 +1130,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     font-size: 22px;
     display: inline-block;
     cursor: pointer;
-    font-weight: 500; }
+    font-weight: 500; 
+}
+
+.template_buttons + a{ color:#fff; }
