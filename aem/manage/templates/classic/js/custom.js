@@ -503,6 +503,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_landing_page_select_template').addClass('list_selection_active');
     });
 
+
+    /*
     $body.on('click', '.btn_landing_page_builder', function(e){
         e.preventDefault();
         $body.find('.select_landing_page_builder').show();
@@ -555,6 +557,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_builder').removeClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
     });
+
+    */
 
 
     $body.on('click', '#add_new_list_go', function(e){
