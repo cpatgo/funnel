@@ -2625,6 +2625,11 @@ $(function () {
         $('#linkCopied').modal('show');
     });
 
+    $('.close_tab').on('click', function(e){
+        window.top.close();
+        exit();
+    })
+
     $('#saveTemplate').on('click', function(e){
         e.preventDefault();
         auto_generate_page();
