@@ -605,9 +605,10 @@ jQuery(document).ready(function(){
     });
 
     $body.on('click', 'name[landing-page-url]', function(e){
-        jQuery('.template_buttons').hide();
         e.preventDefault();
-        jQuery(this).closest('label').find('.template_buttons').show();
+        jQuery('.template_buttons').hide();
+        var template = jQuery(this).attr('id');
+        jQuery('label[for="'+template+'"]').find('.template_buttons').show();
     });
 
     //GET FORMS
