@@ -1026,7 +1026,7 @@ label.acquisition, label.monetization, label.activation {
     padding: 20px;
     cursor: pointer;
 }
-
+/*
 .select_landing_page_template, 
 .select_landing_page_builder, 
 .select_redirect_page_builder,
@@ -1034,7 +1034,7 @@ label.acquisition, label.monetization, label.activation {
 .select_redirect_page_custom_url 
 {
   display: none;
-}
+}*/
 
 .select_existing_list .fa, 
 .newlist_btn .fa, 
