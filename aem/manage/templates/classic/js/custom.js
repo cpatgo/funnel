@@ -623,18 +623,18 @@ jQuery(document).ready(function(){
         show: {
             effect: "slidedown",
             delay: 250
-        }
-        // },
-        // content: function() {
-        //     var element = $( this );
+        
+        },
+        content: function() {
+            var element = $( this );
             
-        //     if ( element.is( "[title]" ) ) {
-        //         return element.attr( "title" );
-        //     }
-        //     if ( element.is( "img" ) ) {
-        //         return element.attr( "alt" );
-        //     }
-        // }
+            if ( element.is( "[title]" ) ) {
+                return element.attr( "title" );
+            }
+            if ( element.is( "img" ) ) {
+                return element.attr( "alt" );
+            }
+        }
     });
 
     
