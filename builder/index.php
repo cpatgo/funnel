@@ -2203,7 +2203,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
               
               <div class="modal-body text-center">
                   <p>
-                    Click the 'Copy Link' button and this will save it so you can paste it to AEM.
+                    Click the 'Copy Link' button and this will save it so you can paste it to AEM.<br>
                     <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">Copy Link</button>
                     <b id="url_link"></b>
                   </p>
