@@ -354,7 +354,7 @@ $insert = array(
 	'optin_format' => 'mime',
 	'optin_from_name' => $i['site']['site_name'],
 	'optin_from_email' => $i['site']['emfrom'],
-	'optin_subject' => _a("Please confirm your subscription"),
+	'optin_subject' => "%LISTNAME%",
 	'optin_text' => _a("Thank you for subscribing.") . "\n\n" . _a("Click here to confirm your subscription:") . "\n%CONFIRMLINK%",
 	'optin_html' => '<body><div style="font-size: 12px; font-family: Arial, Helvetica;"><strong>'
 		. _a("Thank you for subscribing to %LISTNAME%!")
