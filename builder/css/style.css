@@ -422,7 +422,7 @@ body .sp-input {
 }
 
 .menu .main {
-	background: none repeat scroll 0 0 #7b838b; 
+	background: none repeat scroll 0 0 #fff; 
     height: 100% !important;
     overflow-y: auto;
     padding-top: 20px;
@@ -485,7 +485,7 @@ body .sp-input {
 
 .menu .main h3 {
 	font-size: 17px;
-	color: #fff;
+	color: #333;
 	text-transform: uppercase;
 	font-weight: normal;
 	margin: 0px 20px 10px;
@@ -507,7 +507,7 @@ body .sp-input {
 }
 
 .menu .main > ul > li > a {
-	color: #ecf0f1;
+	color: #258dcd;
 	display: block;
 	line-height: 35px;
 	-webkit-transition: color 0.5s; /* For Safari 3.1 to 6.0 */
@@ -519,7 +519,7 @@ body .sp-input {
 
 .menu .main > ul#elements > li > a:hover, .menu .main > ul#elements > li > a.active {
 	color: #fff;
-	background: #1f2e3c;
+	background: #666;
 }
 
 .main > .sideButtons {
@@ -539,7 +539,7 @@ body .sp-input {
 }
 
 .menu .second {
-	background: #1f2e3c;
+	background: #666;
 	width: 0px;
 	height: 100%;
 	float: left;
