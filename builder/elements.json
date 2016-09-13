@@ -17,7 +17,7 @@ var _Elements = {"elements": {
     ],
 
     "Thank You": [
-        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+        {"url":"elements/glc-thankyou.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou.png"}
     ],
 
     // "Sales Funnel": [
