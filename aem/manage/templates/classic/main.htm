@@ -144,7 +144,7 @@
           {/if}
 
           {if $admin.pg_message_add}
-          <li class="special">
+          <li id="menu_campaign_new" class="special" >
             <i class="fa fa-plus-circle"></i>
             <a href="desk.php?action=campaign_new"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
                   {"Create Campaign"|alang}</a>
@@ -184,25 +184,25 @@
         {/if}
         
         {if $admin.pg_message_add}
-          <li class="special">
+          <li id="menu_new_funnel_campaign" class="special">
             <a href="desk.php?action=new_funnel_campaign"><img class="va" src="images/mail_add-32-32.png" width="16" height="16" /> 
                   {"Create Campaign"|alang}</a>
           </li>
         {/if}
 
-        <li class="special">
+        <li id="menu_funnel_campaign" class="special">
             <a href="desk.php?action=funnel_campaign"><i class="fa fa-plus-circle"></i> {"Existing Campaigns"|alang}</a>
         </li>
 
-        <li class="special">
+        <li id="menu_campaign_new" class="special">
             <a href="desk.php?action=campaign_new"><i class="fa fa-plus-circle"></i> {"Advanced Campaign"|alang}</a>
         </li>
 
-        <li class="special">
+        <li id="menu_builder" class="special">
             <a href="/builder"><i class="fa fa-plus-circle"></i> {"Site Builder"|alang}</a> 
         </li>
 
-        <li class="special">
+        <li id="menu_myhub" class="special">
           <a href="/myhub"><i class="fa fa-plus-circle"></i> {"My Hub"|alang}</a> 
         </li>      
       </ul>
