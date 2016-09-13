@@ -2590,7 +2590,7 @@ $(function () {
                         jheight += 100;
                         jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
                         jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
-                    }, 2000);
+                    }, 4000);
                 }
             },
             error: function(errorThrown){
