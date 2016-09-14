@@ -614,6 +614,12 @@ jQuery(document).ready(function(){
         jQuery('label[for="'+template+'"]').find('.template_buttons').show();
     });
 
+    $body.on('click', 'input[name=download-page-url]', function(){
+        jQuery('.template_buttons').hide();
+        var template = jQuery(this).attr('id');
+        jQuery('label[for="'+template+'"]').find('.template_buttons').show();
+    });
+
 
     //GET FORMS
     // aem_functions.get_forms();
