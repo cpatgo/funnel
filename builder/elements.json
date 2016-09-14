@@ -8,6 +8,27 @@ var _Elements = {"elements": {
         // {"url":"elements/glc-freebook.html", "height":163, "thumbnail":"elements/thumbs/glc-freebook.jpg"}
     ],
 
+    "Dental": [
+        {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"}
+    ],
+
+    "Fitness": [
+        {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"}
+    ],
+
+    "Giveaways": [
+        {"url":"elements/glc-giveaway.html", "height":163, "thumbnail":"elements/thumbs/glc-giveaway.jpg"},
+        {"url":"elements/glc-freeapp.html", "height":163, "thumbnail":"elements/thumbs/glc-freeapp.jpg"},
+        // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
+        // {"url":"elements/glc-timelimit.html", "height":163, "thumbnail":"elements/thumbs/glc-timelimit.jpg"}
+    ],
+
+    "Skin Care": [
+    ],
+
+    "Travel": [
+    ],
+
     "Optin": [
         // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
