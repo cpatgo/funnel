@@ -1136,4 +1136,4 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 .template_buttons > .btn{ color:#fff; }
 
 
-.template_title{ margin-bottom:5px;text-align: center;font-weight: 400; }
+.template_title{ margin: 17px 0px; text-align: center; font-weight: 400; display: block; }
