@@ -1133,6 +1133,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     font-weight: 500; 
 }
 
-.template_buttons + a{ color:#fff; }
+.template_buttons > .btn{ color:#fff; }
 
-/*.btn_menu_option{text-align:center;}*/
+
+.template_title{ margin-bottom:5px;text-align: center;font-weight: 400; }
