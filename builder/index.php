@@ -1,7 +1,6 @@
 <?php
 if(!session_id()) session_start();
 if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">window.location="/glc/login.php";</script>');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +35,8 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   </head>
   <?php 
     include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
-    builder_restricted(); ?>
+    builder_restricted(); 
+  ?>
   <body>
     <!-- Left Side Menu -->
   	<div class="menu" id="menu">
