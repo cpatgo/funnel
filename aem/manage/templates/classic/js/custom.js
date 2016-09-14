@@ -503,6 +503,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_landing_page_select_template').addClass('list_selection_active');
     });
 
+
+    /*
     $body.on('click', '.btn_landing_page_builder', function(e){
         e.preventDefault();
         $body.find('.select_landing_page_builder').show();
@@ -556,6 +558,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
     });
 
+    */
+
 
     $body.on('click', '#add_new_list_go', function(e){
         e.preventDefault();
@@ -605,6 +609,12 @@ jQuery(document).ready(function(){
     });
 
     $body.on('click', 'input[name=landing-page-url]', function(){
+        jQuery('.template_buttons').hide();
+        var template = jQuery(this).attr('id');
+        jQuery('label[for="'+template+'"]').find('.template_buttons').show();
+    });
+
+    $body.on('click', 'input[name=download-page-url]', function(){
         jQuery('.template_buttons').hide();
         var template = jQuery(this).attr('id');
         jQuery('label[for="'+template+'"]').find('.template_buttons').show();
