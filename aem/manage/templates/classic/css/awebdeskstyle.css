@@ -1026,7 +1026,7 @@ label.acquisition, label.monetization, label.activation {
     padding: 20px;
     cursor: pointer;
 }
-
+/*
 .select_landing_page_template, 
 .select_landing_page_builder, 
 .select_redirect_page_builder,
@@ -1034,7 +1034,7 @@ label.acquisition, label.monetization, label.activation {
 .select_redirect_page_custom_url 
 {
   display: none;
-}
+}*/
 
 .select_existing_list .fa, 
 .newlist_btn .fa, 
@@ -1130,4 +1130,10 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     font-size: 22px;
     display: inline-block;
     cursor: pointer;
-    font-weight: 500; }
+    font-weight: 500; 
+}
+
+.template_buttons > .btn{ color:#fff; }
+
+
+.template_title{ margin: 17px 0px; text-align: center; font-weight: bold; display: block; }
