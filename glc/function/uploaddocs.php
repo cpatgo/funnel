@@ -7,22 +7,26 @@ if($_POST) {
 	$doctype = $_POST['doctype'];
 
 	if(isset($_POST['corporate_tax_number'])){
-		$user_class = getInstance('Class_User');
-		$doc_data = array(
-			'user_id' 		=> $id,
-			'image_type' 	=> '',
-			'image'			=> '',
-			'image_size'	=> 0,
-			'image_ctgy' 	=> '',
-			'image_name' 	=> $_POST['corporate_tax_number'],
-			'doctype' 		=> $doctype,
-			'approved' 		=> 0,
-			'date' 			=> time(),
-			'dateapproved' 	=> ''
-		);
-		$user_class->insert_document($doc_data);
-		$user_class->glc_update_usermeta($id, 'corporate_tax_number', $_POST['corporate_tax_number']);
-		$msg = 'Thank you for submitting!';
+		if(!empty($_POST['corporate_tax_number'])):
+			$user_class = getInstance('Class_User');
+			$doc_data = array(
+				'user_id' 		=> $id,
+				'image_type' 	=> '',
+				'image'			=> '',
+				'image_size'	=> 0,
+				'image_ctgy' 	=> '',
+				'image_name' 	=> $_POST['corporate_tax_number'],
+				'doctype' 		=> $doctype,
+				'approved' 		=> 0,
+				'date' 			=> time(),
+				'dateapproved' 	=> ''
+			);
+			$user_class->insert_document($doc_data);
+			$user_class->glc_update_usermeta($id, 'corporate_tax_number', $_POST['corporate_tax_number']);
+			$msg = 'Thank you for submitting!';
+		else:
+			$err = "Please enter your Corporate Tax Number";
+		endif;
 	} else {
 		if(!isset($_FILES['userfile'])) {
 			$err = 'Please select a file';
@@ -37,7 +41,12 @@ if($_POST) {
 			}
 		}
 	}
-    printf('<script type="text/javascript">window.location="%s/glc/index.php?page=documents";</script>', GLC_URL);
+
+	$result = "";
+	if(!empty($msg)) $result .= sprintf('&msg=%s', $msg);
+	if(!empty($err)) $result .= sprintf('&err=%s', $err);
+
+    printf('<script type="text/javascript">window.location="%s/glc/index.php?page=documents%s";</script>', GLC_URL, $result);
 }
 function upload($id, $doctype){
 // we first include the upload class, as we will need it here to deal with the uploaded file
