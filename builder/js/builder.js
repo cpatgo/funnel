@@ -79,7 +79,7 @@ $(window).load(function () {
 
     $('#loader').fadeOut(function () {
 
-        $('#menu').animate({'left': '-190px'}, 1000);
+        // $('#menu').animate({'left': '-190px'}, 1000);
 
         $('#rmenu').animate({'right': '-210px'}, 1000);
 
@@ -1790,15 +1790,26 @@ $(function () {
 
     //main menu hide/show
 
-    $('#menu').mouseenter(function () {
+    // $('#menu').mouseenter(function () {
 
-        $(this).stop().animate({'left': '0px'}, 500);
+    //     $(this).stop().animate({'left': '0px'}, 500);
 
-    }).mouseleave(function () {
+    // }).mouseleave(function () {
 
-        $(this).stop().animate({'left': '-190px'}, 500);
+    //     $(this).stop().animate({'left': '-190px'}, 500);
 
-    })
+    // })
+
+    $('#menu a.toggle').click(function () {
+        if ( $('#menu').hasClass('menu_close') ) {
+            $('#menu').stop().animate({'left': '0px'}, 500);  
+            $('#menu').removeClass('menu_close');
+        }
+        else{
+            $('#menu').stop().animate({'left': '-190px'}, 500);  
+            $('#menu').addClass('menu_close');
+        }
+    });
 
     //main rmenu hide/show
 
