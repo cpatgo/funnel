@@ -54,7 +54,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   			<h3><span class="fui-list"></span> PRE-MADE</h3>
   			
   			<ul id="elements">
-  				<!-- <li><a href="#" id="all">All Blocks</a></li> -->
+  				<li><a href="#" id="all">All Blocks</a></li>
   			</ul>
   			
 			<a href="#" class="toggle"><span class="fui-gear"></span></a>
