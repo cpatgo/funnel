@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+$('body').find('#skin_care').parent().html('<h3><span class="fui-list menu_categ">Skin Care</span></h3>' + '<a href id="skin_care">Skin Care</a>');
+$('body').find('#travel').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
+
+
+
 "use strict";
 
 
@@ -590,8 +595,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     document.querySelector('head').appendChild(msViewportStyle);
 }
 
-$('body').find('#skin_care').parent().html('<h3><span class="fui-list menu_categ">Skin Care</span></h3>' + '<a href id="skin_care">Skin Care</a>');
-$('body').find('#travel').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
 
 
 }); // End $(document).ready Function
