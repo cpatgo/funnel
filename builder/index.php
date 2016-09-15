@@ -2428,7 +2428,9 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     	}*/
     	
     	
-    	
+    	$('body').find('#skin_care').parent().html('<h3><span class="fui-list menu_categ">Skin Care</span></h3>' + '<a href id="skin_care">Skin Care</a>');
+      $('body').find('#travel').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
+
     	
     })    
     
