@@ -593,3 +593,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 
 }); // End $(document).ready Function
+
+
+$('body').find('#skin_care').parent().append('<h3><span class="fui-list menu_categ">Skin Care</span></h3>' + '<a href id="skin_care">Skin Care</a>');
