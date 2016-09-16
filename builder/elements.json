@@ -43,7 +43,7 @@ var _Elements = {"elements": {
     ],
 
     "Opt-in": [
-
+        {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
 
     "Sales": [
@@ -51,7 +51,9 @@ var _Elements = {"elements": {
     ],
 
     "Skin Care": [
-
+        // {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
+        {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
+        {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
     ],
 
     "Thank You": [
@@ -72,23 +74,6 @@ var _Elements = {"elements": {
     "Video": [
 
     ],
-
-    "Dental": [
-        
-    ],
-
-    "Fitness": [
-
-    ],
-
-    
-
-    "Skin Care": [
-        // {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
-        {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
-        {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
-    ],
-
 
     // "Optin": [
         // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
