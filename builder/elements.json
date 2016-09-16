@@ -21,6 +21,7 @@ var _Elements = {"elements": {
     ],
 
     "GLC": [
+        {"url":"elements/glc-glc1.html", "height":163, "thumbnail":"elements/thumbs/glc-glc1.png"},
         // {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
         // {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
         // {"url":"elements/glc-ebook_steps.html", "height":163, "thumbnail":"elements/thumbs/glc-ebook-steps.jpg"},
@@ -67,11 +68,11 @@ var _Elements = {"elements": {
         {"url":"elements/glc-travel3.html", "height":163, "thumbnail":"elements/thumbs/glc-travel3.jpg"},
     ],
 
-    "Work From Home": [
-
+    "Video": [
+        {"url":"elements/glc-eventvideo.html", "height":163, "thumbnail":"elements/thumbs/glc-eventvideo.png"},
     ],
 
-    "Video": [
+    "Work From Home": [
 
     ],
 
