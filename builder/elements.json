@@ -1,94 +1,49 @@
 var _Elements = {"elements": {
-    "About Me": [
-
-    ],
-    
-    "Download": [
-
-    ],
-
-    "General": [
-        {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"} // DENTAL
-        {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"} // FITNESS
-    ],
-
-    "Giveaways": [
-        {"url":"elements/glc-giveaway.html", "height":163, "thumbnail":"elements/thumbs/glc-giveaway.jpg"},
-        {"url":"elements/glc-freeapp.html", "height":163, "thumbnail":"elements/thumbs/glc-freeapp.jpg"},
-        {"url":"elements/glc-secrettraffic.html", "height":163, "thumbnail":"elements/thumbs/glc-secrettraffic.png"},
-        // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
-        // {"url":"elements/glc-timelimit.html", "height":163, "thumbnail":"elements/thumbs/glc-timelimit.jpg"}
-    ],
-
-    "GLC": [
-        // {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
-        // {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
+    "GLC Themes": [
+        {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
+        {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
         // {"url":"elements/glc-ebook_steps.html", "height":163, "thumbnail":"elements/thumbs/glc-ebook-steps.jpg"},
         // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
         // {"url":"elements/glc-houseworth.html", "height":163, "thumbnail":"elements/thumbs/glc-houseworth.jpg"},
         // {"url":"elements/glc-freebook.html", "height":163, "thumbnail":"elements/thumbs/glc-freebook.jpg"}
     ],
 
-
-    "Holiday": [
-
+    "Dental": [
+        {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"}
     ],
 
-    "MLM": [
-        
+    "Fitness": [
+        {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"}
     ],
 
-    "Nutrition": [
-        
-    ],
-
-    "Opt-in": [
-
-    ],
-
-    "Sales": [
-        
+    "Giveaways": [
+        {"url":"elements/glc-giveaway.html", "height":163, "thumbnail":"elements/thumbs/glc-giveaway.jpg"},
+        {"url":"elements/glc-freeapp.html", "height":163, "thumbnail":"elements/thumbs/glc-freeapp.jpg"},
+        // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
+        // {"url":"elements/glc-timelimit.html", "height":163, "thumbnail":"elements/thumbs/glc-timelimit.jpg"}
     ],
 
     "Skin Care": [
+    ],
 
+    "Travel": [
+    ],
+
+    "Optin": [
+        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    ],
+
+    "Download": [
+        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
 
     "Thank You": [
         {"url":"elements/glc-thankyou.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou.png"}
     ],
 
-
-    "Travel": [
-        // {"url":"elements/glc-travel1.html", "height":163, "thumbnail":"elements/thumbs/glc-travel1.jpg"},
-        // {"url":"elements/glc-travel2.html", "height":163, "thumbnail":"elements/thumbs/glc-travel2.jpg"},
-        {"url":"elements/glc-travel3.html", "height":163, "thumbnail":"elements/thumbs/glc-travel3.jpg"},
-    ],
-
-    "Work From Home": [
-
-    ],
-
-    "Video": [
-
-    ],
-
-    "Dental": [
-        
-    ],
-
-    "Fitness": [
-
-    ],
-
-    
-
-    "Skin Care": [
-        // {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
-        {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
-        {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
-    ],
-    
+    // "Sales Funnel": [
+    //     {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
+    // ],
     
     "Navigation":[
     	{"url":"elements/nav1-1.html","height":79, "thumbnail":"elements/thumbs/nav1-1.png"},
