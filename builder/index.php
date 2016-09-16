@@ -51,7 +51,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>
         <hr>
 			  		  			
-  			<h3><span class="fui-list"></span> GENERAL</h3>
+  			<h3><span class="fui-list"></span> PAGE TEMPLATES</h3>
   			
   			<ul id="elements">
   				<li><a href="#" id="all">All Blocks</a></li>
