@@ -88,20 +88,7 @@ var _Elements = {"elements": {
         {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
         {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
     ],
-
-
-    // "Optin": [
-        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
-    // ],
-
-    // "Download": [F
-        // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
-    // ],
-
-
-    // "Sales Funnel": [
-    //     {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
-    // ],
+    
     
     "Navigation":[
     	{"url":"elements/nav1-1.html","height":79, "thumbnail":"elements/thumbs/nav1-1.png"},
