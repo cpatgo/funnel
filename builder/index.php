@@ -51,7 +51,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         </div>
         <hr>
 			  		  			
-  			<h3><span class="fui-list"></span> PRE-MADE</h3>
+  			<h3><span class="fui-list"></span> GENERAL</h3>
   			
   			<ul id="elements">
   				<li><a href="#" id="all">All Blocks</a></li>
@@ -2428,8 +2428,12 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     	}*/
     	
     	
-    	$('body').find('#skin_care').parent().html('<h3><span class="fui-list menu_categ">Skin Care</span></h3>' + '<a href id="skin_care">Skin Care</a>');
-      $('body').find('#travel').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
+    	$('body').find('#navigation').parent().html('<h3><span class="fui-list menu_categ"> DIY</span></h3>' + '<a href id="navigation">Navigation</a>');
+     //  $('body').find('#travel').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
+      
+      // $('body').find('#navigation').parent().html('<li id="elements"><a href="#" id="all">All Blocks</a></li>' + '<a href id="navigation">Navigation</a>'');
+      // $('body').find('#navigation').parent().html('<h3><span class="fui-list menu_categ">Travel</span></h3>' + '<a href id="travel">Travel</a>');
+
 
     	
     })    
