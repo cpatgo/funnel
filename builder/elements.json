@@ -19,6 +19,7 @@ var _Elements = {"elements": {
     "Giveaways": [
         {"url":"elements/glc-giveaway.html", "height":163, "thumbnail":"elements/thumbs/glc-giveaway.jpg"},
         {"url":"elements/glc-freeapp.html", "height":163, "thumbnail":"elements/thumbs/glc-freeapp.jpg"},
+        {"url":"elements/glc-secrettraffic.html", "height":163, "thumbnail":"elements/thumbs/glc-secrettraffic.png"},
         // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
         // {"url":"elements/glc-timelimit.html", "height":163, "thumbnail":"elements/thumbs/glc-timelimit.jpg"}
     ],
