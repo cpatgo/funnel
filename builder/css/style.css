@@ -524,14 +524,14 @@ body .sp-input {
 
 .main > .sideButtons {
 	margin-left: 20px;
-	width: 170px;
-	margin-bottom: 20px;
+	width: 84%;
+	margin-bottom: 10px;
 }
 
 .main > .sideButtons > * {
 	margin: 0px;
 	float: left;
-	width: 50%;
+	width: 90% !important;
 }
 
 .main > hr {
