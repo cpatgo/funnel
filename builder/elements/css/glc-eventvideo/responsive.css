@@ -1,0 +1,67 @@
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+#banner .heading h1 {
+  padding: 0 5%;
+}
+
+
+
+}
+
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+
+#banner .heading h1 {
+  padding: 0 5%;
+}
+
+.subscribe {
+  margin-top: 40px;
+}
+
+.speak {
+  margin: 25px 0 52px;
+}
+
+.sponsor > li {
+  width: 50%;
+}
+
+.copyrights > p, .social-link {
+  text-align: center !important;
+}
+
+
+}
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+#banner .heading h1 {
+  padding: 0 5%;
+}
+
+.subscribe {
+  margin-top: 40px;
+}
+
+.speak {
+  margin: 25px 0 52px;
+}
+
+.sponsor > li {
+  width: 50%;
+}
+
+.copyrights > p, .social-link {
+  text-align: center !important;
+}
+
+}
