@@ -24,9 +24,13 @@ var _Elements = {"elements": {
     ],
 
     "Skin Care": [
+        // {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
     ],
 
     "Travel": [
+        // {"url":"elements/glc-travel1.html", "height":163, "thumbnail":"elements/thumbs/glc-travel1.jpg"},
+        // {"url":"elements/glc-travel2.html", "height":163, "thumbnail":"elements/thumbs/glc-travel2.jpg"},
+        {"url":"elements/glc-travel3.html", "height":163, "thumbnail":"elements/thumbs/glc-travel3.jpg"},
     ],
 
     "Optin": [
