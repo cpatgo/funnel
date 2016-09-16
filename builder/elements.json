@@ -1,7 +1,7 @@
 var _Elements = {"elements": {
     "GLC Themes": [
-        {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
-        {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
+        // {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
+        // {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
         // {"url":"elements/glc-ebook_steps.html", "height":163, "thumbnail":"elements/thumbs/glc-ebook-steps.jpg"},
         // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
         // {"url":"elements/glc-houseworth.html", "height":163, "thumbnail":"elements/thumbs/glc-houseworth.jpg"},
@@ -33,13 +33,13 @@ var _Elements = {"elements": {
         {"url":"elements/glc-travel3.html", "height":163, "thumbnail":"elements/thumbs/glc-travel3.jpg"},
     ],
 
-    "Optin": [
+    // "Optin": [
         // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
-    ],
+    // ],
 
-    "Download": [
+    // "Download": [
         // {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
-    ],
+    // ],
 
     "Thank You": [
         {"url":"elements/glc-thankyou.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou.png"}
