@@ -45,9 +45,9 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="sideButtons clearfix">
           <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; eMarketer</a>
         </div>
-        <hr>
+        
         <div class="sideButtons clearfix">
-          <a href="/myhub" class="btn btn-info menu_dashboard glchub">> My Hub</a>
+          <a href="/myhub" class="btn btn-info menu_dashboard glchub">&raquo; My Hub</a>
         </div>
         <hr>
 			  		  			
