@@ -52,7 +52,7 @@ var _Elements = {"elements": {
     ],
 
     "Skin Care": [
-        // {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
+        {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
         {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
         {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
     ],
@@ -206,7 +206,7 @@ var _Elements = {"elements": {
         {"url":"elements/testimonials7-3.html","height":383, "thumbnail":"elements/thumbs/testimonials7-3.png"}  
     ],
 
-    "Video":[
+    "Videos":[
         {"url":"elements/video1-1.html","height":675, "thumbnail":"elements/thumbs/video1-1.png"},
         {"url":"elements/video2-1.html","height":552, "thumbnail":"elements/thumbs/video2-1.png"},
         {"url":"elements/video3-1.html","height":551, "thumbnail":"elements/thumbs/video3-1.png"},
