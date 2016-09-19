@@ -140,8 +140,8 @@ jQuery(document).ready(function(){
         // initialize
         onInit: function(event, current){
             jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
-            $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
-            console.log('currently in step # ' . current);
+            // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
+            // console.log('currently in step # ' . current);
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
@@ -150,9 +150,9 @@ jQuery(document).ready(function(){
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
 
-            if ($body.find('#create-funnel-campaign-p-4 #form_name').val() != ""){
-                $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').show();
-            }
+            // if ($body.find('#create-funnel-campaign-p-4 #form_name').val() != ""){
+            //     $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').show();
+            // }
 
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
             if(newIndex == 4 && typeof step4 !== 'undefined') {
@@ -221,7 +221,7 @@ jQuery(document).ready(function(){
             return form.valid();
         },
         onStepChanged: function (event, current, next) {
-            console.log('currently in step # ' + current);
+            // console.log('currently in step # ' + current);
 
             if (current > 0) {
                 jQuery('.actions > ul > li:first-child').attr('style', '');
