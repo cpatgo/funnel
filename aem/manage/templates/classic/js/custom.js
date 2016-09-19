@@ -140,15 +140,19 @@ jQuery(document).ready(function(){
         // initialize
         onInit: function(event, current){
             jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+            $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
             console.log('currently in step # ' . current);
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            
-
 
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
+            }
+#create-funnel-campaign-p-4
+#form_name
+            if ($body.find('#create-funnel-campaign-p-4 #form_name').val() != ""){
+                $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').show();
             }
 
             var step4 = jQuery('input[name=landing-page-url]:checked').val();
