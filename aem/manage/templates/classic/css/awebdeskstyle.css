@@ -12,9 +12,9 @@ body, .campaign_help, .campaign_types_desc, .campaign_types_head {
 }
 
 .template_buttons {
-  position: absolute;
+/*  position: absolute;
   width: 26%;
-  margin-top: -73px;
+  margin-top: -73px;*/
 }
 
 #sub_submenu ul li.special.active {
