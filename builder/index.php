@@ -1,5 +1,6 @@
 <?php
-if(!session_id()) session_start();
+global $session;
+if(!session_id()) session_start(); // wordpress set session global
 if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">window.location="/glc/login.php";</script>');
 ?>
 <!DOCTYPE html>
