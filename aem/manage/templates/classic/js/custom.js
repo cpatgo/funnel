@@ -140,10 +140,11 @@ jQuery(document).ready(function(){
         // initialize
         onInit: function(event, current){
             jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+            console.log('currently in step # ' . current);
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            console.log('currently in step # ' + currentIndex + ', ' + newIndex);
+            
 
 
             if (newIndex < currentIndex) {
@@ -217,6 +218,8 @@ jQuery(document).ready(function(){
             return form.valid();
         },
         onStepChanged: function (event, current, next) {
+            console.log('currently in step # ' + current);
+
             if (current > 0) {
                 jQuery('.actions > ul > li:first-child').attr('style', '');
             } else {
