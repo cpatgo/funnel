@@ -608,11 +608,11 @@ jQuery(document).ready(function(){
         jQuery('input[name=landing-page-url]:checked').val(jQuery(this).val());
     });
 
-    $body.on('click', 'input[name=landing-page-url]', function(){
-        jQuery('.template_buttons').hide();
-        var template = jQuery(this).attr('id');
-        jQuery('label[for="'+template+'"]').find('.template_buttons').show();
-    });
+    // $body.on('click', 'input[name=landing-page-url]', function(){
+    //     jQuery('.template_buttons').hide();
+    //     var template = jQuery(this).attr('id');
+    //     jQuery('label[for="'+template+'"]').find('.template_buttons').show();
+    // });
 
     $body.on('click', 'input[name=download-page-url]', function(){
         jQuery('.template_buttons').hide();
