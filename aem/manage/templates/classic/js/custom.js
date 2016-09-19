@@ -143,7 +143,7 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            console.log('currently in step # ' + currentIndex);
+            console.log('currently in step # ' + currentIndex + ', ' + newIndex);
 
 
             if (newIndex < currentIndex) {
