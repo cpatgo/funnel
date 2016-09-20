@@ -628,47 +628,7 @@
 					</div>
 				</div>
 				
-				<div class="col-md-12">
-					<hr class="divider" />
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Form Options"|alang}
-					</h1>
-				</div>
-				<div class="col-md-12">
-					<div class="campaign_help">
-						<p class="lead text-center">Check the Subcriber field options you want to collect.</p>
-					</div>
-				</div>
-				<div class="col-md-2 col-md-offset-5">	
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
-						</label>
-					</div>
-					{foreach from=$optional_fields item=field}
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
-						</label>
-					</div>
-					{/foreach}
-				</div>
-				<div class="col-md-12">
-					<div class="campaign_help">
-						<p class="lead text-center">This is how you will keep track of each form for your page/site.</p>
-					</div>
-				</div>
+				
 			</div>
         </div>
     </section>
