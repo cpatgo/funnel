@@ -229,11 +229,13 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
             }
 
-            console.log(current);
+            // console.log(current);
             if (current == 4) {
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
+
+
         },
         onFinishing: function (event, currentIndex)
         {
@@ -245,6 +247,10 @@ jQuery(document).ready(function(){
         {
             window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
         }
+    });
+
+    jQuery('.btn-choose').click(function() {
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
     });
 
     //COLLECTION OF FUNCTIONS
