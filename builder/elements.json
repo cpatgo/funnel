@@ -53,6 +53,12 @@ var _Elements = {"elements": {
         {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
 
+    "Redirect": [
+        {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect.png"},
+        {"url":"elements/glc-redirect2.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect2.jpg"},
+        {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect3.jpg"}
+    ],
+
     "Sales": [
         
     ],
@@ -64,9 +70,7 @@ var _Elements = {"elements": {
     ],
 
     "Thank You": [
-        {"url":"elements/glc-thankyou.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou.png"},
-        {"url":"elements/glc-thankyou2.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou2.jpg"},
-        {"url":"elements/glc-thankyou3.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou3.jpg"}
+        
     ],
 
 
