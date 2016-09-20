@@ -230,8 +230,11 @@ jQuery(document).ready(function(){
             }
 
             // console.log(current);
-            if (current == 4) {
-                jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
+            if (current == 4) { // if current index is equals to 4th step
+                // li:nth-child(1)  =   Previous Button
+                // li:nth-child(2)  =   Continue Button
+                // li:nth-child(3)  =   Finish Button
+                jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
 
