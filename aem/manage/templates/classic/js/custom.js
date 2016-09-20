@@ -228,6 +228,12 @@ jQuery(document).ready(function(){
             } else {
                 jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
             }
+
+            console.log(current);
+            if (current == 4) {
+                jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
+                jQuery('.actions > ul > li:nth-child(2)').hide();
+            }
         },
         onFinishing: function (event, currentIndex)
         {

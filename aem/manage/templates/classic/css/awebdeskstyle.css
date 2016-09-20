@@ -1138,3 +1138,5 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
 
 .template_title{ margin: 17px 0px; text-align: center; font-weight: bold; display: block; }
+
+.template_wrapper{    display: inline-block;width: 30%;margin: 4px 12px;}
