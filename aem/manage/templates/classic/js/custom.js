@@ -230,7 +230,23 @@ jQuery(document).ready(function(){
             }
 
             // console.log(current);
-            if (current == 4 && current == 6 && current == 8) { // if current index is equals to 4th step
+            if (current == 4) { // if current index is equals to 4th step
+                // li:nth-child(1)  =   Previous Button
+                // li:nth-child(2)  =   Continue Button
+                // li:nth-child(3)  =   Finish Button
+                jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
+                jQuery('.actions > ul > li:nth-child(2)').hide();
+            }
+
+            if (current == 6) { // if current index is equals to 4th step
+                // li:nth-child(1)  =   Previous Button
+                // li:nth-child(2)  =   Continue Button
+                // li:nth-child(3)  =   Finish Button
+                jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
+                jQuery('.actions > ul > li:nth-child(2)').hide();
+            }
+
+            if (current == 8) { // if current index is equals to 4th step
                 // li:nth-child(1)  =   Previous Button
                 // li:nth-child(2)  =   Continue Button
                 // li:nth-child(3)  =   Finish Button
