@@ -7,6 +7,10 @@ var _Elements = {"elements": {
 
     ],
 
+    "Event": [
+        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.png"}, // DENTAL
+    ],
+
     "General": [
         {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"}, // DENTAL
         {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"} // FITNESS
@@ -70,6 +74,7 @@ var _Elements = {"elements": {
 
     "Video": [
         {"url":"elements/glc-eventvideo.html", "height":163, "thumbnail":"elements/thumbs/glc-eventvideo.png"},
+        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.png"},
     ],
 
     "Work From Home": [
