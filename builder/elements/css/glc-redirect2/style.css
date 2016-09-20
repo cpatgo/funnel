@@ -417,7 +417,6 @@ body {
     }
 }
 .main {
-    margin-top: 40px;
     border: 1px solid #f8f8f8;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -491,9 +490,6 @@ body {
     font-size: 14px;
     color: #555555;
     display: block;
-    margin-top: 18px;
-    margin-left: auto;
-    margin-right: auto
 }
 .footer-container a {
     text-decoration: underline;
