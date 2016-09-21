@@ -539,18 +539,6 @@
 			</div>
 		</div>
 
-    	<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-			<!-- <hr class="divider" /> -->
-				<div class="campaign_help">
-					<h2 class="text_center">What is a Redirect Page?</h2>
-					<p class="lead text_center">
-						{"Here you have 3 options. Choose from our library of amazing "Redirect Page" templates,<br />or you can design your own using the Site Builder, or if you have an Exteranl Website, you can use this option to enter in a Website URL<br />that prospects will go to immediately after filling out your Capture Page information."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>						
-				</div>
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="campaign_help">
@@ -584,7 +572,7 @@
 			</div>
         </div>
 		
-    	<div id="new_redirect_page_div" style="display:none;">
+    	<div id="pre_made_templates_container" class="hidden_div">
 			<div class="row">
 				<div id="pre_made_templates_wrapper">
 					<div class="row">	
@@ -599,7 +587,19 @@
 			</div>
     	</div>
     
-        <div class="row" id="select_existing_list_div">
+        <div id="custom_page_design_container" class="hidden_div">
+        	<!-- <hr style="margin-bottom:40px;"> -->
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					<!-- <label for="">Add new campaign subcribers to an Existing List by clicking the dropdown arrow: </label> -->
+					<select class="form-control input-lg" id="landing-page-list-id" name="landing-page-list-id"></select>
+					<div id="landing-page-list-id-error"></div>
+					<!-- <button class="glc_button" id="refresh_list_list">Click here to refresh page to see list added</button> -->
+				</div>
+			</div>
+        </div>
+
+        <div id="external_url_container" class="hidden_div">
         	<!-- <hr style="margin-bottom:40px;"> -->
 			<div class="col-md-8 col-md-offset-2">
 				<div class="form-group">
