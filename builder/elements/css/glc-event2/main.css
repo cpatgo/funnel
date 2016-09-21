@@ -493,7 +493,7 @@ margin: 15px 0 0;
     padding: 15px;
 }
 
-.agenda-info > span {
+.agenda-info > .time {
   color: #f1c40f;
   display: block;
   font-size: 12px;
@@ -673,7 +673,7 @@ padding: 15px;
     font-weight: 400;
     margin: 0;
 }
-.footer-link > a {
+.footer-link > p {
     color: #f1c40f;
     display: block;
     margin: 0;
