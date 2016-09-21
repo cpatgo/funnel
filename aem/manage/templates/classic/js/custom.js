@@ -562,31 +562,8 @@ jQuery(document).ready(function(){
         
     });
 
-    /*
-    $body.on('click', '.btn_redirect_page_builder', function(e){
-        e.preventDefault();
-        $body.find('.select_redirect_page_template').hide();
-        $body.find('.select_redirect_page_builder').show();
-        $body.find('.select_redirect_page_custom_url').hide();
-        
-        jQuery('.btn_redirect_page_select_template').removeClass('list_selection_active');
-        jQuery('.btn_redirect_page_builder').addClass('list_selection_active');
-        jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
-        
-    });    
 
-    $body.on('click', '.btn_redirect_page_custom_url', function(e){
-        e.preventDefault();
-        $body.find('.select_redirect_page_template').hide();
-        $body.find('.select_redirect_page_builder').hide();        
-        $body.find('.select_redirect_page_custom_url').show();        
 
-        jQuery('.btn_redirect_page_select_template').removeClass('list_selection_active');
-        jQuery('.btn_redirect_page_builder').removeClass('list_selection_active');
-        jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
-    });
-
-    */
 
 
     $body.on('click', '#add_new_list_go', function(e){
@@ -636,12 +613,6 @@ jQuery(document).ready(function(){
         jQuery('input[name=landing-page-url]:checked').val(jQuery(this).val());
     });
 
-    // $body.on('click', 'input[name=landing-page-url]', function(){
-    //     jQuery('.template_buttons').hide();
-    //     var template = jQuery(this).attr('id');
-    //     jQuery('label[for="'+template+'"]').find('.template_buttons').show();
-    // });
-
     $body.on('click', 'input[name=download-page-url]', function(){
         jQuery('.template_buttons').hide();
         var template = jQuery(this).attr('id');
@@ -665,6 +636,12 @@ jQuery(document).ready(function(){
     //         }
     //     });
     // });
+
+
+    // external_website_url_txtbox
+    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
+        jQuery('.actions > ul > li:nth-child(2)').show();
+    });
 
 
     // jQuery('#landing-page-name').tooltip();
