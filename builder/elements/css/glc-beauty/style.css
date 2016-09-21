@@ -79,7 +79,7 @@ progress, section, source, video {display:block;}
 	font-size:18px; line-height:24px; color: #000000; font-weight:normal; font-family:Arial, Helvetica, sans-serif;
 }
 .subnav { width:100%; height:auto; float:left; text-align:left; padding-top:4px;} .subnav ul{ margin:0px; padding:0px; list-style-type:none;}
-.subnav ul li{ width:100%; height:auto; float:left; text-align:left; display:block; font-size:24px; line-height:36px; color: #000000; font-weight:normal; 
+.subnav p { width:100%; height:auto; float:left; text-align:left; display:block; font-size:24px; line-height:36px; color: #000000; font-weight:normal; 
 font-family:Arial, Helvetica, sans-serif; text-transform:uppercase;}
  .form-box {
     z-index: 99;
