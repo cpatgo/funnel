@@ -535,6 +535,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_pre_made_template').addClass('list_selection_active');
         jQuery('.btn_custom_page_design').removeClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
+
+        jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
         
     });
 
@@ -548,6 +550,7 @@ jQuery(document).ready(function(){
         jQuery('.btn_custom_page_design').addClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
         
+        jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
     });
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
@@ -560,6 +563,12 @@ jQuery(document).ready(function(){
         jQuery('.btn_custom_page_design').removeClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
         
+    });
+
+    
+    // external_website_url_txtbox
+    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
+        jQuery('.actions > ul > li:nth-child(2)').show();
     });
 
 
@@ -638,10 +647,6 @@ jQuery(document).ready(function(){
     // });
 
 
-    // external_website_url_txtbox
-    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
-        jQuery('.actions > ul > li:nth-child(2)').show();
-    });
 
 
     // jQuery('#landing-page-name').tooltip();
