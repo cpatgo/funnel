@@ -550,7 +550,7 @@ jQuery(document).ready(function(){
         
     });
 
-    $body.on('click', '.btn_external_url', function(e){
+    $body.on('click', '.btn_redirect_page_custom_url', function(e){
         e.preventDefault();
         $body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').hide();
