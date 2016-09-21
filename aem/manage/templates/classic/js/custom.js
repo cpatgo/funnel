@@ -1,37 +1,6 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    // jQuery("[type='checkbox']").bootstrapSwitch();
-
-    // jQuery("[name='ask4emailField']").bootstrapSwitch();
-    // jQuery("[name='ask4fname']").bootstrapSwitch();
-    // jQuery("[name='ask4lname']").bootstrapSwitch();
-    // jQuery("[name='fields[1]']").bootstrapSwitch();
-    // jQuery("[name='my-checkbox']").bootstrapSwitch();
-    
-//  // var form = $("#example-advanced-form").show();
-
-//  jQuery("#create-campaign-landingpage").steps({
-//      headerTag: "h3",
-//      bodyTag: "section",
-//      transitionEffect: "slideLeft",
-//      // stepsOrientation: "vertical"
-//  });
-//  
-    // jQuery('#my-checkbox2').on('switchChange.bootstrapSwitch', function (e, state) {
-
-    //         if(state){
-    //                     alert("Checked");
-    //                     // Your Code Here
-
-    //         }else{
-    //                     alert("Not Checked");
-    //                     // Your Code Here
-
-    //         }
-
-    //     });
-
     var $body = jQuery('body');
 
     var form = jQuery("#create-funnel-campaign").show();
