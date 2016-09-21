@@ -2406,15 +2406,17 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 
       <?php if(isset($_GET['load_template'])): ?>
           //Load saved template
-            var response = <?php echo json_encode(array("data" => file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template'])), "form" => $_GET['form_id'])) ?>;
+            var response = <?php echo json_encode(array("data" => file_get_contents(sprintf('%s/builder/saved_templates/%s', $_SERVER['DOCUMENT_ROOT'], $_GET['load_template'])), "form" => !empty($_GET['form_id']) ? $_GET['form_id'] : 0)) ?>;
             load_template(response);
       <?php endif; ?>
 
       <?php if(isset($_GET['save_template'])): ?>
           //Load saved template
           $(window).load(function(){
-            var form_id = <?php echo $_GET['form_id'] ?>;
-            load_form(form_id);
+            var form_id = <?php echo (isset($_GET['form_id']) && !empty($_GET['form_id'])) ? $_GET['form_id'] : 0; ?>;
+            if(form_id != 0) {
+              load_form(form_id);
+            }
           });
       <?php endif; ?>
 
