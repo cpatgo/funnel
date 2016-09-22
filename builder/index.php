@@ -2205,8 +2205,8 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
               <div class="modal-body text-center">
                   <p>
                     Clicking on the “COPY LINK” button will automatically copy your page link. You will be instructed to paste this link into a section, which is needed to create your Campaign.<br><br>
-                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">COPY LINK & CONTINUE</button>
-                    <input type="text" name="url_link" id="url_link" style="display:none">
+                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">COPY LINK & CONTINUE</button><br><br>
+                    <b id="url_link"></b>
                   </p>
               </div><!-- /.modal-body -->
           </div><!-- /.modal-content -->

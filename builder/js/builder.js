@@ -2627,7 +2627,8 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 $('#saveTemplateModal').modal('hide');
-                $("#templateModalResult").find('#url_link').val(result.link);
+                console.log(result.link);
+                $("#templateModalResult").find('#url_link').text(result.link);
                 $("#templateModalResult").modal('show');
             },
             error: function(errorThrown){
