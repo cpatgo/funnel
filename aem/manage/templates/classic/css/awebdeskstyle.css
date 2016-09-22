@@ -1022,7 +1022,10 @@ label.acquisition, label.monetization, label.activation {
 .btn_redirect_page_custom_url,
 .btn_pre_made_template,
 .btn_custom_page_design,
-.btn_redirect_page_custom_url{
+.btn_redirect_page_custom_url,
+.btn_thankyou_premadetemplate,
+.btn_thankyou_custompagedesign,
+.btn_thankyou_externalurl{
     width: 100%;
     /*border: 4px solid #258DCD;*/
     border: 1px solid #ccc;
@@ -1049,7 +1052,10 @@ label.acquisition, label.monetization, label.activation {
 .btn_redirect_page_custom_url .fa,
 .btn_pre_made_template .fa,
 .btn_custom_page_design .fa,
-.btn_redirect_page_custom_url .fa{
+.btn_redirect_page_custom_url .fa,
+.btn_thankyou_premadetemplate .fa,
+.btn_thankyou_custompagedesign .fa,
+.btn_thankyou_externalurl .fa{
     text-align: center;
     font-size: 60px;
     /*color: #258DCD;*/
@@ -1066,7 +1072,10 @@ label.acquisition, label.monetization, label.activation {
 .btn_redirect_page_custom_url span,
 .btn_pre_made_template span,
 .btn_custom_page_design span,
-.btn_redirect_page_custom_url span{
+.btn_redirect_page_custom_url span,
+.btn_thankyou_premadetemplate span,
+.btn_thankyou_custompagedesign span,
+.btn_thankyou_externalurl span{
     display: block;
     font-size: 18px;
     color: #666;
@@ -1083,7 +1092,10 @@ label.acquisition, label.monetization, label.activation {
 .btn_redirect_page_custom_url:hover,
 .btn_pre_made_template:hover,
 .btn_custom_page_design:hover,
-.btn_redirect_page_custom_url:hover{
+.btn_redirect_page_custom_url:hover,
+.btn_thankyou_premadetemplate:hover,
+.btn_thankyou_custompagedesign:hover,
+.btn_thankyou_externalurl:hover{
   border: 1px solid #258DCD;
   color: #258DCD;
 }
@@ -1107,6 +1119,12 @@ label.acquisition, label.monetization, label.activation {
 .btn_pre_made_template:hover .fa,
 .btn_custom_page_design:hover .fa,
 .btn_redirect_page_custom_url:hover .fa
+.btn_thankyou_premadetemplate:hover span,
+.btn_thankyou_custompagedesign:hover span,
+.btn_thankyou_externalurl:hover span,
+.btn_thankyou_premadetemplate:hover .fa,
+.btn_thankyou_custompagedesign:hover .fa,
+.btn_thankyou_externalurl:hover .fa
 {
   color: #258DCD;
 }
