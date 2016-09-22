@@ -1,8 +1,11 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
-    var $body = jQuery('body');
     
+
+    jQuery( "#step-progressbar" ).progressbar({
+      value: 0,
+    });
 
     var form = jQuery("#create-funnel-campaign").show();
     form.validate({
