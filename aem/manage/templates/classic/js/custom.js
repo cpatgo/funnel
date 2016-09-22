@@ -505,27 +505,7 @@ jQuery(document).ready(function(){
 
 
 
-
-
-    /*
-    $body.on('click', '.btn_landing_page_builder', function(e){
-        e.preventDefault();
-        $body.find('.select_landing_page_builder').show();
-        
-        $body.find('.select_landing_page_template').hide();
-        
-        // aem_functions.reset_values('#new_list_div');
-        // aem_functions.reset_values('#new_subscriber_div');
-        // $body.find('#select_list_method').val('select_existing_list');
-        // aem_functions.focus_on_element('#select_existing_list_div');
-
-        // css update 
-        // set to active 
-        jQuery('.btn_landing_page_builder').addClass('list_selection_active');
-        jQuery('.btn_landing_page_select_template').removeClass('list_selection_active');
-    });
-    */
-
+    /* Redirect Page Step Wizard */
     $body.on('click', '.btn_pre_made_template', function(e){
         e.preventDefault();
         $body.find('#pre_made_templates_container').show();
@@ -564,14 +544,59 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
         
     });
-
     
     // external_website_url_txtbox
     $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
         jQuery('.actions > ul > li:nth-child(2)').show();
     });
+    /* Redirect Page Step Ends */
 
 
+    /* Thank You Page Step Wizard */
+    $body.on('click', '.btn_thankyou_premadetemplate', function(e){
+        e.preventDefault();
+        $body.find('#thankyou_premadetemplate_container').show();
+        $body.find('#thankyou_custompagedesign_container').hide();
+        $body.find('#thankyou_externalurl_container').hide();
+
+        jQuery('.btn_thankyou_premadetemplate').addClass('list_selection_active');
+        jQuery('.btn_thankyou_custompagedesign').removeClass('list_selection_active');
+        jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
+
+        jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+        
+    });
+
+    $body.on('click', '.btn_thankyou_custompagedesign', function(e){
+        e.preventDefault();
+        $body.find('#thankyou_premadetemplate_container').hide();
+        $body.find('#thankyou_custompagedesign_container').show();
+        $body.find('#thankyou_externalurl_container').hide();
+
+        jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
+        jQuery('.btn_thankyou_custompagedesign').addClass('list_selection_active');
+        jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
+        
+        jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+    });
+
+    $body.on('click', '.btn_thankyou_externalurl', function(e){
+        e.preventDefault();
+        $body.find('#thankyou_premadetemplate_container').hide();
+        $body.find('#thankyou_custompagedesign_container').hide();
+        $body.find('#thankyou_externalurl_container').show();
+
+        jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
+        jQuery('.btn_thankyou_custompagedesign').removeClass('list_selection_active');
+        jQuery('.btn_thankyou_externalurl').addClass('list_selection_active');
+        
+    });
+    
+    // external_website_url_txtbox
+    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
+        jQuery('.actions > ul > li:nth-child(2)').show();
+    });
+    /* Thank You Page Step Ends */
 
 
 
