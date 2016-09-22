@@ -679,7 +679,7 @@ jQuery(document).ready(function(){
     jQuery('#tooltip_name_campaign').tooltip();
     jQuery('#tooltip_step2').tooltip();
     
-    $( "#step-progressbar" ).progressbar({
+    jQuery( "#step-progressbar" ).progressbar({
       value: 40
     });
     
