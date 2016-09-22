@@ -131,7 +131,6 @@ jQuery(document).ready(function(){
                     {
                         // Use pre-made landing page
                         var url_link = jQuery('input[name=landing-page-url]:checked').val();
-                        console.log(url_link);
 
                         // Get form
                         jQuery.ajax({
