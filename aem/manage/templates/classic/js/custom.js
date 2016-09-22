@@ -2,7 +2,7 @@
 jQuery(document).ready(function(){
 
     var $body = jQuery('body');
-    
+    var steps = 12;
 
     jQuery( "#step-progressbar" ).progressbar({
       value: 0,
@@ -199,7 +199,7 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            var counter =  100 * steps  / current;
+            var counter =  (100 * steps)  / current;
 
             jQuery('#step-progressbar').progressbar({value: counter });
 
