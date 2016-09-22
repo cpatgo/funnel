@@ -6,6 +6,10 @@ jQuery(document).ready(function(){
     var progstep_multiplier = 12;
     var currentVal = 0;
 
+    jQuery( "#step-progressbar" ).progressbar({
+      value: currentVal,
+    });
+
     var form = jQuery("#create-funnel-campaign").show();
     form.validate({
         errorPlacement: function errorPlacement(error, element) { 
@@ -197,8 +201,8 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            progressbar.progressbar("option", { 
-                value: 10+10
+            progressbar.progressbar( "option", {
+                value: current
             });
 
 
@@ -694,8 +698,6 @@ jQuery(document).ready(function(){
     jQuery('#tooltip_name_campaign').tooltip();
     jQuery('#tooltip_step2').tooltip();
     
-    jQuery( "#step-progressbar" ).progressbar({
-      value: 40,
-    });
+    
     
 });
