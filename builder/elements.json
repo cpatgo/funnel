@@ -70,7 +70,7 @@ var _Elements = {"elements": {
     ],
 
     "Thank You": [
-        
+        {"url":"elements/glc-thankyou.html", "height":163, "thumbnail":"elements/thumbs/glc-thankyou.png"},
     ],
 
 
