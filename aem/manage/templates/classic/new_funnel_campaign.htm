@@ -516,7 +516,7 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="Pasted the Capture Page URL copied from the site builder in the box below.">	
+							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="http://yourwebsite.com/page.html">	
 							<div id="form_name-error"></div>
 						</div>
 					</div>
@@ -553,6 +553,7 @@
 			</div>
 		</div>
 
+		<!-- 3 column div selector -->
 		<div class="row">
         	<div class="col-md-12">
         		<div class="col-md-4">
@@ -575,15 +576,18 @@
 				</div>
 			</div>
         </div>
-		
+		<!-- end 3 column div selector ends-->
 
+		<!-- redirect_page container -->
 		<div class="redirect_page_container row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
+		    	
 		    	<div id="pre_made_templates_container" class="hidden_div">
 					<div class="row">
 						<div id="pre_made_templates_wrapper">
 							<div class="row">	
 						  		<div class="col-md-12">
+									
 									<div id="radiobutton_container">
 										<div class="template_wrapper">
 											<span class="text_center template_title">Skin Care</span>
@@ -610,6 +614,7 @@
 											</div>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</div>
@@ -646,6 +651,7 @@
 		        </div>
 
 		        <div id="external_url_container" class="hidden_div">
+		        	
 		        	<div class="row" >
 						<div class="col-md-12">
 							<h1 class="step_header_text">
@@ -669,36 +675,20 @@
 						<div class="col-md-12">
 					  		<div class="col-md-8 col-md-offset-2">
 								<div class="form-group">
-									<!-- <label for="">Form Name: </label> -->
 									<input type="text" class="form-control input-lg" id="external_website_url_txtbox" name="external_website_url_txtbox" title="Your External Page URL Here" placeholder="http://yourwebsite.com/page.html">	
 									<div id="form_name-error"></div>
-									<!-- <div class="text_center hint">
-										This is how you will keep track of each form for your page.
-									</div> -->
 								</div>
 							</div>
 						</div>
 					</div>
+
 		        </div>
+
 
 	        </div>
 		</div>
+		<!-- redirect_page container ends -->
 
-        <!-- 
-
-        
-		<div class="col-md-10 col-md-offset-1" id="redirect_page_container">
-			<div class="row select_redirect_page_template">
-				<div class="col-md-12">
-					
-					<div id="landing-page-url-error"></div>
-				</div>
-			</div>
-		</div> 
- -->
-			
-		  		
-		
     </section>
 
 	<!-- Step 9 -->
@@ -723,13 +713,11 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="Paste Your URL here">	
+							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="http://yourwebsite.com/page.html">	
 							<div id="form_name-error"></div>
 						</div>
 					</div>
 				</div>
-				
-				
 			</div>
         </div>
     </section>
@@ -744,9 +732,9 @@
 					{"Create Campaign Download Page"|alang}
 				</h1>
 			</div>
+		</div>
 
-
-
+		<div class="row">
 			<div class="col-md-12">
 	        	<div class="campaign_help">
 	        		<p class="lead text_center">A "Download page" is the page your Visitors will be sent to after confirming their subscription from the system generated email.</p>
@@ -755,61 +743,146 @@
 					</p>
 	        	</div>
         	</div>
-			
-			
-			<div class="col-md-12">
-				<div id="radiobutton_container">
-
-					<div class="template_wrapper">
-						<span class="text_center template_title">Thank You 001</span>
-						<img src="images/500x580thankyou1.jpg" alt="..." class="img-thumbnail">
-						<div class="template_buttons">
-						  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>
-						  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-						</div>
-					</div>
-					<div class="template_wrapper">
-						<span class="text_center template_title">Money Making</span>
-						<img src="images/500x580thanks.jpg" alt="..." class="img-thumbnail">	
-						<div class="template_buttons">
-						  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>    
-						  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-						</div>
-					</div>
-					<div class="template_wrapper">
-						<span class="text_center template_title">Travel</span>
-						<img src="images/500x580-thankyou.jpg" alt="..." class="img-thumbnail">	
-						<div class="template_buttons">
-						  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>    
-						  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-						</div>
-					</div>
-					<!-- <input type="radio" id="downloadpage_01" name="download-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
-					<label for="downloadpage_01">
-						<img src="images/images/500x580thankyou1.jpg" class="img-thumbnail" alt="text">
-					</label>
-
-					<input type="radio" id="downloadpage_02" name="download-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
-					
-					<label for="downloadpage_02">
-						<img src="images/500x580thanks.jpg" alt="..." class="img-thumbnail">
-					</label>
-
-					<input type="radio" id="downloadpage_03" name="download-page-url" value="http://glcv2.identifz.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
-					<label for="downloadpage_03">
-						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
-					</label> -->
-
-					
-				
-					<!-- <label for="landingpage_custom" style="width:100%" class="btn btn-warning btn-lg">
-						<input type="radio" id="landingpage_custom" name="landing-page-url" data-customlandingpage="yes" value="" />
-						<i class="fa fa-pencil-square-o" aria-hidden="true"></i> or you can design you own using the Site Builder. 
-					</label> -->
-				</div>
-				<div id="landing-page-url-error"></div>
-			</div>
 		</div>
+
+
+
+		<!-- 3 column div selector -->
+		<div class="row">
+        	<div class="col-md-12">
+        		<div class="col-md-4">
+			 		<div class="steps-btn btn_pre_made_template" title="Create a New List">
+			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			 			<span>Templates</span>
+			 		</div>
+				</div>
+			    <div class="col-md-4">
+			 		<div class="steps-btn btn_custom_page_design" title="Select Existing List Here">
+			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+			 			<span>Custom Page Design</span>
+			 		</div>
+				</div>
+				<div class="col-md-4">
+			 		<div class="steps-btn btn_redirect_page_custom_url" title="Select Existing List Here">
+			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+			 			<span>External Website URL</span>
+			 		</div>
+				</div>
+			</div>
+        </div>
+		<!-- end 3 column div selector ends-->
+
+		<!-- redirect_page container -->
+		<div class="redirect_page_container row">
+			<div class="col-md-10 col-md-offset-1">
+		    	
+		    	<div id="pre_made_templates_container" class="hidden_div">
+					<div class="row">
+						<div id="pre_made_templates_wrapper">
+							<div class="row">	
+						  		<div class="col-md-12">
+									
+									<div id="radiobutton_container">
+										<div class="template_wrapper">
+											<span class="text_center template_title">Skin Care</span>
+											<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care" />
+											<div class="template_buttons">
+											  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>
+											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
+											</div>
+										</div>
+										<div class="template_wrapper">
+											<span class="text_center template_title">Money Making</span>
+											<img src="images/time-limit-500x580.jpg" alt="Making Money" class="img-thumbnail">
+											<div class="template_buttons">
+											  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>    
+											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
+											</div>
+										</div>
+										<div class="template_wrapper">
+											<span class="text_center template_title">Travel</span>
+											<img src="images/incruises-500x580.jpg" alt="InCruises" class="img-thumbnail">
+											<div class="template_buttons">
+											  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-choose" target="_blank">CHOOSE</a>    
+											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+		    	</div>
+		    
+		        <div id="custom_page_design_container" class="hidden_div">
+		        	<div class="row" >
+						<div class="col-md-12">
+							<h1 class="step_header_text">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								{"Build Your Own Design"|alang}
+							</h1>
+						</div>
+					</div>
+
+					<div class="row">
+				        <div class="col-md-12">
+				        	<div class="campaign_help">
+				        		<p class="lead text_center">
+								{"Click the button below to open the builder and start building your custom page design."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+								</p>
+				        	</div>
+			        	</div>
+		        	</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group" style="text-align:center;">
+								<a href="/builder/" class="btn btn-primary btn-lg">Access Site Builder</a>
+							</div>
+						</div>
+					</div>
+		        </div>
+
+		        <div id="external_url_container" class="hidden_div">
+		        	
+		        	<div class="row" >
+						<div class="col-md-12">
+							<h1 class="step_header_text">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								{"External Website URL"|alang}
+							</h1>
+						</div>
+					</div>
+
+					<div class="row">
+				        <div class="col-md-12">
+				        	<div class="campaign_help">
+				        		<p class="lead text_center">
+								{"Enter the website URL where your page can be found."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+								</p>
+				        	</div>
+			        	</div>
+		        	</div>
+
+					<div class="row">
+						<div class="col-md-12">
+					  		<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<input type="text" class="form-control input-lg" id="external_website_url_txtbox" name="external_website_url_txtbox" title="Your External Page URL Here" placeholder="http://yourwebsite.com/page.html">	
+									<div id="form_name-error"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+		        </div>
+
+
+	        </div>
+		</div>
+		<!-- redirect_page container ends -->
+
     </section>
 
     <!-- Step 11 -->
@@ -834,7 +907,7 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="Paste Your URL here">	
+							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="http://yourwebsite.com/page.html">	
 							<div id="form_name-error"></div>
 						</div>
 					</div>
