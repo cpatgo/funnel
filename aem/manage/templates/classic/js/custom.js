@@ -545,8 +545,7 @@ jQuery(document).ready(function(){
         
     });
     
-    // external_website_url_txtbox
-    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
+    $body.find('#redirect_externalurl_txtbox').on('input propertychange paste', function() {
         jQuery('.actions > ul > li:nth-child(2)').show();
     });
     /* Redirect Page Step Ends */
@@ -591,9 +590,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_thankyou_externalurl').addClass('list_selection_active');
         
     });
-    
-    // external_website_url_txtbox
-    $body.find('#external_website_url_txtbox').on('input propertychange paste', function() {
+        
+    $body.find('#thankyou_externalurl_txtbox').on('input propertychange paste', function() {
         jQuery('.actions > ul > li:nth-child(2)').show();
     });
     /* Thank You Page Step Ends */
