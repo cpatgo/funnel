@@ -1192,3 +1192,26 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
   background: white;
   position: absolute;  content:'';
 }
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active
+{
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align:center;
+}
+
+.wizard > .steps > ul > li
+{
+    /*width: 33.33%;*/
+    width:auto;
+    margin:0px;
+}
