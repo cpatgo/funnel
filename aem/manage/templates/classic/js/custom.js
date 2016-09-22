@@ -2,7 +2,7 @@
 jQuery(document).ready(function(){
 
     var $body = jQuery('body');
-    var progressbar = jQuery( "#progressbar" );
+    var progressbar = jQuery( "#step-progressbar" );
     var progstep_multiplier = 12;
     var currentVal = 0;
 
@@ -201,9 +201,9 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            progressbar.progressbar( "option", {
+            progressbar.progressbar({
                 value: current
-            });
+            
 
 
             // display current step (from hidden status)
