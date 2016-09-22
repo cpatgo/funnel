@@ -199,7 +199,9 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            jQuery('#step-progressbar').progressbar({value: (100*12)/current});
+            var counter =  100 * steps  / current;
+
+            jQuery('#step-progressbar').progressbar({value: counter });
 
             // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
