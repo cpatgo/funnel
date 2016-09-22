@@ -2627,7 +2627,7 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 $('#saveTemplateModal').modal('hide');
-                $("#templateModalResult").find('#url_link').text(result.link);
+                $("#templateModalResult").find('#url_link').val(result.link);
                 $("#templateModalResult").modal('show');
             },
             error: function(errorThrown){
@@ -2638,8 +2638,7 @@ $(function () {
 
     var clipboard = new Clipboard('.btnCopy');
     clipboard.on('success', function(e) {
-        $('#templateModalResult').modal('hide');
-        $('#linkCopied').modal('show');
+        window.top.close();
     });
 
     $('.close_tab').on('click', function(e){
