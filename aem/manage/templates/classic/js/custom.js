@@ -2,12 +2,10 @@
 jQuery(document).ready(function(){
 
     var $body = jQuery('body');
-    var progressbar = jQuery( "#step-progressbar" );
     
-    var currentVal = 0;
 
     jQuery( "#step-progressbar" ).progressbar({
-      value: currentVal,
+      value: 0,
     });
 
     var form = jQuery("#create-funnel-campaign").show();
@@ -201,9 +199,9 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            progressbar.progressbar( "option", {
-            value: Math.floor( Math.random() * 100 )
-            });
+            jQuery('#step-progressbar').progressbar({value:current});
+                
+            
 
 
             // display current step (from hidden status)
