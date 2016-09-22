@@ -1215,3 +1215,6 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     width:auto;
     margin:0px;
 }
+
+.ui-widget-content{  }
+.ui-progressbar.ui-widget-header{ background: #2184be }
