@@ -1,10 +1,13 @@
 /*custom JS here*/
 jQuery(document).ready(function(){
 
+    var $body = jQuery('body');
+    var progressbar = jQuery( "#step-progressbar" );
     
+    var currentVal = 0;
 
     jQuery( "#step-progressbar" ).progressbar({
-      value: 0,
+      value: currentVal,
     });
 
     var form = jQuery("#create-funnel-campaign").show();
@@ -198,8 +201,8 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            jQuery('#step-progressbar').progressbar({
-                value: current
+            progressbar.progressbar( "option", {
+            value: Math.floor( Math.random() * 100 )
             });
 
 
