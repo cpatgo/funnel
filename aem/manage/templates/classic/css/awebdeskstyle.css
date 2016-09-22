@@ -1182,3 +1182,13 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 .hidden_div{display: none;}
 
 .redirect_page_container { margin-top:50px; }
+
+
+
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;  content:'';
+}
