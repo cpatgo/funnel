@@ -2174,12 +2174,12 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-              <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Update Template</h4>
+              <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Publish Page</h4>
             </div>
             <div class="modal-body">
               
               <p>
-                By saving this, you will be given a new link to the updated template. Copy the link and paste it in AEM to redirect your user to your custom page.
+                Click on the GET LINK button if you are done making changes to your Capture Page.
               </p>
               
             </div><!-- /.modal-body -->
@@ -2206,7 +2206,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
                   <p>
                     Click the 'Copy Link' button and this will save it so you can paste it to AEM.<br>
                     <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">Copy Link</button>
-                    <b id="url_link"></b>
+                    <b id="url_link" style="display:none"></b>
                   </p>
               </div><!-- /.modal-body -->
           </div><!-- /.modal-content -->
