@@ -111,10 +111,14 @@ jQuery(document).ready(function(){
             jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
             // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
             // console.log('currently in step # ' . current);
+            
+            jQuery('.steps ul li.disabled').hide();
+            
+
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-
+            jQuery('.steps ul li.current').show();
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -671,7 +675,7 @@ jQuery(document).ready(function(){
     //     });
     // });
 
-
+    jQuery('.steps ul li').hasClass('disabled').hide();
 
 
     // jQuery('#landing-page-name').tooltip();
