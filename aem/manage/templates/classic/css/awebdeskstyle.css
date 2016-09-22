@@ -1199,10 +1199,10 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 {
     display: block;
     width: auto;
-    margin: 0;
-    padding: 0;
+    margin: 4px;
+    padding: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
