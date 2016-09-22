@@ -2,6 +2,9 @@
 jQuery(document).ready(function(){
 
     var $body = jQuery('body');
+    var progressbar = jQuery( "#progressbar" );
+    var progstep_multiplier = 12;
+    var currentVal = 0;
 
     var form = jQuery("#create-funnel-campaign").show();
     form.validate({
@@ -193,9 +196,16 @@ jQuery(document).ready(function(){
             return form.valid();
         },
         onStepChanged: function (event, current, next) {
-            // console.log('currently in step # ' + current);
+            
+            progressbar.progressbar("option", { 
+                value: 10+10
+            });
 
+
+            // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
+            
+            // on first step, hide the previous button.
             if (current > 0) {
                 jQuery('.actions > ul > li:first-child').attr('style', '');
             } else {
