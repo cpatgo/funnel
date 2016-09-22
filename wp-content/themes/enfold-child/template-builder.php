@@ -41,7 +41,7 @@
 	 {
         echo avia_new_section(array('close'=>false,'main_container'=>true, 'class'=>'main_color container_wrap_first'));
 	 }
-	
+
 	$content = apply_filters('the_content', $content);
 	$content = apply_filters('avf_template_builder_content', $content);
 	echo $content;

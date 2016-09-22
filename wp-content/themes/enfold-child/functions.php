@@ -464,7 +464,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-default', $template_url.'/js/avia.js', array('jquery'), 3, true );
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 3, true );
 		wp_enqueue_script( 'avia-popup',  $template_url.'/js/aviapopup/jquery.magnific-popup.min.js', array('jquery'), 2, true);
-
+		wp_enqueue_script( 'avia-modal-js', $template_url.'/js/jquery.modal.js', array('jquery'), 2, true ); //
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
@@ -483,6 +483,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_style( 'avia-popup-css', $template_url."/js/aviapopup/magnific-popup.css", array(), '1', 'screen' );
 		wp_enqueue_style( 'avia-media'  , $template_url."/js/mediaelement/skin-1/mediaelementplayer.css", array(), '1', 'screen' );
 		wp_enqueue_style( 'avia-print' ,  $template_url."/css/print.css", array(), '1', 'print' );
+		wp_enqueue_style( 'avia-modal-css',     $template_url."/js/jquery.modal.css", array(), '2', 'all' );
 		
 		
 		if ( is_rtl() ) {
@@ -749,8 +750,6 @@ function builder_restricted()
 	echo (!is_user_logged_in()) ? "<script type='text/javascript'>window.location.href = '/choose-your-membership';</script>" : "<script type='text/javascript'>window.location.href = '/glc/upgrade.php';</script>";
 	die();
 }
-
-
 
 /*
  * add option to edit elements via css class
