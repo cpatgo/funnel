@@ -118,7 +118,7 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            jQuery('.steps ul li.current').show();
+            
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -195,6 +195,7 @@ jQuery(document).ready(function(){
         onStepChanged: function (event, current, next) {
             // console.log('currently in step # ' + current);
 
+            jQuery('.steps ul li.current').show();
             if (current > 0) {
                 jQuery('.actions > ul > li:first-child').attr('style', '');
             } else {
