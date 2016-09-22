@@ -1,10 +1,12 @@
 /*custom JS here*/
+var numofsteps = 12;
+var progresscounter = 0;
+
+
 jQuery(document).ready(function(){
 
     var $body = jQuery('body');
-    var numofsteps = 12;
-    var progresscounter = 0;
-
+    
     jQuery( "#step-progressbar" ).progressbar({
       value: 0,
     });
@@ -200,9 +202,9 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            counter =  (100 * numofsteps)  / current;
+            // counter =  (100 * numofsteps)  / current;
 
-            jQuery('#step-progressbar').progressbar({value: counter });
+            jQuery('#step-progressbar').progressbar({value: current * 8.33333333334});
 
             // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
