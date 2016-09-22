@@ -2185,7 +2185,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
             </div><!-- /.modal-body -->
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
-              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">Get Link</button>
+              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">GET LINK</button>
             </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -2204,8 +2204,8 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
               
               <div class="modal-body text-center">
                   <p>
-                    Click the 'Copy Link' button and this will save it so you can paste it to AEM.<br>
-                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">Copy Link</button>
+                    Clicking on the “COPY LINK” button will automatically copy your page link. You will be instructed to paste this link into a section, which is needed to create your Campaign.<br>
+                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">COPY LINK & CONTINUE</button>
                     <b id="url_link" style="display:none"></b>
                   </p>
               </div><!-- /.modal-body -->
