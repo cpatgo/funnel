@@ -232,6 +232,7 @@ jQuery(document).ready(function(){
         jQuery('.actions > ul > li:nth-child(2) > a').click();
     });
 
+
     //COLLECTION OF FUNCTIONS
     var aem_functions = {
         create_landing_page     :   function(landing_page_html, form) {
@@ -535,19 +536,20 @@ jQuery(document).ready(function(){
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
         e.preventDefault();
-        $body.find('#pre_made_templates_container').hide();
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
+        /*$body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').hide();
         $body.find('#external_url_container').show();
 
         jQuery('.btn_pre_made_template').removeClass('list_selection_active');
         jQuery('.btn_custom_page_design').removeClass('list_selection_active');
-        jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');
+        jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');*/
         
     });
     
-    $body.find('#redirect_externalurl_txtbox').on('input propertychange paste', function() {
+    /*$body.find('#redirect_externalurl_txtbox').on('input propertychange paste', function() {
         jQuery('.actions > ul > li:nth-child(2)').show();
-    });
+    });*/
     /* Redirect Page Step Ends */
 
 
@@ -581,19 +583,20 @@ jQuery(document).ready(function(){
 
     $body.on('click', '.btn_thankyou_externalurl', function(e){
         e.preventDefault();
-        $body.find('#thankyou_premadetemplate_container').hide();
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
+        /*$body.find('#thankyou_premadetemplate_container').hide();
         $body.find('#thankyou_custompagedesign_container').hide();
         $body.find('#thankyou_externalurl_container').show();
 
         jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
         jQuery('.btn_thankyou_custompagedesign').removeClass('list_selection_active');
-        jQuery('.btn_thankyou_externalurl').addClass('list_selection_active');
+        jQuery('.btn_thankyou_externalurl').addClass('list_selection_active');*/
         
     });
         
-    $body.find('#thankyou_externalurl_txtbox').on('input propertychange paste', function() {
+    /*$body.find('#thankyou_externalurl_txtbox').on('input propertychange paste', function() {
         jQuery('.actions > ul > li:nth-child(2)').show();
-    });
+    });*/
     /* Thank You Page Step Ends */
 
 
