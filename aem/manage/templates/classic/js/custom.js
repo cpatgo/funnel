@@ -680,7 +680,7 @@ jQuery(document).ready(function(){
     jQuery('#tooltip_step2').tooltip();
     
     jQuery( "#step-progressbar" ).progressbar({
-      value: 40
+      value: 40,
     });
     
 });
