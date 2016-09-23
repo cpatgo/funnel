@@ -1228,7 +1228,17 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 }
 
 .ui-widget-content{  }
-.ui-progressbar .ui-widget-header{ background: #2184be; height: 106% !important; border: none;}
+.ui-progressbar .ui-widget-header{ 
+  /*background: #2184be; */
+  background-color: rgb(43,194,83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  height: 106% !important; 
+  border: none;
+}
 
 .wizard ul { display: none; } /* hide the tablist steps */
 
