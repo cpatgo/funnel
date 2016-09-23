@@ -110,7 +110,7 @@ jQuery(document).ready(function(){
         // customize Labels on action buttons
         labels: {
             finish: "Finish",
-            next: "Continue",
+            next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
             previous: "Previous",
         },
         autoFocus: true,
@@ -127,7 +127,6 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-            
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -703,5 +702,5 @@ jQuery(document).ready(function(){
     jQuery('#tooltip_name_campaign').tooltip();
     jQuery('#tooltip_step2').tooltip();
 
-    
+
 });
