@@ -43,15 +43,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   	<div class="menu" id="menu">
 		
   		<div class="main" id="main">
-        <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info glc_button menu_dashboard emarketer">&raquo; eMarketer</a>
-        </div>
-        
-        <div class="sideButtons clearfix">
-          <a href="/myhub" class="btn btn-info glc_button menu_dashboard glchub">&raquo; My Hub</a>
-        </div>
-        <hr>
-			  		  			
+        		
   			<h3><span class="fui-list"></span> PAGE TEMPLATES</h3>
   			
   			<ul id="elements">
@@ -90,6 +82,14 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <div class="text-center xsProjectLInk" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
           <a href="#xsImpModal" id="projectModal" class="btn btn-warning btn-block" data-toggle="modal">Export/ Import Project</a>
         </div>        
+        <hr>
+        <div class="sideButtons clearfix">
+          <a href="/aem/manage" class="btn btn-info glc_button menu_dashboard emarketer">&raquo; eMarketer</a>
+        </div>
+        
+        <div class="sideButtons clearfix">
+          <a href="/myhub" class="btn btn-info glc_button menu_dashboard glchub">&raquo; My Hub</a>
+        </div>
   	
   		</div><!-- /.main -->
   	
@@ -2186,7 +2186,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
             </div><!-- /.modal-body -->
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
-              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="saveTemplate">GET LINK</button>
+              <button type="submit" type="button" class="btn btn-info glc_button btn-embossed" id="saveTemplate">GET LINK</button>
             </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
