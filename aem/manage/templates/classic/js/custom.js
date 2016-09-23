@@ -206,7 +206,7 @@ jQuery(document).ready(function(){
             ctr = current * 8.333333333334;
 
             // Math.round(price / listprice * 100) / 100
-            jQuery('#step-progressbar').progressbar({value: ctr});
+            jQuery('#step-progressbar').progressbar({value: ctr*next});
             
             // update the progressbar percentage text
             // $body.find('.progress_indicator_txt span').html( (+ctr).toFixed(2) + '%');
