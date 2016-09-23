@@ -74,6 +74,10 @@ wp_head();
 		  		.jquery-modal.blocker.current {
 		  			z-index: 1000;
 		  		}
+		  		#welcome_message .avia-section {
+		  			box-shadow: none;
+    				border: none;
+		  		}
 		  	</style>
 			<script type="text/javascript">
 				$(function(){
