@@ -161,7 +161,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     	
     		<div class="modes">
     		
-    			<b>PICK DESIGN MODE:</b>
+    			<b>PICK DESIGN MODE: </b>
     			<label class="radio primary first">
     				<input type="radio" name="mode" id="modeBlock" value="block" data-toggle="radio" disabled="" checked="">
     			  	Elements
