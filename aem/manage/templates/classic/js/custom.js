@@ -1,7 +1,7 @@
 /*custom JS here*/
 var numofsteps = 12;
 var progresscounter = 0;
-
+var ctr = 0;
 
 jQuery(document).ready(function(){
 
@@ -121,7 +121,7 @@ jQuery(document).ready(function(){
             // console.log('currently in step # ' . current);
             
             jQuery('.steps ul li.disabled').hide();
-            jQuery('#step-progressbar').progressbar({value: 8.33333333334});
+            // jQuery('#step-progressbar').progressbar({value: 8.33333333334});
             $body.find('.progress_indicator_txt span').html('0%');
 
         },
@@ -203,9 +203,12 @@ jQuery(document).ready(function(){
         },
         onStepChanged: function (event, current, next) {
             
-            // counter =  (100 * numofsteps)  / current;
+            ctr = current * 8.333333333334;
 
-            jQuery('#step-progressbar').progressbar({value: current * 8.33333333334});
+            jQuery('#step-progressbar').progressbar({value: ctr});
+            
+            // update the progressbar percentage text
+            $body.find('.progress_indicator_txt span').html(ctr + '%');
 
             // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
