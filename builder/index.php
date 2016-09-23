@@ -2201,15 +2201,19 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <div class="modal-content">  
               <div class="modal-header">
                   <button type="button" class="close fo" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><span class="fui-window"></span> Publish Page</h4>
               </div>
               
               <div class="modal-body text-center">
                   <p>
-                    Clicking on the “COPY LINK” button will automatically copy your page link. You will be instructed to paste this link into a section, which is needed to create your Campaign.<br><br>
-                    <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy" style="height:52px; width:250px;">COPY LINK & CONTINUE</button><br><br>
+                    Clicking on the “COPY LINK” button will automatically copy your page link. You will be instructed to paste this link into a section, which is needed to create your Campaign.<br>
                     <b id="url_link"></b>
                   </p>
               </div><!-- /.modal-body -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
+                <button data-clipboard-target="#url_link" class="btn btn-primary glc_button btnCopy">COPY LINK & CONTINUE</button>
+            </div>
           </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
 
