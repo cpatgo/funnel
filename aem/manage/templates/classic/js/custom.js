@@ -1,5 +1,5 @@
 /*custom JS here*/
-var numofsteps = 12;
+var numofsteps = 13;
 var progresscounter = 0;
 var ctr = 0;
 
@@ -121,8 +121,8 @@ jQuery(document).ready(function(){
             // console.log('currently in step # ' . current);
             
             jQuery('.steps ul li.disabled').hide();
-            // jQuery('#step-progressbar').progressbar({value: 8.33333333334});
-            $body.find('.progress_indicator_txt span').html('0%');
+            jQuery('#step-progressbar').progressbar({value: 8.33333333334});
+            $body.find('.progress_indicator_txt span').html('8.34%');
 
         },
         onStepChanging: function (event, currentIndex, newIndex)
