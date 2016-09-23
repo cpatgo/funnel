@@ -1216,5 +1216,5 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     margin:0px;
 }
 
-#step-progressbar .ui-widget-content{ background: #333; }
-#step-progressbar .ui-progressbar .ui-widget-header{ background: #2184be; }
+.ui-widget-content{  }
+.ui-progressbar .ui-widget-header{ background: #2184be; }
