@@ -210,7 +210,7 @@ jQuery(document).ready(function(){
             
             // update the progressbar percentage text
             // $body.find('.progress_indicator_txt span').html( (+ctr).toFixed(2) + '%');
-            $body.find('.progress_indicator_txt span').html( 'Step ' + (ctr+1) );
+            $body.find('.progress_indicator_txt span').html( 'Step ' + (current+1) );
 
             // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
