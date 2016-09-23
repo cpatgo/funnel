@@ -1231,3 +1231,6 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 .ui-progressbar .ui-widget-header{ background: #2184be; }
 
 .wizard ul { display: none; } /* hide the tablist steps */
+
+.step-progressbar, .progress_indicator_text { display:inline-block; }
+.step-progressbar { width: 70%; }
