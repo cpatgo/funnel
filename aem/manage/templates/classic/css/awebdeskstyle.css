@@ -1287,9 +1287,14 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
   display: none;
   margin-bottom: 6px;
 }
-
+/*
 input[placeholder] {
   color: #d7d7d7;
-}
+}*/
+
+::-webkit-input-placeholder { color: #d7d7d7; opacity: 1 !important; }
+:-moz-placeholder { color: #d7d7d7;}
+::-moz-placeholder {color: #d7d7d7;}
+:-ms-input-placeholder {color: #d7d7d7;}
 
 .skip_to_publish { font-size:16px; }
