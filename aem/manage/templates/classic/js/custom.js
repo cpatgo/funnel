@@ -122,7 +122,7 @@ jQuery(document).ready(function(){
             
             jQuery('.steps ul li.disabled').hide();
             jQuery('#step-progressbar').progressbar({value: 8.33333333334});
-            $body.find('.progress_indicator_txt span').html('8.34%');
+            $body.find('.progress_indicator_txt span').html('Step 1');
 
         },
         onStepChanging: function (event, currentIndex, newIndex)
@@ -209,7 +209,8 @@ jQuery(document).ready(function(){
             jQuery('#step-progressbar').progressbar({value: ctr});
             
             // update the progressbar percentage text
-            $body.find('.progress_indicator_txt span').html( (+ctr).toFixed(2) + '%');
+            // $body.find('.progress_indicator_txt span').html( (+ctr).toFixed(2) + '%');
+            $body.find('.progress_indicator_txt span').html( 'Step ' + (ctr+1) );
 
             // display current step (from hidden status)
             jQuery('.steps ul li.current').show();
