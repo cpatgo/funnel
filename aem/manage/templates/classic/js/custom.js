@@ -623,7 +623,9 @@ jQuery(document).ready(function(){
     });*/
     /* Thank You Page Step Ends */
 
-
+    $body.on('click','.skip_to_publish', function(e) {
+        
+    })
 
     $body.on('click', '#add_new_list_go', function(e){
         e.preventDefault();
