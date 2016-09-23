@@ -1224,14 +1224,20 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 .ui-widget.ui-widget-content {
     border: 1px solid #c5c5c5;
     border-radius: 20px;
-    background: #aaa;
+    background: #666;
 }
 
 .ui-widget-content{  }
-.ui-progressbar .ui-widget-header{ background: #2184be; }
+.ui-progressbar .ui-widget-header{ background: #2184be; height: 106%; border: none;}
 
 .wizard ul { display: none; } /* hide the tablist steps */
 
-.step-progressbar, .progress_indicator_text { display:inline-block; }
+.step-progressbar, 
+.progress_indicator_text 
+{ 
+  display:inline-block; 
+}
+
+.progressbar_wrapper{ text-align:center; }
 .step-progressbar { width: 70%; }
 .progress_indicator_text{ display:inline-block; }
