@@ -2155,7 +2155,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
             </div><!-- /.modal-body -->
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="previewCancel">Cancel & Close</button>
-              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="showPreview">Generate Page</button>
+              <button type="submit" type="button" class="btn btn-primary btn-embossed" id="showPreview"><?php echo (isset($_GET['save_template']) && (int)$_GET['save_template'] == 1) ? 'Preview Now' : 'Generate Page' ?></button>
             </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
