@@ -122,7 +122,7 @@ jQuery(document).ready(function(){
             
             jQuery('.steps ul li.disabled').hide();
             jQuery('#step-progressbar').progressbar({value: 8.33333333334});
-            $body.find('.progress_indicator_txt span').html('Step 1');
+            $body.find('.progress_indicator_txt span').html('8%');
 
         },
         onStepChanging: function (event, currentIndex, newIndex)
