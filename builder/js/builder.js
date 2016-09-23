@@ -2654,7 +2654,6 @@ $(function () {
     });
 
     $('body').on('click', '.toggle_settings', function(){
-        console.log('SKDJFH');
         $('body').find('#settings_icon').toggleClass("fui-arrow-right fui-arrow-left");
     });
 
