@@ -110,7 +110,7 @@ header .modes {
 	margin: 10px 0px 0px;
 	width: 560px;
 	text-align: center;
-	margin-left: 50px;
+	margin-left: 90px;
 }
 
 header .modes #modeContent {
@@ -409,7 +409,7 @@ body .sp-input {
 
 
 .menu .toggle {
-	background: #34495E;
+	background: #1abc9c;
 	color: #eee;
 	position: absolute;
 	width: 50px;
@@ -895,4 +895,25 @@ li.element {
 
     /*border-bottom: 1px solid #ccc;*/
     width: 100%;
+}
+
+.glc_button {
+	background-color: #258dcd !important;
+}
+
+span .fui-radio-unchecked {
+    color: #e9f2fb;
+}
+
+span .fui-radio-unchecked:hover {
+    color: #e9f2fb;
+}
+
+.checkbox.primary .icons, .radio.primary .icons {
+    color: #e9f2fb;
+}
+
+.checkbox,
+.radio {
+  font-size: 15px !important;
 }
