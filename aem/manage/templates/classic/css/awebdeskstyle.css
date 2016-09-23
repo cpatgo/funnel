@@ -1216,5 +1216,16 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     margin:0px;
 }
 
+.ui-progressbar .ui-progressbar-value {
+    margin: -1px;
+    height: 110%;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #c5c5c5;
+    border-radius: 20px;
+    background: #aaa;
+}
+
 .ui-widget-content{  }
 .ui-progressbar .ui-widget-header{ background: #2184be; }
