@@ -44,11 +44,11 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 		
   		<div class="main" id="main">
         <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; eMarketer</a>
+          <a href="/aem/manage" class="btn btn-info glc_button menu_dashboard emarketer">&raquo; eMarketer</a>
         </div>
         
         <div class="sideButtons clearfix">
-          <a href="/myhub" class="btn btn-info menu_dashboard glchub">&raquo; My Hub</a>
+          <a href="/myhub" class="btn btn-info glc_button menu_dashboard glchub">&raquo; My Hub</a>
         </div>
         <hr>
 			  		  			
@@ -155,7 +155,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
           <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
         <?php else: ?>
-          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> PUBLISH PAGE</a>
+          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info glc_button btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> PUBLISH PAGE</a>
           <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-primary btn-embossed pull-right actionButtons" style="margin-right: 10px;"><span class="fui-window"></span> PREVIEW PAGE</a>
         <?php endif; ?>
     	
