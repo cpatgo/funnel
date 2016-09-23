@@ -1234,3 +1234,4 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
 .step-progressbar, .progress_indicator_text { display:inline-block; }
 .step-progressbar { width: 70%; }
+.progress_indicator_text{ display:inline-block; }
