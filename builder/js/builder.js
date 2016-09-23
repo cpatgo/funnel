@@ -2653,6 +2653,11 @@ $(function () {
         closeStyleEditor();
     });
 
+    $('body').on('click', '.toggle_settings', function(){
+        console.log('SKDJFH');
+        $('body').find('#settings_icon').toggleClass("fui-arrow-right fui-arrow-left");
+    });
+
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
 
         $('#saveTemplateModal form input[type="hidden"]').remove();
