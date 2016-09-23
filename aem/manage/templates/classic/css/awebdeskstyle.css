@@ -1281,5 +1281,5 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
 .progressbar_wrapper{ text-align:center; }
 .step-progressbar { width: 70%; }
-.progress_indicator_text{ display:inline-block;}
-.progress_indicator_text span { font-size:16px; }
+.progress_indicator_text{ display:inline-block; margin-bottom: 6px;}
+.progress_indicator_text span { font-size:20px; }
