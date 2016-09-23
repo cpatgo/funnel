@@ -178,12 +178,10 @@ var _Elements = {"elements": {
         {"url":"elements/features7-2.html","height":818, "thumbnail":"elements/thumbs/features7-2.png"},
         {"url":"elements/features8-2.html","height":1023, "thumbnail":"elements/thumbs/features8-2.png"},
         {"url":"elements/features9-2.html","height":750, "thumbnail":"elements/thumbs/features9-2.png"},
-        {"url":"elements/features10-2.html","height":843, "thumbnail":"elements/thumbs/features10-2.png"}
-    ],  
-    "Features v2": [
+        {"url":"elements/features10-2.html","height":843, "thumbnail":"elements/thumbs/features10-2.png"},
         {"url":"elements/featuresv2-4.html","height":843, "thumbnail":"elements/thumbs/featuresv2-4.jpg"},
         {"url":"elements/featuresv2-5.html","height":843, "thumbnail":"elements/thumbs/featuresv2-5.jpg"},
-    ],
+    ],  
 
     "Call-to-Action":[
         {"url":"elements/cta1-1.html","height":291, "thumbnail":"elements/thumbs/cta1-1.png"},
