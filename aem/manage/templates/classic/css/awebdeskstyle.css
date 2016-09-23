@@ -1290,18 +1290,18 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #909;
+    color:    #d7d7d7;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #909;
+   color:    #d7d7d7;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #909;
+   color:    #d7d7d7;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #909;
+   color:    #d7d7d7;
 }
 
-/*.skip_to_publish { text-decoration: underline; cursor: pointer; }*/
+.skip_to_publish { font-size:16px; }
