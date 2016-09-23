@@ -156,7 +156,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
         <?php else: ?>
           <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> Save Changes</a>
-          <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-primary btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;"><span class="fui-window"></span> Preview Page</a>
+          <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-primary btn-embossed pull-right actionButtons" style="margin-right: 10px;"><span class="fui-window"></span> Preview Page</a>
         <?php endif; ?>
     	
     		<div class="modes">
