@@ -1285,5 +1285,22 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 .progress_indicator_text{ 
   /*display:inline-block; */
   display: none;
-  margin-bottom: 6px;}
+  margin-bottom: 6px;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #909;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
 
