@@ -121,6 +121,7 @@ jQuery(document).ready(function(){
             // console.log('currently in step # ' . current);
             
             jQuery('.steps ul li.disabled').hide();
+            jQuery('#step-progressbar').progressbar({value: 8.33333333334});
             
 
         },
