@@ -1288,7 +1288,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
   margin-bottom: 6px;
 }
 
-input[placeholder], [placeholder], *[placeholder] {
+input[placeholder] {
   color: #d7d7d7;
 }
 
