@@ -155,8 +155,8 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
           <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
           <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
         <?php else: ?>
-          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> Save Changes</a>
-          <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-primary btn-embossed pull-right actionButtons" style="margin-right: 10px;"><span class="fui-window"></span> Preview Page</a>
+          <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> PUBLISH PAGE</a>
+          <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-primary btn-embossed pull-right actionButtons" style="margin-right: 10px;"><span class="fui-window"></span> PREVIEW PAGE</a>
         <?php endif; ?>
     	
     		<div class="modes">
@@ -2351,7 +2351,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
 	      		</div><!-- /.modal-body -->
 	      		<div class="modal-footer">
 	        		<button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Cancel & Close</button>
-	        		<button type="button" type="button" class="btn btn-primary btn-embossed" id="updateContentInFrameSubmit">Save Content</button>
+	        		<button type="button" type="button" class="btn btn-primary btn-embossed" id="updateContentInFrameSubmit">Save Changes</button>
 	      		</div>
 	    	</div><!-- /.modal-content -->
 	  	</div><!-- /.modal-dialog -->
