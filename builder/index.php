@@ -84,7 +84,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
   	
   			<div class="sideButtons clearfix">
   				<a href="#" class="btn btn-primary btn-sm btn-embossed" id="addPage"><span class="fui-plus"></span> Add</a>
-  				<a href="#exportModal" data-toggle="modal" class="btn btn-info btn-sm btn-embossed disabled actionButtons"><span class="fui-export"></span> Export</a>
+  				<a href="#exportModal" data-toggle="modal" class="btn btn-info glc_button btn-sm btn-embossed disabled actionButtons"><span class="fui-export"></span> Export</a>
   			</div>
         <hr>
         <div class="text-center xsProjectLInk" style="padding-left:20px;padding-right:20px;margin-bottom:30px;">
@@ -110,7 +110,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
     
       <div class="main" id="main">
         <div class="sideButtons clearfix">
-          <a href="/aem/manage" class="btn btn-info menu_dashboard emarketer">&raquo; Help Topics</a>
+          <a href="/aem/manage" class="btn btn-info glc_button menu_dashboard emarketer">&raquo; Help Topics</a>
         </div>
         <hr>
             
@@ -152,7 +152,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
         <?php if(!isset($_GET['save_template'])): ?>
           <a href="#" id="clearScreen" class="btn btn-danger btn-embossed pull-right disabled actionButtons"><span class="fui-trash"></span> Empty Page</a>
           <a href="#previewModal" id="preview" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right disabled actionButtons" style="margin-right: 10px; display: none"><span class="fui-window"></span> Generate Page</a>
-          <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
+          <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info glc_button btn-embossed pull-right disabled actionButtons"><span class="fui-export"></span> HTML Export</a>
           <a href="#" id="savePage" class="btn btn-primary btn-embossed pull-right disabled actionButtons"><span class="fui-check"></span> <span class="bLabel">Nothing new to save</span></a>
         <?php else: ?>
           <a href="#saveTemplateModal" id="preview" data-toggle="modal" class="btn btn-info glc_button btn-embossed pull-right disabled actionButtons" style="margin-right: 10px;><span class="fui-window"></span> PUBLISH PAGE</a>
