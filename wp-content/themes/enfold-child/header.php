@@ -81,7 +81,7 @@ wp_head();
 		  	</style>
 			<script type="text/javascript">
 				$(function(){
-					var the_content = '<div class="entry-content-wrapper clearfix" id="welcome_message" style="display:none;max-width: none;max-width: none;padding: 2% 5%;">';
+					var the_content = '<div class="entry-content-wrapper clearfix" id="welcome_message" style="display:none;max-width: none;max-width: none;padding: 0 5%;">';
 					the_content += <?php echo json_encode($content) ?>;
 					the_content += '<a class="avia-button avia-size-large avia-button-right" style="color: #ffffff;background-color: #258dcd;" rel="modal:close">CLOSE</a></div>';
 
