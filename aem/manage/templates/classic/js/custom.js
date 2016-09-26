@@ -633,7 +633,10 @@ jQuery(document).ready(function(){
 
     $body.on('click','.skip_to_publish', function(e) {
         e.preventDefault();
-        jQuery('#create-funnel-campaign-h-11').click();
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
+        var sub2_redirect_url = $body.find('#sub2_redirect').val();
+        $body.find('#sub3_redirect').val(sub2_redirect_url);
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
     });
 
     $body.on('click', '#add_new_list_go', function(e){
