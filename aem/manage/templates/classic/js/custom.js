@@ -131,58 +131,26 @@ jQuery(document).ready(function(){
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
 
-            // if ($body.find('#create-funnel-campaign-p-4 #form_name').val() != ""){
-            //     $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').show();
-            // }
-
-            var step4 = jQuery('input[name=landing-page-url]:checked').val();
-            if(newIndex == 4 && typeof step4 !== 'undefined') {
+            var step4 = jQuery('input[name=landing-page-url]').val();
+            if(newIndex == 11 && typeof step4 !== 'undefined') {
                 var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
                 if(ans) {
-                    if(typeof jQuery('input[name=landing-page-url]:checked').data('customlandingpage') == 'undefined')
-                    {
-                        // Use pre-made landing page
-                        var url_link = jQuery('input[name=landing-page-url]:checked').val();
+                    //Update Form (Thank You URL)
+                    aem_functions.update_form();
 
-                        // Get form
-                        jQuery.ajax({
-                            method: "post",
-                            url: "../manage/templates/classic/ajax/api.php",
-                            data: {
-                                'action':'get_form'
-                            },
-                            dataType: 'json',
-                            success:function(result) {
-                                console.log(result);
-                                if(result.type == 'success') {
-                                    //Insert the form in the landing page
-                                    jQuery.get(url_link, function(page_html){
-                                        //Create new file for the user's landing page
-                                        aem_functions.create_landing_page(page_html, result.message.html);
-                                    });
-                                }
-                            },
-                            error: function(errorThrown){
-                                console.log(errorThrown);
-                            }
-                        });
-                    } else {
-                        if(jQuery('input[name=landing-page-url]:checked').val() !== "") {
-                            //Save campaign
-                            aem_functions.save_funnel_campaign();
-                            //Disable fields
-                            $body.find('select').attr('disabled', true);
-                            $body.find('input').attr('disabled', true);
-                            $body.find('textarea').attr('disabled', true);
-                        }
-                    }
+                    //Save campaign
+                    aem_functions.save_funnel_campaign();
+                    //Disable fields
+                    $body.find('select').attr('disabled', true);
+                    $body.find('input').attr('disabled', true);
+                    $body.find('textarea').attr('disabled', true);
                 } else {
                     return false;
                 }
             }
 
             //Save List
-            if(currentIndex == 1 && newIndex == 2) {
+            if(currentIndex == 2 && newIndex == 3) {
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
                     aem_functions.save_list_to_session();
@@ -192,9 +160,15 @@ jQuery(document).ready(function(){
                     }
                 }
             }
+
             //Save Form 
-            if(currentIndex == 2 && newIndex == 3) {
+            if(currentIndex == 4 && newIndex == 5) {
                 aem_functions.add_new_form();
+            }
+
+            //Update Form (Redirect URL)
+            if(currentIndex == 8 && newIndex == 9) {
+                aem_functions.update_form();
             }
 
             form.validate().settings.ignore = ":disabled,:hidden";
@@ -259,7 +233,6 @@ jQuery(document).ready(function(){
     //COLLECTION OF FUNCTIONS
     var aem_functions = {
         create_landing_page     :   function(landing_page_html, form) {
-            console.log('landingpage', landing_page_html);
             jQuery.ajax({
                 method: "post",
                 url: "../manage/templates/classic/ajax/custom.php",
@@ -386,7 +359,7 @@ jQuery(document).ready(function(){
             });
         },
         add_new_list    :   function(callback) {
-            var fields = $body.find('#new_list_div :input').serialize();
+            var fields = $body.find('.new_list_div :input').serialize();
             jQuery.ajax({
                 method: "post",
                 url: "../manage/templates/classic/ajax/api.php",
@@ -426,12 +399,34 @@ jQuery(document).ready(function(){
             });
         },
         add_new_form    :   function() {
-            var fields = $body.find('#new_form_div :input').serialize();
+            var fields = $body.find('.new_form_div :input').serialize();
             jQuery.ajax({
                 method: "post",
                 url: "../manage/templates/classic/ajax/api.php",
                 data: {
                     'action':'add_form',
+                    fields : fields
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'error') {
+                        alert(result.message);
+                    } else if(result.type == 'success') {
+                        aem_functions.get_form();
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        update_form    :   function() {
+            var fields = $body.find('.new_form_div :input').serialize();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'edit_form',
                     fields : fields
                 },
                 dataType: 'json',
