@@ -79,7 +79,7 @@
 			</div>
         </div>
         <br>
-        <div id="new_list_div" style="display:none;">
+        <div id="new_list_div" class="new_list_div" style="display:none;">
         	<br>
         	<div class="row" >
 	
@@ -88,9 +88,20 @@
 						<div class="col-md-12">
 					  		<div class="col-md-8 col-md-offset-2">
 								<div class="form-group">
-									<!-- <label for=""><span class="required_field">*</span> Name your List. See example&#59;</label> -->
-									<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list. See examples here.">	
+									<label for=""><span class="required_field">*</span> List Name&#59;</label>
+									<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">	
 									<div id="list_name-error"></div>
+									<!-- <p class="text_center hint">Note&#58; Choose a list name that is recognizable by your Lead as the &#34;List Name&#34; is used the header of your Auto Responder email&#44; which is automatically send out by our email system to your Leads.</p> -->
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+					  		<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label for=""><span class="required_field">*</span> Subscriber Email</label>
+									<input type="text" class="form-control input-lg" id="subscriber_email" name="subscriber_email" required>	
+									<div id="subscriber_email-error"></div>
 									<!-- <p class="text_center hint">Note&#58; Choose a list name that is recognizable by your Lead as the &#34;List Name&#34; is used the header of your Auto Responder email&#44; which is automatically send out by our email system to your Leads.</p> -->
 								</div>
 							</div>
@@ -117,7 +128,7 @@
 
 	<!-- Step 3 -->
     <h3> {"Email Signature"|alang}</h3>
-    <section>
+    <section class="new_list_div">
     	<div class="row">
 			<div class="col-md-12">
 				<h1 class="step_header_text">
@@ -181,7 +192,7 @@
 	<!-- Step 4 -->
     <h3> {"Opt-in Form"|alang}</h3>
     <section>
-        <div id="new_form_div">
+        <div class="new_form_div">
 			
         	<div class="row" >
 				<div class="col-md-12">
@@ -222,7 +233,7 @@
 	<!-- Step 5 -->
     <h3> {"Form Options"|alang}</h3>
     <section>
-        <div id="new_form_div">
+        <div class="new_form_div">
 			<div class="row">
 				<div class="col-md-12">
 					<!-- <hr class="divider" /> -->
@@ -430,7 +441,7 @@
 	<!-- Step 7 -->
     <h3> {"Capture Page URL"|alang}</h3>
     <section>
-        <div id="new_form_div">
+        <div>
 			<br>
         	<div class="row" >
 				<div class="col-md-12">
@@ -449,8 +460,8 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="yourwebsite.com/page.html">	
-							<div id="form_name-error"></div>
+							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="yourwebsite.com/page.html">	
+							<div id="landing-page-url-error"></div>
 						</div>
 					</div>
 				</div>
@@ -606,7 +617,7 @@
 	<!-- Step 9 -->
     <h3> {"Redirect Page URL"|alang}</h3>
     <section>
-        <div id="new_form_div">
+        <div class="new_form_div">
 			<br>
         	<div class="row" >
 				<div class="col-md-12">
@@ -625,8 +636,8 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="yourwebsite.com/page.html">	
-							<div id="form_name-error"></div>
+							<input type="text" class="form-control input-lg" id="sub2_redirect" name="sub2_redirect" placeholder="yourwebsite.com/page.html">	
+							<div id="sub2_redirect-error"></div>
 						</div>
 					</div>
 				</div>
@@ -788,7 +799,7 @@
     <!-- Step 11 -->
     <h3> {"Thank You Page URL"|alang}</h3>
     <section>
-        <div id="new_form_div">
+        <div class="new_form_div">
 			<br>
         	<div class="row" >
 				<div class="col-md-12">
@@ -807,8 +818,8 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="yourwebsite.com/page.html">	
-							<div id="form_name-error"></div>
+							<input type="text" class="form-control input-lg" id="sub3_redirect" name="sub3_redirect" placeholder="yourwebsite.com/page.html">	
+							<div id="sub3_redirect-error"></div>
 						</div>
 					</div>
 				</div>
