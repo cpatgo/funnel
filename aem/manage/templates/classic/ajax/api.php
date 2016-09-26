@@ -7,6 +7,7 @@ $action = $_POST['action'];
 if($action === 'add_list') add_list();
 if($action === 'add_subscriber') add_subscriber();
 if($action === 'add_form') add_form();
+if($action === 'edit_form') edit_form();
 if($action === 'get_form') get_form();
 if($action === 'get_form_by_id') get_form_by_id();
 
@@ -110,13 +111,13 @@ function get_form_by_id() {
 
 function add_form() {
 	parse_str($_POST['fields'], $fields);
+	$fields['sub2_redirect'] = "https://google.com";
+	$fields['sub3_redirect'] = "https://google.com";
+	
 	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
 		$list_id = $_SESSION['selected_list_id'];
 		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
 		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
-
-		//If sub3_redirect is not set or is empty, use sub2_redirect instead
-		if(!array_key_exists('sub3_redirect', $fields) || !isset($fields['sub3_redirect']) || empty($fields['sub3_redirect'])) $fields['sub3_redirect'] = $fields['sub2_redirect'];
 
 		$post = array(
 			'name'                     => $fields['form_name'], // the internal name of the subscription form
@@ -154,6 +155,56 @@ function add_form() {
 			die(json_encode(array('type' => 'success', 'message' => $add_form)));
 		else:
 			die(json_encode(array('type' => 'error', 'message' => 'Failed to add new form.', 'data' => $add_form)));
+		endif;
+	endif;
+}
+
+function edit_form() {
+	parse_str($_POST['fields'], $fields);
+	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
+		$list_id = $_SESSION['selected_list_id'];
+		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
+		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
+
+		//If sub3_redirect is not set or is empty, use sub2_redirect instead
+		if(!array_key_exists('sub3_redirect', $fields) || !isset($fields['sub3_redirect']) || empty($fields['sub3_redirect'])) $fields['sub3_redirect'] = $fields['sub2_redirect'];
+
+		$post = array(
+			'id'                       => $_SESSION['selected_form_id'],
+			'name'                     => $fields['form_name'], // the internal name of the subscription form
+			'type'                     => 'subscribe', // options: both, subscribe, unsubscribe
+			'sub1'                     => 'redirect', // options: default, custom, redirect
+			'sub1_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
+			'sub2'                     => 'redirect', // options: default, custom, redirect
+			'sub2_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
+			'sub3'                     => 'redirect', // options: default, custom, redirect
+			'sub3_redirect'            => $fields['sub3_redirect'], // URL (for redirect)
+			'sub4'                     => 'default', // options: default, custom, redirect
+			'unsub1'                   => 'default', // options: default, custom, redirect
+			'unsub2'                   => 'default', // options: default, custom, redirect
+			'unsub3'                   => 'default', // options: default, custom, redirect
+			'unsub4'                   => 'default', // options: default, custom, redirect
+			'up1'                      => 'default', // options: default, custom, redirect
+			'up2'                      => 'default', // options: default, custom, redirect
+			'allowselection'           => 0, // options: 1 or 0
+			'emailconfirmations'       => 1, // options: 1 or 0
+			'ask4fname'                => $ask4fname, // First Name - options: 1 or 0
+			'ask4lname'                => $ask4lname, // Last Name - options: 1 or 0
+			'optinoptout'              => 1, // ID of Opt-In/Out set
+			'captcha'                  => 0, // options: 1 or 0
+			'p[0]'                     => $list_id, // example list ID
+		);
+
+		foreach ($fields['fields'] as $key => $value) {
+			$post[sprintf('fields[%d]', $key)] = $value;
+		}
+
+		$form_edit = curl_request($post, 'form_edit');
+
+		if((int)$form_edit['result_code'] == 1): 
+			die(json_encode(array('type' => 'success', 'message' => $form_edit)));
+		else:
+			die(json_encode(array('type' => 'error', 'message' => 'Failed to add new form.', 'data' => $form_edit)));
 		endif;
 	endif;
 }
