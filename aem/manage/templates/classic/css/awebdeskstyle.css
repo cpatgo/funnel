@@ -1309,4 +1309,4 @@ input[placeholder] {
     background:none;
   }
 
-  .btn-glc-scheme { color:white; background-color:#2184be; }
+  .btn-glc-scheme { color:white !important; background-color:#2184be; }
