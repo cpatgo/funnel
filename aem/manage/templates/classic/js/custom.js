@@ -427,6 +427,7 @@ jQuery(document).ready(function(){
                         alert(result.message);
                     } else if(result.type == 'success') {
                         aem_functions.get_form();
+                        aem_functions.add_form_id_to_url();
                     }
                 },
                 error: function(errorThrown){
@@ -467,6 +468,29 @@ jQuery(document).ready(function(){
                 success:function(result) {
                     if(result.type == 'success') {
                         $body.find('#formcode').text(result.message.html);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        add_form_id_to_url  :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form'
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        console.log(result);
+                        jQuery('a[class=buildertemplate]').each(function(index, item) {
+                            var href = jQuery(item).attr('href');
+                            var newhref = href+'&form_id='+result.message.id;
+                            jQuery(item).attr('href', newhref);
+                        });
                     }
                 },
                 error: function(errorThrown){
