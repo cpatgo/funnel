@@ -1308,3 +1308,5 @@ input[placeholder] {
     box-shadow: 0 0 7px black;
     background:none;
   }
+
+  .btn-glc-scheme { color:white; background-color:#2184be; }
