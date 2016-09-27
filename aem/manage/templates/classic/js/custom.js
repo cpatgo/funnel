@@ -741,9 +741,9 @@ jQuery(document).ready(function(){
     jQuery('#tooltip_step2').tooltip();
 
     // Accordion
-    jQuery( ".accordion" ).accordion({
-      collapsible: true,
-      heightStyle: "content"
-    });
+    // jQuery( ".accordion" ).accordion({
+    //   collapsible: true,
+    //   heightStyle: "content"
+    // });
 
 });
