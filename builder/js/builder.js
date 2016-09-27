@@ -2627,7 +2627,6 @@ $(function () {
             dataType: 'json',
             success:function(result) {
                 $('#saveTemplateModal').modal('hide');
-                console.log(result.link);
                 $("#templateModalResult").find('#url_link').text(result.link);
                 $("#templateModalResult").modal('show');
             },
@@ -2658,6 +2657,11 @@ $(function () {
     });
 
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
+
+        var form_loaded = $('body').find('#user_form_div form');
+        if(typeof form_loaded == 'undefined') {
+            load_form(form_id);
+        }
 
         $('#saveTemplateModal form input[type="hidden"]').remove();
 
@@ -2828,6 +2832,11 @@ $(function () {
 
     $('#exportModal').on('shown.bs.modal', function (e) {
 
+        var form_loaded = $('body').find('#user_form_div form');
+        if(typeof form_loaded == 'undefined') {
+            load_form(form_id);
+        }
+        
         //delete older hidden fields
 
         $('#exportModal form input[type="hidden"]').remove();
