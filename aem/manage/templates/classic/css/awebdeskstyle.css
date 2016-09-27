@@ -201,7 +201,8 @@ ol li {
 
 */
 a {
-  color: #fff !important;
+  /*color: #fff !important;*/
+  color: #777;
   text-decoration: none;
 }
 a :hover {
