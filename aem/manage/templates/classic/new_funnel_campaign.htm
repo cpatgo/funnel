@@ -33,16 +33,21 @@
 						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name">
 						<div id="landing-page-name-error"></div>
 					</div>
-					
 				</div>
 				
 	        </div>
 	    </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<div id="landing-page-type-error"></div>
-        	</div>
-        </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+				<div class="campaign_input form-group">
+					<div class="col-md-6 col-md-offset-3">
+						<!-- <input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name"> -->
+						<textarea class="form-control input-lg" id="landing-page-description" name="landing-page-description" placeholder="describe your campaign"></textarea>
+						<div id="landing-page-description-error"></div>
+					</div>
+				</div>
+			</div>
+	    </div>
     </section>
     
     <!-- Step 2 -->
@@ -85,25 +90,28 @@
 	
 				<div id="create_new_list_title">
 					<div class="row">
-						<div class="col-md-12">
-					  		<div class="col-md-8 col-md-offset-2">
-								<div class="form-group">
-									<label for=""><span class="required_field">*</span> List Name&#59;</label>
-									<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">	
-									<div id="list_name-error"></div>
-									<!-- <p class="text_center hint">Note&#58; Choose a list name that is recognizable by your Lead as the &#34;List Name&#34; is used the header of your Auto Responder email&#44; which is automatically send out by our email system to your Leads.</p> -->
-								</div>
+
+				  		<div class="col-md-8 col-md-offset-2">
+							<div class="form-group">
+								<label for=""><span class="required_field">*</span> List Name</label>
+								<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">
+								<div id="list_name-error"></div>
 							</div>
 						</div>
+					</div>
 
-						<div class="col-md-12">
-					  		<div class="col-md-8 col-md-offset-2">
-								<div class="form-group">
-									<label for=""><span class="required_field">*</span> Subscriber Email</label>
-									<input type="text" class="form-control input-lg" id="subscriber_email" name="subscriber_email" required>	
-									<div id="subscriber_email-error"></div>
-									<!-- <p class="text_center hint">Note&#58; Choose a list name that is recognizable by your Lead as the &#34;List Name&#34; is used the header of your Auto Responder email&#44; which is automatically send out by our email system to your Leads.</p> -->
-								</div>
+					<div class="row">
+				  		<div class="col-md-8 col-md-offset-2">
+							<div class="alert alert-warning">You must add at least ONE email address to create your new list. You can add any email address, even a made up email address; madeup@email.com.</div>
+						</div>
+					</div>
+
+					<div class="row">
+				  		<div class="col-md-8 col-md-offset-2">
+							<div class="form-group">
+								<label for=""><span class="required_field">*</span> Add Required Email</label>
+								<input type="text" class="form-control input-lg" id="subscriber_email" name="subscriber_email" placeholder="madeup@email.com" required>	
+								<div id="subscriber_email-error"></div>
 							</div>
 						</div>
 					</div>
