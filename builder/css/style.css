@@ -9,7 +9,7 @@ body > .container {
 	position: relative;
 }
 
-li.element.ui-draggable.ui-draggable-handle {
+ul#elements li.element.ui-draggable.ui-draggable-handle {
     width: 250px;
     height: 300px;
     overflow: hidden;
