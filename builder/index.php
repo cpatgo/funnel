@@ -2418,7 +2418,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
       <?php if(isset($_GET['save_template'])): ?>
           //Load saved template
           $(window).load(function(){
-            var form_id = <?php echo (isset($_GET['form_id']) && !empty($_GET['form_id'])) ? $_GET['form_id'] : 0; ?>;
+            form_id = <?php echo (isset($_GET['form_id']) && !empty($_GET['form_id'])) ? $_GET['form_id'] : 0; ?>;
             if(form_id != 0) {
               load_form(form_id);
             }
