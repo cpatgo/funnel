@@ -12,7 +12,7 @@ $users = get_users("orderby=ID");
 
 
 
-print_r('$users');
+print_r($users);
 
 die('fin');
 
