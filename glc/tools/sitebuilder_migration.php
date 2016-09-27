@@ -10,7 +10,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
 $user_class = getInstance('Class_User');
 $users = get_users("orderby=ID");
 
-die('test');
+
+
+print_r('$users');
+
+die('fin');
 
 foreach($users as $key => $value) {
 	printf('%s - %s', $key, $value);
