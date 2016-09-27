@@ -1334,4 +1334,4 @@ select[multiple].input-lg, textarea.input-lg {
     background: whitesmoke;
 }
 
-.hyperlink{ color: #2184be; }
+a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
