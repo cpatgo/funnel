@@ -1310,3 +1310,20 @@ input[placeholder] {
   }
 
   .btn-glc-scheme { color:white !important; background-color:#2184be; }
+
+  .ui-accordion .ui-accordion-header {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 4px 0 0 0;
+    padding: 1em 1em 1em .7em;
+    font-size: 16px;
+    text-align: left;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #003eff;
+    background: #2184be;
+    font-weight: normal;
+    color: #ffffff;
+}
