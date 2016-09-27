@@ -486,10 +486,11 @@ jQuery(document).ready(function(){
                 success:function(result) {
                     if(result.type == 'success') {
                         console.log(result);
-                        jQuery('a[class=buildertemplate]').each(function(index, item) {
+                        $body.find('.buildertemplate').each(function(index, item) {
                             var href = jQuery(item).attr('href');
                             var newhref = href+'&form_id='+result.message.id;
                             jQuery(item).attr('href', newhref);
+                            console.log(href, newhref);
                         });
                     }
                 },
