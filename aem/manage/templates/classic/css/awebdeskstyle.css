@@ -672,7 +672,7 @@ span.glc_gray {
   text-decoration: none;
 }
 #submenu a:hover {
-  color: #666;
+  color: #666 !important;
   background: #fff;
   border-radius: 4px 4px 0px 0px;
   text-decoration: none;
@@ -987,7 +987,7 @@ label.acquisition, label.monetization, label.activation {
 
 .wizard > .actions a:hover { opacity:0.7; }
 
-.wizard > .actions > ul > li:first-child > a { background: #eee; color: #aaa; }
+.wizard > .actions > ul > li:first-child > a { background: #eee; color: #aaa !important; }
 
 #landing-page-list-id { display: none; }
 
@@ -1326,4 +1326,9 @@ input[placeholder] {
     background: #2184be;
     font-weight: normal;
     color: #ffffff;
+}
+
+select[multiple].input-lg, textarea.input-lg {
+    height: auto;
+    background: whitesmoke;
 }
