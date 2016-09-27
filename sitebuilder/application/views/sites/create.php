@@ -37,7 +37,6 @@
                             <a class="btn btn-xs btn-primary btn-embossed fileSave" href="#"><span class="fui-check"></span></a>
                         </span>
                     </li>
-                    
                 </ul>
         
                 <div class="sideButtons clearfix">
