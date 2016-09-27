@@ -9,8 +9,8 @@ var _Elements = {"elements": {
 
     "Event": [
         {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"}, // DENTAL
-        {"url":"elements/glc-event2.html", "height":163, "thumbnail":"elements/thumbs/glc-event2.png"},
-        // {"url":"elements/glc-event3.html", "height":163, "thumbnail":"elements/thumbs/glc-event3.png"},
+        {"url":"elements/glc-event2.html", "height":163, "thumbnail":"elements/thumbs/glc-event2.jpg"},
+        // {"url":"elements/glc-event3.html", "height":163, "thumbnail":"elements/thumbs/glc-event3.jpg"},
     ],
 
     "General": [
@@ -21,13 +21,13 @@ var _Elements = {"elements": {
     "Giveaways": [
         {"url":"elements/glc-giveaway.html", "height":163, "thumbnail":"elements/thumbs/glc-giveaway.jpg"},
         {"url":"elements/glc-freeapp.html", "height":163, "thumbnail":"elements/thumbs/glc-freeapp.jpg"},
-        {"url":"elements/glc-secrettraffic.html", "height":163, "thumbnail":"elements/thumbs/glc-secrettraffic.png"},
+        {"url":"elements/glc-secrettraffic.html", "height":163, "thumbnail":"elements/thumbs/glc-secrettraffic.jpg"},
         // {"url":"elements/glc-restaurant.html", "height":163, "thumbnail":"elements/thumbs/glc-restaurant.jpg"},
         // {"url":"elements/glc-timelimit.html", "height":163, "thumbnail":"elements/thumbs/glc-timelimit.jpg"}
     ],
 
     "GLC": [
-        {"url":"elements/glc-glc1.html", "height":163, "thumbnail":"elements/thumbs/glc-glc1.png"},
+        {"url":"elements/glc-glc1.html", "height":163, "thumbnail":"elements/thumbs/glc-glc1.jpg"},
         // {"url":"elements/glc-critical-strategy.html", "height":163, "thumbnail":"elements/thumbs/glc-critical-strategy.png"},
         // {"url":"elements/glc-promote-to-earn.html", "height":163, "thumbnail":"elements/thumbs/glc-promote-to-earn.png"}
         // {"url":"elements/glc-ebook_steps.html", "height":163, "thumbnail":"elements/thumbs/glc-ebook-steps.jpg"},
@@ -54,7 +54,7 @@ var _Elements = {"elements": {
     ],
 
     "Redirect": [
-        {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect.png"},
+        {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect.jpg"},
         {"url":"elements/glc-redirect2.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect2.jpg"},
         {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect3.jpg"}
     ],
@@ -81,7 +81,7 @@ var _Elements = {"elements": {
     ],
 
     "Video": [
-        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.png"},
+        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"},
     ],
 
     "Work From Home": [
