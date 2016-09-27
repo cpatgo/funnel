@@ -4,11 +4,13 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
 
 // if(!isset($_GET['do'])) printf('<script type="text/javascript">window.location="%s/glc/admin";</script>', GLC_URL);
 
-die('test');
+
 
 
 $user_class = getInstance('Class_User');
 $users = get_users("orderby=ID");
+
+die('test');
 
 foreach($users as $key => $value) {
 	printf('%s - %s', $key, $value);
