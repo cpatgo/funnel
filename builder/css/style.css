@@ -9,6 +9,12 @@ body > .container {
 	position: relative;
 }
 
+li.element.ui-draggable.ui-draggable-handle {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
 .toggle:hover, .toggle:focus {
 	color: #fff;
 }
@@ -571,9 +577,11 @@ body .sp-input {
 }
 
 .menu .second ul li, li.element > img {
-	width: 100%;
-	max-width: 100%;
+	/*width: 100%;*/
+	/*max-width: 100%;*/
 	cursor: move;
+	height: 100%;
+    width: auto;
 }
 
 li.element {
