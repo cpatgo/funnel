@@ -1333,3 +1333,5 @@ select[multiple].input-lg, textarea.input-lg {
     height: auto;
     background: whitesmoke;
 }
+
+.hyperlink{ color: #2184be; }
