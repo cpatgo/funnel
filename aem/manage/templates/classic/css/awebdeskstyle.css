@@ -1345,3 +1345,8 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     padding: 1em;
     margin: 0.3em;
 }
+
+.design_your_own{
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+}
