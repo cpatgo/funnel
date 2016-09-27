@@ -499,8 +499,9 @@ function makeSortable(el) {
 
             });
 
-            quick_load_form();
-
+            if(form_id != 0) {
+                quick_load_form();
+            }
         },
         start: function (event, ui) {
 
@@ -2438,38 +2439,7 @@ $(function () {
     });
 
     $('#previewModal').on('shown.bs.modal', function (e) {
-
-        if($('#user_form_div').find('form').length < 1) {
-
-            $.when(jQuery.ajax({
-                type: "post",
-                url: "../../../aem/manage/templates/classic/ajax/api.php",
-                data: {
-                    'action':'get_form_by_id',
-                    'form_id':form_id
-                },
-                dataType: 'json',
-                success:function(result) {
-                    if(result.type == 'success') {
-                        var jheight = jQuery('#pageList iframe').contents().height();
-                        jheight += 100;
-                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
-                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
-                error: function(errorThrown){
-                    console.log(errorThrown);
-                }
-            })).done(function() {
-                previewModalForm();
-            });
-            
-        } else {
-            previewModalForm();
-        }
+        previewModalForm();
     });
 
     $('#previewModal > form').submit(function () {
@@ -2836,38 +2806,7 @@ $(function () {
     });
 
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
-
-        if($('#user_form_div').find('form').length < 1) {
-
-            $.when(jQuery.ajax({
-                type: "post",
-                url: "../../../aem/manage/templates/classic/ajax/api.php",
-                data: {
-                    'action':'get_form_by_id',
-                    'form_id':form_id
-                },
-                dataType: 'json',
-                success:function(result) {
-                    if(result.type == 'success') {
-                        var jheight = jQuery('#pageList iframe').contents().height();
-                        jheight += 100;
-                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
-                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
-                error: function(errorThrown){
-                    console.log(errorThrown);
-                }
-            })).done(function() {
-                saveTemplateModalForm();
-            });
-            
-        } else {
-            saveTemplateModalForm();
-        }
+        saveTemplateModalForm();
     });
 
     $("#xsExport").on('click', function (e) {
