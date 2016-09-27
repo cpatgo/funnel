@@ -5,6 +5,8 @@ var enablePreview = true; //set to off to disable previews
 
 var editableItems = new Array();
 
+var form_id = 0;
+
 editableItems['.frameCover'] = [];
 editableItems['nav#main-navbar'] = ['background-color', 'box-shadow'];
 editableItems['nav a'] = ['font-weight', 'font-size', 'text-transform'];
@@ -497,6 +499,8 @@ function makeSortable(el) {
 
             });
 
+            quick_load_form();
+
         },
         start: function (event, ui) {
 
@@ -514,6 +518,35 @@ function makeSortable(el) {
         }
     });
 
+}
+
+function quick_load_form() {
+
+    if($('#user_form_div').find('form').length < 1) {
+        jQuery.ajax({
+            type: "post",
+            url: "../../../aem/manage/templates/classic/ajax/api.php",
+            data: {
+                'action':'get_form_by_id',
+                'form_id':form_id
+            },
+            dataType: 'json',
+            success:function(result) {
+                if(result.type == 'success') {
+                    var jheight = jQuery('#pageList iframe').contents().height();
+                    jheight += 100;
+                    jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                    jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        });
+    }
 }
 
 
@@ -607,7 +640,6 @@ function buildeStyleElements(el, theSelector) {
         $('#styleEditor form#stylingForm').height('auto')
 
     }
-
 }
 
 function getParentFrameID(el) {
@@ -2400,15 +2432,272 @@ $(function () {
 
     //preview
     $('#previewModal').on('show.bs.modal', function (e) {
-
         $('#previewModal > form #showPreview').show('');
-
         $('#previewModal > form #previewCancel').text('Cancel & Close');
-
         closeStyleEditor();
     });
 
     $('#previewModal').on('shown.bs.modal', function (e) {
+
+        if($('#user_form_div').find('form').length < 1) {
+
+            $.when(jQuery.ajax({
+                type: "post",
+                url: "../../../aem/manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form_by_id',
+                    'form_id':form_id
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        var jheight = jQuery('#pageList iframe').contents().height();
+                        jheight += 100;
+                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            })).done(function() {
+                previewModalForm();
+            });
+            
+        } else {
+            previewModalForm();
+        }
+    });
+
+    $('#previewModal > form').submit(function () {
+
+        $('#previewModal > form #showPreview').hide('');
+
+        $('#previewModal > form #previewCancel').text('Close Window');
+
+    });
+
+    //Import .xs ar2 ar3
+    $("#xsImportForm").submit(function () {
+
+        $(this).ajaxSubmit({
+            success: function (response) {
+                var resp = JSON.parse(response),
+                        xsInc = 1;
+
+                var xsImportdata = JSON.parse(resp.data),
+                        lengthBlocks = xsImportdata.length - 1;
+                window.localStorage.clear();
+                for (var i = 0; i < lengthBlocks; i = i + 2) {
+                    window.localStorage['blocksElement' + xsInc] = JSON.stringify(xsImportdata[i]);
+                    xsInc++;
+                }
+                xsInc = 1;
+
+                for (var i = 1; i < lengthBlocks; i = i + 2) {
+                    window.localStorage['blocksFrame' + xsInc] = JSON.stringify(xsImportdata[i]);
+                    xsInc++;
+                }
+                window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
+                location.reload();
+
+            }
+        });
+        return false;
+    });
+
+    load_template = function(response) {
+        var resp = response,
+              xsInc = 1;
+
+        var xsImportdata = JSON.parse(resp.data),
+              lengthBlocks = xsImportdata.length - 1;
+        window.localStorage.clear();
+        for (var i = 0; i < lengthBlocks; i = i + 2) {
+          window.localStorage['blocksElement' + xsInc] = JSON.stringify(xsImportdata[i]);
+          xsInc++;
+        }
+        xsInc = 1;
+
+        for (var i = 1; i < lengthBlocks; i = i + 2) {
+          window.localStorage['blocksFrame' + xsInc] = JSON.stringify(xsImportdata[i]);
+          xsInc++;
+        }
+        window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
+
+        if(resp.form != 0) {
+            window.location.href = "/builder?save_template=1&form_id="+resp.form;    
+        } else {
+            window.location.href = "/builder?save_template=1";    
+        }
+        
+    };
+
+    load_form = function(form_id) {
+        jQuery.ajax({
+            type: "post",
+            url: "../../../aem/manage/templates/classic/ajax/api.php",
+            data: {
+                'action':'get_form_by_id',
+                'form_id':form_id
+            },
+            dataType: 'json',
+            success:function(result) {
+                if(result.type == 'success') {
+                    setTimeout(function(){
+                        var jheight = jQuery('#pageList iframe').contents().height();
+                        jheight += 100;
+                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                    }, 4000);
+                }
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        });
+    };
+
+    auto_generate_page = function() {
+        var page = $('#saveTemplateModal').find('input[name="page"]').val();
+        jQuery.ajax({
+            type: "post",
+            url: "../builder/save_template.php",
+            data: {
+                'page':page
+            },
+            dataType: 'json',
+            success:function(result) {
+                $('#saveTemplateModal').modal('hide');
+                $("#templateModalResult").find('#url_link').text(result.link);
+                $("#templateModalResult").modal('show');
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        });
+    }
+
+    saveTemplateModalForm = function() {
+        $('#saveTemplateModal form input[type="hidden"]').remove();
+
+        //grab visible page
+        $('#pageList > ul:visible').each(function () {
+
+            //grab the skeleton markup
+
+            newDocMainParent = $('iframe#skeleton').contents().find(pageContainer);
+
+            //empty out the skeleton
+            newDocMainParent.find('*').remove();
+
+            $(this).find('iframe').each(function () {
+
+
+                //sandbox or regular?
+
+                var attr = $(this).attr('data-sandbox');
+
+                if (typeof attr !== typeof undefined && attr !== false) {
+
+                    theContents = $('#sandboxes #' + attr).contents().find(pageContainer);
+
+                } else {
+
+                    theContents = $(this).contents().find(pageContainer);
+
+                }
+
+
+                //remove .frameCovers
+
+                theContents.find('.frameCover').each(function () {
+                    $(this).remove();
+                });
+
+
+                //remove inline styling leftovers
+
+                for (var key in editableItems) {
+
+                    //alert('Key :'+key)
+
+                    theContents.find(key).each(function () {
+
+                        //alert( "Data before: "+ $(this).attr('data-selector') );
+
+                        $(this).removeAttr('data-selector');
+
+                        //alert( "Data after: "+ $(this).attr('data-selector') );
+
+                        if ($(this).attr('style') == '') {
+                            $(this).removeAttr('style')
+                        }
+
+                    })
+
+                }
+                for (i = 0; i < editableContent.length; ++i) {
+
+                    $(this).contents().find(editableContent[i]).each(function () {
+
+                        $(this).removeAttr('data-selector');
+
+                    })
+
+                }
+
+
+                toAdd = theContents.html();
+
+                //grab scripts
+
+                scripts = $(this).contents().find(pageContainer).find('script');
+
+                if (scripts.size() > 0) {
+
+                    theIframe = document.getElementById("skeleton");
+
+                    scripts.each(function () {
+
+                        if ($(this).text() != '') {//script tags with content
+
+                            var script = theIframe.contentWindow.document.createElement("script");
+                            script.type = 'text/javascript';
+                            script.innerHTML = $(this).text();
+
+                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script);
+
+                        } else if ($(this).attr('src') != null) {
+
+                            var script = theIframe.contentWindow.document.createElement("script");
+                            script.type = 'text/javascript';
+                            script.src = $(this).attr('src');
+
+                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script)
+
+                        }
+
+                    })
+
+                }
+
+                newDocMainParent.append($(toAdd));
+
+            });
+
+            newInput = $('<input type="hidden" name="page" value="">');
+
+            $('#saveTemplateModal form').prepend(newInput);
+
+            newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
+        });
+    }
+
+    var previewModalForm = function() {
 
         $('#previewModal form input[type="hidden"]').remove();
 
@@ -2524,116 +2813,6 @@ $(function () {
             newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
 
         });
-
-    });
-
-    $('#previewModal > form').submit(function () {
-
-        $('#previewModal > form #showPreview').hide('');
-
-        $('#previewModal > form #previewCancel').text('Close Window');
-
-    });
-
-    //Import .xs ar2 ar3
-    $("#xsImportForm").submit(function () {
-
-        $(this).ajaxSubmit({
-            success: function (response) {
-                var resp = JSON.parse(response),
-                        xsInc = 1;
-
-                var xsImportdata = JSON.parse(resp.data),
-                        lengthBlocks = xsImportdata.length - 1;
-                window.localStorage.clear();
-                for (var i = 0; i < lengthBlocks; i = i + 2) {
-                    window.localStorage['blocksElement' + xsInc] = JSON.stringify(xsImportdata[i]);
-                    xsInc++;
-                }
-                xsInc = 1;
-
-                for (var i = 1; i < lengthBlocks; i = i + 2) {
-                    window.localStorage['blocksFrame' + xsInc] = JSON.stringify(xsImportdata[i]);
-                    xsInc++;
-                }
-                window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
-                location.reload();
-
-            }
-        });
-        return false;
-    });
-
-    load_template = function(response) {
-        var resp = response,
-              xsInc = 1;
-
-        var xsImportdata = JSON.parse(resp.data),
-              lengthBlocks = xsImportdata.length - 1;
-        window.localStorage.clear();
-        for (var i = 0; i < lengthBlocks; i = i + 2) {
-          window.localStorage['blocksElement' + xsInc] = JSON.stringify(xsImportdata[i]);
-          xsInc++;
-        }
-        xsInc = 1;
-
-        for (var i = 1; i < lengthBlocks; i = i + 2) {
-          window.localStorage['blocksFrame' + xsInc] = JSON.stringify(xsImportdata[i]);
-          xsInc++;
-        }
-        window.localStorage['pageNames'] = JSON.stringify(xsImportdata[lengthBlocks]);
-
-        if(resp.form != 0) {
-            window.location.href = "/builder?save_template=1&form_id="+resp.form;    
-        } else {
-            window.location.href = "/builder?save_template=1";    
-        }
-        
-    };
-
-    load_form = function(form_id) {
-        jQuery.ajax({
-            type: "post",
-            url: "../../../aem/manage/templates/classic/ajax/api.php",
-            data: {
-                'action':'get_form_by_id',
-                'form_id':form_id
-            },
-            dataType: 'json',
-            success:function(result) {
-                if(result.type == 'success') {
-                    setTimeout(function(){
-                        var jheight = jQuery('#pageList iframe').contents().height();
-                        jheight += 100;
-                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
-                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
-                    }, 4000);
-                }
-            },
-            error: function(errorThrown){
-                console.log(errorThrown);
-            }
-        });
-    };
-
-    auto_generate_page = function() {
-        var page = $('#saveTemplateModal').find('input[name="page"]').val();
-        jQuery.ajax({
-            type: "post",
-            url: "../builder/save_template.php",
-            data: {
-                'page':page
-            },
-            dataType: 'json',
-            success:function(result) {
-                $('#saveTemplateModal').modal('hide');
-                $("#templateModalResult").find('#url_link').text(result.link);
-                $("#templateModalResult").modal('show');
-            },
-            error: function(errorThrown){
-                console.log(errorThrown);
-            }
-        });
     }
 
     var clipboard = new Clipboard('.btnCopy');
@@ -2658,125 +2837,37 @@ $(function () {
 
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
 
-        var form_loaded = $('body').find('#user_form_div form');
-        if(typeof form_loaded == 'undefined') {
-            load_form(form_id);
-        }
+        if($('#user_form_div').find('form').length < 1) {
 
-        $('#saveTemplateModal form input[type="hidden"]').remove();
-
-        //grab visible page
-        $('#pageList > ul:visible').each(function () {
-
-            //grab the skeleton markup
-
-            newDocMainParent = $('iframe#skeleton').contents().find(pageContainer);
-
-            //empty out the skeleton
-            newDocMainParent.find('*').remove();
-
-            $(this).find('iframe').each(function () {
-
-
-                //sandbox or regular?
-
-                var attr = $(this).attr('data-sandbox');
-
-                if (typeof attr !== typeof undefined && attr !== false) {
-
-                    theContents = $('#sandboxes #' + attr).contents().find(pageContainer);
-
-                } else {
-
-                    theContents = $(this).contents().find(pageContainer);
-
+            $.when(jQuery.ajax({
+                type: "post",
+                url: "../../../aem/manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form_by_id',
+                    'form_id':form_id
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        var jheight = jQuery('#pageList iframe').contents().height();
+                        jheight += 100;
+                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
                 }
-
-
-                //remove .frameCovers
-
-                theContents.find('.frameCover').each(function () {
-                    $(this).remove();
-                });
-
-
-                //remove inline styling leftovers
-
-                for (var key in editableItems) {
-
-                    //alert('Key :'+key)
-
-                    theContents.find(key).each(function () {
-
-                        //alert( "Data before: "+ $(this).attr('data-selector') );
-
-                        $(this).removeAttr('data-selector');
-
-                        //alert( "Data after: "+ $(this).attr('data-selector') );
-
-                        if ($(this).attr('style') == '') {
-                            $(this).removeAttr('style')
-                        }
-
-                    })
-
-                }
-                for (i = 0; i < editableContent.length; ++i) {
-
-                    $(this).contents().find(editableContent[i]).each(function () {
-
-                        $(this).removeAttr('data-selector');
-
-                    })
-
-                }
-
-
-                toAdd = theContents.html();
-
-                //grab scripts
-
-                scripts = $(this).contents().find(pageContainer).find('script');
-
-                if (scripts.size() > 0) {
-
-                    theIframe = document.getElementById("skeleton");
-
-                    scripts.each(function () {
-
-                        if ($(this).text() != '') {//script tags with content
-
-                            var script = theIframe.contentWindow.document.createElement("script");
-                            script.type = 'text/javascript';
-                            script.innerHTML = $(this).text();
-
-                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script);
-
-                        } else if ($(this).attr('src') != null) {
-
-                            var script = theIframe.contentWindow.document.createElement("script");
-                            script.type = 'text/javascript';
-                            script.src = $(this).attr('src');
-
-                            theIframe.contentWindow.document.getElementById(pageContainer.substring(1)).appendChild(script)
-
-                        }
-
-                    })
-
-                }
-
-                newDocMainParent.append($(toAdd));
-
+            })).done(function() {
+                saveTemplateModalForm();
             });
-
-            newInput = $('<input type="hidden" name="page" value="">');
-
-            $('#saveTemplateModal form').prepend(newInput);
-
-            newInput.val("<html>" + $('iframe#skeleton').contents().find('html').html() + "</html>")
-        });
-
+            
+        } else {
+            saveTemplateModalForm();
+        }
     });
 
     $("#xsExport").on('click', function (e) {
@@ -2832,11 +2923,7 @@ $(function () {
 
     $('#exportModal').on('shown.bs.modal', function (e) {
 
-        var form_loaded = $('body').find('#user_form_div form');
-        if(typeof form_loaded == 'undefined') {
-            load_form(form_id);
-        }
-        
+
         //delete older hidden fields
 
         $('#exportModal form input[type="hidden"]').remove();
