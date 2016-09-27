@@ -1221,7 +1221,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     height: 110%;
 }
 
-.ui-widget.ui-widget-content {
+.ui-progressbar.ui-widget.ui-widget-content {
     border: 1px solid #c5c5c5;
     border-radius: 20px;
     background: #666;
