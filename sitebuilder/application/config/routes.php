@@ -47,6 +47,8 @@ $route['logout'] = "auth/logout";
 
 $route['sites/([0-9]+?)'] = "sites/site/$1";
 
+$route['preview/([0-9]+?)'] = "preview/index/$1";
+
 $route['settings'] = "configuration/index";
 
 $route['temple/([0-9]+?)'] = "temple/index/$1";
