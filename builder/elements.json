@@ -65,7 +65,7 @@ var _Elements = {"elements": {
 
     "Skin Care": [
         {"url":"elements/glc-beauty.html", "height":163, "thumbnail":"elements/thumbs/glc-beauty.jpg"},
-        {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.png"},
+        {"url":"elements/glc-jeunesse.html", "height":163, "thumbnail":"elements/thumbs/glc-jeunesse.jpg"},
         {"url":"elements/glc-nerium.html", "height":163, "thumbnail":"elements/thumbs/glc-nerium.png"},
     ],
 
