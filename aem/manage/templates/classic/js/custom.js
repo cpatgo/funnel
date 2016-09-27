@@ -742,7 +742,8 @@ jQuery(document).ready(function(){
 
     // Accordion
     jQuery( ".accordion" ).accordion({
-      collapsible: true
+      collapsible: true,
+      heightStyle: "content"
     });
 
 });
