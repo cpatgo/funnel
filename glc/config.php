@@ -1,4 +1,4 @@
-<?PHP
+	<?PHP
 //session_start();
 $backup_path = "/home/globallearningce/public_html/glc/backup/";
 
@@ -238,9 +238,9 @@ elseif($server_host === 'glcv2.local'):
 
 else:
 	// database configuration
-	$dbUsername = "katssoft_glc";
-	$dbPassword = "G1(iHHw;7k+W";
-	$dbName = "katssoft_glc";
+	$dbUsername = "wwwglchu_glcuser";
+	$dbPassword = "7*hHqFw{+RJh";
+	$dbName = "wwwglchu_glc";
 
 	// payza payment gateway
 	$payza_checkout = 'https://secure.payza.com/checkout';
