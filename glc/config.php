@@ -1,4 +1,4 @@
-	<?PHP
+<?PHP
 //session_start();
 $backup_path = "/home/globallearningce/public_html/glc/backup/";
 
