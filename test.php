@@ -2,4 +2,9 @@
 
 $set = setcookie('referral',$referral,time() + (86400 * 180), '/');
 
-printf('Cookie: %s', $set);
+if ($set){
+	printf('Cookie: %s', $set);	
+}
+else {
+	print 'No Cookie Set!';
+}
