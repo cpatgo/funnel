@@ -181,7 +181,7 @@ function setup_referral() {
 		exit();
 	}
 }
-add_action('init', 'setup_referral');
+//add_action('init', 'setup_referral');
 
 
 /*
