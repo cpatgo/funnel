@@ -183,7 +183,6 @@ function setup_referral() {
 }
 add_action('init', 'setup_referral');
 
-
 /*
  * if you run a child theme and dont want to load the default functions.php file
  * set the global var below in you childthemes function.php to true:

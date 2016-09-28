@@ -236,8 +236,16 @@ elseif($server_host === 'glcv2.local'):
     // $authorize_id = "3Xu5c4nGAa";
     // $authorize_key = "2bPgvBQ2VX9597nP";
 
+elseif($server_host === 'glchub.dev'):
+
+    // database configuration
+    $dbUsername = "root";
+    $dbPassword = "1234";
+    $dbName = "glcv2";
+
 else:
 	// database configuration
+    // default production server (GLCHUB.COM)
 	$dbUsername = "wwwglchu_glcuser";
 	$dbPassword = "7*hHqFw{+RJh";
 	$dbName = "wwwglchu_glc";
