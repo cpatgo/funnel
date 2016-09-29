@@ -1,7 +1,7 @@
 /* ===========================================================
  * flatui-fileinput v0.1.0
  * Based on Bootstrap: fileinput.js v3.0.0-p7
- * http://jasny.github.com/bootstrap/javascript.html#fileinput
+ * https://jasny.github.com/bootstrap/javascript.html#fileinput
  * ===========================================================
  */
 

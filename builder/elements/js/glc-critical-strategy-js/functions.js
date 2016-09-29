@@ -10,17 +10,17 @@ $(function () {
 			case 'facebook':
 				url = ( LeadPageData['facebookurl']['value'] ? LeadPageData['facebookurl']['value'] : document.URL);
 				window_size = "width=585,height=368";
-				go = 'http://www.facebook.com/sharer/sharer.php?u=' + url;
+				go = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
 				break;
 			case 'twitter':
 				url = ( LeadPageData['twitterurl']['value'] ? LeadPageData['twitterurl']['value'] : document.URL);
 				window_size = "width=585,height=261";
-				go = 'http://www.twitter.com/intent/tweet?url=' + url;
+				go = 'https://www.twitter.com/intent/tweet?url=' + url;
 				break;
 			case 'google':
 				url = ( LeadPageData['googleurl']['value'] ? LeadPageData['googleurl']['value'] : document.URL);
 				window_size = "width=517,height=511";
-				go = 'http://plus.google.com/share?url=' + url;
+				go = 'https://plus.google.com/share?url=' + url;
 				break;
 			default:
 				return false;
