@@ -814,4 +814,10 @@ Mobile Styles
 
 }
 
+span.referby {    
+    font-size: 16px;
+    display: block;
+    padding: 14px 20px;
+    color: white; }
+
 
