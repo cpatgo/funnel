@@ -4,7 +4,7 @@
  * By HubSpot  >('_')<
  *
  * Licensed under the MIT license:
- *   http://www.opensource.org/licenses/mit-license.php
+ *   https://www.opensource.org/licenses/mit-license.php
  *
  * Example usage:
 
@@ -45,7 +45,7 @@ function supportsTransitions() {
             //loading
             loadingType: 'message', // other type: 'spinner'
             loadingMessage: 'Generating preview...',
-            spinnerURL: 'http://oi46.tinypic.com/6y375z.jpg', // requires loadingType: 'spinner'
+            spinnerURL: 'https://oi46.tinypic.com/6y375z.jpg', // requires loadingType: 'spinner'
             //hover
             message: 'Open Page',
             ieMessageButtonClass: 'btn btn-secondary', // used in IE only
@@ -122,7 +122,7 @@ function supportsTransitions() {
             }
 
             //fix bug in older version of chrome:
-            //http://stackoverflow.com/questions/5159713/
+            //https://stackoverflow.com/questions/5159713/
             if (navigator.userAgent.indexOf('Chrome/10.0.648') > -1) {
                 options.zoom = Math.sqrt(1 / options.zoom);
             }

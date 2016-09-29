@@ -75,7 +75,7 @@ if(DEBUG == true) {
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
 
-// CONFIG: Please download 'cacert.pem' from "http://curl.haxx.se/docs/caextract.html" and set the directory path
+// CONFIG: Please download 'cacert.pem' from "https://curl.haxx.se/docs/caextract.html" and set the directory path
 // of the certificate as shown below. Ensure the file is readable by the webserver.
 // This is mandatory for some environments.
 
