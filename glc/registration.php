@@ -142,9 +142,9 @@ if( isset($_COOKIE['referral']) ) {
 	        		<br />
 	        		<div class="align-right"><a class="btn btn-primary" href="login.php" style="text-align: right;">Already a Member? Login here.</a></div>
 	        	</div>
-	        	<div class="pull-left" style="padding-top:18px;">
+	        	<div class="pull-left" style="padding-top:1px;">
 		        	<a href="/">
-			            <img src="images/glc-logo-250x40.png" alt="GLobal Learning Center" />
+			            <img src="images/hz-glclogo200x70.png" alt="GLC HUB" />
 			        </a>
 		        </div>
 	        </div>
