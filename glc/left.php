@@ -42,7 +42,7 @@
 			</li>
 			<?php include "left_menu.php"; ?>
 			<li>
-				<a href="/dashboard/">
+				<a href="/myhub/">
 					<i class="fa fa-video-camera"></i>
 					<span class="nav-label">GLC Hub</span>
 				</a> 
