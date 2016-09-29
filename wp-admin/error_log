@@ -1240,3 +1240,7 @@
 [28-Sep-2016 23:47:45 UTC] PHP Strict Standards:  Redefining already defined constructor for class Login_Redirect in /home/wwwglchub/public_html/wp-content/plugins/login-and-logout-redirect/login-and-logout-redirect.php on line 222
 [28-Sep-2016 23:47:52 UTC] PHP Strict Standards:  Redefining already defined constructor for class Logout_Redirect in /home/wwwglchub/public_html/wp-content/plugins/login-and-logout-redirect/login-and-logout-redirect.php on line 45
 [28-Sep-2016 23:47:52 UTC] PHP Strict Standards:  Redefining already defined constructor for class Login_Redirect in /home/wwwglchub/public_html/wp-content/plugins/login-and-logout-redirect/login-and-logout-redirect.php on line 222
+[29-Sep-2016 19:49:37 UTC] 2016-09-29 19:49:37 wpMandrill::getCurrentStats (Empty Transient. Getting persistent copy)
+
+[29-Sep-2016 19:49:40 UTC] 2016-09-29 19:49:40 wpMandrill::getCurrentStats (Empty Transient. Getting persistent copy)
+
