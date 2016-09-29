@@ -17,7 +17,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     if(typeof $_GET["action"] != "undefined") {
-    	$('body').find('li[id="menu_'+$_GET["action"]+'"]').addClass("active");
+    	$('body').find('li[id="menu_' + $_GET["action"] + '"]').addClass("active");
     } else {
     	$('body').find('li[id="menu_dashboard"]').addClass("active");	
     }
