@@ -27,7 +27,7 @@ class funnel_campaign_assets extends AWEBP_Page {
 		$smarty->assign("content_template", "funnel_campaign.htm");
 
 		$so = new adesk_Select;
-		$query = "SELECT * FROM awebdesk_funnel_campaign";
+		$query = sprintf("SELECT * FROM awebdesk_funnel_campaign WHERE user_id = %d", $this->admin['id']);
 		$funnels = adesk_sql_select_array($query);
 
 		$smarty->assign("funnels", $funnels);
