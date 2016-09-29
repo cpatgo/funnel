@@ -1305,7 +1305,7 @@ input[placeholder] {
     color: white;
     border-radius: 20px;
     font: bold 14px "Helvetica Neue", Sans-Serif;
-    text-transform: uppercase;
+    text-transform: none;
     box-shadow: 0 0 7px black;
     background:none;
   }
@@ -1350,3 +1350,4 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     border-top: 1px solid #ccc;
     margin-top: 1em;
 }
+
