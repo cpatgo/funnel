@@ -535,10 +535,11 @@ $whitelist = array(
 		'action' => 'singlesignon!adesk_sso_token_generate',
 		'params' => array('sso_addr', 'sso_user', 'sso_pass', 'sso_duration'),
 	),
+	*/
 	'singlesignon_sameserver' => array(
 		'action' => 'singlesignon!adesk_sso_sameserver',
 		'params' => array(),
-	), */
+	),
 	// subscriber
 	'subscriber_view' => array(
 		'action' => 'subscriber.subscriber_view',
