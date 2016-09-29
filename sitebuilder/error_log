@@ -164,3 +164,4 @@
 [26-Sep-2016 18:04:00 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/sitebuilder/index.php on line 75
 [29-Sep-2016 13:32:36 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
 [29-Sep-2016 13:33:47 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
+[29-Sep-2016 14:05:23 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
