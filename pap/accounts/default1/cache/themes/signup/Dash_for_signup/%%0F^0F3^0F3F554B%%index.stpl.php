@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2016-07-06 12:44:21
+<?php /* Smarty version 2.6.18, created on 2016-09-28 18:36:47
          compiled from index.stpl */ ?>
 <!-- index -->
 <div class="c1_MainBox c1_AffiliatesMainbox">
