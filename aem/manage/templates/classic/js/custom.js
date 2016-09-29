@@ -716,6 +716,10 @@ jQuery(document).ready(function(){
         jQuery('label[for="'+template+'"]').find('.template_buttons').show();
     });
 
+    $body.on('click', '.accesssitebuilder', function(){
+        jQuery('.actions > ul > li:nth-child(2) > a').click();
+    });
+
 
     //GET FORMS
     // aem_functions.get_forms();
