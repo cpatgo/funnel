@@ -69,6 +69,11 @@ class Password extends Class_Database
         include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
         $wp_user = get_user_by('email', $user['email']);
         wp_set_password($password, $wp_user->ID);
+
+        //Also update the password in AEM
+        include_once($_SERVER['DOCUMENT_ROOT'].'/aem/manage/config_ex.inc.php');
+        $query = sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE email = '%s'", md5($password), $user['email']);
+        $sql = mysql_query($query, $GLOBALS["db_link"]);
         
         if($update) $this->redirect('glc/reset_password.php?msg=1');
         $this->redirect('glc/reset_password.php?err=3');

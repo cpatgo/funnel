@@ -40,15 +40,21 @@ if(!empty($user))
     wp_set_current_user($user->ID);
     
     $_SESSION['dennisn_user_name'] = $_REQUEST['username'];
-    $_SESSION['dennisn_user_email'] = $_REQUEST['email'];
+    $_SESSION['dennisn_user_email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : '';
     $_SESSION['dennisn_user_login'] = 1;    
     
     if(isset($_COOKIE['referral'])) setcookie('referral', false, time() - 60*100000, '/');
     
     // login to AEM software automatically using their singlesignon
-    include_once(dirname(__FILE__) . "/class/aem/api/singlesignon_sameserver.php");
-    
 
+    include_once(dirname(__FILE__) . "/class/aem/api/singlesignon_sameserver.php");
+    //Check if login successful in aem
+    if((int)$result['result_code'] == 0 && !is_wp_error($user)):
+        include_once($_SERVER['DOCUMENT_ROOT'].'/aem/manage/config_ex.inc.php');
+        $query = sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE username = '%s'", md5($_REQUEST['password']), $_REQUEST['username']);
+        mysql_query($query, $GLOBALS["db_link"]);
+        curl_request($params);
+    endif;
 
     printf('<script type="text/javascript">window.location="%s/myhub/";</script>', GLC_URL);
 }
