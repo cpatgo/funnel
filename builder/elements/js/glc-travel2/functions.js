@@ -1,5 +1,5 @@
 /*!
- * LeadPages (http://leadpages.net)
+ * LeadPages (https://leadpages.net)
  * Copyright 2014 LeadPages.
  * Place Custom Javascript Functions Below
  */

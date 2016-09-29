@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v5.0.0 | MIT License | https://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -117,7 +117,7 @@ textarea {
 
 /*
  * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
+ * https://juicystudio.com/article/screen-readers-display-none.php
  */
 
 .hidden {
@@ -127,7 +127,7 @@ textarea {
 
 /*
  * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
 .visuallyhidden {
@@ -207,7 +207,7 @@ textarea {
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
+   https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
@@ -216,7 +216,7 @@ textarea {
     *:after {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+                                   https://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -252,7 +252,7 @@ textarea {
 
     /*
      * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     * https://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
     thead {

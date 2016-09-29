@@ -266,7 +266,7 @@ if(!isset($_SESSION['dennisn_user_id'])) printf('<script type="text/javascript">
    					<span>OR</span>
    				</p>
    				
-   				<input type="text" class="form-control" id="internalLinksCustom" placeholder="http://somewhere.com/somepage" value="">
+   				<input type="text" class="form-control" id="internalLinksCustom" placeholder="https://somewhere.com/somepage" value="">
    				
  			</div>
     	
