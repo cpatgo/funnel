@@ -7,7 +7,7 @@ require_once adesk_admin("functions/template.php");
 class funnel_campaign_assets extends AWEBP_Page {
 
 	function funnel_campaign_assets() {
-		$this->pageTitle = _a("Funnel Campaigns");
+		$this->pageTitle = _a("My Campaigns");
 		$this->AWEBP_Page();
 	}
 
