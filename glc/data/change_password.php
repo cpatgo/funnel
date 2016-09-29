@@ -34,6 +34,11 @@ if($_POST['update'])
 			mysqli_query($aem_con, sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE username = '%s'", md5($raw_password), $_SESSION['dennisn_username']));
 			mysqli_close($aem_con);
 
+			//Also update the password in AEM
+	        include_once($_SERVER['DOCUMENT_ROOT'].'/aem/manage/config_ex.inc.php');
+	        $query = sprintf("UPDATE aweb_globalauth SET password = '%s' WHERE email = '%s'", md5($raw_password), $_SESSION['dennisn_user_email']);
+	        $sql = mysql_query($query, $GLOBALS["db_link"]);
+
 			$date = date('Y-m-d');
 			$updated_by = $username = "Ourself ".$_SESSION['dennisn_username'];
 			$username = $_SESSION['dennisn_username'];
