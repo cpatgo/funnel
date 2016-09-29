@@ -4,8 +4,8 @@ Contributors: themeavenue,julien731,SiamKreative
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KADEESTQ9H3GW
 Tags: support,helpdesk,tickets,ticketing,help,support staff,
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 3.3.1
+Tested up to: 4.6.2
+Stable tag: 3.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -171,7 +171,28 @@ There are several factors that can influence e-mail notifications delivery. Plea
 
 == Changelog ==
 
-== 3.3.1 - June 20, 2016 ==
+= 3.3.2 - September 23, 2016 =
+
+* New
+	* Add more hooks and filters
+
+* Improvements
+	* Don't show "Awaiting Reply" tag when agents can see all tickets
+	* Make the "Smart filtering" of tickets an option
+	* Improved capability check on ticket creation
+	* Turn auto-completion of password fields off (for PCI compliance)
+	* Use safe redirects after login & registration (for PCI compliance)
+	* Improve username sanitization on account creation
+	* Add the ability to programmatically add new options through `wpas_update_option()`
+
+* Bugfixes
+	* Fix conflict with ACF Pro
+	* Fix conflict with Sensei
+	* Fix issue with orphan medias not showing up in the media library
+	* Fix issue with terms & conditions not validating properly on account registration
+	* Localize forgotten strings
+
+= 3.3.1 - June 20, 2016 =
 
 * Bugfixes
 	* Fix conflict with Ninja Forms

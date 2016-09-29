@@ -1,18 +1,18 @@
 <?php
 /**
  * @package   Awesome Support
- * @author    ThemeAvenue <web@themeavenue.net>
+ * @author    Awesome Support Team <contact@getawesomesupport.com>
  * @license   GPL-2.0+
- * @link      http://themeavenue.net
+ * @link       https://getawesomesupport.com
  * @copyright 2014 ThemeAvenue
  *
  * @wordpress-plugin
  * Plugin Name:       Awesome Support
  * Plugin URI:        https://getawesomesupport.com
  * Description:       Awesome Support is a great ticketing system that will help you improve your customer satisfaction by providing a unique customer support experience.
- * Version:           3.3.1
- * Author:            ThemeAvenue
- * Author URI:        http://themeavenue.net
+ * Version:           3.3.2
+ * Author:            Awesome Support Team
+ * Author URI:         https://getawesomesupport.com
  * Text Domain:       awesome-support
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -238,7 +238,7 @@ if ( ! class_exists( 'Awesome_Support' ) ):
 		 * @return void
 		 */
 		private function setup_constants() {
-			define( 'WPAS_VERSION',           '3.3.1' );
+			define( 'WPAS_VERSION',           '3.3.2' );
 			define( 'WPAS_DB_VERSION',        '1' );
 			define( 'WPAS_URL',               trailingslashit( plugin_dir_url( __FILE__ ) ) );
 			define( 'WPAS_PATH',              trailingslashit( plugin_dir_path( __FILE__ ) ) );
@@ -422,7 +422,13 @@ if ( ! class_exists( 'Awesome_Support' ) ):
 			require( WPAS_PATH . 'includes/install.php' );
 
 			if ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) {
+
 				require( WPAS_PATH . 'includes/functions-admin-bar.php' );
+
+				// Compatibility functions
+				require( 'includes/compatibility/sensei.php' );
+				require( 'includes/compatibility/acf-pro.php' );
+
 			}
 
 		}
