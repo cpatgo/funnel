@@ -2,10 +2,10 @@
 	Redactor v10.0.3
 	Updated: October 31, 2014
 
-	http://imperavi.com/redactor/
+	https://imperavi.com/redactor/
 
 	Copyright (c) 2009-2014, Imperavi LLC.
-	License: http://imperavi.com/redactor/license/
+	License: https://imperavi.com/redactor/license/
 
 	Usage: $('#content').redactor();
 */

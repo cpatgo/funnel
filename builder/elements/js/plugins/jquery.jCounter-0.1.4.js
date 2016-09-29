@@ -1,7 +1,7 @@
 /**********************************
 * jCounter Script v0.1.4 (beta)
 * Author: Catalin Berta
-* Official page and documentation: http://devingredients.com/jcounter
+* Official page and documentation: https://devingredients.com/jcounter
 * Licensed under the MIT license
 **********************************/
 ;(function($,document,window,undefined) {
@@ -31,7 +31,7 @@
 			customRange: null,
 			date: null,
 			debugLog: false,
-			serverDateSource: 'dateandtime.php', //path to dateandtime.php file (i.e. http://my-domain.com/dateandtime.php)
+			serverDateSource: 'dateandtime.php', //path to dateandtime.php file (i.e. https://my-domain.com/dateandtime.php)
 			format: 'dd:hh:mm:ss',
 			timezone: 'Europe/London',
 			twoDigits: 'on'
