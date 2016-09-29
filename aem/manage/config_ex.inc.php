@@ -1,8 +1,8 @@
 <?php
 define('AWEBP_DB_HOST', 'localhost');
-define('AWEBP_DB_USER', 'identifz_aem');
-define('AWEBP_DB_PASS', 'U*XF}OmOb5hh');
-define('AWEBP_DB_NAME', 'identifz_glc_aem');
+define('AWEBP_DB_USER', 'wwwglchu_glcuser');
+define('AWEBP_DB_PASS', '7*hHqFw{+RJh');
+define('AWEBP_DB_NAME', 'wwwglchu_glc_aem');
 
 
 $GLOBALS["db_link"] = mysql_connect(AWEBP_DB_HOST, AWEBP_DB_USER, AWEBP_DB_PASS, true);
