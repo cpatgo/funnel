@@ -257,7 +257,6 @@ jQuery(document).ready(function(){
                 },
                 dataType: 'json',
                 success:function(result) {
-                    console.log(result);
                     if(result.type == 'success'){
                         jQuery('input[name=landing-page-url]:checked').val(result.message);
 
