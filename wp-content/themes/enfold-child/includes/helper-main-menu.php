@@ -59,11 +59,11 @@ if($headerS['header_topbar'] == true)
 								// 'items_wrap' => '<ul class="%2$s">%3$s</ul>'
 			                );
 			                if( isset($_COOKIE['referral']) ) {
-								$args['items_wrap'] = '<ul><li id="item-id" class="btn-glc-referral menu-item menu-item-type-post_type menu-item-object-page"><a href="javascript;" class="referby">Referred By: <span>'.$_COOKIE['referral'].'</span></a></li>%3$s</ul>';
+								$args['items_wrap'] = '<ul><li id="item-id" class="btn-glc-referral menu-item menu-item-type-post_type menu-item-object-page"><span class="referby">Referred By: '.$_COOKIE['referral'].'</span></li>%3$s</ul>';
 							}
 							
 							
-			                
+			                """"
 			                
 			                // var_dump($args);
 			                $nav = wp_nav_menu($args);
