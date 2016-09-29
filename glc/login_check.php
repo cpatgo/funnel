@@ -37,6 +37,7 @@ if(!empty($user))
     if(is_wp_error($user)):
         printf('<script type="text/javascript">window.location="%s/glc/login.php?err=1";</script>', GLC_URL);
     endif;
+    wp_set_current_user($user->ID);
     
     $_SESSION['dennisn_user_name'] = $_REQUEST['username'];
     $_SESSION['dennisn_user_email'] = $_REQUEST['email'];
