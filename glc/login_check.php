@@ -40,7 +40,7 @@ if(!empty($user))
     wp_set_current_user($user->ID);
     
     $_SESSION['dennisn_user_name'] = $_REQUEST['username'];
-    $_SESSION['dennisn_user_email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : '';
+    $_SESSION['dennisn_user_email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : $user['email'];
     $_SESSION['dennisn_user_login'] = 1;    
     
     if(isset($_COOKIE['referral'])) setcookie('referral', false, time() - 60*100000, '/');
