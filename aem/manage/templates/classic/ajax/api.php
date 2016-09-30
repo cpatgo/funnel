@@ -116,8 +116,6 @@ function add_form() {
 	
 	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
 		$list_id = $_SESSION['selected_list_id'];
-		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
-		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
 
 		$post = array(
 			'name'                     => $fields['form_name'], // the internal name of the subscription form
@@ -137,13 +135,14 @@ function add_form() {
 			'up2'                      => 'default', // options: default, custom, redirect
 			'allowselection'           => 0, // options: 1 or 0
 			'emailconfirmations'       => 1, // options: 1 or 0
-			'ask4fname'                => $ask4fname, // First Name - options: 1 or 0
-			'ask4lname'                => $ask4lname, // Last Name - options: 1 or 0
 			'optinoptout'              => 1, // ID of Opt-In/Out set
 			'captcha'                  => 0, // options: 1 or 0
 			'p[0]'                     => $list_id, // example list ID
 		);
 
+		if(array_key_exists('ask4fname', $fields) && $fields['ask4fname']) $post['ask4fname'] = 1;
+		if(array_key_exists('ask4lname', $fields) && $fields['ask4lname']) $post['ask4lname'] = 1;
+		
 		if(!empty($fields['fields'])):
 			foreach ($fields['fields'] as $key => $value) {
 				$post[sprintf('fields[%d]', $key)] = $value;
@@ -165,9 +164,7 @@ function edit_form() {
 	parse_str($_POST['fields'], $fields);
 	if(!empty($fields['form_name']) && !empty($fields['sub2_redirect'])):
 		$list_id = $_SESSION['selected_list_id'];
-		$ask4fname = (array_key_exists('ask4fname', $fields) && $fields['ask4fname']) ? $fields['ask4fname'] : 0;
-		$ask4lname = (array_key_exists('ask4lname', $fields) && $fields['ask4lname']) ? $fields['ask4lname'] : 0;
-
+		
 		//If sub3_redirect is not set or is empty, use sub2_redirect instead
 		if(!array_key_exists('sub3_redirect', $fields) || !isset($fields['sub3_redirect']) || empty($fields['sub3_redirect'])) $fields['sub3_redirect'] = $fields['sub2_redirect'];
 
@@ -190,12 +187,13 @@ function edit_form() {
 			'up2'                      => 'default', // options: default, custom, redirect
 			'allowselection'           => 0, // options: 1 or 0
 			'emailconfirmations'       => 1, // options: 1 or 0
-			'ask4fname'                => $ask4fname, // First Name - options: 1 or 0
-			'ask4lname'                => $ask4lname, // Last Name - options: 1 or 0
 			'optinoptout'              => 1, // ID of Opt-In/Out set
 			'captcha'                  => 0, // options: 1 or 0
 			'p[0]'                     => $list_id, // example list ID
 		);
+
+		if(array_key_exists('ask4fname', $fields) && $fields['ask4fname']) $post['ask4fname'] = 1;
+		if(array_key_exists('ask4lname', $fields) && $fields['ask4lname']) $post['ask4lname'] = 1;
 
 		if(!empty($fields['fields'])):
 			foreach ($fields['fields'] as $key => $value) {
