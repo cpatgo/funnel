@@ -56,7 +56,7 @@ var _Elements = {"elements": {
     "Redirect": [
         {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect.jpg"},
         {"url":"elements/glc-redirect2.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect2.jpg"},
-        {"url":"elements/glc-redirect.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect3.jpg"}
+        {"url":"elements/glc-redirect3.html", "height":163, "thumbnail":"elements/thumbs/glc-redirect3.jpg"}
     ],
 
     "Sales": [
