@@ -25,3 +25,7 @@ wp-content/plugins/out-of-the-box/cache
 wp-admin/pThumb*
 
 aem/cache
+aem/cache/serialkey.php
+aem/cache/key.php
+aem/manage/ex_config.php
+aem/manage/config.php
