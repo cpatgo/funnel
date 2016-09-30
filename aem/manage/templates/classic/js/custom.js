@@ -565,6 +565,7 @@ jQuery(document).ready(function(){
         // aem_functions.focus_on_element('#new_list_div');
         jQuery('.btn_landing_page_builder').removeClass('list_selection_active');
         jQuery('.btn_landing_page_select_template').addClass('list_selection_active');
+        aem_functions.focus_on_element('#select_landing_page_template');
     });
 
 
@@ -573,7 +574,6 @@ jQuery(document).ready(function(){
     $body.on('click', '.btn_pre_made_template', function(e){
         e.preventDefault();
         $body.find('#pre_made_templates_container').show();
-        aem_functions.focus_on_element('#pre_made_templates_container');
         $body.find('#custom_page_design_container').hide();
         $body.find('#external_url_container').hide();
 
@@ -582,6 +582,7 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+        aem_functions.focus_on_element('#pre_made_templates_container');
         
     });
 
@@ -589,7 +590,6 @@ jQuery(document).ready(function(){
         e.preventDefault();
         $body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').show();
-        aem_functions.focus_on_element('#custom_page_design_container');
         $body.find('#external_url_container').hide();
 
         jQuery('.btn_pre_made_template').removeClass('list_selection_active');
@@ -597,6 +597,7 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
         
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+        aem_functions.focus_on_element('#custom_page_design_container');
     });
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
@@ -622,7 +623,6 @@ jQuery(document).ready(function(){
     $body.on('click', '.btn_thankyou_premadetemplate', function(e){
         e.preventDefault();
         $body.find('#thankyou_premadetemplate_container').show();
-        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
         $body.find('#thankyou_custompagedesign_container').hide();
         $body.find('#thankyou_externalurl_container').hide();
 
@@ -631,14 +631,13 @@ jQuery(document).ready(function(){
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
-        
+        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
     });
 
     $body.on('click', '.btn_thankyou_custompagedesign', function(e){
         e.preventDefault();
         $body.find('#thankyou_premadetemplate_container').hide();
         $body.find('#thankyou_custompagedesign_container').show();
-        aem_functions.focus_on_element('#thankyou_custompagedesign_container');
         $body.find('#thankyou_externalurl_container').hide();
 
         jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
@@ -646,6 +645,7 @@ jQuery(document).ready(function(){
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
         
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+        aem_functions.focus_on_element('#thankyou_custompagedesign_container');
     });
 
     $body.on('click', '.btn_thankyou_externalurl', function(e){
