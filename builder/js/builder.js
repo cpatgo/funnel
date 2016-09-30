@@ -2439,7 +2439,9 @@ $(function () {
     });
 
     $('#previewModal').on('shown.bs.modal', function (e) {
-        previewModalForm();
+        jQuery.when(quick_load_form()).done(function(){
+            previewModalForm();
+        });
     });
 
     $('#previewModal > form').submit(function () {
@@ -2806,7 +2808,9 @@ $(function () {
     });
 
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
-        saveTemplateModalForm();
+        jQuery.when(quick_load_form()).done(function(){
+            saveTemplateModalForm();
+        });
     });
 
     $("#xsExport").on('click', function (e) {
