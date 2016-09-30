@@ -171,6 +171,14 @@ jQuery(document).ready(function(){
                 aem_functions.update_form();
             }
 
+            //Skip List Data Step if Existing List was selected
+            if(currentIndex == 3 && newIndex == 2) {
+                var method = $body.find('#select_list_method').val();
+                if(method == 'select_existing_list') {
+                    jQuery('.actions > ul > li:first-child').click();
+                }
+            }
+
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
@@ -224,8 +232,6 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
-
-
         },
         onFinishing: function (event, currentIndex)
         {
@@ -530,6 +536,14 @@ jQuery(document).ready(function(){
         aem_functions.focus_on_element('#new_list_div');
         jQuery('.select_existing_list').removeClass('list_selection_active');
         jQuery('.newlist_btn').addClass('list_selection_active');
+    });
+
+    $body.on('click', '.thankyou_url_option', function(e){
+        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
+    });
+
+    $body.on('click', '.thankyou_url_option', function(e){
+        aem_functions.focus_on_element('#pre_made_templates_container');
     });
 
     $body.on('click', '.select_existing_list', function(e){
