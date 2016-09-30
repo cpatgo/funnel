@@ -133,48 +133,6 @@
 			<table width="100%" style="margin-top:0px;" class="noborder">
  
   <tbody><tr>
-   	<!-- {if $canAddList} <td align="center"><span><img src="images/slist.png"></span><br><br><a href="desk.php?action=list#form-0">{"Create a list"|alang}</a>
-        <div>{"A list has subscribers whom you will send emails frequently."}</div>
-      <div class="Completed" style="{if $group_lists_status == 0} display:block; {else} display:none;{/if}"> &nbsp;</div></td>{/if}
-
-      {if $canAddSubscriber}<td align="center"><span><img src="images/subs.png"></span><br> <a href="desk.php?action=subscriber_import">{"Import subscribers"|alang}</a>
-        <div>{"Import using CSV file, copy paste data, or from Gmail , Salesforce, Highrise, Zendesk and many others."}</div>
-      <div class="Completed" style="{if $group_lists_subscribers_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
-		  {if $admin.pg_form_edit}
- <td align="center"><span><img src="images/sint.png"></span><br><br> 	  <a href="desk.php?action=form">{"Integrate with website"|alang}</a>
-        <div>{"Create subscription forms and generate html codes to paste it on your website."}</div>
-      <div class="Completed" style="{if $group_lists_forms_status == 0}display:block; {else}display:none;{/if}"> </div></td>{/if} -->
-
-    {if $admin.pg_message_add}<td align="center"><span><img src="images/scampaign.png"></span><br><a href="desk.php?action=new_funnel_campaign">{"Create a campaign"|alang}</a>
-        <div>{"This is your message/newsletter content. Use HTML/texts/images/ attachments , the choice is yours."}</div>
-      <div class="Completed" style="{if $group_lists_campaigns_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
-  {if $admin.pg_reports_campaign}
-    <td align="center"><span><img src="images/sreports.png"></span><br><a href="desk.php?action=campaign&reports=1">{"View reports"|alang}</a>
-        <div>{"View realtime reports of email opens, clicks, bounces and much more."}</div>
-      <div class="Completed" style="{if $group_reports_link_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
-
-    
-  </tr>
-</tbody></table>
- 
-		</div>
-	</div>
-{/if}
-<!--     {if $admin.id == 1}
-    
-      <h2 style="color:#999999; margin-bottom:10px;">Usage Overview</h2>
-   {/if}  -->  
-		 
-
-<div id="startup_box_getting_started">
-		<div style="float:right; padding-top:2px;">
-			<a href="#" onclick="startup_gettingstarted_hide({$groupids}); return false;" style="color:#ccc;">{"Hide This Section"|alang}</a>
-		</div>
-		<h2 style="color:#999999;">{"Let's get started..."|alang}</h2>
-		<div style="padding:0px;font-size:14px; margin-bottom:20px;">
-			<table width="100%" style="margin-top:0px;" class="noborder">
- 
-  <tbody><tr>
    {if $admin.pg_message_add}<td align="center"><span><img src="images/scampaign.png"></span><br><a href="desk.php?action=new_funnel_campaign">{"Create a campaign"|alang}</a>
         <div>{"This is your message/newsletter content. Use HTML/texts/images/ attachments , the choice is yours."}</div>
       <div class="Completed" style="{if $group_lists_campaigns_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
@@ -204,6 +162,14 @@
  
 		</div>
 	</div>
+{/if}
+<!--     {if $admin.id == 1}
+    
+      <h2 style="color:#999999; margin-bottom:10px;">Usage Overview</h2>
+   {/if}  -->  
+		 
+
+
 
 
 
