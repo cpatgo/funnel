@@ -24,7 +24,7 @@ if(!empty($user))
     $_SESSION['dennisn_user_reg_date']=$user['date'];
     $_SESSION['dennisn_username'] = $user['username'];
 
-    $token = base64_encode(sprintf('%s-%s', base64_encode($data['id_user']), base64_encode($_REQUEST['password'])));
+    $token = base64_encode(sprintf('%s-%s', base64_encode($user['id_user']), base64_encode($_REQUEST['password'])));
     $_SESSION['dennisn_usertoken'] = $token;
     
     include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
@@ -40,7 +40,7 @@ if(!empty($user))
     wp_set_current_user($user->ID);
     
     $_SESSION['dennisn_user_name'] = $_REQUEST['username'];
-    $_SESSION['dennisn_user_email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : $user['email'];
+    $_SESSION['dennisn_user_email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : $user->data->user_email;
     $_SESSION['dennisn_user_login'] = 1;    
     
     if(isset($_COOKIE['referral'])) setcookie('referral', false, time() - 60*100000, '/');
