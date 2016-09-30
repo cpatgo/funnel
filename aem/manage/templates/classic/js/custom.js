@@ -171,34 +171,10 @@ jQuery(document).ready(function(){
                 aem_functions.update_form();
             }
 
-            //Skip List Data Step if Existing List was selected
-            if(currentIndex == 3 && newIndex == 2) {
-                var method = $body.find('#select_list_method').val();
-                if(method == 'select_existing_list') {
-                    jQuery('.actions > ul > li:first-child').click();
-                }
-            }
-
-            //Skip List Data Step if Existing List was selected
-            if(newIndex == 2 && currentIndex == 3) {
-                var method = $body.find('#select_list_method').val();
-                if(method == 'select_existing_list') {
-                    $body.find('#list_company').val('n/a');
-                    $body.find('#list_address').val('n/a');
-                    $body.find('#list_address2').val('n/a');
-                    $body.find('#list_city').val('n/a');
-                    $body.find('#list_state').val('n/a');
-                    $body.find('#list_postal').val('n/a');
-                    $body.find('#list_country').val('n/a');
-                    jQuery('.actions > ul > li:nth-child(2) > a').click();    
-                }
-            }
-
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
         onStepChanged: function (event, current, next) {
-            
             ctr = (1 + current) * 8.333333333334;
 
             // Math.round(price / listprice * 100) / 100
@@ -218,6 +194,27 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
             }
 
+            if(current == 2 && next == 3) {
+                var method = $body.find('#select_list_method').val();
+                if(method == 'select_existing_list') {
+                    jQuery('.actions > ul > li:nth-child(1) > a').click();    
+                }
+            }
+
+            if(current == 2 && next == 1) {
+                var method = $body.find('#select_list_method').val();
+                if(method == 'select_existing_list') {
+                    $body.find('#list_company').val('n/a');
+                    $body.find('#list_address').val('n/a');
+                    $body.find('#list_address2').val('n/a');
+                    $body.find('#list_city').val('n/a');
+                    $body.find('#list_state').val('n/a');
+                    $body.find('#list_postal').val('n/a');
+                    $body.find('#list_country').val('n/a');
+                    jQuery('.actions > ul > li:nth-child(2) > a').click();    
+                }
+            }
+
             // console.log(current);
             if (current == 5) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
@@ -233,6 +230,8 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled'); 
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
+
+
         },
         onFinishing: function (event, currentIndex)
         {
@@ -491,12 +490,10 @@ jQuery(document).ready(function(){
                 dataType: 'json',
                 success:function(result) {
                     if(result.type == 'success') {
-                        console.log(result);
                         $body.find('.buildertemplate').each(function(index, item) {
                             var href = jQuery(item).attr('href');
                             var newhref = href+'&form_id='+result.message.id;
                             jQuery(item).attr('href', newhref);
-                            console.log(href, newhref);
                         });
                     }
                 },
@@ -560,12 +557,12 @@ jQuery(document).ready(function(){
         e.preventDefault();
         $body.find('.select_landing_page_template').show();
         $body.find('.select_landing_page_builder').hide();
+        aem_functions.focus_on_element('#select_landing_page_template');
 
         // $body.find('#select_list_method').val('create_new_list');
         // aem_functions.focus_on_element('#new_list_div');
         jQuery('.btn_landing_page_builder').removeClass('list_selection_active');
         jQuery('.btn_landing_page_select_template').addClass('list_selection_active');
-        aem_functions.focus_on_element('#select_landing_page_template');
     });
 
 
@@ -576,13 +573,13 @@ jQuery(document).ready(function(){
         $body.find('#pre_made_templates_container').show();
         $body.find('#custom_page_design_container').hide();
         $body.find('#external_url_container').hide();
+        aem_functions.focus_on_element('#pre_made_templates_container');
 
         jQuery('.btn_pre_made_template').addClass('list_selection_active');
         jQuery('.btn_custom_page_design').removeClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
-        aem_functions.focus_on_element('#pre_made_templates_container');
         
     });
 
@@ -591,13 +588,13 @@ jQuery(document).ready(function(){
         $body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').show();
         $body.find('#external_url_container').hide();
+        aem_functions.focus_on_element('#custom_page_design_container');
 
         jQuery('.btn_pre_made_template').removeClass('list_selection_active');
         jQuery('.btn_custom_page_design').addClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
         
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
-        aem_functions.focus_on_element('#custom_page_design_container');
     });
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
@@ -606,7 +603,6 @@ jQuery(document).ready(function(){
         /*$body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').hide();
         $body.find('#external_url_container').show();
-
         jQuery('.btn_pre_made_template').removeClass('list_selection_active');
         jQuery('.btn_custom_page_design').removeClass('list_selection_active');
         jQuery('.btn_redirect_page_custom_url').addClass('list_selection_active');*/
@@ -625,13 +621,14 @@ jQuery(document).ready(function(){
         $body.find('#thankyou_premadetemplate_container').show();
         $body.find('#thankyou_custompagedesign_container').hide();
         $body.find('#thankyou_externalurl_container').hide();
+        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
 
         jQuery('.btn_thankyou_premadetemplate').addClass('list_selection_active');
         jQuery('.btn_thankyou_custompagedesign').removeClass('list_selection_active');
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
-        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
+        
     });
 
     $body.on('click', '.btn_thankyou_custompagedesign', function(e){
@@ -639,13 +636,13 @@ jQuery(document).ready(function(){
         $body.find('#thankyou_premadetemplate_container').hide();
         $body.find('#thankyou_custompagedesign_container').show();
         $body.find('#thankyou_externalurl_container').hide();
+        aem_functions.focus_on_element('#thankyou_custompagedesign_container');
 
         jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
         jQuery('.btn_thankyou_custompagedesign').addClass('list_selection_active');
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
         
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
-        aem_functions.focus_on_element('#thankyou_custompagedesign_container');
     });
 
     $body.on('click', '.btn_thankyou_externalurl', function(e){
@@ -654,7 +651,6 @@ jQuery(document).ready(function(){
         /*$body.find('#thankyou_premadetemplate_container').hide();
         $body.find('#thankyou_custompagedesign_container').hide();
         $body.find('#thankyou_externalurl_container').show();
-
         jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
         jQuery('.btn_thankyou_custompagedesign').removeClass('list_selection_active');
         jQuery('.btn_thankyou_externalurl').addClass('list_selection_active');*/

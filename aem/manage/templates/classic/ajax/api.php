@@ -144,9 +144,11 @@ function add_form() {
 			'p[0]'                     => $list_id, // example list ID
 		);
 
-		foreach ($fields['fields'] as $key => $value) {
-			$post[sprintf('fields[%d]', $key)] = $value;
-		}
+		if(!empty($fields['fields'])):
+			foreach ($fields['fields'] as $key => $value) {
+				$post[sprintf('fields[%d]', $key)] = $value;
+			}
+		endif;
 
 		$add_form = curl_request($post, 'form_add');
 		$_SESSION['selected_form_id'] = $add_form['id'];
@@ -195,9 +197,11 @@ function edit_form() {
 			'p[0]'                     => $list_id, // example list ID
 		);
 
-		foreach ($fields['fields'] as $key => $value) {
-			$post[sprintf('fields[%d]', $key)] = $value;
-		}
+		if(!empty($fields['fields'])):
+			foreach ($fields['fields'] as $key => $value) {
+				$post[sprintf('fields[%d]', $key)] = $value;
+			}
+		endif;
 
 		$form_edit = curl_request($post, 'form_edit');
 
