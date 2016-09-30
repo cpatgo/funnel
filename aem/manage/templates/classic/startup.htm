@@ -175,17 +175,17 @@
 			<table width="100%" style="margin-top:0px;" class="noborder">
  
   <tbody><tr>
-   	<!-- {if $canAddList} <td align="center"><span><img src="images/slist.png"></span><br><br><a href="desk.php?action=list#form-0">{"Create a list"|alang}</a>
+   	{if $canAddList} <td align="center" style="visibility: hidden;"><span><img src="images/slist.png"></span><br><br><a href="desk.php?action=list#form-0">{"Create a list"|alang}</a>
         <div>{"A list has subscribers whom you will send emails frequently."}</div>
       <div class="Completed" style="{if $group_lists_status == 0} display:block; {else} display:none;{/if}"> &nbsp;</div></td>{/if}
 
-      {if $canAddSubscriber}<td align="center"><span><img src="images/subs.png"></span><br> <a href="desk.php?action=subscriber_import">{"Import subscribers"|alang}</a>
+      {if $canAddSubscriber}<td align="center" style="visibility: hidden;"><span><img src="images/subs.png"></span><br> <a href="desk.php?action=subscriber_import">{"Import subscribers"|alang}</a>
         <div>{"Import using CSV file, copy paste data, or from Gmail , Salesforce, Highrise, Zendesk and many others."}</div>
       <div class="Completed" style="{if $group_lists_subscribers_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
 		  {if $admin.pg_form_edit}
- <td align="center"><span><img src="images/sint.png"></span><br><br> 	  <a href="desk.php?action=form">{"Integrate with website"|alang}</a>
+ <td align="center" style="visibility: hidden;"><span><img src="images/sint.png"></span><br><br> 	  <a href="desk.php?action=form">{"Integrate with website"|alang}</a>
         <div>{"Create subscription forms and generate html codes to paste it on your website."}</div>
-      <div class="Completed" style="{if $group_lists_forms_status == 0}display:block; {else}display:none;{/if}"> </div></td>{/if} -->
+      <div class="Completed" style="{if $group_lists_forms_status == 0}display:block; {else}display:none;{/if}"> </div></td>{/if} 
 
     {if $admin.pg_message_add}<td align="center"><span><img src="images/scampaign.png"></span><br><a href="desk.php?action=new_funnel_campaign">{"Create a campaign"|alang}</a>
         <div>{"This is your message/newsletter content. Use HTML/texts/images/ attachments , the choice is yours."}</div>
@@ -204,7 +204,7 @@
 
 
 
-		 
+
  			
         {if $admin.limit_mail > 0}<h2 style="color:#999999; margin-bottom:10px;">{"Your account usage"|alang}</h2>
 		{assign var="limit_mail_type" value=$admin.limit_mail_type}
