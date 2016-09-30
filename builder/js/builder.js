@@ -2439,7 +2439,7 @@ $(function () {
     });
 
     $('#previewModal').on('shown.bs.modal', function (e) {
-        jQuery.when(quick_load_form()).done(function(){
+        $.when(quick_load_form()).done(function(){
             previewModalForm();
         });
     });
@@ -2808,7 +2808,7 @@ $(function () {
     });
 
     $('#saveTemplateModal').on('shown.bs.modal', function (e) {
-        jQuery.when(quick_load_form()).done(function(){
+        $.when(quick_load_form()).done(function(){
             saveTemplateModalForm();
         });
     });
