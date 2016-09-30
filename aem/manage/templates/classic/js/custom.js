@@ -179,6 +179,21 @@ jQuery(document).ready(function(){
                 }
             }
 
+            //Skip List Data Step if Existing List was selected
+            if(newIndex == 2 && currentIndex == 3) {
+                var method = $body.find('#select_list_method').val();
+                if(method == 'select_existing_list') {
+                    $body.find('#list_company').val('n/a');
+                    $body.find('#list_address').val('n/a');
+                    $body.find('#list_address2').val('n/a');
+                    $body.find('#list_city').val('n/a');
+                    $body.find('#list_state').val('n/a');
+                    $body.find('#list_postal').val('n/a');
+                    $body.find('#list_country').val('n/a');
+                    jQuery('.actions > ul > li:nth-child(2) > a').click();    
+                }
+            }
+
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
@@ -201,20 +216,6 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:first-child').attr('style', '');
             } else {
                 jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
-            }
-
-            if(current == 2) {
-                var method = $body.find('#select_list_method').val();
-                if(method == 'select_existing_list') {
-                    $body.find('#list_company').val('n/a');
-                    $body.find('#list_address').val('n/a');
-                    $body.find('#list_address2').val('n/a');
-                    $body.find('#list_city').val('n/a');
-                    $body.find('#list_state').val('n/a');
-                    $body.find('#list_postal').val('n/a');
-                    $body.find('#list_country').val('n/a');
-                    jQuery('.actions > ul > li:nth-child(2) > a').click();    
-                }
             }
 
             // console.log(current);
@@ -538,14 +539,6 @@ jQuery(document).ready(function(){
         jQuery('.newlist_btn').addClass('list_selection_active');
     });
 
-    $body.on('click', '.thankyou_url_option', function(e){
-        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
-    });
-
-    $body.on('click', '.thankyou_url_option', function(e){
-        aem_functions.focus_on_element('#pre_made_templates_container');
-    });
-
     $body.on('click', '.select_existing_list', function(e){
         e.preventDefault();
         $body.find('#select_existing_list_div').show();
@@ -580,6 +573,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.btn_pre_made_template', function(e){
         e.preventDefault();
         $body.find('#pre_made_templates_container').show();
+        aem_functions.focus_on_element('#pre_made_templates_container');
         $body.find('#custom_page_design_container').hide();
         $body.find('#external_url_container').hide();
 
@@ -595,6 +589,7 @@ jQuery(document).ready(function(){
         e.preventDefault();
         $body.find('#pre_made_templates_container').hide();
         $body.find('#custom_page_design_container').show();
+        aem_functions.focus_on_element('#custom_page_design_container');
         $body.find('#external_url_container').hide();
 
         jQuery('.btn_pre_made_template').removeClass('list_selection_active');
@@ -627,6 +622,7 @@ jQuery(document).ready(function(){
     $body.on('click', '.btn_thankyou_premadetemplate', function(e){
         e.preventDefault();
         $body.find('#thankyou_premadetemplate_container').show();
+        aem_functions.focus_on_element('#thankyou_premadetemplate_container');
         $body.find('#thankyou_custompagedesign_container').hide();
         $body.find('#thankyou_externalurl_container').hide();
 
@@ -642,6 +638,7 @@ jQuery(document).ready(function(){
         e.preventDefault();
         $body.find('#thankyou_premadetemplate_container').hide();
         $body.find('#thankyou_custompagedesign_container').show();
+        aem_functions.focus_on_element('#thankyou_custompagedesign_container');
         $body.find('#thankyou_externalurl_container').hide();
 
         jQuery('.btn_thankyou_premadetemplate').removeClass('list_selection_active');
