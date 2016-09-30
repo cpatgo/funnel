@@ -175,6 +175,15 @@
 			<table width="100%" style="margin-top:0px;" class="noborder">
  
   <tbody><tr>
+   {if $admin.pg_message_add}<td align="center"><span><img src="images/scampaign.png"></span><br><a href="desk.php?action=new_funnel_campaign">{"Create a campaign"|alang}</a>
+        <div>{"This is your message/newsletter content. Use HTML/texts/images/ attachments , the choice is yours."}</div>
+      <div class="Completed" style="{if $group_lists_campaigns_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
+  {if $admin.pg_reports_campaign}
+    <td align="center"><span><img src="images/sreports.png"></span><br><a href="desk.php?action=campaign&reports=1">{"View reports"|alang}</a>
+        <div>{"View realtime reports of email opens, clicks, bounces and much more."}</div>
+      <div class="Completed" style="{if $group_reports_link_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
+
+      <!-- Visibility Hidden -->
    	{if $canAddList} <td align="center" style="visibility: hidden;"><span><img src="images/slist.png"></span><br><br><a href="desk.php?action=list#form-0">{"Create a list"|alang}</a>
         <div>{"A list has subscribers whom you will send emails frequently."}</div>
       <div class="Completed" style="{if $group_lists_status == 0} display:block; {else} display:none;{/if}"> &nbsp;</div></td>{/if}
@@ -187,13 +196,7 @@
         <div>{"Create subscription forms and generate html codes to paste it on your website."}</div>
       <div class="Completed" style="{if $group_lists_forms_status == 0}display:block; {else}display:none;{/if}"> </div></td>{/if} 
 
-    {if $admin.pg_message_add}<td align="center"><span><img src="images/scampaign.png"></span><br><a href="desk.php?action=new_funnel_campaign">{"Create a campaign"|alang}</a>
-        <div>{"This is your message/newsletter content. Use HTML/texts/images/ attachments , the choice is yours."}</div>
-      <div class="Completed" style="{if $group_lists_campaigns_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
-  {if $admin.pg_reports_campaign}
-    <td align="center"><span><img src="images/sreports.png"></span><br><a href="desk.php?action=campaign&reports=1">{"View reports"|alang}</a>
-        <div>{"View realtime reports of email opens, clicks, bounces and much more."}</div>
-      <div class="Completed" style="{if $group_reports_link_status == 0}display:block;{else}display:none;{/if}"> </div></td>{/if}
+   
 
     
   </tr>
