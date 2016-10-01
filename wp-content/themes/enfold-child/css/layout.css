@@ -3605,8 +3605,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 		.responsive.html_top_nav_header #top .social_bookmarks { right: 50px; width:auto; margin-top:-16px; }
 		
 		.responsive #header_main .inner-container, .responsive .main_menu{position: static;}
-		.responsive #top .logo{position: static; display:table; float:none; padding:0; border:none; width:80%; }
-		.page .responsive #top .logo{position: static; display:table; height:80px !important; float:none; padding:0; border:none; width:80%; }
+		.responsive #top .logo{position: static; display:table; height:80px !important; float:none; padding:0; border:none; width:80%; }
 		.responsive .logo a{display:table-cell; vertical-align: middle;} 
 		.responsive .logo img{height:auto !important; width:auto; max-width: 100%; display: block;  max-height: 80px;}
 		.responsive #header_main .container{height:auto !important; }
