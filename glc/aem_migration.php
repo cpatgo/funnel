@@ -19,6 +19,8 @@ foreach($users as $key => $value) {
 	$glc_user = $glc_user[0];
 	$membership = get_user_meta($value->ID, 'membership', true);
 
+    if($membership == 'Executive' || $membership == 'Leadership') $membership = 'Professional';
+
     $params = array(
         'api_user'     => $aem_username,
         'api_pass'     => $aem_password,
@@ -53,5 +55,5 @@ foreach($users as $key => $value) {
     // $query = sprintf("Update aweb_globalauth SET password = '%s' WHERE username = '%s'", $value->data->user_pass, $value->data->user_login);
     // mysqli_query($aem_con, $query);
 
-    printf("USER ID: %d has been added to AEM<br>", $value->ID);
+    printf("USER ID: %d has been added to AEM<br>Membership: %s", $value->ID, $membership);
 }
