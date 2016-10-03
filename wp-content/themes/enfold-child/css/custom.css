@@ -98,6 +98,10 @@ aside.sidebar > section.widget{
     height: 19px;
 }
 
+.pricing-table-wrap > .pricing-table > li:last-child span.include_option:before {
+    background: none;
+}
+
 .pricing-table-wrap > .pricing-table > li span.exclude_option:before { 
     content: '';
     position: absolute;
