@@ -840,3 +840,8 @@ Mobile Styles
 .alternate_color .av-subnav-menu a { font-size: 14px; }
 
 
+.alternate_color .av-subnav-menu a {
+    background-color: transparent;
+    /*color: #d4d4d4;*/
+}
+
