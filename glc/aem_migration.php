@@ -55,5 +55,5 @@ foreach($users as $key => $value) {
     // $query = sprintf("Update aweb_globalauth SET password = '%s' WHERE username = '%s'", $value->data->user_pass, $value->data->user_login);
     // mysqli_query($aem_con, $query);
 
-    printf("USER ID: %d has been added to AEM<br>Membership: %s", $value->ID, $membership);
+    printf("USER ID: %d has been added to AEM<br>Membership: %s<br><br>", $value->ID, $membership);
 }
