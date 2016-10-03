@@ -32,7 +32,6 @@ $upgrade_id = $membership_class->insert_upgrade_membership($data);
 
 
 //Update wordpress membership
-$upgrade_wp_membership = $user_class->wp_update_membership($membership[0]['membership']);
 $upgrade_wp_membership = $user_class->wp_update_membership($new_membership[0]['membership'], $membership[0]['membership'], $user[0]['email']);
 
 $response = array('type' => 'success', 'message' => 'Successfully upgraded.');
