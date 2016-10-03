@@ -524,6 +524,8 @@ span.trail-end {
     color: #333 !important;
 }
 
+.header_color .av_dropcap2, #top #wrap_all .header_color .av-menu-button-colored > a .avia-menu-text { color: #fff !important; }
+
 @media only screen and (max-width: 762px) {
     #advanced_menu_toggle{
         position: absolute;
