@@ -79,6 +79,10 @@ if(isset($_POST['submit']))
 	glc_update_option('aem_masters_id', $_POST['aem_masters_id']);	
 	glc_update_option('aem_founder_id', $_POST['aem_founder_id']);	
 
+	glc_update_option('aem_special_registration', $_POST['aem_special_registration']);
+	glc_update_option('aem_special_wp_membership', $_POST['aem_special_wp_membership']);
+	glc_update_option('aem_special_matrix_membership', $_POST['aem_special_matrix_membership']);
+
 	//Update setting in setting table
 	$direct_member_income = $_REQUEST['direct_member_income'];
 	$pin_cost = $_REQUEST['pin_cost'];
@@ -195,6 +199,11 @@ $aem_leadership_id = glc_option('aem_leadership_id');
 $aem_professional_id = glc_option('aem_professional_id');
 $aem_masters_id = glc_option('aem_masters_id');
 $aem_founder_id = glc_option('aem_founder_id');
+
+$aem_special_registration = glc_option('aem_special_registration');
+$aem_special_wp_membership = glc_option('aem_special_wp_membership');
+$aem_special_matrix_membership = glc_option('aem_special_matrix_membership');
+
 ?>
 <div class="ibox-content">
 <form name="setting" method="post" action="index.php?page=network_setting">
@@ -332,6 +341,28 @@ $aem_founder_id = glc_option('aem_founder_id');
 		<td colspan="4"><B>AEM Founder ID</B></td>
 		<td colspan="7">
 			<input type="text" name="aem_founder_id" value="<?=$aem_founder_id;?>" />
+		</td>
+	</tr>
+
+	<!-- SPECIAL PROMO REGISTRATION -->
+	<tr><td colspan="9">&nbsp;</td></tr>
+	<tr><td colspan="9"><b>SPECIAL REGISTRATION DETAILS</b></td></tr>
+	<tr>
+		<td colspan="4"><B>Registration Fee</B></td>
+		<td colspan="7">
+			<input type="text" name="aem_special_registration" value="<?=$aem_special_registration;?>" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><B>Wordpress Membership</B></td>
+		<td colspan="7">
+			<input type="text" name="aem_special_wp_membership" value="<?=$aem_special_wp_membership;?>" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><B>Matrix Membership</B></td>
+		<td colspan="7">
+			<input type="text" name="aem_special_matrix_membership" value="<?=$aem_special_matrix_membership;?>" />
 		</td>
 	</tr>
 	
