@@ -119,7 +119,7 @@ function add_form() {
 
 		$post = array(
 			'name'                     => $fields['form_name'], // the internal name of the subscription form
-			'type'                     => 'both', // options: both, subscribe, unsubscribe
+			'type'                     => 'subscribe', // options: both, subscribe, unsubscribe
 			'sub1'                     => 'redirect', // options: default, custom, redirect
 			'sub1_redirect'            => $fields['sub2_redirect'], // URL (for redirect)
 			'sub2'                     => 'redirect', // options: default, custom, redirect
