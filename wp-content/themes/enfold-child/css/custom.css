@@ -828,5 +828,13 @@ Mobile Styles
 }
 
 
+#top .av-submenu-container {
+    
+    background: #eeeced;
+}
+
+#top .av-subnav-menu li a:hover {
+    color:#aaa;
+}
 
 
