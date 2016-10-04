@@ -7,13 +7,13 @@ $username 	= strip_tags( trim($_POST['username']));
 $reflink	= strip_tags( trim($_POST['reflink']));
 
 /** start message here **/
-$msg = 'Hello '.$name.',<br />
+$msg = 'Hi '.$name.',<br />
 <br />
-Your friend '.$username.' invites you to check out a short video on how to earn money with the Global Learning Center (GLC). 
+Your friend '.$username.' invites you to check out a short video on how you can earn BIG with the GLC HUB. 
 <br /><br />
-Everyone that&#39;s currently a Member of the GLC can benefit from its Learning and Earning Centers. GLC has created an automated, lucrative referral Cycle Pay System that rewards Members for simply sharing its online e-Learning courses with your friends, peers and associates. 
+Everyone that&#39;s currently a Member of the GLC HUB can benefit from its Lead Generation & Weath Building Library Platforms. GLC HUB has created an automated, lucrative referral System that rewards it's Members for simply sharing the GLC HUB Lead Generation & Wealth Building Library with friends, peers & associates. 
 <br /><br />
-Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click to watch »</a>';
+Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click to Tour GLC HUB »</a>';
 
 /** mandrill starts here **/
 try {
