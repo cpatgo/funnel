@@ -1,4 +1,19 @@
 <?php
+	if(isset($_SESSION['dennisn_user_name']) && isset($_SESSION['dennisn_usertoken'])):
+		//Auto login user
+		$pw = $_SESSION['dennisn_usertoken'];
+		$decode = base64_decode($pw);
+		$chunk = explode('-', $decode);
+		$password = base64_decode($chunk[1]);
+
+		$creds = array();
+	    $creds['user_login'] = $_SESSION['dennisn_user_name'];
+	    $creds['user_password'] = $password;
+	    $creds['remember'] = true;
+	    $user = wp_signon($creds, false);
+	    wp_set_current_user($user->ID);
+	endif;
+
 	if ( !defined('ABSPATH') ){ die(); }
 	
 	global $avia_config;
