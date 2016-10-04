@@ -162,13 +162,6 @@ foreach($active_merchants as $mkey => $mvalue) {
                             <!-- Fields for authorize_net creditcard -->
                             <div class="cc_form">
                                 <div class="form-group">
-                                    <label for="address_2" class="col-sm-3 control-label">Address 2:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="address_2" placeholder="Address 2" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <label for="cc_number" class="col-sm-3 control-label">Debit Card / CC: <span class="required" aria-required="true">*</span></label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="cc_number" name="cc_number" placeholder="XXXX-XXXX-XXXX-XXXX" required />
@@ -283,7 +276,7 @@ foreach($active_merchants as $mkey => $mvalue) {
                             </div>
 
                             <div class="col-md-6 col-md-offset-6">
-                                <button class="btn btn-success btn-lg" id="submit_form" style="float:right" type="submit">Submit</button>
+                                <button class="btn btn-success btn-lg" id="submit_form" style="float:right" type="submit">Upgrade my account now</button>
                             </div>
                         <?php endif; ?>
                     </form>  
