@@ -6,7 +6,6 @@ include("function/functions.php");
 include("function/setting.php");
 
 $id = $_SESSION['dennisn_user_id'];
-$membership_class = getInstance('Class_Membership');
 $level = get_level($id);
 if($level == 1) { $lvl = "Premium Board"; } 
 else { $lvl = "Standard Board"; }
@@ -33,8 +32,9 @@ while($row = mysqli_fetch_array($query))
 print $_SESSION['regtra'];
 //unset($_SESSION['regtra']);
 //get user messages
-function display_msq($id)
+function display_msq($id, $db_time)
 {
+	$membership_class = getInstance('Class_Membership');
 	$missed = get_missed_commission($id);
 	if($missed != "") {
 		return '<div class="alert alert-danger">You have completed a Pay Cycle at '.date("d/m/Y H:i:s", $missed).', but unfortunately you missed out on earning your Affiliate commission because you are <b>not qualified</b>.  To earn commissions in our Affiliate Rewards Program, you must qualify by enrolling a <b>minimum of 2 Members</b> who purchase any one of our VIP product packages. <a href="index.php?page=faq">Click here for more details</a> </div>';
@@ -48,7 +48,7 @@ function display_msq($id)
 				}
 			</script></div>';
 	}
-	$qreferrals2 = $membership_class->is_qualified($row['id_user'], $row['time'], true);
+	$qreferrals2 = $membership_class->is_qualified($id, $db_time, true);
 	if(!$qreferrals2) {
 		return '<div class="alert alert-danger">Unfortunately, you have not enrolled the 2 Members <b>within the last 6 months</b> and can no longer earn Affiliate commissions. To earn commissions in our Affiliate Rewards Program, you must qualify by enrolling a <strong>minimum of 2 Paid Memberships</strong> who purchased any one of our VIP product packages. <a href="index.php?page=faq">Click here for more details</a> </div>';
 	}	
@@ -76,7 +76,7 @@ function display_msq($id)
 				<h3><i class="fa fa-envelope-o"></i> Important Messages</h3>
 			</div>
 			<div class="ibox-content">
-				<?php echo display_msq($id); ?>
+				<?php echo display_msq($id, $db_time); ?>
 			</div>
 		</div>
 	</div>
