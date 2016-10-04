@@ -98,6 +98,10 @@ aside.sidebar > section.widget{
     height: 19px;
 }
 
+.pricing-table-wrap > .pricing-table > li:last-child span.include_option:before {
+    background: none;
+}
+
 .pricing-table-wrap > .pricing-table > li span.exclude_option:before { 
     content: '';
     position: absolute;
@@ -824,5 +828,20 @@ Mobile Styles
 }
 
 
+#top .av-submenu-container {
+    border: none;
+    background: #eeeced;
+}
 
+#top .av-subnav-menu li a:hover {
+    color:#aaa;
+}
+
+.alternate_color .av-subnav-menu a { font-size: 14px; }
+
+
+.alternate_color .av-subnav-menu a {
+    background-color: transparent;
+    /*color: #d4d4d4;*/
+}
 
