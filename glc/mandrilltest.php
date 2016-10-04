@@ -21,9 +21,9 @@ try {
     $message = array(
         'html' => $msg,
         'text' => 'Example text content',
-        'subject' => $username . ' sent you a free GlobalLearningCenter.com invite!',
-        'from_email' => 'no-reply@globallearningcenter.net',
-        'from_name' => 'Global Learning Center',
+        'subject' => $username . ' sent you a free GLChub.com invite!',
+        'from_email' => 'no-reply@glchub.com',
+        'from_name' => 'GLC Hub',
         'to' => array(
             array(
                 'email' => $email,
@@ -31,7 +31,7 @@ try {
                 'type' => 'to'
             )
         ),
-        'headers' => array('Reply-To' => 'no-reply@globallearningcenter.net'),
+        'headers' => array('Reply-To' => 'no-reply@glchub.com'),
         'important' => false,
         'track_opens' => null,
         'track_clicks' => null,
