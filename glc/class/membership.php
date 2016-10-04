@@ -94,12 +94,13 @@ class Class_Membership extends Class_Database
         $qualified = '<span class="label label-warning yellow-non-qualified">non-Qualified</span>';
         $qmonth = $this->get_qualification_month();
         $referrals = $this->get_num_referrals($user_id);
+        $required_referrals = $this->get_required_referrals();
 
         //If it's the user's first 6 months, user should enroll 2 users right away. After 6 months, 1 user every 6 months
         $registration_plus_qualification_time = strtotime(sprintf('+%d months', $qmonth), $registration_time);
         if(time() < $registration_plus_qualification_time) {
             //If referral is 2 or more on the first qualification months, return qualified
-            if($referrals[0]['referrals'] >= 2): 
+            if($referrals[0]['referrals'] >= (int)$required_referrals): 
                 $qualified = '<span class="label label-primary green-qualified">Qualified</span>'; 
                 $bool_qualified = true;
             endif;
@@ -107,7 +108,7 @@ class Class_Membership extends Class_Database
             //Base the number of referrals on the qualification time the user has. If qualification days > 0, user is still qualified
             $enrollee_registration_time = $this->get_registration_time_last_enrollee($user_id);
             $q_days = 0;
-            if(!empty($enrollee_registration_time) && $referrals[0]['referrals'] >= 2):
+            if(!empty($enrollee_registration_time) && $referrals[0]['referrals'] >= (int)$required_referrals):
                 //If user has enrollee, we will start the qualification time from the date the enrollee registered
                 $datediff = strtotime(sprintf('+%d months', $qmonth), $enrollee_registration_time) - time();
                 $q_days = floor($datediff/(60*60*24));
@@ -155,19 +156,26 @@ class Class_Membership extends Class_Database
         } else {
             //Select q_time in settings table : 6months
             $months = $this->get_qualification_month();
+            $required_referrals = $this->get_required_referrals();
 
             //Deduct 6 months from current time
             $effectiveDate = strtotime("-".$months." months", time());
 
             //Select referrals of the user where the date registered is greater than the effective date
             $enrollees = $this->get_enrollees($user_id, $effectiveDate);
-            if($enrollees[0]['referrals'] > 1) {
+            if($enrollees[0]['referrals'] > (int)$required_referrals) {
                 return '<span class="label label-primary green-qualified">Qualified</span>';
             } else {
                 return '<span class="label label-warning yellow-non-qualified">non-Qualified</span>';
             }
         }
         return '';
+    }
+
+    function get_required_referrals()
+    {
+        $qualification = $this->select(sprintf("SELECT min_q_referrals FROM setting WHERE id = 1"));
+        return $qualification[0]['min_q_referrals'];
     }
 
     function remaining_grace_period($user)
