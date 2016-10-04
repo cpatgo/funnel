@@ -55,101 +55,105 @@ foreach($active_merchants as $mkey => $mvalue) {
                         <div class="ibox-title">
                             <h5>Select membership and fill out the payment form.</h5>
                         </div>
-                            <div class="form-group">
-                                <label for="selected_upgrade" class="col-sm-3 control-label">Your current Membership is:</label>
-                                <div class="col-sm-9">
-                                    <div style="padding-top:10px">
-                                        <b><?php echo get_user_meta(get_current_user_id(), 'membership', true); ?><b>
-                                    </div>
+                        <div class="form-group">
+                            <label for="selected_upgrade" class="col-sm-3 control-label">Your current Membership is:</label>
+                            <div class="col-sm-9">
+                                <div style="padding-top:10px">
+                                    <b><?php echo get_user_meta(get_current_user_id(), 'membership', true); ?></b>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="selected_upgrade" class="col-sm-3 control-label">Upgrade To:</label>
-                                <div class="col-sm-9">
-                                    <div class="radio i-checks"><label><input type="radio" class="form-control" value="special" name="upgrade_membership" checked="checked" data-amt="<?php echo glc_option('aem_special_registration'); ?>"> <i></i> Professional </label><span id="amount_text" class="alert-danger" style="padding:5px;"> - Balance Due <b>$<?php echo glc_option('aem_special_registration'); ?></b>. USD</span></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="selected_upgrade" class="col-sm-3 control-label">Upgrade To:</label>
+                            <div class="col-sm-9">
+                                <div class="radio i-checks">
+                                    <label>
+                                        <input type="radio" value="special" name="upgrade_membership" checked="checked" data-amt="<?php echo glc_option('aem_special_registration'); ?>"> <i></i>  Professional 
+                                    </label>
+                                    <span id="amount_text" class="alert-danger" style="padding:5px;"> - Balance Due <b>$<?php echo glc_option('aem_special_registration'); ?></b>. USD</span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="selected_method" class="col-sm-3 control-label">Select Payment Method: </label>
-                                <div class="col-sm-9">
-                                    <select name="payment_method" class="form-control" id="payment_method">
-                                        <option value disabled selected>- select method - </option>
-                                        <?php foreach ($active_merchants as $key => $value) {
-                                            if($value['slug'] == 'echeck' && $country !== 'United States' && $country !== 'US') continue;
-                                            printf('<option value="%s">%s</option>', $value['slug'], $value['method']);
-                                        } ?>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="selected_method" class="col-sm-3 control-label">Select Payment Method: </label>
+                            <div class="col-sm-9">
+                                <select name="payment_method" class="form-control" id="payment_method">
+                                    <option value disabled selected>- select method - </option>
+                                    <?php foreach ($active_merchants as $key => $value) {
+                                        if($value['slug'] == 'echeck' && $country !== 'United States' && $country !== 'US') continue;
+                                        printf('<option value="%s">%s</option>', $value['slug'], $value['method']);
+                                    } ?>
+                                </select>
                             </div>
+                        </div>
                             
-                            <input type="hidden" name="user_id" value="<?php echo $user_id ?>" />
-                            <input type="hidden" name="cc_merchant_id" value="<?php echo $creditcard_merchant ?>" />
-                            <input type="hidden" name="echeck_merchant_id" value="<?php echo $echeck_merchant ?>" />
+                        <input type="hidden" name="user_id" value="<?php echo $user_id ?>" />
+                        <input type="hidden" name="cc_merchant_id" value="<?php echo $creditcard_merchant ?>" />
+                        <input type="hidden" name="echeck_merchant_id" value="<?php echo $echeck_merchant ?>" />
 
                             <!-- Common Fields for eCheck and Creditcard -->
-                            <div class="common_fields">
-                                <div class="form-group">
-                                    <label for="payment_f_name" class="col-sm-3 control-label">First Name: <span class="required" aria-required="true">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="payment_f_name" placeholder="Account holder first name" required />
-                                        <div id="payment_f_name_error_container"></div>
-                                    </div>
-                                    
+                        <div class="common_fields">
+                            <div class="form-group">
+                                <label for="payment_f_name" class="col-sm-3 control-label">First Name: <span class="required" aria-required="true">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="payment_f_name" placeholder="Account holder first name" required />
+                                    <div id="payment_f_name_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="payment_l_name" class="col-sm-3 control-label">Last Name: <span class="required" aria-required="true">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="payment_l_name" placeholder="Account holder last name" required />
-                                        <div id="payment_l_name_error_container"></div>
-                                    </div>
-                                    
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="payment_l_name" class="col-sm-3 control-label">Last Name: <span class="required" aria-required="true">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="payment_l_name" placeholder="Account holder last name" required />
+                                    <div id="payment_l_name_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="company_account_name" class="col-sm-3 control-label">(Company) Account Name:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="company_account_name" placeholder="Company or account name" />
-                                        <div id="company_account_name_error_container"></div>
-                                    </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="company_account_name" class="col-sm-3 control-label">(Company) Account Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="company_account_name" placeholder="Company or account name" />
+                                    <div id="company_account_name_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="zip" class="col-sm-3 control-label">Zip Code / Postal Code: <span class="required" aria-required="true">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" id="zip" class="form-control" name="zip" placeholder="Zip Code / Postal Code" required />
-                                        <div id="zip_error_container"></div>
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip" class="col-sm-3 control-label">Zip Code / Postal Code: <span class="required" aria-required="true">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="zip" class="form-control" name="zip" placeholder="Zip Code / Postal Code" required />
+                                    <div id="zip_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="address_1" class="col-sm-3 control-label">Address 1: <span class="required" aria-required="true">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="address_1" placeholder="Address 1" required />
-                                        <div id="address_1_error_container"></div>
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address_1" class="col-sm-3 control-label">Address 1: <span class="required" aria-required="true">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="address_1" placeholder="Address 1" required />
+                                    <div id="address_1_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="address_2" class="col-sm-3 control-label">Address 2:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="address_2" placeholder="Address 2" />
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address_2" class="col-sm-3 control-label">Address 2:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="address_2" placeholder="Address 2" />
                                 </div>
-                                <div class="form-group">
-                                    <label for="city" class="col-sm-3 control-label">City: <span class="required" aria-required="true">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="city" placeholder="City" required />
-                                        <div id="city_error_container"></div>
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="col-sm-3 control-label">City: <span class="required" aria-required="true">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="city" placeholder="City" required />
+                                    <div id="city_error_container"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="us_state" class="col-sm-3 control-label">Province / State: <span class="required" aria-required="true">*</span></label>
-                                        <div class="col-sm-9">
-                                            <?php if($country === 'US' || $country === 'United States'): ?>
-                                                <div id="statebox">
-                                                    <select class="form-control required" name="us_state" id="us_state" aria-required="true" required><option value="" disabled selected>Choose Your State</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select>
-                                                </div>
-                                            <?php else: ?>
-                                                    <input type="text" class="form-control" name="us_state" placeholder="Provice / State" required />
-                                            <?php endif; ?>
-                                            <div id="us_state_error_container"></div>
-                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="us_state" class="col-sm-3 control-label">Province / State: <span class="required" aria-required="true">*</span></label>
+                                    <div class="col-sm-9">
+                                        <?php if($country === 'US' || $country === 'United States'): ?>
+                                            <div id="statebox">
+                                                <select class="form-control required" name="us_state" id="us_state" aria-required="true" required><option value="" disabled selected>Choose Your State</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select>
+                                            </div>
+                                        <?php else: ?>
+                                                <input type="text" class="form-control" name="us_state" placeholder="Provice / State" required />
+                                        <?php endif; ?>
+                                        <div id="us_state_error_container"></div>
                                     </div>
                                 </div>
                             </div>
@@ -157,6 +161,13 @@ foreach($active_merchants as $mkey => $mvalue) {
 
                             <!-- Fields for authorize_net creditcard -->
                             <div class="cc_form">
+                                <div class="form-group">
+                                    <label for="address_2" class="col-sm-3 control-label">Address 2:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="address_2" placeholder="Address 2" />
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label for="cc_number" class="col-sm-3 control-label">Debit Card / CC: <span class="required" aria-required="true">*</span></label>
                                     <div class="col-sm-9">
@@ -271,7 +282,7 @@ foreach($active_merchants as $mkey => $mvalue) {
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-6 col-md-offset-6">
                                 <button class="btn btn-success btn-lg" id="submit_form" style="float:right" type="submit">Submit</button>
                             </div>
                         <?php endif; ?>
