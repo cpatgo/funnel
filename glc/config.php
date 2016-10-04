@@ -1,4 +1,4 @@
-<?PHP
+<?php
 //session_start();
 $backup_path = "/home/globallearningce/public_html/glc/backup/";
 
@@ -494,13 +494,13 @@ function glc_auto_login($user_id, $data)
     $creds['user_login'] = $data['username'];
     $creds['user_password'] = $data['password'];
     $creds['remember'] = true;
-    $user = wp_signon($creds, true);
-    wp_set_current_user($user->ID);
+    $user = wp_signon($creds, false);
 
     if(is_wp_error($user)):
         $result = array('result' => 'error', 'message' => sprintf('%s', $user->get_error_message())); 
         die(json_encode($result));
     endif;
+    wp_set_current_user($user->ID);
 
     $_SESSION['dennisn_user_name'] = $data['username'];
     $_SESSION['dennisn_user_email'] = $data['email'];
@@ -511,7 +511,9 @@ function glc_auto_login($user_id, $data)
 
     $_SESSION['registration_success_message'] = "You are now logged and you have access to everything your GLC Membership allows. We have sent you several emails, so please make sure to check your spam or junk mail folders in case these messages ended up there. These emails contain IMPORTANT information about your account.<br>Enjoy!";
 
+    // login to AEM software automatically using their singlesignon
+    include_once(dirname(__FILE__) . "/class/aem/api/singlesignon_sameserver.php");
+
     if(isset($_COOKIE['referral'])) setcookie('referral', false, time() - 60*100000, '/');
     return true;
 }
-
