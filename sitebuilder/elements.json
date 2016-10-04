@@ -63,7 +63,7 @@
     ],
     "GLC Custom":[
         {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"},
-        {"url":"elements/glc-event2.html","height":294, "thumbnail":"elements/images/thumbs/glc-event2.jpg"}
+        {"url":"elements/glc-event2.html","height":294, "thumbnail":"elements/images/thumbs/glc-event2.jpg"},
         {"url":"elements/glc-event3.html","height":294, "thumbnail":"elements/images/thumbs/glc-event3.jpg"}
     ]
     }
