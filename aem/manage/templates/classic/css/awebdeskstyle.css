@@ -1243,16 +1243,16 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
   border: none;
 }
 
-.ui-progressbar .ui-widget-header:after{
+/*.ui-progressbar .ui-widget-header:after{
   content: "";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    /*background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
     background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );*/
-    /*z-index: 1;*/
+    /*z-index: 1;
     -webkit-background-size: 50px 50px;
     -moz-background-size: 50px 50px;
     background-size: 50px 50px;
@@ -1271,7 +1271,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     overflow: hidden;
-}
+}*/
 
 .wizard ul { display: none; } /* hide the tablist steps */
 .progress_indicator_txt span { font-size:20px; }
@@ -1351,8 +1351,11 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     margin-top: 1em;
 }
 
+.sharer_wrapper { text-align: center; }
+
 .sharer_wrapper ul {display: block;}
-.sharer_wrapper ul li {display: inline-block;}
+.sharer_wrapper ul li {display: inline-block !important;}
+.sharer_wrapper ul li:hover {opacity:0.9;}
 
 .sharer_wrapper a.social {     border: 1px solid grey;
     
@@ -1380,4 +1383,9 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .sharer_wrapper ul li.gplus a {
     background-color: #d64937;
     border-color: #d64937;
+}
+
+.sharer_wrapper ul li.email a {
+    background-color: #ff6600;
+    border-color: #ff6600;
 }
