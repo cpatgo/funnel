@@ -1,5 +1,5 @@
 <?php
-	if(isset($_SESSION['dennisn_user_name']) && isset($_SESSION['dennisn_usertoken'])):
+	if(isset($_SESSION['dennisn_user_name']) && isset($_SESSION['dennisn_usertoken']) && !is_user_logged_in()):
 		//Auto login user
 		$pw = $_SESSION['dennisn_usertoken'];
 		$decode = base64_decode($pw);
