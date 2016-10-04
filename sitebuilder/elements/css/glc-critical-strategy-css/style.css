@@ -1,0 +1,363 @@
+/*
+#   $$$$$$\  $$\           $$\                 $$\
+#  $$  __$$\ $$ |          $$ |                $$ |
+#  $$ /  \__|$$ | $$$$$$\  $$$$$$$\   $$$$$$\  $$ | $$$$$$$\
+#  $$ |$$$$\ $$ |$$  __$$\ $$  __$$\  \____$$\ $$ |$$  _____|
+#  $$ |\_$$ |$$ |$$ /  $$ |$$ |  $$ | $$$$$$$ |$$ |\$$$$$$\
+#  $$ |  $$ |$$ |$$ |  $$ |$$ |  $$ |$$  __$$ |$$ | \____$$\
+#  \$$$$$$  |$$ |\$$$$$$  |$$$$$$$  |\$$$$$$$ |$$ |$$$$$$$  |
+#   \______/ \__| \______/ \_______/  \_______|\__|\_______/
+*/
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+* {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+
+html {
+	font-size: 16px;
+}
+body {
+	margin: 0;
+	min-width: 300px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fffffe;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	-webkit-font-smoothing: antialiased
+}
+a:link,
+a:visited {
+	color: #1099c6;
+}
+a:hover,
+a:active {
+	color: #1099c6;
+	text-decoration: none;
+}
+.page-wrap {
+	margin: 0 auto;
+	padding: 30px 20px 10px;
+	max-width: 840px;
+	text-align: center;
+}
+/*
+#   $$$$$$\  $$\   $$\                     $$\   $$\                           $$\
+#  $$  __$$\ \__|  $$ |                    $$ |  $$ |                          $$ |
+#  $$ /  \__|$$\ $$$$$$\    $$$$$$\        $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\
+#  \$$$$$$\  $$ |\_$$  _|  $$  __$$\       $$$$$$$$ |$$  __$$\  \____$$\ $$  __$$ |$$  __$$\ $$  __$$\
+#   \____$$\ $$ |  $$ |    $$$$$$$$ |      $$  __$$ |$$$$$$$$ | $$$$$$$ |$$ /  $$ |$$$$$$$$ |$$ |  \__|
+#  $$\   $$ |$$ |  $$ |$$\ $$   ____|      $$ |  $$ |$$   ____|$$  __$$ |$$ |  $$ |$$   ____|$$ |
+#  \$$$$$$  |$$ |  \$$$$  |\$$$$$$$\       $$ |  $$ |\$$$$$$$\ \$$$$$$$ |\$$$$$$$ |\$$$$$$$\ $$ |
+#   \______/ \__|   \____/  \_______|      \__|  \__| \_______| \_______| \_______| \_______|\__|
+*/
+.site-header {
+
+}
+.site-header__title {
+	margin: 0 0 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #1099c6;
+}
+.site-header__title strong {
+	color: #f69f1b;
+}
+
+/*
+#  $$\    $$\ $$\       $$\                           $$$$$$$\    $$\
+#  $$ |   $$ |\__|      $$ |                          $$  __$$\   $$ |
+#  $$ |   $$ |$$\  $$$$$$$ | $$$$$$\   $$$$$$\        $$ |  $$ |$$$$$$\   $$$$$$$\
+#  \$$\  $$  |$$ |$$  __$$ |$$  __$$\ $$  __$$\       $$$$$$$\ |\_$$  _|  $$  __$$\
+#   \$$\$$  / $$ |$$ /  $$ |$$$$$$$$ |$$ /  $$ |      $$  __$$\   $$ |    $$ |  $$ |
+#    \$$$  /  $$ |$$ |  $$ |$$   ____|$$ |  $$ |      $$ |  $$ |  $$ |$$\ $$ |  $$ |
+#     \$  /   $$ |\$$$$$$$ |\$$$$$$$\ \$$$$$$  |      $$$$$$$  |  \$$$$  |$$ |  $$ |
+#      \_/    \__| \_______| \_______| \______/       \_______/    \____/ \__|  \__|
+*/
+.video-btn {
+	display: block;
+	margin: 0 0 5px;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.video-btn:hover {
+	opacity: 0.85;
+}
+
+/*
+#   $$$$$$\                                 $$\           $$\
+#  $$  __$$\                                $$ |          $$ |
+#  $$ /  \__| $$$$$$\  $$\   $$\ $$$$$$$\ $$$$$$\    $$$$$$$ | $$$$$$\  $$\  $$\  $$\ $$$$$$$\
+#  $$ |      $$  __$$\ $$ |  $$ |$$  __$$\\_$$  _|  $$  __$$ |$$  __$$\ $$ | $$ | $$ |$$  __$$\
+#  $$ |      $$ /  $$ |$$ |  $$ |$$ |  $$ | $$ |    $$ /  $$ |$$ /  $$ |$$ | $$ | $$ |$$ |  $$ |
+#  $$ |  $$\ $$ |  $$ |$$ |  $$ |$$ |  $$ | $$ |$$\ $$ |  $$ |$$ |  $$ |$$ | $$ | $$ |$$ |  $$ |
+#  \$$$$$$  |\$$$$$$  |\$$$$$$  |$$ |  $$ | \$$$$  |\$$$$$$$ |\$$$$$$  |\$$$$$\$$$$  |$$ |  $$ |
+#   \______/  \______/  \______/ \__|  \__|  \____/  \_______| \______/  \_____\____/ \__|  \__|
+*/
+.countdown-container {
+	margin: 0 0 20px;
+	width: 100%;
+}
+.countdown-container__title {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: #f69f1b;
+	text-align: center;
+	word-break: break-word;
+}
+/* Countdown Timer Styles */
+.countdown {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	color: #0c304a;
+}
+.countdown li {
+	display: table;
+	text-align: center;
+	margin: 5px;
+}
+.countdown li .flap {
+	border-radius: 50%;
+	border: 4px solid #1099c6;
+	width: 45px;
+	height: 45px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.countdown li .flap span {
+	padding: 7px 0;
+	width: 100%;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1;
+	text-align: center;
+}
+.countdown p {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0 0 5px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+
+/*
+#   $$$$$$\ $$$$$$$$\  $$$$$$\        $$\
+#  $$  __$$\\__$$  __|$$  __$$\       $$ |
+#  $$ /  \__|  $$ |   $$ /  $$ |      $$$$$$$\   $$$$$$\  $$\   $$\
+#  $$ |        $$ |   $$$$$$$$ |      $$  __$$\ $$  __$$\ \$$\ $$  |
+#  $$ |        $$ |   $$  __$$ |      $$ |  $$ |$$ /  $$ | \$$$$  /
+#  $$ |  $$\   $$ |   $$ |  $$ |      $$ |  $$ |$$ |  $$ | $$  $$<
+#  \$$$$$$  |  $$ |   $$ |  $$ |      $$$$$$$  |\$$$$$$  |$$  /\$$\
+#   \______/   \__|   \__|  \__|      \_______/  \______/ \__/  \__|
+*/
+.cta-box {
+	margin: 0 0 20px;
+	border: 3px dashed #e4e4e4;
+	padding: 10px;
+}
+.cta-box__btn {
+	display: block;
+	margin: 0 0 15px;
+	border-radius: 6px;
+	padding: 10px;
+	max-width: 100%;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #fffffd;
+	background: #f69f1b;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.cta-box__btn:link {
+	color: #fffffd;
+}
+.cta-box__btn:hover {
+	background: #1099c6;
+	color: #fffffc;
+}
+.cta-box__link {
+	display: block;
+	margin: 0 0 15px;
+	font-size: 1.125rem;
+	line-height: 1.2;
+}
+.cta-box__disclaimer {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.2;
+	color: #0c304a;
+}
+/*
+#  $$$$$$$\                                     $$\ $$\
+#  $$  __$$\                                    $$ |\__|
+#  $$ |  $$ | $$$$$$\  $$$$$$\  $$$$$$$\   $$$$$$$ |$$\ $$$$$$$\   $$$$$$\
+#  $$$$$$$\ |$$  __$$\ \____$$\ $$  __$$\ $$  __$$ |$$ |$$  __$$\ $$  __$$\
+#  $$  __$$\ $$ |  \__|$$$$$$$ |$$ |  $$ |$$ /  $$ |$$ |$$ |  $$ |$$ /  $$ |
+#  $$ |  $$ |$$ |     $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |$$ |  $$ |$$ |  $$ |
+#  $$$$$$$  |$$ |     \$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ |$$ |  $$ |\$$$$$$$ |
+#  \_______/ \__|      \_______|\__|  \__| \_______|\__|\__|  \__| \____$$ |
+#                                                                 $$\   $$ |
+#                                                                 \$$$$$$  |
+#                                                                  \______/
+*/
+.branding {
+	margin: 0 auto 20px;
+}
+.branding__logo {
+	margin: 0 auto 15px;
+	width: 100%;
+	min-width: 179px;
+	max-width: 179px;
+}
+.branding__tagline {
+	margin: 0;
+	padding: 0;
+	font-size: 1.125rem;
+	line-height: 1.2;
+	font-weight: 300;
+	color: #0c304a;
+	text-align: center;
+}
+
+
+/*
+#   $$$$$$\  $$\   $$\                     $$$$$$$$\                   $$\
+#  $$  __$$\ \__|  $$ |                    $$  _____|                  $$ |
+#  $$ /  \__|$$\ $$$$$$\    $$$$$$\        $$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\
+#  \$$$$$$\  $$ |\_$$  _|  $$  __$$\       $$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\
+#   \____$$\ $$ |  $$ |    $$$$$$$$ |      $$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
+#  $$\   $$ |$$ |  $$ |$$\ $$   ____|      $$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |
+#  \$$$$$$  |$$ |  \$$$$  |\$$$$$$$\       $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |
+#   \______/ \__|   \____/  \_______|      \__|    \______/  \______/   \____/  \_______|\__|
+*/
+.site-footer {
+	padding: 25px 20px;
+	color: #fffffb;
+	background: #1099c7;
+	font-size: .875rem;
+	text-align: center;
+}
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:active {
+	color: #fffffb;
+}
+.site-footer__links {
+	margin: 0 auto 10px;
+	max-width: 840px;
+}
+.site-footer__fineprint {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 840px;
+	font-size: 0.875rem;
+
+}
+
+
+/*
+#  $$\      $$\                 $$\ $$\                  $$$$$$\                                $$\
+#  $$$\    $$$ |                $$ |\__|                $$  __$$\                               \__|
+#  $$$$\  $$$$ | $$$$$$\   $$$$$$$ |$$\  $$$$$$\        $$ /  $$ |$$\   $$\  $$$$$$\   $$$$$$\  $$\  $$$$$$\   $$$$$$$\
+#  $$\$$\$$ $$ |$$  __$$\ $$  __$$ |$$ | \____$$\       $$ |  $$ |$$ |  $$ |$$  __$$\ $$  __$$\ $$ |$$  __$$\ $$  _____|
+#  $$ \$$$  $$ |$$$$$$$$ |$$ /  $$ |$$ | $$$$$$$ |      $$ |  $$ |$$ |  $$ |$$$$$$$$ |$$ |  \__|$$ |$$$$$$$$ |\$$$$$$\
+#  $$ |\$  /$$ |$$   ____|$$ |  $$ |$$ |$$  __$$ |      $$ $$\$$ |$$ |  $$ |$$   ____|$$ |      $$ |$$   ____| \____$$\
+#  $$ | \_/ $$ |\$$$$$$$\ \$$$$$$$ |$$ |\$$$$$$$ |      \$$$$$$ / \$$$$$$  |\$$$$$$$\ $$ |      $$ |\$$$$$$$\ $$$$$$$  |
+#  \__|     \__| \_______| \_______|\__| \_______|       \___$$$\  \______/  \_______|\__|      \__| \_______|\_______/
+#                                                            \___|
+*/
+@media only screen and (min-width: 32em) {
+	.countdown-container {
+		display: table;
+	}
+	.countdown-container__title {
+		font-size: 1.375rem;
+	}
+	.countdown li {
+		float: left;
+	}
+	.countdown li .flap {
+		float: left;
+	}
+}
+
+@media only screen and (min-width: 38em) {
+	.site-header__title {
+		font-size: 1.9375rem;
+	}
+
+	.cta-box {
+		padding: 20px;
+	}
+	.cta-box__btn {
+		padding: 15px 10px;
+		font-size: 1.625rem;
+	}
+	.cta-box__link {
+		font-size: 1.25rem;
+	}
+	.cta-box__disclaimer {
+		font-size: 1.125rem;
+	}
+	/* Make branding section a media object */
+	.branding {
+		max-width: 670px;
+	}
+	.branding,
+	.branding__tagline {
+		overflow: hidden;
+		_overflow: visible;
+		zoom: 1;
+	}
+	.branding__tagline {
+		text-align: left;
+		font-size: 1.625rem;
+	}
+	.branding .branding__logo {
+		float: left;
+		margin: 0 30px 0 0;
+	}
+	.branding .branding__logo img {
+		display:block;
+	}
+}
+
+@media only screen and (min-width: 53em) {
+	.countdown-container__title {
+		float: left;
+		margin-top: 12px;
+		max-width: 320px;
+		font-size: 1.375rem;
+		text-align: left;
+	}
+	.countdown {
+		float: right;
+	}
+}
