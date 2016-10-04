@@ -60,7 +60,7 @@
 				</div>				
 			</div>
 			<div class="ibox-content">
-			<p>Enter an email address below and our system will send your referral an email which includes your unique Affiliate ID, along with a short message asking your friends to join <?php echo $link ?></p><br />
+			<p>Enter an email address below and our system will send your referral an email which includes your unique Affiliate ID, along with a short message asking your friends to join <a href="<?php echo $link ?>">GLC Hub</a></p><br />
 				<div id="emailafriend"></div>
 				<form class="pagination-centered" width="100%" method="post" action="" id="referafriend">
 					<div class="form-group">

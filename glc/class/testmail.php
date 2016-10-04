@@ -7,8 +7,8 @@ try {
         'html' => '<p>Example HTML content</p>',
         'text' => 'Example text content',
         'subject' => 'example subject',
-        'from_email' => 'no-reply@globallearningcenter.net',
-        'from_name' => 'Global Learning Center',
+        'from_email' => 'no-reply@glchub.com',
+        'from_name' => 'GLC Hub',
         'to' => array(
             array(
                 'email' => 'alainpedroniodev@gmail.com',
@@ -16,7 +16,7 @@ try {
                 'type' => 'to'
             )
         ),
-        'headers' => array('Reply-To' => 'no-reply@globallearningcenter.net'),
+        'headers' => array('Reply-To' => 'no-reply@glchub.com'),
         'important' => false,
         'track_opens' => null,
         'track_clicks' => null,
@@ -26,7 +26,7 @@ try {
         'url_strip_qs' => null,
         'preserve_recipients' => null,
         'view_content_link' => null,
-        'bcc_address' => 'no-reply@globallearningcenter.net',
+        'bcc_address' => 'no-reply@glchub.com',
         'tracking_domain' => null,
         'signing_domain' => null,
         'return_path_domain' => null,
