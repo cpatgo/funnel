@@ -12,6 +12,9 @@ foreach($users as $key => $value) {
 
     $lms_membership = get_page_by_title($membership, 'ARRAY_A', 'llms_membership');
     $student = new LLMS_Student($value->ID);
-    $student->enroll($lms_membership['ID']);
-    printf("USER ID: %d has been enrolled to LifterLMS <br>Membership: %s<br><br>", $value->ID, $membership);
+    if($res = $student->enroll($lms_membership['ID'])):
+    	echo "<pre>";
+    	print_r($res);
+    	printf("USER ID: %d has been enrolled to LifterLMS <br>Membership: %s<br><br>", $value->ID, $membership);
+    endif;
 }
