@@ -9,5 +9,5 @@ Regards,
 The GLC Support Team
 </p>
 <p>
-Note: To ensure delivery to your inbox (not bulk or junk folders); please add no-reply@globallearningcenter.net to your address book.
+Note: To ensure delivery to your inbox (not bulk or junk folders); please add no-reply@glchub.com to your address book.
 </p>
