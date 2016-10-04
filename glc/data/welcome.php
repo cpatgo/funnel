@@ -6,6 +6,7 @@ include("function/functions.php");
 include("function/setting.php");
 
 $id = $_SESSION['dennisn_user_id'];
+$membership_class = getInstance('Class_Membership');
 $level = get_level($id);
 if($level == 1) { $lvl = "Premium Board"; } 
 else { $lvl = "Standard Board"; }
@@ -47,8 +48,8 @@ function display_msq($id)
 				}
 			</script></div>';
 	}
-	$qreferrals2 = get_qualified_referrals($id);
-	if($qreferrals2 < 2) {
+	$qreferrals2 = $membership_class->is_qualified($row['id_user'], $row['time'], true);
+	if(!$qreferrals2) {
 		return '<div class="alert alert-danger">Unfortunately, you have not enrolled the 2 Members <b>within the last 6 months</b> and can no longer earn Affiliate commissions. To earn commissions in our Affiliate Rewards Program, you must qualify by enrolling a <strong>minimum of 2 Paid Memberships</strong> who purchased any one of our VIP product packages. <a href="index.php?page=faq">Click here for more details</a> </div>';
 	}	
 }
