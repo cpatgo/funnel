@@ -46,13 +46,12 @@ foreach($active_merchants as $mkey => $mvalue) {
                     <?php if(isset($_GET['err']) && !empty($_GET['err'])) printf('<div class="alert alert-danger">%s</div>', $_GET['err']); ?>
                     <!-- <button class="btn btn-primary btn-large">BACK TO MY HUB</button> -->
                 </div>
-                <?php if($wp_membership == 'Free'): ?>
                     <div class="col-md-6 col-md-offset-3">
                         <form class="form-horizontal" id="upgrade_form_special_membership" accept-charset="utf-8">
-
-                            <?php if($membership != 'Free'): ?>
                             <br>
                             <h3><a href="/myhub" class="btn btn-primary blue" style="background-color: #858585; border-color: #858585">BACK TO MY HUB</a></h3>
+
+                            <?php if($wp_membership != 'Free'): ?>
                             <div class="ibox-title">
                                 <h5>Select membership and fill out the payment form.</h5>
                             </div>
@@ -282,7 +281,6 @@ foreach($active_merchants as $mkey => $mvalue) {
                             <?php endif; ?>
                         </form>  
                     </div>
-                <?php endif; ?>
             </div>
         </div>
     </div>
