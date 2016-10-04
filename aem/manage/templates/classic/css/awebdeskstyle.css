@@ -1389,3 +1389,5 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     background-color: #ff6600;
     border-color: #ff6600;
 }
+
+.sharer_wrapper ul li a:hover { color:white;}
