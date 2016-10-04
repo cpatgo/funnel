@@ -1250,8 +1250,8 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
-    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );
+    /*background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );*/
     /*z-index: 1;*/
     -webkit-background-size: 50px 50px;
     -moz-background-size: 50px 50px;
@@ -1354,5 +1354,30 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .sharer_wrapper ul {display: block;}
 .sharer_wrapper ul li {display: inline-block;}
 
-.sharer_wrapper a.social {  }
+.sharer_wrapper a.social {     border: 1px solid grey;
+    
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 0.3125em;
+    margin-right: 0.3125em;
+    padding: 1.0em 0.6875em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    color:white;
+}
 
+.sharer_wrapper ul li.facebook a {
+    background-color: #3b5997;
+    border-color: #3b5997;
+} 
+
+.sharer_wrapper ul li.twitter a {
+    background-color: #41b7d8;
+    border-color: #41b7d8;
+}
+
+.sharer_wrapper ul li.gplus a {
+    background-color: #d64937;
+    border-color: #d64937;
+}
