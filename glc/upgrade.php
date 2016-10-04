@@ -51,7 +51,7 @@ foreach($active_merchants as $mkey => $mvalue) {
                             <br>
                             <h3><a href="/myhub" class="btn btn-primary blue" style="background-color: #858585; border-color: #858585">BACK TO MY HUB</a></h3>
 
-                            <?php if($membership != 'Free'): ?>
+                            <?php if($wp_membership != 'Free'): ?>
                             <div class="ibox-title">
                                 <h5>Select membership and fill out the payment form.</h5>
                             </div>
