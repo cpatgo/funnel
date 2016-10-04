@@ -1351,3 +1351,8 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     margin-top: 1em;
 }
 
+.sharer_wrapper ul {display: block;}
+.sharer_wrapper ul li {display: inline-block;}
+
+.sharer_wrapper a.social {  }
+
