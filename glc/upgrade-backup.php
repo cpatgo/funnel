@@ -32,7 +32,7 @@ foreach($active_merchants as $mkey => $mvalue) {
     <input type="hidden" id="current_membership_amount" value="<?php echo $user_membership['amount'] ?>">
     <div style="background-color:#fff;">
         <div class="container-fluid">
-                <form class="form-horizontal" id="upgrade_form_special_membership" accept-charset="utf-8">
+                <form class="form-horizontal" id="upgrade_form_outside_backoffice" accept-charset="utf-8">
                     <div class="col-sm-7 col-sm-offset-2">
                         <?php if(isset($_GET['msg']) && !empty($_GET['msg'])) printf('<div class="alert alert-success">%s</div>', $_GET['msg']); ?>
                         <?php if(isset($_GET['err']) && !empty($_GET['err'])) printf('<div class="alert alert-danger">%s</div>', $_GET['err']); ?>
@@ -55,7 +55,17 @@ foreach($active_merchants as $mkey => $mvalue) {
                                 <div class="form-group">
                                     <label for="selected_upgrade" class="col-sm-3 control-label">Upgrade To:</label>
                                     <div class="col-sm-9">
-                                        <div class="radio i-checks"><label><input type="radio" class="form-control" value="special" name="upgrade_membership" checked="checked" data-amt="<?php echo glc_option('aem_special_registration'); ?>"> <i></i> Professional </label><span id="amount_text" class="alert-danger" style="padding:5px;"> - Balance Due <b>$<?php echo glc_option('aem_special_registration'); ?></b>. USD</span></div>
+                                        <?php 
+                                        foreach ($membership as $key => $value) {
+                                            if($value['membership'] === 'Free' || $value['membership'] === 'Founder' || $user_membership['initial'] >= $value['id'] || $value['membership'] === 'Masters') continue;
+                                            printf('<div class="radio i-checks"><label><input type="radio" class="form-control" value="%d" name="upgrade_membership" %s data-amt=%d> <i></i> %s %s</label></div>', 
+                                                $value['id'], 
+                                                ((int)$value['id'] === 4) ? 'checked="checked"' : '', 
+                                                $value['amount'],
+                                                $value['membership'],
+                                                ((int)$value['id'] === 4) ? sprintf('<span id="amount_text" class="alert-danger" style="padding:5px;"> - Balance Due <b>$%d</b>. USD</span>', $value['amount'] - $user_membership['amount']) : '');
+                                            } 
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="form-group">
