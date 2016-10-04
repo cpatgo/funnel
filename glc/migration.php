@@ -16,5 +16,7 @@ foreach($users as $key => $value) {
     	echo "<pre>";
     	print_r($res);
     	printf("USER ID: %d has been enrolled to LifterLMS <br>Membership: %s<br><br>", $value->ID, $membership);
+    else:
+    	printf("USER ID: %d failed to enroll to LifterLMS <br>Membership: %s<br><br>", $value->ID, $membership);
     endif;
 }
