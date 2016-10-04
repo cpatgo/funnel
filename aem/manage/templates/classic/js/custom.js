@@ -337,7 +337,7 @@ jQuery(document).ready(function(){
                     $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
                     $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
                     $body.find('#email_share').attr('href', "mailto:?body="+result.link);
-                    $body.find('#gplus_share').attr('href', "mailto:?body="+result.link);
+                    $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
                 },
                 error: function(errorThrown){
                     console.log(errorThrown);
