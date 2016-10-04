@@ -1,5 +1,4 @@
 <?php
-//ini_set("display_errors",'off');
 session_start();
 require_once(dirname(__FILE__)."/config.php");
 require_once(dirname(__FILE__)."/class/icontact.php");
@@ -913,7 +912,6 @@ if(isset($_POST['q']) && isset($_POST['username']))
             }
         }   
     }   
-    $curr_year = date('Y')-13;
-    $curr_month = date('m');
-    $curr_day = date('d');
-?>
+$curr_year = date('Y')-13;
+$curr_month = date('m');
+$curr_day = date('d');
