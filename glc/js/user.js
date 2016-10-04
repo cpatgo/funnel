@@ -179,6 +179,32 @@ $(function(){
         });
     });
 
+    $('body').on('submit', '#upgrade_form_special_membership', function(e){
+        e.preventDefault();
+        $('.loader_processing').show();
+        $('#submit_form').prop('disabled', true);
+        var fields = $('body').find('#upgrade_form_special_membership').serialize();
+        $.ajax({
+            method: "post",
+            url: "../glc/admin/ajax/upgrade_special_membership.php",
+            data: {
+                'fields': fields,
+            },
+            dataType: 'json',
+            success:function(result) {
+                if(result.result == 'error'){
+                    window.location.href = '/glc/upgrade.php?err='+result.message;
+                } else {
+                    window.location.href = '/glc/upgrade.php?msg='+result.message;
+                }
+            },
+            error: function(errorThrown){
+                $('#submit_form').prop('disabled', true);
+                console.log(errorThrown);
+            }
+        });
+    });
+
     $("input[name=upgrade_membership]").click(function(){
         $('body').find('#amount_text').remove();
         var current_amount = $('body').find('#current_membership_amount').val();
