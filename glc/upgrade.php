@@ -38,7 +38,7 @@ foreach($active_merchants as $mkey => $mvalue) {
 <!-- If User's membership is not Master's, allow for upgrade -->
 <?php if((int)$user_membership['id'] < 4): ?>    
     <input type="hidden" id="current_membership_amount" value="<?php echo $user_membership['amount'] ?>">
-    <div style="background-color:#fff;margin-top:20px;">
+    <div style="background-color:#fff;margin-top:20px;margin-bottom:20px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
