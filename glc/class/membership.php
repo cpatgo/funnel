@@ -238,6 +238,29 @@ class Class_Membership extends Class_Database
         $user_class->lms_enroll_student(get_current_user_id(), $new_membership[0]['membership']);
     }
 
+    function upgrade_special_membership($user_id, $level)
+    {
+        require_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php');
+
+        $user_class = getInstance('Class_User');
+        $membership_class = getInstance('Class_Membership');
+
+        $user = $user_class->get_user($user_id);
+        $membership = $user_class->user_membership($user_id);
+        $new_membership = $membership_class->get_membership(2);
+
+        //Upgrade user
+        $upgrade_user = $user_class->upgrade_user($user[0], $membership[0], 2);
+        $update_membership = $user_class->update_membership($user_id, 2);
+
+        //Update wordpress membership
+        $new_membership = glc_option('aem_special_wp_membership');
+        $upgrade_wp_membership = $user_class->wp_update_membership($new_membership, $membership[0]['membership'], $user[0]['email']);
+
+        //Enroll user to LifterLMS
+        $user_class->lms_enroll_student(get_current_user_id(), $new_membership);
+    }
+
     function array_to_sql($data)
     {
         $count = count($data); $values = ''; $flag = 0;
