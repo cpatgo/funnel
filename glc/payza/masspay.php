@@ -115,7 +115,7 @@ class Payza_Masspay
      */
     public function getServer()
     {
-        if($_SERVER['HTTP_HOST'] !== 'globallearningcenter.net'):
+        if($_SERVER['HTTP_HOST'] !== 'glchub.com'):
             return $this->serverSandbox;
         else:
             return $this->server;
@@ -145,7 +145,7 @@ class Payza_Masspay
      */
     public function getUrl()
     {
-        if($_SERVER['HTTP_HOST'] !== 'globallearningcenter.net'):
+        if($_SERVER['HTTP_HOST'] !== 'glchub.com'):
             return $this->urlSandbox;
         else:
             return $this->url;
