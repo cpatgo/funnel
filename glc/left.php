@@ -6,7 +6,7 @@
 ?>
 <nav class="navbar-default navbar-static-side" role="navigation">
 	<?php 
-		if($_SERVER['HTTP_HOST'] !== 'globallearningcenter.net' && $_SERVER['HTTP_HOST'] !== 'www.globallearningcenter.net'):
+		if($_SERVER['HTTP_HOST'] !== 'glchub.com' && $_SERVER['HTTP_HOST'] !== 'www.glchub.com'):
 			printf('<div class="alert alert-danger" style="text-align:center;font-size:20px;margin-bottom:0;"><b>STAGING</b></div>');
 		endif;
 	?>

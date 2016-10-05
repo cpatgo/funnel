@@ -1685,10 +1685,10 @@ parent::__construct(
 'glc_featured_course_category_widget', 
 
 // Widget name will appear in UI
-__('GLC Featured Course Category Widget', 'http://globallearningcenter.net'), 
+__('GLC Featured Course Category Widget', 'http://glchub.com'), 
 
 // Widget description
-array( 'description' => __( 'GLC Featured Course Category', 'http://globallearningcenter.net' ), ) 
+array( 'description' => __( 'GLC Featured Course Category', 'http://glchub.com' ), ) 
 );
 }
 
@@ -1702,7 +1702,7 @@ public function widget( $args, $instance ) {
 	echo $args['before_title'] . $title . $args['after_title'];
 
 	// This is where you run the code and display the output
-	echo __( 'Hello, World!', 'http://globallearningcenter.net' );
+	echo __( 'Hello, World!', 'http://glchub.com' );
 	echo $args['after_widget'];
 	}
 			
@@ -1712,7 +1712,7 @@ public function widget( $args, $instance ) {
 	$title = $instance[ 'title' ];
 	}
 	else {
-	$title = __( 'New title', 'http://globallearningcenter.net' );
+	$title = __( 'New title', 'http://glchub.com' );
 	}
 	// Widget admin form
 	?>
