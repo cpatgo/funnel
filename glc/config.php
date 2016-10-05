@@ -176,6 +176,18 @@ elseif($server_host === 'glc.cretetech.com' || $server_host === 'www.glc.cretete
     // $authorize_id = "3Xu5c4nGAa";
     // $authorize_key = "2bPgvBQ2VX9597nP";
 
+elseif($server_host === 'glcv2.cretetech.com' || $server_host === 'www.glcv2.cretetech.com'):
+
+    // database configuration
+    $dbUsername = "cielbleu_wp816";
+    $dbPassword = "X9E3cmO1ed)S";
+    $dbName = "cielbleu_glcv2";
+
+    // $authorize_id = "55KtfW6b";
+    // $authorize_key = "6ym946Abq2Yt63Wr";
+    // $authorize_id = "3Xu5c4nGAa";
+    // $authorize_key = "2bPgvBQ2VX9597nP";
+
 elseif($server_host === 'glcv2.identifz.com' || $server_host === 'www.glcv2.identifz.com'):
 
     // database configuration
