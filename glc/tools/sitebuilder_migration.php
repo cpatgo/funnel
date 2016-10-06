@@ -14,8 +14,20 @@ foreach($users as $key => $value) {
 	// printf('%s - %s', $key, $value);
 	$glc_user = $user_class->get_by_username($value->data->user_login);
 	$glc_user = $glc_user[0];
-	print_r('%s', $glc_user);	
+	print_r($glc_user);
 	
 }
 
-?>
+
+
+
+
+/* notes 
+get all users from WP/matrix
+put all user + password + email in temp table
+import to site builder db
+
+
+
+
+*/
