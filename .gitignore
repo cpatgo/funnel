@@ -29,3 +29,6 @@ aem/cache/serialkey.php
 aem/cache/key.php
 aem/manage/ex_config.php
 aem/manage/config.php
+
+sitebuilder/application/config/config.php
+sitebuilder/application/config/database.php
