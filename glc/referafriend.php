@@ -1,10 +1,10 @@
 <?php 
 
 /** post parameters **/
-$email 		= strip_tags(trim($_POST['friendemail'])); 
-$name 		= strip_tags(trim($_POST['friendname'])); 
-$username 	= strip_tags( trim($_POST['username']));
-$reflink	= strip_tags( trim($_POST['reflink']));
+$email      = strip_tags(trim($_POST['friendemail'])); 
+$name       = strip_tags(trim($_POST['friendname'])); 
+$username   = strip_tags( trim($_POST['username']));
+$reflink    = strip_tags( trim($_POST['reflink']));
 
 /** start message here **/
 $msg = 'Hi '.$name.',<br />
