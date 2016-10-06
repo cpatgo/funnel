@@ -18,7 +18,7 @@ Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click
 /** mandrill starts here **/
 try {
     require_once 'class/mandrill_src/Mandrill.php';
-    $mandrill = new Mandrill('dmHv4vt3NItaV8gTP9y3dg');
+    $mandrill = new Mandrill('5LGxq2K6xOXKsuArzugKUw');
     $message = array(
         'html' => utf8_encode($msg),
         'text' => 'Example text content',
