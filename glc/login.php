@@ -216,7 +216,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 		            </a>
 				</div>
 			</div>
-			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/choose-your-membership/" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
+			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/limited-time-offer" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
 			<br /><br />
 			<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
 	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  

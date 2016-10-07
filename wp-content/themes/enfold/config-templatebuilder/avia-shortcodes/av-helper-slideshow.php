@@ -30,7 +30,8 @@ if ( !class_exists( 'avia_slideshow' ) )
 				'content'		=> array(),
 				'custom_markup' => '',
 				'perma_caption'	=> '',
-				'autoplay_stopper'=>''
+				'autoplay_stopper'=>'',
+				'image_attachment'=>''
 				), $config);
 
 			$this->config = apply_filters('avf_slideshow_config', $this->config);
@@ -137,7 +138,7 @@ if ( !class_exists( 'avia_slideshow' ) )
 			
 			if(!empty($this->config['scroll_down']))
 			{	
-				$html .= "<a href='#next-section' title='' class='scroll-down-link' ". av_icon_string( 'scrolldown' ). "></a>";
+				$html .= "<a href='#next-section' title='' class='scroll-down-link ".$this->config['control_layout']."' ". av_icon_string( 'scrolldown' ). "></a>";
 				$extraClass .= "av-slider-scroll-down-active";
 			}
 			

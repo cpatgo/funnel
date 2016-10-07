@@ -137,6 +137,7 @@ function validateEmail($email) {
 }
 
 $("#referafriend").submit(function() {
+	console.log('passing through.');
 	if(validateEmail($("#friendemail").val()))
 	{
 		var url = "referafriend.php"; // the script where you handle the form input.
