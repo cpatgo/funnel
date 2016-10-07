@@ -415,10 +415,11 @@
 		var scope			= this.modal,
 			datepicker		= scope.find('.av-datepicker').datepicker(
 			{ 
+				dateFormat: 'mm / dd / yy',
 				minDate: -0,
 				beforeShow: function(input, inst) 
 				{
-				       inst.dpDiv.addClass("avia-datepicker-div");
+					inst.dpDiv.addClass("avia-datepicker-div");
 				}
 			});
 			
@@ -522,6 +523,25 @@
 				var shortcode	= "",
 					textarea	= "",
 					insert		= $(single);
+				
+				
+				//sanitize data in dropdown to circumvent inserting world list with "'" or other invalid values
+				if(current.label)
+				{
+					current.label = current.label.replace(/'/g, "&lsquo;")
+				}
+				
+				if(current.options)
+				{
+					current.options = current.options.replace(/'/g, "&lsquo;")
+				}
+				
+				if(current.value)
+				{
+					current.value = current.value.replace(/'/g, "&lsquo;")
+				}
+				
+				
 				
 				textarea  	= insert.find('textarea');
 				shortcode 	= $.avia_builder.createShortcode(current, shortcode_name, {}, true);

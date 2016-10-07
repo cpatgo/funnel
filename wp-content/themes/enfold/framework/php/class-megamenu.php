@@ -34,6 +34,7 @@ if( !class_exists( 'avia_megamenu' ) )
 		 */
 		function __construct()
 		{
+			
 			//adds stylesheet and javascript to the menu page
 			add_action('admin_menu', array(&$this,'avia_menu_header'));
 
@@ -365,52 +366,68 @@ if( !class_exists( 'avia_backend_walker' ) )
 		 */
 		function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0 ) {
 			global $_wp_nav_menu_max_depth;
-			$_wp_nav_menu_max_depth = $depth > $_wp_nav_menu_max_depth ? $depth : $_wp_nav_menu_max_depth;
+		$_wp_nav_menu_max_depth = $depth > $_wp_nav_menu_max_depth ? $depth : $_wp_nav_menu_max_depth;
 
-			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+		ob_start();
+		$item_id = esc_attr( $item->ID );
+		$removed_args = array(
+			'action',
+			'customlink-tab',
+			'edit-menu-item',
+			'menu-item',
+			'page-tab',
+			'_wpnonce',
+		);
 
-			ob_start();
-			$item_id = esc_attr( $item->ID );
-			$removed_args = array(
-				'action',
-				'customlink-tab',
-				'edit-menu-item',
-				'menu-item',
-				'page-tab',
-				'_wpnonce',
-			);
-
-			$original_title = '';
-			if ( 'taxonomy' == $item->type ) {
-				$original_title = get_term_field( 'name', $item->object_id, $item->object, 'raw' );
-			} elseif ( 'post_type' == $item->type ) {
-				$original_object = get_post( $item->object_id );
-				$original_title = $original_object->post_title;
+		$original_title = false;
+		if ( 'taxonomy' == $item->type ) {
+			$original_title = get_term_field( 'name', $item->object_id, $item->object, 'raw' );
+			if ( is_wp_error( $original_title ) )
+				$original_title = false;
+		} elseif ( 'post_type' == $item->type ) {
+			$original_object = get_post( $item->object_id );
+			$original_title = get_the_title( $original_object->ID );
+		} elseif ( 'post_type_archive' == $item->type ) {
+			$original_object = get_post_type_object( $item->object );
+			if ( $original_object ) {
+				$original_title = $original_object->labels->archives;
 			}
+		}
 
-			$classes = array(
-				'menu-item menu-item-depth-' . $depth,
-				'menu-item-' . esc_attr( $item->object ),
-				'menu-item-edit-' . ( ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive'),
-			);
+		$classes = array(
+			'menu-item menu-item-depth-' . $depth,
+			'menu-item-' . esc_attr( $item->object ),
+			'menu-item-edit-' . ( ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive'),
+		);
 
-			$title = $item->title;
+		$title = $item->title;
 
-			if ( isset( $item->post_status ) && 'draft' == $item->post_status ) {
-				$classes[] = 'pending';
-				/* translators: %s: title of menu item in draft status */
-				$title = sprintf( __('%s (Pending)'), $item->title );
-			}
+		if ( ! empty( $item->_invalid ) ) {
+			$classes[] = 'menu-item-invalid';
+			/* translators: %s: title of menu item which is invalid */
+			$title = sprintf( __( '%s (Invalid)' ), $item->title );
+		} elseif ( isset( $item->post_status ) && 'draft' == $item->post_status ) {
+			$classes[] = 'pending';
+			/* translators: %s: title of menu item in draft status */
+			$title = sprintf( __('%s (Pending)'), $item->title );
+		}
 
-			$title = empty( $item->label ) ? $title : $item->label;
+		$title = ( ! isset( $item->label ) || '' == $item->label ) ? $title : $item->label;
 
+		$submenu_text = '';
+		if ( 0 == $depth )
+			$submenu_text = 'style="display: none;"';
+
+		
+			/*avia edit*/
 			$itemValue = "";
 			if($depth == 0)
 			{
 				$itemValue = get_post_meta( $item->ID, '_menu-item-avia-megamenu', true);
 				if($itemValue != "") $itemValue = 'avia_mega_active ';
 			}
-
+			/*end edit*/
+			
 			?>
 
 			<li id="menu-item-<?php echo $item_id; ?>" class="<?php echo $itemValue; echo implode(' ', $classes ); ?>">
@@ -457,7 +474,7 @@ if( !class_exists( 'avia_backend_walker' ) )
 					</dt>
 				</dl>
 
-				<div class="menu-item-settings" id="menu-item-settings-<?php echo $item_id; ?>">
+				<div class="menu-item-settings wp-clearfix" id="menu-item-settings-<?php echo $item_id; ?>">
 					<?php if( 'custom' == $item->type ) : ?>
 						<p class="field-url description description-wide">
 							<label for="edit-menu-item-url-<?php echo $item_id; ?>">
@@ -521,6 +538,7 @@ if( !class_exists( 'avia_backend_walker' ) )
 					<div class='avia_mega_menu_options'>
 					<!-- ################# avia custom code here ################# -->
 						<?php
+							
 						$title = 'Use as Mega Menu';
 						$key = "menu-item-avia-megamenu";
 						$value = get_post_meta( $item->ID, '_'.$key, true);
@@ -575,14 +593,15 @@ if( !class_exists( 'avia_backend_walker' ) )
 					<?php do_action('avia_mega_menu_option_fields', $output, $item, $depth, $args); ?>
 
 					<!-- ################# end avia custom code here ################# -->
-
+					
+					
 					<div class="menu-item-actions description-wide submitbox">
 						<?php if( 'custom' != $item->type ) : ?>
 							<p class="link-to-original">
 								<?php printf( __('Original: %s'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
 							</p>
 						<?php endif; ?>
-						<a class="item-delete submitdelete deletion" id="delete-<?php echo $item_id; ?>" href="<?php
+						<a class="item-delete submitdelete deletion" id="delete-<?php echo $item_id; ?>" href="<?php 
 						echo wp_nonce_url(
 							add_query_arg(
 								array(
@@ -595,6 +614,10 @@ if( !class_exists( 'avia_backend_walker' ) )
 						); ?>"><?php _e('Remove'); ?></a> <span class="meta-sep"> | </span> <a class="item-cancel submitcancel" id="cancel-<?php echo $item_id; ?>" href="<?php	echo add_query_arg( array('edit-menu-item' => $item_id, 'cancel' => time()), remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) ) );
 							?>#menu-item-settings-<?php echo $item_id; ?>">Cancel</a>
 					</div>
+					
+					
+					
+					
 
 					<input class="menu-item-data-db-id" type="hidden" name="menu-item-db-id[<?php echo $item_id; ?>]" value="<?php echo $item_id; ?>" />
 					<input class="menu-item-data-object-id" type="hidden" name="menu-item-object-id[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->object_id ); ?>" />

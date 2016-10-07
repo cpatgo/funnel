@@ -424,8 +424,9 @@ display:none;
 }
 
 #avia_options_page div .avia_heading{
-font-size: 11px;
+font-size: 12px;
 color:#888;
+line-height: 1.65em;
 }
 
 .avia_heading h4{
@@ -789,15 +790,32 @@ margin: 2px 7px 11px 0;
 
 
 
-.avia_mega_menu, .avia_mega_label, .item-type-avia, .item-type-megafied, .avia_mega_active.menu-item-depth-2 .description-title, .avia_mega_active.menu-item-depth-3 .description-title{
+.avia_mega_menu, 
+.avia_mega_label, 
+div .item-type-avia, 
+div .item-type-megafied, 
+.avia_mega_active.menu-item-depth-2 .description-title, 
+.avia_mega_active.menu-item-depth-3 .description-title{
 display:none;
+}
+
+div .item-type-avia{
+	text-align: right;
 }
 
 .avia_mega_menu select{
 max-width:390px;
 }
 
-.menu-item-depth-0 .avia_mega_menu_d0, .avia_mega_active.menu-item-depth-1 .avia_mega_menu_d1, .avia_mega_active.menu-item-depth-2 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-3 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-4 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-5 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-6 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-7 .avia_mega_menu_d2, .avia_mega_active.menu-item-depth-8 .avia_mega_menu_d2
+.menu-item-depth-0 .avia_mega_menu_d0, 
+.avia_mega_active.menu-item-depth-1 .avia_mega_menu_d1, 
+.avia_mega_active.menu-item-depth-2 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-3 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-4 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-5 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-6 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-7 .avia_mega_menu_d2, 
+.avia_mega_active.menu-item-depth-8 .avia_mega_menu_d2
 {
 display:block;
 }
@@ -815,7 +833,7 @@ font-style: italic;
 
 /*actual css*/
 .avia_mega_active.menu-item-depth-0 .item-type-megafied{
-display:block; font-style: italic;
+display:inline-block; font-style: italic;
 }
 
 .avia_mega_active.menu-item-depth-0 .item-type-default{display:none;}
@@ -831,7 +849,7 @@ display:inline;
 }
 
 .avia_mega_active.menu-item-depth-1 .item-type-avia{
-display:block;
+display:inline-block;
 color: #333333;
 }
 
