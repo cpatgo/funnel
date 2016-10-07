@@ -261,7 +261,7 @@ if ( !class_exists( 'avia_sc_slider' ) )
 						"id" 	=> "control_layout",
 						"type" 	=> "select",
 						"std" 	=> "",
-						"subtype" => array(__('Default','avia_framework' ) =>'',__('Minimal','avia_framework' ) =>'av-control-minimal',__('Hidden','avia_framework' ) =>'av-control-hidden')),	
+						"subtype" => array(__('Default','avia_framework' ) =>'av-control-default',__('Minimal White','avia_framework' ) =>'av-control-minimal', __('Minimal Black','avia_framework' ) =>'av-control-minimal av-control-minimal-dark',__('Hidden','avia_framework' ) =>'av-control-hidden')),	
 
 						
 					array(	

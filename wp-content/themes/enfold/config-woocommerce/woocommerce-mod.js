@@ -12,35 +12,44 @@ jQuery(document).ready(function($) {
 	
 	product_add_to_cart_click();
 	
-	jQuery(".quantity input[type=number]").each(function() {
-	var number = $(this),
-			max = parseFloat( number.attr( 'max' ) ),
-			min = parseFloat( number.attr( 'min' ) ),
-			step = parseInt( number.attr( 'step' ), 10 ),
-			newNum = jQuery(jQuery('<div />').append(number.clone(true)).html().replace('number','text')).insertAfter(number);
-			number.remove();
-
-		setTimeout(function(){
-			if(newNum.next('.plus').length == 0) {
-				var minus = jQuery('<input type="button" value="-" class="minus">').insertBefore(newNum),
-						plus    = jQuery('<input type="button" value="+" class="plus">').insertAfter(newNum);
 	
-				minus.on('click', function(){
-					var the_val = parseInt( newNum.val(), 10 ) - step;
-					the_val = the_val < 0 ? 0 : the_val;
-					the_val = the_val < min ? min : the_val;
-					newNum.val(the_val);
-				});
-				plus.on('click', function(){
-					var the_val = parseInt( newNum.val(), 10 ) + step;
-					the_val = the_val > max ? max : the_val;
-					newNum.val(the_val);
+	function avia_apply_quant_btn()
+	{
+		jQuery(".quantity input[type=number]").each(function() {
+		var number = $(this),
+				max = parseFloat( number.attr( 'max' ) ),
+				min = parseFloat( number.attr( 'min' ) ),
+				step = parseInt( number.attr( 'step' ), 10 ),
+				newNum = jQuery(jQuery('<div />').append(number.clone(true)).html().replace('number','text')).insertAfter(number);
+				number.remove();
 	
-				});
-			}
-		},10);
+			setTimeout(function(){
+				if(newNum.next('.plus').length == 0) {
+					var minus = jQuery('<input type="button" value="-" class="minus">').insertBefore(newNum),
+							plus    = jQuery('<input type="button" value="+" class="plus">').insertAfter(newNum);
+		
+					minus.on('click', function(){
+						var the_val = parseInt( newNum.val(), 10 ) - step;
+						the_val = the_val < 0 ? 0 : the_val;
+						the_val = the_val < min ? min : the_val;
+						newNum.val(the_val).trigger("change");
+					});
+					plus.on('click', function(){
+						var the_val = parseInt( newNum.val(), 10 ) + step;
+						the_val = the_val > max ? max : the_val;
+						newNum.val(the_val).trigger("change");
+		
+					});
+				}
+			},10);
+		
+		});
+	}
 	
-	});
+	avia_apply_quant_btn();
+	
+	//if the cart gets updated via ajax (woocommerce 2.6 and higher) we need to re apply the +/- buttons
+	$( document ).on( 'updated_cart_totals', avia_apply_quant_btn );
 
 	setTimeout(first_load_amount, 10);
 	$('body').bind('added_to_cart', update_cart_dropdown);
@@ -57,7 +66,7 @@ function update_cart_dropdown(event)
 {
 	var the_html		= jQuery('html'),
 		menu_cart 		= jQuery('.cart_dropdown'),
-		cart_counter	= jQuery('.cart_dropdown#menu-item-shop .av-cart-counter'),
+		cart_counter	= jQuery('.cart_dropdown .av-cart-counter'),
 		empty 			= menu_cart.find('.empty'),
 		msg_success		= menu_cart.data('success'),
 		product 		= jQuery.extend({name:"Product", price:"", image:""}, avia_clicked_product),
