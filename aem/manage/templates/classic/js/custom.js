@@ -68,7 +68,8 @@ jQuery(document).ready(function(){
                 required: true
             },
             "subscriber_email": {
-                required: true
+                required: true,
+                email: true
             },
             "form_name": {
                 required: true
@@ -105,6 +106,10 @@ jQuery(document).ready(function(){
         message: {
             "landing-page-name":{
                 required: "this field is required."
+            },
+            "subscriber_email": {
+                required: "required field",
+                email: "please enter valid email address"
             },
             "landing-page-url-link":{
                 required: "this field required.",
