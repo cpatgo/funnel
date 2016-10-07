@@ -68,8 +68,7 @@ jQuery(document).ready(function(){
                 required: true
             },
             "subscriber_email": {
-                required: true,
-                email: true
+                required: true
             },
             "form_name": {
                 required: true
@@ -99,28 +98,10 @@ jQuery(document).ready(function(){
                 required: true
             },
             "landing-page-url-link": {
-                required: true,
-                url: true
-            },
-            "landing-page-url":{
-                required: true,
-            },
-        message: {
-            "landing-page-name":{
-                required: "this field is required."
-            },
-            "subscriber_email": {
-                required: "required field",
-                email: "please enter valid email address"
-            },
-            "landing-page-url-link":{
-                required: "this field required.",
-                url: "please enter valid url starting with http://"
+                required: true
             }
-
-        }  
-    };
-    
+        }   
+    });
     form.steps({
         headerTag: "h3",
         bodyTag: "section",
@@ -146,9 +127,6 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
-
-
-
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -265,12 +243,7 @@ jQuery(document).ready(function(){
         {
             window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
         }
-    })  ;
-
-
-
-
-
+    });
 
     jQuery('.btn-choose').click(function() {
         jQuery('.actions > ul > li:nth-child(2) > a').click();
