@@ -136,7 +136,7 @@ if ( !defined("adesk_SYNC_LOGTABLE"  ) ) define("adesk_SYNC_LOGTABLE"  , '#subsc
 
 // we have our own swift/php mailers here
 //if ( !defined('SWIFT_ABS_PATH') ) define('SWIFT_ABS_PATH', $GLOBALS['adesk_library_path'] . '/swiftmailer/php' . (int)PHP_VERSION);
-if ( !defined('SWIFT_ABS_PATH') ) define('SWIFT_ABS_PATH', $GLOBALS['adesk_library_path'] . '/swiftmailer/php4');
+if ( !defined('SWIFT_ABS_PATH') ) define('SWIFT_ABS_PATH', $GLOBALS['adesk_library_path'] . '/swiftmailer/php' . (int)PHP_VERSION);
 //if ( !defined('SWIFT_ABS_PATH') ) define('SWIFT_ABS_PATH', dirname(__FILE__) . '/mailer');
 if ( !defined('MAILER_ABS_PATH') ) define('MAILER_ABS_PATH', dirname(__FILE__) . '/sender.php');
 
