@@ -489,7 +489,8 @@ function avia_breadcrumbs( $args = array() ) {
 
 				$link = preg_replace('!rel=".+?"|rel=\'.+?\'|!',"", $link);
 				$link = str_replace('<a ', '<a rel="v:url" property="v:title" ', $link);
-				$link = '<span typeof="v:Breadcrumb">'.$link.'</span>';
+				//$link = '<span typeof="v:Breadcrumb">'.$link.'</span>'; //removed due to data testing error
+				$link = '<span>'.$link.'</span>';
 			}
 		}
 

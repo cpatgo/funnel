@@ -110,12 +110,12 @@ if( isset($_COOKIE['referral']) ) {
 	      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
 	        <div class="nav-pills">
 	        	<div class="pull-right header-help" style="">
-	        		<div class="align-right">Need Help?<br /><a href="/faq/" target="_blank">Contact Customer Service</a></div>
+	        		<div class="align-right">Need Help?<br /><a href="/glc-faq/" target="_blank">Contact Customer Service</a></div>
 	        		<br />
 	        		<div class="align-right"><a class="btn btn-primary" href="login.php" style="text-align: right;">Already a Member? Login here.</a></div>
 	        	</div>
 	        	<div class="pull-left" style="padding-top:1px;">
-		        	<a href="/">
+		        	<a href="/home">
 			            <img src="images/hz-glclogo200x70.png" alt="GLC HUB" />
 			        </a>
 		        </div>
@@ -133,7 +133,7 @@ if( isset($_COOKIE['referral']) ) {
 	      			<?=isset($sponsor) ? '
 					<div class="sponsorship">
 						<p>
-						<b>Note:</b> Your Referring GLC Brand Affiliate (your Enroller) is <span>'.$sponsor.'</span>.
+						<b>Note:</b> Your Referring GLC HUB Affiliate (your Enroller) is <span>'.$sponsor.'</span>.
 						<br>
 						If this is <strong>not correct</strong>, change it now <a href="#update-referrer"  class="referral-pop">clicking here</a>.
 						</p>
@@ -570,7 +570,7 @@ if( isset($_COOKIE['referral']) ) {
 									</div>
 								</div>		
 				            
-				            	<p class="usDisclaimerText">Note: If you are a U.S. citizen, please be advised that your bank may charge an "international fee" for your purchase. This is a fee that you are ultimately responsible for, so please contact your bank for further clarification about any additional fees for international transactions.</p>
+				            	<p class="usDisclaimerText">Note: Please be advised that your bank may charge an "international fee" for your purchase. This is a fee that you are ultimately responsible for, so please contact your bank for further clarification about any additional fees for international transactions.</p>
 				            </div>
 						</div>	
 					</div> 
@@ -696,7 +696,7 @@ if( isset($_COOKIE['referral']) ) {
 		<div class="row">
 			<div class="sidebar_widget">
 				<div class="head">
-					<h3>Update Referring GLC Brand Affiliate (Your Enroller)</h3>
+					<h3>Update Referring GLC HUB Affiliate (Your Enroller)</h3>
 				</div>
 			</div>
 		</div>
@@ -759,7 +759,7 @@ if( isset($_COOKIE['referral']) ) {
 
 	<!-- DON'T MISS OUT AFFILIATE POPUP WINDOW -->
 	<div id="affiliate-pop" style="display:none;">
-		<p>Don't miss out, join the GLC Affiliate Program right now and start making Big Money. It's absolutely free to join. Check the box to become an Affiliate, you'll be glad you did.</p>
+		<h3>Don't miss out, join the GLC Affiliate Program right now and start earning Big Money. It's absolutely free to join. Check the box to become an Affiliate, you'll be glad you did.</h3>
 	</div>
 
 

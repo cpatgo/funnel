@@ -976,7 +976,7 @@ if( ! class_exists( 'avia_form' ) )
 				{
 					case 'is_empty':
 
-						if(!empty($_POST[$id])) return "valid";
+						if(!empty($_POST[$id]) || $_POST[$id] === "0") return "valid";
 
 					break;
 
