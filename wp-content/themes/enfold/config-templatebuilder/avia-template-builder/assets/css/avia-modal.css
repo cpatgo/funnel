@@ -468,46 +468,59 @@ border-bottom:none;
 /*datepicker*/
 .avia-modal .av_third.avia-element-datepicker{z-index: auto;}
 
-.avia-datepicker-div{ background: #fff; border:1px solid #e1e1e1; }
-.avia-datepicker-div a{ color:#333; background-color: #f8f8f8; }
-.avia-datepicker-div a.ui-state-active{ color:#fff; background: #1E8CBE;}
-.avia-datepicker-div a.ui-state-highlight{ color:#1E8CBE; background: #f8f8f8;}
-.avia-datepicker-div a.ui-state-hover{ color:#FFF; background-color: #bbb; }
-.avia-datepicker-div .ui-datepicker-buttonpane button{ background-color: #1E8CBE; color: #FFF; border-color: #1E8CBE; }
+.wp-admin .avia-datepicker-div{ background: #fff; border:1px solid #e1e1e1; border-radius:0;}
+.wp-admin .avia-datepicker-div table a{ color:#333; background: #f8f8f8; }
+.wp-admin .avia-datepicker-div table a.ui-state-active{ color:#fff; background: #1E8CBE;}
+.wp-admin .avia-datepicker-div table a.ui-state-highlight{ color:#1E8CBE; background: #f8f8f8; border-color:#1E8CBE;}
+.wp-admin .avia-datepicker-div table a.ui-state-hover{ color:#FFF; background: #1E8CBE; border-color:#1E8CBE;}
 
 
-.avia-datepicker-div.ui-datepicker { width: 300px; padding: 20px; display: none; box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.2);}
-.avia-datepicker-div.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-prev, .avia-datepicker-div.ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 50px; height: 1.8em;  text-align: center; line-height: 1.8em; cursor: pointer;}
-.avia-datepicker-div.ui-datepicker .ui-datepicker-prev { left:2px; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-next { right:2px; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
-.avia-datepicker-div.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
-.avia-datepicker-div.ui-datepicker select.ui-datepicker-month,
-.avia-datepicker-div.ui-datepicker select.ui-datepicker-year { width: 49%;}
-.avia-datepicker-div.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
-.avia-datepicker-div.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
-.avia-datepicker-div.ui-datepicker td { border: 0; padding: 1px; }
-.avia-datepicker-div.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: center; text-decoration: none; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
-.avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: 10px 20px; width:auto; overflow:visible; border: none;
-border-radius: 3px;}
-.avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+.wp-admin .avia-datepicker-div.ui-datepicker { width: 300px; padding: 20px; display: none; box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.2);}
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+    border: none;
+    background: #f8f8f8;
+    border-radius: 0;
+    top: -20px;
+    padding: 13px;
+    left: -20px;
+    width: calc(100% + 14px);
+}
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-prev, .wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-next { position:absolute; top: 0px; width: 50px; height: 100%;  text-align: center; line-height: 1.8em; cursor: pointer; border:none; border-radius:0;}
+
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-header a{background: transparent;}
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-header a:hover{background: #ffffff;}
+
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-prev { left:0px; }
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-next { right:0px; }
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.wp-admin .avia-datepicker-div.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.wp-admin .avia-datepicker-div.ui-datepicker select.ui-datepicker-month,
+.wp-admin .avia-datepicker-div.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.wp-admin .avia-datepicker-div.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.wp-admin .avia-datepicker-div.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.wp-admin .avia-datepicker-div.ui-datepicker td { border: 0; padding: 1px; }
+.wp-admin .avia-datepicker-div.ui-datepicker td span, .wp-admin .ui-datepicker td a { display: block; padding: .5em; text-align: center; text-decoration: none; }
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: 10px 20px; width:auto; overflow:visible; border: none;
+.wp-admin border-radius: 3px;}
+.wp-admin .avia-datepicker-div.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
 
 
 /* RTL support */
-.avia-datepicker-div.ui-datepicker-rtl { direction: rtl; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group { float:right; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
-.avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl { direction: rtl; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.wp-admin .avia-datepicker-div.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
 
 
 

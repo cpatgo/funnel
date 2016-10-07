@@ -10,7 +10,7 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 
 	class AviaBuilder
 	{
-		const VERSION = '0.8';
+		const VERSION = '0.9.1';
 		public static $mode = "";
 		public static $path = array();
 		public static $resources_to_load = array();
@@ -209,9 +209,9 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 		public function admin_scripts_styles()
 		{
 			$ver = AviaBuilder::VERSION;
-		
+			
 			#js
-			wp_enqueue_script('avia_builder_js', $this->paths['assetsURL'].'js/avia-builder.js', array('jquery','jquery-ui-core', 'jquery-ui-sortable', 'jquery-ui-droppable','jquery-ui-datepicker','wp-color-picker','media-editor'), $ver, TRUE );
+			wp_enqueue_script('avia_builder_js', $this->paths['assetsURL'].'js/avia-builder.js', array('jquery','jquery-ui-core', 'jquery-ui-sortable', 'jquery-ui-droppable','jquery-ui-datepicker','wp-color-picker','media-editor','post'), $ver, TRUE );
 			wp_enqueue_script('avia_element_js' , $this->paths['assetsURL'].'js/avia-element-behavior.js' , array('avia_builder_js'), $ver, TRUE );
 			wp_enqueue_script('avia_modal_js' , $this->paths['assetsURL'].'js/avia-modal.js' , array('jquery', 'avia_element_js', 'wp-color-picker'), $ver, TRUE );
 			wp_enqueue_script('avia_history_js' , $this->paths['assetsURL'].'js/avia-history.js' , array('avia_element_js'), $ver, TRUE );
