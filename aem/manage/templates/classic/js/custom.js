@@ -119,7 +119,8 @@ jQuery(document).ready(function(){
             }
 
         }  
-    });
+    };
+    
     form.steps({
         headerTag: "h3",
         bodyTag: "section",
