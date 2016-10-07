@@ -28,7 +28,7 @@ switch ($msg) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLC | Forgot Password</title>
+<title>GLC HUB | Forgot Password</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">  
@@ -199,12 +199,12 @@ div.product-chooser{
 		<div class="text-center">
 			<div class="logo">
 				<a href="/">
-	                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-120x86.png" alt="GLobal Learning Center" />
+	                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-120x86.png" alt="GLC HUB" />
 	            </a>
 			</div>
 		</div>
 		<!-- <div class="text-center" style="margin-top:10px;">Already have an account? <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink">Click here to Login.</a> or <a href="/choose-your-membership/" class="ulink">Register.</a> -->
-		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/choose-your-membership/" class="ulink" style="text-decoration:none;">Register</a>
+		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/limited-time-offer" class="ulink" style="text-decoration:none;">Join Now</a>
 		</div>
 		
 		<fieldset>
