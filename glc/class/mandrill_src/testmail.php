@@ -11,7 +11,7 @@ try {
         'from_name' => 'GLC Hub',
         'to' => array(
             array(
-                'email' => 'sarahgregorio29@gmail.com',
+                'email' => 'cielbleuph@gmail.com',
                 'name' => 'Sarah Gregorio',
                 'type' => 'to'
             )
