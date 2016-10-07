@@ -130,7 +130,7 @@ function adesk_mail_send_swift($type, $from_name, $from_email, $body, $subject, 
 	}
 	require_once(SWIFT_ABS_PATH . '/Swift.php');
 	// set the log to max
-	$log =& Swift_LogContainer::getLog();
+	$log = Swift_LogContainer::getLog();
 	$log->setLogLevel($whatever_level = 4);
 	if ( isset($GLOBALS['_adesk_mailer_swift']) and $stype != -1 ) {
 		// if this function ran before, $swift object is in global scope already
