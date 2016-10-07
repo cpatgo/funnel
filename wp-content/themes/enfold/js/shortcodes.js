@@ -64,10 +64,6 @@
     });
 
 
-	$(window).load(function(){
-	//initialize after images are loaded
-	});
-
 
 
 
@@ -476,6 +472,11 @@
 				script.type = 'text/javascript';	
 				script.src 	= $.AviaMapsAPI.apiFiles.src;
 				
+				if(avia_framework_globals.gmap_api != 'undefined' && avia_framework_globals.gmap_api != "")
+				{
+					script.src 	+= "&key=" + avia_framework_globals.gmap_api;
+				}
+				
       			document.body.appendChild(script);
 			}
 			else if((typeof window.google != 'undefined' && typeof window.google.maps != 'undefined') || $.AviaMapsAPI.apiFiles.loading == false)
@@ -568,7 +569,7 @@
 				
 				if(this.$data.saturation == "fill")
 				{
-					    
+					   
 					style_color = this.$data.hue || "#242424";
 					
 					var c = style_color.substring(1);      // strip #
@@ -579,17 +580,20 @@
 					
 					var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
 					var lightness = 1;
+					var street_light = 2;
 					
 					if (luma > 60) {
 					    lightness = -1;
+					    street_light = 3;
 					}
-					if (luma > 230) {
+					if (luma > 220) {
 					    lightness = -2;
+					    street_light = -2;
 					}
 					
 				style = [
 {"featureType":"all","elementType":"all","stylers":[{"color":style_color},{"lightness":0}]},
-{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":style_color},{"lightness":(25 * lightness)}]},
+{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":style_color},{"lightness":(25 * street_light)}]},
 {"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":style_color},{"lightness":3}]},
 {"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
 {"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":style_color},{"lightness":30}]},
@@ -1810,6 +1814,9 @@ $.fn.avia_masonry = function(options)
     		
     		if(this.$slider.data('slide_height')) this.options.height = this.$slider.data('slide_height');
     		
+    		//if background attachment is set to fixed or scroll disable the parallax effect
+    		this.options.parallax_enabled = this.$slider.data('image_attachment') == "" ? true : false;
+    		
     		//elements that get subtracted from the image height
     		this.$subtract = $(this.options.subtract);
     		
@@ -1823,8 +1830,10 @@ $.fn.avia_masonry = function(options)
     		//parallax scroll if element if leaving viewport
 			setTimeout(function()
 			{
-				if(!_self.isMobile) //disable parallax scrolling on mobile
-    			_self.$win.on( 'scroll', $.proxy( _self._on_scroll, _self) );
+				if(!_self.isMobile && _self.options.parallax_enabled) //disable parallax scrolling on mobile
+    			{
+	    			_self.$win.on( 'scroll', $.proxy( _self._on_scroll, _self) );
+    			}
     			
     		},100);
 			/**/
@@ -3446,7 +3455,7 @@ $.fn.aviaccordion = function( options )
 	    	var _self 		= this, 
 	    		modifier 	= 30 * _self.options.animation, 
 	    		fade_out 	= {opacity:0}, 
-	    		fade_start  = {display:'inline', opacity:0},
+	    		fade_start  = {display:'inline-block', opacity:0},
 	    		fade_in		= {opacity:1};
 	    		
     		this.$next = _self.$slides.eq(this.open);

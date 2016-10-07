@@ -1,13 +1,15 @@
 <?php
 
 $google_fonts = apply_filters('avf_google_heading_font', array(	__('Default', 'avia_framework') =>'',
-	
+						
+						'Advent Pro'=>'Advent Pro:100,400,600',
 						'Alice'=>'Alice',
 						'Allerta'=>'Allerta',
 						'Arvo'=>'Arvo',
 						'Arimo'=>'Arimo:400,700',
 						'Antic'=>'Antic',
-	
+						
+						
 						'Bangers'=>'Bangers',
 						'Bitter'=>'Bitter',
 	
@@ -36,6 +38,7 @@ $google_fonts = apply_filters('avf_google_heading_font', array(	__('Default', 'a
 	
 						'Great Vibes'=>'Great Vibes',
 						
+						'Heebo' => 'Heebo:100,400,700',
 						
 						'Inconsolata'=>'Inconsolata',
 	
@@ -43,6 +46,7 @@ $google_fonts = apply_filters('avf_google_heading_font', array(	__('Default', 'a
 						'Josefin Slab'=>'Josefin Slab',
 	
 						'Kameron'=>'Kameron',
+						'Karla'=>'Karla:400,700',
 						'Kreon'=>'Kreon',
 	
 						'Lato'=>'Lato:300,400,700',
@@ -83,7 +87,7 @@ $google_fonts = apply_filters('avf_google_heading_font', array(	__('Default', 'a
 	
 						'Raleway'=>'Raleway',
 						'Righteous' => 'Righteous',
-						'Roboto' => 'Roboto',
+						'Roboto' => 'Roboto:100,400,700',
 						
 						'Sacramento' => 'Sacramento',
 						'Salsa'=>'Salsa',
