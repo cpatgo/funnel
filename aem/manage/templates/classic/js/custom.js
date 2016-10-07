@@ -784,5 +784,9 @@ jQuery(document).ready(function(){
     //   collapsible: true,
     //   heightStyle: "content"
     // });
+    // 
+    
+    jQuery("#getstarted_tabs").tabs();
+
 
 });
