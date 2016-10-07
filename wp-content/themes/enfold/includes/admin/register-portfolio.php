@@ -35,7 +35,8 @@ function portfolio_register()
 		'query_var' => true,
 		'show_in_nav_menus'=> true,
 		'taxonomies' => array('post_tag'),
-		'supports' => array('title','thumbnail','excerpt','editor','comments')
+		'supports' => array('title','thumbnail','excerpt','editor','comments'),
+		'menu_icon' => 'dashicons-images-alt2'
 	);
 	
 	

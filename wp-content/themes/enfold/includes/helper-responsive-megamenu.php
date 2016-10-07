@@ -64,6 +64,12 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 		 */
 		var $top_menu = true;
 		
+		
+		/**
+		 * @var stores if we got a text menu or a single burger icon
+		 */
+		var $icon_menu = true;
+		
 		/**
 		 * @var stores if we got a top or a sidebar main menu.
 		 */
@@ -98,12 +104,20 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 			);
 			
 			$this->top_menu = avia_get_option('header_position','header_top') == 'header_top' ? true : false;
+			$this->icon_menu = avia_is_burger_menu();
+			
 			if(avia_get_option('frontpage') && avia_get_option('blogpage'))
 			{
 				$this->blog_id = avia_get_option('blogpage');
 			}
 			
 			if(isset($options['megamenu']) && $options['megamenu'] == "disabled") $this->mega_allowed = false;
+			
+			if($this->icon_menu)
+			{
+				$this->mega_active = false;
+				$this->mega_allowed = false;
+			}
 		}
 
 
@@ -251,7 +265,7 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 				$item_output .= $args->link_before .'<span class="avia-menu-text">'. do_shortcode(apply_filters('the_title', $item->title, $item->ID)) ."</span>". $args->link_after;
 				if($depth === 0) 
 				{
-					if(!$this->top_menu && !empty($item->description))
+					if((!$this->top_menu || $this->icon_menu) && !empty($item->description))
 					{
 						$item_output .= '<span class="avia-menu-subtext">'. do_shortcode($item->description) ."</span>";
 					}

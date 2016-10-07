@@ -113,13 +113,13 @@ if(!function_exists('avia_backend_auto_updater'))
 		
 		public static function add_updates_tab($avia_pages)
 		{
-			$title = "Theme Update";
+			$title = __("Theme Update",'avia_framework');
 			if(self::check_for_theme_update()) 
 			{
 				$title .= "<span class='avia-update-count'>1</span>"; 
 				add_filter('avia_filter_backend_menu_title', array('avia_auto_updates','sidebar_menu_title'));
 			}
-			$avia_pages[] = array( 'slug' => 'update', 'parent'=>'avia', 'icon'=>"update.png", 'title' =>  $title );
+			$avia_pages[] = apply_filters('avf_update_theme_tab', array( 'slug' => 'update', 'parent'=>'avia', 'icon'=>"update.png", 'title' =>  $title ));
 			
 			
 			
