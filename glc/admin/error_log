@@ -290,3 +290,5 @@
 [09-Sep-2016 12:41:15 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
 [09-Sep-2016 12:41:15 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/admin/index.php on line 2
 [09-Sep-2016 12:41:15 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
+[05-Oct-2016 07:43:26 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 29
+[05-Oct-2016 07:43:26 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 30
