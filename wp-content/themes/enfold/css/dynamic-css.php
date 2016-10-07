@@ -672,6 +672,10 @@ background-color:$bg2;
 			background-color:$bg;
 			}
 			
+			$key .av-hamburger-inner, $key .av-hamburger-inner::before, $key .av-hamburger-inner::after{
+				background-color:$meta;
+			}
+			
 			
 			";
 			
@@ -682,7 +686,9 @@ background-color:$bg2;
 			#top #header{$key}.av_header_transparency .av-main-nav > li > a .avia-menu-text, #top #header{$key}.av_header_transparency .av-main-nav > li > a .avia-menu-subtext{
 				color: ".$avia_config['backend_colors']['menu_transparent']."
 			}
-			#top {$key}.av_header_transparency .avia-menu-fx {background:".$avia_config['backend_colors']['menu_transparent'].";}
+			
+			#top {$key}.av_header_transparency .avia-menu-fx, 
+			.av_header_transparency .av-hamburger-inner, .av_header_transparency .av-hamburger-inner::before, .av_header_transparency .av-hamburger-inner::after{background:".$avia_config['backend_colors']['menu_transparent'].";}
 			";
 		}
 
@@ -825,12 +831,12 @@ $avia_config['style'] = array(
 
 		array(
 		'key'	=>	'direct_input',
-		'value'	=> ".html_header_transparency #top .avia-builder-el-0 .container, .html_header_transparency #top .avia-builder-el-0 .slideshow_inner_caption{padding-top:".avia_get_header_scroll_offset()."px;}"
+		'value'	=> ".html_header_transparency #top .avia-builder-el-0 .container, .html_header_transparency #top .avia-builder-el-0 .slideshow_caption{padding-top:".avia_get_header_scroll_offset()."px;}"
 		),
 
 		//google webfonts
 		array(
-		'elements'	=> 'h1, h2, h3, h4, h5, h6, #top .title_container .main-title, tr.pricing-row td, #top .portfolio-title, .callout .content-area, .avia-big-box .avia-innerbox, .av-special-font, .av-current-sort-title, .html_elegant-blog #top .minor-meta',
+		'elements'	=> 'h1, h2, h3, h4, h5, h6, #top .title_container .main-title, tr.pricing-row td, #top .portfolio-title, .callout .content-area, .avia-big-box .avia-innerbox, .av-special-font, .av-current-sort-title, .html_elegant-blog #top .minor-meta, #av-burger-menu-ul li',
 		'key'	=>	'google_webfont',
 		'value'		=> avia_get_option('google_webfont')
 		),

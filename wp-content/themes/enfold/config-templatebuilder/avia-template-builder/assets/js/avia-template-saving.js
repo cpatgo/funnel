@@ -38,7 +38,7 @@
             if(this.container.is('.avia-hidden-dropdown'))
             {
                 this.container.removeClass('avia-hidden-dropdown');
-                this.toggle.removeClass('button-primary');
+                this.toggle.removeClass('av-template-added-highlight');
             }
             else
             {
@@ -339,7 +339,7 @@
 				                //mark the template button if a single element was saved
 				                if(typeof event != "undefined")
 				                {
-					                obj.toggle.addClass('button-primary');
+					                obj.toggle.addClass('av-template-added-highlight');
 				                }
 							}
 						}

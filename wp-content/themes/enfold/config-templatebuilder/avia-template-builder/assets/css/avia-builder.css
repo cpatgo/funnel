@@ -351,6 +351,12 @@ z-index: 30;
     transition-property: border,color;
 }
 
+#avia_builder a.av-template-added-highlight.button{
+	color: #00A0D2;
+	background: #fff url(../../images/icon-template.png) 4px -45px no-repeat;
+}
+
+
 #avia_builder a.open-template-button.button:hover, #avia_builder a.open-template-button.button-primary{
 	color:#00A0D2;
 	background: #fff url(../../images/icon-template.png) 4px -45px no-repeat;
@@ -936,7 +942,7 @@ background: transparent url(../../images/icon-clone.png) top center no-repeat;
 overflow: hidden;
 text-indent: 200%;
 opacity: 0;
-
+border:none;
 }
 
 
@@ -1103,7 +1109,7 @@ margin-top:-12px;
 z-index: 10;
 }
 
-.avia-add {
+.avia-add, .avia-clone{
 cursor: pointer;
 position: relative;
 height: 24px;
@@ -1121,8 +1127,22 @@ z-index: 10;
 transition-duration: 0s;
 }
 
+.avia-add + .avia-clone{
+	margin-left:-1px;
+}
+
 .avia-add:hover, .avia-add:active{
 background: #fff url(../../images/icon-add.png) bottom left no-repeat;
+outline: none;
+}
+
+.avia-clone{
+background: #fff url(../../images/icon-clone.png) top left no-repeat;
+
+}
+
+.avia-clone:hover, .avia-clone:active{
+background: #fff url(../../images/icon-clone.png) bottom left no-repeat;
 outline: none;
 }
 
@@ -1142,7 +1162,7 @@ background-position: 0 0, 8px 8px;
 }
 
 
-.avia-add.avia-custom-label {
+.avia-add.avia-custom-label, .avia-clone.avia-custom-label {
 float: left;
 width: auto;
 text-indent: 0;

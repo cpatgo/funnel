@@ -298,8 +298,8 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
     padding: 10px 0 0 0;
     padding-top: 12px;
     width: 100%;
-    /*padding-left: 54px;
-    padding: 21px 0 0 0;*/
+     /* padding-left: 50px;
+  	padding: 21px 0 0 0;*/
     display: block;
     width: auto;
     height: auto;
@@ -525,7 +525,7 @@ span.trail-end {
 }
 
 .current-menu-item a .avia-menu-text {
-    color: #333 !important;
+    color: #333333 !important; 
 }
 
 .header_color .av_dropcap2, #top #wrap_all .header_color .av-menu-button-colored > a .avia-menu-text { color: #fff !important; }

@@ -560,11 +560,11 @@ if( ! class_exists( 'avia_htmlhelper' ) )
 					
 					if(!is_numeric($element['std']) && $element['std'] != '')
 					{
-						$prevImg = '<a href="#" class="avia_remove_image">remove</a><img src="'.AVIA_IMG_URL.'icons/video.png" alt="" />';
+						$prevImg = '<a href="#" class="avia_remove_image">×</a><img src="'.AVIA_IMG_URL.'icons/video.png" alt="" />';
 					}
 					else if($element['std'] != '')
 					{
-						$prevImg = '<a href="#" class="avia_remove_image">remove</a>'.wp_get_attachment_image($element['std'], array(100,100));
+						$prevImg = '<a href="#" class="avia_remove_image">×</a>'.wp_get_attachment_image($element['std'], array(100,100));
 					}
 					
 				}
@@ -572,11 +572,11 @@ if( ! class_exists( 'avia_htmlhelper' ) )
 				{
 					if(!preg_match('!\.jpg$|\.jpeg$|\.ico$|\.png$|\.gif$!', $image_url) && $image_url != "" )
 					{
-						$prevImg = '<a href="#" class="avia_remove_image">remove</a><img src="'.AVIA_IMG_URL.'icons/video.png" alt="" />';
+						$prevImg = '<a href="#" class="avia_remove_image">×</a><img src="'.AVIA_IMG_URL.'icons/video.png" alt="" />';
 					}
 					else if($image_url != '')
 					{
-						$prevImg = '<a href="#" class="avia_remove_image">remove</a><img src="'.$image_url.'" alt="" />'; 
+						$prevImg = '<a href="#" class="avia_remove_image">×</a><img src="'.$image_url.'" alt="" />'; 
 					}
 				}
 			
@@ -1731,7 +1731,7 @@ if( ! class_exists( 'avia_htmlhelper' ) )
 		
 			
 			
-		$output .= 		'<a class="avia_remove_wizard_set" href="#">Remove icon</a>';
+		$output .= 		'<a class="avia_remove_wizard_set" href="#">×</a>';
 		$output .= 		"</div>";
 		$output .= "</div>";
 		

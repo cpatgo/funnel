@@ -1,5 +1,4 @@
 <?php
-
 if (!@ini_get("zlib.output_compression")) @ob_start("ob_gzhandler");
 
 // require main include file
@@ -988,5 +987,6 @@ if ( !adesk_admin_isadmin() ) {
  
 // require ajax include
 require_once awebdesk_includes("awebdeskapi.php");
+
 
 ?>
