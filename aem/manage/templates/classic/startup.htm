@@ -220,22 +220,23 @@
 				
 				<div class="row">
 					<div class="col-md-12">
-						<p>Let's get show you how the system works to help you get traffic, leads, sales and branding...</p>
+						<p>Let's show you how the system works to help you get traffic, leads, sales and branding...</p>
 					</div>
 				</div>
 			 	<br /><br />
 			 	<div class="row">
 					<div class="col-md-12">
-						<ul class="nav nav-tabs">
-							<li role="presentation" class="active"><a data-toggle="tab" href="#step1">Step 1</a></li>
-							<li role="presentation"><a data-toggle="tab" href="#step2">Step 2</a></li>
-							<li role="presentation"><a data-toggle="tab" href="#step3">Step 3</a></li>
-							<li role="presentation"><a data-toggle="tab" href="#step4">Step 4</a></li>
-							<li role="presentation"><a data-toggle="tab" href="#step5">Step 5</a></li>
-							<li role="presentation"><a data-toggle="tab" href="#step6">Step 6</a></li>
-						</ul>
+						<div id="getstarted_tabs">
+							<ul class="nav nav-tabs">
+								<li role="presentation" class="active"><a data-toggle="tab" href="#step1">Step 1</a></li>
+								<li role="presentation"><a data-toggle="tab" href="#step2">Step 2</a></li>
+								<li role="presentation"><a data-toggle="tab" href="#step3">Step 3</a></li>
+								<li role="presentation"><a data-toggle="tab" href="#step4">Step 4</a></li>
+								<li role="presentation"><a data-toggle="tab" href="#step5">Step 5</a></li>
+								<li role="presentation"><a data-toggle="tab" href="#step6">Step 6</a></li>
+							</ul>
 
-						<div class="tab-content">
+							
 							<div id="step1" class="tab-pane fade in active">
 								<br>
 								<h2>Training Video Coming Soon</h2>
@@ -264,8 +265,8 @@
 								<h2>Training Video Coming Soon</h2>
 								
 							</div>
+							
 						</div>
-					
 					</div>
 				</div>
 
@@ -387,4 +388,8 @@
 // 	}, 7 * 1000);
 // 	{/literal}
 // {/if}
+// 
+$(function(){
+$("#getstarted_tabs").tabs();
+});
 </script>
