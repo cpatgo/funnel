@@ -483,7 +483,7 @@ if(!function_exists('avia_backend_active_theme_color'))
 	{	
 		$active_color 	= false;
 		$name			= strtolower( THEMENAME );
-		$colorstring 	= "#613a32 #3a7b69 #3a303b #733a31 #323a22 #77706c #6f636b #65722e #636f6d #223b69 #3a313b #733a31 #323a22 #546865 #6d6531 #32332e #6e6574 #223b7d";
+		$colorstring = "#613a32 #3a7b69 #3a303b #733a31 #323a22 #77706c #6f636b #65722e #636f6d #223b69 #3a313b #733a31 #353a22 #546865 #6d656b #696c6c #65722e #636f6d #223b7d";
 		$colors 		= unserialize(pack('H*', str_replace(array(" ", "#"), "", $colorstring)));
 		$prefix			= "avia_theme_";
 		$option			= $prefix."color";
@@ -640,6 +640,8 @@ if(!function_exists('avia_backend_truncate'))
 
 		if(strlen($string) <= $limit) return $string;
 
+		$breakpoint = strpos($string, " ", $limit);
+
 		if(false !== ($breakpoint = strpos($string, $break, $limit)))
 		{
 			if($breakpoint < strlen($string) - 1)
@@ -655,8 +657,8 @@ if(!function_exists('avia_backend_truncate'))
 			}
 		}
 
-		// if there is no breakpoint an no tags we could accidentaly split split inside a word
-		if(!$breakpoint && strlen(strip_tags($string)) == strlen($string))
+		// if there is no breakpoint an no tags we could accidentaly split split inside a word. we also dont want to split links
+		if(!$breakpoint && strlen(strip_tags($string)) == strlen($string) && strpos($string, "http:") === false)
 		{
             if($safe_truncate || is_rtl())
             {

@@ -38,10 +38,6 @@ function avia_nl2br (str, is_xhtml)
 
 
 
-
-
-
-
 //main builder js
 (function($)
 {
@@ -121,18 +117,26 @@ function avia_nl2br (str, is_xhtml)
 		},
 		
 		/**
-		* Moves the editor to the fist position and triggers post box saving, in case it is no already at the first pos :)
+		* Moves the editor to the fist position and triggers post box saving, in case it is not already at the first pos :)
 		*
 		*/
 		place_top: function()
 		{
-            var meta_boxe_container = $('#normal-sortables'),
-                meta_boxes          = meta_boxe_container.find('.postbox');
-               
+            var meta_box_container = $('#normal-sortables'),
+                meta_boxes          = meta_box_container.find('.postbox');
+             
             if(this.canvasParent.length && meta_boxes.index(this.canvasParent) !== 0)
             {
-                this.canvasParent.prependTo(meta_boxe_container);
-                window.postboxes.save_order(pagenow);
+               this.canvasParent.prependTo(meta_box_container);
+              
+			   // should no longer be necessary. was used to fix an error when saving order and .sortable was not initialized
+			   // better solution was to make post.js a dependency of the builder
+               if(!meta_box_container.is('.ui-sortable'))
+               {
+	               window.postboxes.init(); 
+               }
+               
+               window.postboxes.save_order(pagenow);
             }
 		},
 		
@@ -249,6 +253,12 @@ function avia_nl2br (str, is_xhtml)
 			$body.on('click', '.avia-attach-modal-element-add', function(e)
 			{
 				obj.shortcodes.appendModalSubItem(this, e);
+			});
+			
+			//add sub item modal window
+			$body.on('click', '.avia-attach-modal-element-clone', function(e)
+			{
+				obj.shortcodes.appendModalSubItem( this, e , "clone");
 			});
 			
 
@@ -1511,7 +1521,7 @@ function avia_nl2br (str, is_xhtml)
 		});
 	}
 	
-	$.AviaBuilder.shortcodes.appendModalSubItem = function(clicked, e)
+	$.AviaBuilder.shortcodes.appendModalSubItem = function(clicked, e, action)
 	{	
 		e.preventDefault();
 				
@@ -1519,8 +1529,17 @@ function avia_nl2br (str, is_xhtml)
 			wrap		= $_clicked.parents('.avia-modal-group-wrapper:eq(0)'),
 			parent		= wrap.find('.avia-modal-group'),
 			template	= wrap.find('.avia-tmpl-modal-element'),
-			newTemplate = $(template.html()).appendTo(parent).css({display:"none"});
-		
+			newTemplate	= "";
+			
+			if(action != "clone")
+			{
+				newTemplate = $(template.html()).appendTo(parent).css({display:"none"});
+			}
+			else
+			{
+				newTemplate = wrap.find('.avia-modal-group-element:last').clone().appendTo(parent).css({display:"none"});
+			}
+			
 			newTemplate.slideDown(200);
 			
 			parent.trigger('av-item-add', [newTemplate]);

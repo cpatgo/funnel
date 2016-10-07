@@ -94,7 +94,7 @@ if (!class_exists('avia_fb_likebox'))
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/'. $langcode .'/sdk.js#xfbml=1&version=v2.4";
+  js.src = "//connect.facebook.net/'. $langcode .'/sdk.js#xfbml=1&version=v2.7";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, "script", "facebook-jssdk"));</script>';
 
@@ -1301,7 +1301,15 @@ if (!class_exists('avia_google_maps'))
         function helper_print_google_maps_scripts()
         {
             $prefix  = is_ssl() ? "https" : "http";
-            wp_register_script( 'avia-google-maps-api', $prefix.'://maps.google.com/maps/api/js', array('jquery'), '3', true);
+            $api_key = avia_get_option('gmap_api');
+            $api_url = $prefix.'://maps.google.com/maps/api/js?v=3.24';
+            
+            if($api_key != ""){
+	           $api_url .= "&key=" .$api_key;
+            }
+            
+            wp_register_script( 'avia-google-maps-api', $api_url, array('jquery'), NULL, true);
+            
             
             $load_google_map_api = apply_filters('avf_load_google_map_api', true, 'avia_google_map_widget');
             
@@ -1364,9 +1372,18 @@ if(!function_exists('avia_printmap'))
 			$avia_config['g_maps_widget_active'] = 0;
 		}
 
+
 		if(apply_filters('avia_google_maps_widget_load_api', true, $avia_config['g_maps_widget_active']))
         {
-            wp_register_script( 'avia-google-maps-api', $prefix.'://maps.googleapis.com/maps/api/js?v=3.24', array('jquery'), '1', false);
+	        $prefix  = is_ssl() ? "https" : "http";
+            $api_key = avia_get_option('gmap_api');
+            $api_url = $prefix.'://maps.google.com/maps/api/js?v=3.24';
+            
+            if($api_key != ""){
+	           $api_url .= "&key=" .$api_key;
+            }
+	  
+            wp_register_script( 'avia-google-maps-api', $api_url, array('jquery'), NULL, true);
             wp_enqueue_script( 'avia-google-maps-api' );
         }
 
@@ -1626,8 +1643,9 @@ class avia_instagram_widget extends WP_Widget {
 
 		if ( false === ( $instagram = get_transient( 'av_insta1-'.sanitize_title_with_dashes( $username ) ) ) ) {
 
-			$remote = wp_remote_get( 'http://instagram.com/'.trim( $username ) );
-
+			//$remote = wp_remote_get( 'http://instagram.com/'.trim( $username ) );
+			$remote = wp_remote_get( 'https://www.instagram.com/'.trim( $username ), array( 'sslverify' => false, 'timeout' => 60 ) );
+			
 			if ( is_wp_error( $remote ) )
 				return new WP_Error( 'site_down', __( 'Unable to communicate with Instagram.', 'avia_framework' ) );
 
