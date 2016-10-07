@@ -98,9 +98,20 @@ jQuery(document).ready(function(){
                 required: true
             },
             "landing-page-url-link": {
-                required: true
+                required: true,
+                url: true
             }
-        }   
+        },
+        message: {
+            "landing-page-name":{
+                required: "this field is required."
+            },
+            "landing-page-url-link":{
+                required: "this field required.",
+                url: "please enter valid url starting with http://"
+            }
+
+        }  
     });
     form.steps({
         headerTag: "h3",
@@ -127,6 +138,9 @@ jQuery(document).ready(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex)
         {
+
+
+
             if (newIndex < currentIndex) {
                 return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
             }
@@ -243,7 +257,12 @@ jQuery(document).ready(function(){
         {
             window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
         }
-    });
+    })  ;
+
+
+
+
+
 
     jQuery('.btn-choose').click(function() {
         jQuery('.actions > ul > li:nth-child(2) > a').click();
