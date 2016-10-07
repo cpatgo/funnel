@@ -61,7 +61,7 @@ function smarty_function_adesk_field_html($params, &$smarty) {
                 $field['val'] = $field['onfocus'];
             $field['val'] = __check_blank($field['val']);
             $field['val'] = smarty_modifier_escape($field['val']);
-            $rval = "<input class='form-control' type='text' name='field[$field[id],$field[dataid]]' placeholder='field[$field[id],$field[dataid]]' value='$field[val]'$bubble1 />$bubble2";
+            $rval = "<input class='form-control' type='text' name='field[$field[id],$field[dataid]]' placeholder='$field[title]' value='$field[val]'$bubble1 />$bubble2";
             break;
         case 2:     // Text box
             if ($field['onfocus'] != "")
