@@ -4,27 +4,28 @@ global $avia_config;
 //avia pages holds the data necessary for backend page creation
 $avia_pages = array(
 
-	array( 'slug' => 'avia', 		'parent'=>'avia', 'icon'=>"hammer_screwdriver.png" , 	'title' =>  __('Theme Options', 'avia_framework')),
-	array( 'slug' => 'layout', 		'parent'=>'avia', 'icon'=>"application_side_expand.png",'title' =>  __('General Layout', 'avia_framework')),
-	array( 'slug' => 'styling', 	'parent'=>'avia', 'icon'=>"palette.png", 				'title' =>  __('General Styling', 'avia_framework')),
-	array( 'slug' => 'customizer', 	'parent'=>'avia', 'icon'=>"wand.png", 					'title' =>  __('Advanced Styling', 'avia_framework')),
-	array( 'slug' => 'header', 		'parent'=>'avia', 'icon'=>"layout_select.png", 			'title' =>  __('Header', 'avia_framework')),
-	array( 'slug' => 'sidebars', 	'parent'=>'avia', 'icon'=>"layout_select_sidebar.png", 	'title' =>  __('Sidebar Settings', 'avia_framework')),
-	array( 'slug' => 'footer', 		'parent'=>'avia', 'icon'=>"layout_select_footer.png", 	'title' =>  __('Footer', 'avia_framework')),
-	array( 'slug' => 'blog', 		'parent'=>'avia', 'icon'=>"blog.png", 					'title' =>  __('Blog Layout', 'avia_framework')),
-	array( 'slug' => 'social', 		'parent'=>'avia', 'icon'=>"user.png", 					'title' =>  __('Social Profiles', 'avia_framework')),
-	array( 'slug' => 'newsletter', 	'parent'=>'avia', 'icon'=>"blog.png", 					'title' =>  __('Newsletter', 'avia_framework')),
+	array( 'slug' => 'avia', 		'parent'=>'avia', 'icon'=>"new/spanner-screwdriver-7@3x.png" , 	'title' =>  __('Theme Options', 'avia_framework')),
+	array( 'slug' => 'layout', 		'parent'=>'avia', 'icon'=>"new/window-within-7@3x.png",			'title' =>  __('General Layout', 'avia_framework')),
+	array( 'slug' => 'styling', 	'parent'=>'avia', 'icon'=>"new/color-palette-7@3x.png", 		'title' =>  __('General Styling', 'avia_framework')),
+	array( 'slug' => 'customizer', 	'parent'=>'avia', 'icon'=>"new/magic-wand-7@3x.png", 			'title' =>  __('Advanced Styling', 'avia_framework')),
+	array( 'slug' => 'header', 		'parent'=>'avia', 'icon'=>"new/layout-arrange-02-7@3x.png", 	'title' =>  __('Header', 'avia_framework')),
+	array( 'slug' => 'sidebars', 	'parent'=>'avia', 'icon'=>"new/layout-arrange-13-7@3x.png", 	'title' =>  __('Sidebar Settings', 'avia_framework')),
+	array( 'slug' => 'footer', 		'parent'=>'avia', 'icon'=>"new/layout-reverse@3x.png", 			'title' =>  __('Footer', 'avia_framework')),
+	array( 'slug' => 'blog', 		'parent'=>'avia', 'icon'=>"new/note-write-7@3x.png", 			'title' =>  __('Blog Layout', 'avia_framework')),
+	array( 'slug' => 'social', 		'parent'=>'avia', 'icon'=>"new/circle-user-7@3x.png", 			'title' =>  __('Social Profiles', 'avia_framework')),
+	array( 'slug' => 'newsletter', 	'parent'=>'avia', 'icon'=>"new/newspaper-7@3x.png", 			'title' =>  __('Newsletter', 'avia_framework')),
+	array( 'slug' => 'google', 		'parent'=>'avia', 'icon'=>"new/paper-map-7@3x.png", 			'title' =>  __('Google Services', 'avia_framework')),
 );
 
 if(class_exists( 'woocommerce' ))
 {
-	$avia_pages[] = array( 'slug' => 'shop', 'parent'=>'avia', 'icon'=>"cart.png", 'title' =>  __('Shop Options','avia_framework') );
+	$avia_pages[] = array( 'slug' => 'shop', 'parent'=>'avia', 'icon'=>"new/shopping-cart-7@3x.png", 'title' =>  __('Shop Options','avia_framework') );
 }
 
 
 if(!current_theme_supports('avia_disable_import_export')){
-	$avia_pages[] = array( 'slug' => 'demo', 		'parent'=>'avia', 'icon'=>"doc_text_image.png", 'title' => __('Demo Import', 'avia_framework'));
-	$avia_pages[] = array( 'slug' => 'upload', 		'parent'=>'avia', 'icon'=>"import_export.png", 'title' => __('Import/Export', 'avia_framework'));
+	$avia_pages[] = array( 'slug' => 'demo', 		'parent'=>'avia', 'icon'=>"new/window-up-7@3x.png", 'title' => __('Demo Import', 'avia_framework'));
+	$avia_pages[] = array( 'slug' => 'upload', 		'parent'=>'avia', 'icon'=>"new/connect-arrow-up-down-7@3x.png", 'title' => __('Import/Export', 'avia_framework'));
 }
 
 
@@ -40,6 +41,44 @@ include('register-backend-google-fonts.php');
 //required for the advanced styling wizard
 include('register-backend-advanced-styles.php');
 
+
+/*google*/
+
+
+
+$avia_elements[] =	array(
+					"slug"	=> "google",
+					"name" 	=> __("Google Analytics Tracking Code", 'avia_framework'),
+					"desc" 	=> __("Enter your Google analytics tracking Code here. It will automatically be added so google can track your visitors behavior.", 'avia_framework'),
+					"id" 	=> "analytics",
+					"type" 	=> "textarea"
+					);
+
+$avia_elements[] = array("slug"	=> "google", "type" => "visual_group_start", "id" => "avia_google_maps_group", "nodescription" => true);	
+
+
+$google_link = "https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true";
+$tutorial_link = "http://www.kriesi.at/documentation/enfold/how-to-register-a-google-maps-api-key/";
+
+
+$avia_elements[] = array(	"name" => 	__("Google Maps", 'avia_framework'),
+								"desc" => __("Google recently changed the way their map service works. New pages which want to use Google Maps need to register an API key for their website. Older pages should  work fine without this API key. If the google map elements of this theme do not work properly you need to register a new API key.", 'avia_framework')."<br><a href='{$google_link}' target='_blank'>".__("Register an API Key", 'avia_framework')."</a> | <a target='_blank' href='{$tutorial_link}'>".__("Tutorial: How to create an API key", 'avia_framework')."</a>",
+								"std" => "",
+								"slug"	=> "google",
+								"type" => "heading",
+								"nodescription"=>true);
+
+
+$avia_elements[] =	array(
+					"slug"	=> "google",
+					"name" 	=> __("Google Maps API Key", 'avia_framework'),
+					"desc" 	=> __("Enter a valid Google Maps API Key to use all map related theme functions.", 'avia_framework'),
+					"id" 	=> "gmap_api",
+					"type" 	=> "text",
+					"std" 	=> ""
+					);
+
+$avia_elements[] = array("slug"	=> "google", "type" => "visual_group_end", "id" => "avia_google_maps_group_end", "nodescription" => true);
 
 /*newsletter*/
 
@@ -212,10 +251,9 @@ $avia_elements[] =	array(
 							-webkit-box-sizing: border-box;
 							box-sizing: border-box;
 						}
-						#avia_default_layout_target .avia_target_inside{min-height: 300px;}
 						#boxed .avprev-layout-container{ padding:0 23px; border:1px solid #e1e1e1; background-color: #555;}
 						#av-framed-box .avprev-layout-container{ padding:23px; border:1px solid #e1e1e1; background-color: #555;}
-						#boxed .avprev-layout-container-inner{border:none; overflow: hidden;}
+						.avprev-layout-container-inner{border:none; overflow: hidden;}
 						.avprev-layout-container-inner{border: 1px solid #e1e1e1; background:#fff;}
 						.avprev-layout-content-container{overflow:hidden; margin:0 auto; position:relative;}
 						.avprev-layout-container-sizer{margin:0 auto; position:relative; z-index:5;}
@@ -230,8 +268,8 @@ $avia_elements[] =	array(
 						.avprev-layout-menu{float:right; color:#999;}
 						
 						
-						#header_right .avprev-layout-header{border-left:1px solid #e1e1e1; width:130px; float:right; border-bottom:none; min-height: 220px;}
-						#header_left .avprev-layout-header{border-right:1px solid #e1e1e1; width:130px; float:left; border-bottom:none; min-height: 220px;}
+						#header_right .avprev-layout-header{border-left:1px solid #e1e1e1; width:130px; float:right; border-bottom:none;}
+						#header_left .avprev-layout-header{border-right:1px solid #e1e1e1; width:130px; float:left; border-bottom:none;}
 						
 						#header_right .avprev-layout-content-container{border-right:1px solid #e1e1e1; right:-1px;}
 						#header_left  .avprev-layout-content-container{border-left:1px solid #e1e1e1; left:-1px;}
@@ -250,9 +288,12 @@ $avia_elements[] =	array(
 						#header_left .avprev-layout-container-widget.av-active, #header_right .avprev-layout-container-widget.av-active{display:block;}
 						#header_left .avprev-layout-container-social.av-active, #header_right .avprev-layout-container-widget.av-social{display:block;}
 						
+						#av-framed-box .avprev-layout-container-inner{border:none;}
+						#boxed .avprev-layout-container-inner{border:none;}
+						
 					</style>
 
-					<small class=''>{$frontend_label}</small>
+					<small class='live_bg_small'>{$frontend_label}</small>
 					<div class='avprev-layout-container'>
 						<div class='avprev-layout-container-inner'>
 							<div class='avprev-layout-header'>
@@ -575,7 +616,8 @@ $avia_elements[] =	array(
 $avia_elements[] =	array(
 	"slug"		=> "upload",
 	"name" 		=> __("Iconfont Manager", 'avia_framework'),
-	"desc" 		=> __("You can upload additional Iconfont Packages generated with", 'avia_framework') . " <a href='http://fontello.com/' target='_blank'>Fontello</a>. ".
+	"desc" 		=> __("You can upload additional Iconfont Packages generated with", 'avia_framework') . " <a href='http://fontello.com/' target='_blank'>Fontello</a>  ".
+	__("or use monocolored icon sets from", 'avia_framework') . " <a href='http://www.flaticon.com/' target='_blank'>Flaticon</a>. ".
 	__("Those icons can then be used in your Layout Builder.", 'avia_framework') ."<br/><br/>".
 	__("The 'Default Font' can't be deleted.", 'avia_framework') ."<br/><br/>".
 	__("Make sure to delete any fonts that you are not using, to keep the loading time for your visitors low", 'avia_framework'),
@@ -715,6 +757,7 @@ $avia_elements[] = array(
 $avia_elements[] = array(	"slug"	=> "avia", "type" => "visual_group_end", "id" => "avia_lock_alb_close", "nodescription" => true);		
 
 
+/*
 $avia_elements[] =	array(
 					"slug"	=> "avia",
 					"name" 	=> __("Websafe fonts fallback for Windows", 'avia_framework'),
@@ -726,6 +769,7 @@ $avia_elements[] =	array(
 					"subtype" => array( __('Not activated', 'avia_framework') =>'',
 										__('Activated', 'avia_framework') =>'active',
 										));
+*/
 
 
 $avia_elements[] =	array(
@@ -741,13 +785,6 @@ $avia_elements[] =	array(
 										));
 	
 
-$avia_elements[] =	array(
-					"slug"	=> "avia",
-					"name" 	=> __("Google Analytics Tracking Code", 'avia_framework'),
-					"desc" 	=> __("Enter your Google analytics tracking Code here. It will automatically be added so google can track your visitors behavior.", 'avia_framework'),
-					"id" 	=> "analytics",
-					"type" 	=> "textarea"
-					);
 
 
 
@@ -779,7 +816,12 @@ $avia_elements[] =	array(
 									,
 					"id" 		=> "advanced_styling",
 					"type" 		=> "styling_wizard",
-					"order" 	=> array(__("Tags",'avia_framework'), __("Headings",'avia_framework'), __("Main Menu",'avia_framework'), __("Misc",'avia_framework')),
+					"order" 	=> array(
+									__("HTML Tags",'avia_framework'), 
+									__("Headings",'avia_framework'), 
+									__("Main Menu",'avia_framework'), 
+									__("Main Menu (Icon)",'avia_framework'), 
+									__("Misc",'avia_framework')),
 					"std" 		=> "",
 					"class"		=> "",
 					"elements" => $advanced);
@@ -800,14 +842,14 @@ $avia_elements[] =	array(
 						.live_bg_small{font-size:10px; color:#999;}
 						.live_bg_wrap{ padding: 0; background:#f8f8f8; overflow:hidden; background-position: top center;}
 						.live_bg_wrap div{overflow:hidden; position:relative;}
-						.live_bg_wrap h3{margin: 0 0 5px 0 ; color:inherit;}
-						.live_bg_wrap .main_h3{font-weight:bold; font-size:17px;  }
-						.border{border:1px solid; border-bottom-style:none; border-bottom-width:0; padding:13px; width:562px;}
-						#boxed .border, #av-framed-box .border{  width:514px;}
+						#avia_options_page .live_bg_wrap h3{margin: 0 0 5px 0 ; color:inherit; font-size:25px;}
+						#avia_options_page .live_bg_wrap .main_h3{font-weight:bold; font-size:25px;  }
+						.border{border:1px solid; border-bottom-style:none; border-bottom-width:0; padding:13px; width:100%;}
+						#av-framed-box .border{}
 
 						.live_header_color {position: relative;width: 100%;left: }
-						.bg2{border:1px solid; margin:4px; display:block; float:right; width:220px; padding:5px; max-width:80%}
-						.content_p{display:block; float:left; width:250px; max-width: 100%;}
+						.bg2{border:1px solid; margin:4px; display:block; float:right; padding:15px; }
+						.content_p{display:block; float:left; width: 100%;}
 						.live-socket_color{font-size:11px;}
 						.live-footer_color a{text-decoration:none;}
 						.live-socket_color a{text-decoration:none;  position:absolute; top:28%; right:13px;}
@@ -815,23 +857,31 @@ $avia_elements[] =	array(
 						#avia_preview .webfont_google_webfont{  font-weight:normal; }
 						.webfont_default_font{  font-weight:normal; font-size:13px; line-height:1.7em;}
 
-						div .link_controller_list a{ width:81px; font-size:11px;}
-						.avia_half{width: 267px; float:left; height:183px;}
+						div .link_controller_list a{ width:113px; font-size:13px;}
+						.avia_half{width: 50%; float:left; min-height:210px;}
 						.avia_half .bg2{float:none; margin-left:0;}
 						.avia_half_2{border-left:none; padding-left:14px;}
-						#boxed .avia_half, #av-framed-box .avia_half { width: 243px; }
 						#av-framed-box #header_left  .avia_half { width: 179px; height:250px;}
 						.live-slideshow_color{text-align:center;}
 						.text_small_outside{position:relative; top:-15px; display:block; left: 10px;}
 						
-						#header_left .live-header_color{float:left; width:101px; height: 380px; border-bottom:1px solid; border-right: none;}
-						#header_right .live-header_color{float:right; width:101px; height: 380px; border-bottom:1px solid; border-left: none;}
+						#header_left .live-header_color{ float:left;  width:30%; min-height: 424px; border-bottom:1px solid; border-right: none;}
+						#header_right .live-header_color{float:right; width:30%; min-height: 424px; border-bottom:1px solid; border-left:  none;}
+						#header_left .live-header_color .bg2, 
+						#header_right .live-header_color .bg2,
+						#header_right .av_header_block_1,
+						#header_left .av_header_block_1{
+							float:none;
+							width:100%;
+						}
 						.av-sub-logo-area{overflow:hidden;}
 						
-						#boxed #header_left .live-header_color, #boxed #header_right .live-header_color{height: 380px;}
-						#boxed #header_right .avia_half, #boxed #header_left .avia_half{width: 179px; height: 215px;}
-						#header_right .avia_half, #header_left .avia_half{width: 203px; height: 215px;}
+						#boxed #header_left .live-header_color, #boxed #header_right .live-header_color{min-height: 424px; }
+						#header_right .avia_half, #header_left .avia_half{min-height: 250px;}
 						#boxed .live-socket_color{border-bottom:1px solid;}
+						.av_header_block_1{width:70%; float:left;}
+						.live-header_color .bg2{width:30%; margin: 15px 0 0 0;}
+						#av-framed-box .live-socket_color.border{border-bottom-style:solid; border-bottom-width:1px;}
 					</style>
 
 
@@ -846,11 +896,13 @@ $avia_elements[] =	array(
 
 
 						<div class='live-header_color border'>
-							<h3 class='heading webfont_google_webfont'>Logo Area Heading</h3>
-							<span class='text'>Active Menu item | </span>
-							<span class='meta'>Inactive Menu item</span><br/>
-							<a class='a_link' href='#'>custom text link</a>
-							<a class='an_activelink' href='#'>hovered link</a>
+							<div class='av_header_block_1'>
+								<h3 class='heading webfont_google_webfont'>Logo Area Heading</h3>
+								<span class='text'>Active Menu item | </span>
+								<span class='meta'>Inactive Menu item</span><br/>
+								<a class='a_link' href='#'>custom text link</a>
+								<a class='an_activelink' href='#'>hovered link</a>
+							</div>
 							<div class='bg2'>Highlight Background + Border Color</div>
 						</div>
 						
@@ -874,7 +926,7 @@ $avia_elements[] =	array(
 
 						<div class='live-alternate_color border avia_half avia_half_2'>
 								<h3 class='webfont_google_webfont main_h3 heading'>Alternate Content Area</h3>
-								<p>This is content of an alternate content area. Choose font color, headings and link colors below. <br/>
+								<p class='content_p'>This is content of an alternate content area. Choose font color, headings and link colors below. <br/>
 									<a class='a_link' href='#'>A link</a>
 									<a class='an_activelink' href='#'>A hovered link</a>
 									<span class='meta'>Secondary Font</span>
@@ -1023,7 +1075,7 @@ foreach($colorsets as $set_key => $set_value)
 						"slug"	=> "styling",
 						"id" 	=> "colorset-$set_key-img",
 						"name" 	=> __("Background Image", 'avia_framework'),
-						"desc" 	=> __("The background image of your", 'avia_framework')." ".$set_value."<br/><br/>",
+						"desc" 	=> __("The background image of your", 'avia_framework')." ".$set_value."<br/>",
 						"type" 	=> "select",
 						"subtype" => array(__('No Background Image', 'avia_framework')=>'',__('Upload custom image', 'avia_framework')=>'custom'),
 						"std" 	=> "",
@@ -1039,7 +1091,7 @@ foreach($colorsets as $set_key => $set_value)
 	$avia_elements[] =	array(
 						"slug"	=> "styling",
 						"name" 	=> __("Custom Background Image", 'avia_framework'),
-						"desc" 	=> __("Upload a BG image for your", 'avia_framework')." ".$set_value."<br/><br/>",
+						"desc" 	=> __("Upload a BG image for your", 'avia_framework')." ".$set_value."<br/>",
 						"id" 	=> "colorset-$set_key-customimage",
 						"type" 	=> "upload",
 						"std" 	=> "",
@@ -1252,7 +1304,7 @@ $avia_elements[] =		array(	"name" 	=> __("Heading Font", 'avia_framework'),
 
 $avia_elements[] =	array(	"name" 	=> __("Defines the Font for your body text", 'avia_framework'),
 							"slug"	=> "styling",
-							"desc" 	=> __("Choose between web safe fonts (faster rendering) and google webkit fonts (more unqiue)", 'avia_framework')."<br/><br/>",
+							"desc" 	=> __("Choose between web safe fonts (faster rendering) and google webkit fonts (more unqiue)", 'avia_framework')."<br/>",
 				            "id" 	=> "default_font",
 				            "type" 	=> "select",
 				            "no_first" => true,
@@ -1473,11 +1525,11 @@ $avia_elements[] =	array(
 					"std" 	=> "
 					<style type='text/css'>
 					
-					#avia_options_page #avia_default_header_target{background:#555; border:none; padding:10px 10px; width: 610px;}
+					#avia_options_page #avia_default_header_target{background: #f8f8f8;border: none;padding: 30px;border-bottom: 1px solid #e5e5e5; margin-bottom: 25px;}
 					#avia_header_preview{color:#999; border:1px solid #e1e1e1; padding:0px 45px; overflow:hidden; background-color:#fff; position: relative;}
 					
-					#pr-main-area{line-height:69px; overflow:hidden;}
-					#pr-menu{float:right; font-size:12px;}	
+					#avia_options_page #pr-main-area{line-height:69px; overflow:hidden;}
+					#pr-menu{float:right; font-size:12px; line-height: inherit;}	
 					
 					#pr-menu .pr-menu-single{display:inline-block; padding:0 7px; position:relative; }
 					#pr-menu-inner.seperator_small_border .pr-menu-single{display:inline; border-right: 1px solid #e1e1e1;}
@@ -1486,10 +1538,10 @@ $avia_elements[] =	array(
 					
 					#pr-logo{ max-width: 150px; max-height: 70px; float:left;}
 					#avia_header_preview.large #pr-logo{ max-width: 215px; max-height: 115px; padding-top:10px;}
-					#avia_header_preview.large #pr-main-area{line-height:115px;}
+					#avia_options_page #avia_header_preview.large #pr-main-area{line-height:115px;}
 					
-					#search_icon{opacity:0.5; margin-left: 10px; top:3px; position:relative; display:none;}
-					#search_icon.header_searchicon{display:inline;}
+					#search_icon{opacity:0.5; margin-left: 10px; top:26px; position:relative; display:none;}
+					#search_icon.header_searchicon{display:inline; top:4px;}
 					#pr-content-area{display:block; clear:both; padding:15px 45px; overflow:hidden; background-color:#fcfcfc; text-align:center; border:1px solid #e1e1e1; border-top:none;}
 					.logo_right #pr-logo{float:right}
 					.logo_center{text-align:center;}
@@ -1506,19 +1558,19 @@ $avia_elements[] =	array(
 					.minimal_header_shadow .top_nav_header #pr-menu:before{opacity:1; box-shadow: 0 1px 3px 0px rgba(0,0,0,0.1); }
 					
 					
-					#pr-menu-2nd{height: 17px; color:#aaa; border:1px solid #e1e1e1; padding:5px 45px; overflow:hidden; background-color:#f8f8f8; border-bottom:none; display:none; font-size:11px;}
+					#pr-menu-2nd{height: 28px; color:#aaa; border:1px solid #e1e1e1; padding:5px 45px; overflow:hidden; background-color:#f8f8f8; border-bottom:none; display:none; font-size:11px;}
 					.extra_header_active #pr-menu-2nd{display:block;}
 					.pr-secondary-items{display:none;}
 					.secondary_left .pr-secondary-items, .secondary_right .pr-secondary-items{display:block; float:left; margin:0 10px 0 0;}
-					.secondary_right .pr-secondary-items{float:right; margin:0  0 0 10px;}
+					.secondary_right .pr-secondary-items{float:right; margin:0 0 0 10px;}
 					
 					.pr-icons{opacity:0.3; display:none; position:relative; top:1px;}
 					.icon_active_left.extra_header_active #pr-menu-2nd .pr-icons{display:block; float:left; margin:0 10px 0 0;}
 					.icon_active_right.extra_header_active #pr-menu-2nd .pr-icons{display:block; float:right; margin:0 0 0 10px ;}
 					
-					.icon_active_main #pr-main-icon{float:right; position:relative; }
-					.icon_active_main #pr-main-icon .pr-icons{display:block; top: 3px; margin: 0 0 0 17px;}
-					.icon_active_main .logo_right #pr-main-icon {left:-115px;}
+					.icon_active_main #pr-main-icon{float:right; position:relative; line-height:inherit;}
+					.icon_active_main #pr-main-icon .pr-icons{display:block; top: 3px; margin: 0 0 0 17px; line-height:inherit; width:66px;}					
+					.icon_active_main .logo_right #pr-main-icon {left: 211px; float: left; width: 0px;}
 					.icon_active_main .large .logo_right #pr-main-icon {left:-55px;}
 					.icon_active_main .bottom_nav_header #pr-main-icon{top:30px;}
 					.icon_active_main .large .bottom_nav_header #pr-main-icon{top:50px;}
@@ -1549,14 +1601,40 @@ $avia_elements[] =	array(
 					left: 7%;
 					position: absolute;
 					}
+					
+					.main_nav_header .burger_menu #pr-menu-inner{
+						display:none;
+					}
+					
+					#pr-burger-menu{
+						    display: none;
+						    height: 40px;
+						    width: 30px;
+						    margin-top: 17px;
+						    margin-left:20px;
+						    float: right;
+						    position: relative;
+					}
+					
+					#avia_header_preview.large #pr-burger-menu{margin-top: 39px;}
+					
+					#pr-burger-menu span{
+						display:block;
+						border-top:4px solid #aaa;
+						margin-top: 6px;
+					}
+					
+					.main_nav_header .burger_menu #pr-burger-menu{
+						display:block;
+					}
 				
 					.seperator_small_border .pr-menu-single.pr-menu-single-first:after { top: 145%; }
 					.seperator_big_border .pr-menu-single.pr-menu-single-first:after { top: 98%; left: 0; width: 100%;}
-					.bottom_nav_header .pr-menu-single.pr-menu-single-first:after { top: 92%%; left: 0%; width:100%; }
+					.bottom_nav_header .pr-menu-single.pr-menu-single-first:after { top: 92%; left: 0%; width:100%; }
 					
 					.minimal_header .pr-menu-single.pr-menu-single-first:after{display:none;}
 					.minimal_header #avia_header_preview{border-bottom:none;}
-					.minimal_header_shadow #avia_header_preview { box-shadow: 0 0 2px 1px rgba(0,0,0,0.1); }
+					.minimal_header_shadow #avia_header_preview { box-shadow: 0 2px 8px 0px rgba(0,0,0,0.1); }
 					
 					</style>
 
@@ -1571,7 +1649,17 @@ $avia_elements[] =	array(
 											<div id='pr-main-area' >
 												<img id='pr-logo' src='".AVIA_BASE_URL."images/layout/logo.png' alt=''/>
 												<div id='pr-main-icon'>{$iconSpan}</div>
-												<div id='pr-menu'><span id='pr-menu-inner'><span class='pr-menu-single pr-menu-single-first'>Home</span><span class='pr-menu-single'>About</span><span class='pr-menu-single'>Contact</span></span> <img id='search_icon' src='".AVIA_IMG_URL."icons/search.png' alt='' /></div>
+												<div id='pr-menu'>
+												
+												
+												<span id='pr-menu-inner'><span class='pr-menu-single pr-menu-single-first'>Home</span><span class='pr-menu-single'>About</span><span class='pr-menu-single'>Contact</span></span> <img id='search_icon' src='".AVIA_IMG_URL."icons/search.png' alt='' />
+												<div id='pr-burger-menu'>
+													<span class='burger-top'></span>
+													<span class='burger-mid'></span>
+													<span class='burger-low'></span>
+												</div>
+												
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1643,6 +1731,21 @@ $avia_elements[] =	array(
 
 $avia_elements[] =	array(
 					"slug"	=> "header",
+					"name" 	=> __("Display of menu items", 'avia_framework'),
+					"desc" 	=> __("Chose how you want to display the menu items", 'avia_framework'),
+					"id" 	=> "menu_display",
+					"type" 	=> "select",
+					"std" 	=> "",
+					"required" => array('header_layout','{contains}main_nav_header'),
+					"target" => array("default_header_target::#pr-menu::set_class"),
+					"no_first"=>true,
+					"subtype" => array( __('Display as text', 'avia_framework')  =>'',
+										__('Display as icon', 'avia_framework') =>'burger_menu',
+										));
+
+
+$avia_elements[] =	array(
+					"slug"	=> "header",
 					"name" 	=> __("Separator between menu items", 'avia_framework'),
 					"desc" 	=> __("Chose if you want to display a border between menu items", 'avia_framework'),
 					"id" 	=> "header_menu_border",
@@ -1650,6 +1753,7 @@ $avia_elements[] =	array(
 					"std" 	=> "",
 					"target" => array("default_header_target::#pr-menu-inner::set_class"),
 					"no_first"=>true,
+					"required" => array('menu_display',''),
 					"subtype" => array( __('No separator', 'avia_framework')  =>'',
 										__('Small separator', 'avia_framework') =>'seperator_small_border',
 										__('Large separator', 'avia_framework') =>'seperator_big_border',
@@ -1855,6 +1959,7 @@ $avia_elements[] =	array(
 					"id" 	=> "header_mobile_activation",
 					"type" 	=> "select",
 					"std" 	=> "mobile_menu_phone",
+					"required" => array('menu_display',''),
 					"no_first"=>true,
 					"subtype" => array( __('Activate only for Smartphones (browser width below 768px)', 'avia_framework') =>'mobile_menu_phone',
 										__('Activate for Smartphones and Tablets (browser width below 990px)', 'avia_framework') =>'mobile_menu_tablet',
@@ -1867,8 +1972,24 @@ $avia_elements[] = array(
 							"id" 	=> "header_mobile_behavior",
 							"type" 	=> "checkbox",
 							"std"	=> "",
+							"required" => array('menu_display',''),
 							"slug"	=> "header");
 							
+$avia_elements[] =	array(	"name" => __("No settings necessary",'avia_framework'),
+							"desc" => __("The setting 'Display of menu items' at 'Header Layout' is set to display the menu as icon. Therefore no mobile settings are required.", 'avia_framework'),
+							"id" => "no_mobile_necessary",
+							"std" => "",
+							"required" => array('menu_display','burger_menu'),
+							"slug"	=> "header",
+							"type" => "heading",
+							"nodescription"=>true);
+
+
+
+
+
+
+
 							
 
 // END TAB
@@ -1899,8 +2020,8 @@ $avia_elements[] =	array(
 					"type" 			=> "group",
 					"id" 			=> "social_icons",
 					"slug"			=> "social",
-					"linktext" 		=> __("Add another social icon", 'avia_framework'),
-					"deletetext" 	=> "Remove icon",
+					"linktext" 		=> "+",
+					"deletetext" 	=> "×",
 					"blank" 		=> true,
 					"nodescription" => true,
 					"std"			=> array(
@@ -2391,8 +2512,40 @@ $avia_elements[] =	array(
 					"type" 	=> "import",
  					"image"	=> "includes/admin/demo_files/demo_images/photography.jpg"
 					);
+					
+$avia_elements[] =	array(
+					"slug"	=> "demo",
+					"name" 	=> __("Import: Creative Studio Demo", 'avia_framework'),
+					"desc" 	=> 	 "<p><strong>{$what_get} <a href='http://www.kriesi.at/themes/enfold-creative-studio/' target='_blank'>{$online_demo}</a></strong></p>"
+								."<h4 class='av-before-plugins'>".__("Recommended Plugins:", 'avia_framework')."</h4><ul>"
+								."<li>".__("None", 'avia_framework')."</li>"
+								."</ul>"
+								."<h4 class='av-before-plugins'>".__("Demo Images included:", 'avia_framework')."</h4><ul>"
+								."<li>".__("All", 'avia_framework')."</li>"
+								."</ul>",
+					'files' => "/includes/admin/demo_files/creative-studio",
+					"id" 	=> "import",
+					"type" 	=> "import",
+					"image"	=> "includes/admin/demo_files/demo_images/creative-studio.jpg"
+					);	
+					
+$avia_elements[] =	array(
+					"slug"	=> "demo",
+					"name" 	=> __("Import: Medical Demo", 'avia_framework'),
+					"desc" 	=> 	 "<p><strong>{$what_get} <a href='http://www.kriesi.at/themes/enfold-medical/' target='_blank'>{$online_demo}</a></strong></p>"
+								."<h4 class='av-before-plugins'>".__("Recommended Plugins:", 'avia_framework')."</h4><ul>"
+								."<li>".__("None", 'avia_framework')."</li>"
+								."</ul>"
+								."<h4 class='av-before-plugins'>".__("Demo Images included:", 'avia_framework')."</h4><ul>"
+								."<li>".__("All", 'avia_framework')."</li>"
+								."</ul>",
+					'files' => "/includes/admin/demo_files/medical",
+					"id" 	=> "import",
+					"type" 	=> "import",
+					"image"	=> "includes/admin/demo_files/demo_images/medical.jpg"
+					);
 
-
+	
 
 $avia_elements[] =	array(
 					"slug"	=> "demo",
@@ -2713,6 +2866,9 @@ $avia_elements[] =	array(
 					"type" 	=> "import",
 					"image"	=> "includes/admin/demo_files/demo_images/app.jpg"
 					);
+					
+			
+					
 
 
 

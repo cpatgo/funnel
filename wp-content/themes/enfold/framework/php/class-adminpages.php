@@ -90,6 +90,12 @@ if( ! class_exists( 'avia_adminpages' ) )
 					wp_enqueue_style($filename , AVIA_CSS_URL . $file, false, AV_FRAMEWORK_VERSION); 
 				}
 			}
+			
+			//load the new css styles if the theme supports them
+			if(current_theme_supports('avia_improved_backend_style'))
+			{
+				wp_enqueue_style(  'avia_admin_new', AVIA_CSS_URL . 'conditional_load/avia_admin_modern.css',  false, AV_FRAMEWORK_VERSION); 
+			}
 		}
 		
 		
@@ -143,7 +149,7 @@ if( ! class_exists( 'avia_adminpages' ) )
 														'manage_options', 								// capability
 														$top_level, 									// menu slug (and later also database options key)
 														array(&$this, 'render_page'),					// executing function
-														"",
+														"dashicons-admin-home",
 														26
 													);
 				}

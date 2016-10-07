@@ -605,7 +605,7 @@ jQuery(function($) {
 	{
 		var defaults = 
 		{
-			template: '<div class="avia-popup {extra_class}"><div class="avia-popup-inner"><a href="#" class="popup-close script-close-avia-popup">x</a>{content}</div></div><div class="avia-popup-backdrop"></div>',
+			template: '<div class="avia-popup {extra_class}"><div class="avia-popup-inner"><a href="#" class="popup-close script-close-avia-popup">×</a>{content}</div></div><div class="avia-popup-backdrop"></div>',
 			selector: '*[data-avia-popup], .av-modal-image'
 		};
 		

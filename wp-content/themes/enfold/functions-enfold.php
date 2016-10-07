@@ -56,6 +56,33 @@ if(!function_exists('avia_menu_item_filter'))
 	}
 }
 
+ 
+ 
+/* filter menu item urls */
+if(!function_exists('avia_maps_key_for_plugins'))
+{
+	add_filter( 'script_loader_src', 'avia_maps_key_for_plugins', 10 , 99, 2 );
+
+	function avia_maps_key_for_plugins ( $url, $handle  )
+	{
+		$key = get_option( 'gmap_api' );
+		
+		if ( ! $key ) { return $url; }
+		
+		if ( strpos( $url, "maps.google.com/maps/api/js" ) !== false || strpos( $url, "maps.googleapis.com/maps/api/js" ) !== false ) 
+		{
+			if ( strpos( $url, "key=" ) === false ) 
+			{	
+				$url = "http://maps.google.com/maps/api/js?v=3.24";
+				$url = esc_url( add_query_arg( 'key',$key,$url) );
+			}
+		}
+		
+	
+		return $url;
+	}
+}
+
 
 
 
@@ -80,8 +107,8 @@ if(!function_exists('avia_iframe_proportion_wrap'))
 if(!function_exists('avia_append_search_nav'))
 {
 	//first append search item to main menu
-	add_filter( 'wp_nav_menu_items', 'avia_append_search_nav', 10, 2 );
-	add_filter( 'avf_fallback_menu_items', 'avia_append_search_nav', 10, 2 );
+	add_filter( 'wp_nav_menu_items', 'avia_append_search_nav', 9997, 2 );
+	add_filter( 'avf_fallback_menu_items', 'avia_append_search_nav', 9997, 2 );
 
 	function avia_append_search_nav ( $items, $args )
 	{	
@@ -95,13 +122,57 @@ if(!function_exists('avia_append_search_nav'))
 	        get_search_form();
 	        $form =  htmlspecialchars(ob_get_clean()) ;
 
-	        $items .= '<li id="menu-item-search" class="noMobile menu-item menu-item-search-dropdown">
-							<a href="?s=" rel="nofollow" data-avia-search-tooltip="'.$form.'" '.av_icon_string('search').'><span class="avia_hidden_link_text">'.__('Search','avia_framework').'</span></a>
+	        $items .= '<li id="menu-item-search" class="noMobile menu-item menu-item-search-dropdown menu-item-avia-special">
+							<a href="?s=" data-avia-search-tooltip="'.$form.'" '.av_icon_string('search').'><span class="avia_hidden_link_text">'.__('Search','avia_framework').'</span></a>
 	        		   </li>';
 	    }
 	    return $items;
 	}
 }
+
+/* AJAX SEARCH */
+if(!function_exists('avia_append_burger_menu'))
+{
+	//first append search item to main menu
+	add_filter( 'wp_nav_menu_items', 'avia_append_burger_menu', 9998, 2 );
+	add_filter( 'avf_fallback_menu_items', 'avia_append_burger_menu', 9998, 2 );
+
+	function avia_append_burger_menu ( $items, $args )
+	{	
+		if(!avia_is_burger_menu()) return $items;
+	
+	    if ((is_object($args) && $args->theme_location == 'avia') || (is_string($args) && $args = "fallback_menu"))
+	    {
+	        
+	        $items .= '<li id="menu-item-burger" class="av-burger-menu-main menu-item-avia-special">
+	        			<a href="#">
+							<span class="av-hamburger av-hamburger--spin av-js-hamburger">
+					        <span class="av-hamburger-box">
+						          <span class="av-hamburger-inner"></span>
+						          <strong>'.__('Menu','avia_framework').'</strong>
+					        </span>
+							</span>
+						</a>
+	        		   </li>';
+	    }
+	    return $items;
+	}
+}
+
+if(!function_exists('avia_is_burger_menu'))
+{
+	function avia_is_burger_menu ()
+	{	
+		$burger_menu = false;
+		
+		if(avia_get_option('menu_display') !== "burger_menu") return $burger_menu;
+		if(avia_get_option('header_position') !== "header_top") return $burger_menu;
+		if(strpos(avia_get_option('header_layout'), 'main_nav_header') === false) return $burger_menu;
+	
+	    return true;
+	}
+}
+
 
 
 
@@ -429,10 +500,12 @@ if($image)  $tc2     = "            <span class='entry-image'>{$image}</span>";
 }
 
 
-
+/*
+	disabled as of monday 29th August 2016 - legacy browsers in question are no longer used 
+*/
 if(!function_exists('avia_legacy_websave_fonts'))
 {
-	add_filter('avia_style_filter', 'avia_legacy_websave_fonts');
+	// add_filter('avia_style_filter', 'avia_legacy_websave_fonts');
 
 	function avia_legacy_websave_fonts($styles)
 	{
@@ -618,8 +691,37 @@ ga('send', 'pageview');
 			echo $avia_config['analytics_code'];
 		}
 	}
+}
+
+/*
+* add gmaps code
+*/
+
+if(!function_exists('avia_gmap_key'))
+{
+	add_action('wp_footer', 'avia_gmap_key', 10);
+	add_action('admin_footer', 'avia_gmap_key', 10);
+
+	function avia_gmap_key()
+	{
+		$api_key = avia_get_option('gmap_api');
+		
+		if(!empty($api_key))
+		{
+			echo "
+<script type='text/javascript'>
+ /* <![CDATA[ */  
+var avia_framework_globals = avia_framework_globals || {};
+	avia_framework_globals.gmap_api = '".$api_key."';
+/* ]]> */ 
+</script>	
+";
+    
+		}
+	}
 
 }
+
 
 
 /*
@@ -660,7 +762,9 @@ if(!function_exists('avia_header_setting'))
 							'sidebarmenu_social' => 'disabled',
 							'header_menu_border' => '',
 							'header_style'	=> '',
-							'blog_global_style' => ''
+							'blog_global_style' => '',
+							'menu_display' => ''
+
 						  );
 							
 		$settings = avia_get_option();
@@ -721,6 +825,10 @@ if(!function_exists('avia_header_setting'))
 		//if the custom height is less than 70 shrinking doesnt really work
 		if($header['header_size'] == 'custom' && (int) $header['header_custom_size'] < 65) $header['header_shrinking'] = 'disabled';
 		
+		//deactivate icon menu if we dont have the correct header
+		if(strpos(avia_get_option('header_layout'), 'main_nav_header') === false) $header['menu_display'] = "";
+		
+		if($header['menu_display'] == 'burger_menu') $header['header_menu_border'] = "";
 		
 		
 		
@@ -820,7 +928,8 @@ if(!function_exists('avia_header_setting_sidebar'))
 								'header_menu_border' => '',
 								'header_topbar'=> false,
 								'bottom_menu'=> false,
-								'header_style' => ''
+								'header_style' => '',
+								'menu_display' => ''
 							  );
 		
 		$header = array_merge($header, $overwrite);
@@ -889,7 +998,8 @@ if(!function_exists('avia_header_class_string'))
 													'header_unstick_top',
 													'header_stretch',
 													'header_style',
-													'blog_global_style'
+													'blog_global_style',
+													'menu_display'
 												);
 
 		$settings  	= avia_header_setting();
@@ -1338,6 +1448,11 @@ if(!function_exists('avia_disable_alb_drag_drop'))
 }
 
 
+
+
+
+
+
 /*
 function to display frame
 */
@@ -1481,9 +1596,13 @@ add_action('admin_head', 'avia_add_favicon');
 
 
 function avia_add_favicon()
-{
+{ 
 	echo "\n".avia_favicon(avia_get_option('favicon'))."\n";
 }
+
+
+
+
 
 
 

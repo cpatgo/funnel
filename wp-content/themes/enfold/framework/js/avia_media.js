@@ -79,7 +79,7 @@
 					
 					if(value != "")
 					{
-						div.html('<a href="#" class="avia_remove_image">remove</a>' + image);
+						div.html('<a href="#" class="avia_remove_image">×</a>' + image);
 					}
 					else
 					{
@@ -124,11 +124,11 @@
 					
 					if(img.match(/.jpg$|.jpeg$|.png$|.gif$/))
 					{
-						visualInsert = '<a href="#" class="avia_remove_image">remove</a><img src="'+img+'" alt="" />';
+						visualInsert = '<a href="#" class="avia_remove_image">×</a><img src="'+img+'" alt="" />';
 					}
 					else
 					{
-						visualInsert = '<a href="#" class="avia_remove_image">remove</a><img src="'+avia_framework_globals.frameworkUrl+'images/icons/video.png" alt="" />';
+						visualInsert = '<a href="#" class="avia_remove_image">×</a><img src="'+avia_framework_globals.frameworkUrl+'images/icons/video.png" alt="" />';
 					}
 					
 					container.find('.avia_preview_pic').html(visualInsert);
@@ -268,12 +268,12 @@
 					 		  	if(msg.match(/^<img/)) //image insert
 					 		  	{
 					 		  		target.val(attachment_id);
-					 		  		imageTarget.html('<a href="#" class="avia_remove_image">remove</a>'+msg);
+					 		  		imageTarget.html('<a href="#" class="avia_remove_image">×</a>'+msg);
 					 		  	}
 					 		  	else //video insert
 					 		  	{
 					 		  		target.val(msg);
-					 		  		visualInsert = '<a href="#" class="avia_remove_image">remove</a><img src="'+avia_framework_globals.frameworkUrl+'images/icons/video.png" alt="" />';
+					 		  		visualInsert = '<a href="#" class="avia_remove_image">×</a><img src="'+avia_framework_globals.frameworkUrl+'images/icons/video.png" alt="" />';
 					 		  		imageTarget.html(visualInsert);
 					 		  	}
 		
