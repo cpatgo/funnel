@@ -1,8 +1,0 @@
-RewriteEngine on
-
-RewriteCond $1 !^(index\.php|bootstrap|css|elements|fonts|images|js|robots\.txt)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %(.*)$ index.php/$1 [L]
-
-RewriteCond ^index.php/sites/getframe/[a-zA-Z0-9]*)/(.*) elements /$1/$2
