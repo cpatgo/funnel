@@ -52,66 +52,70 @@ jQuery(document).ready(function(){
             confirm: {
                 equalTo: "#password"
             },
-            "landing-page-name": {
+            landing-page-name: {
                 required: true
             },
-            "landing-page-type": {
+            landing-page-type: {
                 required: true
             },
-            "landing-page-list-id": {
+            landing-page-list-id: {
                 required: true
             },
-            "landing-page-url": {
+            landing-page-url: {
                 required: true
             },
-            "list_name": {
+            list_name: {
                 required: true
             },
-            "subscriber_email": {
+            subscriber_email: {
                 required: true,
                 email: true
             },
-            "form_name": {
+            form_name: {
                 required: true
             },
-            "sub2_redirect": {
+            sub2_redirect: {
                 required: true
             },
             // "sub3_redirect": {
             //  required: true
             // },
-            "list_company": {
+            list_company: {
                 required: true
             },
-            "list_address": {
+            list_address: {
                 required: true
             },
-            "list_city": {
+            list_city: {
                 required: true
             },
-            "list_state": {
+            list_state: {
                 required: true
             },
-            "list_postal": {
+            list_postal: {
                 required: true
             },
-            "list_country": {
+            list_country: {
                 required: true
             },
-            "landing-page-url-link": {
+            landing-page-url-link: {
                 required: true,
                 url: true
-            }
+            },
+            landing-page-url:{
+                required: true,
+            },
+
         },
         message: {
-            "landing-page-name":{
+            landing-page-name:{
                 required: "this field is required."
             },
-            "subscriber_email": {
+            subscriber_email: {
                 required: "required field",
                 email: "please enter valid email address"
             },
-            "landing-page-url-link":{
+            landing-page-url-link:{
                 required: "this field required.",
                 url: "please enter valid url starting with http://"
             }
