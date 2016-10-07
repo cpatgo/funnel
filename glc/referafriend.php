@@ -1,24 +1,24 @@
 <?php 
 
 /** post parameters **/
-$email      = strip_tags(trim($_POST['friendemail'])); 
-$name       = strip_tags(trim($_POST['friendname'])); 
-$username   = strip_tags( trim($_POST['username']));
-$reflink    = strip_tags( trim($_POST['reflink']));
+$email 		= strip_tags(trim($_POST['friendemail'])); 
+$name 		= strip_tags(trim($_POST['friendname'])); 
+$username 	= strip_tags( trim($_POST['username']));
+$reflink	= strip_tags( trim($_POST['reflink']));
 
 /** start message here **/
-$msg = 'Hi '.$name.',<br />
+$msg = 'Hello '.$name.',<br />
 <br />
-Your friend '.$username.' invites you to check out a short video on how you can earn BIG with the GLC HUB. 
+Your friend '.$username.' invites you to check out a short video on how to earn money with the Global Learning Center (GLC). 
 <br /><br />
-Everyone that&#39;s currently a Member of the GLC HUB can benefit from its Lead Generation & Weath Building Library Platforms. GLC HUB has created an automated, lucrative referral System that rewards it's Members for simply sharing the GLC HUB Lead Generation & Wealth Building Library with friends, peers & associates. 
+Everyone that&#39;s currently a Member of the GLC can benefit from its Learning and Earning Centers. GLC has created an automated, lucrative referral Cycle Pay System that rewards Members for simply sharing its online e-Learning courses with your friends, peers and associates. 
 <br /><br />
-Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click to Tour GLC HUB »</a>';
+Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click to watch »</a>';
 
 /** mandrill starts here **/
 try {
     require_once 'class/mandrill_src/Mandrill.php';
-    $mandrill = new Mandrill('5LGxq2K6xOXKsuArzugKUw');
+    $mandrill = new Mandrill('dmHv4vt3NItaV8gTP9y3dg');
     $message = array(
         'html' => utf8_encode($msg),
         'text' => 'Example text content',
