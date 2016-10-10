@@ -15,7 +15,7 @@
 					</div>
 				</div>
 				
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="name" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_globalcss')?></label>
 					<div class="col-sm-9">
 						<textarea class="form-control" id="siteSettings_siteCSS" name="siteSettings_siteCSS" placeholder="<?php echo $this->lang->line('sitedata_label_globalcss')?>" rows="6"><?php echo $data['site']->global_css;?></textarea>
@@ -29,36 +29,36 @@
 				<h6><?php echo $this->lang->line('sitedata_publishingdetails')?></h6>
 			
 				<div class="form-group">
-					<label for="server" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_publicurl')?></label>
+					<label for="server" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_sitename')?></label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" id="siteSettings_remoteUrl" name="siteSettings_remoteUrl" placeholder="<?php echo $this->lang->line('sitedata_label_publicurl_placeholder')?>" value="<?php echo $data['site']->remote_url;?>">
+						<input type="text" class="form-control" id="siteSettings_remoteUrl" name="siteSettings_remoteUrl" placeholder="<?php echo $this->lang->line('sitedata_label_sitename_placeholder')?>" value="<?php echo $data['site']->remote_url;?>">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="server" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_ftpserver')?></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="siteSettings_ftpServer" name="siteSettings_ftpServer" placeholder="<?php echo $this->lang->line('sitedata_label_ftpserver')?>" value="<?php echo $data['site']->ftp_server;?>">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="user" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_ftpuser')?></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="siteSettings_ftpUser" name="siteSettings_ftpUser" placeholder="<?php echo $this->lang->line('sitedata_label_ftpuser')?>" value="<?php echo $data['site']->ftp_user;?>">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="password" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_ftppassword')?></label>
 					<div class="col-sm-9">
 						<input type="password" class="form-control" id="siteSettings_ftpPassword" name="siteSettings_ftpPassword" placeholder="<?php echo $this->lang->line('sitedata_label_ftppassword')?>" value="<?php echo $data['site']->ftp_password;?>">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="password" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_ftpport')?></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="siteSettings_ftpPort" name="siteSettings_ftpPort" placeholder="<?php echo $this->lang->line('sitedata_label_ftpport_placeholder')?>" value="<?php if( $data['site']->ftp_port != 0 ){echo $data['site']->ftp_port;}else{echo "21";}?>">
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<label for="path" class="col-sm-3 control-label"><?php echo $this->lang->line('sitedata_label_ftppath')?></label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="siteSettings_ftpPath" name="siteSettings_ftpPath" placeholder="<?php echo $this->lang->line('sitedata_label_ftppath')?>" value="<?php if( $data['site']->ftp_path != '' ){echo $data['site']->ftp_path;}else{echo "/";}?>">
@@ -67,7 +67,7 @@
 						<button type="button" class="btn btn-info btn-embossed btn-block " id="siteSettingsBrowseFTPButton"><span class="fui-search"></span> <?php echo $this->lang->line('sitedata_button_browseserver')?></button>
 					</div>
 				</div>
-				<div class="form-group ftpBrowse" id="ftpBrowse">
+				<div class="form-group ftpBrowse" id="ftpBrowse" style="display: none;">
 					<div class="col-sm-6 col-sm-offset-3">
 						
 						<div class="ftpList" id="ftpList">
@@ -85,13 +85,13 @@
 						
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<div class="col-sm-offset-3 col-sm-9">
 						<button type="button" class="btn btn-inverse btn-embossed btn-wide" id="siteSettingsTestFTP"><span class="fui-power"></span> <?php echo $this->lang->line('sitedata_button_testftpconnection')?></button>
 						<span class="FTP_Connecting" style="display: none;"><?php echo $this->lang->line('sitedata_testingftpconnection')?></span>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="display: none;">
 					<div class="col-sm-offset-3 col-sm-9" id="ftpTestAlerts">
 					
 					</div>
