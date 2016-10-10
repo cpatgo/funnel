@@ -85,7 +85,7 @@
     ],
 
     "GLC": [
-        
+        {"url":"elements/glc-glc1.html", "height":163, "thumbnail":"elements/thumbs/glc-glc1.jpg"}
     ],
 
     "Holiday": [
@@ -98,9 +98,13 @@
     ],
 
     "Opt-in": [
+        {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     ],
 
     "Redirect": [
+        {"url":"elements/glc-redirect.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect.jpg"},
+        {"url":"elements/glc-redirect2.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect2.jpg"},
+        {"url":"elements/glc-redirect3.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect3.jpg"}
     ],
 
     "Sales": [
