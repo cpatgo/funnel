@@ -37,11 +37,11 @@ class Sites extends MY_Controller {
 	/**
 	 * Load page builder
 	 */
-	public function create($template_id = false)
+	public function create($templateID = false, $formID = false)
 	{
 		//create a  new, empty site
 		$newSiteID = $this->sitemodel->createNew();
-		$link = sprintf('sites/%d%s', $newSiteID, ($template_id) ? '/'.$template_id : '');
+		$link = sprintf('sites/%d%s%s', $newSiteID, ($templateID) ? '/'.$templateID : '', ($formID) ? '/'.$formID : '');
 		redirect($link);
 		//$this->data['builder'] = true;
 		//$this->data['page'] = "newPage";
@@ -182,7 +182,7 @@ class Sites extends MY_Controller {
 	 * @param  integer $siteID
 	 * @return [type]         [description]
 	 */
-	public function site($siteID, $template_id = false, $formID = false)
+	public function site($siteID, $templateID = false, $formID = false)
 	{
 		$user = $this->ion_auth->user()->row();
 		$userID = $user->id;
@@ -191,7 +191,7 @@ class Sites extends MY_Controller {
 		$this->session->set_userdata('siteID', $siteID);
 
 		// If user is not an admin, we'll need to check of this site belongs to this user
-		if ( !$this->ion_auth->is_admin() && !$template_id) {
+		if ( !$this->ion_auth->is_admin() && !$templateID) {
 			if( !$this->sitemodel->isMine( $siteID ) ) {
 				redirect('/sites');
 			}
@@ -199,8 +199,8 @@ class Sites extends MY_Controller {
 
 		$siteData = $this->sitemodel->getSite($siteID);
 
-		if($template_id):
-			$siteData = $this->sitemodel->getSite($template_id);
+		if($templateID):
+			$siteData = $this->sitemodel->getSite($templateID);
 			$siteID = $this->cloneSite($siteData['pages'], $siteID, $formID);
 			$siteData = $this->sitemodel->getSite($siteID);
 		endif;
@@ -250,9 +250,9 @@ class Sites extends MY_Controller {
 	 * @param  string $siteID [description]
 	 * @return [type]         [description]
 	 */
-	public function cloneSite($siteData, $siteID)
+	public function cloneSite($siteData, $siteID, $formID)
 	{
-		$siteID = $this->sitemodel->cloneSite('My New Site', $siteData, $siteID);
+		$siteID = $this->sitemodel->cloneSite('My New Site', $siteData, $siteID, $formID);
 		return $siteID;
 	}
 
