@@ -101,6 +101,8 @@ $lang['sitedata_label_globalcss'] = "Global CSS";
 
 $lang['sitedata_publishingdetails'] = "Publishing details";
 
+$lang['sitedata_label_sitename'] = "Site Name";
+$lang['sitedata_label_sitename_placeholder'] = "Your unique site name, ie mysite001";
 $lang['sitedata_label_publicurl'] = "Public URL";
 $lang['sitedata_label_publicurl_placeholder'] = "Public URL, ie http://mysite.com";
 $lang['sitedata_label_ftpserver'] = "FTP Server";

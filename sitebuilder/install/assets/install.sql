@@ -167,7 +167,8 @@ CREATE TABLE `sites` (
   `remote_url` varchar(255) NOT NULL,
   `sites_trashed` int(1) NOT NULL DEFAULT '0',
   `viewmode` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`sites_id`)
+  PRIMARY KEY (`sites_id`),
+  UNIQUE KEY `uc_remote_url` (`remote_url`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 
