@@ -48,7 +48,7 @@ $route['logout'] = "auth/logout";
 $route['sites/([0-9]+?)'] = "sites/site/$1";
 $route['sites/([0-9]+?)/([0-9]+?)/([0-9]+?)'] = "sites/site/$1/$2/$3";
 
-$route['sites/create/([0-9]+?)'] = "sites/create/$1";
+$route['sites/create/([0-9]+?)/([0-9]+?)'] = "sites/create/$1/$2";
 
 $route['preview/([0-9]+?)'] = "preview/index/$1";
 
