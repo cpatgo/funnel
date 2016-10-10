@@ -117,9 +117,9 @@
     ],
 
     "Thank You": [
-        {"url":"elements/glc-beauty.html","height":294, "thumbnail":"elements/images/thumbs/glc-beauty.jpg"},
-        {"url":"elements/glc-jeunesse.html","height":294, "thumbnail":"elements/images/thumbs/glc-jeunesse.jpg"},
-        {"url":"elements/glc-nerium.html","height":294, "thumbnail":"elements/images/thumbs/glc-nerium.png"}
+        {"url":"elements/glc-thankyou2.html","height":294, "thumbnail":"elements/images/thumbs/glc-thankyou2.jpg"},
+        {"url":"elements/glc-thankyou3.html","height":294, "thumbnail":"elements/images/thumbs/glc-thankyou3.jpg"},
+        {"url":"elements/glc-thankyou4.html","height":294, "thumbnail":"elements/images/thumbs/glc-thankyou4.jpg"}
     ],
 
     "Travel": [
