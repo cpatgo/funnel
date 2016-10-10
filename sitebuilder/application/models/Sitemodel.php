@@ -165,7 +165,8 @@ class Sitemodel extends CI_Model {
     	$data = array(
     	   'sites_name' => 'My New Site',
     	   'users_id' => $userID,
-    	   'sites_created_on' => time()
+    	   'sites_created_on' => time(),
+           'remote_url' => sha1(time()),
     	);
     	
     	$this->db->insert('sites', $data); 
@@ -202,13 +203,13 @@ class Sitemodel extends CI_Model {
     	
     	$userID = $user->id;
     	
-    	
     	//create the site item first
-    	
+    
     	$data = array(
     		'users_id' => $userID,
     		'sites_name' => $siteName,
-    	   	'sites_created_on' => time()
+    	   	'sites_created_on' => time(),
+            'remote_url' => sha1(time()),
     	);
     	
     	$this->db->insert('sites', $data); 
@@ -259,7 +260,112 @@ class Sitemodel extends CI_Model {
     	return $siteID;
     
     }
+
+
+    /*
+        
+        clone an existing site, including pages and frames
     
+    */
+    
+    public function cloneSite($siteName, $siteData, $siteID) {
+    
+        $user = $this->ion_auth->user()->row();
+
+        $userID = $user->id;
+        
+        //next we create the pages and frames
+        
+        foreach( $siteData as $pageName => $frames ) {
+        
+            $data = array(
+                'sites_id' => $siteID,
+                'pages_name' => $pageName,
+                'pages_timestamp' => time()
+            );
+            
+            $this->db->insert('pages', $data); 
+            
+            $pageID = $this->db->insert_id();
+
+            //page is done, now all the frames for this page
+            
+            foreach( $frames['blocks'] as $frameData ) {
+
+                // If there is selected form id, replace any content that contains a form
+                if(isset($_SESSION['selected_form_id'])):
+                    $form = $this->getForm();
+                    $content = str_replace('<div id="user_form_div"></div>', $form['html'], $frameData->frames_content);
+                    $frameData->frames_content = $content;
+                endif;
+
+                $data = array(
+                    'pages_id' => $pageID,
+                    'sites_id' => $siteID,
+                    'frames_content' => $frameData->frames_content,
+                    'frames_height' => $frameData->frames_height,
+                    'frames_original_url' => $frameData->frames_original_url,
+                    'frames_sandbox' => $frameData->frames_sandbox,
+                    'frames_loaderfunction' => $frameData->frames_loaderfunction,
+                    'frames_timestamp' => time()
+                );
+
+                $this->db->insert('frames', $data);
+                            
+            }
+        
+        }
+        return $siteID;
+    }
+
+
+    /*
+        
+        Get form from AEM
+    
+    */
+    function getForm() {
+        include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
+        $url = sprintf('%s/aem', GLC_URL);
+
+        $pw = $_SESSION['dennisn_usertoken'];
+        $decode = base64_decode($pw);
+        $chunk = explode('-', $decode);
+        $password = base64_decode($chunk[1]);
+
+        $username = $_SESSION['dennisn_username'];
+        $password = $password;
+
+        $params = array(
+            'api_user'     => $username,
+            'api_pass'     => $password,
+            'api_action'   => 'form_view',
+            'api_output'   => 'serialize',
+            'id'           => $_SESSION['selected_form_id'],
+            'generate'     => 1,
+        );
+
+        $query = "";
+        foreach( $params as $key => $value ) $query .= $key . '=' . urlencode($value) . '&';
+        $query = rtrim($query, '& ');
+        $url = rtrim($url, '/ ');
+
+        $api = $url . '/manage/awebdeskapi.php?' . $query;
+
+        $request = curl_init($api); // initiate curl object
+        curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+        curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+
+        $response = (string)curl_exec($request); // execute curl fetch and store results in $response
+
+        curl_close($request); // close curl object
+
+        if ( !$response ) {
+            return array('result_code' => 0, 'result_message' => 'Nothing was returned. Do you have a connection to Email Marketing server?');
+        }
+
+        return unserialize($response);
+    }
     
     
     /*
@@ -526,6 +632,86 @@ class Sitemodel extends CI_Model {
     	$siteArray['assetFolders'] = $assetFolders;
     	
     	return $siteArray;
+    
+    }
+
+
+    /*
+    
+        takes a site name and returns all the site data, or false is the site doesn't exist
+        
+    */
+    
+    public function getSiteByName($siteName) {
+    
+        $query = $this->db->from('sites')->where('remote_url', $siteName)->get();
+                
+        if( $query->num_rows() == 0 ) {
+        
+            return false;
+        
+        } 
+        
+        $res = $query->result();
+        
+        $site = $res[0];
+        
+        $siteArray = array();
+        $siteArray['site'] = $site;
+        
+        
+        //get the pages + frames
+        
+        $query = $this->db->from('pages')->where('sites_id', $site->sites_id)->get();
+        
+        $res = $query->result();
+        
+        
+        $pageFrames = array();
+        
+        foreach( $res as $page ) {
+        
+            //get the frames for each page
+            
+            $query = $this->db->from('frames')->where('pages_id', $page->pages_id)->where('revision', 0)->order_by('frames_id')->get();
+            
+            $pageDetails = array();
+            $pageDetails['blocks'] = $query->result();
+            $pageDetails['page_id'] = $page->pages_id;
+            $pageDetails['pages_title'] = $page->pages_title;
+            $pageDetails['meta_description'] = $page->pages_meta_description;
+            $pageDetails['meta_keywords'] = $page->pages_meta_keywords;
+            $pageDetails['header_includes'] = $page->pages_header_includes;
+            $pageDetails['page_css'] = $page->pages_css;
+            
+            $pageFrames[$page->pages_name] = $pageDetails;
+                    
+        }
+        
+        $siteArray['pages'] = $pageFrames;
+        
+        
+        //grab the assets folders as well
+        $this->load->helper('directory');
+        
+        $folderContent = directory_map($this->config->item('elements_dir'), 2);
+        
+        $assetFolders = array();
+        
+        foreach( $folderContent as $key => $item ) {
+        
+            if( is_array($item) ) {
+            
+                array_push($assetFolders, $key);
+            
+            }
+        
+        }
+        
+        
+        $siteArray['assetFolders'] = $assetFolders;
+        
+        return $siteArray;
     
     }
     
