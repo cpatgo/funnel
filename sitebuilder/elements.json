@@ -111,9 +111,15 @@
     ],
 
     "Skin Care": [
+        {"url":"elements/glc-beauty.html","height":294, "thumbnail":"elements/images/thumbs/glc-beauty.jpg"},
+        {"url":"elements/glc-jeunesse.html","height":294, "thumbnail":"elements/images/thumbs/glc-jeunesse.jpg"},
+        {"url":"elements/glc-nerium.html","height":294, "thumbnail":"elements/images/thumbs/glc-nerium.png"}
     ],
 
     "Thank You": [
+        {"url":"elements/glc-beauty.html","height":294, "thumbnail":"elements/images/thumbs/glc-beauty.jpg"},
+        {"url":"elements/glc-jeunesse.html","height":294, "thumbnail":"elements/images/thumbs/glc-jeunesse.jpg"},
+        {"url":"elements/glc-nerium.html","height":294, "thumbnail":"elements/images/thumbs/glc-nerium.png"}
     ],
 
     "Travel": [
