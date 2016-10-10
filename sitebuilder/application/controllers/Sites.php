@@ -182,7 +182,7 @@ class Sites extends MY_Controller {
 	 * @param  integer $siteID
 	 * @return [type]         [description]
 	 */
-	public function site($siteID, $template_id = false)
+	public function site($siteID, $template_id = false, $formID = false)
 	{
 		$user = $this->ion_auth->user()->row();
 		$userID = $user->id;
@@ -201,7 +201,7 @@ class Sites extends MY_Controller {
 
 		if($template_id):
 			$siteData = $this->sitemodel->getSite($template_id);
-			$siteID = $this->cloneSite($siteData['pages'], $siteID);
+			$siteID = $this->cloneSite($siteData['pages'], $siteID, $formID);
 			$siteData = $this->sitemodel->getSite($siteID);
 		endif;
 

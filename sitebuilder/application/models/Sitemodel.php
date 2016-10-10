@@ -268,7 +268,7 @@ class Sitemodel extends CI_Model {
     
     */
     
-    public function cloneSite($siteName, $siteData, $siteID) {
+    public function cloneSite($siteName, $siteData, $siteID, $formID) {
     
         $user = $this->ion_auth->user()->row();
 
@@ -294,7 +294,7 @@ class Sitemodel extends CI_Model {
 
                 // If there is selected form id, replace any content that contains a form
                 if(isset($_SESSION['selected_form_id'])):
-                    $form = $this->getForm();
+                    $form = $this->getForm($formID);
                     $content = str_replace('<div id="user_form_div"></div>', $form['html'], $frameData->frames_content);
                     $frameData->frames_content = $content;
                 endif;
@@ -324,24 +324,16 @@ class Sitemodel extends CI_Model {
         Get form from AEM
     
     */
-    function getForm() {
+    function getForm($formID) {
         include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
         $url = sprintf('%s/aem', GLC_URL);
 
-        $pw = $_SESSION['dennisn_usertoken'];
-        $decode = base64_decode($pw);
-        $chunk = explode('-', $decode);
-        $password = base64_decode($chunk[1]);
-
-        $username = $_SESSION['dennisn_username'];
-        $password = $password;
-
         $params = array(
-            'api_user'     => $username,
-            'api_pass'     => $password,
+            'api_user'     => $aem_username,
+            'api_pass'     => $aem_password,
             'api_action'   => 'form_view',
             'api_output'   => 'serialize',
-            'id'           => $_SESSION['selected_form_id'],
+            'id'           => $formID,
             'generate'     => 1,
         );
 
