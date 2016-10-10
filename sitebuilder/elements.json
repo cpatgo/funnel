@@ -123,9 +123,11 @@
     ],
 
     "Travel": [
+        {"url":"elements/glc-travel3.html","height":294, "thumbnail":"elements/images/thumbs/glc-travel3.jpg"}
     ],
 
     "Video": [
+        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"}
     ]
 
     }
