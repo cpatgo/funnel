@@ -37,11 +37,12 @@ class Sites extends MY_Controller {
 	/**
 	 * Load page builder
 	 */
-	public function create()
+	public function create($template_id = false)
 	{
 		//create a  new, empty site
 		$newSiteID = $this->sitemodel->createNew();
-		redirect('sites/'.$newSiteID);
+		$link = sprintf('sites/%d%s', $newSiteID, ($template_id) ? '/'.$template_id : '');
+		redirect($link);
 		//$this->data['builder'] = true;
 		//$this->data['page'] = "newPage";
 		//$this->load->view('sites/create', $this->data);
@@ -181,19 +182,29 @@ class Sites extends MY_Controller {
 	 * @param  integer $siteID
 	 * @return [type]         [description]
 	 */
-	public function site($siteID)
+	public function site($siteID, $template_id = false)
 	{
+		$user = $this->ion_auth->user()->row();
+		$userID = $user->id;
+
 		// Store the session ID with this session
 		$this->session->set_userdata('siteID', $siteID);
 
 		// If user is not an admin, we'll need to check of this site belongs to this user
-		if ( !$this->ion_auth->is_admin() ) {
+		if ( !$this->ion_auth->is_admin() && !$template_id) {
 			if( !$this->sitemodel->isMine( $siteID ) ) {
 				redirect('/sites');
 			}
 		}
 
 		$siteData = $this->sitemodel->getSite($siteID);
+
+		if($template_id):
+			$siteData = $this->sitemodel->getSite($template_id);
+			$siteID = $this->cloneSite($siteData['pages'], $siteID);
+			$siteData = $this->sitemodel->getSite($siteID);
+		endif;
+
 		if ( $siteData == false ) {
 			//site could not be loaded, redirect to /sites, with error message
 			$this->session->set_flashdata('error', $this->lang->line('sites_site_error1'));
@@ -208,8 +219,6 @@ class Sites extends MY_Controller {
 			}
 
 			//collect data for the image library
-			$user = $this->ion_auth->user()->row();
-			$userID = $user->id;
 			$userImages = $this->usermodel->getUserImages( $userID );
 			if ( $userImages ) {
 				$this->data['userImages'] = $userImages;
@@ -235,6 +244,17 @@ class Sites extends MY_Controller {
 		}
 	}
 
+	/**
+	 * Get and retrieve single site data with ajax
+	 * @param  array $siteData [description]
+	 * @param  string $siteID [description]
+	 * @return [type]         [description]
+	 */
+	public function cloneSite($siteData, $siteID)
+	{
+		$siteID = $this->sitemodel->cloneSite('My New Site', $siteData, $siteID);
+		return $siteID;
+	}
 
 	/**
 	 * Get and retrieve single site data with ajax
@@ -696,6 +716,52 @@ class Sites extends MY_Controller {
 		}
 		// Replace meta value
 		$content = str_replace('<!--pageMeta-->', $meta, "<!DOCTYPE html>\n" . $_POST['page']);
+
+		$head = '';
+		// Page header includes
+		if ( isset($_POST['header_includes']) && $_POST['header_includes'] != '' ) {
+			$head .= $_POST['header_includes'] . "\n";
+		}
+		// Page css
+		if ( isset($_POST['page_css']) && $_POST['page_css'] != '' ) {
+			$head .= "\n<style>" . $_POST['page_css'] . "</style>\n";
+		}
+		// Global css
+		if( $siteData->global_css != '' ) {
+			$head .= "\n<style>" . $siteData->global_css . "</style>\n";
+		}
+
+        // Custom header to deal with XSS protection
+        header("X-XSS-Protection: 0");
+		echo str_replace('<!--headerIncludes-->', $head, $content);
+	}
+
+	/**
+	 * function generates a live preview of current changes
+	 */
+	public function preview($siteName)
+	{
+		$siteData = $this->sitemodel->getSiteByName( $siteName );
+
+		$meta = ''; $content = '';
+		// Page title
+		if ( isset($_POST['meta_title']) && $_POST['meta_title'] != '' ) {
+			$meta .= '<title>' . $_POST['meta_title'] . '</title>' . "\n";
+		}
+		// Page meta description
+		if ( isset($_POST['meta_description']) && $_POST['meta_description'] != '' ) {
+			$meta .= '<meta name="description" content="' . $_POST['meta_description'] . '"/>' . "\n";
+		}
+		// Page meta keywords
+		if ( isset($_POST['meta_keywords']) && $_POST['meta_keywords'] != '' ) {
+			$meta .= '<meta name="keywords" content="' . $_POST['meta_keywords'] . '"/>' . "\n";
+		}
+		// Replace meta value
+
+		foreach ($siteData['pages']['index']['blocks'] as $key => $value) {
+			$content .= $value->frames_content;
+		}
+		$content = str_replace('<!--pageMeta-->', $meta, "<!DOCTYPE html>\n" . $content);
 
 		$head = '';
 		// Page header includes

@@ -132,15 +132,22 @@
                     <i class="fui-export"></i> 
                     <span class="slide"><?php echo $this->lang->line('actionbuttons_export')?></span>
                 </a>
+
+                <a href="<?php printf('/site/%s', $siteData['site']->remote_url); ?>" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
+                    <i class="fui-upload"></i> 
+                    <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
+                    <i class="fui-alert text-danger">
+                    </i>
+                </a>
                 
-                <a href="#" id="publishPage" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>" <?php if( $siteData['site']->ftp_ok == 0 ):?>data-toggle="tooltip" data-placement="bottom" title="You can not publish your site right now. Please update your FTP details."<?php endif;?> style="display: none">
+                <!-- <a style="display: none" href="#" id="publishPage" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>" <?php if( $siteData['site']->ftp_ok == 0 ):?>data-toggle="tooltip" data-placement="bottom" title="You can not publish your site right now. Please update your FTP details."<?php endif;?> style="display: none">
                     <i class="fui-upload"></i> 
                     <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                     <i class="fui-alert text-danger" <?php if( $siteData['site']->ftp_ok == 1 ):?>style="display:none"<?php endif;?>>
                     </i>
-                </a>
+                </a> -->
                 
-                <div class="btn-group slick" style="float: right; display: none" id="button_revisionsDropdown">           
+                <!-- <div class="btn-group slick" style="float: right; display: none" id="button_revisionsDropdown">           
                     <button class="btn btn-inverse dropdown-toggle<?php if( !$revisions ):?>disabled<?php endif;?>" data-toggle="dropdown">
                         <i class="fui-windows"></i> 
                         <span class="bLabel slide"><?php echo $this->lang->line('actionbuttons_versions')?></span>
@@ -151,7 +158,7 @@
                         <?php $this->load->view('partials/revisions', array('revisions'=>$revisions, 'page'=>'index', 'siteID'=>$siteData['site']->sites_id));?>
                         <?php endif;;?>
                     </ul>
-                </div>
+                </div> -->
                 
                 <a href="#previewModal" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right slick" style="display: none" id="buttonPreview">
                     <i class="fui-window"></i> 
