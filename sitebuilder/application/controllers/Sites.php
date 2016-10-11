@@ -242,6 +242,7 @@ class Sites extends MY_Controller {
 			$this->data['page'] = "site";
 			$this->data['has_template'] = ($templateID) ? true : false;
 			$this->data['url_link'] = ($siteData) ? sprintf('site/%s', $siteData['site']->remote_url) : '';
+			$this->data['username'] = $user->username;
 			$this->load->view('sites/create', $this->data);
 		}
 	}
@@ -741,7 +742,7 @@ class Sites extends MY_Controller {
 	/**
 	 * function generates a live preview of current changes
 	 */
-	public function preview($siteName)
+	public function preview($usename, $siteName)
 	{
 		$siteData = $this->sitemodel->getSiteByName( $siteName );
 
