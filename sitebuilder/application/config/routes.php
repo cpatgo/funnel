@@ -52,7 +52,7 @@ $route['sites/create/([0-9]+?)/([0-9]+?)'] = "sites/create/$1/$2";
 
 $route['preview/([0-9]+?)'] = "preview/index/$1";
 
-$route['sites/view/([a-zA-Z0-9]+?)'] = "sites/preview/$1";
+$route['site/([a-zA-Z0-9]+?)'] = "sites/preview/$1";
 
 $route['settings'] = "configuration/index";
 
