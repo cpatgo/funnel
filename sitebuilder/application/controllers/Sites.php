@@ -242,7 +242,6 @@ class Sites extends MY_Controller {
 			$this->data['page'] = "site";
 			$this->data['has_template'] = ($templateID) ? true : false;
 			$this->data['url_link'] = ($siteData) ? sprintf('site/%s', $siteData['site']->remote_url) : '';
-			$this->data['username'] = $user->username;
 			$this->load->view('sites/create', $this->data);
 		}
 	}
@@ -742,13 +741,9 @@ class Sites extends MY_Controller {
 	/**
 	 * function generates a live preview of current changes
 	 */
-	public function preview($usename, $siteName)
+	public function preview($siteName)
 	{
 		$siteData = $this->sitemodel->getSiteByName( $siteName );
-
-		ob_start();
-			include_once($_SERVER['DOCUMENT_ROOT'].'/elements/skeleton.html');
-		$skeleton = ob_get_clean();
 
 		$meta = ''; $content = '';
 		// Page title
@@ -768,9 +763,7 @@ class Sites extends MY_Controller {
 		foreach ($siteData['pages']['index']['blocks'] as $key => $value) {
 			$content .= $value->frames_content;
 		}
-
 		$content = str_replace('<!--pageMeta-->', $meta, "<!DOCTYPE html>\n" . $content);
-		$content = str_replace('<div id="page" class="page">', $content, $skeleton);
 
 		$head = '';
 		// Page header includes
