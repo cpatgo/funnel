@@ -126,28 +126,38 @@
                         <?php endif;?>
 
                     </ul>
-                </div>
-                                            
+                </div>      
+
                 <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-inverse pull-right actionButtons slick" style="display: none">
                     <i class="fui-export"></i> 
                     <span class="slide"><?php echo $this->lang->line('actionbuttons_export')?></span>
                 </a>
+                    
+                <?php if((bool)$has_template): ?>
+                    <a href="#getLinkModal" id="getLink" data-toggle="modal" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
+                        <i class="fui-upload"></i> 
+                        <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
+                    </a>
+                <?php else: ?>
+                    <a href="<?php printf('/site/%s', $siteData['site']->remote_url); ?>" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
+                        <i class="fui-upload"></i> 
+                        <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
+                        <i class="fui-alert text-danger">
+                        </i>
+                    </a>
+                <?php endif; ?>
 
-                <a href="<?php printf('/site/%s', $siteData['site']->remote_url); ?>" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
-                    <i class="fui-upload"></i> 
-                    <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
-                    <i class="fui-alert text-danger">
-                    </i>
-                </a>
+
                 
-                <!-- <a style="display: none" href="#" id="publishPage" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>" <?php if( $siteData['site']->ftp_ok == 0 ):?>data-toggle="tooltip" data-placement="bottom" title="You can not publish your site right now. Please update your FTP details."<?php endif;?> style="display: none">
+                
+            <!-- <a style="display: none" href="#" id="publishPage" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>" <?php if( $siteData['site']->ftp_ok == 0 ):?>data-toggle="tooltip" data-placement="bottom" title="You can not publish your site right now. Please update your FTP details."<?php endif;?> style="display: none">
                     <i class="fui-upload"></i> 
                     <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                     <i class="fui-alert text-danger" <?php if( $siteData['site']->ftp_ok == 1 ):?>style="display:none"<?php endif;?>>
                     </i>
                 </a> -->
                 
-                <!-- <div class="btn-group slick" style="float: right; display: none" id="button_revisionsDropdown">           
+                <div class="btn-group slick" style="float: right; display: none" id="button_revisionsDropdown">           
                     <button class="btn btn-inverse dropdown-toggle<?php if( !$revisions ):?>disabled<?php endif;?>" data-toggle="dropdown">
                         <i class="fui-windows"></i> 
                         <span class="bLabel slide"><?php echo $this->lang->line('actionbuttons_versions')?></span>
@@ -158,7 +168,7 @@
                         <?php $this->load->view('partials/revisions', array('revisions'=>$revisions, 'page'=>'index', 'siteID'=>$siteData['site']->sites_id));?>
                         <?php endif;;?>
                     </ul>
-                </div> -->
+                </div>
                 
                 <a href="#previewModal" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right slick" style="display: none" id="buttonPreview">
                     <i class="fui-window"></i> 
@@ -2143,6 +2153,36 @@
             </form>
             
         </div><!-- /.modal -->
+
+
+        <!-- Get Link popup -->
+        <div class="modal fade" id="getLinkModal" tabindex="-1" role="dialog" aria-hidden="true">
+            
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->lang->line('modal_close')?></span></button>
+                        <h4 class="modal-title" id="myModalLabel"><span class="fui-export"></span> <?php echo $this->lang->line('publish_page')?></h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                    <div class="form-group">
+                        <p class="col-md-12 text-center">
+                            Clicking on the “COPY LINK” button will automatically copy your page link. You will be instructed to paste this link into a section, which is needed to create your Campaign.
+                            <br>
+                            <?php printf('<b id="url_link">%s%s</b>', base_url(), $url_link); ?>
+                        </p>
+                    </div>
+                        
+                    </div><!-- /.modal-body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="exportCancel"><?php echo $this->lang->line('modal_cancelclose')?></button>
+                        <button data-clipboard-target="#url_link" type="submit" type="button" class="btn btn-primary btnCopy btn-embossed"><?php echo strtoupper($this->lang->line('copy_link'))?></button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+            
+        </div><!-- /.modal -->
         
         
         <div class="modal fade imageModal" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -2572,8 +2612,12 @@
   <script src="<?php echo base_url('js/vendor/summernote.min.js');?>"></script>
   <script src="<?php echo base_url('js/vendor/ace/ace.js');?>"></script>
   <script src="<?php echo base_url('js/build/builder.js');?>"></script>
+  <script src="<?php echo base_url('js/build/clipboard.js');?>"></script>
+  <script src="<?php echo base_url('js/build/custom.js');?>"></script>
   <?php else:?>
   <script src="<?php echo base_url('js/build/builder.min.js');?>"></script>
+  <script src="<?php echo base_url('js/build/clipboard.js');?>"></script>
+  <script src="<?php echo base_url('js/build/custom.js');?>"></script>
   <?php endif;?>
 </body>
 </html>

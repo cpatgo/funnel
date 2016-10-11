@@ -240,6 +240,8 @@ class Sites extends MY_Controller {
 			$this->data['revisions'] = $this->revisionmodel->getForSite( $siteID, 'index' );
 			$this->data['builder'] = true;
 			$this->data['page'] = "site";
+			$this->data['has_template'] = ($templateID) ? true : false;
+			$this->data['url_link'] = sprintf('site/%s', $siteData['site']->remote_url);
 			$this->load->view('sites/create', $this->data);
 		}
 	}
