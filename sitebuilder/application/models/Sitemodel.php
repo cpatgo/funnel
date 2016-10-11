@@ -166,7 +166,7 @@ class Sitemodel extends CI_Model {
            'sites_name' => 'My New Site',
            'users_id' => $userID,
            'sites_created_on' => time(),
-           'remote_url' => sha1(time()),
+           'remote_url' => substr(sha1(microtime(0)), 0, 10),
         );
         
         $this->db->insert('sites', $data); 
@@ -204,12 +204,12 @@ class Sitemodel extends CI_Model {
         $userID = $user->id;
         
         //create the site item first
-    
+        
         $data = array(
             'users_id' => $userID,
             'sites_name' => $siteName,
             'sites_created_on' => time(),
-            'remote_url' => sha1(time()),
+            'remote_url' => substr(sha1(microtime(0)), 0, 15),
         );
         
         $this->db->insert('sites', $data); 
