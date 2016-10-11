@@ -2158,7 +2158,7 @@
         <!-- Get Link popup -->
         <div class="modal fade" id="getLinkModal" tabindex="-1" role="dialog" aria-hidden="true">
             
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="width: 50% !important;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->lang->line('modal_close')?></span></button>
