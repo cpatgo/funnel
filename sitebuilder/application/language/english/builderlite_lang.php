@@ -191,6 +191,9 @@ $lang['sidebuttons_apply_clone'] = "Clone";
 $lang['sidebuttons_apply_reset'] = "Reset";
 $lang['sidebuttons_apply_remove'] = "Remove";
 
+$lang['publish_page'] = "Publish Page";
+$lang['copy_link'] = "Copy Link & Continue";
+
 $lang['modalexport_export_your_markup'] = "Export your markup";
 $lang['modalexport_doctype'] = "Doc type";
 $lang['modalexport_export_now'] = "Export Now";
