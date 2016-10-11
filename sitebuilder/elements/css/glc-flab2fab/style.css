@@ -20,7 +20,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #555555;
     background: #fcfcfc;
-	background: url('../img/convert-bg-pattern.png') 0 0 repeat;
+	background: url('../glc-flab2fab/img/convert-bg-pattern.png') 0 0 repeat;
 }
 img {
     vertical-align: middle;
@@ -108,7 +108,7 @@ a.opportunity:hover { text-decoration:underline}
    .content-img { margin: 10px 0px 10px 150px;}
    .content-text-box{color:#505050;}
    .content-text-box p { color:#505050; padding:0 0 26px 0; margin:0px;}
-   .blue-box { clear:both; border:1px solid #e0e6ef; background:url('../img/footer-box-bg.png') #eef1f5; position:relative; margin:54px 0 25px 0; display:inline-block; width:100%; padding:19px 0 19px 0;} 
+   .blue-box { clear:both; border:1px solid #e0e6ef; background:url('../glc-flab2fab/img/footer-box-bg.png') #eef1f5; position:relative; margin:54px 0 25px 0; display:inline-block; width:100%; padding:19px 0 19px 0;} 
    .blue-box .img { position:absolute; left:33px; float:left; top:-34px; }
    .blue-box .right-text-box { margin-right:20px; text-align:center; float:right; width:53%;}
    .blue-box .right-text-box h3 { text-align:center; font-style:normal;color:#22508F; font-size:26px; line-height:27px; font-weight:bold; text-shadow: 2px 2px 2px #FFFFFF; white-space: pre-line; margin-bottom:18px;}
