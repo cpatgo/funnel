@@ -745,6 +745,10 @@ class Sites extends MY_Controller {
 	{
 		$siteData = $this->sitemodel->getSiteByName( $siteName );
 
+		ob_start();
+			include_once($_SERVER['DOCUMENT_ROOT'].'/elements/skeleton.html');
+		$skeleton = ob_get_clean();
+
 		$meta = ''; $content = '';
 		// Page title
 		if ( isset($_POST['meta_title']) && $_POST['meta_title'] != '' ) {
@@ -763,7 +767,9 @@ class Sites extends MY_Controller {
 		foreach ($siteData['pages']['index']['blocks'] as $key => $value) {
 			$content .= $value->frames_content;
 		}
+
 		$content = str_replace('<!--pageMeta-->', $meta, "<!DOCTYPE html>\n" . $content);
+		$content = str_replace('<div id="page" class="page">', $content, $skeleton);
 
 		$head = '';
 		// Page header includes
