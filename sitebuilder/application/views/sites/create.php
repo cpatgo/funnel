@@ -139,7 +139,7 @@
                         <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                     </a>
                 <?php else: ?>
-                    <a href="<?php printf('/site/%s', $siteData['site']->remote_url); ?>" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
+                    <a href="<?php printf('/sites/%s/%s', $username, $siteData['site']->remote_url); ?>" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
                         <i class="fui-upload"></i> 
                         <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                         <i class="fui-alert text-danger">
