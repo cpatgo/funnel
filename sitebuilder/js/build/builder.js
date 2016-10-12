@@ -27,7 +27,6 @@
     var appUI = require('./ui.js').appUI;
     var publisher = require('../vendor/publisher');
 
-
 	 /*
         Basic Builder UI initialisation
     */
@@ -304,6 +303,34 @@
         
     };
 
+    function quick_load_form() {
+        console.log('LSKDJFHKSLDFH', form_id, $('#pageList iframe').contents().find('#user_form_div').length);
+        if(form_id != 0 && $('#pageList iframe').contents().find('#user_form_div').length){
+            jQuery.ajax({
+                type: "post",
+                url: "https://glchub.com/aem/manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form_by_id',
+                    'form_id':form_id
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        var jheight = jQuery('#pageList iframe').contents().height();
+                        jheight += 100;
+                        jQuery('#pageList iframe').contents().find('#user_form_div').html(result.message.html);
+                        jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        }
+    }
 
     /*
         Page constructor
@@ -907,7 +934,7 @@
             over: function(){
                     
                 $('#start').hide();
-                
+
             }
         });
         
@@ -1594,6 +1621,10 @@
                 this.loaded = true;
 
                 builderUI.canvasLoading('off');
+
+                if(form_id != 0  && $('#pageList iframe').contents().find('#user_form_div').length) {
+                    quick_load_form();
+                }
 
                 break;
                 
