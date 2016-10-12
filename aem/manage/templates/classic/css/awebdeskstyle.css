@@ -1408,7 +1408,7 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 
 .campaign_wrapper {
     text-align: center;
-    border: 1px solid #333;
+    border: 1px solid #258DCD;
     border-radius: 14px;
     padding: 40px 60px;
     box-shadow:0 0 30px 0 rgba(0,0,0,0.35);
@@ -1420,7 +1420,7 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 
 .campaign_wrapper h1 {
   text-align: center;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #258DCD;
   padding-bottom: 10px;
 }
 
