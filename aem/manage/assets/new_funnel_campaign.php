@@ -8,7 +8,7 @@ require_once awebdesk_classes("pagination.php");
 class new_funnel_campaign_assets extends AWEBP_Page {
 
 	function new_funnel_campaign_assets() {
-		$this->pageTitle = _a("Create a New Funnel Campaign");
+		$this->pageTitle = _a("Select Campaign Type");
 		//$this->sideTemplate = "side.message.htm";
 		$this->AWEBP_Page();
 	}
