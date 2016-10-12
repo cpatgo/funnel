@@ -1410,6 +1410,12 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
   text-align:left;
 }
 
+.campaign_wrapper h1 {
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
 .btn-orange {
   background-color: #e97e00;
   border-color: #e97e00;
