@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "engines": {
-    "node": "0.12.7"
+    "node": "6.7.0"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
