@@ -1397,6 +1397,10 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
   margin-right: 10px;
 }
 
+.btn-custom-campaign i:hover, .btn-done-funnels i:hover{
+  color:#fff;
+}
+
 .btn-custom-campaign, .btn-done-funnels{
   width: 100%;
   margin-top: 20px;
