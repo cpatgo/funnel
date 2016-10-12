@@ -744,45 +744,7 @@ class Sites extends MY_Controller {
 	public function preview($siteName)
 	{
 		$siteData = $this->sitemodel->getSiteByName( $siteName );
- 		$this->pagemodel->loadPage($siteData['pages']['index']['page_id']);
-
-		// $meta = ''; $content = '';
-		// // Page title
-		// if ( isset($_POST['meta_title']) && $_POST['meta_title'] != '' ) {
-		// 	$meta .= '<title>' . $_POST['meta_title'] . '</title>' . "\n";
-		// }
-		// // Page meta description
-		// if ( isset($_POST['meta_description']) && $_POST['meta_description'] != '' ) {
-		// 	$meta .= '<meta name="description" content="' . $_POST['meta_description'] . '"/>' . "\n";
-		// }
-		// // Page meta keywords
-		// if ( isset($_POST['meta_keywords']) && $_POST['meta_keywords'] != '' ) {
-		// 	$meta .= '<meta name="keywords" content="' . $_POST['meta_keywords'] . '"/>' . "\n";
-		// }
-		// // Replace meta value
-
-		// foreach ($siteData['pages']['index']['blocks'] as $key => $value) {
-		// 	$content .= $value->frames_content;
-		// }
-		// $content = str_replace('<!--pageMeta-->', $meta, "<!DOCTYPE html>\n" . $content);
-
-		// $head = '';
-		// // Page header includes
-		// if ( isset($_POST['header_includes']) && $_POST['header_includes'] != '' ) {
-		// 	$head .= $_POST['header_includes'] . "\n";
-		// }
-		// // Page css
-		// if ( isset($_POST['page_css']) && $_POST['page_css'] != '' ) {
-		// 	$head .= "\n<style>" . $_POST['page_css'] . "</style>\n";
-		// }
-		// // Global css
-		// if( $siteData->global_css != '' ) {
-		// 	$head .= "\n<style>" . $siteData->global_css . "</style>\n";
-		// }
-
-  //       // Custom header to deal with XSS protection
-  //       header("X-XSS-Protection: 0");
-		// echo str_replace('<!--headerIncludes-->', $head, $content);
+ 		$this->pagemodel->displayPage($siteData['pages']['index']['page_id']);
 	}
 
 
