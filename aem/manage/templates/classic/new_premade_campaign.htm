@@ -7,23 +7,15 @@
 
 <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
 <input type="hidden" name="action" value="list_insert_post">
-	<!-- Progressbar -->
-	<div class="progressbar_wrapper">
-		<!-- <div class="progress_indicator_txt"><span></span></div> -->
-		<div id="step-progressbar" class="step-progressbar"></div>
-	</div>
-
-
-
 
 	<!-- Step 1 -->
-    <h3> {"Name Campaign"|alang}</h3>
+    <h3><span>1.</span> {"Choose Pre-made Campaign"|alang}</h3>
     <section>
     	<div class="row">
 	        <div class="col-md-12">
 				<h1 class="step_header_text">
 					<i class="fa fa-line-chart" aria-hidden="true"></i>
-					{"Name Campaign"|alang}
+					{"Choose Pre-made Campaign"|alang}
 				</h1>
 
 				<div class="campaign_help">
@@ -31,42 +23,88 @@
 					{"Hint: Your campaign name should be similar to your offer. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
 					</p>
 				</div>
-				<div class="campaign_input form-group">
-					<div class="col-md-6 col-md-offset-3">
-						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name">
-						<div id="landing-page-name-error"></div>
-					</div>
-				</div>
 
+				<div class="col-md-12">
+					<div id="radiobutton_container">
+						<div class="template_wrapper">
+							<span class="text_center template_title">Travel</span>
+							<img src="images/optin-travel.jpg" class="img-thumbnail" alt="text">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</div>
+
+						<div class="template_wrapper">
+							<span class="text_center template_title">Work From Home</span>
+							<img src="images/download-SF.jpg" alt="..." class="img-thumbnail">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</div>
+
+						<div class="template_wrapper">
+							<span class="text_center template_title">Money</span>
+							<img src="images/thankyou-SF.jpg" alt="..." class="img-thumbnail">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</div>
+
+
+
+
+
+						<!-- <input type="radio" id="premade_01" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="premade_01">
+							<span class="text_center template_title">Travel</span>
+							<img src="images/optin-travel.jpg" class="img-thumbnail" alt="text">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</label>
+
+						<input type="radio" id="premade_02" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+
+						<label for="premade_02">
+							<span class="text_center template_title">Work From Home</span>
+							<img src="images/download-SF.jpg" alt="..." class="img-thumbnail">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</label>
+
+						<input type="radio" id="premade_03" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="premade_03">
+							<span class="text_center template_title">Money</span>
+							<img src="images/thankyou-SF.jpg" alt="..." class="img-thumbnail">
+							<div class="template_buttons">
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary btn-lg" target="_blank">DEMO</a>
+							</div>
+						</label> -->
+					</div>
+					<div id="landing-page-url-error"></div>
+				</div>
 	        </div>
 	    </div>
-	    <div class="row">
-	    	<div class="col-md-12">
-				<div class="campaign_input form-group">
-					<div class="col-md-6 col-md-offset-3">
-						<!-- <input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name"> -->
-						<textarea class="form-control input-lg" id="landing-page-description" name="landing-page-description" placeholder="describe your campaign" rows="5"></textarea>
-						<div id="landing-page-description-error"></div>
-					</div>
-				</div>
-			</div>
-	    </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<div id="landing-page-type-error"></div>
+        	</div>
+        </div>
     </section>
 
     <!-- Step 2 -->
-    <h3> {"Leads List"|alang}</h3>
+    <h3><span>2.</span> {"List Name"|alang}</h3>
     <section>
         <div class="row">
 	        <div class="col-md-12">
 	        	<h1 class="step_header_text">
 	        		<i class="fa fa-list-ol" aria-hidden="true"></i>
-					{"Leads List"|alang}
+					{"List Name"|alang}
 				</h1>
 
 		        <div class="campaign_help">
-		        	<p class="lead text_center">
-		        		{"Create a new Leads list or select from an existing one that you have already created.<br />Your leads are categories in your contacts section for follow-up or prospecting."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-		        	</p>
+		        	<p class="lead text_center">Hover over and click on the box to create a new list or select from an existing list.</p>
 	        	</div>
         	</div>
         </div>
@@ -74,8 +112,8 @@
         	<div class="col-md-12">
         		<div class="col-md-4 col-md-offset-2">
 			 		<div class="steps-btn newlist_btn" title="Create a New List">
-				 		<i class="fa fa-file-text-o" aria-hidden="true"></i>
-				 		<span>Create New List</span>
+			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			 			<span>Create New List</span>
 			 		</div>
 				</div>
 			    <div class="col-md-4">
@@ -87,42 +125,70 @@
 			</div>
         </div>
         <br>
-        <div id="new_list_div" class="new_list_div" style="display:none;">
+        <div id="new_list_div" style="display:none;">
         	<br>
         	<div class="row" >
 
 				<div id="create_new_list_title">
 					<div class="row">
-
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="form-group">
-								<label for=""><span class="required_field">*</span> List Name</label>
-								<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">
-								<div id="list_name-error"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="alert alert-warning">You must add at least ONE email address to create your new list. You can add any email address, even a made up email address; madeup@email.com.</div>
-						</div>
-					</div>
-
-					<div class="row">
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="form-group">
-								<label for=""><span class="required_field">*</span> Add Required Email</label>
-								<input type="email" class="form-control input-lg" id="subscriber_email" name="subscriber_email" placeholder="madeup@email.com" required>
-								<div id="subscriber_email-error"></div>
+						<div class="col-md-12">
+					  		<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label for=""><span class="required_field">*</span> Name your List. See example&#59;</label>
+									<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list. See examples here.">
+									<div id="list_name-error"></div>
+									<p class="text_center hint">Note&#58; Choose a list name that is recognizable by your Lead as the &#34;List Name&#34; is used the header of your Auto Responder email&#44; which is automatically send out by our email system to your Leads.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
+
+				<!--
+				<div class="col-md-12">
+				    <div class="col-md-4 col-md-offset-2">
+				 		<label for="">Your email </label>
+							<input type="text" class="form-control input-lg" id="list_postal" name="list_postal" optional>
+							<div id="list_postal-error"></div>
+					</div>
+					<div class="col-md-4">
+				 		<label for="">Your Website</label>
+							<input type="text" class="form-control input-lg" id="list_country" name="list_country" optional>
+							<div id="list_country-error"></div>
+					</div>
+				</div>
+				-->
+				<!--
+				<div class="col-md-12">
+					<br><br>
+				    <div class="col-md-4 col-md-offset-2">
+				    	<button id="add_new_list_cancel" class="btn glc_button" style="width:100%">Cancel</button>
+				    </div>
+					<div class="col-md-4">
+				 		<button id="add_new_list_go" class="btn glc_button" style="width:100%">Add new list</button>
+					</div>
+				</div>
+				-->
 			</div>
 
         </div>
+        <!--
+    	<div id="new_subscriber_div" style="display:none;">
+			<br>
+        	<div class="row" >
 
+				 <div class="col-md-12">
+					<br><br>
+				    <div class="col-md-4 col-md-offset-2"></div>
+					<div class="col-md-4">
+				 		<button id="add_new_subscriber" class="btn glc_button" style="width:100%">Add</button>
+					</div>
+				</div>
+			</div>
+			<hr />
+        </div>
+        -->
         <div class="row" id="select_existing_list_div">
         	<!-- <hr style="margin-bottom:40px;"> -->
 			<div class="col-md-8 col-md-offset-2">
@@ -137,40 +203,10 @@
         <input type="hidden" id="select_list_method" name="select_list_method" value="">
     </section>
 
-	<!-- <h3> {"Email Autoresponder"|alang}</h3>
-	<section>
-        <div class="row">
-        	<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Choose Auto Responder Email"|alang}
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="campaign_help">
-					<p class="lead text_center">
-						{"Choose your email autoresponder header setting."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<div class="btn_wrapper" style="text-align: center;">
-					<a href="/aem/manage/desk.php?action=optinoptout#list-01-0-0" class="btn btn-primary btn-lg" target="_blank" style="color:#fff;">Email Confirmation Sets</a>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-
 
 	<!-- Step 3 -->
-    <h3> {"Email Signature"|alang}</h3>
-    <section class="new_list_div">
+    <h3><span>3.</span> {"Email Signature"|alang}</h3>
+    <section>
     	<div class="row">
 			<div class="col-md-12">
 				<h1 class="step_header_text">
@@ -182,7 +218,6 @@
 				<div class="col-md-8 col-md-offset-2">
 					<!-- <div class="adesk_help_inline" style="font-size:12px;">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div> -->
 					<div class="alert alert-warning create-new-list-warning">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div>
-
 				</div>
 			</div>
 			<br>
@@ -232,10 +267,11 @@
 		</div>
     </section>
 
+
 	<!-- Step 4 -->
-    <h3> {"Opt-in Form"|alang}</h3>
+    <h3><span>4.</span> {"Create Opt-in Form"|alang}</h3>
     <section>
-        <div class="new_form_div">
+        <div id="new_form_div">
 
         	<div class="row" >
 				<div class="col-md-12">
@@ -249,9 +285,7 @@
 			<div class="row">
 		        <div class="col-md-12">
 		        	<div class="campaign_help">
-		        		<p class="lead text_center">
-						{"You must create an Opt-in form for each new Capture Page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-						</p>
+		        		<p class="lead text_center">Create an Opt-in form for your Landing Page. You will be prompted to create your page on the next step.</p>
 		        	</div>
 	        	</div>
         	</div>
@@ -263,23 +297,18 @@
 							<label for="">Form Name: </label>
 							<input type="text" class="form-control input-lg" id="form_name" name="form_name" title="Your Form Name Here">
 							<div id="form_name-error"></div>
-							<!-- <div class="text_center hint">
+							<div class="text_center hint">
 								This is how you will keep track of each form for your page.
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-        </div>
-    </section>
 
-	<!-- Step 5 -->
-    <h3> {"Form Options"|alang}</h3>
-    <section>
-        <div class="new_form_div">
+
 			<div class="row">
 				<div class="col-md-12">
-					<!-- <hr class="divider" /> -->
+					<hr class="divider" />
 					<h1 class="step_header_text">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 						{"Form Options"|alang}
@@ -290,7 +319,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="campaign_help">
-						<p class="lead text-center">Check the Subcriber field options you want to collect.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+						<p class="lead text-center">Check the Subcriber field options you want to collect.</p>
 					</div>
 				</div>
 			</div>
@@ -334,14 +363,14 @@
         </div>
     </section>
 
-	<!-- Step 6 -->
-    <h3> {"Capture Page"|alang}</h3>
+	<!-- Step 5 -->
+    <h3><span>5.</span> {"Optin Page"|alang}</h3>
     <section>
         <div class="row">
         	<div class="col-md-12">
 				<h1 class="step_header_text">
 					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Capture Page"|alang}
+					{"Optin Page"|alang}
 				</h1>
 			</div>
 		</div>
@@ -349,573 +378,211 @@
 			<div class="col-md-12">
 				<div class="campaign_help">
 					<p class="lead text_center">
-						{"Choose from our library of amazing Capture page templates. Add your text copy and edit it the way you like,<br />or design your own page using our Drag and Drop Site Builder. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+						Choose your template from any of our Pre-made Opt-in pages. You can edit the template you choose with the GLC Site Builder.
 					</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="col-md-12" id="landing_page_container">
+		<!-- <div class="row">
+        	<div class="col-md-12">
+        		<div class="col-md-4 col-md-offset-2">
+			 		<div class="steps-btn btn_landing_page_select_template">
+			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			 			<span>Templates</span>
+			 		</div>
+				</div>
+			    <div class="col-md-4">
+			 		<div class="steps-btn btn_landing_page_builder">
+			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+			 			<span>Site Builder</span>
+			 		</div>
+				</div>
+			</div>
+        </div> -->
+
+
+		<div class="col-md-10 col-md-offset-1" id="landing_page_container">
 			<div class="row select_landing_page_template">
 				<div class="col-md-12">
-					<div id="radiobutton_container" class="accordion">
-
-
-						<h3>Skin Care</h3>
-						<div class="accordion_group">
-							<!-- Skin Care / Product Trial -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Skin Care - Product Trial</span>
-								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+					<div id="radiobutton_container">
+						<input type="radio" id="landingpage_01" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_01">
+							<img src="images/freeebook.png" class="img-thumbnail" alt="text">
+							 <div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
+						</label>
 
-							<!-- Skin Care / Nerium -->
-							<!-- <div class="template_wrapper">
-								<span class="text_center template_title">Skin Care - Nerium</span>
-								<img src="images/500x580-nerium.jpg" class="img-thumbnail" alt="Skin care - Nerium" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-nerium.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_41R15O4N5lbdyab7aepE.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
-							</div> -->
+						<input type="radio" id="landingpage_02" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
 
-							<!-- Skin Care / Jeunesse -->
-							<!-- <div class="template_wrapper">
-								<span class="text_center template_title">Skin Care - Jeunesse</span>
-								<img src="images/500x580-juenesse.jpg" class="img-thumbnail" alt="Skin care - Jeunesse" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-jeunesse.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_cE8YiknxiCFdhsvwgOZs.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
-							</div> -->
-						</div>
-
-						<h3>Event</h3>
-						<div class="accordion_group">
-
-							<!-- Event / With Video -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Event - With Video</span>
-								<img src="images/500x580event-with-video.jpg" class="img-thumbnail" alt="Event - With Video" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-event1.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_ZhZ2uXSUPQVhDVcwY3ZV.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+						<label for="landingpage_02">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+							<div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
+						</label>
 
-							<!-- Event / The Speakers -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Event - The Speakers</span>
-								<img src="images/500x580-event-speakers-yellow.jpg" class="img-thumbnail" alt="Event - With Video" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-event2.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_3ajgXBYZrsj0bQD3t8hp.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+						<input type="radio" id="landingpage_03" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_03">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+							<div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
-						</div>
+						</label>
 
-						<h3>Giveaways</h3>
-						<div class="accordion_group">
-							<!-- Giveaways / Custom -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Giveaways - Custom</span>
-								<img src="images/500x580-custom.jpg" class="img-thumbnail" alt="Giveaways - Custom" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-giveaway.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_4SrfwkaeTUjKYIpnVWjh.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+						<input type="radio" id="landingpage_04" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_04">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+							<div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
+						</label>
 
-							<!-- Giveaways / Free App -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Giveaways - Free App</span>
-								<img src="images/500x580-free-app.jpg" class="img-thumbnail" alt="Giveaways - Free App" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-freeapp.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_l2ZrCB5IWuNIMzYIzlww.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+						<input type="radio" id="landingpage_05" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_05">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+							<div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
-						</div>
+						</label>
 
-
-
-						<h3>Travel</h3>
-						<div class="accordion_group">
-
-							<!-- Travel / Incruises Optin -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Travel - Incruises Video Optin</span>
-								<img src="images/500x580-travel-optin-incruses.jpg" class="img-thumbnail" alt="Travel - Incruises Video Option" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-incruisesvideo.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_gIb2t8Pqbe9Wuw3A1b2t.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
+						<input type="radio" id="landingpage_06" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="landingpage_06">
+							<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+							<div class="template_buttons" style="display:none">
+							  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">VIEW</a>
+							  	<a href="/builder/?load_template=criticalstrategy.xs&form_id=1112" class="btn btn-primary" target="_blank">EDIT</a>
 							</div>
+						</label>
 
-						</div>
-
-						<h3>General</h3>
-						<div class="accordion_group">
-							<!-- Fitness -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Fitness</span>
-								<img src="images/Fitness-500x580.jpg" alt="InCruises" class="img-thumbnail">
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-fitness.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_F0r6ws3JL7emZun5X0H0.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
-							</div>
-
-							<!-- Dental -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Dental</span>
-								<img src="images/500x580-dental.jpg" alt="InCruises" class="img-thumbnail">
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-jonessmile.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_a4C9O3IJ3qUUs9ZXr1B9.html" class="btn btn-primary" target="_blank">DEMO</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="accordion_group">
-							<!-- Design Your Own -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Design Your Own</span>
-								<img src="images/500x580-accesssitebuilder.jpg" class="img-thumbnail" alt="Skin care" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-blank.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								</div>
-							</div>
-						</div>
+						<!-- <label for="landingpage_custom" style="width:100%" class="btn btn-warning btn-lg">
+							<input type="radio" id="landingpage_custom" name="landing-page-url" data-customlandingpage="yes" value="" />
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> or you can design you own using the Site Builder.
+						</label> -->
 					</div>
-
 					<div id="landing-page-url-error"></div>
 				</div>
 			</div>
-		</div>
-    </section>
 
-	<!-- Step 7 -->
-    <h3> {"Capture Page URL"|alang}</h3>
-    <section>
-        <div>
-			<br>
-        	<div class="row" >
-				<div class="col-md-12">
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Capture Page URL"|alang}
-					</h1>
-				</div>
+			<!-- <div class="row select_landing_page_builder">
+				<div id="custom_landing_page_div">
+					<div class="col-md-12">
 
-		        <div class="col-md-10 col-md-offset-1">
-		        	<div class="campaign_help">
-		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-		        	</div>
-	        	</div>
 
-				<div class="col-md-12">
-			  		<div class="col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
-							<div id="landing-page-url-error"></div>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="alert alert-warning">
+									<p class="text_center">
+										Before proceeding to the Site Builder&#44; you <strong>MUST</strong> first copy your form&#44;.
+									</p>
+									<br />
+									<p class="text_center">
+										You <strong>MUST</strong> copy your form and insert it into the Land Page&#44; you are building, so your collected information about your leads are posted into the e&#45;Marketer system. Don&#39;t worry&#44; we will <strong>GUIDE</strong> you on how to insert/paste your form into your Custom Landing Page.			</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
 
 
-			</div>
-        </div>
-    </section>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="campaign_help">
+									<p class="text_center">
+										Click on the "Copy Form Code" button to automaticly copy and save this code.
+									</p>
+									<br />
+									<br />
+								</div>
+							</div>
+						</div>
 
-	<!-- Step 8 -->
-    <h3> {"Redirect Page"|alang}</h3>
-    <section>
-    	<div class="row">
-    		<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Redirect Page"|alang}
-				</h1>
-			</div>
-		</div>
+						<div class="col-md-8 col-md-offset-2 copy_success">
+							<div class="alert alert-success text_center">
+								<span>Form code copied to clipboard successfully!</span>
+							</div>
+						</div>
 
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="campaign_help">
-					<h2 class="text_center">What is a Redirect?</h2>
-					<p class="lead text_center">
-						{"A Redirect Page is a particular page of your choice that you can send your Visitors after submitting form information."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-					<p class="lead text_center">
-						{"Here you have 3 options. Choose from our library of amazing 'Redirect Page' templates, or you can design your own using the Site Builder, or if you have an Custom Website URL, you can use this option to enter in a Website URL that prospects will go to immediately after filling out your Capture Page information."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-				</div>
-			</div>
-		</div>
 
-		<!-- 3 column div selector -->
-		<div class="row">
-        	<div class="col-md-12">
-        		<div class="col-md-4">
-			 		<div class="steps-btn btn_pre_made_template redirect_url_option" title="Create a New List">
-			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
-			 			<span>Templates</span>
-			 		</div>
-				</div>
-			    <div class="col-md-4">
-			 		<div class="steps-btn btn_custom_page_design redirect_url_option" title="Select Existing List Here">
-			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
-			 			<span>Custom Page Design</span>
-			 		</div>
-				</div>
-				<div class="col-md-4">
-			 		<div class="steps-btn btn_redirect_page_custom_url" title="Select Existing List Here">
-			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
-			 			<span>External Website URL</span>
-			 		</div>
-				</div>
-			</div>
-        </div>
-		<!-- end 3 column div selector ends-->
+						<div class="row">
+				    		<div class="col-md-8 col-md-offset-2">
+						 		<a data-clipboard-target="#formcode" class="btn glc_button btnCopy btn-lg" style="width:100%;">
+						 			Click Here to Copy Form Code
+						 		</a>
+							</div>
+						</div>
 
-		<!-- redirect_page container -->
-		<div class="redirect_page_container row">
-			<div class="col-md-12">
+						<div class="row">
+							<hr class="divider" style="margin-top:40px;"  />
+							<div class="col-md-10 col-md-offset-1">
+								<div class="campaign_help">
 
-		    	<div id="pre_made_templates_container" class="hidden_div">
-					<div class="row">
-						<div id="pre_made_templates_wrapper">
-							<div class="row">
-						  		<div class="col-md-12">
-
-									<div id="radiobutton_container">
-										<div class="template_wrapper">
-											<span class="text_center template_title">Skin Care</span>
-											<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Redirect 1</span>
-											<img src="images/500x580thanks.jpg" class="img-thumbnail" alt="Redirect 1" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-redirect1.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_CgAltcfiO5GZpzFl97Z2.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Redirect 2</span>
-											<img src="images/500x580thankyou1.jpg" class="img-thumbnail" alt="Redirect 2" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-redirect2.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_fTCZBiZIVrZb3kyPYedM.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Redirect 3</span>
-											<img src="images/500x580-thankyou.jpg" class="img-thumbnail" alt="Redirect 3" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-redirect3.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_9XMOFu3dPTRxazB3JrH8.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<!-- <div class="template_wrapper">
-											<span class="text_center template_title">Money Making</span>
-											<img src="images/time-limit-500x580.jpg" alt="Making Money" class="img-thumbnail">
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=criticalstrategy.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Travel</span>
-											<img src="images/incruises-500x580.jpg" alt="InCruises" class="img-thumbnail">
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=criticalstrategy.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div> -->
-									</div>
+									<p class="text_center">
+										Click on the "Site Builder" button to build your custom Landing Page.
+									</p>
 
 								</div>
 							</div>
 						</div>
-					</div>
-		    	</div>
 
-		        <div id="custom_page_design_container" class="hidden_div">
+						<!-- <div class="row">
+							<div class="col-md-10 col-md-offset-1" style="margin-bottom: 20px;">
+								<div class="campaign_help">
+									<p class="text_center">
+										Note: you will be instructed to paste your copied "Form Code" into your Landing Page design within the Site Builder. Don't worry, we will guide you on how to do this. smily face.
+									</p>
+								</div>
+							</div>
+						</div> ->
 
-					<div class="row">
-				        <div class="col-md-12">
-				        	<div class="campaign_help">
-				        		<p class="lead text_center">
-								{"Click the button below to open the builder and start building your custom page design."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-								</p>
-				        	</div>
-			        	</div>
-		        	</div>
 
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group" style="text-align:center;">
-								<a href="/builder/?load_template=glc-blank.xs" class="btn btn-primary btn-glc-scheme btn-lg buildertemplate accesssitebuilder" target="_blank">Access Site Builder</a>
+						<div class="row">
+						    <div class="col-md-8 col-md-offset-2">
+						 		<a href="/builder" target="_blank" class="btn glc_button btnCopy btn-lg" style="width:100%;">
+							 		Access Site Builder
+						 		</a>
 							</div>
 						</div>
-					</div>
-		        </div>
 
-		        <div id="external_url_container" class="hidden_div">
-
-					<div class="row">
-				        <div class="col-md-12">
-				        	<div class="campaign_help">
-				        		<p class="lead text_center">
-								{"Enter the website URL where your page can be found."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-								</p>
-				        	</div>
-			        	</div>
-		        	</div>
-
-					<div class="row">
-						<div class="col-md-12">
-					  		<div class="col-md-8 col-md-offset-2">
+						<div class="row" style="display:none;">
+							<div class="col-md-8 col-md-offset-2">
+								<br>
 								<div class="form-group">
-									<input type="text" class="form-control input-lg" id="redirect_externalurl_txtbox" name="redirect_externalurl_txtbox" title="Your External Page URL Here" placeholder="yourwebsite.com/page.html">
-									<div id="form_name-error"></div>
+									<textarea class="form-control" id="formcode" style="height:300px" readonly="readonly"></textarea>
 								</div>
 							</div>
-						</div>
-					</div>
-		        </div>
-	        </div>
-		</div>
-		<!-- redirect_page container ends -->
-    </section>
 
-	<!-- Step 9 -->
-    <h3> {"Redirect URL"|alang}</h3>
-    <section>
-        <div class="new_form_div">
-			<br>
-        	<div class="row" >
-				<div class="col-md-12">
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Redirect URL"|alang}
-					</h1>
-				</div>
-
-		        <div class="col-md-10 col-md-offset-1">
-		        	<div class="campaign_help">
-		        		<p class="lead text_center">Now that you have your capture page built, you will need to insert your REDIRECT URL. <span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-		        	</div>
-		        	<div class="alert alert-warning">Your REDIRECT URL MUST begin with your custom url must begin with http:// or https://. example: http://www.glchub.com/ref/username or https://www.glchub.com/ref/username.</div>
-	        	</div>
-
-				<div class="col-md-12">
-			  		<div class="col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="sub2_redirect" name="sub2_redirect" placeholder="starts with http:// or https://">
-							<div id="sub2_redirect-error"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </div>
-    </section>
-
-    <!-- Step 10 -->
-	<h3> {"Thank You Page"|alang}</h3>
-    <section>
-		<!-- <div class="row text_center">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="alert alert-warning">Finished with your New Campaign? <br /><br />Click the "Publish Now" button to finish and publish your New Campaign. <br /><br /><a href="#" class="skip_to_publish btn btn-primary btn-lg">Publish Now</a> </div>
-			</div>
-		</div> -->
-
-    	<div class="row">
-    		<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Thank You Page"|alang}
-				</h1>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-	        	<div class="campaign_help">
-	        		<p class="lead text_center">A "Thank You Page" is the page your Visitors will be sent to after confirming their subscription from the system generated email.</p>
-					<p class="lead text_center">
-						From this page you can offer a Free E-book giveaway, you can have offer a free informational Video, or you can customize this page to upsell your offer.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-	        	</div>
-        	</div>
-		</div>
-
-
-
-		<!-- 3 column div selector -->
-		<div class="row">
-        	<div class="col-md-12">
-        		<div class="col-md-4">
-			 		<div class="steps-btn btn_thankyou_premadetemplate thankyou_url_option" title="Create a New List">
-			 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
-			 			<span>Templates</span>
-			 		</div>
-				</div>
-			    <div class="col-md-4">
-			 		<div class="steps-btn btn_thankyou_custompagedesign thankyou_url_option" title="Select Existing List Here">
-			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
-			 			<span>Custom Page Design</span>
-			 		</div>
-				</div>
-				<div class="col-md-4">
-			 		<div class="steps-btn btn_thankyou_externalurl" title="Select Existing List Here">
-			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
-			 			<span>External Website URL</span>
-			 		</div>
-				</div>
-			</div>
-        </div>
-		<!-- end 3 column div selector ends-->
-
-		<!-- redirect_page container -->
-		<div class="redirect_page_container row">
-			<div class="col-md-12">
-
-		    	<div id="thankyou_premadetemplate_container" class="hidden_div">
-					<div class="row">
-						<div id="pre_made_templates_wrapper">
-							<div class="row">
-						  		<div class="col-md-12">
-
-									<div id="radiobutton_container">
-										<div class="template_wrapper">
-											<span class="text_center template_title">Skin Care</span>
-											<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Video Access</span>
-											<img src="images/500x580-thankyou2.jpg" class="img-thumbnail" alt="Video Access" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-thankyou2.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_zoOPXlVtKEoBsEUL9KyL.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Download Your Videos</span>
-											<img src="images/500x580-thankyou3.jpg" class="img-thumbnail" alt="Download Your Videos" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-thankyou3.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_3E36IO2gm7I69UHdfZIG.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Thanks Signup</span>
-											<img src="images/500x580-thankyou4.jpg" class="img-thumbnail" alt="Thanks Signup" />
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=glc-thankyou4.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_catHaUtO417h4R4dCZKE.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<!-- <div class="template_wrapper">
-											<span class="text_center template_title">Money Making</span>
-											<img src="images/time-limit-500x580.jpg" alt="Making Money" class="img-thumbnail">
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=criticalstrategy.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Travel</span>
-											<img src="images/incruises-500x580.jpg" alt="InCruises" class="img-thumbnail">
-											<div class="template_buttons">
-											  	<a href="/builder/?load_template=criticalstrategy.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="/builder/elements/preview_Lc74qtEiiSmbOE6yLGyn.html" class="btn btn-primary" target="_blank">DEMO</a>
-											</div>
-										</div> -->
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-		    	</div>
-
-		        <div id="thankyou_custompagedesign_container" class="hidden_div">
-
-					<div class="row">
-				        <div class="col-md-12">
-				        	<div class="campaign_help">
-				        		<p class="lead text_center">
-								{"Click the button below to open the builder and start building your custom page design."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-								</p>
-				        	</div>
-			        	</div>
-		        	</div>
-
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group" style="text-align:center;">
-								<a href="/builder/?load_template=glc-blank.xs" class="btn btn-primary btn-glc-scheme btn-lg buildertemplate accesssitebuilder" target="_blank">Access Site Builder</a>
-							</div>
-						</div>
-					</div>
-		        </div>
-
-		        <div id="thankyou_externalurl_container" class="hidden_div">
-
-					<div class="row">
-				        <div class="col-md-12">
-				        	<div class="campaign_help">
-				        		<p class="lead text_center">
-								{"Enter the website URL where your page can be found."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-								</p>
-				        	</div>
-			        	</div>
-		        	</div>
-
-					<div class="row">
-						<div class="col-md-12">
-					  		<div class="col-md-8 col-md-offset-2">
+							<!-- <div class="col-md-8 col-md-offset-2">
 								<div class="form-group">
-									<input type="text" class="form-control input-lg" id="thankyou_externalurl_txtbox" name="thankyou_externalurl_txtbox" title="Your External Page URL Here" placeholder="yourwebsite.com/page.html">
-									<div id="form_name-error"></div>
+									<label for="">once you've created your landing page, insert your page redirect link in this box.</label>
+									<input type="text" class="form-control" id="landing-page-url-link" name="landing-page-url-link" placeholder="i.e. http://glchub.com/builder/elements/preview_wtgtFmvIEIQVDV2RtfxP.html" required>
+									<div id="landing-page-url-link-error"></div>
 								</div>
-							</div>
+							</div> ->
 						</div>
 					</div>
 
-		        </div>
 
-
-	        </div>
+				</div>
+			</div> -->
 		</div>
-		<!-- redirect_page container ends -->
     </section>
 
-    <!-- Step 11 -->
-    <h3> {"Thank You Page URL"|alang}</h3>
+
+	<!-- Step 6 -->
+    <h3><span>6.</span> {"Landing Page URL"|alang}</h3>
     <section>
-        <div class="new_form_div">
+        <div id="new_form_div">
 			<br>
         	<div class="row" >
 				<div class="col-md-12">
 					<h1 class="step_header_text">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Thank You Page URL"|alang}
+						{"Landing Page URL"|alang}
 					</h1>
 				</div>
 
@@ -928,24 +595,340 @@
 				<div class="col-md-12">
 			  		<div class="col-md-8 col-md-offset-2">
 						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="sub3_redirect" name="sub3_redirect" placeholder="starts with http:// or https://">
-							<div id="sub3_redirect-error"></div>
+							<!-- <label for="">Form Name: </label> -->
+							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="Paste Your URL here">
+							<div id="form_name-error"></div>
+							<!-- <div class="text_center hint">
+								This is how you will keep track of each form for your page/site.
+							</div> -->
 						</div>
 					</div>
 				</div>
 
-
+				<!-- <div class="col-md-12">
+					<hr class="divider" />
+					<h1 class="step_header_text">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						{"Form Options"|alang}
+					</h1>
+				</div>
+				<div class="col-md-12">
+					<div class="campaign_help">
+						<p class="lead text-center">Check the Subcriber field options you want to collect.</p>
+					</div>
+				</div>
+				<div class="col-md-2 col-md-offset-5">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
+						</label>
+					</div>
+					{foreach from=$optional_fields item=field}
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+						</label>
+					</div>
+					{/foreach}
+				</div>
+				<div class="col-md-12">
+					<div class="campaign_help">
+						<p class="lead text-center">This is how you will keep track of each form for your page/site.</p>
+					</div>
+				</div> -->
 			</div>
         </div>
     </section>
 
-    <!-- Step 12 -->
-    <h3> {"Done!"|alang}</h3>
+	<!-- Step 7 -->
+    <h3><span>7.</span> {"Thank You / Redirect Page"|alang}</h3>
+    <section>
+    	<div class="row">
+    		<div class="col-md-12">
+				<h1 class="step_header_text">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					{"Thank You / Redirect Page"|alang}
+				</h1>
+			</div>
+
+			<!-- <div class="col-md-12">
+	        	<div class="campaign_help">
+	        		<p class="lead text_center">Choose, Create or insert a custom URL as your Subcriber Thank You Page.</p>
+	        	</div>
+        	</div> -->
+        	<div class="row">
+				<div class="col-md-12">
+					<div class="campaign_help">
+						<h2 class="text_center">What is a Thank you Page?</h2>
+
+						<p class="lead text_center">
+							<!-- Hover over and click on the box to choose from our pre-made Landing Page templates, or you can create a new Landing Page using the Site Builder. -->
+							<!-- A "Thank you page" is the page your visitors see after submitting their information on a form. You can select from any our pre-made Subcriber Thank you Pages, by clicking on a Thumbnail image below, build your own using our Site builder or add a custom URL that points to your custom page/template.-->
+
+
+							A "Thank you page" is the page your visitors see after submitting their information on a form.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+				<hr class="divider" />
+					<div class="campaign_help">
+						<h2 class="text_center">What is a Redirect Page?</h2>
+
+						<p class="lead text_center">
+							A Redirect Page is a particular page of your choice that you can send your Visitors after submitting form information.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="campaign_help">
+						<p class="lead text_center">
+							Here you have 3 options. You can choose from one of our pre-made "Thank You" page templates, you can build your own "Thank You" page using the Site Builder, or add a custom URL link.
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+
+
+        	<!-- <div class="col-md-12">
+        		<div class="row">
+	        		<div class="col-md-3 col-md-offset-1">
+				 		<div class="steps-btn btn_redirect_page_select_template">
+				 			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+				 			<span>Templates</span>
+				 		</div>
+					</div>
+				    <div class="col-md-3">
+				 		<div class="steps-btn btn_redirect_page_builder">
+				 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+				 			<span>Site Builder</span>
+				 		</div>
+					</div>
+					<div class="col-md-3">
+				 		<div class="steps-btn btn_redirect_page_custom_url">
+				 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+				 			<span>Custom URL</span>
+				 		</div>
+					</div>
+				</div>
+			</div> -->
+
+
+
+		<div class="col-md-10 col-md-offset-1" id="redirect_page_container">
+			<div class="row select_redirect_page_template">
+				<div class="col-md-12">
+					<div id="radiobutton_container">
+
+
+
+						<!-- <input type="radio" id="thankyoupage_01" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_01">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="thankyoupage_02" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_02">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="thankyoupage_03" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_03">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label>
+
+
+						<input type="radio" id="thankyoupage_04" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_04">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label>
+
+
+						<input type="radio" id="thankyoupage_05" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_05">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label>
+
+						<input type="radio" id="thankyoupage_06" name="landing-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+						<label for="thankyoupage_06">
+							<img src="images/thankyou.png" alt="..." class="img-thumbnail">
+						</label> -->
+
+						<!-- <label for="landingpage_custom" style="width:100%" class="btn btn-warning btn-lg">
+							<input type="radio" id="landingpage_custom" name="landing-page-url" data-customlandingpage="yes" value="" />
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> or you can design you own using the Site Builder.
+						</label> -->
+					</div>
+					<div id="landing-page-url-error"></div>
+				</div>
+			</div>
+
+			<!-- <div class="row select_redirect_page_builder">
+				<div id="custom_landing_page_div">
+					<div class="col-md-12">
+						<div class="row">
+						    <div class="col-md-8 col-md-offset-2">
+						 		<a href="/builder" target="_blank" class="btn glc_button btnCopy btn-lg" style="width:100%;">
+							 		Access Site Builder
+						 		</a>
+							</div>
+						</div>
+
+						<div class="row" style="display:none;">
+							<div class="col-md-8 col-md-offset-2">
+								<br>
+								<div class="form-group">
+									<textarea class="form-control" id="formcode" style="height:300px" readonly="readonly"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- <div class="row select_redirect_page_custom_url">
+				<div class="col-md-10 col-md-offset-1">
+		        	<div class="campaign_help">
+		        		<p class="lead text_center">If you want, you can also set the redirect URL to a custom one. Just paste your custom URL below.</p>
+		        	</div>
+	        	</div>
+
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<input type="text" class="form-control input-lg" id="form_name" name="form_name" placeholder="Paste Your Custom URL here">
+							<div id="form_name-error"></div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+
+
+		  		<!-- <div class="col-md-8 col-md-offset-2">
+					<div class="form-group">
+						<label for=""><i></i></label>
+					</div>
+				</div> -->
+
+			<!-- <div class="col-md-12">
+				<div class="col-md-8 col-md-offset-2">
+					<div id="radiobutton_container">
+
+
+						<label style="width:100%">
+							<input type="radio" name="sub2_redirect" value="" />
+							Design your own using the Site Builder.
+
+							or as an example, you can add a custom URL link to redirect your leads to any web page or site. Example: www.glchub.com/ref/username
+							<br>
+							<br>
+							Custom Page Link
+							<p><i>If you would like to design your own redirect page, please click the button below to create the page on GLC Builder. After generating the page, copy the url and come back to this page to paste the link in the text field below.</i> </p>
+							<br><br>
+							<a href="/builder" target="_blank" class="btn glc_button btn-lg" style="width:100%;">Access Site Builder</a>
+							<br><br>
+							<p>
+								or you can add a custom URL link as your redirect page. Example: www.glchub.com/ref/username
+
+								<br> Once you've chosen your redirect method, insert your redirect URL link here:
+							</p>
+							<br><br>
+							<input type="text" class="form-control input-lg" name="sub2_redirect_input" id="sub2_redirect_input" placeholder="i.e. http://glchub.com/builder/elements/preview_yfbO1MuttWyk4I0RDdxl.html">
+						</label>
+						<div id="sub2_redirect-error"></div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+    </section>
+
+    <!-- Step 8 -->
+	<h3><span>8.</span> {"Download Page"|alang}</h3>
+    <section>
+    	<div class="row">
+    		<div class="col-md-12">
+				<h1 class="step_header_text">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					{"Create Campaign Download Page"|alang}
+				</h1>
+			</div>
+
+			<div class="col-md-12">
+	        	<div class="campaign_help">
+	        		<p class="lead text_center">A "Download page" is the page your Visitors will be sent to after confirming their subscription from the system generated email.</p>
+					<p class="lead text_center">
+						From this page you can offer a Free E-book giveaway, you can have offer a free informational Video, or you can customize this page to upsell your offer.
+					</p>
+	        	</div>
+        	</div>
+
+
+			<div class="col-md-12">
+				<div id="radiobutton_container">
+					<input type="radio" id="downloadpage_01" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+					<label for="downloadpage_01">
+						<img src="images/freeebook.png" class="img-thumbnail" alt="text">
+					</label>
+
+					<input type="radio" id="downloadpage_02" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+
+					<label for="downloadpage_02">
+						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+					</label>
+
+					<input type="radio" id="downloadpage_03" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+					<label for="downloadpage_03">
+						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+					</label>
+
+					<input type="radio" id="downloadpage_04" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+					<label for="downloadpage_04">
+						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+					</label>
+
+					<input type="radio" id="downloadpage_05" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+					<label for="downloadpage_05">
+						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+					</label>
+
+					<input type="radio" id="downloadpage_06" name="download-page-url" value="http://glchub.com/builder/elements/preview_VjIQ8eoC3mFA1GjtDGfa.html" />
+					<label for="downloadpage_06">
+						<img src="images/freeebook.png" alt="..." class="img-thumbnail">
+					</label>
+
+					<!-- <label for="landingpage_custom" style="width:100%" class="btn btn-warning btn-lg">
+						<input type="radio" id="landingpage_custom" name="landing-page-url" data-customlandingpage="yes" value="" />
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i> or you can design you own using the Site Builder.
+					</label> -->
+				</div>
+				<div id="landing-page-url-error"></div>
+			</div>
+		</div>
+    </section>
+
+
+    <!-- Step 9 -->
+    <h3><span>9.</span> {"Done!"|alang}</h3>
     <section>
     	<div class="row">
 			<div class="col-md-12">
 				<div class="campaign_help">
-        			<p class="lead">Congratulations! You just finished creating your landing page. You can visit your newly created landing page via the link below: <span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+        			<p class="lead">Congratulations! You just finished creating your landing page. You can visit your newly created landing page via the link below:</p>
         		</div>
         	</div>
         </div>
@@ -954,16 +937,9 @@
 				<p class="lead" style="text-align:center;" id="funnel_link"></p>
 			</div>
         </div>
-
-        <div class="sharer_wrapper">
-			<ul>
-				<li class="facebook"><a class="social" id="fb_share" href="" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-				<li class="twitter"><a class="social" id="twitter_share" href="" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-				<li class="gplus"><a class="social" id="gplus_share" href="" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
-				<li class="email"><a class="social" id="email_share" href="" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-			</ul>
-        </div>
     </section>
+
+
 
 </form>
 
