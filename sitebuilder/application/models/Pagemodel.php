@@ -377,14 +377,16 @@ class Pagemodel extends CI_Model {
 		    foreach( $q->result() as $frame ) {
 			    
 			    $html = str_get_html($frame->frames_content);
-			    
+
 			    $block = $html->find('div[id=page]', 0)->innertext;
-			    
 			    
 			    $theSkeleton->find('div[id=page]', 0)->innertext .= $block;
 			    			    
 			    
 		    }
+
+		    $css = $theSkeleton->find('link[rel=stylesheet]', 0)->href;
+		    $theSkeleton->find('link[rel=stylesheet]', 0)->href = sprintf('%s/elements/%s', $_SERVER['DOCUMENT_ROOT'], $css);
 		    
 		    $str = $theSkeleton;
 		    
