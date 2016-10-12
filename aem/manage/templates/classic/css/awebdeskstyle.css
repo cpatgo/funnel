@@ -1393,20 +1393,20 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .sharer_wrapper ul li a:hover { color:white;}
 
 
-.btn-custom-campaign i, .btn-premade-campaign i{ display: block;margin-bottom: 20px;
+.btn-custom-campaign i, .btn-done-funnels i{ display: block;margin-bottom: 20px;
   font-size: 50px;
 }
 
-.btn-custom-campaign, .btn-premade-campaign{ padding: 15%;}
+.btn-custom-campaign, .btn-done-funnels{ padding: 15%;}
 
 .btn-orange {
   background-color: #e97e00;
   border-color: #e97e00;
-  color: #ffffff;
+  color: #fff !important;
 }
 
 .btn-green {
-    color: #fff;
+    color: #fff !important;
     background-color: #337ab7;
     border-color: #2e6da4;
 }
