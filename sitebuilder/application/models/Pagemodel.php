@@ -377,6 +377,58 @@ class Pagemodel extends CI_Model {
 		    foreach( $q->result() as $frame ) {
 			    
 			    $html = str_get_html($frame->frames_content);
+			    
+			    $block = $html->find('div[id=page]', 0)->innertext;
+			    
+			    
+			    $theSkeleton->find('div[id=page]', 0)->innertext .= $block;
+			    			    
+			    
+		    }
+		    
+		    $str = $theSkeleton;
+		    
+		    echo $str;
+		    
+	    }
+	    
+    }
+
+    public function displayPage($pageID) {
+	    
+	    $this->load->library('simple_html_dom');
+	    
+	    
+	    //grab the frames
+	    
+	    $q = $this->db->from('frames')->where('pages_id', $pageID)->get();
+	    	    
+	    if( $q->num_rows() > 0 ) {
+	    	
+	    	
+	    	//get the skeleton
+	    	$theSkeleton = file_get_html('./elements/skeleton.html');
+	    
+		    
+		    foreach( $q->result() as $frame ) {
+			    
+			    $html = str_get_html($frame->frames_content);
+
+			    // Update file path of links
+			    foreach($html->find('link') as $linkobj) {
+			        $link = $linkobj->href;
+			        if(strpos($link, 'http') == false && strpos($link, '//') == false) $linkobj->href = sprintf('../elements/%s', $link);
+				}
+				// Update file path of scripts
+				foreach($html->find('script') as $scriptobj) {
+			        $script = $scriptobj->src;
+			        if(strpos($script, 'http') == false && strpos($link, '//') == false) $scriptobj->src = sprintf('../elements/%s', $script);
+				}
+				// Update file path of images
+				foreach($html->find('img') as $imgobj) {
+			        $img = $imgobj->src;
+			        if(strpos($img, 'http') == false) $imgobj->src = sprintf('../elements/%s', $img);
+				}
 
 			    $block = $html->find('div[id=page]', 0)->innertext;
 			    
@@ -385,8 +437,11 @@ class Pagemodel extends CI_Model {
 			    
 		    }
 
-		    $css = $theSkeleton->find('link[rel=stylesheet]', 0)->href;
-		    $theSkeleton->find('link[rel=stylesheet]', 0)->href = sprintf('%s/elements/%s', $_SERVER['DOCUMENT_ROOT'], $css);
+		    // Update file path of skeleton css and builder js
+		    $css = $theSkeleton->find('link[id=skeleton_css]', 0)->href;
+		    $theSkeleton->find('link[id=skeleton_css]', 0)->href = sprintf('../elements/%s', $css);
+		    $js = $theSkeleton->find('script[id=build_js]', 0)->src;
+		    $theSkeleton->find('script[id=build_js]', 0)->src = sprintf('../elements/%s', $js);
 		    
 		    $str = $theSkeleton;
 		    
