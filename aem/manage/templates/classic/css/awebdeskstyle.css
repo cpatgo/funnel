@@ -1397,7 +1397,18 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
   font-size: 50px;
 }
 
-.btn-custom-campaign, .btn-done-funnels{ }
+.btn-custom-campaign, .btn-done-funnels{ width: 60%; }
+
+.optin-campaign, .done-funnels {
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+.optin-campaign ul li, .done-funnels ul li {
+  text-align:left;
+}
 
 .btn-orange {
   background-color: #e97e00;
