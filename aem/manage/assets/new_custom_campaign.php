@@ -5,10 +5,10 @@ require_once adesk_admin("functions/template.php");
 require_once awebdesk_classes("select.php");
 require_once awebdesk_classes("pagination.php");
 
-class new_funnel_campaign_assets extends AWEBP_Page {
+class new_custom_campaign_assets extends AWEBP_Page {
 
-	function new_funnel_campaign_assets() {
-		$this->pageTitle = _a("Select Campaign Type");
+	function new_custom_campaign_assets() {
+		$this->pageTitle = _a("Create a New Custom Campaign");
 		//$this->sideTemplate = "side.message.htm";
 		$this->AWEBP_Page();
 	}
@@ -25,7 +25,7 @@ class new_funnel_campaign_assets extends AWEBP_Page {
 		$fields = list_get_fields(array(), true); // no list id's, but global
 		$smarty->assign("optional_fields", $fields);
 
-		$smarty->assign("content_template", "new_funnel_campaign.htm");
+		$smarty->assign("content_template", "new_custom_campaign.htm");
 	}
 }
 
