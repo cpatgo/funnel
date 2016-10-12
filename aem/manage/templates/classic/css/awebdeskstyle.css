@@ -1393,13 +1393,13 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .sharer_wrapper ul li a:hover { color:white;}
 
 
-.btn-custom-campaign i, .btn-done-funnels i{ display: block;margin-bottom: 20px;
-  font-size: 50px;
+.btn-custom-campaign i, .btn-done-funnels i{
+  margin-right: 10px;
 }
 
 .btn-custom-campaign, .btn-done-funnels{ width: 60%; }
 
-.optin-campaign, .done-funnels {
+.campaign_wrapper {
     text-align: center;
     border: 1px solid #333;
     border-radius: 14px;
