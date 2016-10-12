@@ -1442,4 +1442,10 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
   /*font-size:15px;*/
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #258dcd;
+    border: none;
+}
+
 .btn:hover { opacity:0.8;}
