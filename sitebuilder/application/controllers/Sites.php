@@ -828,6 +828,13 @@ class Sites extends MY_Controller {
 		redirect('sites/'.$siteID."?p=".$page, 'location');
 	}
 
+	public function fetchForm()
+	{
+        $form = $this->sitemodel->getForm($_POST['formID']);
+        if($form['result_code'] == 1) die(json_encode(array('type' => 'success', 'html' => $form['html'])));
+        die(json_encode(array('type' => 'error')));
+	}
+
 }
 
 /* End of file sites.php */
