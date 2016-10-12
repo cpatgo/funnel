@@ -7,7 +7,7 @@ class Temple extends MY_Controller {
 		parent::__construct();
 		$this->load->library('ion_auth');
 		$this->load->helper('url');
-		$this->load->model('pagemodel');
+		$this->load->model(array('sitemodel', 'pagemodel'));
 				
 		/*if(!$this->ion_auth->logged_in()) {
 			
@@ -27,6 +27,15 @@ class Temple extends MY_Controller {
 	
 		$this->pagemodel->loadPage($pageID);
 				
+	}
+
+	/**
+	 * function generates a live preview of current changes
+	 */
+	public function preview($siteName)
+	{
+		$siteData = $this->sitemodel->getSiteByName( $siteName );
+ 		$this->pagemodel->displayPage($siteData['pages']['index']['page_id']);
 	}
 	
 }

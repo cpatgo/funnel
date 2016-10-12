@@ -739,16 +739,6 @@ class Sites extends MY_Controller {
 	}
 
 	/**
-	 * function generates a live preview of current changes
-	 */
-	public function preview($siteName)
-	{
-		$siteData = $this->sitemodel->getSiteByName( $siteName );
- 		$this->pagemodel->displayPage($siteData['pages']['index']['page_id']);
-	}
-
-
-	/**
 	 * Delete template
 	 * @param  integer $siteID
 	 * @param  integer $pageID
