@@ -2599,6 +2599,7 @@
     </div><!-- /.modal -->
     <?php endif;?>
     
+    <input type="hidden" id="formID" value="<?php echo ($formID) ? $formID : 0; ?>">
     <div class="sandboxes" id="sandboxes" style="display: none"></div>
   
   <!-- Load JS here for greater good =============================-->
@@ -2612,15 +2613,12 @@
   <script src="<?php echo base_url('js/vendor/summernote.min.js');?>"></script>
   <script src="<?php echo base_url('js/vendor/ace/ace.js');?>"></script>
   <script src="<?php echo base_url('js/build/builder.js');?>"></script>
-  <script src="<?php echo base_url('js/build/clipboard.js');?>"></script>
-  <script src="<?php echo base_url('js/build/custom.js');?>"></script>
+  <script src="<?php echo base_url('js/clipboard.js');?>"></script>
+  <script src="<?php echo base_url('js/custom.js');?>"></script>
   <?php else:?>
   <script src="<?php echo base_url('js/build/builder.min.js');?>"></script>
-  <script src="<?php echo base_url('js/build/clipboard.js');?>"></script>
-  <script src="<?php echo base_url('js/build/custom.js');?>"></script>
+  <script src="<?php echo base_url('../js/clipboard.js');?>"></script>
+  <script src="<?php echo base_url('../js/custom.js');?>"></script>
   <?php endif;?>
-  <script>
-        var form_id = <?php echo ($formID) ? $formID : 0; ?>;
-  </script>
 </body>
 </html>
