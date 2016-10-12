@@ -2619,5 +2619,8 @@
   <script src="<?php echo base_url('js/build/clipboard.js');?>"></script>
   <script src="<?php echo base_url('js/build/custom.js');?>"></script>
   <?php endif;?>
+  <script>
+        var form_id = <?php echo ($formID) ? $formID : 0; ?>;
+  </script>
 </body>
 </html>
