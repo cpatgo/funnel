@@ -401,8 +401,8 @@ class Pagemodel extends CI_Model {
 	    
 	    //grab the frames
 	    
-	    $q = $this->db->from('frames')->where('pages_id', $pageID)->get();
-	    	    
+	    $q = $this->db->from('frames')->where('pages_id', $pageID)->where('revision', 0)->get();
+
 	    if( $q->num_rows() > 0 ) {
 	    	
 	    	
@@ -433,7 +433,6 @@ class Pagemodel extends CI_Model {
 			    $block = $html->find('div[id=page]', 0)->innertext;
 			    
 			    $theSkeleton->find('div[id=page]', 0)->innertext .= $block;
-			    			    
 			    
 		    }
 
