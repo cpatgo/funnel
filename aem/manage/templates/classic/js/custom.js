@@ -240,7 +240,7 @@ jQuery(document).ready(function(){
       {
           aem_functions.destroy_list_session();
           form2.validate().settings.ignore = ":disabled";
-          return form.valid();
+          return form2.valid();
       },
       onFinished: function (event, currentIndex)
       {
@@ -248,15 +248,11 @@ jQuery(document).ready(function(){
       }
   });
 
+
+
   jQuery('.btn-choose').click(function() {
       jQuery('.actions > ul > li:nth-child(2) > a').click();
   });
-
-
-
-
-
-
 
 
   // CUSTOM CAMPAIGN
