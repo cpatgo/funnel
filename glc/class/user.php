@@ -1539,6 +1539,65 @@ class Class_User extends Class_Database
         return $this->insert($sql);
     }
 
+    function sitebuilder_user_login($email, $password)
+    {
+        // login to sitebuilder
+        $url = sprintf('%s/authlogin', glc_option('sitebuilder_domain'));
+        $data = array(
+            'identity'     => $email,
+            'password'     => $password,
+            'remember'     => true
+        );
+        return $this->sitebuilder_curl($url, $data);
+    }
+
+    function sitebuilder_user_update($email, $password)
+    {
+        require_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
+
+        define('ENVIRONMENT', 'production');
+        define('BASEPATH', 'abc');
+        require_once($_SERVER['DOCUMENT_ROOT'].'/sitebuilder/application/config/database.php');
+
+        $class_user = getInstance('Class_User');
+        $users = $class_user->get_users();
+
+        //Connect to sitebuilder's db
+        $sitebuilder_con = mysqli_connect($db['default']['hostname'],$db['default']['username'],$db['default']['password'],$db['default']['database']);
+
+        // Get user information based on email address
+        $sql_user = mysqli_query($sitebuilder_con, sprintf('SELECT * FROM users WHERE email = "%s"', $email));
+        while($row = $sql_user->fetch_assoc()) {
+            $user = $row;
+        }
+
+        // Setup data
+        $url = sprintf('%s/cwp', glc_option('sitebuilder_domain'));
+        $data = array(
+            'userID'    => $user['id'],
+            'email'     => $email,
+            'password'  => $password,
+            'token'     => 'kkEoms9yo4IcFonWmWgZ'
+        );
+
+        //Login the user again
+        $this->sitebuilder_user_login($email, $password);
+
+        // Send update password request to sitebuilder
+        return $this->sitebuilder_curl($url, $data);
+    }   
+
+    function sitebuilder_curl($url, $data)
+    {
+        $request = curl_init($url); // initiate curl object
+        curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+        curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+        curl_setopt($request, CURLOPT_POSTFIELDS, $data); // use HTTP POST to send form data
+        $response = (string)curl_exec($request); // execute curl fetch and store results in $response
+        curl_close($request); // close curl object
+        return json_decode($response);
+    }
+
     function curl_request($params, $post)
     {
         require_once(dirname(dirname(__FILE__)).'/config.php');
