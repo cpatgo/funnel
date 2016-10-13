@@ -60,6 +60,8 @@ $route['temple/([0-9]+?)'] = "temple/index/$1";
 
 $route['authlogin'] = "login/login";
 
+$route['cwp'] = "login/update";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
