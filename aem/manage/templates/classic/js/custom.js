@@ -182,7 +182,7 @@ jQuery(document).ready(function(){
       },
       onStepChanged: function (event, current, next) {
           ctr = (1 + current) * 8.333333333334;
-
+          console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
 
