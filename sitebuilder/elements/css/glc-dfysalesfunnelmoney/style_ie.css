@@ -1,0 +1,19 @@
+body
+{
+	font-family:verdana,sans;
+	font-size:12px;
+	margin:0;
+	background-color:white;
+}
+html
+{
+    margin: 0;
+    padding: 0;	
+}
+
+
+.clsWrapper
+{
+	width:100%;
+	margin:0px auto;
+}
