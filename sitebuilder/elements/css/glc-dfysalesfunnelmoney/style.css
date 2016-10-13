@@ -70,7 +70,7 @@ ul, li, form, p, h1, h2, h3, h4, h5 ,h6
 {
 	padding:20px 0px;
 }
-.clsBtn_grn:hover{color:#fff; opacity:0.8;}
+.clsBtn_grn:hover{color:#fff; opacity:0.8; text-decoration:none; cursor:pointer;}
 .clsBtn_grn
 {
 	width:100%;
