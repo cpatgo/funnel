@@ -118,7 +118,8 @@ jQuery(document).ready(function(){
       autoFocus: true,
       // initialize
       onInit: function(event, current){
-          //jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+          // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+          jQuery('.actions > ul > li:first-child a').attr('href', 'aem/manage/desk.php?action=new_funnel_campaign');
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
 
