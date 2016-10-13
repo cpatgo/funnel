@@ -141,7 +141,7 @@ jQuery(document).ready(function(){
             jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
             jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none');
           }
-        
+
           if (newIndex < currentIndex) {
               return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
           }
@@ -236,17 +236,17 @@ jQuery(document).ready(function(){
           }
 
           // console.log(current);
-          if (current == 5) { // if current index is equals to 4th step
+          if (current == 6) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
           }
 
-          if (current == 7) { // if current index is equals to 4th step
+          if (current == 8) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
           }
 
-          if (current == 9) { // if current index is equals to 4th step
+          if (current == 10) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
           }
