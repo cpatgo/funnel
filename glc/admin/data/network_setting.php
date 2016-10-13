@@ -83,6 +83,8 @@ if(isset($_POST['submit']))
 	glc_update_option('aem_special_wp_membership', $_POST['aem_special_wp_membership']);
 	glc_update_option('aem_special_matrix_membership', $_POST['aem_special_matrix_membership']);
 
+	glc_update_option('sitebuilder_domain', $_POST['sitebuilder_domain']);
+
 	//Update setting in setting table
 	$direct_member_income = $_REQUEST['direct_member_income'];
 	$pin_cost = $_REQUEST['pin_cost'];
@@ -203,6 +205,8 @@ $aem_founder_id = glc_option('aem_founder_id');
 $aem_special_registration = glc_option('aem_special_registration');
 $aem_special_wp_membership = glc_option('aem_special_wp_membership');
 $aem_special_matrix_membership = glc_option('aem_special_matrix_membership');
+
+$sitebuilder_domain = glc_option('sitebuilder_domain');
 
 ?>
 <div class="ibox-content">
@@ -363,6 +367,16 @@ $aem_special_matrix_membership = glc_option('aem_special_matrix_membership');
 		<td colspan="4"><B>Matrix Membership</B></td>
 		<td colspan="7">
 			<input type="text" name="aem_special_matrix_membership" value="<?=$aem_special_matrix_membership;?>" />
+		</td>
+	</tr>
+
+	<!-- SITEBUILDER DOMAIN -->
+	<tr><td colspan="9">&nbsp;</td></tr>
+	<tr><td colspan="9"><b>SITEBUILDER DETAILS</b></td></tr>
+	<tr>
+		<td colspan="4"><B>DOMAIN</B></td>
+		<td colspan="7">
+			<input type="text" name="sitebuilder_domain" value="<?=$sitebuilder_domain;?>" placeholder="Ex. http://sitebuilder.glchub.com" />
 		</td>
 	</tr>
 	
