@@ -174,8 +174,8 @@ jQuery(document).ready(function(){
               aem_functions.update_form();
           }
 
-          form.validate().settings.ignore = ":disabled,:hidden";
-          return form.valid();
+          form2.validate().settings.ignore = ":disabled,:hidden";
+          return form2.valid();
       },
       onStepChanged: function (event, current, next) {
           ctr = (1 + current) * 8.333333333334;
