@@ -136,6 +136,12 @@ jQuery(document).ready(function(){
       },
       onStepChanging: function (event, currentIndex, newIndex)
       {
+          // if user goes back to 1st step, initialize action buttons
+          if (currentIndex == 0) {
+            jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
+            jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none');
+          }
+        
           if (newIndex < currentIndex) {
               return true; // If user click on "Previous" button or clicked a previous step header, we just normally let him/her go
           }
@@ -184,7 +190,11 @@ jQuery(document).ready(function(){
           return form2.valid();
       },
       onStepChanged: function (event, current, next) {
-          jQuery('.actions > ul > li:first-child a').attr('href', '#previous');
+
+          jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
+
+
+
           ctr = (1 + current) * 8.333333333334;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
