@@ -1,21 +1,24 @@
 var _Elements = {"elements": {
     "About Me": [
+       /* 3 Elements here */
+       {"url":"elements/glc-about1.html", "height":163, "thumbnail":"elements/thumbs/glc-about1.jpg"},
+       {"url":"elements/glc-about2.html", "height":163, "thumbnail":"elements/thumbs/glc-about2.jpg"}
 
     ],
-    
+
+    "DFY Funnels": [
+      /* 5 Elements */
+      {"url":"elements/glc-dfysalesfunnelmoney.html", "height":163, "thumbnail":"elements/thumbs/glc-dfysalesfunnelmoney.jpg"}
+    ],
+
     "Download": [
 
     ],
 
     "Event": [
-        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"}, // DENTAL
+        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"},
         {"url":"elements/glc-event2.html", "height":163, "thumbnail":"elements/thumbs/glc-event2.jpg"},
         // {"url":"elements/glc-event3.html", "height":163, "thumbnail":"elements/thumbs/glc-event3.jpg"},
-    ],
-
-    "General": [
-        {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"}, // DENTAL
-        {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"} // FITNESS
     ],
 
     "Giveaways": [
@@ -42,7 +45,7 @@ var _Elements = {"elements": {
     ],
 
     "MLM": [
-        
+
     ],
 
     "Nutrition": [
@@ -60,7 +63,7 @@ var _Elements = {"elements": {
     ],
 
     "Sales": [
-        
+
     ],
 
     "Skin Care": [
@@ -102,7 +105,7 @@ var _Elements = {"elements": {
     // "Sales Funnel": [
     //     {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/thumbs/glc-optin.png"}
     // ],
-    
+
     "Navigation":[
         {"url":"elements/nav1-1.html","height":79, "thumbnail":"elements/thumbs/nav1-1.png"},
         {"url":"elements/nav2-1.html","height":78, "thumbnail":"elements/thumbs/nav2-1.png"},
@@ -181,7 +184,7 @@ var _Elements = {"elements": {
         {"url":"elements/features8-2.html","height":1023, "thumbnail":"elements/thumbs/features8-2.png"},
         {"url":"elements/features9-2.html","height":750, "thumbnail":"elements/thumbs/features9-2.png"},
         {"url":"elements/features10-2.html","height":843, "thumbnail":"elements/thumbs/features10-2.png"},
-    ],  
+    ],
 
     "Call-to-Action":[
         {"url":"elements/cta1-1.html","height":291, "thumbnail":"elements/thumbs/cta1-1.png"},
@@ -200,20 +203,20 @@ var _Elements = {"elements": {
 
     "Testimonials":[
         {"url":"elements/testimonials1-1.html","height":249, "thumbnail":"elements/thumbs/testimonials1-1.png"},
-        {"url":"elements/testimonials2-1.html","height":682, "thumbnail":"elements/thumbs/testimonials2-1.png"},      
-        {"url":"elements/testimonials3-1.html","height":645, "thumbnail":"elements/thumbs/testimonials3-1.png"},   
+        {"url":"elements/testimonials2-1.html","height":682, "thumbnail":"elements/thumbs/testimonials2-1.png"},
+        {"url":"elements/testimonials3-1.html","height":645, "thumbnail":"elements/thumbs/testimonials3-1.png"},
         {"url":"elements/testimonials4-1.html","height":525, "thumbnail":"elements/thumbs/testimonials4-1.png"},
         {"url":"elements/testimonials5-1.html","height":799, "thumbnail":"elements/thumbs/testimonials5-1.png", "sandbox":true, "loaderFunction":"twitterPosts"},
         {"url":"elements/testimonials6-1.html","height":295, "thumbnail":"elements/thumbs/testimonials6-1.png"},
         {"url":"elements/testimonials7-1.html","height":383, "thumbnail":"elements/thumbs/testimonials7-1.png"},
         {"url":"elements/testimonials1-2.html","height":249, "thumbnail":"elements/thumbs/testimonials1-2.png"},
         {"url":"elements/testimonials1-3.html","height":249, "thumbnail":"elements/thumbs/testimonials1-3.png"},
-        {"url":"elements/testimonials2-2.html","height":682, "thumbnail":"elements/thumbs/testimonials2-2.png"},  
+        {"url":"elements/testimonials2-2.html","height":682, "thumbnail":"elements/thumbs/testimonials2-2.png"},
         {"url":"elements/testimonials3-2.html","height":645, "thumbnail":"elements/thumbs/testimonials3-2.png"},
         {"url":"elements/testimonials4-2.html","height":525, "thumbnail":"elements/thumbs/testimonials4-2.png"},
         {"url":"elements/testimonials6-2.html","height":295, "thumbnail":"elements/thumbs/testimonials6-2.png"},
         {"url":"elements/testimonials7-2.html","height":383, "thumbnail":"elements/thumbs/testimonials7-2.png"},
-        {"url":"elements/testimonials7-3.html","height":383, "thumbnail":"elements/thumbs/testimonials7-3.png"}  
+        {"url":"elements/testimonials7-3.html","height":383, "thumbnail":"elements/thumbs/testimonials7-3.png"}
     ],
 
     "Videos":[
@@ -250,11 +253,11 @@ var _Elements = {"elements": {
     "Portfolio":[
         {"url":"elements/portfolio1-1.html","height":1159, "thumbnail":"elements/thumbs/portfolio1-1.png"},
         {"url":"elements/portfolio2-1.html","height":758, "thumbnail":"elements/thumbs/portfolio2-1.png"},
-        {"url":"elements/portfolio3-1.html","height":519, "thumbnail":"elements/thumbs/portfolio3-1.png"},        
+        {"url":"elements/portfolio3-1.html","height":519, "thumbnail":"elements/thumbs/portfolio3-1.png"},
         {"url":"elements/portfolio4-1.html","height":1016, "thumbnail":"elements/thumbs/portfolio4-1.png"},
         {"url":"elements/portfolio1-2.html","height":1159, "thumbnail":"elements/thumbs/portfolio1-2.png"},
         {"url":"elements/portfolio2-2.html","height":758, "thumbnail":"elements/thumbs/portfolio2-2.png"},
-        {"url":"elements/portfolio3-2.html","height":519, "thumbnail":"elements/thumbs/portfolio3-2.png"},        
+        {"url":"elements/portfolio3-2.html","height":519, "thumbnail":"elements/thumbs/portfolio3-2.png"},
         {"url":"elements/portfolio4-2.html","height":1016, "thumbnail":"elements/thumbs/portfolio4-2.png"}
     ],
 
