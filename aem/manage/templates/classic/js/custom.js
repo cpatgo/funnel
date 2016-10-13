@@ -3,13 +3,6 @@ var numofsteps = 13;
 var progresscounter = 0;
 var ctr = 0;
 
-
-
-
-
-
-
-
 jQuery(document).ready(function(){
 
   // DONE FOR YOU FUNNEL
@@ -121,11 +114,12 @@ jQuery(document).ready(function(){
           // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
           jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
           jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
+          jQuery('.done_for_you_campaign #step-progressbar').progressbar({value: 8.33333333334});
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
 
           jQuery('.steps ul li.disabled').hide();
-          jQuery('#step-progressbar').progressbar({value: 8.33333333334});
+
           // $body.find('.progress_indicator_txt span').html('8%');
 
       },
@@ -377,7 +371,7 @@ jQuery(document).ready(function(){
             // console.log('currently in step # ' . current);
 
             jQuery('.steps ul li.disabled').hide();
-            jQuery('#step-progressbar').progressbar({value: 8.33333333334});
+            jQuery('.custom_campaign #step-progressbar').progressbar({value: 8.33333333334});
             // $body.find('.progress_indicator_txt span').html('8%');
 
         },
