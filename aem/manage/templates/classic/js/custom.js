@@ -118,8 +118,10 @@ jQuery(document).ready(function(){
       onInit: function(event, current){
           // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
           jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
-          console.log(current);
-          jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
+          // console.log(current);
+          if(current == 0) {
+            jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
+          }
           jQuery('.done_for_you_campaign #step-progressbar').progressbar({value: 8.33333333334});
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
