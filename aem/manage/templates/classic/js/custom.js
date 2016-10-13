@@ -5,6 +5,11 @@ var ctr = 0;
 
 jQuery(document).ready(function(){
 
+  jQuery( "#step-progressbar" ).progressbar({
+    value: 0,
+  });
+
+
   // DONE FOR YOU FUNNEL
   var form2 = jQuery("#create-premade-campaign").show();
   form2.validate({
@@ -257,9 +262,7 @@ jQuery(document).ready(function(){
   // CUSTOM CAMPAIGN
     var $body = jQuery('body');
 
-    jQuery( "#step-progressbar" ).progressbar({
-      value: 0,
-    });
+
 
     var form = jQuery("#create-funnel-campaign").show();
     form.validate({
