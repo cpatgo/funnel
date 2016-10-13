@@ -1,14 +1,6 @@
 var _Elements = {"elements": {
     "About Me": [
-       /* 3 Elements here */
-       {"url":"elements/glc-about1.html", "height":163, "thumbnail":"elements/thumbs/glc-about1.jpg"},
-       {"url":"elements/glc-about2.html", "height":163, "thumbnail":"elements/thumbs/glc-about2.jpg"}
 
-    ],
-
-    "DFY Funnels": [
-      /* 5 Elements */
-      {"url":"elements/glc-dfysalesfunnelmoney.html", "height":163, "thumbnail":"elements/thumbs/glc-dfysalesfunnelmoney.jpg"}
     ],
 
     "Download": [
@@ -16,9 +8,14 @@ var _Elements = {"elements": {
     ],
 
     "Event": [
-        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"},
+        {"url":"elements/glc-event1.html", "height":163, "thumbnail":"elements/thumbs/glc-event1.jpg"}, // DENTAL
         {"url":"elements/glc-event2.html", "height":163, "thumbnail":"elements/thumbs/glc-event2.jpg"},
         // {"url":"elements/glc-event3.html", "height":163, "thumbnail":"elements/thumbs/glc-event3.jpg"},
+    ],
+
+    "General": [
+        {"url":"elements/glc-jonessmile.html", "height":163, "thumbnail":"elements/thumbs/glc-jonessmile.jpg"}, // DENTAL
+        {"url":"elements/glc-fitness.html", "height":163, "thumbnail":"elements/thumbs/glc-fitness.jpg"} // FITNESS
     ],
 
     "Giveaways": [
