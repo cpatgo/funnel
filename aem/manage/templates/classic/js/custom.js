@@ -184,6 +184,7 @@ jQuery(document).ready(function(){
           return form2.valid();
       },
       onStepChanged: function (event, current, next) {
+          jQuery('.actions > ul > li:first-child a').attr('href', '#previous');
           ctr = (1 + current) * 8.333333333334;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
