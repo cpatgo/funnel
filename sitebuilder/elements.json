@@ -64,7 +64,8 @@
     "About Me": [
     ],
 
-    "Download": [
+    "DFY Funnels": [
+        {"url":"elements/glc-dfysalesfunnelmoney.html","height":260, "thumbnail":"elements/images/thumbs/glc-dfysalesfunnelmoney.jpg"}
     ],
 
     "Event":[
