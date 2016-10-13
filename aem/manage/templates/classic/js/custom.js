@@ -239,7 +239,7 @@ jQuery(document).ready(function(){
       onFinishing: function (event, currentIndex)
       {
           aem_functions.destroy_list_session();
-          form.validate().settings.ignore = ":disabled";
+          form2.validate().settings.ignore = ":disabled";
           return form.valid();
       },
       onFinished: function (event, currentIndex)
