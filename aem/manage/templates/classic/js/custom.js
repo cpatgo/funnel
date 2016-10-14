@@ -460,16 +460,18 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
             }
 
-            if(current == 3 && next == 4) {
+            if(current == 2 && next == 3) {
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
                     jQuery('.actions > ul > li:nth-child(1) > a').click();
                 }
             }
 
+            console.log("current: " + current);
+            console.log("next: " + next);
+
             if(current == 3 && next == 2) {
-                console.log("current: " + current);
-                console.log("next: " + next);
+
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
                     $body.find('#list_company').val('n/a');
