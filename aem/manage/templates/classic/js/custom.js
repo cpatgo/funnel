@@ -762,6 +762,11 @@ jQuery(document).ready(function(){
                             var newhref = href+'&form_id='+result.message.id;
                             jQuery(item).attr('href', newhref);
                         });
+                        $body.find('.sitebuildertemplate').each(function(index, item) {
+                            var href = jQuery(item).attr('href');
+                            var newhref = href+'/'+result.message.id;
+                            jQuery(item).attr('href', newhref);
+                        });
                     }
                 },
                 error: function(errorThrown){
