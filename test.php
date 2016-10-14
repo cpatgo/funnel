@@ -1,18 +1,10 @@
 <?php
 
-$set = setcookie('referral',$referral,time() + (86400 * 180), '/');
+$identity = 'jobcpa1@yahoo.com';
+$password = '4321#';
+$remember = '1';
 
-if ($set){
-	printf('Cookie: %s', $set);
-}
-else {
-	print 'No Cookie Set!';
-}
-
-
-$username = 'jobcpa1@yahoo.com';
-$password = '1234';
-$loginUrl = 'http://sitebuilder.glchub.com/login';
+$loginUrl = 'http://sitebuilder.glchub.com/authlogin';
 
 //init curl
 $ch = curl_init();
@@ -23,8 +15,10 @@ curl_setopt($ch, CURLOPT_URL, $loginUrl);
 // ENABLE HTTP POST
 curl_setopt($ch, CURLOPT_POST, 1);
 
+// curl_setopt($ch, )
+
 //Set the post parameters
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'user='.$username.'&pass='.$password);
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'identity=' . $username . '&password=' . $password . '&remember=' . $remember);
 
 //Handle cookies for the login
 curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
@@ -38,6 +32,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 //execute the request (the login)
 $store = curl_exec($ch);
 
+print_r($store);
+
 //the login is now done and you can continue to get the
 //protected content.
 
@@ -47,5 +43,6 @@ curl_setopt($ch, CURLOPT_URL, 'https://glchub.com/resources/glc-dfysalesfunnelmo
 //execute the request
 $content = curl_exec($ch);
 
-//save the data to disk
-file_put_contents('~/ebook-sales-funnel-money.pdf', $content);
+print_r($content);
+
+die('exiting');
