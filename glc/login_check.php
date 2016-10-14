@@ -60,6 +60,9 @@ if(!empty($user))
     $login_result = $user_class->sitebuilder_user_login($_SESSION['dennisn_user_email'], $_REQUEST['password']);
     // if login not successful, update password in builder and relogin
     if((int)$login_result->response_code === 2) $user_class->sitebuilder_user_update($_SESSION['dennisn_user_email'], $_REQUEST['password']);
+    // pass the user's data to subdomain
+    setcookie('dennisn_user_email', $_SESSION['dennisn_user_email'], time() + (86400 * 30), '/', sprintf('.%s', $_SERVER['HTTP_HOST']), false);
+    setcookie('dennisn_usertoken', $token, time() + (86400 * 30), '/', sprintf('.%s', $_SERVER['HTTP_HOST']), false);
 
     printf('<script type="text/javascript">window.location="%s/myhub/";</script>', GLC_URL);
 }

@@ -14,6 +14,28 @@ class Sites extends MY_Controller {
 		$this->data['pageTitle'] = $this->lang->line('sites_page_title');
 
 		if (!$this->ion_auth->logged_in()) {
+			if(isset($_COOKIE['dennisn_user_email']) && !empty($_COOKIE['dennisn_user_email'])) {
+				$this->auto_login_user();
+			}
+			else {
+				redirect('/login');
+			}
+		}
+	}
+
+	/**
+	 * Auto login user
+	 */
+	public function auto_login_user()
+	{
+		$pw = $_COOKIE['dennisn_usertoken'];
+		$decode = base64_decode($pw);
+		$chunk = explode('-', $decode);
+		$password = base64_decode($chunk[1]);
+
+		if($this->ion_auth->login($_COOKIE['dennisn_user_email'], $password, 1)) {
+			redirect($_SERVER['REQUEST_URI']);
+		} else {
 			redirect('/login');
 		}
 	}
