@@ -32,7 +32,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 //execute the request (the login)
 $store = curl_exec($ch);
 
-print_r($store);
+// print_r($store);
 
 //the login is now done and you can continue to get the
 //protected content.
@@ -43,6 +43,6 @@ curl_setopt($ch, CURLOPT_URL, 'https://glchub.com/resources/glc-dfysalesfunnelmo
 //execute the request
 $content = curl_exec($ch);
 
-print_r($content);
+// print_r($content);
 
 die('exiting');
