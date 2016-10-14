@@ -468,6 +468,8 @@ jQuery(document).ready(function(){
             }
 
             if(current == 3 && next == 2) {
+                console.log("current: " + current);
+                console.log("next: " + next);
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
                     $body.find('#list_company').val('n/a');
