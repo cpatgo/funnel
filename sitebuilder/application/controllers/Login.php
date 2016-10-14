@@ -25,7 +25,7 @@ class Login extends MY_Controller {
 		if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), 1))
 		{
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
-			echo json_encode(array('response_code' => 1));
+			redirect('/', 'refresh');
 		}
 		else
 		{
