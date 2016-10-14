@@ -59,7 +59,7 @@ if(!empty($user))
     // login user to sitebuilder
     $login_result = $user_class->sitebuilder_user_login($_SESSION['dennisn_user_email'], $_REQUEST['password']);
     // if login not successful, update password in builder and relogin
-    if((int)$login_result->response_code !== 1) $user_class->sitebuilder_user_update($_SESSION['dennisn_user_email'], $_REQUEST['password']);
+    if((int)$login_result->response_code === 2) $user_class->sitebuilder_user_update($_SESSION['dennisn_user_email'], $_REQUEST['password']);
 
     printf('<script type="text/javascript">window.location="%s/myhub/";</script>', GLC_URL);
 }
