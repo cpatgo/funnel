@@ -6,7 +6,7 @@ require_once awebdesk_classes("pagination.php");
 require_once awebdesk_functions("file.php");
 
 class builder_templates extends AWEBP_Page {
-	function database_assets() {
+	function builder_templates() {
 		$this->pageTitle = _a("Builder Templates");
 		$this->AWEBP_Page();
 		$this->admin = $GLOBALS["admin"];
