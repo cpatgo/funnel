@@ -1,21 +1,19 @@
 <?php
 
-require_once adesk_admin("functions/database.php");
+require_once adesk_admin("functions/template.php");
 require_once awebdesk_classes("select.php");
 require_once awebdesk_classes("pagination.php");
-require_once awebdesk_functions("file.php");
 
-class builder_templates extends AWEBP_Page {
-	function builder_templates() {
+class builder_templates_assets extends AWEBP_Page {
+	function builder_templates_assets() {
 		$this->pageTitle = _a("Builder Templates");
 		$this->AWEBP_Page();
-		$this->admin = $GLOBALS["admin"];
 	}
 
 	function process(&$smarty) {
 		$this->setTemplateData($smarty);
-		if (isset($GLOBALS["_hosted_account"])) {
-			adesk_smarty_noaccess($smarty, $this);
+		if (!in_array('3', $this->admin['groups'])) {
+			$smarty->assign('content_template', 'noaccess.htm');
 			return;
 		}
 
@@ -24,7 +22,6 @@ class builder_templates extends AWEBP_Page {
 
 		$smarty->assign('templateList', $templates);
 		$smarty->assign("content_template", "builder_templates.htm");
-
 	}
 }
 
