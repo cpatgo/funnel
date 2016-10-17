@@ -32,3 +32,102 @@
 		</div>	
 	</div>
 </div>
+
+<div class="modal" id="selectOption">
+	<div class="col-md-12 col-xs-12">
+		<form id="selectOptionForm">
+			<div class="form-group">
+				<a class="btn btn-default" href="addRowModal" rel="modal:open">Add New</a>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-default" href="editRowModal" rel="modal:open">Edit</a>
+			</div>
+			<div class="form-group">
+				<a class="btn btn-default" href="deleteRowModal" rel="modal:open">Delete</a>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="modal" id="addRowModal" style="display:none;">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<form id="addRowForm">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label for="slug">Slug:</label>
+					<input type="text" class="form-control" id="slug">
+				</div>
+				<div class="form-group">
+					<label for="type">Type:</label>
+					<input type="text" class="form-control" id="type">
+				</div>
+				<div class="form-group">
+					<label for="category">Category:</label>
+					<input type="text" class="form-control" id="category">
+				</div>
+				<div class="form-group">
+					<label for="image_url">Image URL:</label>
+					<input type="text" class="form-control" id="image_url">
+				</div>
+				<div class="form-group">
+					<label for="builder_id">Builder ID:</label>
+					<input type="text" class="form-control" id="builder_id">
+				</div>
+				<div class="form-group">
+					<label for="builder_url">Builder URL:</label>
+					<input type="text" class="form-control" id="builder_url">
+				</div>
+				<div class="form-group">
+					<label for="groupset_id">Groupset ID:</label>
+					<input type="text" class="form-control" id="groupset_id">
+				</div>
+				<button type="submit" id="addRowButton" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal" id="editRowModal" style="display:none;">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<form id="addRowForm">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label for="slug">Slug:</label>
+					<input type="text" class="form-control" id="slug">
+				</div>
+				<div class="form-group">
+					<label for="type">Type:</label>
+					<input type="text" class="form-control" id="type">
+				</div>
+				<div class="form-group">
+					<label for="category">Category:</label>
+					<input type="text" class="form-control" id="category">
+				</div>
+				<div class="form-group">
+					<label for="image_url">Image URL:</label>
+					<input type="text" class="form-control" id="image_url">
+				</div>
+				<div class="form-group">
+					<label for="builder_id">Builder ID:</label>
+					<input type="text" class="form-control" id="builder_id">
+				</div>
+				<div class="form-group">
+					<label for="builder_url">Builder URL:</label>
+					<input type="text" class="form-control" id="builder_url">
+				</div>
+				<div class="form-group">
+					<label for="groupset_id">Groupset ID:</label>
+					<input type="text" class="form-control" id="groupset_id">
+				</div>
+				<button type="submit" id="addRowButton" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal" id="deleteRowModal" style="display:none;"></div>
