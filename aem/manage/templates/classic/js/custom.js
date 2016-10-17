@@ -1062,4 +1062,5 @@ jQuery(document).ready(function(){
     //   heightStyle: "content"
     // });
 
+    jQuery('.dataTables').DataTable();
 });
