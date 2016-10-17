@@ -820,7 +820,7 @@ jQuery(document).ready(function(){
         },
         reset_values        :   function(element_name) {
             jQuery(element_name).find('input:text').val('');
-        }
+        },
         get_dfy_template_by_id  : function(id) {
           jQuery.ajax({
               method: "post",
