@@ -8,6 +8,7 @@ $action = $_POST['action'];
 if($action === 'get_lists') get_lists($user_id);
 if($action === 'get_forms') get_forms($user_id);
 if($action === 'create_landing_page') create_landing_page($user_id);
+if($action === 'get_dfy_template_by_id') get_dfy_template_by_id($template_id);
 
 function create_landing_page($user_id) {
     include_once($_SERVER['DOCUMENT_ROOT'].'/glc/config.php');
@@ -34,10 +35,10 @@ function get_lists($user_id) {
 
 function get_forms($user_id) {
 	$query = sprintf("SELECT DISTINCT(af.id), af.name
-				FROM awebdesk_form af 
-				INNER JOIN awebdesk_form_list afl 
-				ON af.id = afl.formid 
-				INNER JOIN awebdesk_list al 
+				FROM awebdesk_form af
+				INNER JOIN awebdesk_form_list afl
+				ON af.id = afl.formid
+				INNER JOIN awebdesk_list al
 				ON afl.listid = al.id
 				WHERE al.userid = %d ORDER BY af.name", $user_id);
 	$lists = aem_select($query);
@@ -85,4 +86,9 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-?>
+
+function get_dfy_template_by_id($template_id) {
+  $query = sprintf("SELECT * FROM templates WHERE template_id = %d ORDER BY name", $template_id);
+  $lists = aem_select($query);
+  die(json_encode(array('type' => 'success', 'data' => $lists)));
+}
