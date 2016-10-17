@@ -520,9 +520,9 @@ jQuery(document).ready(function(){
     });
 
 
-    jQuery('.btn-dfy-choose').click(function(e){
+    jQuery('a.btn-dfy-choose').click(function(e){
       e.preventDefault();
-      thisData = jQuery(this).attr('data-info');
+      thisData = jQuery('a.btn-dfy-choose').attr('data-info');
       console.log(thisData);
     });
 
