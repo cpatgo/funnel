@@ -522,7 +522,7 @@ jQuery(document).ready(function(){
 
     jQuery('a.btn-dfy-choose').click(function(e){
       e.preventDefault();
-      thisData = jQuery('a.btn-dfy-choose').attr('data-info');
+      thisData = jQuery(this).attr('data-info');
       console.log(thisData);
     });
 
