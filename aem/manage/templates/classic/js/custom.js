@@ -336,29 +336,7 @@ jQuery(document).ready(function(){
               }
           });
       },
-      get_lists   :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/custom.php",
-              data: {
-                  'action':'get_lists'
-              },
-              dataType: 'json',
-                success: function(result) {
-                            var select_list = jQuery("body").find("#landing-page-list-id");
-                            select_list.html('');
-                            select_list.append( jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --") );
-
-                            jQuery.each(result.data, function(key, value) {
-                                select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-                            });
-                          },
-
-                error: function(errorThrown){
-                        console.log(errorThrown);
-                        }
-          });
-      },
+  
       get_forms   :   function() {
           jQuery.ajax({
               method: "post",
