@@ -242,7 +242,8 @@ jQuery(document).ready(function(){
               // also load the template ID selected
               // loadTemplate();
               console.log("Loaded Optin Template: " + sessionStorage.getItem('optin'));
-              aem_functions.get_dfy_template_by_id(sessionStorage.getItem('optin'));
+              var tmp = aem_functions.get_dfy_template_by_id(sessionStorage.getItem('optin'));
+              console.log(tmp);
           }
 
           if (current == 8) { // if current index is equals to 4th step
