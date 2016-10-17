@@ -590,6 +590,21 @@ jQuery(document).ready(function(){
                 //     select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
                 // });
                 console.log(result.data);
+
+
+                var customize_optin = jQuery("body").find(".customized_optin");
+                customized_optin.html('');
+                var strbuilder =  '<div class="template_wrapper">';
+                strbuilder += '<span class="text_center template_title">Template Name</span>';
+                strbuilder += '<img src="image_url" class="img-thumbnail" alt="Template Name" />';
+                strbuilder += '<div class="template_buttons">';
+                strbuilder += '<a href="builder-hyperlink" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>';
+                strbuilder += '<a href="builder-preview.html" class="btn btn-demo" target="_blank">DEMO</a>';
+                strbuilder += '</div></div>';
+
+                customized_optin.append(strbuilder);
+
+
             },
             error: function(errorThrown){
                 console.log(errorThrown);
