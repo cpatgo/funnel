@@ -1062,5 +1062,8 @@ jQuery(document).ready(function(){
     //   heightStyle: "content"
     // });
 
-    jQuery('.dataTables').DataTable();
+    jQuery('.dataTables').DataTable({
+      "iDisplayLength": 100,
+       responsive: true,
+    });
 });
