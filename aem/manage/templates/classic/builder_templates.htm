@@ -17,14 +17,16 @@
 				<tbody>
 					{foreach from=$templateList item=p}
 					    <tr>
-					    	<td>{$p.name}</td>
-					    	<td>{$p.slug}</td>
-					    	<td>{$p.type}</td>
-					    	<td>{$p.category}</td>
-					    	<td>{$p.aem_image_url}</td>
-					    	<td>{$p.builder_id}</td>
-					    	<td>{$p.builder_url}</td>
-					    	<td>{$p.groupset_id}</td>
+					    	<a href="#selectOption" rel="modal:open">
+						    	<td>{$p.name}</td>
+						    	<td>{$p.slug}</td>
+						    	<td>{$p.type}</td>
+						    	<td>{$p.category}</td>
+						    	<td>{$p.aem_image_url}</td>
+						    	<td>{$p.builder_id}</td>
+						    	<td>{$p.builder_url}</td>
+						    	<td>{$p.groupset_id}</td>
+					    	</a>
 					    </tr>
 					{/foreach}
 				</tbody>
@@ -33,22 +35,22 @@
 	</div>
 </div>
 
-<div class="modal" id="selectOption">
+<div id="selectOption" style="display:none;">
 	<div class="col-md-12 col-xs-12">
 		<form id="selectOptionForm">
 			<div class="form-group">
-				<a class="btn btn-default" href="addRowModal" rel="modal:open">Add New</a>
+				<a class="btn btn-default" href="#addRowModal" rel="modal:open">Add New</a>
 			</div>
 			<div class="form-group">
-				<a class="btn btn-default" href="editRowModal" rel="modal:open">Edit</a>
+				<a class="btn btn-default" href="#editRowModal" rel="modal:open">Edit</a>
 			</div>
 			<div class="form-group">
-				<a class="btn btn-default" href="deleteRowModal" rel="modal:open">Delete</a>
+				<a class="btn btn-default" href="#deleteRowModal" rel="modal:open">Delete</a>
 			</div>
 		</form>
 	</div>
 </div>
-<div class="modal" id="addRowModal" style="display:none;">
+<div id="addRowModal" style="display:none;">
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
 			<form id="addRowForm">
@@ -89,7 +91,7 @@
 		</div>
 	</div>
 </div>
-<div class="modal" id="editRowModal" style="display:none;">
+<div id="editRowModal" style="display:none;">
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
 			<form id="addRowForm">
@@ -130,4 +132,4 @@
 		</div>
 	</div>
 </div>
-<div class="modal" id="deleteRowModal" style="display:none;"></div>
+<div id="deleteRowModal" style="display:none;"></div>
