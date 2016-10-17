@@ -1100,7 +1100,7 @@ jQuery(document).ready(function(){
        responsive: true,
     });
 
-    jQuery('body').on('click', '#templateListTable', function(e) {
+    jQuery('body').on('click', '#templateListTable tbody tr td', function(e) {
       e.preventDefault();
         jQuery(this).find('#selectOption').modal();
     });
