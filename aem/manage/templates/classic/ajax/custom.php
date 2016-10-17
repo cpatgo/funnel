@@ -5,11 +5,12 @@ $GLOBALS["aem_con"] = mysqli_connect(AWEBP_AUTHDB_SERVER, AWEBP_AUTHDB_USER, AWE
 
 $user_id = $_SESSION['awebdesk_aweb_admin']['id'];
 $action = $_POST['action'];
-if($_POST['groupset_id']) $groupset_id = $_POST['groupset_id'];
 
 if($action === 'get_lists') get_lists($user_id);
 if($action === 'get_forms') get_forms($user_id);
 if($action === 'create_landing_page') create_landing_page($user_id);
+
+if($_POST['groupset_id']) $groupset_id = $_POST['groupset_id'];
 if($action === 'get_dfy_template_by_id') get_dfy_template_by_id($groupset_id);
 
 function create_landing_page($user_id) {
