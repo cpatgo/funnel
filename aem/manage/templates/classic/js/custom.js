@@ -2,6 +2,7 @@
 var numofsteps = 13;
 var progresscounter = 0;
 var ctr = 0;
+var dfy_selected_id;
 
 jQuery(document).ready(function(){
 
@@ -193,8 +194,6 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-
-
           ctr = (1 + current) * 8.333333333334;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
@@ -239,16 +238,28 @@ jQuery(document).ready(function(){
           if (current == 6) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
+
+              // also load the template ID selected
+              // loadTemplate();
+              console.log("Loaded Optin Template: " + sessionStorage.getItem('optin'));
           }
 
           if (current == 8) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
+
+              // also load the template ID selected
+              // loadTemplate();
+              console.log("Loaded Download Template: " + sessionStorage.getItem('download'));
           }
 
           if (current == 10) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
               jQuery('.actions > ul > li:nth-child(2)').hide();
+
+              // also load the template ID selected
+              // loadTemplate();
+              console.log("Loaded Thank You Template: " + sessionStorage.getItem('thankyou'));
           }
 
 
@@ -515,10 +526,29 @@ jQuery(document).ready(function(){
         }
     });
 
+    // MIMIC CLICKING OF CONTINUE BUTTON
     jQuery('.btn-choose').click(function() {
         jQuery('.actions > ul > li:nth-child(2) > a').click();
     });
 
+    // GET SELECTED DFY FUNNEL TEMPLATE ID //
+    jQuery('a.btn-dfy-choose').click(function(e){
+      e.preventDefault();
+      thisData = jQuery(this).attr('data-info');
+      // console.log(thisData);
+
+      if (thisData) {
+        // store in temp array then store to session storage
+        // selectedTemplate = sessionStorage.getItem('selectedTemplate');
+        var result = thisData.split(",");
+        sessionStorage.setItem('optin', result[0]);
+        sessionStorage.setItem('download', result[1]);
+        sessionStorage.setItem('thankyou', result[2]);
+      }
+      else{
+        console.log('empty template selected. please restart page.');
+      }
+    });
 
     //COLLECTION OF FUNCTIONS
     var aem_functions = {
