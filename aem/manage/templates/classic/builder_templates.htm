@@ -16,7 +16,7 @@
 				</thead>
 				<tbody>
 					{foreach from=$templateList item=p}
-					    <tr class="clickableRow">
+					    <tr class="clickableRow" data-tid="{$p.id}">
 					    	<td>{$p.name}</td>
 					    	<td>{$p.slug}</td>
 					    	<td>{$p.type}</td>
