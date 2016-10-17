@@ -3,10 +3,28 @@
 <div class="table-responsive">
 	<table id="templatesTable" class="table table-hover">
 		<thead>
-			
+			<tr>
+				<th>Title</th>
+				<th>Type</th>
+				<th>Description</th>
+				<th>User ID</th>
+				<th>List ID</th>
+				<th>Page Link</th>
+				<th>Date Created</th>
+			</tr>
 		</thead>
 		<tbody>
-			
+			{foreach from=$templateList item=p}
+			    <tr>
+			    	<td>{$p.title}</td>
+			    	<td>{$p.type}</td>
+			    	<td>{$p.description}</td>
+			    	<td>{$p.user_id}</td>
+			    	<td>{$p.list_id}</td>
+			    	<td>{$p.page_link}</td>
+			    	<td>{$p.date_created}</td>
+			    </tr>
+			{/foreach}
 		</tbody>
 	</table>
 </div>
