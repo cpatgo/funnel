@@ -5,606 +5,602 @@
 
 <!-- <h1 class="step_header_text text_center">Create New Campaign</h1> -->
 <div class="done_for_you_campaign">
-<form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-premade-campaign">
-<input type="hidden" name="action" value="list_insert_post">
-	<!-- Progressbar -->
-	<div class="progressbar_wrapper">
-		<!-- <div class="progress_indicator_txt"><span></span></div> -->
-		<div id="step-progressbar" class="step-progressbar"></div>
-	</div>
+  <form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-premade-campaign">
+  <input type="hidden" name="action" value="list_insert_post">
+  	<!-- Progressbar -->
+  	<div class="progressbar_wrapper">
+  		<!-- <div class="progress_indicator_txt"><span></span></div> -->
+  		<div id="step-progressbar" class="step-progressbar"></div>
+  	</div>
 
-  <!-- Step 1 -->
-    <h3><span>1.</span> {"Choose Pre-made Campaign"|alang}</h3>
-    <section>
-    	<div class="row">
-	        <div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-line-chart" aria-hidden="true"></i>
-					{"Choose Done For You Funnel Theme"|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-				</h1>
-
-				<div class="campaign_help">
-					<p class="lead text_center">
-
-					</p>
-				</div>
-
-				<div class="col-md-12">
-					<div id="radiobutton_container">
-						<div class="template_wrapper">
-							<span class="text_center template_title">Travel</span>
-							<img src="images/500x580-sales-funnel-money-optin.jpg" class="img-thumbnail" alt="text">
-							<div class="template_buttons">
-                  <a role="menu-item" class="btn btn-primary btn-choose buildertemplate">CHOOSE</a>
-							  	<a href="/builder/elements/preview_T50x9r59weQmy59EpRq0.html" class="btn btn-demo" target="_blank">DEMO</a>
-							</div>
-						</div>
-
-
-					</div>
-					<div id="landing-page-url-error"></div>
-				</div>
-	        </div>
-	    </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<div id="landing-page-type-error"></div>
-        	</div>
-        </div>
-    </section>
-
-
-	<!-- Step 1 -->
-    <h3> {"Name Campaign"|alang}</h3>
-    <section>
-    	<div class="row">
-	        <div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-line-chart" aria-hidden="true"></i>
-					{"Name Campaign"|alang}
-				</h1>
-
-				<div class="campaign_help">
-					<p class="lead text_center">
-					{"Hint: Your campaign name should be similar to your offer. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-				</div>
-				<div class="campaign_input form-group">
-					<div class="col-md-6 col-md-offset-3">
-						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name">
-						<div id="landing-page-name-error"></div>
-					</div>
-				</div>
-
-	        </div>
-	    </div>
-	    <div class="row">
-	    	<div class="col-md-12">
-				<div class="campaign_input form-group">
-					<div class="col-md-6 col-md-offset-3">
-						<!-- <input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name"> -->
-						<textarea class="form-control input-lg" id="landing-page-description" name="landing-page-description" placeholder="describe your campaign" rows="5"></textarea>
-						<div id="landing-page-description-error"></div>
-					</div>
-				</div>
-			</div>
-	    </div>
-    </section>
-
-    <!-- Step 2 -->
-    <h3> {"Leads List"|alang}</h3>
-    <section>
-        <div class="row">
-	        <div class="col-md-12">
-	        	<h1 class="step_header_text">
-	        		<i class="fa fa-list-ol" aria-hidden="true"></i>
-					{"Leads List"|alang}
-				</h1>
-
-		        <div class="campaign_help">
-		        	<p class="lead text_center">
-		        		{"Create a new Leads list or select from an existing one that you have already created.<br />Your leads are categories in your contacts section for follow-up or prospecting."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-		        	</p>
-	        	</div>
-        	</div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<div class="col-md-4 col-md-offset-2">
-			 		<div class="steps-btn newlist_btn" title="Create a New List">
-				 		<i class="fa fa-file-text-o" aria-hidden="true"></i>
-				 		<span>Create New List</span>
-			 		</div>
-				</div>
-			    <div class="col-md-4">
-			 		<div class="steps-btn select_existing_list" title="Select Existing List Here">
-			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
-			 			<span>Select Existing List</span>
-			 		</div>
-				</div>
-			</div>
-        </div>
-        <br>
-        <div id="new_list_div" class="new_list_div" style="display:none;">
-        	<br>
-        	<div class="row" >
-
-				<div id="create_new_list_title">
-					<div class="row">
-
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="form-group">
-								<label for=""><span class="required_field">*</span> List Name</label>
-								<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">
-								<div id="list_name-error"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="alert alert-warning">You must add at least ONE email address to create your new list. You can add any email address, even a made up email address; madeup@email.com.</div>
-						</div>
-					</div>
-
-					<div class="row">
-				  		<div class="col-md-8 col-md-offset-2">
-							<div class="form-group">
-								<label for=""><span class="required_field">*</span> Add Required Email</label>
-								<input type="email" class="form-control input-lg" id="subscriber_email" name="subscriber_email" placeholder="madeup@email.com" required>
-								<div id="subscriber_email-error"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-        </div>
-
-        <div class="row" id="select_existing_list_div">
-        	<!-- <hr style="margin-bottom:40px;"> -->
-			<div class="col-md-8 col-md-offset-2">
-				<div class="form-group">
-					<!-- <label for="">Add new campaign subcribers to an Existing List by clicking the dropdown arrow: </label> -->
-					<select class="form-control input-lg" id="landing-page-list-id" name="landing-page-list-id"></select>
-					<div id="landing-page-list-id-error"></div>
-					<!-- <button class="glc_button" id="refresh_list_list">Click here to refresh page to see list added</button> -->
-				</div>
-			</div>
-        </div>
-        <input type="hidden" id="select_list_method" name="select_list_method" value="">
-    </section>
-
-
-	<!-- Step 3 -->
-    <h3> {"Email Signature"|alang}</h3>
-    <section class="new_list_div">
-    	<div class="row">
-			<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Email Signature"|alang}
-				</h1>
-			</div>
-			<div class="col-md-12">
-				<div class="col-md-8 col-md-offset-2">
-					<!-- <div class="adesk_help_inline" style="font-size:12px;">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div> -->
-					<div class="alert alert-warning create-new-list-warning">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div>
-
-				</div>
-			</div>
-			<br>
-			<div class="col-md-12">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="form-group">
-						<label for=""><span class="required_field">*</span> Sender Name, Company (or Organization): </label>
-						<input type="text" class="form-control input-lg" id="list_company" name="list_company" required title="Your company name or organization">
-						<div id="list_company-error"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="form-group">
-						<label for=""><span class="required_field">*</span> Address: </label>
-						<input type="text" class="form-control input-lg" id="list_address" name="list_address" required title="Enter your valid address here."><br>
-						<input type="text" class="form-control input-lg" id="list_address2" name="list_address2" title="secondary address text here">
-						<div id="list_address-error"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12">
-			    <div class="col-md-4 col-md-offset-2">
-			 		<label for=""><span class="required_field">*</span> City: </label>
-						<input type="text" class="form-control input-lg" id="list_city" name="list_city" required title="Your City">
-						<div id="list_city-error"></div>
-				</div>
-				<div class="col-md-4">
-			 		<label for=""><span class="required_field">*</span> State, Province, or Region: </label>
-						<input type="text" class="form-control input-lg" id="list_state" name="list_state" required title="Your State, Province or Region">
-						<div id="list_state-error"></div>
-				</div>
-			</div>
-			<div class="col-md-12">
-			    <div class="col-md-4 col-md-offset-2">
-			 		<label for=""><span class="required_field">*</span> Zip or Postal Code: </label>
-						<input type="text" class="form-control input-lg" id="list_postal" name="list_postal" required title="Your Zip or Postal Code">
-						<div id="list_postal-error"></div>
-				</div>
-				<div class="col-md-4">
-			 		<label for=""><span class="required_field">*</span> Country: </label>
-						<input type="text" class="form-control input-lg" id="list_country" name="list_country" required  title="Your Country">
-						<div id="list_country-error"></div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-	<!-- Step 4 -->
-    <h3> {"Opt-in Form"|alang}</h3>
-    <section>
-        <div class="new_form_div">
-
-        	<div class="row" >
-				<div class="col-md-12">
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Opt-in Form"|alang}
-					</h1>
-				</div>
-			</div>
-
-			<div class="row">
-		        <div class="col-md-12">
-		        	<div class="campaign_help">
-		        		<p class="lead text_center">
-						{"You must create an Opt-in form for each new Capture Page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-						</p>
-		        	</div>
-	        	</div>
-        	</div>
-
-			<div class="row">
-				<div class="col-md-12">
-			  		<div class="col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<label for="">Form Name: </label>
-							<input type="text" class="form-control input-lg" id="form_name" name="form_name" title="Your Form Name Here">
-							<div id="form_name-error"></div>
-							<!-- <div class="text_center hint">
-								This is how you will keep track of each form for your page.
-							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-        </div>
-    </section>
-
-	<!-- Step 5 -->
-    <h3> {"Form Options"|alang}</h3>
-    <section>
-        <div class="new_form_div">
-			<div class="row">
-				<div class="col-md-12">
-					<!-- <hr class="divider" /> -->
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Form Options"|alang}
-					</h1>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="campaign_help">
-						<p class="lead text-center">Check the Subcriber field options you want to collect.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4">
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
-						</label>
-					</div>
-					{foreach from=$optional_fields item=field}
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
-						</label>
-					</div>
-					{/foreach}
-				</div>
-			</div>
-
-
-        </div>
-    </section>
-
-	<!-- Step 6 -->
-    <h3> {"Customize Optin Page"|alang}</h3>
-    <section>
-        <div class="row">
-        	<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Customized Optin Page"|alang}
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="campaign_help">
-					<p class="lead text_center">
-						{"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-12" id="landing_page_container">
-			<div class="row select_landing_page_template">
-				<div class="col-md-12">
-					<div id="radiobutton_container" class="accordion">
-
-
-						<!-- <h3>Your </h3> -->
-						<div class="accordion_group">
-							<!-- Skin Care / Product Trial -->
-							<div class="template_wrapper">
-								<span class="text_center template_title">Skin Care - Product Trial</span>
-								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
-								<div class="template_buttons">
-								  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
-								</div>
-							</div>
-
-						</div>
-
-
-					<div id="landing-page-url-error"></div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-	<!-- Step 7 -->
-    <h3> {"Optin Page URL"|alang}</h3>
-    <section>
-        <div>
-			<br>
-        	<div class="row" >
-				<div class="col-md-12">
-					<h1 class="step_header_text">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						{"Optin Page URL"|alang}
-					</h1>
-				</div>
-
-		        <div class="col-md-10 col-md-offset-1">
-		        	<div class="campaign_help">
-		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-		        	</div>
-	        	</div>
-
-				<div class="col-md-12">
-			  		<div class="col-md-8 col-md-offset-2">
-						<div class="form-group">
-							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
-							<div id="landing-page-url-error"></div>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-        </div>
-    </section>
-    <!-- Step 6 -->
-      <h3> {"Customize Download Page"|alang}</h3>
+    <!-- Step 1 -->
+      <h3><span>1.</span> {"Choose Pre-made Campaign"|alang}</h3>
       <section>
+      	<div class="row">
+  	        <div class="col-md-12">
+  				<h1 class="step_header_text">
+  					<i class="fa fa-line-chart" aria-hidden="true"></i>
+  					{"Choose Done For You Funnel Theme"|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+  				</h1>
+
+  				<div class="campaign_help">
+  					<p class="lead text_center">
+
+  					</p>
+  				</div>
+
+  				<div class="col-md-12">
+  					<div id="radiobutton_container">
+  						<div class="template_wrapper">
+  							<span class="text_center template_title">Travel</span>
+  							<img src="images/500x580-sales-funnel-money-optin.jpg" class="img-thumbnail" alt="text">
+  							<div class="template_buttons">
+                    <a role="menu-item" class="btn btn-primary btn-choose buildertemplate btn-dfy-choose" data-info="1,2,3">CHOOSE</a>
+  							  	<a href="/builder/elements/preview_T50x9r59weQmy59EpRq0.html" class="btn btn-demo" target="_blank">DEMO</a>
+  							</div>
+  						</div>
+
+
+  					</div>
+  					<div id="landing-page-url-error"></div>
+  				</div>
+  	        </div>
+  	    </div>
           <div class="row">
-            <div class="col-md-12">
-          <h1 class="step_header_text">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            {"Customized Download Page"|alang}
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="campaign_help">
-            <p class="lead text_center">
-              {"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-            </p>
+          	<div class="col-md-12">
+          		<div id="landing-page-type-error"></div>
+          	</div>
           </div>
-        </div>
-      </div>
-
-      <div class="col-md-12" id="landing_page_container">
-        <div class="row select_landing_page_template">
-          <div class="col-md-12">
-            <div id="radiobutton_container" class="accordion">
-
-
-              <!-- <h3>Your </h3> -->
-              <div class="accordion_group">
-                <!-- Skin Care / Product Trial -->
-                <div class="template_wrapper">
-                  <span class="text_center template_title">Skin Care - Product Trial</span>
-                  <img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
-                  <div class="template_buttons">
-                      <a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-                      <a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
-                  </div>
-                </div>
-
-              </div>
-
-
-            <div id="landing-page-url-error"></div>
-          </div>
-        </div>
-      </div>
       </section>
 
-    <!-- Step 7 -->
-      <h3> {"Download Page URL"|alang}</h3>
+
+  	<!-- Step 1 -->
+      <h3> {"Name Campaign"|alang}</h3>
+      <section>
+      	<div class="row">
+  	        <div class="col-md-12">
+  				<h1 class="step_header_text">
+  					<i class="fa fa-line-chart" aria-hidden="true"></i>
+  					{"Name Campaign"|alang}
+  				</h1>
+
+  				<div class="campaign_help">
+  					<p class="lead text_center">
+  					{"Hint: Your campaign name should be similar to your offer. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+  					</p>
+  				</div>
+  				<div class="campaign_input form-group">
+  					<div class="col-md-6 col-md-offset-3">
+  						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name">
+  						<div id="landing-page-name-error"></div>
+  					</div>
+  				</div>
+
+  	        </div>
+  	    </div>
+  	    <div class="row">
+  	    	<div class="col-md-12">
+  				<div class="campaign_input form-group">
+  					<div class="col-md-6 col-md-offset-3">
+  						<!-- <input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name"> -->
+  						<textarea class="form-control input-lg" id="landing-page-description" name="landing-page-description" placeholder="describe your campaign" rows="5"></textarea>
+  						<div id="landing-page-description-error"></div>
+  					</div>
+  				</div>
+  			</div>
+  	    </div>
+      </section>
+
+      <!-- Step 2 -->
+      <h3> {"Leads List"|alang}</h3>
+      <section>
+          <div class="row">
+  	        <div class="col-md-12">
+  	        	<h1 class="step_header_text">
+  	        		<i class="fa fa-list-ol" aria-hidden="true"></i>
+  					{"Leads List"|alang}
+  				</h1>
+
+  		        <div class="campaign_help">
+  		        	<p class="lead text_center">
+  		        		{"Create a new Leads list or select from an existing one that you have already created.<br />Your leads are categories in your contacts section for follow-up or prospecting."|alang}<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+  		        	</p>
+  	        	</div>
+          	</div>
+          </div>
+          <div class="row">
+          	<div class="col-md-12">
+          		<div class="col-md-4 col-md-offset-2">
+  			 		<div class="steps-btn newlist_btn" title="Create a New List">
+  				 		<i class="fa fa-file-text-o" aria-hidden="true"></i>
+  				 		<span>Create New List</span>
+  			 		</div>
+  				</div>
+  			    <div class="col-md-4">
+  			 		<div class="steps-btn select_existing_list" title="Select Existing List Here">
+  			 			<i class="fa fa-list-alt" aria-hidden="true"></i>
+  			 			<span>Select Existing List</span>
+  			 		</div>
+  				</div>
+  			</div>
+          </div>
+          <br>
+          <div id="new_list_div" class="new_list_div" style="display:none;">
+          	<br>
+          	<div class="row" >
+
+  				<div id="create_new_list_title">
+  					<div class="row">
+
+  				  		<div class="col-md-8 col-md-offset-2">
+  							<div class="form-group">
+  								<label for=""><span class="required_field">*</span> List Name</label>
+  								<input type="text" class="form-control input-lg" id="list_name" name="list_name" required title="Name of your list.">
+  								<div id="list_name-error"></div>
+  							</div>
+  						</div>
+  					</div>
+
+  					<div class="row">
+  				  		<div class="col-md-8 col-md-offset-2">
+  							<div class="alert alert-warning">You must add at least ONE email address to create your new list. You can add any email address, even a made up email address; madeup@email.com.</div>
+  						</div>
+  					</div>
+
+  					<div class="row">
+  				  		<div class="col-md-8 col-md-offset-2">
+  							<div class="form-group">
+  								<label for=""><span class="required_field">*</span> Add Required Email</label>
+  								<input type="email" class="form-control input-lg" id="subscriber_email" name="subscriber_email" placeholder="madeup@email.com" required>
+  								<div id="subscriber_email-error"></div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+
+          </div>
+
+          <div class="row" id="select_existing_list_div">
+          	<!-- <hr style="margin-bottom:40px;"> -->
+  			<div class="col-md-8 col-md-offset-2">
+  				<div class="form-group">
+  					<!-- <label for="">Add new campaign subcribers to an Existing List by clicking the dropdown arrow: </label> -->
+  					<select class="form-control input-lg" id="landing-page-list-id" name="landing-page-list-id"></select>
+  					<div id="landing-page-list-id-error"></div>
+  					<!-- <button class="glc_button" id="refresh_list_list">Click here to refresh page to see list added</button> -->
+  				</div>
+  			</div>
+          </div>
+          <input type="hidden" id="select_list_method" name="select_list_method" value="">
+      </section>
+
+
+  	<!-- Step 3 -->
+      <h3> {"Email Signature"|alang}</h3>
+      <section class="new_list_div">
+      	<div class="row">
+  			<div class="col-md-12">
+  				<h1 class="step_header_text">
+  					<i class="fa fa-envelope" aria-hidden="true"></i>
+  					{"Email Signature"|alang}
+  				</h1>
+  			</div>
+  			<div class="col-md-12">
+  				<div class="col-md-8 col-md-offset-2">
+  					<!-- <div class="adesk_help_inline" style="font-size:12px;">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div> -->
+  					<div class="alert alert-warning create-new-list-warning">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div>
+
+  				</div>
+  			</div>
+  			<br>
+  			<div class="col-md-12">
+  				<div class="col-md-8 col-md-offset-2">
+  					<div class="form-group">
+  						<label for=""><span class="required_field">*</span> Sender Name, Company (or Organization): </label>
+  						<input type="text" class="form-control input-lg" id="list_company" name="list_company" required title="Your company name or organization">
+  						<div id="list_company-error"></div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-md-12">
+  				<div class="col-md-8 col-md-offset-2">
+  					<div class="form-group">
+  						<label for=""><span class="required_field">*</span> Address: </label>
+  						<input type="text" class="form-control input-lg" id="list_address" name="list_address" required title="Enter your valid address here."><br>
+  						<input type="text" class="form-control input-lg" id="list_address2" name="list_address2" title="secondary address text here">
+  						<div id="list_address-error"></div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-md-12">
+  			    <div class="col-md-4 col-md-offset-2">
+  			 		<label for=""><span class="required_field">*</span> City: </label>
+  						<input type="text" class="form-control input-lg" id="list_city" name="list_city" required title="Your City">
+  						<div id="list_city-error"></div>
+  				</div>
+  				<div class="col-md-4">
+  			 		<label for=""><span class="required_field">*</span> State, Province, or Region: </label>
+  						<input type="text" class="form-control input-lg" id="list_state" name="list_state" required title="Your State, Province or Region">
+  						<div id="list_state-error"></div>
+  				</div>
+  			</div>
+  			<div class="col-md-12">
+  			    <div class="col-md-4 col-md-offset-2">
+  			 		<label for=""><span class="required_field">*</span> Zip or Postal Code: </label>
+  						<input type="text" class="form-control input-lg" id="list_postal" name="list_postal" required title="Your Zip or Postal Code">
+  						<div id="list_postal-error"></div>
+  				</div>
+  				<div class="col-md-4">
+  			 		<label for=""><span class="required_field">*</span> Country: </label>
+  						<input type="text" class="form-control input-lg" id="list_country" name="list_country" required  title="Your Country">
+  						<div id="list_country-error"></div>
+  				</div>
+  			</div>
+  		</div>
+      </section>
+
+  	<!-- Step 4 -->
+      <h3> {"Opt-in Form"|alang}</h3>
+      <section>
+          <div class="new_form_div">
+
+          	<div class="row" >
+  				<div class="col-md-12">
+  					<h1 class="step_header_text">
+  						<i class="fa fa-envelope" aria-hidden="true"></i>
+  						{"Opt-in Form"|alang}
+  					</h1>
+  				</div>
+  			</div>
+
+  			<div class="row">
+  		        <div class="col-md-12">
+  		        	<div class="campaign_help">
+  		        		<p class="lead text_center">
+  						{"You must create an Opt-in form for each new Capture Page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+  						</p>
+  		        	</div>
+  	        	</div>
+          	</div>
+
+  			<div class="row">
+  				<div class="col-md-12">
+  			  		<div class="col-md-8 col-md-offset-2">
+  						<div class="form-group">
+  							<label for="">Form Name: </label>
+  							<input type="text" class="form-control input-lg" id="form_name" name="form_name" title="Your Form Name Here">
+  							<div id="form_name-error"></div>
+  							<!-- <div class="text_center hint">
+  								This is how you will keep track of each form for your page.
+  							</div> -->
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+          </div>
+      </section>
+
+  	<!-- Step 5 -->
+      <h3> {"Form Options"|alang}</h3>
+      <section>
+          <div class="new_form_div">
+  			<div class="row">
+  				<div class="col-md-12">
+  					<!-- <hr class="divider" /> -->
+  					<h1 class="step_header_text">
+  						<i class="fa fa-envelope" aria-hidden="true"></i>
+  						{"Form Options"|alang}
+  					</h1>
+  				</div>
+  			</div>
+
+  			<div class="row">
+  				<div class="col-md-12">
+  					<div class="campaign_help">
+  						<p class="lead text-center">Check the Subcriber field options you want to collect.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+  					</div>
+  				</div>
+  			</div>
+
+  			<div class="row">
+  				<div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4">
+  					<div class="form-check">
+  						<label class="form-check-label">
+  							<input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
+  						</label>
+  					</div>
+  					<div class="form-check">
+  						<label class="form-check-label">
+  							<input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
+  						</label>
+  					</div>
+  					<div class="form-check">
+  						<label class="form-check-label">
+  							<input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
+  						</label>
+  					</div>
+  					{foreach from=$optional_fields item=field}
+  					<div class="form-check">
+  						<label class="form-check-label">
+  							<input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
+  						</label>
+  					</div>
+  					{/foreach}
+  				</div>
+  			</div>
+
+
+          </div>
+      </section>
+
+  	<!-- Step 6 -->
+      <h3> {"Customize Optin Page"|alang}</h3>
+      <section>
+          <div class="row">
+          	<div class="col-md-12">
+  				<h1 class="step_header_text">
+  					<i class="fa fa-envelope" aria-hidden="true"></i>
+  					{"Customized Optin Page"|alang}
+  				</h1>
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-12">
+  				<div class="campaign_help">
+  					<p class="lead text_center">
+  						{"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+  					</p>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class="col-md-12" id="landing_page_container">
+  			<div class="row select_landing_page_template">
+  				<div class="col-md-12">
+  					<div id="radiobutton_container" class="accordion">
+
+
+  						<!-- <h3>Your </h3> -->
+  						<div class="accordion_group">
+  							<!-- Skin Care / Product Trial -->
+  							<div class="template_wrapper">
+  								<span class="text_center template_title">Skin Care - Product Trial</span>
+  								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
+  								<div class="template_buttons">
+  								  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+  								  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
+  								</div>
+  							</div>
+
+  						</div>
+
+
+  					<div id="landing-page-url-error"></div>
+  				</div>
+  			</div>
+  		</div>
+      </section>
+
+  	<!-- Step 7 -->
+      <h3> {"Optin Page URL"|alang}</h3>
       <section>
           <div>
-        <br>
-            <div class="row" >
-          <div class="col-md-12">
-            <h1 class="step_header_text">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              {"Download Page URL"|alang}
-            </h1>
-          </div>
+  			<br>
+          	<div class="row" >
+  				<div class="col-md-12">
+  					<h1 class="step_header_text">
+  						<i class="fa fa-envelope" aria-hidden="true"></i>
+  						{"Optin Page URL"|alang}
+  					</h1>
+  				</div>
 
-              <div class="col-md-10 col-md-offset-1">
-                <div class="campaign_help">
-                  <p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-                </div>
-              </div>
+  		        <div class="col-md-10 col-md-offset-1">
+  		        	<div class="campaign_help">
+  		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+  		        	</div>
+  	        	</div>
 
-          <div class="col-md-12">
-              <div class="col-md-8 col-md-offset-2">
-              <div class="form-group">
-                <input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
-                <div id="landing-page-url-error"></div>
-              </div>
-            </div>
-          </div>
+  				<div class="col-md-12">
+  			  		<div class="col-md-8 col-md-offset-2">
+  						<div class="form-group">
+  							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
+  							<div id="landing-page-url-error"></div>
+  						</div>
+  					</div>
+  				</div>
 
 
-        </div>
+  			</div>
           </div>
       </section>
       <!-- Step 6 -->
-        <h3> {"Customize Thank You Page"|alang}</h3>
+        <h3> {"Customize Download Page"|alang}</h3>
         <section>
             <div class="row">
-            	<div class="col-md-12">
-    				<h1 class="step_header_text">
-    					<i class="fa fa-envelope" aria-hidden="true"></i>
-    					{"Customized Thank You Page"|alang}
-    				</h1>
-    			</div>
-    		</div>
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="campaign_help">
-    					<p class="lead text_center">
-    						{"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-    					</p>
-    				</div>
-    			</div>
-    		</div>
+              <div class="col-md-12">
+            <h1 class="step_header_text">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              {"Customized Download Page"|alang}
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="campaign_help">
+              <p class="lead text_center">
+                {"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+              </p>
+            </div>
+          </div>
+        </div>
 
-    		<div class="col-md-12" id="landing_page_container">
-    			<div class="row select_landing_page_template">
-    				<div class="col-md-12">
-    					<div id="radiobutton_container" class="accordion">
-
-
-    						<!-- <h3>Your </h3> -->
-    						<div class="accordion_group">
-    							<!-- Skin Care / Product Trial -->
-    							<div class="template_wrapper">
-    								<span class="text_center template_title">Skin Care - Product Trial</span>
-    								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
-    								<div class="template_buttons">
-    								  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-    								  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
-    								</div>
-    							</div>
-
-    						</div>
+        <div class="col-md-12" id="landing_page_container">
+          <div class="row select_landing_page_template">
+            <div class="col-md-12">
+              <div id="radiobutton_container" class="accordion">
 
 
-    					<div id="landing-page-url-error"></div>
-    				</div>
-    			</div>
-    		</div>
+                <!-- <h3>Your </h3> -->
+                <div class="accordion_group">
+                  <!-- Skin Care / Product Trial -->
+                  <div class="template_wrapper">
+                    <span class="text_center template_title">Skin Care - Product Trial</span>
+                    <img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
+                    <div class="template_buttons">
+                        <a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+                        <a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
+                    </div>
+                  </div>
+
+                </div>
+
+
+              <div id="landing-page-url-error"></div>
+            </div>
+          </div>
+        </div>
         </section>
 
-    	<!-- Step 7 -->
-        <h3> {"Thank You Page URL"|alang}</h3>
+      <!-- Step 7 -->
+        <h3> {"Download Page URL"|alang}</h3>
         <section>
             <div>
-    			<br>
-            	<div class="row" >
-    				<div class="col-md-12">
-    					<h1 class="step_header_text">
-    						<i class="fa fa-envelope" aria-hidden="true"></i>
-    						{"Thank You Page URL"|alang}
-    					</h1>
-    				</div>
+          <br>
+              <div class="row" >
+            <div class="col-md-12">
+              <h1 class="step_header_text">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                {"Download Page URL"|alang}
+              </h1>
+            </div>
 
-    		        <div class="col-md-10 col-md-offset-1">
-    		        	<div class="campaign_help">
-    		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-    		        	</div>
-    	        	</div>
+                <div class="col-md-10 col-md-offset-1">
+                  <div class="campaign_help">
+                    <p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+                  </div>
+                </div>
 
-    				<div class="col-md-12">
-    			  		<div class="col-md-8 col-md-offset-2">
-    						<div class="form-group">
-    							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
-    							<div id="landing-page-url-error"></div>
-    						</div>
-    					</div>
-    				</div>
+            <div class="col-md-12">
+                <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                  <input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
+                  <div id="landing-page-url-error"></div>
+                </div>
+              </div>
+            </div>
 
 
-    			</div>
+          </div>
             </div>
         </section>
+        <!-- Step 6 -->
+          <h3> {"Customize Thank You Page"|alang}</h3>
+          <section>
+              <div class="row">
+              	<div class="col-md-12">
+      				<h1 class="step_header_text">
+      					<i class="fa fa-envelope" aria-hidden="true"></i>
+      					{"Customized Thank You Page"|alang}
+      				</h1>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-md-12">
+      				<div class="campaign_help">
+      					<p class="lead text_center">
+      						{"Customize your selected optin page."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+      					</p>
+      				</div>
+      			</div>
+      		</div>
+
+      		<div class="col-md-12" id="landing_page_container">
+      			<div class="row select_landing_page_template">
+      				<div class="col-md-12">
+      					<div id="radiobutton_container" class="accordion">
 
 
+      						<!-- <h3>Your </h3> -->
+      						<div class="accordion_group">
+      							<!-- Skin Care / Product Trial -->
+      							<div class="template_wrapper">
+      								<span class="text_center template_title">Skin Care - Product Trial</span>
+      								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
+      								<div class="template_buttons">
+      								  	<a href="/builder/?load_template=glc-beauty.xs" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+      								  	<a href="/builder/elements/preview_BWy3KCCbpFIxIOfjkjJS.html" class="btn btn-demo" target="_blank">DEMO</a>
+      								</div>
+      							</div>
+
+      						</div>
 
 
-    <!-- Step 12 -->
-    <h3> {"Done!"|alang}</h3>
-    <section>
-    	<div class="row">
-			<div class="col-md-12">
-				<div class="campaign_help">
-        			<p class="lead">Congratulations! You just finished creating your landing page. You can visit your newly created landing page via the link below: <span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-        		</div>
-        	</div>
-        </div>
-        <div class="done_step row">
-        	<div class="col-md-12">
-				<p class="lead" style="text-align:center;" id="funnel_link"></p>
-			</div>
-        </div>
+      					<div id="landing-page-url-error"></div>
+      				</div>
+      			</div>
+      		</div>
+          </section>
 
-        <div class="sharer_wrapper">
-			<ul>
-				<li class="facebook"><a class="social" id="fb_share" href="" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-				<li class="twitter"><a class="social" id="twitter_share" href="" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-				<li class="gplus"><a class="social" id="gplus_share" href="" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
-				<li class="email"><a class="social" id="email_share" href="" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
-			</ul>
-        </div>
-    </section>
+      	<!-- Step 7 -->
+          <h3> {"Thank You Page URL"|alang}</h3>
+          <section>
+              <div>
+      			<br>
+              	<div class="row" >
+      				<div class="col-md-12">
+      					<h1 class="step_header_text">
+      						<i class="fa fa-envelope" aria-hidden="true"></i>
+      						{"Thank You Page URL"|alang}
+      					</h1>
+      				</div>
 
-</form>
+      		        <div class="col-md-10 col-md-offset-1">
+      		        	<div class="campaign_help">
+      		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+      		        	</div>
+      	        	</div>
+
+      				<div class="col-md-12">
+      			  		<div class="col-md-8 col-md-offset-2">
+      						<div class="form-group">
+      							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
+      							<div id="landing-page-url-error"></div>
+      						</div>
+      					</div>
+      				</div>
+
+
+      			</div>
+              </div>
+          </section>
+      <!-- Step 12 -->
+      <h3> {"Done!"|alang}</h3>
+      <section>
+      	<div class="row">
+  			<div class="col-md-12">
+  				<div class="campaign_help">
+          			<p class="lead">Congratulations! You just finished creating your landing page. You can visit your newly created landing page via the link below: <span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+          		</div>
+          	</div>
+          </div>
+          <div class="done_step row">
+          	<div class="col-md-12">
+  				<p class="lead" style="text-align:center;" id="funnel_link"></p>
+  			</div>
+          </div>
+
+          <div class="sharer_wrapper">
+  			<ul>
+  				<li class="facebook"><a class="social" id="fb_share" href="" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+  				<li class="twitter"><a class="social" id="twitter_share" href="" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+  				<li class="gplus"><a class="social" id="gplus_share" href="" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
+  				<li class="email"><a class="social" id="email_share" href="" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+  			</ul>
+          </div>
+      </section>
+
+  </form>
 </div>
 
 <!-- {/if} -->

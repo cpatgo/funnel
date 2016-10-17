@@ -520,6 +520,12 @@ jQuery(document).ready(function(){
     });
 
 
+    jQuery('.btn-dfy-choose').click(function(e){
+      e.preventDefault();
+      thisData = $(this).attr('data-info');
+      console.log(thisData);
+    });
+
     //COLLECTION OF FUNCTIONS
     var aem_functions = {
         create_landing_page     :   function(landing_page_html, form) {
