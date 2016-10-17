@@ -1102,6 +1102,18 @@ jQuery(document).ready(function(){
 
     jQuery('body').on('click', '.clickableRow', function(e) {
         e.preventDefault();
+        var tr = jQuery(this);
+        var editModal = jQuery('#editRowForm');
+        editModal.find('#name').val(tr.find('.name').text());
+        editModal.find('#slug').val(tr.find('.slug').text());
+        editModal.find('#type').val(tr.find('.type').text());
+        editModal.find('#category').val(tr.find('.category').text());
+        editModal.find('#image_url').val(tr.find('.image_url').text());
+        editModal.find('#builder_id').val(tr.find('.builder_id').text());
+        editModal.find('#builder_url').val(tr.find('.builder_url').text());
+        editModal.find('#groupset_id').val(tr.find('.groupset_id').text());
+
+        jQuery('#deleteRowModal').find('#deleteRowID').text(tr.find('.name').text());
         jQuery('#selectOption').modal();
     });
 });
