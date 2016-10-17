@@ -344,17 +344,19 @@ jQuery(document).ready(function(){
                   'action':'get_lists'
               },
               dataType: 'json',
-              success:function(result) {
-                  var select_list = jQuery("body").find("#landing-page-list-id");
-                  select_list.html('');
-                  select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
-                  jQuery.each(result.data, function(key, value) {
-                      select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-                  });
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
+                success: function(result) {
+                            var select_list = jQuery("body").find("#landing-page-list-id");
+                            select_list.html('');
+                            select_list.append( jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --") );
+
+                            jQuery.each(result.data, function(key, value) {
+                                select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+                            });
+                          },
+
+                error: function(errorThrown){
+                        console.log(errorThrown);
+                        }
           });
       },
       get_forms   :   function() {
