@@ -1099,4 +1099,9 @@ jQuery(document).ready(function(){
       "iDisplayLength": 100,
        responsive: true,
     });
+
+    jQuery('body').on('click', '#templateListTable', function(e) {
+      e.preventDefault();
+        jQuery(this).find('#selectOption').modal();
+    });
 });
