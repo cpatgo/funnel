@@ -821,29 +821,7 @@ jQuery(document).ready(function(){
         reset_values        :   function(element_name) {
             jQuery(element_name).find('input:text').val('');
         },
-        get_dfy_template_by_id  : function(id) {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/custom.php",
-              data: {
-                  'action'      : 'get_dfy_template_by_id',
-                  'template_id' : id
-              },
-              dataType: 'json',
-              success:function(result) {
-                  // var select_list = jQuery("body").find("#landing-page-list-id");
-                  // select_list.html('');
-                  // select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
-                  // jQuery.each(result.data, function(key, value) {
-                  //     select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-                  // });
-                  console.log(result.data);
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-        }
+        
     };
 
     //GET LISTS
