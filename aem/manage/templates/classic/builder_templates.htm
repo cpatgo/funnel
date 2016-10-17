@@ -5,24 +5,25 @@
 				<thead>
 					<tr>
 						<th>Name</th>
+						<th>Slug</th>
 						<th>Type</th>
 						<th>Category</th>
-						<th>Web URL</th>
-						<th>Path</th>
+						<th>AEM Image URL</th>
 						<th>Builder ID</th>
 						<th>Builder URL</th>
+						<th>Groupset ID</th>
 					</tr>
 				</thead>
 				<tbody>
 					{foreach from=$templateList item=p}
 					    <tr>
-					    	<td>{$p.template_name}</td>
-					    	<td>{$p.template_type}</td>
-					    	<td>{$p.template_category}</td>
-					    	<td>{$p.template_web_url}</td>
-					    	<td>{$p.template_path}</td>
-					    	<td>{$p.template_builder_id}</td>
-					    	<td>{$p.template_builder_url}</td>
+					    	<td>{$p.name}</td>
+					    	<td>{$p.slug}</td>
+					    	<td>{$p.type}</td>
+					    	<td>{$p.category}</td>
+					    	<td>{$p.aem_image_url}</td>
+					    	<td>{$p.builder_id}</td>
+					    	<td>{$p.groupset_id}</td>
 					    </tr>
 					{/foreach}
 				</tbody>
