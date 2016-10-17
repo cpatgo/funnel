@@ -283,26 +283,6 @@ jQuery(document).ready(function(){
   });
 
 
-  // GET SELECTED DFY FUNNEL TEMPLATE ID //
-  jQuery('a.btn-dfy-choose').click(function(e){
-    e.preventDefault();
-    thisData = jQuery(this).attr('data-info');
-    // console.log(thisData);
-
-    if (thisData) {
-      // store in temp array then store to session storage
-      // selectedTemplate = sessionStorage.getItem('selectedTemplate');
-      var result = thisData.split(",");
-      sessionStorage.setItem('optin', result[0]);
-      sessionStorage.setItem('download', result[1]);
-      sessionStorage.setItem('thankyou', result[2]);
-    }
-    else{
-      console.log('empty template selected. please restart page.');
-    }
-  });
-
-
   // CUSTOM CAMPAIGN
     var $body = jQuery('body');
 
@@ -551,7 +531,24 @@ jQuery(document).ready(function(){
         jQuery('.actions > ul > li:nth-child(2) > a').click();
     });
 
+    // GET SELECTED DFY FUNNEL TEMPLATE ID //
+    jQuery('a.btn-dfy-choose').click(function(e){
+      e.preventDefault();
+      thisData = jQuery(this).attr('data-info');
+      // console.log(thisData);
 
+      if (thisData) {
+        // store in temp array then store to session storage
+        // selectedTemplate = sessionStorage.getItem('selectedTemplate');
+        var result = thisData.split(",");
+        sessionStorage.setItem('optin', result[0]);
+        sessionStorage.setItem('download', result[1]);
+        sessionStorage.setItem('thankyou', result[2]);
+      }
+      else{
+        console.log('empty template selected. please restart page.');
+      }
+    });
 
     //COLLECTION OF FUNCTIONS
     var aem_functions = {
@@ -818,7 +815,6 @@ jQuery(document).ready(function(){
         reset_values        :   function(element_name) {
             jQuery(element_name).find('input:text').val('');
         }
-
     };
 
     //GET LISTS
