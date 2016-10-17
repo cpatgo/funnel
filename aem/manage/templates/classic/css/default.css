@@ -8,6 +8,9 @@ body{ font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#333333; 
 /*Forms New styles */
 /*modified on Oct 11 Amitabh Bachhan Birthday Special Patch :) by Sandeep */
 
+#selectOptionForm .glc_button {
+    width: 32.5%;
+}
 
 .required_field {
 	color: red;
