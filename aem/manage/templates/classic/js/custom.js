@@ -2,16 +2,16 @@
 var numofsteps = 13;
 var progresscounter = 0;
 var ctr = 0;
-
+var dfy_selected_id;
 
 jQuery(document).ready(function(){
 
-  // reset progress bar
   jQuery( "#step-progressbar" ).progressbar({
     value: 0,
   });
 
-  // DONE FOR YOU FUNNEL STARTS HERE
+
+  // DONE FOR YOU FUNNEL
   var form2 = jQuery("#create-premade-campaign").show();
   form2.validate({
       errorPlacement: function errorPlacement(error, element) {
@@ -262,7 +262,7 @@ jQuery(document).ready(function(){
               // also load the template ID selected
               // loadTemplate();
               console.log("Loaded Thank You Template: " + sessionStorage.getItem('thankyou'));
-              get_dfy_template_by_id( sessionStorage.getItem('thankyou') );
+              get_dfy_template_by_id(sessionStorage.getItem('thankyou'));
           }
 
 
@@ -305,280 +305,11 @@ jQuery(document).ready(function(){
     }
   });
 
-  //COLLECTION OF FUNCTIONS
-  var aem_functions = {
-      create_landing_page     :   function(landing_page_html, form) {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/custom.php",
-              data: {
-                  'action':'create_landing_page',
-                  'landing_page_html': landing_page_html,
-                  'form': form
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'success'){
-                      jQuery('input[name=landing-page-url]:checked').val(result.message);
 
-                      //Save campaign
-                      aem_functions.save_funnel_campaign();
-                      //Disable fields
-                      $body.find('select').attr('disabled', true);
-                      $body.find('input').attr('disabled', true);
-                      $body.find('textarea').attr('disabled', true);
-                  } else {
-                      alert(result.message);
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-  
-      get_forms   :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/custom.php",
-              data: {
-                  'action':'get_forms'
-              },
-              dataType: 'json',
-              success:function(result) {
-                  var select_form = jQuery("body").find("#landing-page-form-id");
-                  select_form.html('');
-                  jQuery.each(result.data, function(key, value) {
-                      select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-                  });
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      save_funnel_campaign    :   function() {
-          var fields = jQuery('#create-funnel-campaign').serialize();
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/functions/funnel_campaign.php",
-              data: {
-                  'action': 'list_insert_post',
-                  'fields': fields
-              },
-              dataType: 'json',
-              success:function(result) {
-                  $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
-                  $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
-                  $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
-                  $body.find('#email_share').attr('href', "mailto:?body="+result.link);
-                  $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      save_list_to_session    :   function() {
-          var list_id = jQuery('#landing-page-list-id').val();
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/functions/funnel_campaign.php",
-              data: {
-                  'action': 'save_list_to_session',
-                  'list_id': list_id
-              },
-              dataType: 'json',
-              success:function(result) {
-
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      destroy_list_session    :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/functions/funnel_campaign.php",
-              data: {
-                  'action': 'destroy_list_session'
-              },
-              dataType: 'json',
-              success:function(result) {
-
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      add_new_list    :   function(callback) {
-          var fields = $body.find('.new_list_div :input').serialize();
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'add_list',
-                  fields : fields
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'success') {
-                      aem_functions.get_lists();
-                      aem_functions.add_new_subscriber();
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      add_new_subscriber  :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'add_subscriber',
-                  'email' : $body.find('#subscriber_email').val()
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'error') {
-                      alert(result.message);
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      add_new_form    :   function() {
-          var fields = $body.find('.new_form_div :input').serialize();
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'add_form',
-                  fields : fields
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'error') {
-                      alert(result.message);
-                  } else if(result.type == 'success') {
-                      aem_functions.get_form();
-                      aem_functions.add_form_id_to_url();
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      update_form    :   function() {
-          var fields = $body.find('.new_form_div :input').serialize();
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'edit_form',
-                  fields : fields
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'error') {
-                      alert(result.message);
-                  } else if(result.type == 'success') {
-                      aem_functions.get_form();
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      get_form        :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'get_form'
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'success') {
-                      $body.find('#formcode').text(result.message.html);
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      add_form_id_to_url  :   function() {
-          jQuery.ajax({
-              method: "post",
-              url: "../manage/templates/classic/ajax/api.php",
-              data: {
-                  'action':'get_form'
-              },
-              dataType: 'json',
-              success:function(result) {
-                  if(result.type == 'success') {
-                      $body.find('.buildertemplate').each(function(index, item) {
-                          var href = jQuery(item).attr('href');
-                          var newhref = href+'&form_id='+result.message.id;
-                          jQuery(item).attr('href', newhref);
-                      });
-                      $body.find('.sitebuildertemplate').each(function(index, item) {
-                          var href = jQuery(item).attr('href');
-                          var newhref = href+'/'+result.message.id;
-                          jQuery(item).attr('href', newhref);
-                      });
-                  }
-              },
-              error: function(errorThrown){
-                  console.log(errorThrown);
-              }
-          });
-      },
-      focus_on_element    :   function(element_name) {
-          var elementOffset = $body.find(element_name).offset().top;
-          jQuery('html, body').animate({scrollTop: elementOffset}, 600);
-      },
-      reset_values        :   function(element_name) {
-          jQuery(element_name).find('input:text').val('');
-      },
-      get_dfy_template_by_id  : function(id) {
-        jQuery.ajax({
-            method: "post",
-            url: "../manage/templates/classic/ajax/custom.php",
-            data: {
-                'action'      : 'get_dfy_template_by_id',
-                'groupset_id' : id
-            },
-            dataType: 'json',
-            success:function(result) {
-                // var select_list = jQuery("body").find("#landing-page-list-id");
-                // select_list.html('');
-                // select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
-                // jQuery.each(result.data, function(key, value) {
-                //     select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
-                // });
-                console.log(result.data);
-            },
-            error: function(errorThrown){
-                console.log(errorThrown);
-            }
-        });
-      }
-  };
-
-
-
-  // CUSTOM CAMPAIGN STARTS HERE
+  // CUSTOM CAMPAIGN
     var $body = jQuery('body');
+
+
 
     var form = jQuery("#create-funnel-campaign").show();
     form.validate({
@@ -825,7 +556,295 @@ jQuery(document).ready(function(){
 
 
 
+    //COLLECTION OF FUNCTIONS
+    var aem_functions = {
+        create_landing_page     :   function(landing_page_html, form) {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/custom.php",
+                data: {
+                    'action':'create_landing_page',
+                    'landing_page_html': landing_page_html,
+                    'form': form
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success'){
+                        jQuery('input[name=landing-page-url]:checked').val(result.message);
 
+                        //Save campaign
+                        aem_functions.save_funnel_campaign();
+                        //Disable fields
+                        $body.find('select').attr('disabled', true);
+                        $body.find('input').attr('disabled', true);
+                        $body.find('textarea').attr('disabled', true);
+                    } else {
+                        alert(result.message);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        get_lists   :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/custom.php",
+                data: {
+                    'action':'get_lists'
+                },
+                dataType: 'json',
+                success:function(result) {
+                    var select_list = jQuery("body").find("#landing-page-list-id");
+                    select_list.html('');
+                    select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
+                    jQuery.each(result.data, function(key, value) {
+                        select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+                    });
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        get_forms   :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/custom.php",
+                data: {
+                    'action':'get_forms'
+                },
+                dataType: 'json',
+                success:function(result) {
+                    var select_form = jQuery("body").find("#landing-page-form-id");
+                    select_form.html('');
+                    jQuery.each(result.data, function(key, value) {
+                        select_form.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+                    });
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        save_funnel_campaign    :   function() {
+            var fields = jQuery('#create-funnel-campaign').serialize();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/functions/funnel_campaign.php",
+                data: {
+                    'action': 'list_insert_post',
+                    'fields': fields
+                },
+                dataType: 'json',
+                success:function(result) {
+                    $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+                    $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
+                    $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
+                    $body.find('#email_share').attr('href', "mailto:?body="+result.link);
+                    $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        save_list_to_session    :   function() {
+            var list_id = jQuery('#landing-page-list-id').val();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/functions/funnel_campaign.php",
+                data: {
+                    'action': 'save_list_to_session',
+                    'list_id': list_id
+                },
+                dataType: 'json',
+                success:function(result) {
+
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        destroy_list_session    :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/functions/funnel_campaign.php",
+                data: {
+                    'action': 'destroy_list_session'
+                },
+                dataType: 'json',
+                success:function(result) {
+
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        add_new_list    :   function(callback) {
+            var fields = $body.find('.new_list_div :input').serialize();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'add_list',
+                    fields : fields
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        aem_functions.get_lists();
+                        aem_functions.add_new_subscriber();
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        add_new_subscriber  :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'add_subscriber',
+                    'email' : $body.find('#subscriber_email').val()
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'error') {
+                        alert(result.message);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        add_new_form    :   function() {
+            var fields = $body.find('.new_form_div :input').serialize();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'add_form',
+                    fields : fields
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'error') {
+                        alert(result.message);
+                    } else if(result.type == 'success') {
+                        aem_functions.get_form();
+                        aem_functions.add_form_id_to_url();
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        update_form    :   function() {
+            var fields = $body.find('.new_form_div :input').serialize();
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'edit_form',
+                    fields : fields
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'error') {
+                        alert(result.message);
+                    } else if(result.type == 'success') {
+                        aem_functions.get_form();
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        get_form        :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form'
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        $body.find('#formcode').text(result.message.html);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        add_form_id_to_url  :   function() {
+            jQuery.ajax({
+                method: "post",
+                url: "../manage/templates/classic/ajax/api.php",
+                data: {
+                    'action':'get_form'
+                },
+                dataType: 'json',
+                success:function(result) {
+                    if(result.type == 'success') {
+                        $body.find('.buildertemplate').each(function(index, item) {
+                            var href = jQuery(item).attr('href');
+                            var newhref = href+'&form_id='+result.message.id;
+                            jQuery(item).attr('href', newhref);
+                        });
+                        $body.find('.sitebuildertemplate').each(function(index, item) {
+                            var href = jQuery(item).attr('href');
+                            var newhref = href+'/'+result.message.id;
+                            jQuery(item).attr('href', newhref);
+                        });
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });
+        },
+        focus_on_element    :   function(element_name) {
+            var elementOffset = $body.find(element_name).offset().top;
+            jQuery('html, body').animate({scrollTop: elementOffset}, 600);
+        },
+        reset_values        :   function(element_name) {
+            jQuery(element_name).find('input:text').val('');
+        }
+        get_dfy_template_by_id  : function(id) {
+          jQuery.ajax({
+              method: "post",
+              url: "../manage/templates/classic/ajax/custom.php",
+              data: {
+                  'action'      : 'get_dfy_template_by_id',
+                  'template_id' : id
+              },
+              dataType: 'json',
+              success:function(result) {
+                  // var select_list = jQuery("body").find("#landing-page-list-id");
+                  // select_list.html('');
+                  // select_list.append(jQuery("<option></option>").attr({"value": "", "disabled": "disabled", "selected": "selected"}).text("-- SELECT LIST --"));
+                  // jQuery.each(result.data, function(key, value) {
+                  //     select_list.append(jQuery("<option></option>").attr("value", value.id).text(value.name));
+                  // });
+                  console.log(result.data);
+              },
+              error: function(errorThrown){
+                  console.log(errorThrown);
+              }
+          });
+        }
+    };
 
     //GET LISTS
     aem_functions.get_lists();
@@ -1072,8 +1091,4 @@ jQuery(document).ready(function(){
     //   heightStyle: "content"
     // });
 
-    jQuery('.dataTables').DataTable({
-      "iDisplayLength": 100,
-       responsive: true,
-    });
 });
