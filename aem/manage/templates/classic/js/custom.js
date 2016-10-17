@@ -242,7 +242,7 @@ jQuery(document).ready(function(){
               // also load the template ID selected
               // loadTemplate();
               console.log("Loaded Optin Template: " + sessionStorage.getItem('optin'));
-              get_dfy_template_by_id(sessionStorage.getItem('optin'));
+              aem_functions.get_dfy_template_by_id(sessionStorage.getItem('optin'));
           }
 
           if (current == 8) { // if current index is equals to 4th step
@@ -252,7 +252,7 @@ jQuery(document).ready(function(){
               // also load the template ID selected
               // loadTemplate();
               console.log("Loaded Download Template: " + sessionStorage.getItem('download'));
-              get_dfy_template_by_id(sessionStorage.getItem('download'));
+              aem_functions.get_dfy_template_by_id(sessionStorage.getItem('download'));
           }
 
           if (current == 10) { // if current index is equals to 4th step
@@ -262,7 +262,7 @@ jQuery(document).ready(function(){
               // also load the template ID selected
               // loadTemplate();
               console.log("Loaded Thank You Template: " + sessionStorage.getItem('thankyou'));
-              get_dfy_template_by_id( sessionStorage.getItem('thankyou') );
+              aem_functions.get_dfy_template_by_id( sessionStorage.getItem('thankyou') );
           }
 
 
