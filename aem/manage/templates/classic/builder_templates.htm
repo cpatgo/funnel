@@ -4,25 +4,25 @@
 			<table class="table table-hover dataTables">
 				<thead>
 					<tr>
-						<th>Title</th>
+						<th>Name</th>
 						<th>Type</th>
-						<th>Description</th>
-						<th>User ID</th>
-						<th>List ID</th>
-						<th>Page Link</th>
-						<th>Date Created</th>
+						<th>Category</th>
+						<th>Web URL</th>
+						<th>Path</th>
+						<th>Builder ID</th>
+						<th>Builder URL</th>
 					</tr>
 				</thead>
 				<tbody>
 					{foreach from=$templateList item=p}
 					    <tr>
-					    	<td>{$p.title}</td>
-					    	<td>{$p.type}</td>
-					    	<td>{$p.description}</td>
-					    	<td>{$p.user_id}</td>
-					    	<td>{$p.list_id}</td>
-					    	<td>{$p.page_link}</td>
-					    	<td>{$p.date_created}</td>
+					    	<td>{$p.template_name}</td>
+					    	<td>{$p.template_type}</td>
+					    	<td>{$p.template_category}</td>
+					    	<td>{$p.template_web_url}</td>
+					    	<td>{$p.template_path}</td>
+					    	<td>{$p.template_builder_id}</td>
+					    	<td>{$p.template_builder_url}</td>
 					    </tr>
 					{/foreach}
 				</tbody>
