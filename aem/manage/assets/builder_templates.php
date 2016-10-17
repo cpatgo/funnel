@@ -18,7 +18,7 @@ class builder_templates_assets extends AWEBP_Page {
 		}
 
 		$so = new adesk_Select;
-		$templates = adesk_sql_select_array("SELECT * FROM #funnel_campaign");
+		$templates = adesk_sql_select_array("SELECT * FROM #builder_templates");
 
 		$smarty->assign('templateList', $templates);
 		$smarty->assign("content_template", "builder_templates.htm");
