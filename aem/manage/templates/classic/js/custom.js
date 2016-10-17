@@ -827,7 +827,7 @@ jQuery(document).ready(function(){
               url: "../manage/templates/classic/ajax/custom.php",
               data: {
                   'action'      : 'get_dfy_template_by_id',
-                  'template_id' : id
+                  'groupset_id' : id
               },
               dataType: 'json',
               success:function(result) {
