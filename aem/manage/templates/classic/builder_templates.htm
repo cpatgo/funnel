@@ -17,14 +17,14 @@
 				<tbody>
 					{foreach from=$templateList item=p}
 					    <tr class="clickableRow" data-tid="{$p.id}">
-					    	<td>{$p.name}</td>
-					    	<td>{$p.slug}</td>
-					    	<td>{$p.type}</td>
-					    	<td>{$p.category}</td>
-					    	<td>{$p.aem_image_url}</td>
-					    	<td>{$p.builder_id}</td>
-					    	<td>{$p.builder_url}</td>
-					    	<td>{$p.groupset_id}</td>
+					    	<td class="name">{$p.name}</td>
+					    	<td class="slug">{$p.slug}</td>
+					    	<td class="type">{$p.type}</td>
+					    	<td class="category">{$p.category}</td>
+					    	<td class="aem_image_url">{$p.aem_image_url}</td>
+					    	<td class="builder_id">{$p.builder_id}</td>
+					    	<td class="builder_url">{$p.builder_url}</td>
+					    	<td class="groupset_id">{$p.groupset_id}</td>
 					    </tr>
 					{/foreach}
 				</tbody>
@@ -48,37 +48,37 @@
 			<form id="addRowForm">
 				<div class="form-group">
 					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name">
+					<input type="text" class="form-control" id="name" name="name">
 				</div>
 				<div class="form-group">
 					<label for="slug">Slug:</label>
-					<input type="text" class="form-control" id="slug">
+					<input type="text" class="form-control" id="slug" name="slug">
 				</div>
 				<div class="form-group">
 					<label for="type">Type:</label>
-					<input type="text" class="form-control" id="type">
+					<input type="text" class="form-control" id="type" name="type">
 				</div>
 				<div class="form-group">
 					<label for="category">Category:</label>
-					<input type="text" class="form-control" id="category">
+					<input type="text" class="form-control" id="category" name="category">
 				</div>
 				<div class="form-group">
 					<label for="image_url">Image URL:</label>
-					<input type="text" class="form-control" id="image_url">
+					<input type="text" class="form-control" id="image_url" name="image_url">
 				</div>
 				<div class="form-group">
 					<label for="builder_id">Builder ID:</label>
-					<input type="text" class="form-control" id="builder_id">
+					<input type="text" class="form-control" id="builder_id" name="builder_id">
 				</div>
 				<div class="form-group">
 					<label for="builder_url">Builder URL:</label>
-					<input type="text" class="form-control" id="builder_url">
+					<input type="text" class="form-control" id="builder_url" name="builder_url">
 				</div>
 				<div class="form-group">
 					<label for="groupset_id">Groupset ID:</label>
-					<input type="text" class="form-control" id="groupset_id">
+					<input type="text" class="form-control" id="groupset_id" name="groupset_id">
 				</div>
-				<button type="submit" id="addRowButton" class="btn btn-default">Submit</button>
+				<button type="submit" id="addRowButton" class="btn glc_button glc_button_large">Submit</button>
 			</form>
 		</div>
 	</div>
@@ -86,42 +86,51 @@
 <div id="editRowModal" style="display:none;">
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
-			<form id="addRowForm">
+			<form id="editRowForm">
 				<div class="form-group">
 					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name">
+					<input type="text" class="form-control" id="name" name="name">
 				</div>
 				<div class="form-group">
 					<label for="slug">Slug:</label>
-					<input type="text" class="form-control" id="slug">
+					<input type="text" class="form-control" id="slug" name="slug">
 				</div>
 				<div class="form-group">
 					<label for="type">Type:</label>
-					<input type="text" class="form-control" id="type">
+					<input type="text" class="form-control" id="type" name="type">
 				</div>
 				<div class="form-group">
 					<label for="category">Category:</label>
-					<input type="text" class="form-control" id="category">
+					<input type="text" class="form-control" id="category" name="category">
 				</div>
 				<div class="form-group">
 					<label for="image_url">Image URL:</label>
-					<input type="text" class="form-control" id="image_url">
+					<input type="text" class="form-control" id="image_url" name="image_url">
 				</div>
 				<div class="form-group">
 					<label for="builder_id">Builder ID:</label>
-					<input type="text" class="form-control" id="builder_id">
+					<input type="text" class="form-control" id="builder_id" name="builder_id">
 				</div>
 				<div class="form-group">
 					<label for="builder_url">Builder URL:</label>
-					<input type="text" class="form-control" id="builder_url">
+					<input type="text" class="form-control" id="builder_url" name="builder_url">
 				</div>
 				<div class="form-group">
 					<label for="groupset_id">Groupset ID:</label>
-					<input type="text" class="form-control" id="groupset_id">
+					<input type="text" class="form-control" id="groupset_id" name="groupset_id">
 				</div>
-				<button type="submit" id="addRowButton" class="btn btn-default">Submit</button>
+				<input type="hidden" name="template_id" id="template_id">
+				<button type="submit" id="addRowButton" class="btn glc_button glc_button_large">Submit</button>
 			</form>
 		</div>
 	</div>
 </div>
-<div id="deleteRowModal" style="display:none;"></div>
+<div id="deleteRowModal" style="display:none;">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<p>Are you sure you want to delete <b><span id="deleteRowID"></span></b>?</p>
+			<button type="submit" id="deleteRowCancel" class="btn glc_button">Cancel</button>
+			<button type="submit" id="deleteRowGo" class="btn glc_button">Yes</button>
+		</div>
+	</div>
+</div>
