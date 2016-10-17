@@ -2,6 +2,7 @@
 var numofsteps = 13;
 var progresscounter = 0;
 var ctr = 0;
+var dfy_selected_id;
 
 jQuery(document).ready(function(){
 
@@ -523,7 +524,14 @@ jQuery(document).ready(function(){
     jQuery('a.btn-dfy-choose').click(function(e){
       e.preventDefault();
       thisData = jQuery(this).attr('data-info');
-      console.log(thisData);
+      // console.log(thisData);
+      sessionStorage.setItem('selectedTemplate', thisData);
+
+      var datatest = sessionStorage.getItem('selectedTemplate');
+
+      console.log(datatest);
+      // save to local/session storage the selected value.
+      
     });
 
     //COLLECTION OF FUNCTIONS
