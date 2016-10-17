@@ -592,8 +592,8 @@ jQuery(document).ready(function(){
                 console.log(result.data);
 
 
-                var customize_optin = jQuery("body").find(".customized_optin");
-                customized_optin.html('');
+                var customize_optin = jQuery("body").find("#customized_optin");
+                customize_optin.html('');
                 var strbuilder =  '<div class="template_wrapper">';
                 strbuilder += '<span class="text_center template_title">Template Name</span>';
                 strbuilder += '<img src="image_url" class="img-thumbnail" alt="Template Name" />';
