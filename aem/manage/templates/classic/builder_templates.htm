@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-12 col-xs-12">
 		<div class="table-responsive">
-			<table class="table table-hover dataTables">
+			<table class="table table-hover dataTables" id="templateListTable">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -17,16 +17,14 @@
 				<tbody>
 					{foreach from=$templateList item=p}
 					    <tr>
-					    	<a href="#selectOption" rel="modal:open">
-						    	<td>{$p.name}</td>
-						    	<td>{$p.slug}</td>
-						    	<td>{$p.type}</td>
-						    	<td>{$p.category}</td>
-						    	<td>{$p.aem_image_url}</td>
-						    	<td>{$p.builder_id}</td>
-						    	<td>{$p.builder_url}</td>
-						    	<td>{$p.groupset_id}</td>
-					    	</a>
+					    	<td>{$p.name}</td>
+					    	<td>{$p.slug}</td>
+					    	<td>{$p.type}</td>
+					    	<td>{$p.category}</td>
+					    	<td>{$p.aem_image_url}</td>
+					    	<td>{$p.builder_id}</td>
+					    	<td>{$p.builder_url}</td>
+					    	<td>{$p.groupset_id}</td>
 					    </tr>
 					{/foreach}
 				</tbody>
