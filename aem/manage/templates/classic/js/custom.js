@@ -581,7 +581,7 @@ jQuery(document).ready(function(){
             url: "../manage/templates/classic/ajax/custom.php",
             data: {
                 'action'      : 'get_dfy_template_by_id',
-                'groupset_id' : id
+                'groupset_id' : 1
             },
             dataType: 'json',
             success:function(result) {
