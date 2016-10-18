@@ -215,14 +215,14 @@ jQuery(document).ready(function(){
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
           }
 
-          if(current == 2 && next == 3) {
+          if(current == 3 && next == 2) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   jQuery('.actions > ul > li:nth-child(1) > a').click();
               }
           }
 
-          if(current == 2 && next == 1) {
+          if(current == 3 && next == 2 ) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   $body.find('#list_company').val('n/a');
