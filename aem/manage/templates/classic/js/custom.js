@@ -553,7 +553,7 @@ jQuery(document).ready(function(){
                   if(result.type == 'success') {
                       $body.find('.buildertemplate').each(function(index, item) {
                           var href = jQuery(item).attr('href');
-                          var newhref = href+'&form_id='+result.message.id;
+                          var newhref = href+'/'+result.message.id;
                           jQuery(item).attr('href', newhref);
                       });
                       $body.find('.sitebuildertemplate').each(function(index, item) {
