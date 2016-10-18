@@ -1,4 +1,4 @@
-<?php 
+<?php
 $site_url = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']);
 $err = isset($_REQUEST['err'])?$_REQUEST['err']:"";
 switch ($err) {
@@ -19,7 +19,7 @@ if(isset($_REQUEST['msg']) && isset($_COOKIE['referral'])) setcookie('referral',
 
 if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	$pkg = $_REQUEST['pkg'];
-	$email = $_REQUEST['email'];	
+	$email = $_REQUEST['email'];
 	$free_message = sprintf('<p style="text-align:center;">User Registration Successfully Completed for %s Membership!<br /><br />Thank you for joining GLC! A confirmation email has been sent to %s.<br /><br />Please click on the Activation Link to activate your account.</p>', $pkg, $email);
 }
 
@@ -32,8 +32,8 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 <title>GLC | Login</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">  
-  
+<link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
 
 <style type="text/css">
 	body {
@@ -57,7 +57,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	.logo a{
 		margin-top: 30px;
 		color:#222;
-		font-size:35ptfont-weight:600; 
+		font-size:35ptfont-weight:600;
 		letter-spacing:-2px;
 		display: block;
 		text-decoration: none;
@@ -78,7 +78,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	}
 
 	div.product-chooser{
-	    
+
 	}
 
 	    div.product-chooser.disabled div.product-chooser-item
@@ -100,7 +100,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	        margin-right: 10x;
 			background: #ffffff;
 		}
-		
+
 		div.product-chooser div.product-chooser-item.selected{
 			border: 4px solid #428bca;
 			background: #efefef;
@@ -108,22 +108,22 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 			filter: alpha(opacity=100);
 			opacity: 1;
 		}
-		
+
 			div.product-chooser div.product-chooser-item img{
 				padding: 0;
 			}
-			
+
 			div.product-chooser div.product-chooser-item span.title{
 				display: block;
 				margin: 10px 0 5px 0;
 				font-weight: bold;
 				font-size: 12px;
 			}
-			
+
 			div.product-chooser div.product-chooser-item span.description{
 				font-size: 12px;
 			}
-			
+
 			div.product-chooser div.product-chooser-item input{
 				position: absolute;
 				left: 0;
@@ -201,7 +201,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
             </a>
 		</h1>
 	</div> -->
-	
+
 
 <div id="box-content">
 <div class="clearfix"></div><br />
@@ -216,15 +216,15 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 		            </a>
 				</div>
 			</div>
-			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/limited-time-offer" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
+			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/choose-your-membership/" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
 			<br /><br />
-			<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
-	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  
-	<?php 
+			<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>
+	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>
+	<?php
 		if( isset($pkg) && isset($email) ) {
-			echo '<div class="alert alert-success">'.$free_message.' </div>'; 
+			echo '<div class="alert alert-success">'.$free_message.' </div>';
 		}
-	?>  
+	?>
 			<div class="form-group has-feedback">
 				<!-- <label class="control-label" for="inputGroupSuccess1">Input group with success</label> -->
 				<div class="input-group">
@@ -241,8 +241,8 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 					<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
 				</div>
 			</div>
-			
-			
+
+
 			<button type="submit" name="submit" class="btn btn-primary block full-width btn-lg m-b"><i class="fa fa-sign-in"></i> Sign In </button>
 			<br /><br />
 			<hr />
@@ -260,7 +260,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 
 
 <br />
-	
+
 </div>
 </div>
 <script type='text/javascript' src='js/jquery.js'></script>
