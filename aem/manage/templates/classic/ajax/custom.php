@@ -92,10 +92,10 @@ function generateRandomString($length = 10) {
 
 function get_dfy_template_by_id($group_id) {
 
-  $query = sprintf("SELECT * FROM awebdesk_builder_template WHERE type = 'dfyf' and groupset_id = %d ORDER BY id", $group_id);
+  $query = sprintf("SELECT * FROM awebdesk_builder_template WHERE groupset_id = %d ORDER BY id", $group_id);
 
   $lists = aem_select($query);
-  
+
   die(json_encode(array('type' => 'success', 'data' => $lists)));
 
 }
