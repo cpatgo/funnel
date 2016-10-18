@@ -119,7 +119,7 @@ jQuery(document).ready(function(){
       onInit: function(event, current){
           // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
           jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
-          console.log(current);
+          // console.log(current);
           if(current == 0) {
             jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
           }
@@ -192,6 +192,8 @@ jQuery(document).ready(function(){
       },
       onStepChanged: function (event, current, next) {
 
+          console.log("onChanged - current: " + current + " - next: " + next);
+
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
           ctr = (1 + current) * 8.333333333334;
@@ -213,14 +215,14 @@ jQuery(document).ready(function(){
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
           }
 
-          if(current == 2 && next == 3) {
+          if(current == 3 && next == 4) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   jQuery('.actions > ul > li:nth-child(1) > a').click();
               }
           }
 
-          if(current == 2 && next == 1) {
+          if(current == 3 && next == 2 ) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   $body.find('#list_company').val('n/a');
@@ -592,7 +594,7 @@ jQuery(document).ready(function(){
                 console.log(result.data);
 
 
-                var customize_optin = jQuery("body").find(".customized_optin");
+                var customized_optin = jQuery("body").find("#customized_optin");
                 customized_optin.html('');
                 var strbuilder =  '<div class="template_wrapper">';
                 strbuilder += '<span class="text_center template_title">Template Name</span>';
@@ -808,10 +810,10 @@ jQuery(document).ready(function(){
                 }
             }
 
-            console.log("current: " + current);
-            console.log("next: " + next);
+            console.log("onChanged - current: " + current + " - next: " + next);
 
-            if(current == 3 && next == 2) {
+
+            if(current == 2 && next == 1) {
 
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
