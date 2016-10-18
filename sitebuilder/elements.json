@@ -129,8 +129,7 @@
     ],
 
     "Video": [
-        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"},
-        {"url":"elements/glc-blank.html","height":294, "thumbnail":"elements/images/thumbs/glc-blank.jpg"}
+        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"}
     ]
 
     }
