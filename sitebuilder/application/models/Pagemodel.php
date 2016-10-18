@@ -417,17 +417,17 @@ class Pagemodel extends CI_Model {
 			    // Update file path of links
 			    foreach($html->find('link') as $linkobj) {
 			        $link = $linkobj->href;
-			        if(strpos($link, 'http') == false && strpos($link, '//') == false) $linkobj->href = sprintf('../elements/%s', $link);
+			        if(strpos($link, 'http') === false && strpos($link, 'https') === false && strpos($link, '//') === false) $linkobj->href = sprintf('../elements/%s', $link);
 				}
 				// Update file path of scripts
 				foreach($html->find('script') as $scriptobj) {
 			        $script = $scriptobj->src;
-			        if(strpos($script, 'http') == false && strpos($link, '//') == false) $scriptobj->src = sprintf('../elements/%s', $script);
+			        if(strpos($script, 'http') === false && strpos($script, 'https') === false && strpos($link, '//') === false) $scriptobj->src = sprintf('../elements/%s', $script);
 				}
 				// Update file path of images
 				foreach($html->find('img') as $imgobj) {
 			        $img = $imgobj->src;
-			        if(strpos($img, 'http') == false) $imgobj->src = sprintf('../elements/%s', $img);
+			        if(strpos($img, 'http') === false && strpos($img, 'https') === false) $imgobj->src = sprintf('../elements/%s', $img);
 				}
 
 			    $block = $html->find('div[id=page]', 0)->innertext;
