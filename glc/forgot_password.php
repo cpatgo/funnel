@@ -1,4 +1,4 @@
-<?php 
+<?php
 $site_url = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']);
 $err = isset($_REQUEST['err'])?$_REQUEST['err']:"";
 switch ($err) {
@@ -31,8 +31,8 @@ switch ($msg) {
 <title>GLC HUB | Forgot Password</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">  
-  
+<link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
 
 <style type="text/css">
 body {
@@ -72,7 +72,7 @@ a{
 .logo a{
 	margin-top: 30px;
 	color:#222;
-	font-size:35ptfont-weight:600; 
+	font-size:35ptfont-weight:600;
 	letter-spacing:-2px;
 	display: block;
 	text-decoration: none;
@@ -93,7 +93,7 @@ div.clear
 }
 
 div.product-chooser{
-    
+
 }
 
     div.product-chooser.disabled div.product-chooser-item
@@ -115,7 +115,7 @@ div.product-chooser{
         margin-right: 10x;
 		background: #ffffff;
 	}
-	
+
 	div.product-chooser div.product-chooser-item.selected{
 		border: 4px solid #428bca;
 		background: #efefef;
@@ -123,22 +123,22 @@ div.product-chooser{
 		filter: alpha(opacity=100);
 		opacity: 1;
 	}
-	
+
 		div.product-chooser div.product-chooser-item img{
 			padding: 0;
 		}
-		
+
 		div.product-chooser div.product-chooser-item span.title{
 			display: block;
 			margin: 10px 0 5px 0;
 			font-weight: bold;
 			font-size: 12px;
 		}
-		
+
 		div.product-chooser div.product-chooser-item span.description{
 			font-size: 12px;
 		}
-		
+
 		div.product-chooser div.product-chooser-item input{
 			position: absolute;
 			left: 0;
@@ -190,9 +190,9 @@ div.product-chooser{
 <body class="gray-bg">
 <div class="container-fluid">
 <div class="row col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-lg-4 col-lg-offset-4">
-	
-	
-	
+
+
+
 <div id="box-content">
 <div class="clearfix"></div><br />
 	<form class="m-t boxed" role="form" action="password.php" method="POST" id="login_form">
@@ -204,14 +204,14 @@ div.product-chooser{
 			</div>
 		</div>
 		<!-- <div class="text-center" style="margin-top:10px;">Already have an account? <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink">Click here to Login.</a> or <a href="/choose-your-membership/" class="ulink">Register.</a> -->
-		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/limited-time-offer" class="ulink" style="text-decoration:none;">Join Now</a>
+		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/choose-your-membership/" class="ulink" style="text-decoration:none;">Join Now</a>
 		</div>
-		
+
 		<fieldset>
 
 			<div class="text-center" style="margin:20px 0px; text-transform:uppercase; font-size:20px;">Forgot Your Password?</div>
-		<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>  
-		<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>  
+		<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>
+		<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>
 			<div class="form-group has-feedback">
 				<!-- <label class="control-label" for="inputGroupSuccess1">Input group with success</label> -->
 				<div class="input-group">
@@ -220,7 +220,7 @@ div.product-chooser{
 					<!-- <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> -->
 				</div>
 			</div>
-			
+
 			<button type="submit" name="submit" class="btn btn-primary block full-width btn-lg m-b">Submit</button>
 			<br /><br />
 			<hr />
