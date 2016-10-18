@@ -119,7 +119,7 @@ jQuery(document).ready(function(){
       onInit: function(event, current){
           // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
           jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
-          console.log(current);
+          // console.log(current);
           if(current == 0) {
             jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
           }
@@ -191,6 +191,8 @@ jQuery(document).ready(function(){
           return form2.valid();
       },
       onStepChanged: function (event, current, next) {
+
+          console.log("onChanged - current: " + current + " - next: " + next);
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
@@ -808,8 +810,8 @@ jQuery(document).ready(function(){
                 }
             }
 
-            console.log("current: " + current);
-            console.log("next: " + next);
+            console.log("onChanged - current: " + current + " - next: " + next);
+
 
             if(current == 3 && next == 2) {
 
