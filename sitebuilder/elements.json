@@ -69,7 +69,7 @@
     ],
 
     "Event":[
-        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"},
+        {"url":"elements/glc-event1.html","height":2990, "thumbnail":"elements/images/thumbs/glc-event1.jpg"},
         {"url":"elements/glc-event2.html","height":294, "thumbnail":"elements/images/thumbs/glc-event2.jpg"},
         {"url":"elements/glc-event3.html","height":294, "thumbnail":"elements/images/thumbs/glc-event3.jpg"}
     ],
@@ -80,7 +80,7 @@
     ],
 
     "Giveaways": [
-        {"url":"elements/glc-giveaway.html","height":294, "thumbnail":"elements/images/thumbs/glc-giveaway.jpg"},
+        {"url":"elements/glc-giveaway.html","height":583, "thumbnail":"elements/images/thumbs/glc-giveaway.jpg"},
         {"url":"elements/glc-freeapp.html","height":294, "thumbnail":"elements/images/thumbs/glc-freeapp.jpg"},
         {"url":"elements/glc-secrettraffic.html","height":294, "thumbnail":"elements/images/thumbs/glc-secrettraffic.jpg"}
     ],

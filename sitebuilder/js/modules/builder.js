@@ -2057,6 +2057,7 @@
                             var jheight = jQuery('#pageList iframe').contents().height();
                             jheight += 100;
                             jQuery('#pageList iframe').contents().find('#user_form_div').html(result.html);
+                            jQuery('#pageList iframe').contents().find('#user_form_div_remove').remove();
                             jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
                             return true;
                         } else {
