@@ -86,7 +86,7 @@
     ],
 
     "GLC": [
-        {"url":"elements/glc-glc1.html", "height":163, "thumbnail":"elements/thumbs/glc-glc1.jpg"}
+        
     ],
 
     "Holiday": [
@@ -129,7 +129,8 @@
     ],
 
     "Video": [
-        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"}
+        {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"},
+        {"url":"elements/glc-blank.html","height":294, "thumbnail":"elements/images/thumbs/glc-blank.jpg"}
     ]
 
     }
