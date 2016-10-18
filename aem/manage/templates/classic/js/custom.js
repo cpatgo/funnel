@@ -813,7 +813,7 @@ jQuery(document).ready(function(){
             console.log("onChanged - current: " + current + " - next: " + next);
 
 
-            if(current == 2 && next == 1) {
+            if(current == 2 && next == 3) {
 
                 var method = $body.find('#select_list_method').val();
                 if(method == 'select_existing_list') {
