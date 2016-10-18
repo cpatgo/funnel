@@ -65,9 +65,9 @@
 
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<div class="heading">
-						<h1>Be part of the Event of the Year</h1>
-						<h3>Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, lobortis. Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit.</h3>
+					<div class="heading edit">
+						<h1 class="editContent">Be part of the Event of the Year</h1>
+						<h3 class="editContent">Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, lobortis. Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit.</h3>
 					</div>
 				</div>
 			</div>
@@ -86,14 +86,32 @@
 				<div class="col-sm-4">
 					<div class="subscribe">
 						<!--PASTE THE FORM CODE HERE. REPLACE THE TEXTS INSIDE. -->
-				            <div id="user_form_div">
-				                <div class="form-group" style="border: 1px solid red;padding: 10px;font-size: 15px;">
-				                    Replace this area with the FORM CODE you copied from the eMarketer site by following these steps:<br>
-				                    <b>Step 1:</b> Click the SOURCE button on the upper right corner of this VISUAL editor.<br>
-				                    <b>Step 2:</b> Paste the FORM code in the area that says <i><b>"PASTE THE FORM CODE HERE"</b></i><br>
-				                    <b>Step 3:</b> Click the SAVE button on the upper right corner of the TEXT editor.
-				                </div>
-				            </div>
+							<div id="user_form_div"></div>
+				            <form id="user_form_div_remove">
+
+								<div class="form-group">
+									<label for="InputName" class="control-label editContent">Your Name</label>
+									<input type="text" name="" id="InputName" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label for="InputLast" class="control-label editContent">Last Name</label>
+									<input type="text" name="" id="InputLast" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label for="InputEmail" class="control-label editContent">Email</label>
+									<input type="email" name="" id="InputEmail" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label for="InputEmail" class="control-label editContent">Twitter</label>
+									<input type="text" name="" id="InputTwitter" class="form-control">
+								</div>
+
+								<input type="submit" value="Register" class="btn btn-success pull-right">
+
+							</form>
 				        <!--THIS IS THE END OF THE LINE FOR THE FORM CODE-->
 					</div> 
 				</div> 
@@ -108,7 +126,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<div class="heading">
-						<h2> Event Speakers. <span> Meet Them </span> </h2>
+						<h2 class="editContent"> Event Speakers. <span> Meet Them </span> </h2>
 					</div>
 				</div>
 			</div>
@@ -118,27 +136,27 @@
 				<div class="col-sm-4">
 					<div class="speak">
 						<img src="./images/glc-event1/speak.jpg" alt="speaker">
-						<h3>Jani Dei</h3>
-						<h5>C.E.O - Company Name</h5>
-						<p>Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
+						<h3 class="editContent">Jani Dei</h3>
+						<h5 class="editContent">C.E.O - Company Name</h5>
+						<p class="editContent">Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
 					</div>
 				</div>
 
 				<div class="col-sm-4">
 					<div class="speak">
 						<img src="./images/glc-event1/speak.jpg" alt="speaker">
-						<h3>Jani Dei</h3>
-						<h5>C.E.O - Company Name</h5>
-						<p>Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
+						<h3 class="editContent">Jani Dei</h3>
+						<h5 class="editContent">C.E.O - Company Name</h5>
+						<p class="editContent">Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
 					</div>
 				</div>
 
 				<div class="col-sm-4">
 					<div class="speak">
 						<img src="./images/glc-event1/speak.jpg" alt="speaker">
-						<h3>Jani Dei</h3>
-						<h5>C.E.O - Company Name</h5>
-						<p>Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
+						<h3 class="editContent">Jani Dei</h3>
+						<h5 class="editContent">C.E.O - Company Name</h5>
+						<p class="editContent">Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
 					</div>
 				</div>
 
@@ -147,7 +165,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<div class="heading">
-						<h2> Event Schedule </h2>
+						<h2 class="editContent"> Event Schedule </h2>
 					</div>
 				</div>
 			</div>
@@ -155,56 +173,56 @@
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
 					<div class="event-schedule" id="events">
-						<h2>Monday March 22nd</h2>
+						<h2 class="editContent">Monday March 22nd</h2>
 						<div class="schedule">
 							<div class="row">
 							  	<div class="col-md-10">
-							    	<p> Registration </p>
+							    	<p class="editContent"> Registration </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 08:00 am</p>
+							      	<p class="editContent"> 08:00 am</p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Opening Ceremony </p>
+							    	<p class="editContent"> Opening Ceremony </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 09:00 am </p>
+							      	<p class="editContent"> 09:00 am </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Amazing Conference #001 - John Doe </p>
+							    	<p class="editContent"> Amazing Conference #001 - John Doe </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 13:00 pm </p>
+							      	<p class="editContent"> 13:00 pm </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Coffee Break </p>
+							    	<p class="editContent"> Coffee Break </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 11:00 am </p>
+							      	<p class="editContent"> 11:00 am </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Amazing Conference #002 - John Doe </p>
+							    	<p class="editContent"> Amazing Conference #002 - John Doe </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 14:00 pm </p>
+							      	<p class="editContent"> 14:00 pm </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Amazing Conference #003 - John Doe </p>
+							    	<p class="editContent"> Amazing Conference #003 - John Doe </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 15:00 pm </p>
+							      	<p class="editContent"> 15:00 pm </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Amazing Conference #004 - John Doe </p>
+							    	<p class="editContent"> Amazing Conference #004 - John Doe </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 12:00 am </p>
+							      	<p class="editContent"> 12:00 am </p>
 							    </div>
 							  	<div class="col-md-10">
-							    	<p> Closing Ceremony </p>
+							    	<p class="editContent"> Closing Ceremony </p>
 							    </div>
 							    <div class="col-md-2">
-							      	<p> 10:00 am </p>
+							      	<p class="editContent"> 10:00 am </p>
 							    </div>
 							</div>
 						</div>
@@ -220,13 +238,13 @@
 
 							<div class="col-sm-8">
 								<div class="title">
-									<h1>Register to this amazing Event now!</h1>
-									<p>Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
+									<h1 class="editContent">Register to this amazing Event now!</h1>
+									<p class="editContent">Duis id egestas lectus lacus eros, venenatis eu dignissim sed imperdiet et orci elit duis gravida varius ipsum, sed lobortis quam.</p>
 								</div>
 							</div>
 
 							<div class="col-sm-4">
-								<a href="#banner" class="btn btn-lg btn-block btn-success">Register Now</a>
+								<a href="#banner" class="btn btn-lg btn-block btn-success" class="editContent">Register Now</a>
 							</div>
 
 						</div>
@@ -240,7 +258,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<div class="heading">
-						<h2> This Event is Sponsored by </h2>
+						<h2 class="editContent"> This Event is Sponsored by </h2>
 					</div>
 				</div>
 			</div>
@@ -276,7 +294,7 @@
 							
 							<div class="col-sm-6">
 								<div class="copyrights">
-									<p> &copy; 2016. www.yourcompany.com , All rights reserved.</p>
+									<p class="editContent"> &copy; 2016. www.yourcompany.com , All rights reserved.</p>
 								</div>
 							</div>
 

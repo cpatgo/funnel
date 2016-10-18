@@ -61,27 +61,37 @@
 
 				<div class="col-sm-7">
 					<div class="info-warp">
-						<h1>Try this App for free</h1>
-						<h3>This is the best mobile app you’ve ever downloaded.
+						<h1 class="editContent">Try this App for free</h1>
+						<h3 class="editContent">This is the best mobile app you’ve ever downloaded.
 						Now available for you and all your friends.</h3>
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YecyKnQUcBY"></iframe>
+						<div class="videoWrapper">
+							<iframe class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/YecyKnQUcBY?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<div class="frameCover" data-type="video"></div>
 						</div>
 					</div>
 
 					<!--PASTE THE FORM CODE HERE. REPLACE THE TEXTS INSIDE. -->
-                    	<div id="user_form_div">
-                            <div class="form-group" style="border: 1px solid red;padding: 10px;font-size: 15px;">
-                                Replace this area with the FORM CODE you copied from the eMarketer site by following these steps:<br>
-                                <b>Step 1:</b> Click the SOURCE button on the upper right corner of this VISUAL editor.<br>
-                                <b>Step 2:</b> Paste the FORM code in the area that says <i><b>"PASTE THE FORM CODE HERE"</b></i><br>
-                                <b>Step 3:</b> Click the SAVE button on the upper right corner of the TEXT editor.
-                            </div>
-                        </div>
+                    	<div id="user_form_div"></div>
+                        <form class="row subscribe" id="user_form_div_remove">
+						
+							<div class="col-sm-7">
+								<div class="form-group">
+									<label for="InputEmail" class="sr-only"></label>
+									<input type="email" name="#" id="InputEmail" class="form-control input-lg" placeholder="Your Email"> 
+								</div>
+							</div>
+
+							<div class="col-sm-5">
+								<div class="form-group">
+									<input type="submit" value="Submit" class="btn btn-primary btn-submit btn-block btn-lg">
+								</div>
+							</div>
+
+						</form>
                     <!--THIS IS THE END OF THE LINE FOR THE FORM CODE-->
 
 					<div class="copyright">
-						<p> &copy; Example.com , All Rights Reserved. </p>
+						<p class="editContent"> &copy; Example.com , All Rights Reserved. </p>
 					</div>
 
 				</div>
