@@ -245,7 +245,7 @@ jQuery(document).ready(function(){
               // loadTemplate();
               console.log("Loaded Optin Template: " + sessionStorage.getItem('optin'));
               var tmp = aem_functions.get_dfy_template_by_id(sessionStorage.getItem('optin'));
-              console.log(tmp);
+              // console.log(tmp);
           }
 
           if (current == 8) { // if current index is equals to 4th step
@@ -581,7 +581,7 @@ jQuery(document).ready(function(){
             url: "../manage/templates/classic/ajax/custom.php",
             data: {
                 'action'      : 'get_dfy_template_by_id',
-                'groupset_id' : id
+                'groupset_id' : 1
             },
             dataType: 'json',
             success:function(result) {
