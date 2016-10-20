@@ -45,10 +45,5 @@
     var siteUrl = '<?php echo site_url('/');?>';
     </script>
 
-    <script>
-		 jQuery.noConflict();
-		 (function($) { 
-		    console.log('testing');
-		})(jQuery);
-    </script>
+    
 </head>
