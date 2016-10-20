@@ -430,10 +430,14 @@ class Pagemodel extends CI_Model {
 			        if(strpos($img, 'http') === false && strpos($img, 'https') === false) $imgobj->src = sprintf('../elements/%s', $img);
 				}
 
+				// Remove default form
+				foreach ($html->find('div[id=user_form_div_remove]') as $form) {
+					$form->outertext = "";
+				}
+
 			    $block = $html->find('div[id=page]', 0)->innertext;
 			    
 			    $theSkeleton->find('div[id=page]', 0)->innertext .= $block;
-			    
 		    }
 
 		    // Update file path of skeleton css and builder js
