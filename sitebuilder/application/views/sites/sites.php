@@ -127,7 +127,7 @@
                                     <?php endif?>
     							<?php else:?>
     								<span class="pull-left text-danger">
-    									<b><?php echo $this->lang->line('sites_sitehasnotbeenpublished')?></b>
+    									<!-- <b><?php echo $this->lang->line('sites_sitehasnotbeenpublished')?></b> -->
     								</span> &nbsp;&nbsp;
     								<?php if( $site['siteData']->ftp_ok == 1 ):?>
     								<a class="btn btn-inverse btn-xs" href="<?php echo site_url('sites/'.$site['siteData']->sites_id)?>#publish">
