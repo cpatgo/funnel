@@ -2044,6 +2044,11 @@
             Get form from AEM
         */
         quick_load_form: function () {
+            
+            if($('#pageList iframe').contents().find('#user_form_div_remove').length){
+                jQuery('#pageList iframe').contents().find('#user_form_div_remove').remove();
+            }
+
             if($('#pageList iframe').contents().find('#user_form_div').length){
                 jQuery.ajax({
                     type: "post",
