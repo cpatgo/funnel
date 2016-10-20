@@ -320,7 +320,7 @@
                         <span>&xvee;</span>
                     </p>
                     
-                    <input type="text" class="form-control" id="internalLinksCustom" placeholder="http://somewhere.com/somepage" value="">
+                    <input type="text" class="form-control" id="internalLinksCustom" placeholder="http://somewhere.com/somepage">
                     
                 </div>
             
