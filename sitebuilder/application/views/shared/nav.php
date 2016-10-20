@@ -73,9 +73,10 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, <?php echo $u->first_name." ".$u->last_name;?> <b class="caret"></b></a>
 				<span class="dropdown-arrow"></span>
 			  	<ul class="dropdown-menu">
-			    	<li><a href="#accountModal" data-toggle="modal"><span class="fui-cmd"></span> <?php echo $this->lang->line('nav_myaccount')?></a></li>
+			    	<li><a href="https://glchub.com/myhub" data-toggle="modal"><span class="fui-cmd"></span> GLC HUB</a></li>
+			    	<!-- <li><a href="#accountModal" data-toggle="modal"><span class="fui-cmd"></span> <?php echo $this->lang->line('nav_myaccount')?></a></li>
 			    	<li class="divider"></li>
-			    	<li><a href="<?php echo site_url('logout')?>"><span class="fui-exit"></span> <?php echo $this->lang->line('nav_logout')?></a></li>
+			    	<li><a href="<?php echo site_url('logout')?>"><span class="fui-exit"></span> <?php echo $this->lang->line('nav_logout')?></a></li> -->
 			  	</ul>
 			</li>			      
 		</ul>	      
