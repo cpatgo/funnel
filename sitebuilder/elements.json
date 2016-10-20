@@ -78,7 +78,7 @@
     ],
 
     "Giveaways": [
-        {"url":"elements/glc-giveaway.html","height":583, "thumbnail":"elements/images/thumbs/glc-giveaway.jpg"},
+        {"url":"elements/glc-giveaway.html","height":646, "thumbnail":"elements/images/thumbs/glc-giveaway.jpg"},
         {"url":"elements/glc-freeapp.html","height":294, "thumbnail":"elements/images/thumbs/glc-freeapp.jpg"},
         {"url":"elements/glc-secrettraffic.html","height":294, "thumbnail":"elements/images/thumbs/glc-secrettraffic.jpg"}
     ],
