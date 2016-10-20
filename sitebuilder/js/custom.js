@@ -14,7 +14,7 @@
 	
 	console.log('testing');
 
-	$('body').find('#elementCats').parent().html('<h3><span class="fui-list menu_categ"> DIY</span></h3>' + '<a href id="navigation">Navigation</a>');
+	// $('body').find('#elementCats').parent().html('<h3><span class="fui-list menu_categ"> DIY</span></h3>' + '<a href id="navigation">Navigation</a>');
 	
     
 }());
