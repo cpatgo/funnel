@@ -18,7 +18,7 @@
 	// 
 	
 	// add DIVIDER on specific <li> using before or after function
-	$("#footers").after('<hr>');
+	$("ul#elementCats > li > a#footers").after('<hr>');
 	
 	// $('body').find('#thank_you').parent().html('</li></ul><h3><span class="fui-list menu_categ"> DIY</span></h3><ul id="elementCats">' + '<li><a href id="navigation">Navigation</a></li></ul>');
 	// $('body').find("#elementCats").append('<h3 style="margin-top:30px;"><span class="fui-document"></span> Templates</h3><ul id="elementsCats" styles="margin-bottom: 30px;"><li><a href="#" id="travel">Travel</a></li></ul><hr>');
