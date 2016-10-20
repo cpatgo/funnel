@@ -278,7 +278,7 @@
                 });
 
                 form_id = $('#formID').val();
-                if(form_id !== 0) {
+                if(form_id !== 0 && form_id !== "0") {
                     site.quick_load_form();
                 }
 
