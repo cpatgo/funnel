@@ -7,4 +7,12 @@
     clipboard.on('success', function(e) {
         window.top.close();
     });
+
+
+
+    
+	
+	console.log('testing');
+	
+    
 }());
