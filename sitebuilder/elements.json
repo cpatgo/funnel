@@ -61,8 +61,6 @@
         {"url":"elements/footer2.html","height":107, "thumbnail":"elements/images/thumbs/footer2.png"},
         {"url":"elements/footer3.html","height":260, "thumbnail":"elements/images/thumbs/footer3.png"}
     ],
-    "About Me": [
-    ],
 
     "DFY Funnels": [
         {"url":"elements/glc-dfysalesfunnelmoney.html","height":260, "thumbnail":"elements/images/thumbs/glc-dfysalesfunnelmoney.jpg"}
@@ -85,16 +83,6 @@
         {"url":"elements/glc-secrettraffic.html","height":294, "thumbnail":"elements/images/thumbs/glc-secrettraffic.jpg"}
     ],
 
-    "GLC": [
-        
-    ],
-
-    "Holiday": [
-    ],
-
-    "MLM": [
-    ],
-
     "Nutrition": [
         {"url":"elements/glc-flab2fab.html", "height":2084, "thumbnail":"elements/images/thumbs/glc-optin.png"}
     ],
@@ -107,9 +95,6 @@
         {"url":"elements/glc-redirect.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect.jpg"},
         {"url":"elements/glc-redirect2.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect2.jpg"},
         {"url":"elements/glc-redirect3.html","height":294, "thumbnail":"elements/images/thumbs/glc-redirect3.jpg"}
-    ],
-
-    "Sales": [
     ],
 
     "Skin Care": [
