@@ -2047,6 +2047,7 @@
             
             if($('#pageList iframe').contents().find('#user_form_div_remove').length){
                 jQuery('#pageList iframe').contents().find('#user_form_div_remove').remove();
+                site.save(false);
             }
 
             if($('#pageList iframe').contents().find('#user_form_div').length){
@@ -2064,6 +2065,7 @@
                             jQuery('#pageList iframe').contents().find('#user_form_div').html(result.html);
                             jQuery('#pageList iframe').contents().find('#user_form_div_remove').remove();
                             jQuery('#pageList iframe', window.parent.document).height(jheight+'px');
+                            site.save(false);
                             return true;
                         } else {
                             return false;
