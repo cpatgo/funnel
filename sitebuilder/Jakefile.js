@@ -53,11 +53,11 @@
 
     var requiredJS = [
         {
-            files: ['js/vendor/jquery.min.js', 'js/vendor/jquery-ui.min.js', 'js/vendor/flat-ui-pro.min.js', 'js/vendor/chosen.min.js', 'js/vendor/jquery.zoomer.js', 'js/vendor/spectrum.js', 'js/vendor/summernote.min.js', 'js/vendor/ace/ace.js', 'js/build/builder.js'],
+            files: ['js/vendor/jquery.min.js', 'js/vendor/jquery-ui.min.js', 'js/vendor/flat-ui-pro.min.js', 'js/vendor/chosen.min.js', 'js/vendor/jquery.zoomer.js', 'js/vendor/spectrum.js', 'js/vendor/summernote.min.js', 'js/vendor/jquery.countdown.min.js', 'js/vendor/ace/ace.js', 'js/build/builder.js'],
             output: "js/build/builder.min.js"
         },
         {
-            files: ['js/vendor/jquery.min.js', 'js/vendor/jquery-ui.min.js', 'js/vendor/flat-ui-pro.min.js', 'js/vendor/jquery.zoomer.js', 'js/build/sites.js'],
+            files: ['js/vendor/jquery.min.js', 'js/vendor/jquery-ui.min.js', 'js/vendor/flat-ui-pro.min.js', 'js/vendor/jquery.zoomer.js', 'js/vendor/jquery.countdown.min.js', 'js/build/sites.js'],
             output: "js/build/sites.min.js"
         },
         {

@@ -88,7 +88,10 @@
     ],
 
     "Opt-in": [
-        {"url":"elements/glc-optin.html", "height":163, "thumbnail":"elements/images/thumbs/glc-optin.png"}
+        {"url":"elements/glc-optin2.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin2.jpg"},
+        {"url":"elements/glc-optin3.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin3.jpg"},
+        {"url":"elements/glc-optin5.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin5.jpg"},
+        {"url":"elements/glc-optin6.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin6.jpg"}
     ],
 
     "Redirect": [
