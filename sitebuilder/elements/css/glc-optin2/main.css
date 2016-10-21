@@ -293,6 +293,7 @@ background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;
 font-family: "Ubuntu",Helvetica Neue,Helvetica,Arial,sans-serif;
+min-height: 1000px;
     }
 
 #header {
