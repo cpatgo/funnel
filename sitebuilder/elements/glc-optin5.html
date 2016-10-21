@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--pageMeta-->
+
+    <!-- Loading Bootstrap -->
+    <link href="/css/skeleton.css" rel="stylesheet" id="skeleton_css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--headerIncludes-->
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+    <div id="page" class="page">
+        <header>
+          <!-- Styles -->
+          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+          <link rel="stylesheet" href="css/glc-optin5/style.css">
+          <link href="css/build.css" rel="stylesheet">
+          <!-- Styles End -->
+          <style type="text/css">
+              /* Modal */
+              .btn-modal {
+                padding: 13px 30px;
+                background: white;
+                color: #0B1847;
+                border-radius: 60px;
+                border: 2px solid #0B1847;
+                cursor: pointer;
+                font-size: 0.7em;
+                display: block;
+                text-transform: uppercase;
+                transition: all 0.2s;
+                text-align: center;
+                width: 200px;
+                position: relative;
+                top: 150px;
+                text-align: center;
+                margin: 0 auto;
+              }
+
+              .content-button-close {
+                padding: 13px 30px;
+                background: white;
+                color: #0B1847;
+                border-radius: 60px;
+                border: 2px solid #0B1847;
+                cursor: pointer;
+                font-size: 0.7em;
+                display: block;
+                text-transform: uppercase;
+                transition: all 0.2s;
+                text-align: center;
+                width: 200px;
+                margin: 60px auto 0 auto;
+              }
+
+              .btn-modal:hover,
+              .content-button-close:hover {
+                background: #0B1847;
+                color: white;
+              }
+
+              .close {
+                position: absolute;
+                top: 15px;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                background: red;
+                font-weight: 900;
+                color: #000;
+                cursor: pointer;
+                border: 0;
+                border-radius: 50px;
+                -webkit-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+                -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+                box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+              }
+
+              .mask {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 50;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.7s;
+              }
+
+              .elegant-modal {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+              /*
+                width: 600px;
+                height: 450px;
+              */
+                  width:auto;
+                  height:auto;
+                margin-left: -300px;
+                margin-top: -240px;
+                z-index: 100;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.5s ease-out;
+                transform: translateY(45px);
+                background-color: #FFFFFF;
+                text-align: center;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+                -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+                box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
+                  
+              }
+
+              .active {
+                visibility: visible;
+                opacity: 1;
+                transition: all .2s;
+                  
+              }
+
+              .active + .elegant-modal {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                  padding: 20px;
+              }
+
+              .elegant-modal h1.title-modal {
+                margin: 40px 0 20px 0;
+                padding: 0 15px;
+              }
+
+              .elegant-modal hr.line-modal {
+                border: 1px solid #F2F2F2;
+              }
+
+              .elegant-modal p.paragraph-modal {
+                font-size: 18px;
+                margin-top: 20px;
+                padding: 0 45px;
+                color: #B7B7B7;
+              }
+            </style>
+        </header>
+        <!-- Main Page -->
+        <div class="main-page"> 
+            <!-- Header Main -->
+            <div class="header-bg"> 
+                <!-- Header Center -->
+                <div class="header-center"> 
+                    <h1 class="editContent">FREE Report will be sent to the <br>email address you submit above!</h1>
+                </div>
+            <!-- Header Center End --> 
+            </div>
+            <!-- Header Main End --> 
+
+            <!-- Blue Box -->
+            <div class="blue-box">
+                <div class="blue-box-center">
+                    <!-- left section -->
+                    <div class="left-content">
+                        <div class="book">
+                            <img src="images/glc-optin5/book.png" alt="">
+                        </div>
+                        <div class="download">
+                            <a href="javascript:void(0);"><span><img src="images/glc-optin5/download-icon.png" alt=""></span><p class="editContent"><em>Download Now</em></p>
+                        </a>
+                        </div>
+                        <p class="editContent">Thousands of businesses have already downloaded this report</p>
+                    </div><!--.end left-content-->
+
+                    <!-- right section -->
+                    <div class="right-content"> 
+                        <!-- headline -->
+                        <div class="right-content-title">
+                            <h1 class="editContent">Free Report Reveals... Marketing Outside The Box.</h1>
+                        </div>
+                        <!-- copy -->
+                        <div class="right-content-text">
+                            <h1 class="editContent">Learn How To Create Emotional Buying Impulses Through Unique Marketing Tactics!</h1>
+                            <ul>
+                                <li class="editContent">Refine your marketing for <b>higher sales conversions</b>.</li>
+                                <li class="editContent">Repurpose content you already have into new lead generating content, so you can convert visitors <b>into sales</b>.</li>
+                                <li class="editContent">Running with the giants and <b>much learn more...</b></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- bottom box -->
+                        <div class="bottom-box">
+                            <!-- optin trigger -->
+                            <div class="button editContent">
+                                <a href="javascript:void(0);">Yes! Send Me the Free Report &raquo;</a>
+                            </div>
+                        <!-- secure text -->
+                            <div class="secure"><span><img src="images/glc-optin5/lock-icon.png" alt=""></span><p class="editContent">100% Secure. <br><strong>Privacy Policy:</strong> We <u>HATE</u> Spam And Will <u>NEVER</u> Share Your Information With Anyone.</p>
+                            </div><!-- .end bottom-box-->
+                        </div><!--.end right-content -->
+                    </div><!--.end blue-box-center-->
+                </div><!--.end blue-box --> 
+            </div>
+        
+            <div class="header-center"> 
+                <p class="editContent">Copyright 2016.</p>
+            </div>
+        </div>
+        <!-- Main Page End -->
+        <div class="mask" role="dialog"></div>
+        <div class="elegant-modal" role="alert">
+            <button class="close" role="button">X</button>
+
+            <div class="">
+                <center><br />
+                <!-- Form Code Goes Here -->
+                    <p class="popup-headline editContent">Enter your name and email address below and get your copy... it's 100% Free!</p>
+                    <div id="user_form_div"></div>
+                    <form id="user_form_div_remove">
+                        <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control input-lg" />
+                        </div>
+                        <div class="form-group">
+                        <input type="email" id="email" placeholder="Enter your email address" class="form-control input-lg" />
+                        </div>
+                        <div class="form-group">
+                        <button type="submit" class="submit btn btn-lg"><span class="editContent">Click Here to Download Now »</span></button>
+                        </div>
+                    </form>
+
+                    <div class="privacy-policy"><p class="editContent"><b>Privacy Policy:</b> We <u>HATE</u> Spam And <u>Will NEVER</u> Share Your Information With Anyone.</p></div>
+            <!-- <a class="close-reveal-modal" ><img src="ico-close.png" alt="" /></a>  -->
+                </center>
+            </div>
+        </div>
+        <footer>
+            <script src="js/glc-optin5/jquery.min.js"></script>
+            <script src="js/glc-optin5/script.js"></script>
+        </footer>
+      </div>
+  </body>
+</html>
