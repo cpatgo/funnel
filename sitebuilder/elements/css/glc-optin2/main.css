@@ -285,15 +285,15 @@ html {
     }
 
 body {
-background-attachment: fixed;
-background-color: rgba(0, 0, 0, 0);
-background-image: url("../../images/glc-optin2/portrait-1097950_1920.jpg");
-background-origin: padding-box;
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
-font-family: "Ubuntu",Helvetica Neue,Helvetica,Arial,sans-serif;
-min-height: 1000px;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../images/glc-optin2/portrait-1097950_1920.jpg");
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Ubuntu",Helvetica Neue,Helvetica,Arial,sans-serif;
+    min-height: 1000px;
     }
 
 #header {
