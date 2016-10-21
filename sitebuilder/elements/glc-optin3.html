@@ -95,7 +95,10 @@
           <div class="popup" id="register_popup">
             <div class="popup-logo"></div>
             <p class="popup-headline editContent">Enter your name and email address below and get your copy... it's 100% Free!</p>
-            <div id="user_form_div"></div>
+            <div class="col-md-12" style="padding: 0 20px;">
+              <div id="user_form_div"></div>
+            </div>
+            <div class="col-md-12" style="padding: 0 20px;">
             <form method="post" id="user_form_div_remove">
               <div class="row name">
                 <input type="text" name="name" id="name" onfocus="if ($(this).val() == $(this).attr('title')) { $(this).val('') }" onblur="if ($(this).val()=='') { $(this).val($(this).attr('title'));}" value="Enter your name" title="Enter your name" />
@@ -105,6 +108,7 @@
               </div>
               <button type="submit" class="submit editContent"><span>Click Here to Download Now »</span></button>
             </form>
+            </div>
             <a class="close-reveal-modal" ><img src="images/glc-optin3/ico-close.png" alt="" /></a> </div>
           <div class="privacy-policy editContent"><b>Privacy Policy:</b> We <u>HATE</u> Spam And <u>Will NEVER</u> Share Your Information With Anyone.</div>
         </div>
