@@ -299,10 +299,10 @@ class Sitemodel extends CI_Model {
                     $content = str_replace('<div id="user_form_div"></div>', $form['html'], $frameData->frames_content);
 
                     $html = str_get_html($content);
-                    foreach ($html->find('div[id=user_form_div_remove]') as $form) {
+                    foreach ($html->find('#user_form_div_remove') as $form) {
                         $form->outertext = "";
                     }
-                    
+
                     $frameData->frames_content = $html;
                 endif;
 
