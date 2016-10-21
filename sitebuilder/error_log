@@ -165,3 +165,14 @@
 [29-Sep-2016 13:32:36 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
 [29-Sep-2016 13:33:47 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
 [29-Sep-2016 14:05:23 America/New_York] PHP Warning:  shell_exec() has been disabled for security reasons in /home/wwwglchub/public_html/sitebuilder/test.php on line 1
+[10-Oct-2016 16:41:52 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140
+[10-Oct-2016 16:41:59 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140
+[10-Oct-2016 17:51:17 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[10-Oct-2016 17:51:20 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[10-Oct-2016 17:51:32 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[10-Oct-2016 17:51:37 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[10-Oct-2016 17:51:40 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[10-Oct-2016 17:51:41 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/wwwglchub/public_html/sitebuilder/application/models/Sitemodel.php on line 336
+[14-Oct-2016 16:14:15 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
+[14-Oct-2016 16:14:44 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
+[14-Oct-2016 16:15:12 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
