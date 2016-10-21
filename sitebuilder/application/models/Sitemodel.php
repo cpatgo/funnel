@@ -269,7 +269,8 @@ class Sitemodel extends CI_Model {
     */
     
     public function cloneSite($siteName, $siteData, $siteID, $formID) {
-    
+        $this->load->library('simple_html_dom');
+
         $user = $this->ion_auth->user()->row();
 
         $userID = $user->id;
@@ -296,7 +297,13 @@ class Sitemodel extends CI_Model {
                 if($formID):
                     $form = $this->getForm($formID);
                     $content = str_replace('<div id="user_form_div"></div>', $form['html'], $frameData->frames_content);
-                    $frameData->frames_content = $content;
+
+                    $html = str_get_html($content);
+                    foreach ($html->find('div[id=user_form_div_remove]') as $form) {
+                        $form->outertext = "";
+                    }
+                    
+                    $frameData->frames_content = $html;
                 endif;
 
                 $data = array(
