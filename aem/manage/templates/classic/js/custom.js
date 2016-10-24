@@ -838,7 +838,7 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
 
-                
+                 $('.grid').isotope({ filter: filterValue });
 
             }
 
@@ -1128,7 +1128,10 @@ jQuery(document).ready(function(){
         // options
         itemSelector: '.grid_item',
         layoutMode: 'fitRows',
-        filter: '*'
+        filter: '*',
+        masonry: {
+          columnWidth: '.grid-sizer'
+        }
     });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
