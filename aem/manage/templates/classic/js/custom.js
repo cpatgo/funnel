@@ -1130,6 +1130,7 @@ jQuery(document).ready(function(){
     });
 
     
+
     $grid.isotope({ filter: '*' });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
