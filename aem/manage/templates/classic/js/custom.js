@@ -810,7 +810,7 @@ jQuery(document).ready(function(){
                 }
             }
 
-            console.log("onChanged - current: " + current + " - next: " + next);
+            // console.log("onChanged - current: " + current + " - next: " + next);
 
 
             if(current == 2 && next == 1) {
@@ -837,6 +837,9 @@ jQuery(document).ready(function(){
             if (current == 7) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
+
+                 jQuery('.grid').isotope({ filter: '*' });
+
             }
 
             if (current == 9) { // if current index is equals to 4th step
@@ -844,6 +847,9 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
 
+
+
+            
 
         },
         onFinishing: function (event, currentIndex)
@@ -1084,34 +1090,14 @@ jQuery(document).ready(function(){
     });
 
 
-    //GET FORMS
-    // aem_functions.get_forms();
-
-    // $body.on('click', '#refresh_form_list', function(e){
-    //  e.preventDefault();
-    //  aem_functions.get_forms();
-    // });
-
-    // jQuery("#landing-page-name #list_name").each(function(){
-    //     jQuery(this).tooltip({
-    //         show:{
-    //             effect: "slidedown",
-    //             delay: 250
-    //         }
-    //     });
-    // });
-
-    // jQuery('#landing-page-name').tooltip();
-    // jQuery('#list_name').tooltip();
+    // TOOLTIPS
     jQuery('#tooltip_name_campaign').tooltip();
     jQuery('#tooltip_step2').tooltip();
+    
+    // TABS
     jQuery('#getstarted_tabs').tabs();
-    // Accordion
-    // jQuery( ".accordion" ).accordion({
-    //   collapsible: true,
-    //   heightStyle: "content"
-    // });
-
+    
+    // DATA TABLES
     jQuery('.dataTables').DataTable({
       "iDisplayLength": 100,
        responsive: true,
@@ -1132,5 +1118,21 @@ jQuery(document).ready(function(){
 
         jQuery('#deleteRowModal').find('#deleteRowID').text(tr.find('.name').text());
         jQuery('#selectOption').modal();
+    });
+
+    // ISOTOPE - FILTERING
+    // initialize isotope 
+    var $grid = jQuery('.grid') .isotope({
+        // options
+        itemSelector: '.grid_item',
+        isFitWidth: true,
+        filter: '*'
+    });
+
+    $grid.isotope({ filter: '*' });
+
+    jQuery('.filter-button-group').on( 'click', 'div', function() {
+      var filterValue = jQuery(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
     });
 });

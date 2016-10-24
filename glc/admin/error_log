@@ -292,3 +292,11 @@
 [09-Sep-2016 12:41:15 America/New_York] PHP Warning:  ini_set() has been disabled for security reasons in /home/identifz/public_html/glcv2/glc/class/user.php on line 2
 [05-Oct-2016 07:43:26 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 29
 [05-Oct-2016 07:43:26 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 30
+[12-Oct-2016 06:52:52 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 29
+[12-Oct-2016 06:52:52 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 30
+[21-Oct-2016 16:10:51 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 29
+[21-Oct-2016 16:10:51 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 30
+[21-Oct-2016 16:11:24 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 29
+[21-Oct-2016 16:11:24 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/commissions.php on line 30
+[21-Oct-2016 16:11:56 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/payments.php on line 19
+[21-Oct-2016 16:11:56 America/New_York] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, boolean given in /home/wwwglchub/public_html/glc/admin/data/payments.php on line 20

@@ -1179,7 +1179,7 @@ hr.divider{ width:75%; border:1px solid #ccc; height:auto; margin: 20px auto; }
 
 .template_title{ margin: 17px 0px; text-align: center; font-weight: bold; display: block; }
 
-.template_wrapper{    display: inline-block;width: 30%;margin: 4px 12px;}
+.template_wrapper{    display: inline-block;margin: 4px 12px;}
 .hidden_div{display: none;}
 
 .redirect_page_container { margin-top:50px; }
@@ -1449,3 +1449,7 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 }
 
 .btn:hover { opacity:0.8;}
+
+.grid{}
+.grid_item{}
+.filter-button-group { text-align:center; margin:10px auto; }

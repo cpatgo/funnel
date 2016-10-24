@@ -31,9 +31,7 @@ aem/manage/ex_config.php
 aem/manage/config.php
 
 sitebuilder/application/config/config.php
-
-sitebuilder/elements/elements.zip
-builder/tmp/my_glcbuilder.zip
-
-sitebuilder/application/config/config.php
 sitebuilder/application/config/database.php
+builder/tmp/my_glcbuilder.zip
+sitebuilder/tmp/website.zip
+sitebuilder/elements/elements.zip

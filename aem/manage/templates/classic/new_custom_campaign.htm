@@ -137,37 +137,6 @@
         <input type="hidden" id="select_list_method" name="select_list_method" value="">
     </section>
 
-	<!-- <h3> {"Email Autoresponder"|alang}</h3>
-	<section>
-        <div class="row">
-        	<div class="col-md-12">
-				<h1 class="step_header_text">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					{"Choose Auto Responder Email"|alang}
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="campaign_help">
-					<p class="lead text_center">
-						{"Choose your email autoresponder header setting."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<div class="btn_wrapper" style="text-align: center;">
-					<a href="/aem/manage/desk.php?action=optinoptout#list-01-0-0" class="btn btn-primary btn-lg" target="_blank" style="color:#fff;">Email Confirmation Sets</a>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-
-
 	<!-- Step 3 -->
     <h3> {"Email Signature"|alang}</h3>
     <section class="new_list_div">
@@ -180,9 +149,7 @@
 			</div>
 			<div class="col-md-12">
 				<div class="col-md-8 col-md-offset-2">
-					<!-- <div class="adesk_help_inline" style="font-size:12px;">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div> -->
 					<div class="alert alert-warning create-new-list-warning">This information is displayed as your email signature. The USA CAN-SPAM law requires that the “sender of the email”, (i.e. the person or company noted in the From Label), to display a physical postal address within the content of the message.</div>
-
 				</div>
 			</div>
 			<br>
@@ -263,9 +230,6 @@
 							<label for="">Form Name: </label>
 							<input type="text" class="form-control input-lg" id="form_name" name="form_name" title="Your Form Name Here">
 							<div id="form_name-error"></div>
-							<!-- <div class="text_center hint">
-								This is how you will keep track of each form for your page.
-							</div> -->
 						</div>
 					</div>
 				</div>
@@ -358,11 +322,24 @@
 		<div class="col-md-12" id="landing_page_container">
 			<div class="row select_landing_page_template">
 				<div class="col-md-12">
-					<div id="radiobutton_container" class="accordion">
+					<div class="button-group filter-button-group">
+						<div class="btn btn-default btn-lg" data-filter="*">All</div>
+						<div class="btn btn-default btn-lg" data-filter=".skin_care">Skin Care</div>
+						<div class="btn btn-default btn-lg" data-filter=".events">Events</div>
+						<div class="btn btn-default btn-lg" data-filter=".giveaways">Giveaways</div>
+						<div class="btn btn-default btn-lg" data-filter=".industry">Industry</div>
+						<div class="btn btn-default btn-lg" data-filter=".optin">Optin</div>
+						<div class="btn btn-default btn-lg" data-filter=".designown">Design Your Own</div>
+					</div>
+				</div>
 
 
-						<h3>Skin Care</h3>
-						<div class="accordion_group">
+				<div class="col-md-12">
+					<div id="radiobutton_container" class="accordion grid row">
+
+
+						<!-- <h3>Skin Care</h3> -->
+						<div class="accordion_group skin_care grid_item col-xs-4">
 							<!-- Skin Care / Product Trial -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Skin Care - Product Trial</span>
@@ -374,8 +351,8 @@
 							</div>
 						</div>
 
-						<h3>Event</h3>
-						<div class="accordion_group">
+						<!-- <h3>Event</h3> -->
+						<div class="accordion_group events grid_item col-xs-4">
 
 							<!-- Event / With Video -->
 							<div class="template_wrapper">
@@ -398,8 +375,8 @@
 							</div> -->
 						</div>
 
-						<h3>Giveaways</h3>
-						<div class="accordion_group">
+						<!-- <h3>Giveaways</h3> -->
+						<div class="accordion_group giveaways grid_item col-xs-4">
 							<!-- Giveaways / Custom -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Giveaways - Custom</span>
@@ -409,7 +386,9 @@
 								  	<a href="http://sitebuilder.glchub.com/site/affd224466" class="btn btn-demo" target="_blank">DEMO</a>
 								</div>
 							</div>
+						</div>
 
+						<div class="accordion_group giveaways grid_item col-xs-4">
 							<!-- Giveaways / Free App -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Giveaways - Free App</span>
@@ -423,23 +402,10 @@
 
 
 
-						<!-- <h3>Travel</h3>
-						<div class="accordion_group"> -->
+						
 
-							<!-- Travel / Incruises Optin -->
-							<!-- <div class="template_wrapper">
-								<span class="text_center template_title">Travel - Incruises Video Optin</span>
-								<img src="images/500x580-travel-optin-incruses.jpg" class="img-thumbnail" alt="Travel - Incruises Video Option" />
-								<div class="template_buttons">
-								  	<a href="http://sitebuilder.glchub.com/sites/create/78" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-								  	<a href="http://sitebuilder.glchub.com/site/324006d1c8" class="btn btn-demo" target="_blank">DEMO</a>
-								</div>
-							</div> -->
-
-						<!-- </div> -->
-
-						<h3>Industry</h3>
-						<div class="accordion_group">
+						<!-- <h3>Industry</h3> -->
+						<div class="accordion_group industry grid_item col-xs-4">
 							<!-- Fitness -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Fitness</span>
@@ -461,8 +427,8 @@
 							</div> -->
 						</div>
 
-						<h3>Optin</h3>
-						<div class="accordion_group">
+						<!-- <h3>Optin</h3> -->
+						<div class="accordion_group optin grid_item col-xs-4">
 							<!-- OPTIN -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Optin 1</span>
@@ -472,8 +438,9 @@
 								  	<a href="http://sitebuilder.glchub.com/site/d8b144a344" class="btn btn-demo" target="_blank">DEMO</a>
 								</div>
 							</div>
+						</div>
 
-							<!-- OPTIN -->
+						<div class="accordion_group optin grid_item col-xs-4">
 							<div class="template_wrapper">
 								<span class="text_center template_title">Optin 2</span>
 								<img src="images/glc-optin3.jpg" alt="Optin 2" class="img-thumbnail">
@@ -482,7 +449,9 @@
 								  	<a href="http://sitebuilder.glchub.com/site/d5d7095d86" class="btn btn-demo" target="_blank">DEMO</a>
 								</div>
 							</div>
-
+						</div>
+						
+						<div class="accordion_group optin grid_item col-xs-4">
 							<!-- OPTIN -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Optin 3</span>
@@ -492,8 +461,10 @@
 								  	<a href="http://sitebuilder.glchub.com/site/dc06dbc19e" class="btn btn-demo" target="_blank">DEMO</a>
 								</div>
 							</div>
+						</div>
 
 							<!-- OPTIN -->
+						<div class="accordion_group optin grid_item col-xs-4">
 							<div class="template_wrapper">
 								<span class="text_center template_title">Optin 4</span>
 								<img src="images/glc-optin6.jpg" alt="Optin 4" class="img-thumbnail">
@@ -502,11 +473,9 @@
 								  	<a href="http://sitebuilder.glchub.com/site/8150856fb2" class="btn btn-demo" target="_blank">DEMO</a>
 								</div>
 							</div>
-
-							
 						</div>
 
-						<div class="accordion_group">
+						<div class="accordion_group buildown grid_item col-xs-4 designown">
 							<!-- Design Your Own -->
 							<div class="template_wrapper">
 								<span class="text_center template_title">Design Your Own</span>
@@ -617,30 +586,51 @@
 						<div id="pre_made_templates_wrapper">
 							<div class="row">
 						  		<div class="col-md-12">
+									<div class="button-group filter-button-group">
+										<div class="btn btn-default btn-lg" data-filter="*">All</div>
+										<div class="btn btn-default btn-lg" data-filter=".thankone">Skin Care</div>
+										<div class="btn btn-default btn-lg" data-filter=".thanktwo">Skin Care</div>
+										<div class="btn btn-default btn-lg" data-filter=".thankthree">Events</div>
+										<!-- <div class="btn btn-default btn-lg" data-filter=".giveaways">Giveaways</div>
+										<div class="btn btn-default btn-lg" data-filter=".industry">Industry</div>
+										<div class="btn btn-default btn-lg" data-filter=".optin">Optin</div>
+										<div class="btn btn-default btn-lg" data-filter=".designown">Design Your Own</div> -->
+									</div>
+								</div>
 
-									<div id="radiobutton_container">
-										<div class="template_wrapper">
-											<span class="text_center template_title">Thank You 1</span>
-											<img src="images/500x580thanks.jpg" class="img-thumbnail" alt="Download 1" />
-											<div class="template_buttons">
-											  	<a href="http://sitebuilder.glchub.com/sites/create/85" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="http://sitebuilder.glchub.com/site/8a1274e057" class="btn btn-demo" target="_blank">DEMO</a>
+
+								<div class="col-md-12">
+									<div id="radiobutton_container" class="accordion grid row">	
+										
+										<div class="accordion_group thankone grid_item col-xs-4">
+											<div class="template_wrapper">
+												<span class="text_center template_title">Thank You 1</span>
+												<img src="images/500x580thanks.jpg" class="img-thumbnail" alt="Download 1" />
+												<div class="template_buttons">
+												  	<a href="http://sitebuilder.glchub.com/sites/create/85" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+												  	<a href="http://sitebuilder.glchub.com/site/8a1274e057" class="btn btn-demo" target="_blank">DEMO</a>
+												</div>
 											</div>
 										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Thank You 2</span>
-											<img src="images/500x580thankyou1.jpg" class="img-thumbnail" alt="Download 2" />
-											<div class="template_buttons">
-											  	<a href="http://sitebuilder.glchub.com/sites/create/86" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="http://sitebuilder.glchub.com/site/f7ca665228" class="btn btn-demo" target="_blank">DEMO</a>
+
+										<div class="accordion_group thanktwo grid_item col-xs-4">
+											<div class="template_wrapper">
+												<span class="text_center template_title">Thank You 2</span>
+												<img src="images/500x580thankyou1.jpg" class="img-thumbnail" alt="Download 2" />
+												<div class="template_buttons">
+												  	<a href="http://sitebuilder.glchub.com/sites/create/86" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+												  	<a href="http://sitebuilder.glchub.com/site/f7ca665228" class="btn btn-demo" target="_blank">DEMO</a>
+												</div>
 											</div>
 										</div>
-										<div class="template_wrapper">
-											<span class="text_center template_title">Thank You 3</span>
-											<img src="images/500x580-thankyou.jpg" class="img-thumbnail" alt="Download 3" />
-											<div class="template_buttons">
-											  	<a href="http://sitebuilder.glchub.com/sites/create/87" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
-											  	<a href="http://sitebuilder.glchub.com/site/14f5b8953d" class="btn btn-demo" target="_blank">DEMO</a>
+										<div class="accordion_group thankthree grid_item col-xs-4">
+											<div class="template_wrapper">
+												<span class="text_center template_title">Thank You 3</span>
+												<img src="images/500x580-thankyou.jpg" class="img-thumbnail" alt="Download 3" />
+												<div class="template_buttons">
+												  	<a href="http://sitebuilder.glchub.com/sites/create/87" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+												  	<a href="http://sitebuilder.glchub.com/site/14f5b8953d" class="btn btn-demo" target="_blank">DEMO</a>
+												</div>
 											</div>
 										</div>
 									</div>

@@ -8,7 +8,7 @@ if(empty($check_user)) printf('<script type="text/javascript">window.location="%
 
 $val = $_REQUEST['page'];
 
-if($val == 'faq') printf('<script type="text/javascript">window.location="/faqs";</script>');
+if($val == 'faq') printf('<script type="text/javascript">window.open("/glc-faq","_blank");</script>');
 if($val == 'contact') printf('<script type="text/javascript">window.location="/submit-ticket";</script>');
 if($val == 'welcome') printf('<script type="text/javascript">window.location="/glc/index.php";</script>');
 $_SESSION['ses_l'][0] = '';
@@ -138,7 +138,7 @@ div.tooltip:before {
 			<span aria-hidden="true">&times;</span>
 		</button>
 		<!-- <strong>Heads up!</strong> Commissions reflected in your dashboard may not be accurate because of the 14-day(s) moneyback guarantee which will affect your commissions earned. -->
-		<span>Understand how to make money quickly with the <strong>GLC Rewards Pay Plan!</strong> <a href="/wp-content/uploads/2016/06/GLC-partner-rewards-payplan-06-03-16-.pdf" target="_blank">Click here for details &raquo; </a></span>
+		<span>Understand how to make money quickly with the <strong>GLC Rewards Pay Plan!</strong> <a href="/wp-content/uploads/2016/08/GLCHUB-partner-rewards-payplan-8-16-16-.compressed.pdf" target="_blank">Click here for details &raquo; </a></span>
 	</div>
 	
 	<div class="alert alert-info alert-dismissable fade in" role="alert">
@@ -252,7 +252,7 @@ you have personally enrolled."><span class="question">?</span></p>
 			<div class="footer">
 				<div class="pull-right">
 					<strong><?=$copyright;?></strong> &copy; <?php echo date("Y") ?>
-					Test Global Learning Center, LLC
+					Global Learning Center, LLC
 				</div>
 			</div>
 		</div>
