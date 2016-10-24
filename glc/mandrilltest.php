@@ -7,9 +7,9 @@ $name = 'Alain';
 
 $msg = 'Hello '.$username.',<br />
 <br />
-Your friend '.$username.' invites you to check out a short video on how to earn money with the Global Learning Center (GLC). 
+Your friend '.$username.' invites you to check out a short video on how to earn money with the GLC HUB (GLC). 
 <br /><br />
-Everyone that&#39;s currently a Member of the GLC can benefit from its Learning and Earning Centers. GLC has created an automated, lucrative referral Cycle Pay System that rewards Members for simply sharing its online e-Learning courses with your friends, peers and associates. 
+Everyone that&#39;s currently a Member of the GLC can benefit from its Learning and Earning Centers. GLC has created an automated, lucrative referral Cycle Pay System that rewards Members for simply sharing its Marketing and Lead Generation Platform with your friends, peers and associates. 
 <br /><br />
 Copy and paste this '.$reflink.' or <a href="'.$reflink.'" target="_blank">Click to watch »</a>';
 

@@ -138,7 +138,7 @@ if( isset($_COOKIE['referral']) ) {
 	      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
 	        <div class="nav-pills">
 	        	<div class="pull-right header-help" style="">
-	        		<div class="align-right">Need Help?<br /><a href="/faq/" target="_blank">Contact Customer Service</a></div>
+	        		<div class="align-right">Need Help?<br /><a href="/glc-faq/" target="_blank">Contact Customer Service</a></div>
 	        		<br />
 	        		<div class="align-right"><a class="btn btn-primary" href="login.php" style="text-align: right;">Already a Member? Login here.</a></div>
 	        	</div>
@@ -594,7 +594,7 @@ if( isset($_COOKIE['referral']) ) {
 									<div id="terms1_error_container" name="terms1_error_container"> </div>
 										<div class="checkbox">
 											<label>
-												<input id="acceptTerms-1" name="acceptTerms1" type="checkbox" /><?php $link = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']); ?>By checking this box you agree to joining our Affiliate Program & agree to our <a href="<?php echo $link?>/affiliatesterms/" target="_blank" >Affiliate Terms & Conditions</a>.
+												<input id="acceptTerms-1" name="acceptTerms1" type="checkbox" /><?php $link = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']); ?>By checking this box you agree to join our Affiliate Program & agree to our <a href="<?php echo $link?>/affiliatesterms/" target="_blank" >Affiliate Terms & Conditions</a>.
 											</label>
 										</div>
 									</div>
@@ -709,10 +709,10 @@ if( isset($_COOKIE['referral']) ) {
 					<ul>
 						<li>© 2016 Global Learning Center</li>
 						<li><a target="_blank" href="/earnings-disclaimer/">Earnings Disclaimer</a></li>
-						<li><a target="_blank" href="/affiliatesterms/">Affiliate Program Terms</a></li>
-						<li><a target="_blank" href="/refund/">Refund</a></li>
+						<li><a target="_blank" href="/affiliate-terms/">Affiliate Program Terms</a></li>
+						<li><a target="_blank" href="/refund/">Refunds</a></li>
 						<li><a target="_blank" href="/privacy-policy/">Privacy Policy</a></li>
-						<li><a target="_blank" href="/site-terms/">Website Use Policy</a></li>
+						<li><a target="_blank" href="/site-use-policy">Site Use Policy</a></li>
 						<!-- <li><a target="_blank" href="javascript:;">Contact Us</a></li> -->
 					</ul>
 					<div class="clear"></div>
