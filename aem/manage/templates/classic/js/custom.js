@@ -1122,20 +1122,18 @@ jQuery(document).ready(function(){
 
     // ISOTOPE - FILTERING
     // initialize isotope 
-    var grid = jQuery('.grid');
+    jQuery('.grid');
 
-    grid.isotope({
+    var $grid = jQuery('.grid') .isotope({
         // options
         itemSelector: '.grid_item',
-        layoutMode: 'fitRows',
-        filter: '*',
-        masonry: {
-          columnWidth: '.grid-sizer'
-        }
+        isFitWidth: true
     });
+
+    $grid.isotope({ filter: '*' });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
-      grid.isotope({ filter: filterValue });
+      $grid.isotope({ filter: filterValue });
     });
 });
