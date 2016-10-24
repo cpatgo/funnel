@@ -838,7 +838,7 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
 
-                 $('.grid').isotope({ filter: filterValue });
+                 jQuery('.grid').isotope({ filter: '*' });
 
             }
 
