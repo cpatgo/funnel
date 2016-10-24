@@ -1122,7 +1122,7 @@ jQuery(document).ready(function(){
         layoutMode: 'fitRows'
     });
 
-    jQuery('.filter-button-group').on( 'click', 'button', function() {
+    jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
       capturepage_isotope.isotope({ filter: filterValue });
     });
