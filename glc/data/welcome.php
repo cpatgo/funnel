@@ -41,7 +41,7 @@ function display_msq($id, $db_time)
 	}	
 	$qreferrals = get_paid_member($id);
 	if($qreferrals < 2) {
-		return '<div class="alert alert-danger">Please note, in order to earn commissions in our Affiliate Rewards Program, you must qualify by enrolling a <b>minimum of any 2 Paid Membership</b>. For more details, please review the GLC Rewards Pay Plan <a href="/wp-content/uploads/2016/06/GLC-partner-rewards-payplan-06-03-16-.pdf"target="_blank">here</a>.
+		return '<div class="alert alert-danger">Please note, in order to earn commissions in our Affiliate Rewards Program, you must first qualify by enrolling a <b>minimum of any 2 Paid Membership</b>. For more details, please review the <a href="/wp-content/uploads/2016/08/GLCHUB-partner-rewards-payplan-8-16-16-.compressed.pdf"target="_blank">GLC HUB Rewards Pay Plan here</a>.
 			<script type="text/javascript">
 				function AlertIt() {
 					alert("Do I have to sell subscriptions to earn?\n\nThe answer is “YES”. Our Independent Affiliate Rewards Program is a sales commission program and is based on you working with your enroller and other team members to earn a commission. Our subscription is a one-time sale and the company is only able to make money and provide you with commissions, if there are new sales. Each person signing up as an affiliate is required to sell 2 subscriptions. To continually earn commissions, you will need to sell at least 1 subscription every 4 months. Be sure to review the GLC Affiliate terms to make sure you understand how Our Affiliate Rewards Program works.\n\n");

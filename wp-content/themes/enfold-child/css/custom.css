@@ -337,7 +337,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 #header.header_color.av_header_transparency .av-main-nav > li.join_nav_link > a .avia-menu-text{ color:#fff !important; }
 
 #header_main .container  {
-    height: 90px !important;
+    height: 80px !important;
     line-height: initial !important;
 }
 .main_menu ul > li > a{
@@ -366,7 +366,7 @@ span.darker{ color:#888; }
 
 .av_minimal_header #header_main, .av_minimal_header #header_meta {
     /*border: none;*/
-    box-shadow: 0px 0px 25px #888888;
+    box-shadow: 0px 0px 10px #888888;
 }
 
 span.user_header strong { color: #fff; }
