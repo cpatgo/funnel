@@ -1115,12 +1115,12 @@ jQuery(document).ready(function(){
     });
 
     // ISOTOPE - FILTERING
-    // var capturepage_isotope = jQuery('.capturepage_accordion');
+    var capturepage_isotope = jQuery('.capturepage_accordion');
 
 
-    // capturepage_isotope.isotope({
-    //     // options
-    //     itemSelector: '.accordion_group',
-    //     layoutMode: 'fitRows'
-    // });
+    capturepage_isotope.isotope({
+        // options
+        itemSelector: '.accordion_group',
+        layoutMode: 'fitRows'
+    });
 });
