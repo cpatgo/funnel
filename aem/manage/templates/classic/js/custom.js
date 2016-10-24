@@ -6,6 +6,20 @@ var ctr = 0;
 
 jQuery(document).ready(function(){
 
+  var $grid = jQuery('.grid') .isotope({
+      // options
+      itemSelector: '.grid_item',
+      isFitWidth: true,
+      filter: '*'
+  });
+
+  $grid.isotope({ filter: '*' });
+
+  jQuery('.filter-button-group').on( 'click', 'div', function() {
+    var filterValue = jQuery(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+
   // reset progress bar
   jQuery( "#step-progressbar" ).progressbar({
     value: 0,
@@ -1122,17 +1136,5 @@ jQuery(document).ready(function(){
 
     // ISOTOPE - FILTERING
     // initialize isotope 
-    var $grid = jQuery('.grid') .isotope({
-        // options
-        itemSelector: '.grid_item',
-        isFitWidth: true,
-        filter: '*'
-    });
-
-    $grid.isotope({ filter: '*' });
-
-    jQuery('.filter-button-group').on( 'click', 'div', function() {
-      var filterValue = jQuery(this).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
-    });
+    
 });
