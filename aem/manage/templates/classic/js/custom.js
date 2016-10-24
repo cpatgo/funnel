@@ -6,8 +6,6 @@ var ctr = 0;
 
 jQuery(document).ready(function(){
 
-
-
   // reset progress bar
   jQuery( "#step-progressbar" ).progressbar({
     value: 0,
@@ -1136,5 +1134,5 @@ jQuery(document).ready(function(){
     jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
-    });  
+    });
 });
