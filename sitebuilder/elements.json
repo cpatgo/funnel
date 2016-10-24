@@ -83,6 +83,10 @@
         {"url":"elements/glc-secrettraffic.html","height":294, "thumbnail":"elements/images/thumbs/glc-secrettraffic.jpg"}
     ],
 
+    "GLC": [
+        {"url":"elements/glc-glc.html","height":1000, "thumbnail":"elements/images/thumbs/glc-glc.jpg"}
+    ],
+
     "Nutrition": [
         {"url":"elements/glc-flab2fab.html", "height":2084, "thumbnail":"elements/images/thumbs/glc-optin.png"}
     ],
@@ -90,6 +94,7 @@
     "Opt-in": [
         {"url":"elements/glc-optin2.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin2.jpg"},
         {"url":"elements/glc-optin3.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin3.jpg"},
+        {"url":"elements/glc-optin4.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin4.jpg"},
         {"url":"elements/glc-optin5.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin5.jpg"},
         {"url":"elements/glc-optin6.html", "height":1000, "thumbnail":"elements/images/thumbs/glc-optin6.jpg"}
     ],

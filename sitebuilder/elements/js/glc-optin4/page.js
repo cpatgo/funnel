@@ -1,5 +1,6 @@
 // set the date we're counting down to
-var target_date = new Date('oct, 31, 2016').getTime();
+var endDate =  Date.parse(document.getElementById('endDate').value); // set the countdown date
+var target_date = new Date(endDate);
  
 // variables for time units
 var days, hours, minutes, seconds;
