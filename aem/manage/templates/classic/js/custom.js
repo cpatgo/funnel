@@ -1122,12 +1122,11 @@ jQuery(document).ready(function(){
 
     // ISOTOPE - FILTERING
     // initialize isotope 
-    jQuery('.grid');
-
     var $grid = jQuery('.grid') .isotope({
         // options
         itemSelector: '.grid_item',
-        isFitWidth: true
+        isFitWidth: true,
+        filter: '*'
     });
 
     $grid.isotope({ filter: '*' });
