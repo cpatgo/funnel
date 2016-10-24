@@ -1115,8 +1115,8 @@ jQuery(document).ready(function(){
     });
 
     // ISOTOPE - FILTERING
-    var capturepage_isotope = jQuery('.capturepage_accordion');
-    capturepage_isotope.isotope({
+    var grid = jQuery('.grid');
+    grid.isotope({
         // options
         itemSelector: '.accordion_group',
         layoutMode: 'fitRows'
@@ -1124,6 +1124,6 @@ jQuery(document).ready(function(){
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
-      capturepage_isotope.isotope({ filter: filterValue });
+      grid.isotope({ filter: filterValue });
     });
 });
