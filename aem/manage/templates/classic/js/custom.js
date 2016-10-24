@@ -1127,7 +1127,8 @@ jQuery(document).ready(function(){
     grid.isotope({
         // options
         itemSelector: '.grid_item',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
+        filter: '*'
     });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
