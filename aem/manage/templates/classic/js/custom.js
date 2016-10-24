@@ -810,7 +810,7 @@ jQuery(document).ready(function(){
                 }
             }
 
-            console.log("onChanged - current: " + current + " - next: " + next);
+            // console.log("onChanged - current: " + current + " - next: " + next);
 
 
             if(current == 2 && next == 1) {
@@ -837,6 +837,16 @@ jQuery(document).ready(function(){
             if (current == 7) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
+
+                // initialize isotope 
+                var grid = jQuery('.grid');
+
+                grid.isotope({
+                    // options
+                    itemSelector: '.accordion_group',
+                    layoutMode: 'fitRows'
+                });
+
             }
 
             if (current == 9) { // if current index is equals to 4th step
@@ -844,6 +854,9 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').hide();
             }
 
+
+
+            
 
         },
         onFinishing: function (event, currentIndex)
@@ -1115,12 +1128,7 @@ jQuery(document).ready(function(){
     });
 
     // ISOTOPE - FILTERING
-    var grid = jQuery('.grid');
-    grid.isotope({
-        // options
-        itemSelector: '.accordion_group',
-        layoutMode: 'fitRows'
-    });
+    
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
