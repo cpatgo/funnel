@@ -945,6 +945,8 @@ jQuery(document).ready(function(){
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
 
+        jQuery('.filter-button-group > div:first-child').click();
+
     });
 
     $body.on('click', '.btn_custom_page_design', function(e){
@@ -959,6 +961,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+
+        jQuery('.filter-button-group > div:first-child').click();
     });
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
@@ -992,6 +996,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+
+        jQuery('.filter-button-group > div:first-child').click();
 
     });
 
