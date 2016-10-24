@@ -1129,12 +1129,7 @@ jQuery(document).ready(function(){
         filter: '*'
     });
 
-    $(window).smartresize(function(){
-      $container.isotope({
-        columnWidth: '.col-xs-4'
-      });
-    });
-
+    
     $grid.isotope({ filter: '*' });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
