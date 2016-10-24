@@ -1084,34 +1084,14 @@ jQuery(document).ready(function(){
     });
 
 
-    //GET FORMS
-    // aem_functions.get_forms();
-
-    // $body.on('click', '#refresh_form_list', function(e){
-    //  e.preventDefault();
-    //  aem_functions.get_forms();
-    // });
-
-    // jQuery("#landing-page-name #list_name").each(function(){
-    //     jQuery(this).tooltip({
-    //         show:{
-    //             effect: "slidedown",
-    //             delay: 250
-    //         }
-    //     });
-    // });
-
-    // jQuery('#landing-page-name').tooltip();
-    // jQuery('#list_name').tooltip();
+    // TOOLTIPS
     jQuery('#tooltip_name_campaign').tooltip();
     jQuery('#tooltip_step2').tooltip();
+    
+    // TABS
     jQuery('#getstarted_tabs').tabs();
-    // Accordion
-    // jQuery( ".accordion" ).accordion({
-    //   collapsible: true,
-    //   heightStyle: "content"
-    // });
-
+    
+    // DATA TABLES
     jQuery('.dataTables').DataTable({
       "iDisplayLength": 100,
        responsive: true,
@@ -1132,5 +1112,13 @@ jQuery(document).ready(function(){
 
         jQuery('#deleteRowModal').find('#deleteRowID').text(tr.find('.name').text());
         jQuery('#selectOption').modal();
+    });
+
+    // ISOTOPE - FILTERING
+    
+    jQuery('.accordion').isotope({
+        // options
+        itemSelector: '.accordion_group',
+        layoutMode: 'fitRows'
     });
 });
