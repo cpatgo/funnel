@@ -838,14 +838,7 @@ jQuery(document).ready(function(){
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
 
-                // initialize isotope 
-                var grid = jQuery('.grid');
-
-                grid.isotope({
-                    // options
-                    itemSelector: '.accordion_group',
-                    layoutMode: 'fitRows'
-                });
+                
 
             }
 
@@ -1128,7 +1121,14 @@ jQuery(document).ready(function(){
     });
 
     // ISOTOPE - FILTERING
-    
+    // initialize isotope 
+    var grid = jQuery('.grid');
+
+    grid.isotope({
+        // options
+        itemSelector: '.grid_item',
+        layoutMode: 'fitRows'
+    });
 
     jQuery('.filter-button-group').on( 'click', 'div', function() {
       var filterValue = jQuery(this).attr('data-filter');
