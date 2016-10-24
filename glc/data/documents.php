@@ -16,7 +16,7 @@ $is_company = $user_class->glc_usermeta($id, 'company_name');
 $user_type = (empty($is_company)) ? 'individual' : 'company';
 
 // email requirement
-$mailtoaddress = 'alainpedronio@gmail.com';
+$mailtoaddress = 'admin@glchub.com';
 
 
 $str_builder = 'User ' .$user[0]['username']. ' has submitted a document requirement. Below are his/her details:%0D';
@@ -26,7 +26,7 @@ $str_builder .= '%0DFirst Name: %09%09' . $user[0]['f_name'];
 $str_builder .= '%0DLast Name: %09%09' . $user[0]['l_name'];
 $str_builder .= '%0DEmail Address: %09' . $user[0]['email'];
 $str_builder .= '%0D%0D';
-$str_builder .= 'Please attach unto this message your document(s). Click the ATTACHMENT icon of your email client to add attachment.';
+$str_builder .= 'Please attach your documents(s) to this message. Click the ATTACHMENT icon of your email client to add attachment.';
 $str_builder .= '%0D%0D';
 $str_builder .= '---------------------------%0D';
 $str_builder .= 'Generated via GLC document page.';
