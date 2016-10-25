@@ -14,12 +14,12 @@ ul.campaign_sharer {
     padding: 0;
 }
 
-ul.campaign_sharer li {
+.campaign_sharer li {
     float: left;
     list-style: none !important;
 }
 
-ul.campaign_sharer li a {
+.campaign_sharer li a {
     display: block;
     text-decoration: none;
 }
