@@ -8,6 +8,22 @@ body{ font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#333333; 
 /*Forms New styles */
 /*modified on Oct 11 Amitabh Bachhan Birthday Special Patch :) by Sandeep */
 
+ul.campaign_sharer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.campaign_sharer li {
+    float: left;
+    list-style: none !important;
+}
+
+ul.campaign_sharer li a {
+    display: block;
+    text-decoration: none;
+}
+
 #selectOptionForm .glc_button {
     width: 32.5%;
 }
