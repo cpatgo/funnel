@@ -14,7 +14,8 @@
     <![endif]-->
     <style type="text/css">
     	  .center {text-align: center; margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto;}
-    	  .container {margin-top:18%;font-size:18px;}
+    	  .container {margin-top:15%;font-size:18px;}
+          .row_btn {margin-bottom: 50px}
     </style>
 </head>
 <body>
@@ -24,6 +25,13 @@
     	<div class="item content" id="content_section1">
     		
     		<div class="container">
+                <div class="row row_btn">
+                    <div class="span12">
+                        <div class="hero-unit center">
+                            <a href="<?php echo $return_link; ?>" class="btn btn-primary btn-lg">GO BACK</a>
+                        </div>
+                    </div>
+                </div>
 				<div class="row">
 					<div class="span12">
 						<div class="hero-unit center">

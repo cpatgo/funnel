@@ -161,7 +161,7 @@ $id = $_SESSION['dennisn_user_id'];
 					</li>
 				</ul>
 			</li>-->
-			<li><a href="/library/"><span class="label label-primary">Library</span> </a></li>
+			<li><a href="/myhub"><span class="label label-primary">My Hub</span> </a></li>
 			<li><a href="logout.php"><i class="fa fa-sign-out"></i> <?=$logout;?></a></li>
 		</ul>
 	</nav>
