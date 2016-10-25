@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "sites";
-$route['404_override'] = '';
+$route['404_override'] = 'builder404';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = "auth/login";
