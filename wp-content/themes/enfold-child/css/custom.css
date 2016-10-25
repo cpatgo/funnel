@@ -877,11 +877,11 @@ h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
 }
 @media only screen and (max-width: 1200px) and (min-width:780px) {
    
-    .avia-button.avia-size-x-large{ font-size:16px; }
+   .pricing-table > .avia-button-wrap > .avia-button.avia-size-x-large{ font-size:16px; }
 }
 
 @media only screen and (max-width: 500px ){
-    .avia-button.avia-size-x-large{ font-size: 20px;}
+    .pricing-table > .avia-button-wrap > .avia-button.avia-size-x-large{ font-size: 20px;}
 }
 
 .avia-center-col.pricing-table{ background: #fff; }
