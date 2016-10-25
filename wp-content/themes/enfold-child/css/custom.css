@@ -418,7 +418,7 @@ h3.widgettitle{
 
 .breadcrumb.breadcrumbs.avia-breadcrumbs {
     font-size: 14px;
-    padding-top: 24px;
+    /*padding-top: 24px;*/
 }
 
 #top .social_bookmarks li {
@@ -844,4 +844,6 @@ Mobile Styles
     background-color: transparent;
     /*color: #d4d4d4;*/
 }
+
+©#top #wrap_all .alternate_color h1 { display: none; }
 
