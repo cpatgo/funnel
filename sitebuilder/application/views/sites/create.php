@@ -22,7 +22,7 @@
                     <li><a href="#" id="all"><?php echo $this->lang->line('all_elements')?></a></li>
                 </ul>
                 
-                <a class="toggle" href="#"><img src="<?php echo base_url('images/logo.svg')?>"></a>
+                <a class="toggle toggle_settings" href="#"><span class="fui-arrow-right" id="settings_icon"></a>
                 
                 <hr>
                 
