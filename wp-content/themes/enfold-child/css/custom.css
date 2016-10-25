@@ -845,14 +845,24 @@ Mobile Styles
     /*color: #d4d4d4;*/
 }
 
-#top #wrap_all .alternate_color h1 { display: none; }
-@media only screen and (max-width: 989px) and (min-width: 768px) {
-    .av-logo-container { display: none; }
-}
 #top #wrap_all .all_colors h1 {
     font-size: 32px;
     text-transform: none;
     text-align: center;
 }
 
+#top #wrap_all .alternate_color h1 { display: none; }
 h1.av-special-heading-tag{color:#fff; font-size:61px;}
+
+@media only screen and (max-width: 989px) and (min-width: 768px) {
+    .av-logo-container { display: none; }
+}
+
+@media only screen and (max-width: 780px) {
+    .responsive #top .container .av-content-small, .responsive #top #wrap_all .flex_column, .responsive #top #wrap_all .av-flex-cells .no_margin {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+}
