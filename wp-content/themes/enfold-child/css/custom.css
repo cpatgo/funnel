@@ -74,7 +74,7 @@ td.avia-desc-col {
 
 .pricing-table-wrap > .pricing-table > li.pricing-features{
     font-size: 14px;
-    padding-left: 10%;
+    margin-left: 10%;
 }
 
 .pricing-table-wrap > .pricing-table > li span.include_option{
@@ -864,5 +864,13 @@ h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
         margin-bottom: 20px;
         width: 100%;
     }
-
 }
+
+@media only screen and (max-width: 1200px) {
+    .responsive .pricing-table-wrap {
+        width:100%;
+    }
+}
+
+.avia-center-col.pricing-table{ background: #fff; }
+.pricing-table{ background:#fff; }
