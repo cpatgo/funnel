@@ -51,7 +51,7 @@ body {
 	div.input-group { width:100%; }
 
 	#login_form {
-			margin-top: 125px;
+			margin-top: 15%;
 			/* Fallback for web browsers that doesn't support RGBa */
 			background: rgb(255, 255, 255);
 
@@ -189,7 +189,7 @@ div.product-chooser{
 </head>
 <body class="gray-bg">
 <div class="container-fluid">
-<div class="row col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-lg-4 col-lg-offset-4">
+<div class="row col-lg-4 col-lg-offset-4 col-md-8 col-md-offset-2">
 
 
 
