@@ -5,6 +5,7 @@
 			<th>Description</th>
 			<th>List ID</th>
 			<th>Preview</th>
+			<th>Sharer</th>
 			<th>Date Created</th>
 		</tr>
 	</thead>
@@ -15,6 +16,14 @@
 				<td>{$t.description}</td>
 				<td>{$t.list_id}</td>
 				<td><a href="{$t.page_link}" target="_blank" class="hyperlink">{$t.page_link}</a></td>
+				<td>
+					<ul class="campaign_sharer">
+						<li class="facebook"><a class="social" id="fb_share" href="{$t.page_link}" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+						<li class="twitter"><a class="social" id="twitter_share" href="{$t.page_link}" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+						<li class="gplus"><a class="social" id="gplus_share" href="{$t.page_link}" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
+						<li class="email"><a class="social" id="email_share" href="{$t.page_link}" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+					</ul>
+				</td>
 				<td>{$t.date_created}</td>
 			</tr>
 		{/foreach}
