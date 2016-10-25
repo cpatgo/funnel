@@ -845,5 +845,7 @@ Mobile Styles
     /*color: #d4d4d4;*/
 }
 
-©#top #wrap_all .alternate_color h1 { display: none; }
-
+#top #wrap_all .alternate_color h1 { display: none; }
+@media only screen and (max-width: 989px) and (min-width: 768px) {
+    .av-logo-container { display: none; }
+}
