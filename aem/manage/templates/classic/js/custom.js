@@ -832,19 +832,21 @@ jQuery(document).ready(function(){
             if (current == 5) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
+                jQuery('.filter-button-group > div:first-child').click();
             }
 
             if (current == 7) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
 
-                 jQuery('.grid').isotope({ filter: '*' });
+                 jQuery('.filter-button-group > div:first-child').click();
 
             }
 
             if (current == 9) { // if current index is equals to 4th step
                 jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
                 jQuery('.actions > ul > li:nth-child(2)').hide();
+                jQuery('.filter-button-group > div:first-child').click();
             }
 
 
@@ -943,6 +945,8 @@ jQuery(document).ready(function(){
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
 
+        jQuery('.filter-button-group > div:first-child').click();
+
     });
 
     $body.on('click', '.btn_custom_page_design', function(e){
@@ -957,6 +961,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_redirect_page_custom_url').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+
+        jQuery('.filter-button-group > div:first-child').click();
     });
 
     $body.on('click', '.btn_redirect_page_custom_url', function(e){
@@ -990,6 +996,8 @@ jQuery(document).ready(function(){
         jQuery('.btn_thankyou_externalurl').removeClass('list_selection_active');
 
         jQuery('.actions > ul > li:nth-child(2)').hide(); // make sure that the 'Continue' button is hidden
+
+        jQuery('.filter-button-group > div:first-child').click();
 
     });
 
