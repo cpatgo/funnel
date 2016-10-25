@@ -851,6 +851,12 @@ Mobile Styles
     text-align: center;
 }
 
+#top #wrap_all .all_colors h1 {
+    font-size: 32px;
+    text-transform: none;
+    text-align: center;
+}
+
 #top #wrap_all .alternate_color h1 { display: none; }
 h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
 
@@ -864,12 +870,13 @@ h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
         margin-bottom: 20px;
         width: 100%;
     }
-}
-@media only screen and (max-width: 1200px) and (min-width:780px) {
     .responsive .pricing-table-wrap {
         width:100%;
+        display:block;
     }
-
+}
+@media only screen and (max-width: 1200px) and (min-width:780px) {
+   
     .avia-button.avia-size-x-large{ font-size:16px; }
 }
 
