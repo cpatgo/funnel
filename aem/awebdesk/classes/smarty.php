@@ -76,7 +76,7 @@ class adesk_Smarty extends Smarty {
 			
 			if($detect->isMobile()){
 			$dashtheme = $admin99['default_mobdashboard'];
-			$this->template_dir[] = $this->_adminPath . '/templates/mobile/'.$dashtheme.'/';
+			$this->template_dir[] = $this->_adminPath . '/templates/'.$dashtheme.'/';
 			}
 			else {
 			   $dashtheme = $admin99['default_dashboard'];
