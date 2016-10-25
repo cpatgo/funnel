@@ -850,9 +850,9 @@ Mobile Styles
     .av-logo-container { display: none; }
 }
 #top #wrap_all .all_colors h1 {
-    color: #444;
-    font-size: 61px;
+    font-size: 32px;
     text-transform: none;
+    text-align: center;
 }
 
 h1.av-special-heading-tag{color:#fff;}
