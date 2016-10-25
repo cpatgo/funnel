@@ -413,7 +413,7 @@ h3.widgettitle{
 #top .title_container .container {
     padding-top: 10px;
     padding-bottom: 10px;
-    min-height: 76px;
+    /*min-height: 76px;*/
 }
 
 .breadcrumb.breadcrumbs.avia-breadcrumbs {
@@ -855,4 +855,4 @@ Mobile Styles
     text-align: center;
 }
 
-h1.av-special-heading-tag{color:#fff;}
+h1.av-special-heading-tag{color:#fff; font-size:61px;}
