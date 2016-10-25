@@ -171,7 +171,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 		}
 
 		#login_form {
-			margin-top: 125px;
+			margin-top: 15%;
 			/* Fallback for web browsers that doesn't support RGBa */
 			background: rgb(0, 0, 0);
 
