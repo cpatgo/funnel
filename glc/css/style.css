@@ -826,7 +826,7 @@ button.dim:active:before {
   background-color: #d1dade;
   color: #5e5e5e;
   font-family: 'Open Sans';
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   padding: 3px 8px;
   text-shadow: none;
@@ -2592,7 +2592,7 @@ a.forum-item-title:hover {
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #2f4050;
-  font-size: 13px;
+  font-size: 15px;
   color: #676a6c;
   overflow-x: hidden;
 }
@@ -4798,3 +4798,4 @@ span.required { color:#FF0000; }
 .align-left {
   text-align: left;
 }
+
