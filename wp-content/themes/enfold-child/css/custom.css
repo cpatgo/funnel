@@ -852,7 +852,7 @@ Mobile Styles
 }
 
 #top #wrap_all .alternate_color h1 { display: none; }
-h1.av-special-heading-tag{color:#fff; font-size:61px;}
+h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
 
 @media only screen and (max-width: 989px) and (min-width: 768px) {
     .av-logo-container { display: none; }
