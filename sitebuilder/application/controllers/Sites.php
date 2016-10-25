@@ -62,7 +62,7 @@ class Sites extends MY_Controller {
 	public function create($templateID = false, $formID = false)
 	{
 		//create a  new, empty site
-		$newSiteID = $this->sitemodel->createNew();
+		$newSiteID = $this->sitemodel->createNew($templateID);
 		$link = sprintf('sites/%d%s%s', $newSiteID, ($templateID) ? '/'.$templateID : '', ($formID) ? '/'.$formID : '');
 		redirect($link);
 		//$this->data['builder'] = true;

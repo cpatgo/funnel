@@ -155,7 +155,7 @@ class Sitemodel extends CI_Model {
         
     */
     
-    public function createNew() {
+    public function createNew($templateID = false) {
     
         $user = $this->ion_auth->user()->row();
         
@@ -175,14 +175,15 @@ class Sitemodel extends CI_Model {
         
         
         //create empty index page
-        
-        $data = array(
-            'sites_id' => $newSiteID,
-            'pages_name' => 'index',
-            'pages_timestamp' => time()
-        );
-        
-        $this->db->insert('pages', $data); 
+        if($templateID === false):
+            $data = array(
+                'sites_id' => $newSiteID,
+                'pages_name' => 'index',
+                'pages_timestamp' => time()
+            );
+            
+            $this->db->insert('pages', $data); 
+        endif;
         
         return $newSiteID;
         
