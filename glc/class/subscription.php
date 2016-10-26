@@ -106,6 +106,8 @@ if(!empty($username)):
         }
 
         echo "<pre>";
+        print_r($pay_type);
+        print_r($environment);
         print_r($response);
         die();
 
