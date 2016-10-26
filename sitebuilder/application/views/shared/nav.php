@@ -61,6 +61,7 @@
       			<?php if( $this->ion_auth->is_admin() ):?>
       			<li <?php if( isset($page) && $page == "users" ):?>class="active"<?php endif;?>><a href="<?php echo site_url('users')?>"><span class="fui-user"></span> <?php echo $this->lang->line('nav_users')?></a></li>
       			<li <?php if( isset($page) && $page == "settings" ):?>class="active"<?php endif;?>><a href="<?php echo site_url('settings')?>"><span class="fui-gear"></span> <?php echo $this->lang->line('nav_settings')?></a></li>
+      			<li <?php if( isset($page) && $page == "settings" ):?>class="active"<?php endif;?>><a href="https://glchub.com/aem/manage"><span class="fui-arrow-left"></span> Back to eMarketer</a></li>
       			<?php endif;?>
       		
       		<?php endif;?>
@@ -73,7 +74,7 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, <?php echo $u->first_name." ".$u->last_name;?> <b class="caret"></b></a>
 				<span class="dropdown-arrow"></span>
 			  	<ul class="dropdown-menu">
-			    	<li><a href="https://glchub.com/myhub" data-toggle="modal"><span class="fui-cmd"></span> GLC HUB</a></li>
+			    	<li><a href="https://glchub.com/aem/manage" data-toggle="modal"><span class="fui-arrow-left"></span> Back to eMarketer</a></li>
 			    	<!-- <li><a href="#accountModal" data-toggle="modal"><span class="fui-cmd"></span> <?php echo $this->lang->line('nav_myaccount')?></a></li>
 			    	<li class="divider"></li>
 			    	<li><a href="<?php echo site_url('logout')?>"><span class="fui-exit"></span> <?php echo $this->lang->line('nav_logout')?></a></li> -->

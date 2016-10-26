@@ -7,6 +7,14 @@
         <div class="menu" id="menu">
       
             <div class="main" id="main">
+                
+                <div style="text-align: center" id="back_to_emarketer">
+                    <a class="btn btn-primary" href="https://glchub.com/aem/manage">
+                        <span class="fui-arrow-left"></span> 
+                        <span class="">Back to eMarketer</span>
+                    </a>
+                    <br><br>
+                </div>
 
                 <?php if( isset($templates) ):?>
                 <h3><span class="fui-document"></span> <?php echo $this->lang->line('templates_heading');?></h3>
@@ -108,16 +116,23 @@
                             ?>
 
                         <li>
-                            <a href="<?php echo $_SERVER['HTTP_REFERER']?>" id="backButton">
+                            <a href="/sites" id="backButton">
                                 <span class="fui-arrow-left"></span> 
                                 <?php echo $this->lang->line( $t )?>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://glchub.com/aem/manage" id="backButton">
+                                <span class="fui-arrow-left"></span> 
+                                Back to eMarketer
                             </a>
                         </li>
 
                         <?php else:?>
 
                         <li>
-                            <a href="<?php echo site_url('sites')?>" id="backButton">
+                            <a href="/users" id="backButton">
                                 <span class="fui-arrow-left"></span>
                                 <?php echo $this->lang->line('nav_goback_users')?>
                             </a>
