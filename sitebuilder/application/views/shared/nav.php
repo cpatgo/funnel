@@ -61,8 +61,8 @@
       			<?php if( $this->ion_auth->is_admin() ):?>
       			<li <?php if( isset($page) && $page == "users" ):?>class="active"<?php endif;?>><a href="<?php echo site_url('users')?>"><span class="fui-user"></span> <?php echo $this->lang->line('nav_users')?></a></li>
       			<li <?php if( isset($page) && $page == "settings" ):?>class="active"<?php endif;?>><a href="<?php echo site_url('settings')?>"><span class="fui-gear"></span> <?php echo $this->lang->line('nav_settings')?></a></li>
-      			<li <?php if( isset($page) && $page == "settings" ):?>class="active"<?php endif;?>><a href="https://glchub.com/aem/manage"><span class="fui-arrow-left"></span> Back to eMarketer</a></li>
       			<?php endif;?>
+      			<li><a href="https://glchub.com/aem/manage"><span class="fui-arrow-left"></span> Back to eMarketer</a></li>
       		
       		<?php endif;?>
 		</ul>
