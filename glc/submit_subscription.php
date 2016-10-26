@@ -151,10 +151,12 @@ if(isset($_POST['q']) && isset($_POST['username']))
                     }
                     else
                     { 
+                        echo "LSDJHSJDKHF";
                         if($real_parent === 'joinnow'):
+                            echo "LSDJHSJDKHFasdfasdfasfa";
                             //Process the edata payment. If there is no problem, registration of user will be executed
                             require_once(dirname(__FILE__)."/class/subscription.php");
-
+echo "LSDJHSJDKHF";
                             if($payment_error === 0):
                                 // Insert user in temp_users table
                                 $userdata = array(
