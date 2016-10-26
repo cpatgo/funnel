@@ -31,7 +31,11 @@ $authorize_key = $merchant_setting['authorize_key'];
 // echo $authorize_key;
 // die();
 define("AUTHORIZENET_LOG_FILE", "phplog");
+
+echo "1";
 if(!empty($username)):
+
+    echo "2";
     $merchant_class = getInstance('Class_Merchant');
     $user_class = getInstance("Class_User");
     $payment_class = getInstance("Class_Payment");
@@ -99,18 +103,16 @@ if(!empty($username)):
 
 
         if ($environment === 'live') {
+            echo "3";
             $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);    
         }
         else {
+            echo "4";
             $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);    
         }
 
-        echo "<pre>";
-        print_r($pay_type);
-        print_r($environment);
-        print_r($response);
-        die();
-
+echo "5";
+die();
         if ($response != null)
         {
             $tresponse = $response->getTransactionResponse();
