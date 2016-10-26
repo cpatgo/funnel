@@ -9,11 +9,11 @@
         window.top.close();
     });
 
-    var clipboard = new Clipboard('.btnCopy2');
-    clipboard.on('success', function(e) {
+    var clipboard2 = new Clipboard('.btnCopy2');
+    clipboard2.on('success', function(e) {
     	$('#getLinkModal2').modal('hide');
     });
-    
+
 
     // attach new li manually to block container in builder.
 	// var strbuilder;
