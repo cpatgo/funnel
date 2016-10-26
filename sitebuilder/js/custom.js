@@ -13,6 +13,7 @@
     clipboard.on('success', function(e) {
     	$('#getLinkModal2').modal('hide');
     });
+    
 
     // attach new li manually to block container in builder.
 	// var strbuilder;
