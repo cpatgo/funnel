@@ -5,7 +5,13 @@
 
 	var clipboard = new Clipboard('.btnCopy');
     clipboard.on('success', function(e) {
+    	$('#getLinkModal2').modal('hide');
         window.top.close();
+    });
+
+    var clipboard = new Clipboard('.btnCopy2');
+    clipboard.on('success', function(e) {
+    	$('#getLinkModal2').modal('hide');
     });
 
     // attach new li manually to block container in builder.
