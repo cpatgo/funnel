@@ -30,5 +30,9 @@
     $('body').on('mouseleave', '.menu', function(){
         $('body').find('#settings_icon').toggleClass("fui-arrow-right fui-arrow-left");
     });
+
+    $('body').on('click', '#back_to_emarketer', function(){
+    	window.location.href = 'https://glchub.com/aem/manage';
+    });
     
 }());
