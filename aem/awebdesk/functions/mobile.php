@@ -159,6 +159,12 @@
 	  // tell adaptation services (transcoders and proxies) to not alter the content based on user agent as it's already being managed by this script, some of them suck though and will disregard this....
 		// header('Cache-Control: no-transform'); // http://mobiforge.com/developing/story/setting-http-headers-advise-transcoding-proxies
 		// header('Vary: User-Agent, Accept'); // http://mobiforge.com/developing/story/setting-http-headers-advise-transcoding-proxies
+		// 
+		// 
+		/* FORCE $mobile_browser == false to load default non-mobile browser template */
+		// $mobile_browser == false;
+		// $status = 'Desktop / full capability browser';
+		/* END */
 
 	  // if redirect (either the value of the mobile or desktop redirect depending on the value of $mobile_browser) is true redirect else we return the status of $mobile_browser
 	  if($redirect = ($mobile_browser==true) ? $mobileredirect : $desktopredirect){
