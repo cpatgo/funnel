@@ -197,7 +197,7 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-          ctr = (1 + current) * 4;
+          ctr = (1 + current) * 8.33333333336;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
