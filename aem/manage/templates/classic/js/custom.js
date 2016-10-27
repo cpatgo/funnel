@@ -677,11 +677,12 @@ jQuery(document).ready(function(){
               },
               dataType: 'json',
               success:function(result) {
-                  $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+                  $body.find('#funnel_link').append('Your Campaign URL: <a href="'+result.link+'" target="_blank">'+result.link+'</a>');
                   $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
                   $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
                   $body.find('#email_share').attr('href', "mailto:?body="+result.link);
                   $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
+                  $body.find('#done_campaign_name').append( jQuery('#landing-page-name').val() );
               },
               error: function(errorThrown){
                   console.log(errorThrown);
