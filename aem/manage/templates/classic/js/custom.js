@@ -118,9 +118,9 @@ jQuery(document).ready(function(){
       autoFocus: true,
       // initialize
       onInit: function(event, current){
-          // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+          jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
           jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
-          // console.log(current);
+          console.log('oninit: ' + current);
           if(current == 0) {
             jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
           }
@@ -216,26 +216,26 @@ jQuery(document).ready(function(){
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
           }
 
-          if(current == 3 && next == 4) {
-              var method = $body.find('#select_list_method').val();
-              if(method == 'select_existing_list') {
-                  jQuery('.actions > ul > li:nth-child(1) > a').click();
-              }
-          }
+          // if(current == 3 && next == 4) {
+          //     var method = $body.find('#select_list_method').val();
+          //     if(method == 'select_existing_list') {
+          //         jQuery('.actions > ul > li:nth-child(1) > a').click();
+          //     }
+          // }
 
-          if(current == 3 && next == 2 ) {
-              var method = $body.find('#select_list_method').val();
-              if(method == 'select_existing_list') {
-                  $body.find('#list_company').val('n/a');
-                  $body.find('#list_address').val('n/a');
-                  $body.find('#list_address2').val('n/a');
-                  $body.find('#list_city').val('n/a');
-                  $body.find('#list_state').val('n/a');
-                  $body.find('#list_postal').val('n/a');
-                  $body.find('#list_country').val('n/a');
-                  jQuery('.actions > ul > li:nth-child(2) > a').click();
-              }
-          }
+          // if(current == 3 && next == 2 ) {
+          //     var method = $body.find('#select_list_method').val();
+          //     if(method == 'select_existing_list') {
+          //         $body.find('#list_company').val('n/a');
+          //         $body.find('#list_address').val('n/a');
+          //         $body.find('#list_address2').val('n/a');
+          //         $body.find('#list_city').val('n/a');
+          //         $body.find('#list_state').val('n/a');
+          //         $body.find('#list_postal').val('n/a');
+          //         $body.find('#list_country').val('n/a');
+          //         jQuery('.actions > ul > li:nth-child(2) > a').click();
+          //     }
+          // }
 
           // console.log(current);
           if (current == 6) { // if current index is equals to 4th step
