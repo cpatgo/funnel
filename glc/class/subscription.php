@@ -66,7 +66,7 @@ if(!empty($username)):
 
         $paymentSchedule = new AnetAPI\PaymentScheduleType();
         $paymentSchedule->setInterval($interval);
-        $paymentSchedule->setStartDate(date('Y-m-d'));
+        $paymentSchedule->setStartDate(new DateTime(date('Y-m-d')));
         $paymentSchedule->setTotalOccurrences("9999");
 
         $subscription->setPaymentSchedule($paymentSchedule);
@@ -91,7 +91,7 @@ if(!empty($username)):
         $billto->setZip($zip);
         $billto->setCountry($country);
 
-        $subscription->setBillTo($billTo);
+        $subscription->setBillTo($billto);
 
         $request = new AnetAPI\ARBCreateSubscriptionRequest();
         $request->setmerchantAuthentication($merchantAuthentication);
@@ -101,19 +101,15 @@ if(!empty($username)):
 
 
         if ($environment === 'live') {
-            echo "3";
             $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);    
         }
         else {
-            echo "4";
             $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);    
         }
 
         if ($response != null)
         {
-            $tresponse = $response->getTransactionResponse();
-    
-            if (($tresponse != null) && ($tresponse->getResponseCode()=="1") )   
+            if (($tresponse != null) && ($tresponse->getMessages()->getResultCode() == "Ok") )
             {
                 //Setting payment error to 0 will tell submit.php to register the user
                 $payment_error = 0;
@@ -121,21 +117,23 @@ if(!empty($username)):
             else
             {
                 //If the payment process encountered an error, save the transaction to authorize_ipn table then return error
+
+                $errorMessages = $tresponse->getMessages()->getMessage();
                 $payment_data = array(
                     'user_id' => 0,
                     'cc_fname' => $payment_fname,
                     'cc_lname' => $payment_lname,
-                    'response' => $tresponse->getResponseCode(),
-                    'responsetext' => json_encode($tresponse->getMessages()),
-                    'authcode' => (!empty($tresponse->getAuthCode())) ? $tresponse->getAuthCode() : 0,
-                    'transactionid' => $tresponse->getTransId(),
-                    'avsresponse' => $tresponse->getAvsResultCode(),
-                    'cvvresponse' => $tresponse->getCvvResultCode(),
+                    'response' => $errorMessages[0]->getCode(),
+                    'responsetext' => $errorMessages[0]->getText(),
+                    'authcode' => $errorMessages[0]->getCode(),
+                    'transactionid' => '',
+                    'avsresponse' => 0,
+                    'cvvresponse' => 0,
                     'orderid' => $orderid,
-                    'type' => 'authCaptureTransaction',
-                    'response_code' => $tresponse->getResponseCode(),
+                    'type' => 'subscription',
+                    'response_code' => $errorMessages[0]->getCode(),
                     'amount' => $membership_details['amount'],
-                    'payment_type' => 1,
+                    'payment_type' => 3,
                     'date_created' => date('Y-m-d H:i:s')
                 );
                 $payment_id = $payment_class->authorize_ipn($payment_data);
