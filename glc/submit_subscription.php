@@ -239,7 +239,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 $payment_data = array(
                                     'user_id'           => sprintf('100%d', $response['message']),
                                     'payment_method'    => $reg_by,
-                                    'payment_type'      => 'creditcard',
+                                    'payment_type'      => 'subscription',
                                     'amount'            => $membership_amount,
                                     'date_created'      => date('Y-m-d H:i:s')
                                 );
@@ -490,7 +490,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 $payment_data = array(
                                     'user_id'           => $user_id,
                                     'payment_method'    => $reg_by,
-                                    'payment_type'      => 'creditcard',
+                                    'payment_type'      => 'subscription',
                                     'amount'            => $membership_amount,
                                     'date_created'      => date('Y-m-d H:i:s')
                                 );
