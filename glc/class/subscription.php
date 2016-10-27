@@ -123,7 +123,7 @@ if(!empty($username)):
                     'user_id' => 0,
                     'cc_fname' => $payment_fname,
                     'cc_lname' => $payment_lname,
-                    'response' => $errorMessages[0]->getCode(),
+                    'response' => 0,
                     'responsetext' => $errorMessages[0]->getText(),
                     'authcode' => $errorMessages[0]->getCode(),
                     'transactionid' => '',
@@ -131,7 +131,7 @@ if(!empty($username)):
                     'cvvresponse' => 0,
                     'orderid' => $orderid,
                     'type' => 'subscription',
-                    'response_code' => $errorMessages[0]->getCode(),
+                    'response_code' => 0,
                     'amount' => $membership_details['amount'],
                     'payment_type' => 3,
                     'date_created' => date('Y-m-d H:i:s')
