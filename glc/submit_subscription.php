@@ -132,9 +132,9 @@ if(isset($_POST['q']) && isset($_POST['username']))
         {
                 $real_p         = $real_parent_id;
                 $username       = strtolower($username);
-                $membership     = glc_option('aem_special_matrix_membership');
-                $wp_membership  = glc_option('aem_special_wp_membership');
-                $membership_amount = glc_option('aem_special_registration');
+                $membership     = glc_option('glc_subscription_matrix_membership');
+                $wp_membership  = glc_option('glc_subscription_wp_membership');
+                $membership_amount = glc_option('glc_subscription_registration');
 
                 $optin_aff  = (isset($_POST['acceptTerms1']) && $_POST['acceptTerms1'] == 'on') ? 1 : 0; 
 

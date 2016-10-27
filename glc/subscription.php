@@ -5,8 +5,8 @@ require('include/helper.php');
 $class_membership = getInstance('Class_Membership');
 $class_merchant = getInstance('Class_Merchant');
 
-$membership = glc_option('aem_special_wp_membership');
-$price = glc_option('aem_special_registration');
+$membership = glc_option('glc_subscription_wp_membership');
+$price = glc_option('glc_subscription_registration');
 
 $paymentmethods = array();
 

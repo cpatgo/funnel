@@ -58,7 +58,7 @@ if(!empty($username)):
 
         // Subscription Type Info
         $subscription = new AnetAPI\ARBSubscriptionType();
-        $subscription->setName("$39 Monthly Pricing");
+        $subscription->setName("$39 Pro Monthy");
 
         $interval = new AnetAPI\PaymentScheduleType\IntervalAType();
         $interval->setLength(1);
