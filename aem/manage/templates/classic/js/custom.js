@@ -128,7 +128,7 @@ jQuery(document).ready(function(){
             jQuery('.actions > ul > li:first-child a').attr('href', '#previous');
           }
 
-          jQuery('.sales_option_campaign #step-progressbar').progressbar({value: 20});
+          jQuery('.sales_option_campaign #step-progressbar').progressbar({value: 25});
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
 
@@ -200,7 +200,7 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-          ctr = (1 + current) * 20;
+          ctr = (1 + current) * 25;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
