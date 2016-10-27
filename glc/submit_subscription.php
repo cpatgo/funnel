@@ -132,9 +132,9 @@ if(isset($_POST['q']) && isset($_POST['username']))
         {
                 $real_p         = $real_parent_id;
                 $username       = strtolower($username);
-                $membership     = glc_option('aem_special_matrix_membership');
-                $wp_membership  = glc_option('aem_special_wp_membership');
-                $membership_amount = glc_option('aem_special_registration');
+                $membership     = glc_option('glc_subscription_matrix_membership');
+                $wp_membership  = glc_option('glc_subscription_wp_membership');
+                $membership_amount = glc_option('glc_subscription_registration');
 
                 $optin_aff  = (isset($_POST['acceptTerms1']) && $_POST['acceptTerms1'] == 'on') ? 1 : 0; 
 
@@ -203,23 +203,24 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                     die(json_encode($result));
                                 endif;
 
-                                if(($tresponse != null) && ($tresponse->getResponseCode()=="1")):
+                                if(($apiresponse != null) && ($apiresponse->getMessages()->getResultCode() == "Ok")):
                                     $user_id = $response['message'];  
+                                    $tresponseMessages = $apiresponse->getMessages()->getMessage();
                                     $payment_data = array(
                                       'user_id' => sprintf('100%d', $user_id),
                                       'cc_fname' => $payment_fname,  
                                       'cc_lname' => $payment_lname,
-                                      'response' => $tresponse->getResponseCode(),
-                                      'responsetext' => json_encode($tresponse->getMessages()),
-                                      'authcode' => (!empty($tresponse->getAuthCode())) ? $tresponse->getAuthCode() : 0,
-                                      'transactionid' => $tresponse->getTransId(),
-                                      'avsresponse' => $tresponse->getAvsResultCode(),
-                                      'cvvresponse' => $tresponse->getCvvResultCode(),
+                                      'response' => 1,
+                                      'responsetext' => $tresponseMessages[0]->getText(),
+                                      'authcode' => $tresponseMessages[0]->getCode(),
+                                      'transactionid' => $apiresponse->getSubscriptionId(),
+                                      'avsresponse' => 0,
+                                      'cvvresponse' => 0,
                                       'orderid' => $orderid,
-                                      'type' => 'authCaptureTransaction',
-                                      'response_code' => $tresponse->getResponseCode(),
+                                      'type' => 'subscription',
+                                      'response_code' => 1,
                                       'amount' => $membership_amount,
-                                      'payment_type' => 1,
+                                      'payment_type' => 3,
                                       'date_created' => date('Y-m-d H:i:s')
                                     );
                                     $payment_id = $payment_class->authorize_ipn($payment_data);
@@ -304,22 +305,23 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 $response = $registration->insert_user($userdata);
                                 $user_id = $response['message'];  
 
-                                if(($tresponse != null) && ($tresponse->getResponseCode()=="1")):
+                                if(($apiresponse != null) && ($apiresponse->getMessages()->getResultCode() == "Ok")):
+                                    $tresponseMessages = $apiresponse->getMessages()->getMessage();
                                     $payment_data = array(
-                                      'user_id' => $user_id,
+                                      'user_id' => sprintf('100%d', $user_id),
                                       'cc_fname' => $payment_fname,  
                                       'cc_lname' => $payment_lname,
-                                      'response' => $tresponse->getResponseCode(),
-                                      'responsetext' => json_encode($tresponse->getMessages()),
-                                      'authcode' => (!empty($tresponse->getAuthCode())) ? $tresponse->getAuthCode() : 0,
-                                      'transactionid' => $tresponse->getTransId(),
-                                      'avsresponse' => $tresponse->getAvsResultCode(),
-                                      'cvvresponse' => $tresponse->getCvvResultCode(),
+                                      'response' => 1,
+                                      'responsetext' => $tresponseMessages[0]->getText(),
+                                      'authcode' => $tresponseMessages[0]->getCode(),
+                                      'transactionid' => $tresponseMessages->getSubscriptionId(),
+                                      'avsresponse' => 0,
+                                      'cvvresponse' => 0,
                                       'orderid' => $orderid,
-                                      'type' => 'authCaptureTransaction',
-                                      'response_code' => $tresponse->getResponseCode(),
+                                      'type' => 'subscription',
+                                      'response_code' => 1,
                                       'amount' => $membership_amount,
-                                      'payment_type' => 1,
+                                      'payment_type' => 3,
                                       'date_created' => date('Y-m-d H:i:s')
                                     );
                                     $payment_id = $payment_class->authorize_ipn($payment_data);

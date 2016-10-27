@@ -76,6 +76,7 @@ class adesk_Smarty extends Smarty {
 			
 			if($detect->isMobile()){
 			$dashtheme = $admin99['default_mobdashboard'];
+			// $this->template_dir[] = $this->_adminPath . '/templates/	mobile/'.$dashtheme.'/';
 			$this->template_dir[] = $this->_adminPath . '/templates/'.$dashtheme.'/';
 			}
 			else {
@@ -118,6 +119,7 @@ class adesk_Smarty extends Smarty {
 				$this->compile_dir =
 				( isset($GLOBALS['customCachePath']) ? $GLOBALS['customCachePath'] : $this->_publicPath ) .
 				'/cache/' .
+				// ( $folder == 'global' ? 'public' : $folder.'/mobile/'.$dashtheme )
 				( $folder == 'global' ? 'public' : $folder.'/'.$dashtheme )
 			;
 			}

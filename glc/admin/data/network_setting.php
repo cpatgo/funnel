@@ -83,6 +83,10 @@ if(isset($_POST['submit']))
 	glc_update_option('aem_special_wp_membership', $_POST['aem_special_wp_membership']);
 	glc_update_option('aem_special_matrix_membership', $_POST['aem_special_matrix_membership']);
 
+	glc_update_option('glc_subscription_registration', $_POST['glc_subscription_registration']);
+	glc_update_option('glc_subscription_wp_membership', $_POST['glc_subscription_wp_membership']);
+	glc_update_option('glc_subscription_matrix_membership', $_POST['glc_subscription_matrix_membership']);
+
 	glc_update_option('sitebuilder_domain', $_POST['sitebuilder_domain']);
 
 	//Update setting in setting table
@@ -205,6 +209,10 @@ $aem_founder_id = glc_option('aem_founder_id');
 $aem_special_registration = glc_option('aem_special_registration');
 $aem_special_wp_membership = glc_option('aem_special_wp_membership');
 $aem_special_matrix_membership = glc_option('aem_special_matrix_membership');
+
+$glc_subscription_registration = glc_option('glc_subscription_registration');
+$glc_subscription_wp_membership = glc_option('glc_subscription_wp_membership');
+$glc_subscription_matrix_membership = glc_option('glc_subscription_matrix_membership');
 
 $sitebuilder_domain = glc_option('sitebuilder_domain');
 
@@ -367,6 +375,28 @@ $sitebuilder_domain = glc_option('sitebuilder_domain');
 		<td colspan="4"><B>Matrix Membership</B></td>
 		<td colspan="7">
 			<input type="text" name="aem_special_matrix_membership" value="<?=$aem_special_matrix_membership;?>" />
+		</td>
+	</tr>
+
+	<!-- SUBSCRIPTION REGISTRATION -->
+	<tr><td colspan="9">&nbsp;</td></tr>
+	<tr><td colspan="9"><b>SUBSCRIPTION REGISTRATION DETAILS</b></td></tr>
+	<tr>
+		<td colspan="4"><B>Registration Fee</B></td>
+		<td colspan="7">
+			<input type="text" name="glc_subscription_registration" value="<?=$glc_subscription_registration;?>" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><B>Wordpress Membership</B></td>
+		<td colspan="7">
+			<input type="text" name="glc_subscription_wp_membership" value="<?=$glc_subscription_wp_membership;?>" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><B>Matrix Membership</B></td>
+		<td colspan="7">
+			<input type="text" name="glc_subscription_matrix_membership" value="<?=$glc_subscription_matrix_membership;?>" />
 		</td>
 	</tr>
 
