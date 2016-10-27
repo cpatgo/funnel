@@ -314,7 +314,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                       'response' => 1,
                                       'responsetext' => $tresponseMessages[0]->getText(),
                                       'authcode' => $tresponseMessages[0]->getCode(),
-                                      'transactionid' => $tresponseMessages->getSubscriptionId(),
+                                      'transactionid' => $apiresponse->getSubscriptionId(),
                                       'avsresponse' => 0,
                                       'cvvresponse' => 0,
                                       'orderid' => $orderid,
