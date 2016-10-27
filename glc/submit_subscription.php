@@ -329,6 +329,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
             
                                 $spill = 0;
                                 $plan = $membership_details['id']-1;
+                                $membership_type = 1;
                                         
                                 if($plan == 1)
                                 {
