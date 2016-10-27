@@ -1,1 +1,288 @@
-Hello World!
+<!-- {if $hosted_down4 != 'nobody'}
+{"Due to your account status, you are unable to create any landing pages."|alang}
+<a href="desk.php">{"Return to the Dashboard."|alang}</a>
+{else} -->
+
+<!-- <h1 class="step_header_text text_center">Create New Campaign</h1> -->
+<div class="custom_campaign">
+<form method="POST" action="/aem/manage/functions/funnel_campaign.php" id="create-funnel-campaign">
+<input type="hidden" name="action" value="list_insert_post">
+	<!-- Progressbar -->
+	<div class="progressbar_wrapper">
+		<!-- <div class="progress_indicator_txt"><span></span></div> -->
+		<div id="step-progressbar" class="step-progressbar"></div>
+	</div>
+
+
+
+
+	<!-- Step 6 -->
+    <h3> {"Capture Page"|alang}</h3>
+    <section>
+        <div class="row">
+        	<div class="col-md-12">
+				<h1 class="step_header_text">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					{"Capture Page"|alang}
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="campaign_help">
+					<p class="lead text_center">
+						{"Choose from our library of amazing Capture page templates. Add your text copy and edit it the way you like,<br />or design your own page using our Drag and Drop Site Builder. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12" id="landing_page_container">
+			<div class="row select_landing_page_template">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group">
+						<div class="btn btn-default btn-lg" data-filter="*">All</div>
+						<div class="btn btn-default btn-lg" data-filter=".skin_care">Skin Care</div>
+						<div class="btn btn-default btn-lg" data-filter=".events">Events</div>
+						<div class="btn btn-default btn-lg" data-filter=".giveaways">Giveaways</div>
+						<div class="btn btn-default btn-lg" data-filter=".industry">Industry</div>
+						<div class="btn btn-default btn-lg" data-filter=".optin">Optin</div>
+						<div class="btn btn-default btn-lg" data-filter=".designown">Design Your Own</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-12">
+					<div id="radiobutton_container" class="accordion grid row">
+
+
+						<!-- <h3>Skin Care</h3> -->
+						<div class="accordion_group skin_care grid_item col-xs-4">
+							<!-- Skin Care / Product Trial -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Skin Care - Product Trial</span>
+								<img src="images/beauty-trial-500x580.jpg" class="img-thumbnail" alt="Skin care - Product Trial" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/62" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/b7f1b1a950" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- <h3>Event</h3> -->
+						<div class="accordion_group events grid_item col-xs-4">
+
+							<!-- Event / With Video -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Event - With Video</span>
+								<img src="images/500x580event-with-video.jpg" class="img-thumbnail" alt="Event - With Video" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/64" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/dd80da4f75" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+
+							<!-- Event / The Speakers -->
+							<!-- <div class="template_wrapper">
+								<span class="text_center template_title">Event - The Speakers</span>
+								<img src="images/500x580-event-speakers-yellow.jpg" class="img-thumbnail" alt="Event - With Video" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/65" class="btn btn-primary btn-choose sitebuildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/912a487f27" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div> -->
+						</div>
+
+						<!-- <h3>Giveaways</h3> -->
+						<div class="accordion_group giveaways grid_item col-xs-4">
+							<!-- Giveaways / Custom -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Giveaways - Custom</span>
+								<img src="images/500x580-custom.jpg" class="img-thumbnail" alt="Giveaways - Custom" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/66" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/affd224466" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_group giveaways grid_item col-xs-4">
+							<!-- Giveaways / Free App -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Giveaways - Free App</span>
+								<img src="images/500x580-free-app.jpg" class="img-thumbnail" alt="Giveaways - Free App" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/67" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/2e20f5b622" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+
+
+						
+
+						<!-- <h3>Industry</h3> -->
+						<div class="accordion_group industry grid_item col-xs-4">
+							<!-- Fitness -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Fitness</span>
+								<img src="images/Fitness-500x580.jpg" alt="InCruises" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/79" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/2076244f37" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+
+							<!-- Dental -->
+							<!-- <div class="template_wrapper">
+								<span class="text_center template_title">Dental</span>
+								<img src="images/500x580-dental.jpg" alt="InCruises" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/80" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/c804ea6462" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div> -->
+						</div>
+
+						<!-- <h3>Optin</h3> -->
+						<div class="accordion_group optin grid_item col-xs-4">
+							<!-- OPTIN -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Optin 1</span>
+								<img src="images/glc-optin2.jpg" alt="Optin 1" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/191" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/d8b144a344" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_group optin grid_item col-xs-4">
+							<div class="template_wrapper">
+								<span class="text_center template_title">Optin 2</span>
+								<img src="images/glc-optin3.jpg" alt="Optin 2" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/192" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/d5d7095d86" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_group optin grid_item col-xs-4">
+							<!-- OPTIN -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Optin 3</span>
+								<img src="images/580x500-trafficmade-simple.jpg" alt="Optin 3" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/265" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/c1a8380e36" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="accordion_group optin grid_item col-xs-4">
+							<!-- OPTIN -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Optin 4</span>
+								<img src="images/glc-optin5.jpg" alt="Optin 4" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/193" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/dc06dbc19e" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+							<!-- OPTIN -->
+						<div class="accordion_group optin grid_item col-xs-4">
+							<div class="template_wrapper">
+								<span class="text_center template_title">Optin 5</span>
+								<img src="images/glc-optin6.jpg" alt="Optin 5" class="img-thumbnail">
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/194" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								  	<a href="http://sitebuilder.glchub.com/site/8150856fb2" class="btn btn-demo" target="_blank">DEMO</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_group buildown grid_item col-xs-4 designown">
+							<!-- Design Your Own -->
+							<div class="template_wrapper">
+								<span class="text_center template_title">Design Your Own</span>
+								<img src="images/500x580-accesssitebuilder.jpg" class="img-thumbnail" alt="Skin care" />
+								<div class="template_buttons">
+								  	<a href="http://sitebuilder.glchub.com/sites/create/81" class="btn btn-primary btn-choose buildertemplate" target="_blank">CHOOSE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="landing-page-url-error"></div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+	<!-- Step 7 -->
+    <h3> {"Capture Page URL"|alang}</h3>
+    <section>
+        <div>
+			<br>
+        	<div class="row" >
+				<div class="col-md-12">
+					<h1 class="step_header_text">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						{"Capture Page URL"|alang}
+					</h1>
+				</div>
+
+		        <div class="col-md-10 col-md-offset-1">
+		        	<div class="campaign_help">
+		        		<p class="lead text_center">Now that you have your landing page built, you will need to insert your page URL that was generated. Just like you copied and pasted the form code, paste your landing page URL in the box.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+		        	</div>
+	        	</div>
+
+				<div class="col-md-12">
+			  		<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<input type="text" class="form-control input-lg" id="landing-page-url" name="landing-page-url" placeholder="starts with http:// or https://">
+							<div id="landing-page-url-error"></div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+        </div>
+    </section>
+
+    <!-- Step 12 -->
+    <h3> {"Done!"|alang}</h3>
+    <section>
+    	<div class="row">
+			<div class="col-md-12">
+				<div class="campaign_help">
+        			<p class="lead text_center">Congratulations! You just finished creating your landing page. You can visit your newly created landing page via the link below: <span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
+        		</div>
+        	</div>
+        </div>
+        <div class="done_step row">
+        	<div class="col-md-12">
+				<p class="lead" style="text-align:center;" id="funnel_link"></p>
+			</div>
+        </div>
+
+        <div class="sharer_wrapper">
+			<ul>
+				<li class="facebook"><a class="social" id="fb_share" href="" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+				<li class="twitter"><a class="social" id="twitter_share" href="" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+				<li class="gplus"><a class="social" id="gplus_share" href="" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
+				<li class="email"><a class="social" id="email_share" href="" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+			</ul>
+        </div>
+    </section>
+
+</form>
+</div>
+
+<!-- {/if} -->
