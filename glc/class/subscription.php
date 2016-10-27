@@ -109,7 +109,7 @@ if(!empty($username)):
 
         if ($response != null)
         {
-            if (($tresponse != null) && ($tresponse->getMessages()->getResultCode() == "Ok") )
+            if (($response != null) && ($response->getMessages()->getResultCode() == "Ok") )
             {
                 //Setting payment error to 0 will tell submit.php to register the user
                 $payment_error = 0;
@@ -118,7 +118,7 @@ if(!empty($username)):
             {
                 //If the payment process encountered an error, save the transaction to authorize_ipn table then return error
 
-                $errorMessages = $tresponse->getMessages()->getMessage();
+                $errorMessages = $response->getMessages()->getMessage();
                 $payment_data = array(
                     'user_id' => 0,
                     'cc_fname' => $payment_fname,
