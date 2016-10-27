@@ -127,7 +127,8 @@ jQuery(document).ready(function(){
           else{
             jQuery('.actions > ul > li:first-child a').attr('href', '#previous');
           }
-          jQuery('.done_for_you_campaign #step-progressbar').progressbar({value: 8.33333333334});
+
+          jQuery('.done_for_you_campaign #step-progressbar').progressbar({value: 33.333333336});
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
 
@@ -197,7 +198,7 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-          ctr = (1 + current) * 25;
+          ctr = (1 + current) * 33.333333336;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
