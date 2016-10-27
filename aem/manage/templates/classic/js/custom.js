@@ -1087,7 +1087,9 @@ jQuery(document).ready(function(){
 
             // console.log("onChanged - current: " + current + " - next: " + next);
 
-
+            if (current == 0) { // if current index is equals to 1st step
+                jQuery('.filter-button-group > div:first-child').click();
+            }
             if(current == 2 && next == 1) {
 
                 var method = $body.find('#select_list_method').val();
