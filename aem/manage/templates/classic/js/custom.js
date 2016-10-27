@@ -119,7 +119,7 @@ jQuery(document).ready(function(){
       // initialize
       onInit: function(event, current){
           jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
-          jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
+          // jQuery('.actions > ul > li:nth-child(2)').attr('style', 'display:none'); // hide continue button on 1st step.
           console.log('oninit: ' + current);
           if(current == 0) {
             jQuery('.actions > ul > li:first-child a').attr('href', 'desk.php?action=new_funnel_campaign');
@@ -136,7 +136,7 @@ jQuery(document).ready(function(){
 
           // $body.find('.progress_indicator_txt span').html('8%');
           // 
-          jQuery('.filter-button-group > div:first-child').click();
+          
 
       },
       onStepChanging: function (event, currentIndex, newIndex)
@@ -240,8 +240,8 @@ jQuery(document).ready(function(){
           //     }
           // }
 
-          if (current == 0) { 
-           
+          if (current == 1) { 
+              jQuery('.filter-button-group > div:first-child').click();
           }
           
 
