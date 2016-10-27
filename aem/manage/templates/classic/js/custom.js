@@ -1003,7 +1003,7 @@ jQuery(document).ready(function(){
         transitionEffectSpeed: "500",
         // customize Labels on action buttons
         labels: {
-            finish: "Finish",
+            finish: "Create New Campaign",
             next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
             previous: "Previous",
         },
@@ -1146,7 +1146,7 @@ jQuery(document).ready(function(){
         },
         onFinished: function (event, currentIndex)
         {
-            window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
+            window.location.href = "/aem/manage/desk.php?action=new_funnel_campaign";
         }
     });
 
