@@ -162,8 +162,8 @@
 		// 
 		// 
 		/* FORCE $mobile_browser == false to load default non-mobile browser template */
-		$mobile_browser == false;
-		$status = 'Desktop / full capability browser';
+		// $mobile_browser == false;
+		// $status = 'Desktop / full capability browser';
 		/* END */
 
 	  // if redirect (either the value of the mobile or desktop redirect depending on the value of $mobile_browser) is true redirect else we return the status of $mobile_browser
