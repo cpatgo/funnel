@@ -682,7 +682,8 @@ jQuery(document).ready(function(){
                   $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
                   $body.find('#email_share').attr('href', "mailto:?body="+result.link);
                   $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
-                  $body.find('.done_campaign_name').append( '" ' + jQuery('#landing-page-name').val() + ' "' );
+                  $body.find('.done_campaign_name').append( '"' + jQuery('#landing-page-name').val() + '"' );
+                  $body.find('.done_campaign_name_two').append( '"' + jQuery('#landing-page-name').val() + '"' );
               },
               error: function(errorThrown){
                   console.log(errorThrown);
@@ -1003,7 +1004,7 @@ jQuery(document).ready(function(){
         transitionEffectSpeed: "500",
         // customize Labels on action buttons
         labels: {
-            finish: "Finish",
+            finish: "Create New Campaign",
             next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
             previous: "Previous",
         },
@@ -1146,7 +1147,7 @@ jQuery(document).ready(function(){
         },
         onFinished: function (event, currentIndex)
         {
-            window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
+            window.location.href = "/aem/manage/desk.php?action=new_funnel_campaign";
         }
     });
 
