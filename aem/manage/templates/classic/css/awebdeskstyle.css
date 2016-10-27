@@ -1456,3 +1456,5 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .filter-button-group .btn {background:#666; color:#fff;}
 
 .avia-center-col.pricing-table{ background: #fff; }
+
+.done_campaign_name{ font-weight:bold; text-transform: capitalize; }
