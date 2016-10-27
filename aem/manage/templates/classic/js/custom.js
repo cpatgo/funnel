@@ -197,7 +197,7 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-          ctr = (1 + current) * 8.33333333336;
+          ctr = (1 + current) * 25;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
@@ -236,6 +236,12 @@ jQuery(document).ready(function(){
           //         jQuery('.actions > ul > li:nth-child(2) > a').click();
           //     }
           // }
+
+          if (current == 0) { 
+              jQuery('.filter-button-group > div:first-child').click();
+          }
+          
+
 
           // console.log(current);
           if (current == 6) { // if current index is equals to 4th step
@@ -1087,9 +1093,6 @@ jQuery(document).ready(function(){
 
             // console.log("onChanged - current: " + current + " - next: " + next);
 
-            if (current == 0) { // if current index is equals to 1st step
-                jQuery('.filter-button-group > div:first-child').click();
-            }
             if(current == 2 && next == 1) {
 
                 var method = $body.find('#select_list_method').val();
