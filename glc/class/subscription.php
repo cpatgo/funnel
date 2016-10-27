@@ -70,7 +70,7 @@ if(!empty($username)):
         $paymentSchedule->setTotalOccurrences("9999");
 
         $subscription->setPaymentSchedule($paymentSchedule);
-        $subscription->setAmount($membership_details['amount']);
+        $subscription->setAmount($membership_amount);
         
         $creditCard = new AnetAPI\CreditCardType();
         $creditCard->setCardNumber($ccnumber);
@@ -132,7 +132,7 @@ if(!empty($username)):
                     'orderid' => $orderid,
                     'type' => 'subscription',
                     'response_code' => 0,
-                    'amount' => $membership_details['amount'],
+                    'amount' => $membership_amount,
                     'payment_type' => 3,
                     'date_created' => date('Y-m-d H:i:s')
                 );
