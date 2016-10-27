@@ -13,8 +13,8 @@ jQuery(document).ready(function(){
 
 
   // DONE FOR YOU FUNNEL STARTS HERE
-  var form2 = jQuery("#create-sales-option-campaign").show();
-  form2.validate({
+  var form3 = jQuery("#create-sales-option-campaign").show();
+  form3.validate({
       errorPlacement: function errorPlacement(error, element) {
           if (element.attr("name") == "landing-page-name" )
               error.appendTo('#landing-page-name-error');
@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
           }
       }
   });
-  form2.steps({
+  form3.steps({
       headerTag: "h3",
       bodyTag: "section",
       transitionEffect: "slideLeft",
@@ -188,8 +188,8 @@ jQuery(document).ready(function(){
               aem_functions.update_form();
           }
 
-          form2.validate().settings.ignore = ":disabled,:hidden";
-          return form2.valid();
+          form3.validate().settings.ignore = ":disabled,:hidden";
+          return form3.valid();
       },
       onStepChanged: function (event, current, next) {
 
@@ -197,7 +197,7 @@ jQuery(document).ready(function(){
 
           jQuery('.actions > ul > li:first-child a').attr('href', '#previous'); //
 
-          ctr = (1 + current) * 8.333333333334;
+          ctr = (1 + current) * 4;
           console.log("changing: " + current);
           // Math.round(price / listprice * 100) / 100
           jQuery('#step-progressbar').progressbar({value: +ctr.toFixed(0) });
@@ -274,8 +274,8 @@ jQuery(document).ready(function(){
       onFinishing: function (event, currentIndex)
       {
           aem_functions.destroy_list_session();
-          form2.validate().settings.ignore = ":disabled";
-          return form2.valid();
+          form3.validate().settings.ignore = ":disabled";
+          return form3.valid();
       },
       onFinished: function (event, currentIndex)
       {
