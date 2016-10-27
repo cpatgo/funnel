@@ -13,6 +13,42 @@
 		<div id="step-progressbar" class="step-progressbar"></div>
 	</div>
 
+	<!-- Step 1 -->
+    <h3> {"Name Campaign"|alang}</h3>
+    <section>
+    	<div class="row">
+	        <div class="col-md-12">
+				<h1 class="step_header_text">
+					<i class="fa fa-line-chart" aria-hidden="true"></i>
+					{"Name Campaign"|alang}
+				</h1>
+
+				<div class="campaign_help">
+					<p class="lead text_center">
+					{"Hint: Your campaign name should be similar to your offer. "|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+					</p>
+				</div>
+				<div class="campaign_input form-group">
+					<div class="col-md-6 col-md-offset-3">
+						<input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name">
+						<div id="landing-page-name-error"></div>
+					</div>
+				</div>
+
+	        </div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+				<div class="campaign_input form-group">
+					<div class="col-md-6 col-md-offset-3">
+						<!-- <input type="text" class="form-control input-lg" value="" id="landing-page-name" name="landing-page-name" placeholder="i.e. CL offer" title="Your Campaign Name"> -->
+						<textarea class="form-control input-lg" id="landing-page-description" name="landing-page-description" placeholder="describe your campaign" rows="5"></textarea>
+						<div id="landing-page-description-error"></div>
+					</div>
+				</div>
+			</div>
+	    </div>
+    </section>
 
 
 
