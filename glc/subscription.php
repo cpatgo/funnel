@@ -296,7 +296,7 @@ if( isset($_COOKIE['referral']) ) {
 								<div class="row">
 									
 									<div class="inp" style="padding:0 30px;">
-										<h4 style="text-align: center;">Pay by Debit or Credit card. Click on one of the images below to choose your payment method.</h4>
+										<h4 style="text-align: center;">Pay byDon't miss out, join the GLC Affiliate Program right now and start earning Big Money. It's absolutely free to join. Check the box to become an Affiliate, you'll be glad you did. Debit or Credit card. Click on one of the images below to choose your payment method.</h4>
 										<br />
 										<div class="form-group">
 											<?php 
@@ -536,7 +536,7 @@ if( isset($_COOKIE['referral']) ) {
 											<th>Amount</th>
 										</tr>
 										<tr>
-											<td class="order_info_title">Onetime purchase of <strong>Pro Monthly Membership</strong></td>
+											<td class="order_info_title"><strong>Pro Monthly Membership</strong></td>
 											<td class="order_info_value order_info_price"> $ <?=$price?>.00</td>
 										</tr>
 									</tbody>
@@ -620,11 +620,9 @@ if( isset($_COOKIE['referral']) ) {
 					
 					<div class="sidebar_content">
 						<p class="txt">
-						<span class="product-name"><?=$membership?> Membership</span>
+						<span class="product-name">Pro Monthly Membership</span>
 						<br />
 						<span class="product-price"><strike>$499.00</strike> $<?=$price?>.00</span>
-						<br />
-						<span>for lifetime access to the GLC Library.</span>
 						</p>
 						<br />
 						<p class="img"><img src="img/membership-checkout.png" alt=""></p>
