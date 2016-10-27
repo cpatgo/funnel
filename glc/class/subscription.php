@@ -1,14 +1,8 @@
 <?php
-
-echo "SB1";
 require_once(dirname(dirname(__FILE__)) . "/authorize/vendor/autoload.php");
-echo "SB1";
 require_once(dirname(dirname(__FILE__)) . '/config.php');
-echo "SB1";
 use net\authorize\api\contract\v1 as AnetAPI;
-echo "SB1";
 use net\authorize\api\controller as AnetController;
-echo "SB1";
 
 $merchant_class = getInstance('Class_Merchant');
 
@@ -20,7 +14,7 @@ $environment = $default_environment[0]['option_value'];
 // die($environment);
 
 $default_merchant_settings = $merchant_class->get_selected_merchant_settings((int)$default_merchant[0]['option_value'], $default_environment[0]['option_value']);
-echo "SB1";
+
 $merchant_setting = array();
 foreach($default_merchant_settings as $setting) {
     $merchant_setting[$setting['setting_name']] = $setting['setting_value'];    
@@ -38,10 +32,8 @@ $authorize_key = $merchant_setting['authorize_key'];
 // die();
 define("AUTHORIZENET_LOG_FILE", "phplog");
 
-echo "1";
 if(!empty($username)):
 
-    echo "2";
     $merchant_class = getInstance('Class_Merchant');
     $user_class = getInstance("Class_User");
     $payment_class = getInstance("Class_Payment");
@@ -117,8 +109,6 @@ if(!empty($username)):
             $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);    
         }
 
-echo "5";
-die();
         if ($response != null)
         {
             $tresponse = $response->getTransactionResponse();
