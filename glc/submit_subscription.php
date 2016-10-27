@@ -251,7 +251,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 //Send email to enroller about referred user
                                 $mail_result = $mail->new_affiliate(array('username' => $username, 'membership' => $membership, 'email_address' => $email, 'enroller' => $real_parent_id));
 
-                                $result = array('result' => 'success', 'message' => sprintf('%s/glc/login.php?msg=User Registration Successfully Completed!<br>A welcome email will be sent to you once your account is active. Thank you.', GLC_URL));
+                                $result = array('result' => 'success', 'message' => sprintf('%s/glc/login.php?msg=User Registration Successfully Completed!', GLC_URL));
                                 die(json_encode($result)); 
                             else:
                                 $result = array('result' => 'error', 'message' => sprintf('There is a problem with your payment. Please contact administrator.')); 

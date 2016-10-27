@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once(dirname(dirname(__FILE__)) . "/authorize/vendor/autoload.php");
 require_once(dirname(dirname(__FILE__)) . '/config.php');
 use net\authorize\api\contract\v1 as AnetAPI;
