@@ -53,7 +53,7 @@ $admin99 = adesk_admin_get();
 			if($detect->isMobile()){
 			$dashtheme = $admin99['default_mobdashboard'];
 			 
-			$admin_template_htm = adesk_file_get(adesk_admin('templates/mobile/'.$dashtheme.'/main.tpl'));
+			$admin_template_htm = adesk_file_get(adesk_admin('templates/'.$dashtheme.'/main.tpl'));
 			}
 			else {
 			   $dashtheme = $admin99['default_dashboard'];

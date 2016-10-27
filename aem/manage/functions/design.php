@@ -316,7 +316,7 @@ function design_template_personalize(&$smarty, $admin, $panel = 'public') {
 	if($panel == 'admin'){
 	    if($detect->isMobile()) {
 		$dashtheme = $admin99['default_mobdashboard'];
-		$tplpath .= '/templates/mobile/'.$dashtheme.'/main.tpl';
+		$tplpath .= '/templates/'.$dashtheme.'/main.tpl';
 		} else {
 		$dashtheme = $admin99['default_dashboard'];
 		 $tplpath .= '/templates/'.$dashtheme.'/main.tpl';
