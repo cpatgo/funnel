@@ -128,13 +128,15 @@ jQuery(document).ready(function(){
             jQuery('.actions > ul > li:first-child a').attr('href', '#previous');
           }
 
-          jQuery('.done_for_you_campaign #step-progressbar').progressbar({value: 33.333333336});
+          jQuery('.sales_option_campaign #step-progressbar').progressbar({value: 33.333333336});
           // $body.find('#create-funnel-campaign-p-4 .actions > ul > li:last-child').hide();
           // console.log('currently in step # ' . current);
 
           jQuery('.steps ul li.disabled').hide();
 
           // $body.find('.progress_indicator_txt span').html('8%');
+          // 
+          jQuery('.filter-button-group > div:first-child').click();
 
       },
       onStepChanging: function (event, currentIndex, newIndex)
@@ -239,7 +241,7 @@ jQuery(document).ready(function(){
           // }
 
           if (current == 0) { 
-              jQuery('.filter-button-group > div:first-child').click();
+           
           }
           
 
