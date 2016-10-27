@@ -101,15 +101,15 @@ if(!empty($username)):
 
 
         if ($environment === 'live') {
-            $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);    
+            $apiresponse = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::PRODUCTION);    
         }
         else {
-            $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);    
+            $apiresponse = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);    
         }
 
-        if ($response != null)
+        if ($apiresponse != null)
         {
-            if (($response != null) && ($response->getMessages()->getResultCode() == "Ok") )
+            if (($apiresponse != null) && ($apiresponse->getMessages()->getResultCode() == "Ok") )
             {
                 //Setting payment error to 0 will tell submit.php to register the user
                 $payment_error = 0;
@@ -118,7 +118,7 @@ if(!empty($username)):
             {
                 //If the payment process encountered an error, save the transaction to authorize_ipn table then return error
 
-                $errorMessages = $response->getMessages()->getMessage();
+                $errorMessages = $apiresponse->getMessages()->getMessage();
                 $payment_data = array(
                     'user_id' => 0,
                     'cc_fname' => $payment_fname,

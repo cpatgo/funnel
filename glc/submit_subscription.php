@@ -203,9 +203,9 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                     die(json_encode($result));
                                 endif;
 
-                                if(($response != null) && ($response->getMessages()->getResultCode() == "Ok")):
+                                if(($apiresponse != null) && ($apiresponse->getMessages()->getResultCode() == "Ok")):
                                     $user_id = $response['message'];  
-                                    $tresponseMessages = $response->getMessages()->getMessage();
+                                    $tresponseMessages = $apiresponse->getMessages()->getMessage();
                                     $payment_data = array(
                                       'user_id' => sprintf('100%d', $user_id),
                                       'cc_fname' => $payment_fname,  
@@ -305,8 +305,8 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 $response = $registration->insert_user($userdata);
                                 $user_id = $response['message'];  
 
-                                if(($response != null) && ($response->getMessages()->getResultCode() == "Ok")):
-                                    $tresponseMessages = $response->getMessages()->getMessage();
+                                if(($apiresponse != null) && ($apiresponse->getMessages()->getResultCode() == "Ok")):
+                                    $tresponseMessages = $apiresponse->getMessages()->getMessage();
                                     $payment_data = array(
                                       'user_id' => sprintf('100%d', $user_id),
                                       'cc_fname' => $payment_fname,  
