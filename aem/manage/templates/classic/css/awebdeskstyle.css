@@ -1413,7 +1413,7 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
     padding: 40px 60px;
   }
 
-.optin-campaign ul li, .done-funnels ul li {
+.optin-campaign ul li, .done-funnels ul li, .sales-option ul li {
   text-align:left;
 }
 
