@@ -1393,15 +1393,15 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .sharer_wrapper ul li a:hover { color:white;}
 
 
-.btn-custom-campaign i, .btn-done-funnels i{
+.btn-custom-campaign i, .btn-done-funnels i, .btn-sales-option i{
   margin-right: 10px;
 }
 
-.btn-custom-campaign i:hover, .btn-done-funnels i:hover{
+.btn-custom-campaign i:hover, .btn-done-funnels i:hover, .btn-sales-option i:hover{
   color:#fff;
 }
 
-.btn-custom-campaign, .btn-done-funnels{
+.btn-custom-campaign, .btn-done-funnels, .btn-sales-option{
   width: 100%;
   margin-top: 20px;
 }
