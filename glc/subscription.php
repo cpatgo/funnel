@@ -296,7 +296,7 @@ if( isset($_COOKIE['referral']) ) {
 								<div class="row">
 									
 									<div class="inp" style="padding:0 30px;">
-										<h4 style="text-align: center;">Pay by eCheck, Debit or Credit card. Click on one of the images below to choose your payment method.</h4>
+										<h4 style="text-align: center;">Pay by Debit or Credit card. Click on one of the images below to choose your payment method.</h4>
 										<br />
 										<div class="form-group">
 											<?php 
@@ -536,7 +536,7 @@ if( isset($_COOKIE['referral']) ) {
 											<th>Amount</th>
 										</tr>
 										<tr>
-											<td class="order_info_title">Onetime purchase of <strong><?=$membership?> Membership</strong></td>
+											<td class="order_info_title">Onetime purchase of <strong>Pro Monthly Membership</strong></td>
 											<td class="order_info_value order_info_price"> $ <?=$price?>.00</td>
 										</tr>
 									</tbody>
@@ -557,18 +557,7 @@ if( isset($_COOKIE['referral']) ) {
 											</label>
 										</div>
 									</div>
-								</div>
-
-								<div class="form-group">
-									<div class="col-sm-12">
-									<div id="terms1_error_container" name="terms1_error_container"> </div>
-										<div class="checkbox">
-											<label>
-												<input id="acceptTerms-1" name="acceptTerms1" type="checkbox" /><?php $link = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']); ?>By checking this box you agree to joining our Affiliate Program & agree to our <a href="<?php echo $link?>/affiliatesterms/" target="_blank" >Affiliate Terms & Conditions</a>.
-											</label>
-										</div>
-									</div>
-								</div>		
+								</div>	
 				            
 				            	<p class="usDisclaimerText">Note: Please be advised that your bank may charge an "international fee" for your purchase. This is a fee that you are ultimately responsible for, so please contact your bank for further clarification about any additional fees for international transactions.</p>
 				            </div>

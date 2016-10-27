@@ -224,43 +224,25 @@ $(function(){
 		if ( $('#register-form').valid() ) {
 			$('#error-form-message').hide();
 
-			if( $("#acceptTerms-1").prop('checked') != true && affiliate_warning == 0){
-				// alert('error');
-				$('#affiliate-pop').modal({
-					fadeDuration: 100,
-					closeClass: 'icon-remove',
-					closeText: '<i class="fa fa-times-circle"></i>'
-				});
-				
-				affiliate_warning = 1;
+			$('.loader_processing').show();
+			$('#submit_order_btn').prop('disabled', true);
 
-				return false;
-				event.preventDefault();
-			} else {
-				$('.loader_processing').show();
-				$('#submit_order_btn').prop('disabled', true);
-
-				$.post('submit_subscription.php', $('#register-form').serialize(), function( data ) { 
-					// console.log('submitting form');
-					console.log(data);
-					if(data.result == 'error'){
-						
-						$('#error-form-message').show();
-						// $('#error-form-message').html('');
-						$('#error-form-message').html('Error: ' + data.message + '. Please contact our support at glccenter@outlook.com.');
-						// alert(data.message);
-						$('.loader_processing').hide();
-						$('#submit_order_btn').prop('disabled', false);
-					} else {
-						window.location.replace(data.message);
-					}
-					//alert( "Data Loaded: " + data );
-				}, 'json');
-			}
-
-			
-
-			
+			$.post('submit_subscription.php', $('#register-form').serialize(), function( data ) { 
+				// console.log('submitting form');
+				console.log(data);
+				if(data.result == 'error'){
+					
+					$('#error-form-message').show();
+					// $('#error-form-message').html('');
+					$('#error-form-message').html('Error: ' + data.message + '. Please contact our support at glccenter@outlook.com.');
+					// alert(data.message);
+					$('.loader_processing').hide();
+					$('#submit_order_btn').prop('disabled', false);
+				} else {
+					window.location.replace(data.message);
+				}
+				//alert( "Data Loaded: " + data );
+			}, 'json');
 		}
 		else{ 
 			$('#error-form-message').show();
@@ -375,20 +357,6 @@ $('#country').on('change', function() {
 			closeClass: 'icon-remove',
 			closeText: '<i class="fa fa-times-circle"></i>'
 		});
-		return false;
-	});
-
-
-
-	$('#acceptTerms-1').change(function(event) {
-		if ( !this.checked ) {
-			// modal popup
-			$('#affiliate-pop').modal({
-				fadeDuration: 100
-			})
-		}	
-		
-		event.preventDefault();
 		return false;
 	});
 
