@@ -1470,3 +1470,5 @@ p#funnel_link a {
     border-bottom: none;
     background: #444;
 }
+
+.campaign_wrapper .description p { margin: 20px auto; }
