@@ -677,7 +677,7 @@ jQuery(document).ready(function(){
               },
               dataType: 'json',
               success:function(result) {
-                  $body.find('#funnel_link').append('Your Campaign URL:<br /><a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+                  $body.find('#funnel_link').append('Campaign URL: <a href="'+result.link+'" target="_blank">'+result.link+'</a>');
                   $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
                   $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
                   $body.find('#email_share').attr('href', "mailto:?body="+result.link);
