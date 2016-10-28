@@ -152,7 +152,7 @@ jQuery(document).ready(function(){
           }
 
           var step4 = jQuery('input[name=landing-page-url]').val();
-          if(newIndex == 11 && typeof step4 !== 'undefined') {
+          if(newIndex == 2 && typeof step4 !== 'undefined') {
               var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
               if(ans) {
                   //Save campaign
