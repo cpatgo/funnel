@@ -977,9 +977,10 @@ label.acquisition, label.monetization, label.activation {
 
 .step_txt { font-weight: bold; font-size:18px; }
 
-#create-funnel-campaign input[type="checkbox"] {
+#create-funnel-campaign input[type="checkbox"], #create-premade-campaign input[type="checkbox"], #create-sales-option-campaign input[type="checkbox"]  {
     margin-right: 10px;
     transform: scale(1.6);
+    margin-top: 2px;
 }
 
 #create-funnel-campaign input[type="radio"] {
