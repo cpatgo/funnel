@@ -439,7 +439,7 @@ jQuery(document).ready(function(){
           // console.log(current);
           if (current == 6) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
+              // jQuery('.actions > ul > li:nth-child(2)').hide();
 
               // also load the template ID selected
               // loadTemplate();
@@ -450,7 +450,7 @@ jQuery(document).ready(function(){
 
           if (current == 8) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
+              // jQuery('.actions > ul > li:nth-child(2)').hide();
 
               // also load the template ID selected
               // loadTemplate();
@@ -460,7 +460,7 @@ jQuery(document).ready(function(){
 
           if (current == 10) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
+              // jQuery('.actions > ul > li:nth-child(2)').hide();
 
               // also load the template ID selected
               // loadTemplate();
