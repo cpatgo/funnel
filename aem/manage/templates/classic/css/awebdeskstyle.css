@@ -1471,4 +1471,5 @@ p#funnel_link a {
     background: #444;
 }
 
-.campaign_wrapper .description p { margin: 20px auto; }
+.description p { margin-bottom: 10px; }
+.campaign_wrapper .description p { padding: 5px 10px; }
