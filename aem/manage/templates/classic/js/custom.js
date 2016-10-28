@@ -435,7 +435,7 @@ jQuery(document).ready(function(){
           if (current == 5) { 
               jQuery('.filter-button-group > div:first-child').click();
           }
-
+/*
           // console.log(current);
           if (current == 6) { // if current index is equals to 4th step
               jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
@@ -466,7 +466,7 @@ jQuery(document).ready(function(){
               // loadTemplate();
               console.log("Loaded Thank You Template: " + sessionStorage.getItem('thankyou'));
               aem_functions.get_dfy_template_by_id( sessionStorage.getItem('thankyou') );
-          }
+          }*/
 
 
       },
