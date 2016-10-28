@@ -406,14 +406,14 @@ jQuery(document).ready(function(){
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
           }
 
-          if(current == 3 && next == 4) {
+          if(current == 2 && next == 3) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   jQuery('.actions > ul > li:nth-child(1) > a').click();
               }
           }
 
-          if(current == 3 && next == 2 ) {
+          if(current == 2 && next == 1 ) {
               var method = $body.find('#select_list_method').val();
               if(method == 'select_existing_list') {
                   $body.find('#list_company').val('n/a');
@@ -425,6 +425,15 @@ jQuery(document).ready(function(){
                   $body.find('#list_country').val('n/a');
                   jQuery('.actions > ul > li:nth-child(2) > a').click();
               }
+          }
+
+          if (current == 5) {
+            // jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+            // jQuery('.progressbar_wrapper').hide();
+          }
+
+          if (current == 5) { 
+              jQuery('.filter-button-group > div:first-child').click();
           }
 
           // console.log(current);
