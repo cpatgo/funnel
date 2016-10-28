@@ -111,7 +111,7 @@ jQuery(document).ready(function(){
       transitionEffectSpeed: "500",
       // customize Labels on action buttons
       labels: {
-          finish: "Finish",
+          finish: "Create New Campaign",
           next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
           previous: "Previous",
       },
@@ -219,64 +219,15 @@ jQuery(document).ready(function(){
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none');
           }
 
-          // if(current == 3 && next == 4) {
-          //     var method = $body.find('#select_list_method').val();
-          //     if(method == 'select_existing_list') {
-          //         jQuery('.actions > ul > li:nth-child(1) > a').click();
-          //     }
-          // }
-
-          // if(current == 3 && next == 2 ) {
-          //     var method = $body.find('#select_list_method').val();
-          //     if(method == 'select_existing_list') {
-          //         $body.find('#list_company').val('n/a');
-          //         $body.find('#list_address').val('n/a');
-          //         $body.find('#list_address2').val('n/a');
-          //         $body.find('#list_city').val('n/a');
-          //         $body.find('#list_state').val('n/a');
-          //         $body.find('#list_postal').val('n/a');
-          //         $body.find('#list_country').val('n/a');
-          //         jQuery('.actions > ul > li:nth-child(2) > a').click();
-          //     }
-          // }
-
           if (current == 1) { 
               jQuery('.filter-button-group > div:first-child').click();
           }
           
 
-
-          // console.log(current);
-          if (current == 6) { // if current index is equals to 4th step
-              jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
-
-              // also load the template ID selected
-              // loadTemplate();
-              console.log("Loaded Optin Template: " + sessionStorage.getItem('optin'));
-              var tmp = aem_functions.get_dfy_template_by_id(sessionStorage.getItem('optin'));
-              // console.log(tmp);
-          }
-
-          if (current == 8) { // if current index is equals to 4th step
-              jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
-
-              // also load the template ID selected
-              // loadTemplate();
-              console.log("Loaded Download Template: " + sessionStorage.getItem('download'));
-              aem_functions.get_dfy_template_by_id(sessionStorage.getItem('download'));
-          }
-
-          if (current == 10) { // if current index is equals to 4th step
-              jQuery('.actions > ul > li:nth-child(2)').attr('disabled', 'disabled');
-              jQuery('.actions > ul > li:nth-child(2)').hide();
-
-              // also load the template ID selected
-              // loadTemplate();
-              console.log("Loaded Thank You Template: " + sessionStorage.getItem('thankyou'));
-              aem_functions.get_dfy_template_by_id( sessionStorage.getItem('thankyou') );
-          }
+          if (current == 3) {
+              jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+              jQuery('.progressbar_wrapper').hide();
+            }
 
 
       },
@@ -288,7 +239,7 @@ jQuery(document).ready(function(){
       },
       onFinished: function (event, currentIndex)
       {
-          window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
+          window.location.href = "/aem/manage/desk.php?action=new_funnel_campaign";
       }
   });
 
