@@ -199,105 +199,6 @@
     </div>
     </section>
 
-  <!-- Step 4 -->
-    <h3> {"Name Form"|alang}</h3>
-    <section>
-        <div class="new_form_div">
-
-          <div class="row" >
-        <div class="col-md-12">
-          <h1 class="step_header_text">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            {"Name Form"|alang}
-          </h1>
-        </div>
-      </div>
-
-      <div class="row">
-            <div class="col-md-12">
-              <div class="campaign_help">
-                <p class="lead text_center">
-            {"You must create a form for your new Funnel."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-            </p>
-              </div>
-            </div>
-          </div>
-
-      <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-8 col-md-offset-2">
-            <div class="form-group">
-              <!-- <label for="">Form Name: </label> -->
-              <input type="text" class="form-control input-lg" id="form_name" name="form_name" title="Your Form Name Here">
-              <div id="form_name-error"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-        </div>
-    </section>
-
-  <!-- Step 5 -->
-    <h3> {"Form Options"|alang}</h3>
-    <section>
-        <div class="new_form_div">
-      <div class="row">
-        <div class="col-md-12">
-          <!-- <hr class="divider" /> -->
-          <h1 class="step_header_text">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            {"Form Options"|alang}
-          </h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="campaign_help">
-            <p class="lead text-center">Check the Subcriber field options you want to collect.<span class="ttip" ><i id="tooltip_step2" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="ask4emailField" id="ask4emailField" value="1" checked="checked" disabled="disabled"/> Email Address
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="ask4fname" id="ask4fname" value="1" /> First Name
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="ask4lname" id="ask4lname" value="1" /> Last Name
-            </label>
-          </div>
-          {foreach from=$optional_fields item=field}
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" name="fields[{$field.id}]" id="fields[{$field.id}]" value="{$field.id}" /> {$field.title}
-            </label>
-          </div>
-          {/foreach}
-        </div>
-      </div>
-
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <div class="campaign_help">
-            <p class="lead text-center">This is how you will keep track of each form for your page/site.</p>
-          </div>
-        </div>
-      </div> -->
-
-
-        </div>
-    </section>
-
   <!-- Step 6 -->
     <h3> {"Funnel Templates"|alang}</h3>
     <section>
@@ -313,7 +214,7 @@
       <div class="col-md-12">
         <div class="campaign_help">
           <p class="lead text_center">
-            {"Choose from any or our professionally design Optin page templates. Once you choose a template, you will be redirected to the Drag 'N' Drop Site Builder to customize it anyway you like."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+            {"Choose from any or our professionally design Funnel Templates. Once you choose a Funnel Theme, you will be able to edit the text within our Site Builder."|alang} <span class="ttip" ><i id="tooltip_name_campaign" title="Here's your help tooltip here." class="fa fa-question-circle-o" aria-hidden="true"></i></span>
           </p>
         </div>
       </div>
@@ -324,12 +225,7 @@
         <div class="col-md-12" style="margin-bottom:30px;">
           <div class="button-group filter-button-group">
             <div class="btn btn-default btn-lg" data-filter="*">All</div>
-            <div class="btn btn-default btn-lg" data-filter=".travel">Travel</div>
-            <!-- <div class="btn btn-default btn-lg" data-filter=".events">Events</div>
-            <div class="btn btn-default btn-lg" data-filter=".giveaways">Giveaways</div>
-            <div class="btn btn-default btn-lg" data-filter=".industry">Industry</div>
-            <div class="btn btn-default btn-lg" data-filter=".optin">Optin</div> -->
-            <div class="btn btn-default btn-lg" data-filter=".designown">Design Your Own</div>
+            <div class="btn btn-default btn-lg" data-filter=".giveaway">Giveaways</div>
           </div>
         </div>
 
@@ -338,10 +234,10 @@
           <div id="radiobutton_container" class="accordion grid row">
 
             <!-- <h3>Skin Care</h3> -->
-            <div class="accordion_group travel grid_item col-xs-4">
+            <div class="accordion_group giveaway grid_item col-xs-4">
               <!-- Skin Care / Product Trial -->
               <div class="template_wrapper">
-                <span class="text_center template_title">Travel</span>
+                <span class="text_center template_title">E-Book</span>
                 <img src="images/500x580-sales-funnel-money-optin.jpg" class="img-thumbnail" alt="text">
                 <div class="template_buttons">
                     <a role="menu-item" class="btn btn-primary btn-choose buildertemplate btn-dfy-choose" data-info="1,2,3">CHOOSE</a>
@@ -359,15 +255,15 @@
 
   <!-- Step 8 -->
     <h3> {"Customize Optin Page"|alang}</h3>
-    <section>
+      <section>
       <div class="row">
-        <div class="col-md-12">
-        <h1 class="step_header_text">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          {"Customize Optin Page"|alang}
-        </h1>
+      <div class="col-md-12">
+      <h1 class="step_header_text">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      {"Customize Optin Page"|alang}
+      </h1>
       </div>
-    </div>
+      </div>
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
@@ -386,34 +282,29 @@
     <!-- end 3 column div selector ends-->
 
     <!-- redirect_page container -->
-    <div class="row">
-      <div class="col-md-12">
-
-
+       <div class="row">
+          <div class="col-md-12">
             <div id="customize_page_design_optin" class="">
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="campaign_help">
-                      <p class="lead text_center">
-                      
-                      </p>
-                    </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="campaign_help">
+                    <p class="lead text_center">
+                    
+                    </p>
                   </div>
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group" style="text-align:center;">
-                      <a href="http://sitebuilder.glchub.com/sites/create/81" class="btn btn-primary btn-glc-scheme btn-lg buildertemplate accesssitebuilder" target="_blank">Continue to Site Builder</a>
-                    </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" style="text-align:center;">
+                    <a href="http://sitebuilder.glchub.com/sites/create/81" class="btn btn-primary btn-glc-scheme btn-lg buildertemplate accesssitebuilder" target="_blank">Continue to Site Builder</a>
                   </div>
                 </div>
-
+              </div>
             </div>
-
           </div>
-    </div>
+       </div>
     <!-- redirect_page container ends -->
     </section>
 
