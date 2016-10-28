@@ -615,15 +615,17 @@ jQuery(document).ready(function(){
       },
       save_sales_campaign    :   function() {
           var fields = jQuery('#create-sales-option-campaign').serialize();
+          console.log(fields);
           jQuery.ajax({
               method: "post",
               url: "../manage/functions/funnel_campaign.php",
               data: {
-                  'action': 'list_insert_post',
+                  'action': 'sales_insert_post',
                   'fields': fields
               },
               dataType: 'json',
               success:function(result) {
+                  console.log(result);
                   $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
                   $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
                   $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
