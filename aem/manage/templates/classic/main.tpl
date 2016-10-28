@@ -1,4 +1,5 @@
-<div class="row">
+<div class="">
+<!-- <div class="row"> -->
   <div class="col-md-2">
       <span class="top_logo"><img src="css/images/emarketer.png"></span>
   </div>
@@ -7,7 +8,8 @@
   </div>
 </div>
 
-<div class="row">
+<div class="">
+<!-- <div class="row"> -->
   <div class="col-md-12">
       %HEADERNAV%
   </div>
