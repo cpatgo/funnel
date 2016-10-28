@@ -1135,7 +1135,10 @@ jQuery(document).ready(function(){
             }
 
 
-
+            if (current == 11) {
+              jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+              jQuery('.progressbar_wrapper').hide();
+            }
             
 
         },
