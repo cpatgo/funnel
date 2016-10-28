@@ -1,0 +1,14 @@
+.ace_scroller {
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+.ace-twilight .ace_gutter {
+    background: #fff !important;
+    color: #333 !important;
+}
+
+.ace-twilight .ace_print-margin {
+    width: 0 !important;
+    background: #fff !important;
+}
