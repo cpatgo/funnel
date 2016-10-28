@@ -125,6 +125,10 @@
 
     "Video": [
         {"url":"elements/glc-event1.html","height":294, "thumbnail":"elements/images/thumbs/glc-event1.jpg"}
+    ],
+
+    "Webinar": [
+        {"url":"elements/glc-webinar.html","height":294, "thumbnail":"elements/images/thumbs/glc-webinar.jpg"}
     ]
 
     }
