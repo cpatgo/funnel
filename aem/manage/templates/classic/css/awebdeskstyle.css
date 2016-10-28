@@ -1458,3 +1458,8 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 .avia-center-col.pricing-table{ background: #fff; }
 
 .done_campaign_name{ font-weight:bold; text-transform: capitalize; }
+
+p#funnel_link a {
+    color: #337ab7;
+    font-weight: 400;
+}
