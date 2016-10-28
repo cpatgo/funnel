@@ -151,12 +151,12 @@
                 <?php if((bool)$has_template): ?>
                     <a href="#getLinkModal" id="getLink" data-toggle="modal" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
                         <i class="fui-upload"></i> 
-                        <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
+                        <span class="publish_btn"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                     </a>
                 <?php else: ?>
                     <a href="#getLinkModal2" data-toggle="modal" class="btn btn-inverse pull-right actionButtons slick" data-siteid="<?php echo $siteData['site']->sites_id;?>">
                         <i class="fui-upload"></i> 
-                        <span class="slide"><?php echo $this->lang->line('actionbuttons_publish')?></span>
+                        <span class="publish_btn"><?php echo $this->lang->line('actionbuttons_publish')?></span>
                         <i class="fui-alert text-danger">
                         </i>
                     </a>
