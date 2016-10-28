@@ -17,14 +17,17 @@
 	<link href="<?php echo base_url();?>css/spectrum.css" rel="stylesheet">
 	<link href="<?php echo base_url();?>css/chosen.css" rel="stylesheet">
 	<link href="<?php echo base_url();?>css/summernote.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>css/custom.css" rel="stylesheet">
 
 	<?php else: ?>
 
-	<link href="<?php echo base_url();?>css/build-main.min.css" rel="stylesheet">
+		<link href="<?php echo base_url();?>css/build-main.min.css" rel="stylesheet">
+			
+		<?php if( isset($builder) ):?>
+			<link href="<?php echo base_url();?>css/build-builder.min.css" rel="stylesheet">
+		<?php endif;?>
 		
-	<?php if( isset($builder) ):?>
-	<link href="<?php echo base_url();?>css/build-builder.min.css" rel="stylesheet">
-	<?php endif;?>
+		<link href="<?php echo base_url();?>css/custom.css" rel="stylesheet">
 
 	<?php endif;?>
 		
