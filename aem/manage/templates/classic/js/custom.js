@@ -155,11 +155,8 @@ jQuery(document).ready(function(){
           if(newIndex == 11 && typeof step4 !== 'undefined') {
               var ans = confirm("Are you sure you want to proceed? \nIf you click YES you won't be able to modify the details from the previous steps.");
               if(ans) {
-                  //Update Form (Thank You URL)
-                  aem_functions.update_form();
-
                   //Save campaign
-                  aem_functions.save_funnel_campaign();
+                  aem_functions.save_sales_campaign();
                   //Disable fields
                   $body.find('select').attr('disabled', true);
                   $body.find('input').attr('disabled', true);
@@ -167,28 +164,6 @@ jQuery(document).ready(function(){
               } else {
                   return false;
               }
-          }
-
-          //Save List
-          if(currentIndex == 2 && newIndex == 3) {
-              var method = $body.find('#select_list_method').val();
-              if(method == 'select_existing_list') {
-                  aem_functions.save_list_to_session();
-              } else if(method == 'create_new_list') {
-                  if($body.find('#list_name').val() != "" && $body.find('#subscriber_email').val() !== ""){
-                      aem_functions.add_new_list();
-                  }
-              }
-          }
-
-          //Save Form
-          if(currentIndex == 4 && newIndex == 5) {
-              aem_functions.add_new_form();
-          }
-
-          //Update Form (Redirect URL)
-          if(currentIndex == 8 && newIndex == 9) {
-              aem_functions.update_form();
           }
 
           form3.validate().settings.ignore = ":disabled,:hidden";
@@ -222,14 +197,11 @@ jQuery(document).ready(function(){
           if (current == 1) { 
               jQuery('.filter-button-group > div:first-child').click();
           }
-          
 
           if (current == 3) {
               jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
               jQuery('.progressbar_wrapper').hide();
-            }
-
-
+          }
       },
       onFinishing: function (event, currentIndex)
       {
@@ -619,6 +591,30 @@ jQuery(document).ready(function(){
       },
       save_funnel_campaign    :   function() {
           var fields = jQuery('#create-funnel-campaign').serialize();
+          jQuery.ajax({
+              method: "post",
+              url: "../manage/functions/funnel_campaign.php",
+              data: {
+                  'action': 'list_insert_post',
+                  'fields': fields
+              },
+              dataType: 'json',
+              success:function(result) {
+                  $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+                  $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
+                  $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
+                  $body.find('#email_share').attr('href', "mailto:?body="+result.link);
+                  $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
+                  $body.find('.done_campaign_name').append( '"' + jQuery('#landing-page-name').val() + '"' );
+                  $body.find('.done_campaign_name_two').append( '"' + jQuery('#landing-page-name').val() + '"' );
+              },
+              error: function(errorThrown){
+                  console.log(errorThrown);
+              }
+          });
+      },
+      save_sales_campaign    :   function() {
+          var fields = jQuery('#create-sales-option-campaign').serialize();
           jQuery.ajax({
               method: "post",
               url: "../manage/functions/funnel_campaign.php",
