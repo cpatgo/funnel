@@ -640,9 +640,11 @@ span.glc_gray {
   width: 100%;
   text-align:center;
   /*padding:10px 0px 0px 20px;*/
-  margin-bottom: -7px;
-  border-bottom: 6px solid #fff;
+  /*margin-bottom: -7px;*/
+  border-bottom: 4px solid #fff;
   /*box-shadow: 0px 4px 0px #d2d2d2;*/
+  background: #444;
+  padding-top: 5px;
 }
 
 
@@ -650,7 +652,7 @@ span.glc_gray {
 #submenu {
   /*margin: 15px 18px 0px;*/
   padding: 4px 0px 0px;
-  background: #444;
+  /*background: #444;*/
   text-align: center;
   /*border: 1px solid #ddd;*/
   vertical-align: middle;
@@ -1462,4 +1464,9 @@ a.hyperlink, a.hyperlink:visited, a.hyperlink:focus{ color: #2184be; }
 p#funnel_link a {
     color: #337ab7;
     font-weight: 400;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    background: #444;
 }
