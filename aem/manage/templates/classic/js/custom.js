@@ -394,7 +394,7 @@ jQuery(document).ready(function(){
       transitionEffectSpeed: "500",
       // customize Labels on action buttons
       labels: {
-          finish: "Finish",
+          finish: "Create New Campaign",
           next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
           previous: "Previous",
       },
@@ -677,11 +677,13 @@ jQuery(document).ready(function(){
               },
               dataType: 'json',
               success:function(result) {
-                  $body.find('#funnel_link').append('<a href="'+result.link+'" target="_blank">'+result.link+'</a>');
+                  $body.find('#funnel_link').append('Campaign URL: <a href="'+result.link+'" target="_blank">'+result.link+'</a>');
                   $body.find('#fb_share').attr('href', "https://www.facebook.com/sharer/sharer.php?u="+result.link);
                   $body.find('#twitter_share').attr('href', "https://twitter.com/home?status="+result.link);
                   $body.find('#email_share').attr('href', "mailto:?body="+result.link);
                   $body.find('#gplus_share').attr('href', "https://plus.google.com/share?url="+result.link);
+                  $body.find('.done_campaign_name').append( '"' + jQuery('#landing-page-name').val() + '"' );
+                  $body.find('.done_campaign_name_two').append( '"' + jQuery('#landing-page-name').val() + '"' );
               },
               error: function(errorThrown){
                   console.log(errorThrown);
@@ -1002,7 +1004,7 @@ jQuery(document).ready(function(){
         transitionEffectSpeed: "500",
         // customize Labels on action buttons
         labels: {
-            finish: "Finish",
+            finish: "Create New Campaign",
             next: 'Continue <i class="fa fa-arrow-right" aria-hidden="true"></i>',
             previous: "Previous",
         },
@@ -1094,7 +1096,7 @@ jQuery(document).ready(function(){
                 }
             }
 
-            // console.log("onChanged - current: " + current + " - next: " + next);
+            console.log("onChanged - current: " + current + " - next: " + next);
 
             if(current == 2 && next == 1) {
 
@@ -1133,7 +1135,10 @@ jQuery(document).ready(function(){
             }
 
 
-
+            if (current == 11) {
+              jQuery('.actions > ul > li:first-child').attr('style', 'display:none'); // hide previous button on 1st step.
+              jQuery('.progressbar_wrapper').hide();
+            }
             
 
         },
@@ -1145,7 +1150,7 @@ jQuery(document).ready(function(){
         },
         onFinished: function (event, currentIndex)
         {
-            window.location.href = "/aem/manage/desk.php?action=funnel_campaign";
+            window.location.href = "/aem/manage/desk.php?action=new_funnel_campaign";
         }
     });
 
