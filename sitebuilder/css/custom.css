@@ -12,3 +12,9 @@
     width: 0 !important;
     background: #fff !important;
 }
+
+span.publish_btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 5px;
+}
