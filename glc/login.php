@@ -20,7 +20,7 @@ if(isset($_REQUEST['msg']) && isset($_COOKIE['referral'])) setcookie('referral',
 if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	$pkg = $_REQUEST['pkg'];
 	$email = $_REQUEST['email'];
-	$free_message = sprintf('<p style="text-align:center;">User Registration Successfully Completed for %s Membership!<br /><br />Thank you for joining GLC! A confirmation email has been sent to %s.<br /><br />Please click on the Activation Link to activate your account.</p>', $pkg, $email);
+	$free_message = sprintf('<p style="text-align:center;">User Registration Successfully Completed for %s Membership!<br /><br />Thank you for joining 1 Minute Funnels! A confirmation email has been sent to %s.<br /><br />Please click on the Activation Link to activate your account.</p>', $pkg, $email);
 }
 
 ?>
@@ -29,7 +29,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLC | Login</title>
+<title>1 Minute Funnels | Login</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -197,7 +197,7 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 	<!-- <div class="text-center">
 		<h1 class="logo">
 			<a href="/">
-                <img src="<?php echo $site_url; ?>/wp-content/uploads/2016/06/glc-logoblk-250x50.png" alt="GLobal Learning Center" />
+                <img src="<?php echo $site_url; ?>/glc/images/logo2.png" alt="GLobal Learning Center" />
             </a>
 		</h1>
 	</div> -->
@@ -212,11 +212,11 @@ if( isset($_REQUEST['pkg']) && isset($_REQUEST['email']) ){
 			<div class="text-center">
 				<div class="logo">
 					<a href="/">
-		                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-200x100.png" alt="GLobal Learning Center" />
+		               <img src="<?php echo $site_url; ?>/glc/images/logo2.png" style="max-height: 100px;" alt="1 Minute Funnels" />
 		            </a>
 				</div>
 			</div>
-			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/choose-your-membership/" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
+			<div class="text-center" style="color:#fff;margin-top:10px;">Do not have an account? <a href="/glc/registration.php?t=free-trial" class="ulink" style="font-size: 16px;font-weight:bold; text-decoration:none;">Sign up</a></div>
 			<br /><br />
 			<?php echo ($error != '')?'<div class="alert alert-danger">'.$error.' </div>':""; ?>
 	<?php echo ($msg != '')?'<div class="alert alert-success">'.$msg.' </div>':""; ?>

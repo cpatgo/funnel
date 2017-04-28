@@ -19,12 +19,15 @@ class Widget_Data {
 
 	private static function clear_widgets() {
 		$sidebars = wp_get_sidebars_widgets();
-		$inactive = isset($sidebars['wp_inactive_widgets']) ? $sidebars['wp_inactive_widgets'] : array();
+		$inactive = isset($sidebars['wp_inactive_widgets']) && is_array( $sidebars['wp_inactive_widgets'] ) ? $sidebars['wp_inactive_widgets'] : array();
 
 		unset($sidebars['wp_inactive_widgets']);
 
 		foreach ( $sidebars as $sidebar => $widgets ) {
-			$inactive = array_merge($inactive, $widgets);
+			if( is_array( $widgets ) ){
+				$inactive = array_merge($inactive, $widgets);
+			}
+
 			$sidebars[$sidebar] = array();
 		}
 
@@ -281,7 +284,7 @@ class Widget_Data {
 
 			foreach ( $import_widgets as $import_widget ) :
 				//if the sidebar exists
-				if ( isset( $current_sidebars[$import_sidebar] ) ) :
+				if ( array_key_exists( $import_sidebar, $current_sidebars ) ) :
 					$title = trim( substr( $import_widget, 0, strrpos( $import_widget, '-' ) ) );
 					$index = trim( substr( $import_widget, strrpos( $import_widget, '-' ) + 1 ) );
 					$current_widget_data = get_option( 'widget_' . $title );
@@ -301,8 +304,8 @@ class Widget_Data {
 						$new_widgets[$title]['_multiwidget'] = $multiwidget;
 					} else {
 						$current_widget_data[$new_index] = $widget_data[$title][$index];
-						$current_multiwidget = $current_widget_data['_multiwidget'];
-						$new_multiwidget = isset($widget_data[$title]['_multiwidget']) ? $widget_data[$title]['_multiwidget'] : false;
+						$current_multiwidget = array_key_exists('_multiwidget', $current_widget_data) ? $current_widget_data['_multiwidget'] : false;
+						$new_multiwidget = array_key_exists('_multiwidget', $widget_data[$title]) ? $widget_data[$title]['_multiwidget'] : false;
 						$multiwidget = ($current_multiwidget != $new_multiwidget) ? $current_multiwidget : 1;
 						unset( $current_widget_data['_multiwidget'] );
 						$current_widget_data['_multiwidget'] = $multiwidget;

@@ -1,5 +1,3 @@
-
-
 // details for shipping and billing 
 // var name, address, city, state, zip, country phone, pay_type, cc_type, cc_last_digit;
 var name;
@@ -81,6 +79,9 @@ $(function(){
 		    	error.appendTo('#re_password_error_container');
 		    else if (element.attr("name") == "payment_l_name")
 		    	error.appendTo('#payment_l_name_error_container');
+                
+                   
+                
 		    else if (element.attr("name") == "payment_f_name")
 		    	error.appendTo('#payment_f_name_error_container');
 		    else if (element.attr("name") == "country")
@@ -146,7 +147,7 @@ $(function(){
                 }
             },
 			email: {
-				required: true,
+				required: true, 
                 remote: 
 				{
                     url: "inc_checkemail.php",
@@ -159,8 +160,13 @@ $(function(){
                             return $('#email').val();
                         }
                     }
-                }
+                } 
+                
             }, 
+           	confirm_email: {
+				required: true,
+                equalTo: "#email"
+            },
             password: {
             	required: true,
             	equalTo: "#re_password"
@@ -203,6 +209,9 @@ $(function(){
 			re_password: {
 				equalTo: "Your password don't match. Please re-enter your password."
 			},
+            confirm_email: {
+				equalTo: "Your email don't match. Please re-enter your email."
+			},
 			acceptTerms2: "You must accept our site Terms and Conditions.",
 			reg_by: "Please select one of the Payment Methods below to complete your purchase.",
 			phone: "Please input valid phone number. Valid phone number must contain the follow '( ) -' and numbers only.",
@@ -223,24 +232,11 @@ $(function(){
 		
 		if ( $('#register-form').valid() ) {
 			$('#error-form-message').hide();
-
-			if( $("#acceptTerms-1").prop('checked') != true && affiliate_warning == 0){
-				// alert('error');
-				$('#affiliate-pop').modal({
-					fadeDuration: 100,
-					closeClass: 'icon-remove',
-					closeText: '<i class="fa fa-times-circle"></i>'
-				});
-				
-				affiliate_warning = 1;
-
-				return false;
-				event.preventDefault();
-			} else {
+ 
 				$('.loader_processing').show();
 				$('#submit_order_btn').prop('disabled', true);
 
-				$.post('submit.php', $('#register-form').serialize(), function( data ) { 
+				$.post('/glc/submit.php', $('#register-form').serialize(), function( data ) { 
 					// console.log('submitting form');
 					// console.log(data);
 					if(data.result == 'error'){
@@ -256,7 +252,7 @@ $(function(){
 					}
 					//alert( "Data Loaded: " + data );
 				}, 'json');
-			}
+		 
 
 			
 
@@ -381,12 +377,7 @@ $('#country').on('change', function() {
 
 
 	$('#acceptTerms-1').change(function(event) {
-		if ( !this.checked ) {
-			// modal popup
-			$('#affiliate-pop').modal({
-				fadeDuration: 100
-			})
-		}	
+		 	
 		
 		event.preventDefault();
 		return false;
@@ -469,6 +460,7 @@ $('#country').on('change', function() {
 
 
 			$('.label_creditcard').attr('style', 'opacity:.3');
+            	$('.label_paypal').attr('style', 'opacity:.3');
 			$('.label_echeck').attr('style', 'opacity:1; background: white; padding: 20px; border-radius: 10px;border: 2px solid #337ab7;');
 
 			$('#payment_f_name').attr('placeholder', 'Account holder first name');
@@ -485,6 +477,33 @@ $('#country').on('change', function() {
 
 			
 
+		}
+       else if ( $('input[name="payment_method_radio_group"]:checked').hasClass('paypal') ) {
+
+			// enable company account name field
+		//	$('#company_account_name').removeAttr('disabled', 'disabled');
+			// $('#company_account_name').prop('disabled', 'false');
+		//	$('.company_account_name_wrapper_div').show();
+		 
+
+			$('.label_creditcard').attr('style', 'opacity:.3');
+  	        $('.label_echeck').attr('style', 'opacity:.3');
+			$('.label_paypal').attr('style', 'opacity:1; background: white; padding: 20px; border-radius: 10px;border: 2px solid #337ab7;');
+
+			$('#payment_f_name').attr('placeholder', 'Account holder first name');
+			$('#payment_l_name').attr('placeholder', 'Account holder last name');
+
+			$('label_paypal').css('.payment_method_label:hover');
+
+			$('#cc_payment_form').hide();
+			$('#echeck_payment_form').show();
+
+			$('#hidden_payment_type').attr('value', 'paypal');
+			$('#pay_method').attr('value', 'paypal');
+			$('#reg_by').attr('value', 'paypal');
+
+			
+
 		} 
 		else if ( $('input[name="payment_method_radio_group"]:checked').hasClass('creditcard') ) {
 			// disable company account name field
@@ -498,7 +517,7 @@ $('#country').on('change', function() {
 			else{
 				$('.label_echeck').attr('style', 'opacity:.3');
 			}
-
+            $('.label_paypal').attr('style', 'opacity:.3');
 			$('.label_creditcard').attr('style', 'opacity:1; background: white; padding: 20px; border-radius: 10px;border: 2px solid #337ab7;');
 
 			$('#payment_f_name').attr('placeholder', 'First name on card');
@@ -606,4 +625,25 @@ function display_payment_selector() {
 
 		$('.echeck_radiobtn').click();
 	}
+}
+
+
+function register_with_fb(fname,lname,email,id)
+{
+	$.post('/glc/submit.php', {'acceptTerms2': "on","confirm-email": email,"email": email,"f_name": fname,"l_name": lname,"membership": "Free","original_membership": "Free","password": id,"price": "0","q": "q","re_password": id,"reg_by": "Free"}, function( data ) { 
+		// console.log('submitting form');
+		// console.log(data);
+		if(data.result == 'error'){
+			
+			$('#error-form-message').show();
+			// $('#error-form-message').html('');
+			$('#error-form-message').html('Error: ' + data.message + '. Please contact our support at glccenter@outlook.com.');
+			// alert(data.message);
+			//$('.loader_processing').hide();
+			$('#submit_order_btn').prop('disabled', false);
+		} else {
+			window.location.replace(data.message);
+		}
+		//alert( "Data Loaded: " + data );
+	}, 'json');
 }

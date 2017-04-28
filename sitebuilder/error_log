@@ -176,3 +176,7 @@
 [14-Oct-2016 16:14:15 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
 [14-Oct-2016 16:14:44 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
 [14-Oct-2016 16:15:12 America/New_York] PHP Parse error:  syntax error, unexpected '"' in /home/wwwglchub/public_html/sitebuilder/test.php on line 7
+[25-Oct-2016 15:05:58 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140
+[25-Oct-2016 15:06:11 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140
+[25-Oct-2016 15:07:12 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140
+[25-Oct-2016 15:07:18 America/New_York] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ci_sessions) in /home/wwwglchub/public_html/sitebuilder/ci_3.0.5/libraries/Session/Session.php on line 140

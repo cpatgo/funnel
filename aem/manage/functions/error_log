@@ -217,3 +217,5 @@
 [12-Aug-2016 16:03:03 America/New_York] PHP Fatal error:  Cannot redeclare list_insert_post() (previously declared in /home/identifz/public_html/glcv2/aem/manage/functions/landingpage.php:13) in /home/identifz/public_html/glcv2/aem/manage/functions/list.php on line 501
 [12-Aug-2016 16:03:50 America/New_York] PHP Fatal error:  Call to undefined function adesk_admin() in /home/identifz/public_html/glcv2/aem/awebdesk/functions/manage.php on line 10
 [16-Aug-2016 13:03:44 America/New_York] PHP Parse error:  syntax error, unexpected '$fields' (T_VARIABLE), expecting ')' in /home/identifz/public_html/glcv2/aem/manage/functions/funnel_campaign.php on line 17
+[28-Oct-2016 14:36:36 America/New_York] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/wwwglchub/public_html/aem/manage/functions/funnel_campaign.php on line 30
+[28-Oct-2016 15:07:05 America/New_York] PHP Parse error:  syntax error, unexpected 'print_r' (T_STRING), expecting ',' or ';' in /home/wwwglchub/public_html/aem/manage/functions/funnel_campaign.php on line 30

@@ -44,12 +44,13 @@ function wpas_uninstall() {
 	$options = maybe_unserialize( get_option( 'wpas_options' ) );
 
 	/* Make sure that the user wants to remove all the data. */
-	if ( isset( $options['delete_data'] ) || '1' === $options['delete_data'] ) {
+	if ( isset( $options['delete_data'] ) && '1' === $options['delete_data'] ) {
 
 		/* Remove all plugin options. */
 		delete_option( 'wpas_options' );
 		delete_option( 'wpas_db_version' );
 		delete_option( 'wpas_version' );
+		delete_option( 'wpas_dismiss_free_addon_page' );
 
 		/* Delete the plugin pages.	 */
 		wp_delete_post( intval( $options['ticket_submit'] ), true );

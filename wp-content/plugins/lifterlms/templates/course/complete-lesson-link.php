@@ -1,68 +1,123 @@
 <?php
 /**
- * @author 		codeBOX
- * @package 	lifterLMS/Templates
+ * Lesson Progression actions
+ * Mark Complete & Mark Incomplete buttons
+ * Take Quiz Button when quiz attached
+ * @since    1.0.0
+ * @version  3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-global $post, $lesson;
+global $post;
 
-if ( ! $lesson ) {
+$lesson = new LLMS_Lesson( $post );
 
-	$lesson = new LLMS_Lesson( $post->ID );
-
+if ( ! llms_is_user_enrolled( get_current_user_id(), $lesson->get( 'parent_course' ) ) ) {
+	return;
 }
-if ( is_user_logged_in() && llms_is_user_enrolled( get_current_user_id(), $lesson->parent_course ) ) {
-	$user = new LLMS_Person;
-	$user_postmetas = $user->get_user_postmeta_data( get_current_user_id(), $lesson->id );
 
-	//get associated quiz
-	$associated_quiz = get_post_meta( $post->ID, '_llms_assigned_quiz', true );
-	?>
+$student = new LLMS_Student( get_current_user_id() );
+$quiz_id = $lesson->get( 'assigned_quiz' );
+?>
 
-	<div class="clear"></div>
-	<div class="llms-lesson-button-wrapper">
-		<?php
-		if ( isset( $user_postmetas['_is_complete'] ) ) {
-			if ( 'yes' === $user_postmetas['_is_complete']->meta_value ) {
+<div class="clear"></div>
+<div class="llms-lesson-button-wrapper">
 
-				echo __( 'Lesson Complete', 'lifterlms' );
-			}
+	<?php if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) : ?>
 
-		}
+		<?php if ( ! $quiz_id ) : ?>
 
-		if ( ! isset( $user_postmetas['_is_complete'] ) && ! $associated_quiz ) {
+			<?php echo apply_filters( 'llms_lesson_complete_text', __( 'Lesson Complete', 'lifterlms' ) ); ?>
+			<?php do_action( 'llms_after_lesson_complete_text', $lesson ); ?>
 
-		?>
-		<form method="POST" action="" name="mark_complete" enctype="multipart/form-data">
-		 	<?php do_action( 'lifterlms_before_mark_complete_lesson' ); ?>
+			<?php if ( 'yes' === get_option( 'lifterlms_retake_lessons', 'no' ) || apply_filters( 'lifterlms_retake_lesson_' . $lesson->get( 'parent_course' ), false ) ) : ?>
 
-		 	<input type="hidden" name="mark-complete" value="<?php echo esc_attr( $post->ID ); ?>" />
+				<form action="" class="llms-incomplete-lesson-form" method="POST" name="mark_incomplete">
 
-		 	<input type="submit" class="button" name="mark_complete" value="<?php echo $lesson->single_mark_complete_text(); ?>" />
-		 	<input type="hidden" name="action" value="mark_complete" />
+					<?php do_action( 'lifterlms_before_mark_incomplete_lesson' ); ?>
 
-		 	<?php wp_nonce_field( 'mark_complete' ); ?>
-			<?php do_action( 'lifterlms_after_mark_complete_lesson' ); ?>
-		</form>
+					<input type="hidden" name="mark-incomplete" value="<?php echo esc_attr( $lesson->get( 'id' ) ); ?>" />
+					<input type="hidden" name="action" value="mark_incomplete" />
+					<?php wp_nonce_field( 'mark_incomplete' ); ?>
 
-		<?php }
+					<?php llms_form_field( array(
+						'columns' => 12,
+						'classes' => 'llms-button-secondary auto button',
+						'id' => 'llms_mark_incomplete',
+						'value' => apply_filters( 'lifterlms_mark_lesson_incomplete_button_text', __( 'Mark Incomplete', 'lifterlms' ), $lesson ),
+						'last_column' => true,
+						'name' => 'mark_incomplete',
+						'required' => false,
+						'type'  => 'submit',
+					) ); ?>
 
-		if ($associated_quiz) {
-		?>
+					<?php do_action( 'lifterlms_after_mark_incomplete_lesson' ); ?>
 
-		<form method="POST" action="" name="take_quiz" enctype="multipart/form-data">
+				</form>
 
-		 	<input type="hidden" name="associated_lesson" value="<?php echo esc_attr( $post->ID ); ?>" />
-		 	<input type="hidden" name="quiz_id" value="<?php echo esc_attr( $associated_quiz ); ?>" />
-		 	<input type="submit" class="button" name="take_quiz" value="<?php _e( 'Take Quiz', 'lifterlms' ); ?>" />
-		 	<input type="hidden" name="action" value="take_quiz" />
+			<?php endif; ?>
+
+		<?php endif; ?>
+
+	<?php else : ?>
+
+		<?php if ( ! $quiz_id ) : ?>
+
+			<form action="" class="llms-complete-lesson-form" method="POST" name="mark_complete">
+
+				<?php do_action( 'lifterlms_before_mark_complete_lesson' ); ?>
+
+				<input type="hidden" name="mark-complete" value="<?php echo esc_attr( $lesson->get( 'id' ) ); ?>" />
+				<input type="hidden" name="action" value="mark_complete" />
+				<?php wp_nonce_field( 'mark_complete' ); ?>
+
+				<?php llms_form_field( array(
+					'columns' => 12,
+					'classes' => 'llms-button-primary auto button',
+					'id' => 'llms_mark_complete',
+					'value' => apply_filters( 'lifterlms_mark_lesson_complete_button_text', __( 'Mark Complete', 'lifterlms' ), $lesson ),
+					'last_column' => true,
+					'name' => 'mark_complete',
+					'required' => false,
+					'type'  => 'submit',
+				) ); ?>
+
+				<?php do_action( 'lifterlms_after_mark_complete_lesson' ); ?>
+
+			</form>
+
+		<?php endif; ?>
+
+	<?php endif; ?>
+
+	<?php if ( $quiz_id ) : ?>
+
+		<form action="" class="llms-start-quiz-form" method="POST" name="take_quiz">
+
+			<?php do_action( 'llms_before_start_quiz_button' ); ?>
+
+		 	<input type="hidden" name="associated_lesson" value="<?php echo esc_attr( $lesson->get( 'id' ) ); ?>">
+		 	<input type="hidden" name="quiz_id" value="<?php echo esc_attr( $quiz_id ); ?>">
+		 	<input type="hidden" name="action" value="take_quiz">
 
 		 	<?php wp_nonce_field( 'take_quiz' ); ?>
+
+			<?php llms_form_field( array(
+				'columns' => 12,
+				'classes' => 'llms-button-action auto button',
+				'id' => 'llms_start_quiz',
+				'value' => apply_filters( 'lifterlms_start_quiz_button_text', __( 'Take Quiz', 'lifterlms' ), $quiz_id, $lesson ),
+				'last_column' => true,
+				'name' => 'take_quiz',
+				'required' => false,
+				'type'  => 'submit',
+			) ); ?>
+
+			<?php do_action( 'llms_after_start_quiz_button' ); ?>
+
 		</form>
 
-		<?php } ?>
+	<?php endif; ?>
 
-	</div>
-<?php } ?>
+</div>

@@ -14,7 +14,7 @@ if(!empty($user))
     $user = $user[0];
     //If user is free and account is not yet activated, show error
     if($user['activate_date'] === '0000-00-00' && $user['type'] === 'F'):
-        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=3";</script>', GLC_URL);
+        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=3";</script>', 'http://1min.identifz.com');
         die();
     endif;
 
@@ -35,7 +35,7 @@ if(!empty($user))
     $user = wp_signon( $creds, false );
 
     if(is_wp_error($user)):
-        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=1";</script>', GLC_URL);
+        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=1";</script>', 'http://1min.identifz.com');
     endif;
     wp_set_current_user($user->ID);
     
@@ -64,16 +64,16 @@ if(!empty($user))
     setcookie('dennisn_user_email', $_SESSION['dennisn_user_email'], time() + (86400 * 30), '/', sprintf('.%s', $_SERVER['HTTP_HOST']), false);
     setcookie('dennisn_usertoken', $token, time() + (86400 * 30), '/', sprintf('.%s', $_SERVER['HTTP_HOST']), false);
 
-    printf('<script type="text/javascript">window.location="%s/myhub/";</script>', GLC_URL);
+    printf('<script type="text/javascript">window.location="%s/myhub/";</script>', 'http://1min.identifz.com');
 }
 else
 {   
     //This time check temp users who aren't paid yet
     $user = $user_class->temp_user_login_check($_REQUEST['username'], $_REQUEST['password'], 0);
     if(!empty($user)):
-        printf('<script type="text/javascript">window.location="%s/glc/index_customer.php";</script>', GLC_URL);
+        printf('<script type="text/javascript">window.location="%s/glc/index_customer.php";</script>', 'http://1min.identifz.com');
     else:
-        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=1";</script>', GLC_URL);
+        printf('<script type="text/javascript">window.location="%s/glc/login.php?err=1";</script>', 'http://1min.identifz.com');
     endif;
 }
 ?>

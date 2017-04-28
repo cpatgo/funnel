@@ -4,7 +4,7 @@ session_start();
 $user_class = getInstance('Class_User');
 $income_class = getInstance('Class_Income');
 $check_user = $user_class->check_user($_SESSION['dennisn_user_id'], $_SESSION['dennisn_username']);
-if(empty($check_user)) printf('<script type="text/javascript">window.location="%s/myhub";</script>', GLC_URL);
+if(empty($check_user)) printf('<script type="text/javascript">window.location="%s/glc/";</script>', GLC_URL);
 
 $val = $_REQUEST['page'];
 

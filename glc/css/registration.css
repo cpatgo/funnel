@@ -34,7 +34,7 @@ span.required{color: red;}
 }
 
 .step .content{
-	padding:20px 5%;
+	padding:20px 5% 0;
 }
 
 .step .content .inp {
@@ -65,9 +65,9 @@ nav { color: #fff; }
 	font-size: 15px;
 	color: #4a4a4a;
 	padding: 10px 20px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 }
 .step .content .inp input.disabled_input,
 .step .content .inp select.disabled_input
@@ -117,9 +117,9 @@ nav { color: #fff; }
     font-size: 15px;
     color: #909090;
     padding: 10px 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -144,7 +144,7 @@ nav { color: #fff; }
 
 .order_information{ background: #eae9e9; padding: 15px;}
 
-.terms_and_conditions_wrapper { padding-top:20px; }
+.terms_and_conditions_wrapper { padding: 0; }
 .terms_and_conditions_wrapper h4 { text-align: left; }
 
 .terms_and_conditions{
@@ -156,7 +156,7 @@ nav { color: #fff; }
     text-align: left !important;
     border: 1px solid #EAEAE9;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 2px;
     color: #333;
 }
 
@@ -187,9 +187,9 @@ p.usDisclaimerText {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border-radius: 4px;
+    border-radius: 2px;
     color: #fff;
-    background-color: #2895f1;
+    background-color: #258dcd;
     border-color: #2e6da4;
     font-size: 20px;
     font-weight: 400;
@@ -356,7 +356,7 @@ p.txt { text-align:center; line-height:1.8em; }
 
 .inp input[name="payment_method_radio_group"], .step_2, .step_3, .finish, .payment_selector_form, .company_account_name_wrapper_div { display: none; }
 
-.payment_method_label:hover{background: white; padding: 20px; border-radius: 10px; border: 2px solid #337ab7; }
+.payment_method_label:hover{background: white; padding: 20px; border-radius: 2px; border: 2px solid #337ab7; }
 
 .payment_method_label{ padding: 20px; }
 
@@ -373,10 +373,10 @@ p.txt { text-align:center; line-height:1.8em; }
     text-indent: 0;
     background: none;
     /* border: 2px solid #fff; */
-    /* -webkit-border-radius: 26px; */
-    -moz-border-radius: 26px;
-    -o-border-radius: 26px;
-    -ms-border-radius: 26px;
+    /* -webkit-border-radius: 2px; */
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
     -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     /* -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5); */
     /* box-shadow: 1px 1px 5px rgba(0,0,0,0.5); */

@@ -149,7 +149,7 @@ Example response:
 
 // By default, this sample code is designed to get the result from your
 // server (where AwebDesk Email Marketing is installed) and to print out the result
-$url    = 'http://glchub.com/aem';
+$url    = 'http://1min.identifz.com/aem';
 
 
 $params = array(

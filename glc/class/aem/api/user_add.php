@@ -52,7 +52,7 @@ Example response:
 // server (where AwebDesk Email Marketing is installed) and to print out the result
 require_once(dirname(dirname(dirname(dirname(__FILE__)))).'/config.php');
 
-$url    = sprintf('%s/aem', GLC_URL);
+$url    = sprintf('%s aem', GLC_URL);
 
 
 $params = array(

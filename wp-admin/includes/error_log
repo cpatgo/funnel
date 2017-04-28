@@ -1,0 +1,1 @@
+[31-Dec-2016 15:08:46 America/New_York] PHP Fatal error:  Class 'WP_Filesystem_Base' not found in /home/wwwglchub/public_html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 17

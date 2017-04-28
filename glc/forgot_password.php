@@ -28,7 +28,7 @@ switch ($msg) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLC HUB | Forgot Password</title>
+<title>1 Minute Funnels | Forgot Password</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
@@ -199,12 +199,12 @@ div.product-chooser{
 		<div class="text-center">
 			<div class="logo">
 				<a href="/">
-	                <img src="<?php echo $site_url; ?>/glc/images/glchublogo-120x86.png" alt="GLC HUB" />
+	               <img src="<?php echo $site_url; ?>/wp-content/uploads/2017/03/1Minute-Logo-1.png" style="max-height: 100px;" alt="1 Minute Funnels" />
 	            </a>
 			</div>
 		</div>
 		<!-- <div class="text-center" style="margin-top:10px;">Already have an account? <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink">Click here to Login.</a> or <a href="/choose-your-membership/" class="ulink">Register.</a> -->
-		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/choose-your-membership/" class="ulink" style="text-decoration:none;">Join Now</a>
+		<div class="text-center" style="margin-top:10px;">Please <a href="<?php printf('%s/glc/login.php', $site_url) ?>" class="ulink" style="text-decoration:none;">Login</a> or <a href="/glc/registration.php?t=free-trial" class="ulink" style="text-decoration:none;">Join Now</a>
 		</div>
 
 		<fieldset>

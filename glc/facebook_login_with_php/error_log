@@ -1,0 +1,29 @@
+[06-Apr-2017 10:35:08 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:35:12 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:35:44 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:35:46 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:35:52 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:11 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:11 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:14 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:18 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:39 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:40 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:43 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:52 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:37:56 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:38:02 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:38:50 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:40:09 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:40:09 America/New_York] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home/identifz/public_html/1min/glc/facebook_login_with_php/inc/base_facebook.php on line 1249
+[06-Apr-2017 10:40:12 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:40:12 America/New_York] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home/identifz/public_html/1min/glc/facebook_login_with_php/inc/base_facebook.php on line 1249
+[06-Apr-2017 10:40:15 America/New_York] CSRF state token does not match one provided.
+[06-Apr-2017 10:40:15 America/New_York] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home/identifz/public_html/1min/glc/facebook_login_with_php/inc/base_facebook.php on line 1249
+[06-Apr-2017 10:40:27 America/New_York] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home/identifz/public_html/1min/glc/facebook_login_with_php/inc/base_facebook.php on line 1249
+[06-Apr-2017 10:40:48 America/New_York] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home/identifz/public_html/1min/glc/facebook_login_with_php/inc/base_facebook.php on line 1249

@@ -124,16 +124,18 @@ aside.sidebar > section.widget{
     background: transparent;
     font-size: 15px;
 }
+/*
 #header_meta {
-    background: #1f2329;
+    background: #ffffff;
     box-shadow: none;
     border-bottom: 1px solid rgba(255,255,255,0.25);
 }
+*/
 .main_menu ul:first-child > li > a, .sub_menu > ul > li > a,  .logo img {
     padding-top: 0px;
 }
 
-.main_color h3 { color: #1f2329; font-weight: 600; }
+.main_color h3 { color: #333333; font-weight: 600; }
 
 .avia_button_box .avia-color-blue {
     background-color: #268dcd !important;
@@ -153,7 +155,7 @@ aside.sidebar > section.widget{
 .main_color .toggler:hover {text-decoration: underline;}
 
 #footer .btn-plans-and-pricing {
-    background: #e97e00;
+    background: #258dcd;
 }
 
 #footer .btn-logout{
@@ -161,7 +163,7 @@ aside.sidebar > section.widget{
 }
 
 #footer .btn-login{
-    background: #268dcd;
+    background: #858585;
 }
 
 #mobile-advanced li a span.avia-menu-text { color:#268dcd; margin-left: 10px; }
@@ -207,7 +209,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 
 
-#header_meta .container { min-height:75px }
+#header_meta .container { min-height:70px }
 
 .sub-menu{ top: 20px !important; }
 
@@ -295,11 +297,8 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 }
 
 .logo img {
-    padding: 10px 0 0 0;
-    padding-top: 12px;
     width: 100%;
-     /* padding-left: 50px;
-  	padding: 21px 0 0 0;*/
+    padding: 5px 0 0 0;
     display: block;
     width: auto;
     height: auto;
@@ -308,8 +307,7 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
     position: relative;
     z-index: 2;
     height: 100%;
-    height: auto;
-    -webkit-transition: opacity 0.4s ease-in-out;
+   -webkit-transition: opacity 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out;
 }
 
@@ -336,10 +334,12 @@ a.wpas-btn.wpas-btn-default.wpas-link-logout {
 
 #header.header_color.av_header_transparency .av-main-nav > li.join_nav_link > a .avia-menu-text{ color:#fff !important; }
 
+
 #header_main .container  {
     height: 80px !important;
     line-height: initial !important;
 }
+
 .main_menu ul > li > a{
 line-height: normal !important;
 }
@@ -352,17 +352,17 @@ line-height: normal !important;
 	height: auto !important;
 }
 
-nav.main_menu { margin-top:32px; height:auto; }
+nav.main_menu { margin-top:28px; height:auto; }
 
 span.user_header {
     font-size: 14px;
     padding: 2px 14px;
     line-height: 2.4;
-    color: #ddd;
+    color: #999999;
     font-weight: bolder;
 }
 
-span.darker{ color:#888; }
+span.darker{ color:#000000; }
 
 .av_minimal_header #header_main, .av_minimal_header #header_meta {
     /*border: none;*/
@@ -372,7 +372,7 @@ span.darker{ color:#888; }
 span.user_header strong { color: #fff; }
 
 #top .av_header_transparency #header_meta .logo img {
-    /*background: #1f2329;*/
+    background: #ffffff;
     box-shadow: none;
     border-bottom: 1px solid rgba`(255,255,255,0.25);
 	min-height: 50px;
@@ -384,7 +384,7 @@ span.user_header strong { color: #fff; }
 
 #top .av_header_transparency #header_main, #top .av_header_transparency .avia-menu.av_menu_icon_beside {
     border-color: transparent;
-    background: #ffffff;
+    background: #268dcd;
    }
 
 .course_cat-e-books .llms-syllabus-wrapper {
@@ -440,7 +440,7 @@ h3.widgettitle{
     .responsive #top #wrap_all .av_header_transparency .main_menu ul:first-child > li > a, .responsive #top #wrap_all .av_header_transparency .sub_menu > ul > li > a, .responsive #top .av_header_transparency #header_main_alternate, .responsive .av_header_transparency #header_main .social_bookmarks li a, .responsive #top #wrap_all .av_header_transparency .phone-info.with_nav span, .responsive #top .av_header_transparency #header_meta, .responsive #top .av_header_transparency #header_meta li, .responsive #top #header_meta .social_bookmarks li a {
         color: inherit;
         border-color: inherit;
-        background: #1f2329;
+        background: #ffffff;
     }
 
     .responsive #top .av_header_transparency #header_meta li { margin-top:10px; }
@@ -577,7 +577,7 @@ span.trail-end {
     }
 
     .responsive #top .av_header_transparency.av_alternate_logo_active .logo a > img {
-        opacity: 1;
+        opacity: 0;
     }
 
     .responsive .logo {
@@ -617,6 +617,7 @@ span.trail-end {
 
 
 @media only screen and (max-width: 499px) {
+
 	.cc img {
 		width:80%;
 	}
@@ -664,8 +665,10 @@ span.trail-end {
     background: transparent;
     font-size: 15px;
 }
+
+
 #top .av_header_transparency #header_meta {
-    background: #1f2329;
+    background: #ffffff;
     box-shadow: none;
     border-bottom: 1px solid rgba(255,255,255,0.25);
 }
@@ -823,6 +826,15 @@ Mobile Styles
 
 }
 
+#top .hr-invisible, .hr-invisible .hr-inner {
+
+    height: 25px;
+}
+
+
+
+
+
 @media only screen and (max-width: 989px) {
 
 }
@@ -845,20 +857,7 @@ Mobile Styles
     /*color: #d4d4d4;*/
 }
 
-#top #wrap_all .all_colors h1 {
-    font-size: 32px;
-    text-transform: none;
-    text-align: center;
-}
 
-#top #wrap_all .all_colors h1 {
-    font-size: 32px;
-    text-transform: none;
-    text-align: center;
-}
-
-#top #wrap_all .alternate_color h1 { display: none; }
-h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
 
 @media only screen and (max-width: 989px) and (min-width: 768px) {
     .av-logo-container { display: none; }
@@ -891,4 +890,55 @@ h1.av-special-heading-tag{color:#fff !important; font-size:61px !important;}
 .avia-center-col.pricing-table{ background: #fff; }
 .pricing-table{ background:#fff; }
 
-.avia-button.avia-size-x-large{ padding:10%; width:100%; min-width:0;}
+
+#top .av-masonry-load-more {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 26px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#top .main_color .container .av-masonry-load-more {
+background-color: #2d3345;
+
+}
+
+.main_color a {
+
+color: #ffffff;
+}
+
+av-masonry-image-container {
+    text-align: center;
+    background-size: cover;
+    background-position: top center;
+}
+
+.template-page .entry-content-wrapper h1, .template-page .entry-content-wrapper h2 {
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+avia-icon-list .iconlist_icon {
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 500px;
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-left: 2px;
+    z-index: 5;
+    color: #fff;
+}
+
+body .column-top-margin {
+    margin-top: 20px;
+}

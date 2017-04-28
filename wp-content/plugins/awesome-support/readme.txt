@@ -1,11 +1,11 @@
 === Awesome Support - WordPress Support Plugin ===
 
-Contributors: themeavenue,julien731,SiamKreative
+Contributors: awesomesupport,julien731,SiamKreative
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KADEESTQ9H3GW
 Tags: support,helpdesk,tickets,ticketing,help,support staff,
 Requires at least: 3.8
-Tested up to: 4.6.2
-Stable tag: 3.3.2
+Tested up to: 4.7
+Stable tag: 3.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,9 +42,11 @@ Check out the user-friendly features of this awesome plugin:
 - **Restricted access**: all correspondence is private between the client and the agents
 - **File upload**: you control when files can be uploaded, how many files, and how large they are
 - **Multiple products**: provide support for as many products as you want
+- **Multiple deparments**: provide support for multiple departments
 - **Custom fields**: easily set up additional custom fields
 - **Terms & conditions**: ask users to agree to your your terms and conditions before they open a ticket
 - **Old tickets**: identify old tickets quickly with tags
+- **Agent Collaboration**: multiple agents can work on the same ticket and tickets can be transferred between agents
 
 = Extensions =
 
@@ -55,6 +57,14 @@ Awesome Support is already packed with features, but if you want to supercharge 
 * [E-Mail Piping](http://getawesomesupport.com/addons/email-support/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - reply to tickets by e-mail
 * [WooCommerce](http://getawesomesupport.com/addons/woocommerce/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - the bridge between your WooCommerce store and Awesome Support
 * [Canned Responses](http://getawesomesupport.com/addons/canned-responses/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - create replies to common questions, and access them in one click
+* [Gravity Forms](https://getawesomesupport.com/addons/gravity-forms/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - create custom ticket forms with this popuplar WordPress forms builder
+* [Private Notes](https://getawesomesupport.com/addons/private-notes/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - insert notes into tickets that only agents and admins can view
+* [FAQs](https://getawesomesupport.com/addons/faq/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - Powerful FAQ management make your agents more productive
+* [Notifications](https://getawesomesupport.com/addons/notifications/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - get notified of important events in slack and via pushbullet. Notify third parties of important ticket events via email.
+* [Custom Status](https://getawesomesupport.com/addons/custom-status/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend) - create unlimited custom statuses that give you new levels of organization for your tickets
+
+Additional extensions such as Auto Close, Private Credentials, Satisfaction Survey and Guest Tickets bring even more power to Awesome Support.
+
 
 = Roadmap =
 
@@ -64,7 +74,8 @@ Want to know what’s next for Awesome Support? [Check out the roadmap](https://
 
 Awesome Support id available in French, Dutch, Hungarian, Italian, Portuguese, Spanish, Swedish, Persian, Dutch and Polish.
 
-You want to translate Awesome Support in your language? [Head over to the Transifex project](https://www.transifex.com/projects/p/awesome-support/)!
+Do you want to translate Awesome Support in your language? [Head over to the POEditor.com Project](https://poeditor.com/join/project/P6HgfPnBt4)!  
+Don't see your language?  Let us know which one you would like and we will add it for you!
 
 == Installation ==
 
@@ -123,7 +134,7 @@ Here you have two choices:
 1. Change all your users' role to *Support User*
 2. Give the role you want to use (eg. *Subscriber*) the special capabilities
 
-If you don't know how to add new capabilities to a role, I suggest you use a plugin like [User Role Manager](https://wordpress.org/plugins/user-role-editor/) and give the desired role the following capabilities:
+If you don't know how to add new capabilities to a role, we suggest you use a plugin like [User Role Manager](https://wordpress.org/plugins/user-role-editor/) and give the desired role the following capabilities:
 
 - `view_ticket`
 - `create_ticket`
@@ -170,6 +181,37 @@ There are several factors that can influence e-mail notifications delivery. Plea
 7. Settings page
 
 == Changelog ==
+
+= 3.3.4 - December 27th, 2016 =
+
+* New
+	* Added new actions to support attachments processing in the Gravity Forms and Email Piping add-ons
+	* added new class to support attachements processing from add-ons
+
+* Improvements
+	* Updated author names in composer.json	(github repo)
+	* Updated this readme file to include more relevant and up-to-date information on Awesome Support
+	* Changes to support a better cron option for the e-mail piping add-on
+	
+* Bugfixes
+	* Plugin would delete its data by default during the un-install process.  Fixed to force it to respect the flag in the TICKETS->SETTINGS->Advanced tab.
+	* Fix an incorrect SQL query in the WPAS_MEMBER_QUERY class
+	* Check to make sure that $post is not empty before using it
+	* Standards cleanup in functions-list-table.php	
+	* Squashed some bugs related to attachments when tickets are deleted
+
+= 3.3.3 - October 31, 2016 =
+
+* New
+	* Add templates to e-mail notifiactions
+	* Offer free addon in admin dashboard
+
+* Improvements
+	* Improve a number of filters in the e-mail notification class
+	* Update the translation catalog
+
+* Bugfixes
+	* Make sure the Sensei fix works at all times
 
 = 3.3.2 - September 23, 2016 =
 
@@ -576,4 +618,4 @@ Need to extend Awesome Support's features? We have lots of add-ons to help you s
 
 == Team ==
 
-Even though the plugin has been developed and is maintained by ThemeAvenue, we've had help from various developers around the world. You can see all the contributors on the [team page](http://getawesomesupport.com/team/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend). Many thanks to them all!
+Even though the plugin has been developed and is maintained by the AwesomeSupport development team, we've had help from various developers around the world. You can see all the contributors on the [team page](http://getawesomesupport.com/team/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=Extend). Many thanks to them all!

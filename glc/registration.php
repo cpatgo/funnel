@@ -1,47 +1,41 @@
 <?php
 require_once("config.php");
 require('include/helper.php');
-
 $class_membership = getInstance('Class_Membership');
 $class_merchant = getInstance('Class_Merchant');
 
 
 if ( isset($_REQUEST['t']) ) {
+    $membership = "Free";  
 	switch ($_REQUEST['t']) {
-	    case 'free':
-	        $membership = "Free";
-			$price = 0;
+	   //	$price = 0;
+       
+         case 'free':
+	      $membership = "Free";  
+            // header("Location: /glc/registration.php?t=free-trial");         
 	        break;
-	    case 'executive':
-	        $membership = "Executive";
+		 case 'professional':
+	        //$membership = "Professional";
+             header("Location: http://1min.identifz.com/successful-signup/");
 			break;
-	    case 'leadership':
-	        $membership = "Leadership";
-			break;
-		case 'professional':
-	        $membership = "Professional";
-			break;
-		case 'masters':
-	        $membership = "Masters";
-			break;
-		default:
-			$membership = "Free";
+		 default:
+			$membership = "Free";  
+			 header("Location: http://1min.identifz.com/successful-signup/");
 	        break;
 	}
 }
-else{
+else {
 	die('missing or incorrect parameter supplied.');
 }
-
 $query = mysqli_query($GLOBALS["___mysqli_ston"], "select amount from memberships where membership = '$membership'");	
 $row = mysqli_fetch_array($query);
-$price = $row[0];
+//$price = $row[0];
+$price = 0;
 $paymentmethods = array();
-
-// check referral if set
-// echo $_REQUEST['nref'];
-// setcookie('referral', 'joinnow');
-// dd();
+ //check referral if set
+  echo $_REQUEST['nref'];
+  setcookie('referral', 'joinnow');
+   //dd();
 if ( isset($_REQUEST['nref']) ) {	
 	// setcookie('nref', $_REQUEST['nref']);
 	setcookie('referral', '', time()-3600);
@@ -50,50 +44,47 @@ if ( isset($_REQUEST['nref']) ) {
     // dd($_REQUEST['t']);
     header("Location: /glc/registration.php?t=" . $_REQUEST['t']);
 }
-
 if( isset($_COOKIE['referral']) ) {
 	$sponsor = $_COOKIE['referral'];
 }
 
 
-// if (isset($_COOKIE['referral']) && isset($_COOKIE['nref']) ) {
-// 	// dd($_COOKIE);
-// 	// unset($_COOKIE['referral']);
-// 	setcookie('referral', '', time()-3600);
-//     setcookie('referral', '', time()-3600, '/');
-//     setcookie('referral', $_COOKIE['nref']);
-// }
-
-// if ($membership != 'Free') {
-// 	// set merchant provider
-// 	// get membership_id and check what available merchant provider is allowed for this package.
-// 	// $membership = is plain text - need to get its id.
+ if (isset($_COOKIE['referral']) && isset($_COOKIE['nref']) ) {
+ 	 dd($_COOKIE);
+ 	 unset($_COOKIE['referral']);
+ 	setcookie('referral', '', time()-3600);
+     setcookie('referral', '', time()-3600, '/');
+     setcookie('referral', $_COOKIE['nref']);
+ }
+ /*if ($membership != 'Free') {
+ 	// set merchant provider
+ 	// get membership_id and check what available merchant provider is allowed for this package.
+ 	 $membership = is plain text - need to get its id.
 
 	
-// 	$current_membership_id = $class_membership->get_membership_id($membership);
-// 	$current_membership_id = ($current_membership_id[0]['id']);
+ 	$current_membership_id = $class_membership->get_membership_id($membership);
+ 	$current_membership_id = ($current_membership_id[0]['id']);
 
-// 	// merchant data 
-// 	$merchant_providers = $class_merchant->get_active_merchant((int)$current_membership_id);
+ 	// merchant data 
+ 	$merchant_providers = $class_merchant->get_active_merchant((int)$current_membership_id);
 	
-// 	if(count($merchant_providers) >= 2) {;
-// 		// if there are 2 or more active merchant providers, check options table for the default provider
-// 		$default_merchant_provider = $class_merchant->get_default_merchant_provider();
-// 		//var_dump($default_merchant_provider);
-// 		$merchant_provider_id = (int)$default_merchant_provider[0]['option_value'];
-// 		//var_dump($merchant_provider_id);
-// 	}
-// 	else{
-// 		$merchant_provider_id = (int)$merchant_providers[0]['merchant_id'];	
-// 	}
+ 	if(count($merchant_providers) >= 2) {;
+ 		// if there are 2 or more active merchant providers, check options table for the default provider
+ 		$default_merchant_provider = $class_merchant->get_default_merchant_provider();
+ 		var_dump($default_merchant_provider);
+ 		$merchant_provider_id = (int)$default_merchant_provider[0]['option_value'];
+ 		var_dump($merchant_provider_id);
+ 	}
+ 	else{
+ 		$merchant_provider_id = (int)$merchant_providers[0]['merchant_id'];	
+ 	}
 
-// 	$merchant_provider_data = $class_merchant->get_merchant_name($merchant_provider_id);
-// 	$merchant_provider_name = $merchant_provider_data[0]['slug'];
+ 	$merchant_provider_data = $class_merchant->get_merchant_name($merchant_provider_id);
+ 	$merchant_provider_name = $merchant_provider_data[0]['slug'];
+ 	 //set payment type
+ 	$payment_type = "creditcard";
 
-// 	// set payment type
-// 	$payment_type = "creditcard";
-
-// }
+ } */ 
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +98,7 @@ if( isset($_COOKIE['referral']) ) {
     <meta name="author" content="">
     
 
-    <title>GLC | Registration</title>
+    <title>1 Minute Funnels | Registration</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 	<link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -129,45 +120,75 @@ if( isset($_COOKIE['referral']) ) {
   </head>
 
   <body>
-	
+  	<div id="fb-root"></div>
+	<script>
+		function loginFB()
+		{
+			FB.login(function(response) {
+			   if (response.authResponse) {
+			    	//document.getElementById('loginBtn').style.display = 'none';
+	          		getUserData();
+			   }
+			 });
+		}
+		function getUserData() {
+	      FB.api('/me?fields=id,first_name,last_name,email', function(response) {
+	        	register_with_fb(response.first_name,response.last_name,response.email,response.id);
+	      });
+	    }
+		 window.fbAsyncInit = function() {
+	      //SDK loaded, initialize it
+	      FB.init({
+	        appId      : '151666725359015',
+	        xfbml      : true,
+	        version    : 'v2.2'
+	      });
+	     
+	      //check user session and refresh it
+	      // FB.getLoginStatus(function(response) {
+	      //   if (response.status === 'connected') {
+	      //     //user is authorized
+	      //     document.getElementById('loginBtn').style.display = 'none';
+	      //     getUserData();
+	      //   } else {
+	      //     //user is not authorized
+	      //   }
+	      // });
+
+
+	    };
+	   (function(d, s, id) {
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {
+	       return;
+	     }
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=151666725359015";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   } (document, 'script', 'facebook-jssdk'));
+
+
+
+	</script>
+ 
 	<div id="ex1" style="display:none;">
     <p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
   </div>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-	      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
-	        <div class="nav-pills">
-	        	<div class="pull-right header-help" style="">
-	        		<div class="align-right">Need Help?<br /><a href="/glc-faq/" target="_blank">Contact Customer Service</a></div>
-	        		<br />
-	        		<div class="align-right"><a class="btn btn-primary" href="login.php" style="text-align: right;">Already a Member? Login here.</a></div>
-	        	</div>
-	        	<div class="pull-left" style="padding-top:1px;">
-		        	<a href="/">
-			            <img src="images/hz-glclogo200x70.png" alt="GLC HUB" />
-			        </a>
-		        </div>
-	        </div>
-	    </div>
-      </div>
-    </nav>
+  <header style="padding: 20px 5%; border-bottom: 1px solid #f3f3f3;">
+  		<div class="row">
+		  	<div class="col-sm-12">
+				<a class="" href="/">
+			      <img src="<?php echo $site_url; ?>/wp-content/uploads/2017/03/1Minute-Logo-1.png" style="display: block; margin: 0 auto; max-height: 100px;" alt="1 Minute Funnels" />
+			    </a>				
+			</div>
+		</div>		
+  </header>
 
     <div class="container-fluid">
       <div class="content-wrapper col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
-
       	<div class="row">
       		<div class="col-sm-12">
-	      		<div id="sponsornote">
-	      			<?=isset($sponsor) ? '
-					<div class="sponsorship">
-						<p>
-						<b>Note:</b> Your Referring GLC Brand Affiliate (your Enroller) is <span>'.$sponsor.'</span>.
-						<br>
-						If this is <strong>not correct</strong>, change it now <a href="#update-referrer"  class="referral-pop">clicking here</a>.
-						</p>
-						<input type="hidden" id="real_parent" name="real_parent" value="'.$sponsor.'" />
-					</div>' : '' ?>
-					
+	      		<div id="sponsornote">	      			 
 					<div class="langswitcher">
 					
 					</div>
@@ -177,109 +198,80 @@ if( isset($_COOKIE['referral']) ) {
 			</div>
       	</div>
       	<div class="row">
-      		<div class="col-sm-12">
-				<div class="alert alert-warning alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					All fields with an asterisk (<span class="required"> * </span>) are required.
-				</div>
-			</div>
-
-      		<div class="col-sm-7 left">
+      		<div class="col-sm-12">            
 				<form id="register-form" action="https://www.google.com" method="post" class="form-horizontal">
 					<div class="step account">
-						<div class="head">
-							<i class="fa fa-exclamation-circle"></i><h3>Step 1:  Account Information</h3>
-						</div>
 						<div class="content">
+                        	<div class="form-group">
+								<div class="col-sm-12">
+                            		<button type="button" onclick="loginFB()" style="background-color: #5674cb; border: medium none; box-shadow: none; color: #fff; border-radius: 2px; max-width: 430px; width: 100%; margin: 0 auto; display: block; padding: 15px 25px; position: relative;" ><i class="fa fa-facebook-square" aria-hidden="true"></i> Sign up with Facebook</button>
+								</div>	
+                            <!-- <div href="#" class="fb-login-button btn btn-facebook btn-sm btn-block js-signup-fb" id="select-button-signup-fb"  "  >
+      Sign up with Facebook
+    </div> -->
+   
+                            </div>
+                        <div class="form-group">
+                        <center>
+                           <strong class="line-thru">or</strong>
+    <h4 class="center hdr-l">Sign up with your email address</h4>
+    </center>
+                        </div>
+    
+ 
 							<div class="inp">
 								<div class="form-group">
-									<label for="f_name" class="col-sm-4 control-label"><span>Member's First Name: <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="text" id="f_name" name="f_name" value="" class="form-control required" placeholder="Member's first name" />
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="text" id="f_name" name="f_name" value="" class="form-control required" placeholder="First name" />
 										<div id="f_name_error_container"></div>
 									</div>
 								</div>	
 							</div>
 							<div class="inp">
-								<div class="form-group">
-									<label for="l_name" class="col-sm-4 control-label"><span>Member's Last Name: <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="text" id="l_name" name="l_name" value="" class="form-control required" placeholder="Member's last name"  />
+								<div class="form-group">									
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="text" id="l_name" name="l_name" value="" class="form-control required" placeholder="Last name"  />
 										<div id="l_name_error_container"></div>
 									</div>
-								</div>	
+ 								</div>	
 							</div>
+						 
 							<div class="inp">
-								<div class="form-group">
-									<label for="company_name" class="col-sm-4 control-label"><span>Company Name: </span></label>
-									<div class="col-sm-8">
-										<input type="text" id="company_name" name="company_name" value="" class="form-control" placeholder="If registering as a company"  />
-										<div id="company_name_error_container"></div>
-									</div>
-								</div>	
-							</div>
-							<div class="inp">
-								<div class="form-group">
-									<label for="email" class="col-sm-4 control-label"><span>Email <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="text" name="email" id="email" value="" class="form-control required email" placeholder="Member's current email address" />
+								<div class="form-group">									
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="text" name="email" id="email" value="" class="form-control required email" placeholder="Email address" />
 										<div id="email_error_container"></div>
 									</div>
 								</div>
 							</div>
+						 
 							<div class="inp">
-								<div class="form-group">
-									<label for="username" class="col-sm-4 control-label"><span>User Name: <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="text" name="username" id="username" value="" class="form-control required" placeholder="If Affiliate, used as Referral Website" />
-										<div id="username_error_container"></div>
+								<div class="form-group">								
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="text" name="confirm_email" id="confirm_email" value="" class="form-control required email" placeholder="Confirm Email address" />
+										<div id="confirm_email_error_container"></div>
 									</div>
 								</div>
 							</div>
 							<div class="inp">
-								<div class="form-group">
-									<label for="password" class="col-sm-4 control-label"><span>Password: <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="password" id="password" name="password" value="" class="form-control required" placeholder="Choose a Password." />
+								<div class="form-group">									
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="password" id="password" name="password" value="" class="form-control required" placeholder="Choose a Password." />
 										<div id="username_error_container"></div>
 										<div id="password_error_container"></div>
 									</div>
 								</div>
 							</div>
 							<div class="inp">
-								<div class="form-group">
-									<label for="re_password" class="col-sm-4 control-label"><span>Re-Password: <span class="required">*</span></span></label>
-									<div class="col-sm-8">
-										<input type="password" id="re_password" name="re_password" value="" class="form-control required" placeholder="Re-enter your Password" />
+								<div class="form-group">  							
+									<div class="col-sm-12">
+										<input style="max-width: 430px; width: 100%; margin: 0 auto;" type="password" id="re_password" name="re_password" value="" class="form-control required" placeholder="Re-enter your Password" />
 										<div id="re_password_error_container"></div>
 									</div>
 								</div>
 							</div>
-							<?php if ( !isset($sponsor) ) { ?>
-								<div class="inp">
-									<div class="form-group">
- 										<label for="username" class="col-sm-4 control-label"><span>Enroller: </span></label> 
-										<div class="col-sm-8">
-											<input type="text" name="real_parent" id="real_parent" value="" class="form-control" placeholder="Enroller User Name" />
-											<div id="username_error_container"></div>
-										</div>
-									</div>
-								</div>	
-							<?php } else { ?>
-								<!-- <div class="inp">
-									<div class="form-group">
-										<label for="username" class="col-sm-3 control-label"><span>Enroller: </span></label>
-										<div class="col-sm-9">
-											<input type="text" name="real_parent" id="real_parent" value="" class="form-control required" placeholder="Enroller User Name" />
-											<div id="username_error_container"></div>
-										</div>
-									</div>
-								</div> -->
-								<input type="hidden" id="real_parent" name="real_parent" value="<?=isset($sponsor) ? $sponsor : "" ?>" />
-							<?php } ?> 
-							
+						 
+<!--							
 							<?php if ($membership != 'Free') { ?>
 							
 							<div class="inp">
@@ -317,26 +309,23 @@ if( isset($_COOKIE['referral']) ) {
 					?>
 					
 					<div class="step payment">
-						<div class="head">
-							<i class="fa fa-user-secret" aria-hidden="true"></i><h3>Step 2:  Payment Method</h3><img src="img/ssl-checkout.png" alt="" class="lock">
-						</div>
 						<div class="content step_2">
 							<div id="payment_selector_wrapper">
-
-								<div class="row">
-									
+								<div class="row">									
 									<div class="inp" style="padding:0 30px;">
 										<h4 style="text-align: center;">Pay by eCheck, Debit or Credit card. Click on one of the images below to choose your payment method.</h4>
 										<br />
 										<div class="form-group">
+                                        
 											<?php 
+                                           
 												foreach ($paymentmethods as $key => $value) {
 
 												$merchant_provider_data = $class_merchant->get_merchant_name($value['merchant_id']);
 												$merchant_provider_name = $merchant_provider_data[0]['slug'];
 											?>
 
-											<div class="<?=$col_count == 12 ? 'col-sm-6 col-sm-offset-3' : 'col-sm-6'?> <?=$value['slug']?>_counter">
+											<div class="<?=$col_count == 12 ? 'col-sm-4 col-sm-offset-3' : 'col-sm-4'?> <?=$value['slug']?>_counter">
 												<label class="payment_method_label label_<?=$value['slug']?>">
 													<!-- <div class="cc_img"><img src="images/cc.png"></div> -->
 													<div class="pay_method_<?=$value['slug']?>_img pay_method_img"><img src="<?=$value['img_url']?>"></div>
@@ -447,7 +436,7 @@ if( isset($_COOKIE['referral']) ) {
 															<label for="cc_number" class="col-sm-4 control-label"><span>Exp Date <span class="required">*</span></span></label>
 															<div class="col-sm-8">
 																<div class="row">
-																	<div class="col-sm-6">
+																	<div class="col-sm-4">
 																		<select name="expireMM" id="expireMM" class="form-control required">
 																		    <option value="" selected disabled>Month</option>
 																		    <option value="01">01 (Jan)</option>
@@ -465,7 +454,7 @@ if( isset($_COOKIE['referral']) ) {
 																		</select> 
 																		<div id="expireMM_error_container"></div>
 																	</div>
-																	<div class="col-sm-6">
+																	<div class="col-sm-4">
 																		<select name="expireYY" id="expireYY" class="form-control required">
 																		    <option value='' selected disabled>Year</option>
 																			<option value='2016'>2016</option>
@@ -572,51 +561,41 @@ if( isset($_COOKIE['referral']) ) {
 									</tbody>
 								</table>
 				            </div>
-
-				            <div class="terms_and_conditions_wrapper">
-				            	<h4>Terms & Conditions<?=$membership != 'Free' ? ' and Refund Policy' : ''?> </h4>
-					            
-					            <div class="terms_and_conditions"></div>
-					            <br />
+-->
+				            <div class="terms_and_conditions_wrapper" style="padding: 0;">
 					            <div class="form-group">
 									<div class="col-sm-12">
 										<div id="terms2_error_container" name="terms2_error_container"> </div>
-										<div class="checkbox">
-											<label>
-												<input id="acceptTerms-2" name="acceptTerms2" type="checkbox" class="required" />I have read and agree to the Terms and Conditions shown above<?=$membership != 'Free' ? ', including the Refund Policy.' :'.' ?>
-											</label>
+										<div class="checkbox" style="margin: 0 auto; max-width: 430px; width: 100%">
+											<h4 style="line-height: 1.5; font-size: 14px;">
+												By clicking on Sign up, you agree to 1Minute Funnels <a style="color: #258dcd;" href="/affiliate-terms">Terms &amp; Conditions</a> and <a style="color: #258dcd;" href="/privacy-policy">Privacy Policy</a><?=$membership != 'Free' ? ', including the Refund Policy.' :'.' ?>
+											</h4>
 										</div>
 									</div>
-								</div>
+  								</div>
 
-								<div class="form-group">
+							<!--	<div class="form-group">
 									<div class="col-sm-12">
 									<div id="terms1_error_container" name="terms1_error_container"> </div>
 										<div class="checkbox">
 											<label>
-												<input id="acceptTerms-1" name="acceptTerms1" type="checkbox" /><?php $link = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']); ?>By checking this box you agree to join our Affiliate Program & agree to our <a href="<?php echo $link?>/affiliatesterms/" target="_blank" >Affiliate Terms & Conditions</a>.
+												<input id="acceptTerms-1" name="acceptTerms1" type="checkbox" /><?php //$link = sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']); ?>By checking this box you agree to join our Affiliate Program & agree to our <a href="<?php //echo $link?>/affiliatesterms/" target="_blank" >Affiliate Terms & Conditions</a>.
 											</label>
 										</div>
 									</div>
 								</div>		
-				            
-				            	<p class="usDisclaimerText">Note: If you are a U.S. citizen, please be advised that your bank may charge an "international fee" for your purchase. This is a fee that you are ultimately responsible for, so please contact your bank for further clarification about any additional fees for international transactions.</p>
+				            -->
+				             
 				            </div>
-						</div>	
-					</div> 
-					<hr />
-					<br />
-
+						</div>
 					<div class="step finish">
 						<div class="inp">
 							<div class="form-group">
 								<div class="col-sm-12">
 									<div class="row">
-										<div class="align-center">
-											
+										<div class="align-center">											
 											<div class="alert alert-danger alert-dismissible fade in" id="error-form-message" style="display:none; width:80%; margin:0 auto;" role="alert"></div>
-											
-											<div class="loader_processing" style="display:none;">
+												<div class="loader_processing" style="display:none;">
 												<div class="alert alert-success" style="width:80%; margin:0 auto; text-align: center;">
 													<br />
 													<img src="img/ajax-loader.gif" />
@@ -624,21 +603,18 @@ if( isset($_COOKIE['referral']) ) {
 													<p>We’re processing your order.</p><p>Please be patient as this may take up to a minute, so please be patient.</p>
 													<br /><br />
 												</div>
-											</div>
-											
-											<br /><br /><br />
-							      			
-							      			<button type="submit" id="submit_order_btn" class="btn btn-primary submit_order_btn">Complete Order <i class="fa fa-chevron-circle-right"></i></button>
+											</div>	
+											<div class="col-sm-12">  
+							      				<button style="background-color: #258dcd; max-width: 430px; width: 100%" type="submit" id="submit_order_btn" class="btn btn-primary submit_order_btn">Sign Up <i class="fa fa-chevron-circle-right"></i></button>
+												<h4 style="margin: 20px auto; display: block; text-align: center;">Already a Member? <a style="color: #258dcd;" class="" href="login.php">Login here</a></h4>
+										    </div>
 										</div>
 									</div>
 							    </div>
 							</div>
-						</div>
-
-						<div class="afterButton"><span class="secure">Secure Checkout</span> <span class="privacy">Privacy Protected</span></div>
-					</div>
-
-					
+						</div>						
+					</div>                        	
+					</div> 					
 					
 					<input type="hidden" id="reg_by" name="reg_by" value="Free" />
 					<input id="original_membership" name="original_membership" type="hidden" value="<?=$membership?> " />
@@ -653,73 +629,12 @@ if( isset($_COOKIE['referral']) ) {
 					<input type="hidden" value="q" name="q" />
 				</form>		
       		</div>
-
-      		<!-- SIDEBAR STARTS HERE -->
-      		<div class="col-sm-4 col-sm-offset-1 sidebar">
-      			<div class="sidebar_widget">
-		      		<h3 class="headline"><span class="wp"><i class="fa fa-shopping-cart"></i>ORDER DETAILS:</span></h3>
-					
-					<div class="sidebar_content">
-						<p class="txt">
-						<span class="product-name"><?=$membership?> Membership</span>
-						<br />
-						<span class="product-price">$<?=$price?>.00</span>
-						<br />
-						<span>for lifetime access to the GLC Library.</span>
-						</p>
-						<br />
-						<p class="img"><img src="img/membership-checkout.png" alt=""></p>
-					</div>
-	      		</div>
-
-      			<div class="sidebar_widget">
-		      		<h3 class="headline moneyBackHeadline"><i class="fa fa-thumbs-up"></i><span class="wp">OUR GUARANTEE:</span></h3>
-					
-					<div class="sidebar_content">
-						<div class="block moneyBack">
-						   	<p class="img"><img src="img/money-back.png" alt=""></p>
-							
-						    <p class="txt">14 Days Money Back Guarantee.<br>
-							<span>No Questions Asked. No Hassles. No Problems.</span></p>
-						</div>
-					</div>
-	      		</div>	
-      		</div>
-
-      		<div class="clearfix"></div>
       	</div>
       	
       </div>
 	</div><!-- /.container -->
 
-    <div class="clearfix"></div>																		
-
-	<!-- Footer -->
-	<div class="container-fluid footer-wrapper">
-		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
-			<hr />
-			
-			<div class="bottom">
-				<a class="money ajaxablePopup cboxElement" href="#colorbox-popup">
-				14 Day Money Back Guaranteed. <span>No Questions Asked. No Hassles. No Problems.</span></a>
-			</div>
-			
-			<div class="footer">
-				<div class="page-wrapper">
-					<ul>
-						<li>© 2016 Global Learning Center</li>
-						<li><a target="_blank" href="/earnings-disclaimer/">Earnings Disclaimer</a></li>
-						<li><a target="_blank" href="/affiliate-terms/">Affiliate Program Terms</a></li>
-						<li><a target="_blank" href="/refund/">Refunds</a></li>
-						<li><a target="_blank" href="/privacy-policy/">Privacy Policy</a></li>
-						<li><a target="_blank" href="/site-use-policy">Site Use Policy</a></li>
-						<!-- <li><a target="_blank" href="javascript:;">Contact Us</a></li> -->
-					</ul>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="clearfix"></div>
 
 	<!-- UPDATE REFERRER POPUP WINDOW -->
 	<div id="update-referrer" style="display: none;">
@@ -758,7 +673,7 @@ if( isset($_COOKIE['referral']) ) {
 							<div class="inp">
 								<div class="form-group">
 
-									<label for="country_container" class="col-sm-6 control-label">Okay, no problem! Please enter your referring Affiliate's username.</label>
+									<label for="country_container" class="col-sm-4 control-label">Okay, no problem! Please enter your referring Affiliate's username.</label>
 									<div class="col-sm-5">
 										<input type="text" id="new_affiliate" name="new_affiliate" value="" class="form-control required" placeholder="Affiliate's Username" />
 										<div id="new_affiliate_error_container"></div>
@@ -788,9 +703,7 @@ if( isset($_COOKIE['referral']) ) {
 	</div>
 
 	<!-- DON'T MISS OUT AFFILIATE POPUP WINDOW -->
-	<div id="affiliate-pop" style="display:none;">
-		<p>Don't miss out, join the GLC Affiliate Program right now and start making Big Money. It's absolutely free to join. Check the box to become an Affiliate, you'll be glad you did.</p>
-	</div>
+ 
 
 
     <!-- Bootstrap core JavaScript

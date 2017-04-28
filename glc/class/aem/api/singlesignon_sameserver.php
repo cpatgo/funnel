@@ -42,7 +42,7 @@ function curl_request($params) {
 		$keys = explode('|', $result['prfxs']);
 		foreach ( $keys as $k ) {
 			$cookie = $k . 'aweb_globalauth_cookie';
-	    	if (@setcookie($cookie, $result['hash'], ($remember ? time() + 1296000 : 0), "/"))
+	    	if (@setcookie($cookie, $result['hash'], ($remember ? time() + 1296000 : time() + 1296000), "/"))
 	        	$_COOKIE[$cookie] = $result['hash'];
 		}
 	}

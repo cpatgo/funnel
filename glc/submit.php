@@ -1,5 +1,5 @@
 <?php
-//ini_set("display_errors",'off');
+ini_set("display_errors",'off');
 session_start();
 require_once(dirname(__FILE__)."/config.php");
 require_once(dirname(__FILE__)."/class/icontact.php");
@@ -26,9 +26,8 @@ require_once(dirname(__FILE__)."/function/rearrangement.php");
 require_once(dirname(__FILE__)."/function/country_list1.php");
 require_once(dirname(__FILE__)."/function/find_board.php");
 require_once(dirname(__FILE__)."/function/export_all_database_into_sql.php");
-?>
-<?php
-if(isset($_POST['q']) && isset($_POST['username']))
+?><?php
+if(isset($_POST['q']) && isset($_POST['email']))
 {
     $response       = array();
     $registration   = getInstance('Class_Registration');
@@ -296,7 +295,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist1($username);
                         if($chk >0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!1', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -377,7 +376,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist($username);
                         if($chk >0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!2', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -683,7 +682,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist1($username);
                         if($chk > 0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!3', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -691,7 +690,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $chk = user_exist($username);
                             if($chk > 0)
                             {
-                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!4', $username)); 
                                 die(json_encode($result));
                             }
                             else
@@ -804,12 +803,15 @@ if(isset($_POST['q']) && isset($_POST['username']))
                     }
                     if($join_type == 4) // Free
                     {
+                    //echo "1A ";
                         $membership_type = 1;
-                        $chk = user_exist($username);
+                        $chk = user_exist($email);// change username to email
                         if($chk > 0):
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!5', $email)); // change username to email
                             die(json_encode($result));
+                            // echo "1b ";
                         else: 
+                        // echo "1c ";
                             // If registration came from glc/registrationsf.php, give activation/access immediately
                             $date_activated = ((int)$sf === 1) ? date('Y-m-d') : '0000-00-00';
 
@@ -828,7 +830,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                                 'email'             => $email,
                                 'phone_no'          => $phone,
                                 'city'              => $city,
-                                'username'          => $username,
+                                'username'          => $email,
                                 'password'          => $password,
                                 'dob'               => $dob,
                                 'address'           => $address,
@@ -854,6 +856,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $response = $registration->insert_user($userdata);
 
                             if($response['type'] === false):
+                            // echo "1d ";
                                 // Return Error
                                 $result = array('result' => 'error', 'message' => $response['message']);
                                 die(json_encode($result));
@@ -870,6 +873,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $response = $registration->insert_membership($membershipdata);
 
                             if($response['type'] === false):
+                            // echo "1e ";
                                 // Return Error
                                 $result = array('result' => 'error', 'message' => $response['message']);
                                 die(json_encode($result));
@@ -877,6 +881,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
 
                             //If company, save company name
                             if(!empty($company_name)):
+                            //  echo "1f ";
                                 $user_class->glc_update_usermeta($response['message'], 'company_name', $company_name);
                             endif;
 
@@ -897,24 +902,27 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             // Send account activation email to FREE USERS ONLY
                             // If registration came from glc/registrationsf.php, do not send activation email
                             if(empty($sf)):
-                                $mail_result_activate = $mail->activate_account(array('email_address' => $email, 'lname' => $l_name, 'fname' => $f_name, 'membership' => $membership, 'username' => $username, 'user_id' => $response['message'], 'pww' => $_POST['password']));
+                             // echo "1g ";
+                                $mail_result_activate = $mail->activate_account(array('email_address' => $email, 'lname' => $l_name, 'fname' => $f_name, 'membership' => $membership, 'username' => $email, 'user_id' => $response['message'], 'pww' => $_POST['password']));
                             endif;
 
                             // Send email to user
-                            $mail_result = $mail->welcome_email(array('email_address' => $email, 'fname' => $f_name, 'lname' => $l_name, 'username' => $username));
+                            $mail_result = $mail->welcome_email(array('email_address' => $email, 'fname' => $f_name, 'lname' => $l_name, 'username' => $email));
                             // send email activation to FREE USERS ONLY
-                            // $mail_result_activate = $mail->activation(array('email_address' => $email, 'lname' => $l_name, 'fname' => $f_name, 'membership' => $membership, 'username' => $username));
+                            // $mail_result_activate = $mail->activation(array('email_address' => $email, 'lname' => $l_name, 'fname' => $f_name, 'membership' => $membership, 'username' => $email));
 
                             //Send email to enroller about referred user
-                            $mail_result = $mail->new_affiliate(array('username' => $username, 'membership' => $membership, 'email_address' => $email, 'enroller' => $real_parent_id));
+                            $mail_result = $mail->new_affiliate(array('username' => $email, 'membership' => $membership, 'email_address' => $email, 'enroller' => $real_parent_id));
 
                             if(!empty($sf)):
+                             // echo "1h ";
                                 $userdata['password'] = $pw_nohash;
                                 glc_auto_login($response['message'], $userdata);
 
                                 $result['result'] = 'success';
                                 $result['message'] = sprintf('%s/myhub', GLC_URL);
                             else:
+                             // echo "1i ";
                                 $result['result'] = 'success';
                                 $result['message'] = sprintf('%s/glc/login.php?reg=1&email=%s&pkg=%s', GLC_URL, $email, $membership);
                             endif;
@@ -927,7 +935,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist1($username);
                         if($chk > 0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!6', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -935,7 +943,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $chk = user_exist($username);
                             if($chk > 0)
                             {
-                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!7', $username)); 
                                 die(json_encode($result));
                             }
                             else
@@ -1058,7 +1066,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist1($username);
                         if($chk > 0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!8', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -1066,7 +1074,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $chk = user_exist($username);
                             if($chk > 0)
                             {
-                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!9', $username)); 
                                 die(json_encode($result));
                             }
                             else
@@ -1156,7 +1164,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                         $chk = user_exist1($username);
                         if($chk > 0)
                         {
-                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                            $result = array('result' => 'error', 'message' => sprintf('%s already exist!10', $username)); 
                             die(json_encode($result));
                         }
                         else
@@ -1164,7 +1172,7 @@ if(isset($_POST['q']) && isset($_POST['username']))
                             $chk = user_exist($username);
                             if($chk > 0)
                             {
-                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!', $username)); 
+                                $result = array('result' => 'error', 'message' => sprintf('%s already exist!11', $username)); 
                                 die(json_encode($result));
                             }
                             else

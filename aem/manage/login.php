@@ -125,7 +125,7 @@ if ( $authenticated ) {
 		if ( !$authenticated ) {
 			//Setting error message
 			$addOn = ( $landingPage != '' ? '&redir=' . adesk_b64_encode($landingPage) : '' );
-			do_redirect('index.php?error_mesg=invalidlogin' . $addOn);
+			do_redirect('index.php?error_mesg=invalidlogin1' . $addOn);
 		}
 	}
 	adesk_session_drop_cache();
@@ -155,7 +155,7 @@ if ( $authenticated ) {
 	adesk_sql_query("INSERT INTO #user_b_log (user, pass, ip, host, time, date) VALUES ('$user', '$pass', '$ip', '$host', CURTIME(), CURDATE())");
 	//Setting error message
 	$addOn = ( $landingPage != '' ? '&redir=' . adesk_b64_encode($landingPage) : '' );
-	do_redirect('index.php?error_mesg=invalidlogin' . $addOn);
+	do_redirect('index.php?error_mesg=invalidlogin2' . $addOn);
 }
 
 

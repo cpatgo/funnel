@@ -1,0 +1,24 @@
+[28-Apr-2017 12:35:25 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:25 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:25 America/New_York] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:25 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 12:35:50 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:50 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:50 America/New_York] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:35:50 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 12:36:48 America/New_York] PHP Warning:  include(classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:36:48 America/New_York] PHP Warning:  include(classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:36:48 America/New_York] PHP Warning:  include(): Failed opening 'classes/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:36:48 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 12:37:13 America/New_York] PHP Warning:  include(/classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:13 America/New_York] PHP Warning:  include(): Failed opening '/classes/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:13 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 12:37:17 America/New_York] PHP Warning:  include(/classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:17 America/New_York] PHP Warning:  include(): Failed opening '/classes/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:17 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 12:37:31 America/New_York] PHP Warning:  include(../classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:31 America/New_York] PHP Warning:  include(../classes/config.php): failed to open stream: No such file or directory in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:31 America/New_York] PHP Warning:  include(): Failed opening '../classes/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/identifz/public_html/1min/one/memberpage.php on line 4
+[28-Apr-2017 12:37:31 America/New_York] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 6
+[28-Apr-2017 17:40:59 Europe/London] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 14
+[28-Apr-2017 17:43:11 Europe/London] PHP Fatal error:  Call to undefined function getInstance() in /home/identifz/public_html/1min/one/memberpage.php on line 14

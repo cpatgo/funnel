@@ -6,11 +6,11 @@ Tags:              redirect,login, logout, login and logout redirect, redirect o
 Author URI:        http://swapnilpatil.in
 Author:            patilswapnilv
 Donate link:       http://swapnilpatil.in/contribution
-License:           GPLv2 or later
-License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+License:           GPLv3 or later
+License URI:       https://www.gnu.org/licenses/gpl-3.0.en.html
 Requires at least: 3.5
-Tested up to:      4.6 Beta 1
-Stable tag:        1.0.2
+Tested up to:      4.7
+Stable tag:        1.0.3
 
 
 Redirects users to specified url after logging in, logging out OR both.
@@ -77,6 +77,9 @@ Just the make sure the values are replaces with the default once.
       Made changes to make it ready for PHP 7. Now supports PHP 7 too.
       Tested upto WordPress version 4.6 Beta 1
 
+=Version 1.0.3=
+      Tested for WordPress 4.7
+
 == Upgrade Notice ==
 
     = 1.0 =
@@ -84,14 +87,14 @@ Just the make sure the values are replaces with the default once.
 
 
 == Frequently Asked Questions ==
-1. *Where are the options to redirect? I could find any menu option.*
-    The plugin actually adds options in the settings panel. You can access them at Settings>General.
+1. **Where are the options to redirect? I could find any menu option.** </br>
+    The plugin actually adds options in the settings panel. You can access them at *Settings>General.*
 
-2. *I think I found a bug. How do I report it?*
+2. **I think I found a bug. How do I report it?** </br>
     Though I have tested the plugin as much as I could, but in-case you come across a bug, there are two ways to report it.
-    First you can submit a issue via [github](https://github.com/patilswapnilv/login-and-logout-redirect).
+    First you can submit a issue via [GitHub](https://github.com/patilswapnilv/login-and-logout-redirect/issues).
     OR
-    You can let me know about it via the support forum.
+     You can let me know about it via the support forum.
 
 == Donations ==
 More than any donations, Contribution will be more helpful. Hence, Contributors are always welcome.

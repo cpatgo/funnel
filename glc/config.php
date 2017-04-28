@@ -8,6 +8,7 @@ $backup_path = "/home/globallearningce/public_html/glc/backup/";
  * Define siteUrl that can be used in javascript files
  */
 define('GLC_URL', sprintf('%s://%s', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http', $_SERVER['HTTP_HOST']));
+//define('GLC_URL',"https://1min.identifz.com" );
 define('GLC_MATRIX_URL', GLC_URL . '/glc');
 
 //Dwolla Sandbox
@@ -92,6 +93,7 @@ $aem_password = "uj2Kf5T8kudu";
     // $authorize_key = "6ym946Abq2Yt63Wr";
 
 $server_host = $_SERVER['HTTP_HOST'];
+
 if($server_host === 'glcdev.saepiosecurity.com' || $server_host === 'www.glcdev.saepiosecurity.com'):
 
 	// database configuration
@@ -188,6 +190,18 @@ elseif($server_host === 'glcv2.cretetech.com' || $server_host === 'www.glcv2.cre
     // $authorize_id = "3Xu5c4nGAa";
     // $authorize_key = "2bPgvBQ2VX9597nP";
 
+elseif($server_host === '1min.identifz.com' || $server_host === 'www.1min.identifz.com'):
+
+    // database configuration
+    $dbUsername = "identifz_1min";
+    $dbPassword = ";%+MlWZ6]9-!SWfaa";
+    $dbName = "identifz_glc_1min";
+   
+     // $authorize_id = "55KtfW6b";
+    // $authorize_key = "6ym946Abq2Yt63Wr";
+    // $authorize_id = "3Xu5c4nGAa";
+    // $authorize_key = "2bPgvBQ2VX9597nP";
+    
 elseif($server_host === 'glcv2.identifz.com' || $server_host === 'www.glcv2.identifz.com'):
 
     // database configuration
